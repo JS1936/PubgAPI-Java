@@ -121,7 +121,6 @@ public class Main {
                 }
 
             }
-            //
 
             System.out.println("#bots:       " + botNames.size() + " / " + playerNames.size());
             //System.out.println(totalPlayers.trim());
