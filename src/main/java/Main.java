@@ -58,7 +58,7 @@ public class Main {
 
 
         //countBotsAndPeople(prettyFile);
-        weaponDetailsOfWinner(prettyFile); //in progress
+        calculateKillCounts(prettyFile); //in progress
 
     }
 
@@ -95,92 +95,42 @@ public class Main {
         }
         System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
         System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
+        System.out.println("--------------------------------------------------------------------------");
     }
     //find winners first (and log who they are)
     //THEN record stuff?
-    public static void weaponDetailsOfWinner(File prettyFile)
-    {
-        //compare killcounts with everybody else?
-        //find num teams
-        //make a vector of that many teams
-        //within that vector, hold a vector of ints of numKills made by each person on that team
-        //only start once game has started...?
-
-        Vector<Integer> killsByTeam = new Vector<Integer>();
-        Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
-        //I want them to be in order, though...
-
-        //find killCount
-        //rank first though
-
-
-
-        boolean foundWinners = false;
+    //        //compare killcounts with everybody else?
+    //        //find num teams
+    //        //make a vector of that many teams
+    //        //within that vector, hold a vector of ints of numKills made by each person on that team
+    //        //only start once game has started...?
+    /*
+     *
+     *  boolean foundWinners = false;
         //it's already in order for you...
         Vector<Player> winners = new Vector<Player>();
         Vector<Integer> winnerKills = new Vector<Integer>();
+     */
+    public static void calculateKillCounts(File prettyFile)
+    {
+        //Vector<Integer> killsByTeam = new Vector<Integer>();
+        //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
+
         Vector<String> killCounts = new Vector<String>();
 
         try {
             Scanner scan = new Scanner(prettyFile);
-            String rank = "NO RANK: DEFAULT";
-            //teamID
             while(scan.hasNextLine())
             {
                 String data = scan.nextLine();
                 if(data.contains("killCount"))
                 {
                     String killNum = data.substring(data.length() -2, data.length() -1);
-                    //int killNumInt = (int) killNum;
-                    //System.out.println(data);
                     killCounts.add(killNum);
                 }
-
-                //if(!foundWinners)
-                //{
-                //    if(data.contains("results"))
-                //    {
-                //        foundWinners = true;
-               //     }
-                    //go to the next line
-               // }
-                //else //gameHasEnded = true
-                //{
-                //    String currentID = "";
-                    /*
-                    if(data.contains("\"ranking\": 1,")) //, to exclude 10, 12, 100, etc.
-                    {
-                        System.out.println(data);
-                        if (scan.hasNextLine()) {
-                            String nameID = scan.nextLine();
-                            boolean newWinner = true;
-                            for (int i = 0; i < winners.size(); i++) {
-                                if (winners.get(i).accountID == nameID) {
-                                    newWinner = false;
-                                }
-                            }
-                            if (newWinner) {
-                                Player winner = new Player(nameID);
-                                winners.add(winner);
-                            }
-                        } else {
-                            System.out.println("No more lines to read");
-                            scan.close();
-                        }
-                    }
-                    */
-                //}
-
             }
             scan.close();
             printKillCounts(killCounts);
-            //print contents of winners
-
-            //System.out.println("WINNERS: " + winners.size());
-            //for(int i =0; i < winners.size(); i++)
-            //{
-            //    System.out.println(winners.get(i));
-            //}
 
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
@@ -274,3 +224,41 @@ public class Main {
         }
     }
 }
+
+/*
+
+                //if(!foundWinners)
+                //{
+                //    if(data.contains("results"))
+                //    {
+                //        foundWinners = true;
+               //     }
+                    //go to the next line
+               // }
+                //else //gameHasEnded = true
+                //{
+                //    String currentID = "";
+                    /*
+                    if(data.contains("\"ranking\": 1,")) //, to exclude 10, 12, 100, etc.
+                    {
+                        System.out.println(data);
+                        if (scan.hasNextLine()) {
+                            String nameID = scan.nextLine();
+                            boolean newWinner = true;
+                            for (int i = 0; i < winners.size(); i++) {
+                                if (winners.get(i).accountID == nameID) {
+                                    newWinner = false;
+                                }
+                            }
+                            if (newWinner) {
+                                Player winner = new Player(nameID);
+                                winners.add(winner);
+                            }
+                        } else {
+                            System.out.println("No more lines to read");
+                            scan.close();
+                        }
+                    }
+                    */
+//}
+
