@@ -57,10 +57,136 @@ public class Main {
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
 
 
-        countBotsAndPeople(prettyFile);
+        //countBotsAndPeople(prettyFile);
+        weaponDetailsOfWinner(prettyFile); //in progress
 
     }
 
+    public static void printKillCounts(Vector<String> counts)
+    {
+        System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
+        int[] frequencies = new int[30];
+        int maxKills = 0;
+        int  killsByTopTen = 0;
+        for(int i =0; i < counts.size(); i++)
+        {
+            if(i%10 ==0)
+            {
+                System.out.println();
+            }
+            int numKills = Integer.valueOf(counts.get(i));
+            if(maxKills < numKills)
+            {
+                maxKills = numKills;
+            }
+            if(counts.size() - 10 <= i)
+            {
+                killsByTopTen += numKills;
+            }
+            frequencies[numKills]++;
+            System.out.print(counts.get(i) + " ");
+        }
+
+        //Print out how many people got X number of kills
+        System.out.println("\nKill Frequencies:");
+        for(int index = 0; index <= maxKills; index++)
+        {
+            System.out.println(frequencies[index] + " got " + index + " kills." );
+        }
+        System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
+        System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
+    }
+    //find winners first (and log who they are)
+    //THEN record stuff?
+    public static void weaponDetailsOfWinner(File prettyFile)
+    {
+        //compare killcounts with everybody else?
+        //find num teams
+        //make a vector of that many teams
+        //within that vector, hold a vector of ints of numKills made by each person on that team
+        //only start once game has started...?
+
+        Vector<Integer> killsByTeam = new Vector<Integer>();
+        Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
+        //I want them to be in order, though...
+
+        //find killCount
+        //rank first though
+
+
+
+        boolean foundWinners = false;
+        //it's already in order for you...
+        Vector<Player> winners = new Vector<Player>();
+        Vector<Integer> winnerKills = new Vector<Integer>();
+        Vector<String> killCounts = new Vector<String>();
+
+        try {
+            Scanner scan = new Scanner(prettyFile);
+            String rank = "NO RANK: DEFAULT";
+            //teamID
+            while(scan.hasNextLine())
+            {
+                String data = scan.nextLine();
+                if(data.contains("killCount"))
+                {
+                    String killNum = data.substring(data.length() -2, data.length() -1);
+                    //int killNumInt = (int) killNum;
+                    //System.out.println(data);
+                    killCounts.add(killNum);
+                }
+
+                //if(!foundWinners)
+                //{
+                //    if(data.contains("results"))
+                //    {
+                //        foundWinners = true;
+               //     }
+                    //go to the next line
+               // }
+                //else //gameHasEnded = true
+                //{
+                //    String currentID = "";
+                    /*
+                    if(data.contains("\"ranking\": 1,")) //, to exclude 10, 12, 100, etc.
+                    {
+                        System.out.println(data);
+                        if (scan.hasNextLine()) {
+                            String nameID = scan.nextLine();
+                            boolean newWinner = true;
+                            for (int i = 0; i < winners.size(); i++) {
+                                if (winners.get(i).accountID == nameID) {
+                                    newWinner = false;
+                                }
+                            }
+                            if (newWinner) {
+                                Player winner = new Player(nameID);
+                                winners.add(winner);
+                            }
+                        } else {
+                            System.out.println("No more lines to read");
+                            scan.close();
+                        }
+                    }
+                    */
+                //}
+
+            }
+            scan.close();
+            printKillCounts(killCounts);
+            //print contents of winners
+
+            //System.out.println("WINNERS: " + winners.size());
+            //for(int i =0; i < winners.size(); i++)
+            //{
+            //    System.out.println(winners.get(i));
+            //}
+
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
     /*
      * Reads from a file to determine how many "people" in a pubg match were actually bots.
      * The file includes many, many details about the match.
