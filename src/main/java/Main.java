@@ -4,10 +4,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 import org.apache.commons.io.FileUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 
 import java.io.*;
-import java.util.Scanner;
-import java.util.Vector;
+import java.util.*;
 
 
 //Helpful sites:
@@ -58,7 +60,8 @@ public class Main {
 
 
         //countBotsAndPeople(prettyFile);
-        calculateKillCounts(prettyFile); //in progress
+        //calculateKillCounts(prettyFile); //seems "done"
+        singleStringOfFile(prettyFile); //in progress
 
     }
 
@@ -111,6 +114,103 @@ public class Main {
         Vector<Player> winners = new Vector<Player>();
         Vector<Integer> winnerKills = new Vector<Integer>();
      */
+    public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE???
+    {
+        Vector<JSONObject> players = new Vector<JSONObject>();
+        Vector<String> player_info = new Vector<String>();
+
+        String file_content = "";
+        try
+        {
+            file_content = FileUtils.readFileToString(prettyFile);
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        JSONArray jsonArray = new JSONArray(file_content);
+        //Map string/object?
+        for (int i =0; i < jsonArray.length(); i++) {
+            //System.out.println("i = " + i + "; object is: " + jsonArray.getJSONObject(i));
+            System.out.println("HI");
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            System.out.println("LENGTH: " + jsonObject.length());
+            System.out.println("KEYSET: " + jsonObject.keySet());
+            Set<String> keys = jsonObject.keySet();
+
+            keys.toArray();
+            //What if you want to get (STAT X) from character?
+            for (int x = 0; x < keys.size(); x++)
+            {
+                String key = keys.toString();
+                System.out.println("LOOK: " + jsonObject.get(key));
+            }
+
+            //String accountID = jsonObject.getJSONObject("accountID").getString("accountID");
+            //System.out.println("PRINTING: " + accountID);
+            //System.out.println("Is object empty? : " + jsonObject.isEmpty() + "(false = " + false + ", true = " + true);
+            if(!players.contains(jsonObject))
+            {
+                players.add(jsonObject);
+            }
+            else
+            {
+                System.out.println("Player " + jsonObject.names() + " is already registered");
+            }
+            //https://examples.javacodegeeks.com/java-map-example/-------------
+            /*
+            Map<String, Integer> map = new HashMap<String, Integer>();
+            map.put("key1", 1);
+            map.put("name", 7);
+            map.put("age", 9);
+            //System.out.println("Total #objects: " + map.size());
+            ///---------------========
+            for(String key : map.keySet())
+
+            {
+                System.out.println(key + " - " + map.get(key));
+                System.out.println();
+            }
+            */
+
+            //-----------------------
+            for(int index = 0; index < players.size(); index++)
+            {
+                JSONObject info = players.get(index);
+                //System.out.println("KEYS: " + info.keys());
+
+                //jsonArray.putAll(Iter i);
+                //String accountID = info.getJSONObject("accountID").getString("accountID");
+                //System.out.println("PRINTING: " + accountID);
+                //System.out.println("PLAYER: " + players.get(index));
+                //Object character = info.get("\"character\"");
+                //System.out.println("CHARACTER: " + character);
+            }
+
+
+
+        }
+        //JSONObject jsonObject = jsonArray.getJSONObject(i); //in a for loop?
+        //jsonArray.
+        //String value = jsonObject.getString("key");
+
+        /*
+        String file_content = "";
+        try {
+            Scanner scan = new Scanner(prettyFile);
+            while(scan.hasNextLine()) {
+                file_content += scan.nextLine();
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        System.out.println("FILE CONTENT: ");
+        System.out.println(file_content);
+        */
+    }
     public static void calculateKillCounts(File prettyFile)
     {
         //Vector<Integer> killsByTeam = new Vector<Integer>();
