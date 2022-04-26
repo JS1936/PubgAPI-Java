@@ -163,6 +163,7 @@ public class Main {
     //"Players (including winners)93/95 ended with (None)(primaryWeaponFirst) in this match."
     public static void weaponFrequencies(Vector<String> weaponSlot,  boolean winnersOnly, String weaponSlotName)
     {
+        System.out.println(weaponSlotName.toUpperCase() + ": (winners only)");
         Vector<String> alreadyListed = new Vector<String>();
         for(int i = 0; i < weaponSlot.size(); i++) //One weapon
         {
@@ -201,17 +202,19 @@ public class Main {
                     }
 
                 }
-                if(winnersOnly)
-                {
-                    System.out.print("Winners Only: ");
-                }
-                else
-                {
-                    System.out.print("Players (including winners)");
-                }
-                System.out.print(count + "/" + weaponSlot.size());
+                //System.out.println("Summary of All Winners:");
+                //if(winnersOnly)
+                //{
+                //    System.out.print("Winners Only: ");
+                //}
+                //else
+                //{
+                //    System.out.print("Players (including winners)");
+                //}
+                System.out.println(weapon + " x" + count);
+                //System.out.print(count + "/" + weaponSlot.size());
 
-                System.out.println(" ended with " + weapon + "(" + weaponSlotName + ") in this match.");
+                //System.out.println(" ended with " + weapon + "(" + weaponSlotName + ") in this match.");
             }
 
 
@@ -222,15 +225,18 @@ public class Main {
         System.out.println();
     }
 
+    //PRINTING WEAPON FREQUENCIES:
+    //Winners Only: 1/6 ended with WeapMosinNagant_C(primaryWeaponFirst) in this match. (WHAT?)
+    //ALSO: what about if slot is empty (including in a primary, for instance)
     public static void winnerWeapons(File prettyFile)
     {
         Vector<String> winnerSecondary = new Vector<String>();
-        Vector<String> winnerPrimary1 = new Vector<String>();
-        Vector<String> winnerPrimary2 = new Vector<String>();
+        Vector<String> winnerPrimary = new Vector<String>();
+        //Vector<String> winnerPrimary2 = new Vector<String>(); //remove?
 
         Vector<String> everyoneSecondary = new Vector<String>();
-        Vector<String> everyonePrimary1 = new Vector<String>();
-        Vector<String> everyonePrimary2 = new Vector<String>();
+        Vector<String> everyonePrimary = new Vector<String>();
+        //Vector<String> everyonePrimary2 = new Vector<String>(); //remove?
 
 
         JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
@@ -262,17 +268,21 @@ public class Main {
             String ranking = player_details.get("ranking").toString();
             if(ranking.equals("1"))
             {
+                if(secondaryWeapon.equalsIgnoreCase(""))
+                {
+                    secondaryWeapon = "N/A";
+                }
                 System.out.println("Found a winner...");
                 winnerSecondary.add(secondaryWeapon);
-                winnerPrimary1.add(primaryWFirst);
-                winnerPrimary2.add(primaryWSecond);
+                winnerPrimary.add(primaryWFirst); //changed from winnerPrimary2.
+                winnerPrimary.add(primaryWSecond);
 
                 //OR: print one player at a time
-                System.out.println(player_details.get("name") + " Summary: ");
-                System.out.println("Primary Weapon #1: \t" + primaryWFirst);
-                System.out.println("Primary Weapon #2: \t" + primaryWSecond);
-                System.out.println("SecondaryWeapon: \t" + secondaryWeapon);
-                System.out.println();
+                System.out.println(player_details.get("name") + " Summary (Winner): ");
+                System.out.println("\tPrimary Weapon #1: \t" + primaryWFirst);
+                System.out.println("\tPrimary Weapon #2: \t" + primaryWSecond);
+                System.out.println("\tSecondary Weapon: \t" + secondaryWeapon);
+                System.out.println("-------------------------------------------------");
                 //considering 1 and 2 essentially the same? //like only considering primary weapons VS secondary... or even just weapons
             }
 
@@ -294,12 +304,13 @@ public class Main {
 
         //System.out.println("everyonPrimary1 list: " + everyonePrimary1.toString());
         System.out.println("PRINTING WEAPON FREQUENCIES: " );
+        System.out.println();
         //weaponFrequencies(everyonePrimary1, false, "primaryWeaponFirst");
         //weaponFrequencies(everyonePrimary2, false, "primaryWeaponSecond");
         //weaponFrequencies(everyoneSecondary, false, "secondaryWeapon");
-        weaponFrequencies(winnerPrimary1, true, "primaryWeaponFirst");
-        weaponFrequencies(winnerPrimary2, true, "primaryWeaponSecond");
-        weaponFrequencies(winnerSecondary, true, "secondaryWeapon");
+        weaponFrequencies(winnerPrimary, true, "primary weapons");
+        //weaponFrequencies(winnerPrimary2, true, "primaryWeaponSecond");
+        weaponFrequencies(winnerSecondary, true, "secondary weapon");
 
 
         //  ->(NOT) find "gameResultOnFinished
