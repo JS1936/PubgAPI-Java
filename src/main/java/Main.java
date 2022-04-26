@@ -30,6 +30,7 @@ public class Main {
      * Takes the contents of an "ugly" file and makes a new file
      * where that content is stored in a way that looks "pretty".
      */
+    //NOTE: if this returned the prettyFile, calls like winnerWeapons could be made from main
     public static void makePretty(File fileName) throws IOException {
         String originalName = fileName.getName();
         String originalPath = fileName.getAbsolutePath();
@@ -60,9 +61,9 @@ public class Main {
 
 
         //countBotsAndPeople(prettyFile);
-        //calculateKillCounts(prettyFile); //seems "done"
+        calculateKillCounts(prettyFile); //seems "done"
         //singleStringOfFile(prettyFile); //in progress
-        winnerWeapons(prettyFile);
+        //winnerWeapons(prettyFile);
 
 
     }
@@ -114,6 +115,34 @@ public class Main {
         System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
         System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
         System.out.println("--------------------------------------------------------------------------");
+    }
+
+    //Accidentally removed this! Found it again through github commits history
+    public static void calculateKillCounts(File prettyFile)
+    {
+        //Vector<Integer> killsByTeam = new Vector<Integer>();
+        //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
+
+        Vector<String> killCounts = new Vector<String>();
+
+        try {
+            Scanner scan = new Scanner(prettyFile);
+            while(scan.hasNextLine())
+            {
+                String data = scan.nextLine();
+                if(data.contains("killCount"))
+                {
+                    String killNum = data.substring(data.length() -2, data.length() -1);
+                    killCounts.add(killNum);
+                }
+            }
+            scan.close();
+            printKillCounts(killCounts);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
     /*
