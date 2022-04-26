@@ -170,9 +170,9 @@ public class Main {
             //System.out.println("Weapons already listed: " + alreadyListed.toString());
             int count = 0;
             String weapon = weaponSlot.get(i);
-            if (weapon.equalsIgnoreCase("") || weapon == null) {
-                weapon = "(None)";
-            }
+            //if (weapon.equalsIgnoreCase("") || weapon == null) {
+            //    weapon = "(None)";
+            //}
             boolean inAlreadyListed = false;
             for(int index = 0; index < alreadyListed.size(); index++)
             {
@@ -189,37 +189,17 @@ public class Main {
                 for (int j = i; j < weaponSlot.size(); j++) //Compare against all the other weapons
                 {
                     String other_weapon = weaponSlot.get(j);
-                    if (other_weapon.equalsIgnoreCase("") || other_weapon == null) {
-                        other_weapon = "(None)";
-                    }
+                   // if (other_weapon.equalsIgnoreCase("") || other_weapon == null) {
+                    //    other_weapon = "(None)";
+                    //}
                     //System.out.print(weapon + " =?= " + other_weapon);
                     if (weaponSlot.get(i).equalsIgnoreCase(weaponSlot.get(j))) {
                         count++;
-                        //System.out.println(" --> YES!");
-                        //System.out.println("count++");
-                    } else {
-                        //System.out.println(" --> No!");
                     }
 
                 }
-                //System.out.println("Summary of All Winners:");
-                //if(winnersOnly)
-                //{
-                //    System.out.print("Winners Only: ");
-                //}
-                //else
-                //{
-                //    System.out.print("Players (including winners)");
-                //}
-                System.out.println(weapon + " x" + count);
-                //System.out.print(count + "/" + weaponSlot.size());
-
-                //System.out.println(" ended with " + weapon + "(" + weaponSlotName + ") in this match.");
+                System.out.println("\t" + weapon + " x" + count);
             }
-
-
-
-                //System.out.println(count + " players (bot or real or guard*) used: " + weapon + "(of " + weaponSlot.size() + ")");
         }
 
         System.out.println();
@@ -245,7 +225,7 @@ public class Main {
             System.out.println("Error");
             return;
         }
-        System.out.println("Contents of jsonObject: " + jsonObject.toString());
+        //System.out.println("Contents of jsonObject: " + jsonObject.toString());
         JSONArray players = jsonObject.getJSONArray("characters");
         for(int i = 0; i < players.length(); i++)
         {
@@ -254,23 +234,32 @@ public class Main {
 
             //Weapons
             String secondaryWeapon = one_player.get("secondaryWeapon").toString();
-            //System.out.println("LOOK: '" + secondaryWeapon + "'");
             String primaryWFirst = one_player.get("primaryWeaponFirst").toString();
-            //System.out.println("LOOK: '" + primaryWFirst + "'");
             String primaryWSecond = one_player.get("primaryWeaponSecond").toString();
-            //System.out.println("LOOK: '" + primaryWSecond + "'");
-            //{
-                //System.out.println("one_player: " + one_player.toString());
-            //}
 
             //Ranking
             //It seems like only the weapons of the winners are registering...
             String ranking = player_details.get("ranking").toString();
-            if(ranking.equals("1"))
+            //String name = player_details.get("name").toString();
+            String accountId = player_details.get("accountId").toString();
+            String team_id = player_details.get("teamId").toString();
+
+            //System.out.println("TEAM ID: " + team_id);
+            int team_id_int = Integer.parseInt(team_id);
+            if(ranking.equals("1") && team_id_int < 200)
             {
+                System.out.println("accountId: " + accountId);
                 if(secondaryWeapon.equalsIgnoreCase(""))
                 {
                     secondaryWeapon = "N/A";
+                }
+                if(primaryWFirst.equalsIgnoreCase(""))
+                {
+                    primaryWFirst = "N/A";
+                }
+                if(primaryWSecond.equalsIgnoreCase(""))
+                {
+                    primaryWSecond = "N/A";
                 }
                 System.out.println("Found a winner...");
                 winnerSecondary.add(secondaryWeapon);
