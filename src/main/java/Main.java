@@ -61,7 +61,9 @@ public class Main {
 
         //countBotsAndPeople(prettyFile);
         //calculateKillCounts(prettyFile); //seems "done"
-        singleStringOfFile(prettyFile); //in progress
+        //singleStringOfFile(prettyFile); //in progress
+        winnerWeapons(prettyFile);
+
 
     }
     //find winners first (and log who they are)
@@ -129,7 +131,218 @@ public class Main {
         //   ^
         //   Here: {person1, person2, person3, person4}
      */
-    public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE???
+    //Since data was gathered at the beginning of the game, everyone has rank 0 so far --> need the pretty file?
+    //_T, logmatchend, l
+    //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
+    public static void ranking(String name, Vector<JSONObject> peopleByTeam)
+    {
+        boolean playedInGame = false;
+        for(JSONObject person : peopleByTeam)
+        {
+            //System.out.println("HERE");
+            if(person != null && person.get("name").equals(name))
+            {
+                playedInGame = true;
+                System.out.println(name + "'s ranking in this game was: " + person.get("ranking"));
+            }
+        }
+        if(!playedInGame)
+        {
+            System.out.println(name + " wasn't in that game");
+        }
+    }
+
+    //Where would this be called from?
+    //secondaryWeapon
+    //character
+        //includes ranking
+    //primaryWeaponFirst
+    //primaryWeaponSecond
+
+    //THAT CANNOT BE RIGHT:
+    //"Players (including winners)93/95 ended with (None)(primaryWeaponFirst) in this match."
+    public static void weaponFrequencies(Vector<String> weaponSlot,  boolean winnersOnly, String weaponSlotName)
+    {
+        Vector<String> alreadyListed = new Vector<String>();
+        for(int i = 0; i < weaponSlot.size(); i++) //One weapon
+        {
+            //System.out.println("Weapons already listed: " + alreadyListed.toString());
+            int count = 0;
+            String weapon = weaponSlot.get(i);
+            if (weapon.equalsIgnoreCase("") || weapon == null) {
+                weapon = "(None)";
+            }
+            boolean inAlreadyListed = false;
+            for(int index = 0; index < alreadyListed.size(); index++)
+            {
+                if(alreadyListed.get(index).equalsIgnoreCase(weapon))
+                {
+                    inAlreadyListed = true;
+                    //System.out.println(alreadyListed.get(index) + " is already listed...");
+                }
+            }
+            if (!inAlreadyListed) { //already listed does not seem like it is getting updated properly...
+                alreadyListed.add(weapon);
+                count = 0;
+                //System.out.println("LOOKING FOR: " + weapon + "(i = " + i + ")");
+                for (int j = i; j < weaponSlot.size(); j++) //Compare against all the other weapons
+                {
+                    String other_weapon = weaponSlot.get(j);
+                    if (other_weapon.equalsIgnoreCase("") || other_weapon == null) {
+                        other_weapon = "(None)";
+                    }
+                    //System.out.print(weapon + " =?= " + other_weapon);
+                    if (weaponSlot.get(i).equalsIgnoreCase(weaponSlot.get(j))) {
+                        count++;
+                        //System.out.println(" --> YES!");
+                        //System.out.println("count++");
+                    } else {
+                        //System.out.println(" --> No!");
+                    }
+
+                }
+                if(winnersOnly)
+                {
+                    System.out.print("Winners Only: ");
+                }
+                else
+                {
+                    System.out.print("Players (including winners)");
+                }
+                System.out.print(count + "/" + weaponSlot.size());
+
+                System.out.println(" ended with " + weapon + "(" + weaponSlotName + ") in this match.");
+            }
+
+
+
+                //System.out.println(count + " players (bot or real or guard*) used: " + weapon + "(of " + weaponSlot.size() + ")");
+        }
+
+        System.out.println();
+    }
+
+    public static void winnerWeapons(File prettyFile)
+    {
+        Vector<String> winnerSecondary = new Vector<String>();
+        Vector<String> winnerPrimary1 = new Vector<String>();
+        Vector<String> winnerPrimary2 = new Vector<String>();
+
+        Vector<String> everyoneSecondary = new Vector<String>();
+        Vector<String> everyonePrimary1 = new Vector<String>();
+        Vector<String> everyonePrimary2 = new Vector<String>();
+
+
+        JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
+        if(jsonObject == null)
+        {
+            System.out.println("Error");
+            return;
+        }
+        System.out.println("Contents of jsonObject: " + jsonObject.toString());
+        JSONArray players = jsonObject.getJSONArray("characters");
+        for(int i = 0; i < players.length(); i++)
+        {
+            JSONObject one_player = players.getJSONObject(i); //object VS json object?
+            JSONObject player_details = one_player.getJSONObject("character");
+
+            //Weapons
+            String secondaryWeapon = one_player.get("secondaryWeapon").toString();
+            //System.out.println("LOOK: '" + secondaryWeapon + "'");
+            String primaryWFirst = one_player.get("primaryWeaponFirst").toString();
+            //System.out.println("LOOK: '" + primaryWFirst + "'");
+            String primaryWSecond = one_player.get("primaryWeaponSecond").toString();
+            //System.out.println("LOOK: '" + primaryWSecond + "'");
+            //{
+                //System.out.println("one_player: " + one_player.toString());
+            //}
+
+            //Ranking
+            //It seems like only the weapons of the winners are registering...
+            String ranking = player_details.get("ranking").toString();
+            if(ranking.equals("1"))
+            {
+                System.out.println("Found a winner...");
+                winnerSecondary.add(secondaryWeapon);
+                winnerPrimary1.add(primaryWFirst);
+                winnerPrimary2.add(primaryWSecond);
+
+                //OR: print one player at a time
+                System.out.println(player_details.get("name") + " Summary: ");
+                System.out.println("Primary Weapon #1: \t" + primaryWFirst);
+                System.out.println("Primary Weapon #2: \t" + primaryWSecond);
+                System.out.println("SecondaryWeapon: \t" + secondaryWeapon);
+                System.out.println();
+                //considering 1 and 2 essentially the same? //like only considering primary weapons VS secondary... or even just weapons
+            }
+
+
+
+            //Note: winners get included in "everyone" data
+            //System.out.println("Now including general populus..."); //weird
+            //everyoneSecondary.add(secondaryWeapon);
+            //everyonePrimary1.add(primaryWFirst);
+            //everyonePrimary2.add(primaryWSecond);
+
+
+
+            //System.out.println(one_player.toString());
+            //System.out.println("RANKING IS: " );
+            //System.out.println(one_player.get("ranking").toString());
+            //if(one_player.get("ranking") == "1")
+        }
+
+        //System.out.println("everyonPrimary1 list: " + everyonePrimary1.toString());
+        System.out.println("PRINTING WEAPON FREQUENCIES: " );
+        //weaponFrequencies(everyonePrimary1, false, "primaryWeaponFirst");
+        //weaponFrequencies(everyonePrimary2, false, "primaryWeaponSecond");
+        //weaponFrequencies(everyoneSecondary, false, "secondaryWeapon");
+        weaponFrequencies(winnerPrimary1, true, "primaryWeaponFirst");
+        weaponFrequencies(winnerPrimary2, true, "primaryWeaponSecond");
+        weaponFrequencies(winnerSecondary, true, "secondaryWeapon");
+
+
+        //  ->(NOT) find "gameResultOnFinished
+        //  -> (DO) find "characters" --> beacuse those hold the character wrappers --> which hold weapon details
+        //end results
+        //character wrapper
+        //primaryWeaponFirst
+        //primaryWeaponSecond
+        //secondaryWeapon
+    }
+    
+    //WHAT IF you could search through a prettyfile for any _T and that method would return the contents?
+    //Could also keep track of items equipped
+    public static JSONObject returnObject(File prettyFile, String type)
+    {
+        System.out.println("NEW FILE_______________________________________________");
+        String file_content = "";
+        try {
+            file_content = FileUtils.readFileToString(prettyFile);
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        JSONArray jsonArray = new JSONArray(file_content);
+        for (int i = 0; i < jsonArray.length(); i++) {
+
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            String type_T = jsonObject.getString("_T");
+
+            if (type_T.equalsIgnoreCase(type)) {
+                System.out.println(type);
+                return jsonObject;
+
+            }
+        }
+        return null; //What if _T type is not found?
+    }
+
+
+    public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE??? //rename this, too
     {
         System.out.println("NEW FILE_______________________________________________");
         Vector<JSONObject> peopleByTeam = new Vector<JSONObject>();
@@ -141,6 +354,7 @@ public class Main {
         int highest_team_id = 0;
         int team_count = 0; //still need to calculate this in code
 
+        /*
         String file_content = "";
         try {
             file_content = FileUtils.readFileToString(prettyFile);
@@ -153,17 +367,26 @@ public class Main {
         //get each character
         //use characterwrapper to get weapon data, too...
         JSONArray jsonArray = new JSONArray(file_content);
+        */
 
-        int max_num_teams = 425;
+        //Use 425 or 500 or something else?
+        int max_num_teams = 425; //because bots start at 200 and guards start at 400 -->could have sorted them that way, too (identifying type)
         int maxIndices = max_num_teams * 4; //maybe adjust this depending on what the type of game is (singles, duos, squads, flexible squads)
         peopleByTeam.setSize(maxIndices);
 
-        for (int i = 0; i < jsonArray.length(); i++) {
+        JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
+        if(jsonObject == null)
+        {
+            System.out.println("jsonObject was null... uh oh");
+            return;
+        }
+        //for (int i = 0; i < jsonArray.length(); i++) {
 
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            String type = jsonObject.getString("_T");
-            if (type.equalsIgnoreCase("LogMatchStart")) {
-                System.out.println(type);
+            //JSONObject jsonObject = jsonArray.getJSONObject(i);
+            //String type = jsonObject.getString("_T");
+            //if (type.equalsIgnoreCase("LogMatchStart")) {
+            //if (type.equalsIgnoreCase("LogMatchEnd")) { //LogMatchEnd includes rankings
+            //   System.out.println(type);
                 playersList = jsonObject.getJSONArray("characters"); //attempt to fix
 
                 //Set up allTeams
@@ -189,14 +412,19 @@ public class Main {
                         }
                         if (peopleByTeam.get(in) != null) {
                             System.out.print(peopleByTeam.get(in).get("name").toString());
-                            System.out.println(" " + peopleByTeam.get(in).get("teamId").toString());
+                            System.out.print(" " + peopleByTeam.get(in).get("teamId").toString());
+                            System.out.println(" " + peopleByTeam.get(in).get("ranking").toString());
                             //peopleByTeam.s
 
                         }
                     }
                 }
-            }
-        }
+            //}
+        //}
+        System.out.println("RANKING SEARCH: ");
+        ranking("JS1936", peopleByTeam); //Is this working?
+        ranking("matt112", peopleByTeam);
+        ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
     }
     /*
      * Reads from a file to determine how many "people" in a pubg match were actually bots.
