@@ -116,12 +116,15 @@ public class Main {
      */
     public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE???
     {
-        Vector<JSONObject> players = new Vector<JSONObject>();
+        System.out.println("NEW FILE_______________________________________________");
+        Vector<JSONObject> allPlayers = new Vector<JSONObject>();
         Vector<String> player_info = new Vector<String>();
 
+        int bot_count = 0;
+        int person_count = 0;
+
         String file_content = "";
-        try
-        {
+        try {
             file_content = FileUtils.readFileToString(prettyFile);
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
@@ -129,35 +132,160 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //get each character
+        //use characterwrapper to get weapon data, too...
         JSONArray jsonArray = new JSONArray(file_content);
         //Map string/object?
-        for (int i =0; i < jsonArray.length(); i++) {
-            //System.out.println("i = " + i + "; object is: " + jsonArray.getJSONObject(i));
-            System.out.println("HI");
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            System.out.println("LENGTH: " + jsonObject.length());
-            System.out.println("KEYSET: " + jsonObject.keySet());
-            Set<String> keys = jsonObject.keySet();
+        for (int i = 0; i < jsonArray.length(); i++) {
 
-            keys.toArray();
-            //What if you want to get (STAT X) from character?
-            for (int x = 0; x < keys.size(); x++)
-            {
-                String key = keys.toString();
-                System.out.println("LOOK: " + jsonObject.get(key));
+            //System.out.println("i = " + i + "; object is: " + jsonArray.getJSONObject(i));
+            //System.out.println("HI");
+
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            String type = jsonObject.getString("_T");
+            // System.out.println("TYPE: " + type);
+            if (type.equalsIgnoreCase("LogMatchStart")) {
+                System.out.println(type);
+                JSONArray playersList = jsonObject.getJSONArray("characters");
+                //System.out.println("playersList: " + playersList.toString());
+                //
+                //
+                for (int j = 0; j < playersList.length(); j++) {
+                    if (allPlayers.isEmpty()) {
+                        System.out.println("allPlayers is empty");
+                    }
+                    JSONObject player = playersList.getJSONObject(j);
+                    //System.out.println("PLAYER: " + player.toString());
+
+                    if (player.has("character")) {
+                        //System.out.println("Does list of all players already have this player?");
+                        System.out.println(" --> includes character");
+                        if (allPlayers.contains(player)) {
+                            System.out.println("allPlayers list : already has that player");
+                        }
+                        if (!allPlayers.contains(player))
+                            System.out.println("ADDING PLAYER: " + player);
+                            allPlayers.add(player);
+                            System.out.println(player.has("accountId"));
+                            //String id = player.getString("accountId"); //false
+                            //System.out.println("Hopefully id: " + id);
+                           //Object character_info =  player.get("character");
+
+                    } else {
+                        System.out.println(" --> does NOT include character");
+                    }
+                }
+
             }
+
+            //System.out.println(playersList);
+
+            //System.exit(0);
+        }
+        System.out.println("end of playerslist printing");
+            /*
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            if(jsonObject.has("mapName")) //list of all the characters...
+            {
+                    //System.out.println("CHARACTERS ARE: " + jsonObject.getString("characters"));
+                System.out.println("LOOK HERE!");
+                    JSONArray arrayOfCharacters = jsonObject.getJSONArray("characters");
+                    System.out.println("CHARACTERS: " + arrayOfCharacters);
+            }
+            else
+            {
+                System.out.println("No 'characters'");
+            }
+            if(jsonObject.has("character"))
+            {
+                System.out.println("\t\tFOUND A CHARACTER THING!");
+            }
+            if(jsonObject.has("accountId"))
+            {
+                System.out.println("Has account id");
+                String id = jsonObject.getString("accountId");
+                System.out.println("ID is : " + id);
+            }
+            JSONArray names = jsonObject.names();
+            //if(names[0].has());
+
+            for(int index = 0; index < names.length(); index++)
+            {
+                System.out.println("     " + names.get(index)+ " : " + jsonObject.get(names.get(index).toString()) + " ");
+                //EX:                          _T:                      LogItemUse
+
+            }
+            */
+        System.out.println("PRINTING allPlayers:" );
+        for (int index = 0; index < allPlayers.size(); index++) {
+            //System.out.println(allPlayers.get(i).getString("character"));
+            System.out.println(allPlayers.get(index).toString());
+        }
+
+        System.out.println("PRINTING accountID of each player: ");
+        for (int index = 0; index < allPlayers.size(); index++) {
+
+            //System.out.println(allPlayers.get(i).getString("character"));
+            JSONObject one_player = allPlayers.get(index);
+            System.out.println("LOOK: " + one_player.has("character"));
+            System.out.println("get character: " + one_player.get("character"));
+            System.out.println("LOOK2:" + one_player.get("character").toString());
+            JSONObject character = one_player.getJSONObject("character"); //problem here
+            System.out.println("HERE");
+            System.out.println("LOOK3: " + character.toString());
+            //String keys = one_player.keys().toString();
+
+            //System.out.println("KEYS: " + character_keys);
+            /*
+            if(allPlayers.get(index).get("character").get("accountId"))
+            {
+                System.out.println("has accountId");
+            }
+            else
+            {
+                System.out.println("does not have accountId");
+            }
+            */
+
+            //System.out.println(allPlayers.get(index).keys());
+            System.out.println("---------");
+        }
+        System.out.println("#players (including bots): " + allPlayers.size());
+        System.out.println();
+    }
+            //jsonObject.get()
+            //System.out.println("NAMES: " + jsonObject.names()); //EX: character, item, common, _D, _T, healAmount
+            //System.out.println("LENGTH: " + jsonObject.length());
+            //System.out.println("KEYSET: " + jsonObject.keySet());
+            //Set<String> keys = jsonObject.keySet();
+
+            //keys.toArray();
+            //What if you want to get (STAT X) from character?
+            //for (int x = 0; x < keys.size(); x++)
+            //{
+            //    String key = keys.toString();
+            //    System.out.println("LOOK: " + jsonObject.get(key));
+            //}
 
             //String accountID = jsonObject.getJSONObject("accountID").getString("accountID");
             //System.out.println("PRINTING: " + accountID);
             //System.out.println("Is object empty? : " + jsonObject.isEmpty() + "(false = " + false + ", true = " + true);
-            if(!players.contains(jsonObject))
+        /*
+            if(!allPlayers.contains(jsonObject))
             {
-                players.add(jsonObject);
+                allPlayers.add(jsonObject);
             }
             else
             {
                 System.out.println("Player " + jsonObject.names() + " is already registered");
             }
+            */
+
             //https://examples.javacodegeeks.com/java-map-example/-------------
             /*
             Map<String, Integer> map = new HashMap<String, Integer>();
@@ -175,22 +303,22 @@ public class Main {
             */
 
             //-----------------------
-            for(int index = 0; index < players.size(); index++)
-            {
-                JSONObject info = players.get(index);
+            //for(int index = 0; index < allPlayers.size(); index++)
+            //{
+             //   JSONObject info = allPlayers.get(index);
                 //System.out.println("KEYS: " + info.keys());
 
                 //jsonArray.putAll(Iter i);
                 //String accountID = info.getJSONObject("accountID").getString("accountID");
                 //System.out.println("PRINTING: " + accountID);
-                //System.out.println("PLAYER: " + players.get(index));
+                //System.out.println("PLAYER: " + allPlayers.get(index));
                 //Object character = info.get("\"character\"");
                 //System.out.println("CHARACTER: " + character);
-            }
+            //}
 
 
 
-        }
+       // }
         //JSONObject jsonObject = jsonArray.getJSONObject(i); //in a for loop?
         //jsonArray.
         //String value = jsonObject.getString("key");
@@ -210,7 +338,8 @@ public class Main {
         System.out.println("FILE CONTENT: ");
         System.out.println(file_content);
         */
-    }
+
+
     public static void calculateKillCounts(File prettyFile)
     {
         //Vector<Integer> killsByTeam = new Vector<Integer>();
