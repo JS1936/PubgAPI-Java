@@ -116,22 +116,57 @@ public class Main {
      */
     //IT SEEMS LIKE IT'S ADDING PEOPLE TO THE TEAMS BUT NOT SAVING THE CONTENTS OF THE TEAMS...
     //EX: matt112 and JS1936 each the "first" added to team#14
+
+    //TEAM 1 --> person, person, person, person (EX)
+
+    //team# ==> find
+    //assign to that slot in array (put(i,obj))
+    //Or what if you just added teams in whatever order they appeared, and then searched each time to see if they existed...?
+    //Vector<String> player_info = new Vector<String>();
+
+    /*
+
+            //System.out.println("i = " + i + "; object is: " + jsonArray.getJSONObject(i));
+
+            //Find where the match starts, THEN start counting players/bots
+            //Maybe counts of bots and team allocations can be done here, too
+
+
+            //WHAT IS HAPPENING
+                //jsonArray holds file contents
+                //each jsonObject is an object (from the file)
+                    //Some objects describe participants in the game (like real people and bots)
+                    //These get put into the JSONArray playersList
+                    //Which gets transferred to Vector<JSONArray> allPlayers for some reason?
+     */
     public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE???
     {
         System.out.println("NEW FILE_______________________________________________");
         Vector<JSONObject> allPlayers = new Vector<JSONObject>();
-        Vector<JSONArray> allTeams = new Vector<JSONArray>();
+        Vector<JSONArray> allTeams = new Vector<JSONArray>(); //just a list, then? //ArrayList?
+        Vector<JSONObject> one_team = new Vector<JSONObject>();
+        Vector<Vector> teams = new Vector<Vector>(); //Inner vector: 1 team, outer vector: all teams
+        Vector<JSONObject> peopleByTeam = new Vector<JSONObject>();
 
-        //TEAM 1 --> person, person, person, person (EX)
+        //WHAT IF IT WAS JUST ONE VECTOR
+        //FOUR SLOTS AVAILABLE per team, up to 500 teams
+        //Team 0: indices 0,        1,      2,      3
+        //Team 1: indices 4,        5,      6,      7
+        //Team 2: indices 8,        9,      10,     11
+        //Team 3: indices 12,       13,     14,     15
+        //beginning index of Team X is (x*4)
 
-        //team# ==> find
-        //assign to that slot in array (put(i,obj))
-        //Or what if you just added teams in whatever order they appeared, and then searched each time to see if they existed...?
-        //Vector<String> player_info = new Vector<String>();
+        //Each team shared the same team_id...
+        // index 0 || index 1 || index 2 || index 3 IN VECTOR
+
+        //   ^
+        //   Here: {person1, person2, person3, person4}
+        JSONArray playersList = new JSONArray();
 
         int bot_count = 0;
         int person_count = 0;
         int highest_team_id = 0;
+        int team_count = 0; //still need to calculate this in code
 
         String file_content = "";
         try {
@@ -146,43 +181,179 @@ public class Main {
         //use characterwrapper to get weapon data, too...
         JSONArray jsonArray = new JSONArray(file_content);
         //Map string/object?
+        int max_num_teams = 425;
+        int maxIndices = max_num_teams * 4;
+        peopleByTeam.setSize(maxIndices);
+        //reset with each file?
+        //for(int i = 0; i < maxIndices ; i++) {
+
+            //peopleByTeam.set(i, null); //default value
+            //Vector<JSONObject> single_team = new Vector<JSONObject>();
+            // teams.get(i) = single_team;
+        //}
         for (int i = 0; i < jsonArray.length(); i++) {
 
-            //System.out.println("i = " + i + "; object is: " + jsonArray.getJSONObject(i));
-
-            //Find where the match starts, THEN start counting players/bots
-            //Maybe counts of bots and team allocations can be done here, too
-
-
-            //WHAT IS HAPPENING
-                //jsonArray holds file contents
-                //each jsonObject is an object (from the file)
-                    //Some objects describe participants in the game (like real people and bots)
-                    //These get put into the JSONArray playersList
-                    //Which gets transferred to Vector<JSONArray> allPlayers for some reason?
             JSONObject jsonObject = jsonArray.getJSONObject(i);
             String type = jsonObject.getString("_T");
             // System.out.println("TYPE: " + type);
             if (type.equalsIgnoreCase("LogMatchStart")) {
                 System.out.println(type);
-                JSONArray playersList = jsonObject.getJSONArray("characters"); //oh, goes out of scope, hence allPlayers being used (fix?)
+                //JSONArray playersList = jsonObject.getJSONArray("characters"); //oh, goes out of scope, hence allPlayers being used (fix?)
+                playersList = jsonObject.getJSONArray("characters"); //attempt to fix
 
+                //Set up allTeams
                 for (int j = 0; j < playersList.length(); j++) {
-                    if (allPlayers.isEmpty()) {
-                        System.out.println("allPlayers is empty");
-                    }
                     JSONObject player = playersList.getJSONObject(j);
-                    System.out.println("PLAYER: " + player.toString());
+                    JSONObject character = player.getJSONObject("character"); //problem here
 
-                    if (player.has("character")) {
-                        //System.out.println("Does list of all players already have this player?");
-                        System.out.println(" --> includes character");
-                        if (allPlayers.contains(player)) {
-                            System.out.println("allPlayers list : already has that player");
+                    //String id = character.get("accountId").toString();
+                    String team_id = character.get("teamId").toString();
+                    //String name = character.get("name").toString();
+                    ///System.out.println(name + " has id : " + id + " and is in team # : " + team_id);
+
+                    int team_id_index = Integer.parseInt(team_id);
+                    int insert = (team_id_index * 4);
+                    for(int loc = 0; loc < 4; loc++) {
+                        if (peopleByTeam.get(insert + loc) != null) {
+                            loc++;
+                        } else {
+                            peopleByTeam.set(insert + loc, character);
+                            //System.out.println("HELLO! HELLO!");
+                            //System.out.println("NAME of person inserted: " + peopleByTeam.get(insert + loc).get("name"));
+                            loc = 4;
                         }
-                        if (!allPlayers.contains(player)) {
-                            System.out.println("ADDING PLAYER: " + player);
-                            allPlayers.add(player);
+                        // System.out.println("peopleByTeam.size() : " + peopleByTeam.size());
+                        //    String index0 = peopleByTeam.get(0).toString();
+                        //   System.out.println("index0: " + index0);
+
+
+
+                        }
+                        //if (peopleByTeam.get(insert) != null) {
+                        //}
+                       // if (team_id_index == 2) {
+                         //   one_team.add(character);
+                           // for (int x = 0; x < one_team.size(); x++) {
+                           //     System.out.println(character.get("name") + " is in team 2.0 (" + one_team.size() + " members total)");
+                           // }
+                        //}
+                    }
+                    for (int in = 0; in < peopleByTeam.size(); in++) {
+
+                        if(in % 4 == 0 && peopleByTeam.get(in) != null)
+                        {
+                            System.out.println("-----");
+                        }
+                        if (peopleByTeam.get(in) != null) {
+                            //teamExists = true;
+                            //System.out.println("LOOK!");
+                            System.out.print(peopleByTeam.get(in).get("name").toString());
+                            System.out.println(" " + peopleByTeam.get(in).get("teamId").toString());
+                            //peopleByTeam.s
+
+                        } else {
+
+                            //System.out.println("NULL");
+                        }
+
+                        //if(in < peopleByTeam.size() -1 && peopleByTeam.get(in + 1) != null)
+                        //{
+//
+                        //    if(peopleByTeam.get(in).get("teamId").toString() != (peopleByTeam.get(in-1).get("teamId").toString()))
+                        //        System.out.println("----");
+                        //    }
+                    //PUT HERE
+                    /*
+                    //System.out.println(team_id_index + " VS current highest of " + highest_team_id);
+                    if (team_id_index >= highest_team_id) {
+                        System.out.println(team_id_index + " >= " + highest_team_id);
+                        System.out.print("size changed from: " + teams.size() + " to ");
+                        highest_team_id = team_id_index + 1; //+1 so that it can actually hold something AT index of team_id_index
+                        System.out.println(highest_team_id);
+                        //allTeams.setSize(highest_team_id);
+                        teams.setSize(highest_team_id);
+                        System.out.println("HELLO");
+                        //if(one_team.size() == 0)
+                        if(teams.get(team_id_index))
+                        {
+
+                        }
+                            System.out.println("First member: " + character.get("name"));
+                            teams.add(team_id_index, one_team);
+                            one_team.add(character);
+                        }
+                        else
+                        {
+                            System.out.println("NOT first member");
+                            if(!one_team.contains(character))
+                            {
+
+                                int size = teams.get(team_id_index).size();
+                                one_team.add(size, character);
+                            }
+                        }
+
+                        //teams.setElementAt(one_team, team_id_index);
+
+                        //teams.get(team_id_index).add(size, character);
+                        System.out.println("Size of team: " + one_team.size() + "for team#" + team_id_index);
+
+                     */
+                        //if(allTeams.get(team_id_index) == null) //Why is this always null?
+                        //{
+                        //   System.out.println("Beginning new team: #" + team_id_index);
+                        //   JSONArray list_of_members = new JSONArray();
+                        //   list_of_members.put(character);
+                        //   allTeams.add(team_id_index, list_of_members); //goes out of scope?
+
+                        //}
+                        // else
+                        //{
+                        //System.out.println("Adding to established team: #" + team_id_index);
+                        //JSONArray current_members = allTeams.get(team_id_index);
+                        //current_members.put(current_members.length(), character);
+                            /*
+                            JSONArray your_team = allTeams.get(team_id_index);
+                            int your_team_length = your_team.length();
+                            System.out.println("Your_team_length (before adding another person): " + your_team_length);
+                            //int team_size = allTeams.get(team_id_index).length(); //EX: 2 people already means size 2, insert at 0, 1 --> INDEX 2
+                            System.out.println("Trying to add : " + name + " to team " + team_id);
+                            your_team.put(your_team_length, character);
+                            //allTeams.get(team_id_index).put(team_size, character); //(index to insert at, object)
+                            */
+
+
+
+                    // System.out.println(allTeams.size());
+                }
+            }
+        }
+    }
+
+                    //These are all null right now... no one is getting added (/saved) to their teams
+                    //for(int team = 0; team < allTeams.size(); team++)
+                    //{
+                     //   System.out.println("LOOKING AT TEAM#" + team);
+                     //   if(allTeams.get(team) != null)
+                     //   {
+                     //       JSONArray members = allTeams.get(team);
+                     //       System.out.println("\t#members in team " + team + ": " + members.length());
+                     //   }
+                        //JSONArray members = allTeams.get(team);
+
+                        //System.out.println("#members: " + members.length());
+                    //}
+                    //System.out.println("PLAYER: " + player.toString());
+
+                    //if (player.has("character")) {
+                        ////System.out.println("Does list of all players already have this player?");
+                        //System.out.println(" --> includes character");
+                        //if (allPlayers.contains(player)) {
+                        //    System.out.println("allPlayers list : already has that player");
+                        //}
+                        //if (!allPlayers.contains(player)) {
+                        //    System.out.println("ADDING PLAYER: " + player);
+                        //    allPlayers.add(player);
                             /*
                             JSONObject character = player.getJSONObject("character");
                             System.out.println("Character: " + character.toString());
@@ -206,44 +377,48 @@ public class Main {
 
                              */
 
-                        }
-                    } else {
-                        System.out.println(" --> does NOT include character");
-                    }
-                }
+                        //}
+                    //} else {
+                        //System.out.println(" --> does NOT include character");
+                    //}
+                //}
 
-            }
+          //  }
 
             //System.out.println(playersList);
 
             //System.exit(0);
-        }
-        System.out.println("end of playerslist printing");
+        //}
+        //System.out.println("end of playerslist printing");
 
-        System.out.println("allplayers.size() : " + allPlayers.size());
+        //System.out.println("allplayers.size() : " + allPlayers.size());
+        //System.out.println("playersList.length() : " + playersList.length()); //playersList.legnth() and allplayers.size() should match
 
+        /*
         System.out.println("PRINTING allPlayers:" );
         for (int index = 0; index < allPlayers.size(); index++) {
             //System.out.println(allPlayers.get(i).getString("character"));
             System.out.println(allPlayers.get(index).toString());
         }
+        */
 
-        System.out.println("PRINTING accountID of each player: ");
-        for (int index = 0; index < allPlayers.size(); index++) {
+        //System.out.println("PRINTING accountID of each player: ");
+        //for (int index = 0; index < allPlayers.size(); index++) {
+        //}
+    //}
 
-            //System.out.println(allPlayers.get(i).getString("character"));
-            JSONObject one_player = allPlayers.get(index);
-            //System.out.println("LOOK: " + one_player.has("character"));
-            //System.out.println("get character: " + one_player.get("character"));
-            //System.out.println("LOOK2:" + one_player.get("character").toString());
-            JSONObject character = one_player.getJSONObject("character"); //problem here
-            //System.out.println("HERE");
-            //System.out.println("LOOK3: " + character.toString());
+            //JSONObject one_player = allPlayers.get(index);
+            //JSONObject character = one_player.getJSONObject("character"); //problem here
+
+            /*
             String id = character.get("accountId").toString();
             String team_id = character.get("teamId").toString();
             String name = character.get("name").toString();
             System.out.println(name + " has id : " + id + " and is in team # : " + team_id);
+            */
 
+
+            /*
             int team_id_index = Integer.parseInt(team_id);
             System.out.println(team_id_index + " VS current highest of " + highest_team_id);
             if(team_id_index >= highest_team_id) {
@@ -278,15 +453,24 @@ public class Main {
                 boolean inTeam = false;
                 for(int i = 0; i < team.length(); i++)
                 {
+                    System.out.println(team.get(i).toString() + "--VS--");
+                    System.out.println(one_player.toString());
                     if(team.get(i) == one_player)
                     {
                         inTeam = true;
                         System.out.println("Already in the team");
                     }
                 }
-                if(!inTeam)
-                {
-                    team.put(one_player);
+                if(!inTeam) {
+                    System.out.println("LOOK: Adding " + name + " to team #" + team_id_index);
+                    team.put(team.length() - 1, one_player);
+                    System.out.println("Team size: " + team.length());
+                    System.out.println("Team members are: ");
+                    for (int index2 = 0; index2 < team.length(); index2++)
+                    {
+                        String member = team.get(index2).toString();
+                        System.out.println("------> " + member);
+                    }
                     System.out.println("team.length() *should be at least 1* = " + team.length());
                 }
 
