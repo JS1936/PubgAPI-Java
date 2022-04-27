@@ -157,6 +157,11 @@ public class Main {
     public static void ranking(String name, File prettyFile)
     {
         Vector<JSONObject> peopleByTeam = printPlayersByTeam(prettyFile); //misleading method call? //ALSO: people or players?
+        if(peopleByTeam == null)
+        {
+            System.out.println("peopleByTeam is null because a game had size issues");
+            return;
+        }
         //System.out.println("RANKING SEARCH: ");
         //ranking("JS1936", peopleByTeam);
         //ranking("matt112", peopleByTeam);
@@ -380,6 +385,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
 
         //Holds info for every player
+        //if(!jsonObject.has("characters"))
+        //{
+         ////   System.out.println("JSONArray 'characters' not found, so can't complete the task");
+        //    return null; //carefull
+        //}
         playersList = jsonObject.getJSONArray("characters"); //attempt to fix
 
         //Set up allTeams by storing each player in an index that makes sense for their team_id
@@ -387,6 +397,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
             //Get access to one player and their details (such as team_id)
             JSONObject player = playersList.getJSONObject(j);
+            //if(!player.has("character"))
+            //{
+            //    System.out.println("ERROR: player.getJSONObject(\"character\") == null");
+            //    return null; //careful
+            //}
             JSONObject character = player.getJSONObject("character");
             String team_id = character.get("teamId").toString();
             int team_id_index = Integer.parseInt(team_id);
@@ -405,7 +420,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                 if((insert + loc) >= peopleByTeam.size()) //Should not occur
                 {
                     System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
-                    System.exit(0);
+                    return null; //careful
                 }
                 if (peopleByTeam.get(insert + loc) != null) { //Other team member holds that spot.
                     loc++;
@@ -614,6 +629,19 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                 e.printStackTrace();
             }
         }
+
+        //BEING ABLE TO ENTER ANOTHER TASK DOES NOT WORK YET
+        System.out.println("HERE HERE HERE HERE!");
+        String response = "y";
+        System.out.println("Any other requests? (y/n)");
+
+        while(response.equalsIgnoreCase("Y"))
+        {
+            printFunctionalities();
+            getRequest(input);
+            response = input.next();
+        }
+        System.out.println("Shutting down program."); //change wording...
         input.close(); //put here?
         //Call the appropriate method(s) based on user input
     }
@@ -625,7 +653,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //what about for ONE specific file, or  for specific fileS?
     public static void getInfo(int request, File prettyFile, String nameIfNeeded)
     {
-        //
+        //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
+        //EX: request.equalsIgnoreCase("0")
         if(request == 0)
         {
             countBotsAndPeople(prettyFile); //seems to work
@@ -642,15 +671,16 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
             winnerWeapons(prettyFile); //seems to work
 
-        }else if(request == 4) { //NOT WORKING (issue with scanner)
+        }else if(request == 4) { //NOT WORKING (issue with scanner) -->
+            // NOW switched... but still lots of extra printouts, and passing name in seems silly
 
-            ranking(nameIfNeeded, prettyFile); //seems to work //INTERESTING: new request, asks for name with every file...
+            ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors) //INTERESTING: new request, asks for name with every file...
 
         }else
         {
             System.out.println("Invalid request"); //for example's sake (currently)
         }
-
+        //System.out.println("LEAVING getInfo");
         //if(option1)
         //{
            //call option1 method
