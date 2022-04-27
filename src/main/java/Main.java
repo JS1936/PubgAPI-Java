@@ -18,12 +18,24 @@ import java.util.*;
 //https://github.com/Corefinder89/SampleJavaCodes/blob/master/src/Dummy1.java
 //https://www.w3schools.com/java/java_files_read.asp
 
+//Current functionalities:
+//
+//      Using JSONObjects:
+//              -returnObject
+//              -ranking
+//              -winnerWeapons
+//              -weaponFrequencies
+//
+//      Using Scanner:
+//              -read from and write to a file
+//              -"prettify" a file
+//              -countBotsAndPeople
+//              -calculateKillCounts
+//              -printKillCounts
+
 
 //is an eof error happening...?
 //read the file to string first...
-
-//could clear out original file
-//then for each line in pretty file, write to original file?
 public class Main {
 
     /*
@@ -59,7 +71,7 @@ public class Main {
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
 
-
+        //KEEP THESE:
         //countBotsAndPeople(prettyFile);
         //calculateKillCounts(prettyFile); //seems "done"
         singleStringOfFile(prettyFile); //in progress
@@ -81,15 +93,16 @@ public class Main {
         Vector<Player> winners = new Vector<Player>();
         Vector<Integer> winnerKills = new Vector<Integer>();
      */
+    //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
     public static void printKillCounts(Vector<String> counts)
     {
         System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
-        int[] frequencies = new int[30];
+        int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game
         int maxKills = 0;
         int  killsByTopTen = 0;
         for(int i =0; i < counts.size(); i++)
         {
-            if(i%10 ==0)
+            if(i%10 ==0) //For display clarity
             {
                 System.out.println();
             }
@@ -118,11 +131,12 @@ public class Main {
     }
 
     //Accidentally removed this! Found it again through github commits history
+    //Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
+    //Vector<Integer> killsByTeam = new Vector<Integer>();
+    //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
+    //IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
     public static void calculateKillCounts(File prettyFile)
     {
-        //Vector<Integer> killsByTeam = new Vector<Integer>();
-        //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
-
         Vector<String> killCounts = new Vector<String>();
 
         try {
@@ -145,17 +159,12 @@ public class Main {
         }
     }
 
-
-    //WHAT IF IT WAS JUST ONE VECTOR
-    //Since data was gathered at the beginning of the game, everyone has rank 0 so far --> need the pretty file?
-    //_T, logmatchend, l
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
     public static void ranking(String name, Vector<JSONObject> peopleByTeam)
     {
         boolean playedInGame = false;
         for(JSONObject person : peopleByTeam)
         {
-            //System.out.println("HERE");
             if(person != null && person.get("name").equals(name))
             {
                 playedInGame = true;
@@ -168,15 +177,8 @@ public class Main {
         }
     }
 
-    //Where would this be called from?
-    //secondaryWeapon
-    //character
-        //includes ranking
-    //primaryWeaponFirst
-    //primaryWeaponSecond
-
-    //THAT CANNOT BE RIGHT:
-    //"Players (including winners)93/95 ended with (None)(primaryWeaponFirst) in this match."
+    //Stores and prints what weapons were used by a specific group (winnersOnly or everyone)
+    //Currently only works for winnersOnly
     public static void weaponFrequencies(Vector<String> weaponSlot,  boolean winnersOnly, String weaponSlotName)
     {
         System.out.println(weaponSlotName.toUpperCase() + ": (winners only)");
@@ -184,7 +186,7 @@ public class Main {
         for(int i = 0; i < weaponSlot.size(); i++) //One weapon
         {
             //System.out.println("Weapons already listed: " + alreadyListed.toString());
-            int count = 0;
+            int count = 0; //how many times this weapon was used (EX: 2x could be in two slots by same person or 1x by 2people)
             String weapon = weaponSlot.get(i);
 
             boolean inAlreadyListed = false;
@@ -197,7 +199,7 @@ public class Main {
             }
             if (!inAlreadyListed) { //already listed does not seem like it is getting updated properly...
                 alreadyListed.add(weapon);
-                count = 0;
+                count = 0; //Check this
                 for (int j = i; j < weaponSlot.size(); j++) //Compare against all the other weapons
                 {
                     String other_weapon = weaponSlot.get(j);
@@ -209,36 +211,32 @@ public class Main {
                 System.out.println("\t" + weapon + " x" + count);
             }
         }
-
         System.out.println();
     }
 
-    //PRINTING WEAPON FREQUENCIES:
-    //Winners Only: 1/6 ended with WeapMosinNagant_C(primaryWeaponFirst) in this match. (WHAT?)
-    //ALSO: what about if slot is empty (including in a primary, for instance)
     //Would getting everyone else's weapons be a different call?
-    public static void winnerWeapons(File prettyFile)
-    {
-        Vector<String> winnerSecondary = new Vector<String>();
-        Vector<String> winnerPrimary = new Vector<String>();
-        //Vector<String> winnerPrimary2 = new Vector<String>(); //remove?
-
+    /*
         Vector<String> everyoneSecondary = new Vector<String>();
         Vector<String> everyonePrimary = new Vector<String>();
-        //Vector<String> everyonePrimary2 = new Vector<String>(); //remove?
+     */
+    public static void winnerWeapons(File prettyFile)
+    {
+        Vector<String> winnerSecondary = new Vector<String>(); //stores names of winners' match-end secondary weapons
+        Vector<String> winnerPrimary = new Vector<String>(); //stores names of winners' match-end primary weapons
 
-
+        //Gather "LogMatchEnd" data and store in jsonObject
         JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
         if(jsonObject == null)
         {
             System.out.println("Error");
             return;
         }
-        //System.out.println("Contents of jsonObject: " + jsonObject.toString());
+
+        //Each
         JSONArray players = jsonObject.getJSONArray("characters");
         for(int i = 0; i < players.length(); i++)
         {
-            JSONObject one_player = players.getJSONObject(i); //object VS json object?
+            JSONObject one_player = players.getJSONObject(i);
             JSONObject player_details = one_player.getJSONObject("character");
 
             //Weapons
@@ -247,15 +245,15 @@ public class Main {
             String primaryWSecond = one_player.get("primaryWeaponSecond").toString();
 
             //Ranking
-            //It seems like only the weapons of the winners are registering...
             String ranking = player_details.get("ranking").toString();
-            //String name = player_details.get("name").toString();
+
+            //Account ID and team ID
             String accountId = player_details.get("accountId").toString();
             String team_id = player_details.get("teamId").toString();
-
-            //System.out.println("TEAM ID: " + team_id);
             int team_id_int = Integer.parseInt(team_id);
-            if(ranking.equals("1") && team_id_int < 200)
+
+            //Add winners' match-end weapons to the appropriate vector.
+            if(ranking.equals("1") && team_id_int < 200) //Only include real people, not bots or guards
             {
                 System.out.println("accountId: " + accountId);
                 if(secondaryWeapon.equalsIgnoreCase(""))
@@ -270,9 +268,9 @@ public class Main {
                 {
                     primaryWSecond = "N/A";
                 }
-                System.out.println("Found a winner...");
+
                 winnerSecondary.add(secondaryWeapon);
-                winnerPrimary.add(primaryWFirst); //changed from winnerPrimary2.
+                winnerPrimary.add(primaryWFirst);
                 winnerPrimary.add(primaryWSecond);
 
                 //OR: print one player at a time
@@ -281,45 +279,21 @@ public class Main {
                 System.out.println("\tPrimary Weapon #2: \t" + primaryWSecond);
                 System.out.println("\tSecondary Weapon: \t" + secondaryWeapon);
                 System.out.println("-------------------------------------------------");
-                //considering 1 and 2 essentially the same? //like only considering primary weapons VS secondary... or even just weapons
             }
-            //Note: winners get included in "everyone" data
-            //System.out.println("Now including general populus..."); //weird
-            //everyoneSecondary.add(secondaryWeapon);
-            //everyonePrimary1.add(primaryWFirst);
-            //everyonePrimary2.add(primaryWSecond);
-
-            //System.out.println(one_player.toString());
-            //System.out.println("RANKING IS: " );
-            //System.out.println(one_player.get("ranking").toString());
-            //if(one_player.get("ranking") == "1")
         }
 
-        //System.out.println("everyonPrimary1 list: " + everyonePrimary1.toString());
-        System.out.println("PRINTING WEAPON FREQUENCIES: " );
-        System.out.println();
-        //weaponFrequencies(everyonePrimary1, false, "primaryWeaponFirst");
-        //weaponFrequencies(everyonePrimary2, false, "primaryWeaponSecond");
-        //weaponFrequencies(everyoneSecondary, false, "secondaryWeapon");
+        System.out.println("PRINTING WEAPON FREQUENCIES: \n" );
         weaponFrequencies(winnerPrimary, true, "primary weapons");
-        //weaponFrequencies(winnerPrimary2, true, "primaryWeaponSecond");
         weaponFrequencies(winnerSecondary, true, "secondary weapon");
-
-
-        //  ->(NOT) find "gameResultOnFinished
-        //  -> (DO) find "characters" --> beacuse those hold the character wrappers --> which hold weapon details
-        //end results
-        //character wrapper
-        //primaryWeaponFirst
-        //primaryWeaponSecond
-        //secondaryWeapon
     }
     
     //WHAT IF you could search through a prettyfile for any _T and that method would return the contents?
     //Could also keep track of items equipped
+    //Note: What if "String type" occurs multiple times (EX: item equip sort of thing)
     public static JSONObject returnObject(File prettyFile, String type)
     {
         System.out.println("NEW FILE_______________________________________________");
+        //Store contents of prettyFile in a String called file_content
         String file_content = "";
         try {
             file_content = FileUtils.readFileToString(prettyFile);
@@ -330,6 +304,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        //Return portion of file that matches given String type
         JSONArray jsonArray = new JSONArray(file_content);
         for (int i = 0; i < jsonArray.length(); i++) {
 
@@ -567,41 +542,3 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
     }
 }
-
-/*
-
-                //if(!foundWinners)
-                //{
-                //    if(data.contains("results"))
-                //    {
-                //        foundWinners = true;
-               //     }
-                    //go to the next line
-               // }
-                //else //gameHasEnded = true
-                //{
-                //    String currentID = "";
-                    /*
-                    if(data.contains("\"ranking\": 1,")) //, to exclude 10, 12, 100, etc.
-                    {
-                        System.out.println(data);
-                        if (scan.hasNextLine()) {
-                            String nameID = scan.nextLine();
-                            boolean newWinner = true;
-                            for (int i = 0; i < winners.size(); i++) {
-                                if (winners.get(i).accountID == nameID) {
-                                    newWinner = false;
-                                }
-                            }
-                            if (newWinner) {
-                                Player winner = new Player(nameID);
-                                winners.add(winner);
-                            }
-                        } else {
-                            System.out.println("No more lines to read");
-                            scan.close();
-                        }
-                    }
-                    */
-//}
-
