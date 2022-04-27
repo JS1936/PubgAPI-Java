@@ -61,8 +61,8 @@ public class Main {
 
 
         //countBotsAndPeople(prettyFile);
-        calculateKillCounts(prettyFile); //seems "done"
-        //singleStringOfFile(prettyFile); //in progress
+        //calculateKillCounts(prettyFile); //seems "done"
+        singleStringOfFile(prettyFile); //in progress
         //winnerWeapons(prettyFile);
 
 
@@ -346,6 +346,19 @@ public class Main {
     }
 
 
+    /* ////////////////???
+    C:\Users\jmast\pubgFilesExtracted\telemetryFile6.json
+NEW FILE_______________________________________________
+NEW FILE_______________________________________________
+LogMatchStart
+Maximum team capacity: 4
+NEW FILE_______________________________________________
+LogMatchEnd
+val of team_id_index: 100000 for account.09126421272d4bbfac0dda6625d953b5
+val of insert: 400000
+peopleByTeam so far:
+Can't add to index: 400000because peopleByTeam.size() is 2000
+     */
     public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE??? //rename this, too
     {
         System.out.println("NEW FILE_______________________________________________");
@@ -358,24 +371,29 @@ public class Main {
         int highest_team_id = 0;
         int team_count = 0; //still need to calculate this in code
 
-        /*
-        String file_content = "";
-        try {
-            file_content = FileUtils.readFileToString(prettyFile);
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        //ALSO: log match teamSize... -> so not always 4
+
+        JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
+        int team_capacity = match_start.getInt("teamSize");
+        boolean is_custom_game = match_start.getBoolean("isCustomGame");
+        if(is_custom_game)
+        {
+            System.out.println("Sorry, we don't compute data for custom games");
+            return;
         }
-        //get each character
-        //use characterwrapper to get weapon data, too...
-        JSONArray jsonArray = new JSONArray(file_content);
-        */
 
         //Use 425 or 500 or something else?
-        int max_num_teams = 425; //because bots start at 200 and guards start at 400 -->could have sorted them that way, too (identifying type)
-        int maxIndices = max_num_teams * 4; //maybe adjust this depending on what the type of game is (singles, duos, squads, flexible squads)
+        int max_num_teams = 500; //because bots start at 200 and guards start at 400 -->could have sorted them that way, too (identifying type)
+        //int team_capacity = 4;
+        if(team_capacity > 4)
+        {
+            System.out.println("Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
+            max_num_teams = 2;
+        }
+        System.out.println("Maximum team capacity: " + team_capacity);
+
+
+        int maxIndices = max_num_teams * team_capacity; //maybe adjust this depending on what the type of game is (singles, duos, squads, flexible squads)
         peopleByTeam.setSize(maxIndices);
 
         JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
@@ -384,6 +402,7 @@ public class Main {
             System.out.println("jsonObject was null... uh oh");
             return;
         }
+
         //for (int i = 0; i < jsonArray.length(); i++) {
 
             //JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -400,18 +419,47 @@ public class Main {
                     String team_id = character.get("teamId").toString();
 
                     int team_id_index = Integer.parseInt(team_id);
-                    int insert = (team_id_index * 4);
-                    for (int loc = 0; loc < 4; loc++) {
-                        if (peopleByTeam.get(insert + loc) != null) {
+                    if(team_id_index >= 100000)
+                    {
+                        team_id_index = (team_id_index % 100000) + 1; //EX: weirdness with file6
+                    }
+                    int insert = (team_id_index * team_capacity); //replaced 4 with team_capacity (save space/time)
+                    //if(team_id_index >= 200) //adjusting for bots and guards (which overwhelmed the array size-wise)
+                    //{
+                    //    insert = team_id_index;
+                    //}
+                    System.out.println("string of team_id: " + team_id);
+                    System.out.println("val of team_id_index: " + team_id_index + " for " + character.get("accountId").toString());
+                    System.out.println("val of insert: " + insert);
+                    System.out.println("peopleByTeam so far:" );
+                    for(int x = 0; x < peopleByTeam.size(); x++)
+                    {
+                        if(peopleByTeam.get(x) == null)
+                        {
+                            //System.out.println("null");
+                        }
+                        else
+                        {
+                            System.out.print(peopleByTeam.get(x).get("name") + " ");
+                        }
+
+                    }
+                    for (int loc = 0; loc < team_capacity; loc++) {
+                        if((insert + loc) >= peopleByTeam.size())
+                        {
+                            System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
+                            System.exit(0);
+                        }
+                        if (peopleByTeam.get(insert + loc) != null) { //added insert + loc < peopleByTeam.size() trying to avoid "Array index out of range: " issue
                             loc++;
                         } else {
                             peopleByTeam.set(insert + loc, character);
-                            loc = 4;
+                            loc = team_capacity;
                         }
                     }
                     for (int in = 0; in < peopleByTeam.size(); in++) {
 
-                        if (in % 4 == 0 && peopleByTeam.get(in) != null) {
+                        if (in % team_capacity == 0 && peopleByTeam.get(in) != null) {
                             System.out.println("-----");
                         }
                         if (peopleByTeam.get(in) != null) {
@@ -492,7 +540,6 @@ public class Main {
 
             }
             System.out.println("#bots:       " + botNames.size() + " / " + playerNames.size());
-            //System.out.println(totalPlayers.trim());
 
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
