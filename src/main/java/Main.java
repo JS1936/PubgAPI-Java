@@ -2,13 +2,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import com.google.gson.stream.JsonReader;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 
 import java.io.*;
+import java.lang.reflect.Method;
 import java.util.*;
 
 
@@ -43,7 +43,7 @@ public class Main {
      * where that content is stored in a way that looks "pretty".
      */
     //NOTE: if this returned the prettyFile, calls like winnerWeapons could be made from main
-    public static void makePretty(File fileName) throws IOException {
+    public static File makePretty(File fileName) throws IOException {
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
 
@@ -67,10 +67,9 @@ public class Main {
         //KEEP THESE:
         //countBotsAndPeople(prettyFile);
         //calculateKillCounts(prettyFile); //seems "done"
-        singleStringOfFile(prettyFile); //in progress
+        printPlayersByTeam(prettyFile); //in progress
         //winnerWeapons(prettyFile);
-
-
+        return prettyFile; //added recently (4/27/2022)
     }
     //find winners first (and log who they are)
     //THEN record stuff?
@@ -335,17 +334,12 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //         100000+ --> custom game, maybe?
     //if only team ids ar 1 and 2 --> deathmatch
     //NOTE: Team size not always 4 (or even <=4!)
-    public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE??? //rename this, too
+    public static void printPlayersByTeam(File prettyFile) //used to be called singleString...
     {
         System.out.println("NEW FILE_______________________________________________");
         Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
 
         JSONArray playersList = new JSONArray();
-
-        int bot_count = 0;
-        int person_count = 0;
-        int highest_team_id = 0;
-        int team_count = 0; //still need to calculate this in code
 
         //Store data from LogMatchStart in match_start JSONObject
         JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
@@ -360,9 +354,9 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
 
         //Use 425 or 500 or something else? 150?
+        //Establish maximum number of teams*
         int max_num_teams = 500; //because bots start at 200 and guards start at 400 -->could have sorted them that way, too (identifying type)
-        //int team_capacity = 4;
-        if(team_capacity > 4) //Only deathmatch is an option currently, since custom games are not handled
+        if(team_capacity > 4) //Only deathmatch is then an option currently, since custom games are not handled
         {
             System.out.println("Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
             max_num_teams = 2;
@@ -370,57 +364,54 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         System.out.println("Maximum team capacity: " + team_capacity);
 
 
-        //
+        //Determine size of peopleByTeam
         int maxIndices = max_num_teams * team_capacity; //maybe adjust this depending on what the type of game is (singles, duos, squads, flexible squads)
         peopleByTeam.setSize(maxIndices);
 
+        //Store data from LogMatchEnd in jsonObject
         JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
-        if(jsonObject == null)
-        {
-            System.out.println("jsonObject was null... uh oh");
-            return;
-        }
 
+        //Holds info for every player
         playersList = jsonObject.getJSONArray("characters"); //attempt to fix
 
-        //Set up allTeams
+        //Set up allTeams by storing each player in an index that makes sense for their team_id
         for (int j = 0; j < playersList.length(); j++) {
-            JSONObject player = playersList.getJSONObject(j);
-            JSONObject character = player.getJSONObject("character"); //problem here
-            String team_id = character.get("teamId").toString();
 
+            //Get access to one player and their details (such as team_id)
+            JSONObject player = playersList.getJSONObject(j);
+            JSONObject character = player.getJSONObject("character");
+            String team_id = character.get("teamId").toString();
             int team_id_index = Integer.parseInt(team_id);
+
+            //Special case
             if(team_id_index >= 100000)
             {
-                team_id_index = (team_id_index % 100000) + 1; //EX: weirdness with file6
+                team_id_index = (team_id_index % 100000) + 1; //EX: weirdness with file6 (cause = ?)
             }
+
+            //Determine at what index to store this player in peopleByTeam
             int insert = (team_id_index * team_capacity); //replaced 4 with team_capacity (save space/time)
 
-            System.out.println("string of team_id: " + team_id);
-            System.out.println("val of team_id_index: " + team_id_index + " for " + character.get("accountId").toString());
-            System.out.println("val of insert: " + insert);
-            System.out.println("peopleByTeam so far:" );
-
+            //Put player in peopleByTeam according to their team_id
             for (int loc = 0; loc < team_capacity; loc++) {
-                if((insert + loc) >= peopleByTeam.size())
+                if((insert + loc) >= peopleByTeam.size()) //Should not occur
                 {
                     System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
                     System.exit(0);
                 }
-                if (peopleByTeam.get(insert + loc) != null) { //added insert + loc < peopleByTeam.size() trying to avoid "Array index out of range: " issue
+                if (peopleByTeam.get(insert + loc) != null) { //Other team member holds that spot.
                     loc++;
                 } else {
-                    peopleByTeam.set(insert + loc, character);
-                    loc = team_capacity;
+                    peopleByTeam.set(insert + loc, character); //Adding player here
+                    loc = team_capacity; //Don't want to add the multiple times (leave room for other people!)
                 }
             }
-
         }
         //Print name, teamId, and ranking of all players (from lowest to highest team id).
         for (int in = 0; in < peopleByTeam.size(); in++) {
 
             if (in % team_capacity == 0 && peopleByTeam.get(in) != null) {
-                System.out.println("-----");
+                System.out.println("-----"); //For display clarity. Separates teams.
             }
             if (peopleByTeam.get(in) != null) {
                 System.out.print(peopleByTeam.get(in).get("name").toString());
@@ -430,16 +421,18 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
 
         System.out.println("RANKING SEARCH: ");
-        ranking("JS1936", peopleByTeam); //Is this working?
+        ranking("JS1936", peopleByTeam);
         ranking("matt112", peopleByTeam);
         ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
     }
+
     /*
      * Reads from a file to determine how many "people" in a pubg match were actually bots.
      * The file includes many, many details about the match.
      * IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
+     * NOTE: does not count guards as bots.
      */
-    public static void countBotsAndPeople(File prettyFile) {
+    public static void countBotsAndPeople(File prettyFile) { //make private?
         try {
             Scanner scan = new Scanner(prettyFile);
             Vector<String> playerNames = new Vector<String>(); //account.
@@ -473,9 +466,9 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                         {
                             playerNames.add(account_id);
                         }
-                    } else //bot
+                    } else //bot (or guard, potentially)
                     {
-                        if (data.contains("ai."))
+                        if (data.contains("ai.")) //bot
                         {
                             //Store account_id
                             int accountStart = data.indexOf("ai.");
@@ -500,20 +493,138 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
     }
 
-    public static void main(String[] args) {
-        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
+    //Hopefully: Only for battle royale* (max 4 people per team)
+    //Also, deathmatches probably don't have bots (would custom games?)
+    ////Trying to get data that goes beyond just a single game
+    public static void maps(File prettyFile, Vector<String> mapsPlayed)
+    {
+        JSONObject jsonObject = returnObject(prettyFile, "LogMatchStart");
+        String mapName = jsonObject.getString("mapName");
+        int max_team_size = jsonObject.getInt("teamSize");
+        if(max_team_size <= 4)
+        {
+            mapsPlayed.add(mapName);
+        }
 
+        //logmatchstart
+        //mapname
+        //could use team size (EX: only look at the ones that are actually "classic" battle royale games, not custom or deathmatch)
+        //EX: desiredThing could be mapnames
+    }
+    /*
+    public static void getInfo(String desiredThing)
+    {
+        Vector<String> mapsPlayed = new Vector<String>();
+    }
+     */
+
+    public static void psuedoMain(String desiredThing)
+    {
+        //https://stackoverflow.com/questions/160970/how-do-i-invoke-a-java-method-when-given-the-method-name-as-a-string
+        //https://www.tutorialspoint.com/How-do-I-invoke-a-Java-method-when-given-the-method-name-as-a-string
+        // Class<?> c = Class.forName("class name");
+        //Method method = c.getDeclaredMethod("method name", parameterTypes);
+        //method.invoke(objectToInvokeOn, params);
+        //
+
+
+
+
+        //Class c = null;
+        //try {
+        //    c = Class.forName("Main.java");
+         //   System.out.println("FOUND IT!");
+        ////    System.out.println("Class '" + c + "' not found");
+         //   e.printStackTrace();
+        //    return;
+        //}
+        //Method method_name = this.getDeclaredMethod("methodName", parameterTypes);
+        //Is there a way to check if the files (content or qty) have changed since last time?
+        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
+        printFunctionalities();
+        int request = getRequest(); //string or int? (Getting confused)
+        if(request == -1) //remove?
+        {
+            System.out.println("Invalid request");
+            return;
+        }
+        //Method m;
         for (File fileName : files) {
             //if(fileName.getName() != "prettyFiles")
             //{
             System.out.println(fileName);
             try {
-                makePretty(fileName); //error here
+                //makePretty(fileName); //error here
+                File pretty = makePretty(fileName);
+
+                //getInfo(desiredThing);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //}
-
         }
+        //Call the appropriate method(s) based on user input
+    }
+
+    //What if there were a container of "things you could access" about any given game (or all games?)
+    //Like a user interface, where they are presented with options and type which ones they want
+
+    public static void getFunctionalities()
+    {
+
+    }
+    public static void printFunctionalities() {
+
+        System.out.println("What would you like to know? Type the corresponding letter and then press enter.");
+        System.out.println();
+        System.out.println("0: How many bots and people were in each game?");
+        System.out.println("1: What weapons did the winners use?");
+        System.out.println("2: What maps were played?");
+
+    }
+
+    public static int getRequest()
+    {
+        Scanner input = new Scanner(System.in);
+        int request = input.nextInt();
+        System.out.println("request is: " + request);
+        input.close();
+        //System.out.println("LOOK: " + input.next());
+
+
+        Vector<String> functionalities = new Vector<String>();
+        functionalities.add("How many bots and people were in each game?");
+        functionalities.add("What weapons did the winners use?");
+        functionalities.add("What maps were played?");
+
+        boolean requestAccepted = false;
+        if(request >= 0 && request < functionalities.size())
+        {
+            requestAccepted = true;
+        }
+        if(!requestAccepted)
+        {
+            System.out.println("Sorry, '" + request + "' does not match any available functionalities.");
+            return -1; //invalid request
+        }
+        else
+        {
+            System.out.println("Request accepted!");
+            return request;
+            //Do it...
+        }
+    }
+    public static void main(String[] args)
+    {
+
+        //print options for what you can do
+        //ask them what they want to do
+        //do it (if possible), otherwise error message
+        //continue running? (y/n)
+
+        //A: "HMBAP" -- HowManyBotsAndPeople?
+        //B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
+        //"I want all the maps played and how often they were played"
+
+        psuedoMain("desiredThing");
     }
 }
