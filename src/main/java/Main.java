@@ -8,7 +8,9 @@ import org.json.JSONObject;
 
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.TypeVariable;
 import java.util.*;
 
 
@@ -493,6 +495,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
     }
 
+    ////EVERYTHING BELOW THIS POINT IS A MESS CURRENTLY
+
     //Hopefully: Only for battle royale* (max 4 people per team)
     //Also, deathmatches probably don't have bots (would custom games?)
     ////Trying to get data that goes beyond just a single game
@@ -518,6 +522,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     }
      */
 
+    //VERY IN PROGRESS
     public static void psuedoMain(String desiredThing)
     {
         //https://stackoverflow.com/questions/160970/how-do-i-invoke-a-java-method-when-given-the-method-name-as-a-string
@@ -526,9 +531,34 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //Method method = c.getDeclaredMethod("method name", parameterTypes);
         //method.invoke(objectToInvokeOn, params);
         //
+        //Vector<String>
+                //Could make a vector of methods, if you find a match, call that one
+        //OR just be less efficient and call individually with lots of ifs
+        /*
+        for(Method method : Main.class.getMethods())//getMethods(); //https://stackoverflow.com/questions/3023354/how-to-get-string-name-of-a-method-in-java
+        {
+            System.out.println("HERE!");
+            String name = method.getName();
+            if(name.equalsIgnoreCase(desiredThing))
+            {
+                TypeVariable<Method>[] parameter_types = method.getTypeParameters(); //?
+                try {
+                    System.out.println("Trying...");
+                    method.invoke(null, parameter_types);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println("NAME of method : " + name);
+
+        }
+
+        //Check if it's a command, too, though
 
 
-
+        //Method countBotsAndPeople = Operations.class.getDeclaredMethod("somethinghere", File.class);
 
         //Class c = null;
         //try {
@@ -540,6 +570,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //}
         //Method method_name = this.getDeclaredMethod("methodName", parameterTypes);
         //Is there a way to check if the files (content or qty) have changed since last time?
+        */
+
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
         printFunctionalities();
         int request = getRequest(); //string or int? (Getting confused)
@@ -549,13 +581,16 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             return;
         }
         //Method m;
+
         for (File fileName : files) {
             //if(fileName.getName() != "prettyFiles")
             //{
             System.out.println(fileName);
             try {
                 //makePretty(fileName); //error here
+                System.out.println("LOOK HERE!");
                 File pretty = makePretty(fileName);
+
 
                 //getInfo(desiredThing);
             } catch (IOException e) {
@@ -568,20 +603,50 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //What if there were a container of "things you could access" about any given game (or all games?)
     //Like a user interface, where they are presented with options and type which ones they want
 
-    public static void getFunctionalities()
+    //switch stmt?
+    public static void getInfo(int request, File prettyFile)
     {
+        //
+        if(request == 0)
+        {
+            countBotsAndPeople(prettyFile);
+        }
+        else if(request == 1)
+        {
+            calculateKillCounts(prettyFile);
 
+        }else if(request == 2)
+        {
+            printPlayersByTeam(prettyFile);
+        }else
+        {
+            System.out.println("Invalid request"); //for example's sake (currently)
+        }
+
+        //if(option1)
+        //{
+           //call option1 method
+        //}
     }
+    //IN PROGRESSS
+    public static void getMethods()
+    {
+            Vector<String> methods = new Vector<String>();
+            methods.add("countBotsAndPeople");
+    }
+
+    //IN PROGRESS //make this more efficient...
     public static void printFunctionalities() {
 
         System.out.println("What would you like to know? Type the corresponding letter and then press enter.");
         System.out.println();
-        System.out.println("0: How many bots and people were in each game?");
-        System.out.println("1: What weapons did the winners use?");
-        System.out.println("2: What maps were played?");
+        System.out.println("0: countBotsAndPeople");
+        System.out.println("1: calculateKillCounts");
+        System.out.println("2: printPlayersByTeam");
 
     }
 
+    //IN PROGRESS
     public static int getRequest()
     {
         Scanner input = new Scanner(System.in);
@@ -591,10 +656,10 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //System.out.println("LOOK: " + input.next());
 
 
-        Vector<String> functionalities = new Vector<String>();
-        functionalities.add("How many bots and people were in each game?");
-        functionalities.add("What weapons did the winners use?");
-        functionalities.add("What maps were played?");
+        Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls)
+        functionalities.add("countBotsAndPeople");
+        functionalities.add("calculateKillCounts");
+        functionalities.add("printPlayersByTeam");
 
         boolean requestAccepted = false;
         if(request >= 0 && request < functionalities.size())
@@ -613,6 +678,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             //Do it...
         }
     }
+
+    //IN PROGRESS
     public static void main(String[] args)
     {
 
