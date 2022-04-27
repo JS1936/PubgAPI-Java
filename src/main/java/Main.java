@@ -154,8 +154,13 @@ public class Main {
     }
 
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
-    public static void ranking(String name, Vector<JSONObject> peopleByTeam)
+    public static void ranking(String name, File prettyFile)
     {
+        Vector<JSONObject> peopleByTeam = printPlayersByTeam(prettyFile); //misleading method call? //ALSO: people or players?
+        //System.out.println("RANKING SEARCH: ");
+        //ranking("JS1936", peopleByTeam);
+        //ranking("matt112", peopleByTeam);
+        //ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
         boolean playedInGame = false;
         for(JSONObject person : peopleByTeam)
         {
@@ -173,7 +178,8 @@ public class Main {
 
     //Stores and prints what weapons were used by a specific group (winnersOnly or everyone)
     //Currently only works for winnersOnly
-    public static void weaponFrequencies(Vector<String> weaponSlot,  boolean winnersOnly, String weaponSlotName)
+    //Made private (check other methods-- see if they need this as well)
+    private static void weaponFrequencies(Vector<String> weaponSlot,  boolean winnersOnly, String weaponSlotName)
     {
         System.out.println(weaponSlotName.toUpperCase() + ": (winners only)");
         Vector<String> alreadyListed = new Vector<String>();
@@ -336,7 +342,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //         100000+ --> custom game, maybe?
     //if only team ids ar 1 and 2 --> deathmatch
     //NOTE: Team size not always 4 (or even <=4!)
-    public static void printPlayersByTeam(File prettyFile) //used to be called singleString...
+    public static Vector<JSONObject> printPlayersByTeam(File prettyFile) //used to be called singleString...
     {
         System.out.println("NEW FILE_______________________________________________");
         Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
@@ -352,7 +358,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         if(is_custom_game)
         {
             System.out.println("Sorry, we don't compute data for custom games");
-            return;
+            System.exit(0);
         }
 
         //Use 425 or 500 or something else? 150?
@@ -422,10 +428,14 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             }
         }
 
+        return peopleByTeam; //adding this so that ranking method can be more "independent"
+        /*
         System.out.println("RANKING SEARCH: ");
         ranking("JS1936", peopleByTeam);
         ranking("matt112", peopleByTeam);
         ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
+
+         */
     }
 
     /*
@@ -575,13 +585,21 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
         printFunctionalities();
-        int request = getRequest(); //string or int? (Getting confused)
+        Scanner input = new Scanner(System.in);
+        int request = getRequest(input); //string or int? (Getting confused)
         if(request == -1) //remove?
         {
             System.out.println("Invalid request");
             return;
         }
-        //Method m;
+        String name = "";
+        if(request == 4)
+        {
+            System.out.println("Who are you looking for? (EX: matt112)");
+            name = input.next();
+            System.out.println("Now looking for: '" + name + "'");
+        }
+
 
         for (File fileName : files) {
             //if(fileName.getName() != "prettyFiles")
@@ -591,11 +609,12 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                 //makePretty(fileName); //error here
                 //System.out.println("LOOK HERE!");
                 File pretty = makePretty(fileName);
-                getInfo(request, pretty);
+                getInfo(request, pretty, name);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+        input.close(); //put here?
         //Call the appropriate method(s) based on user input
     }
 
@@ -604,7 +623,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
     //switch stmt?
     //what about for ONE specific file, or  for specific fileS?
-    public static void getInfo(int request, File prettyFile)
+    public static void getInfo(int request, File prettyFile, String nameIfNeeded)
     {
         //
         if(request == 0)
@@ -622,6 +641,10 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }else if(request == 3) {
 
             winnerWeapons(prettyFile); //seems to work
+
+        }else if(request == 4) { //NOT WORKING (issue with scanner)
+
+            ranking(nameIfNeeded, prettyFile); //seems to work //INTERESTING: new request, asks for name with every file...
 
         }else
         {
@@ -649,16 +672,23 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         System.out.println("1: calculateKillCounts");
         System.out.println("2: printPlayersByTeam");
         System.out.println("3: winnerWeapons");
+        System.out.println("4: ranking (of a specific person)");
+        //pass in and for loop instead?
 
     }
 
     //IN PROGRESS
-    public static int getRequest()
+    public static int getRequest(Scanner input)
     {
-        Scanner input = new Scanner(System.in);
-        int request = input.nextInt();
+        //Scanner input = new Scanner(System.in);
+        int request = Integer.parseInt(input.next()); //careful...
         System.out.println("request is: " + request);
-        input.close();
+        //String nameToLookfor = "";
+        //if(request == 4)
+        //{
+        //    nameToLookfor = input.nextLine();
+        //}
+        //input.close();
         //System.out.println("LOOK: " + input.next());
 
 
@@ -667,6 +697,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         functionalities.add("calculateKillCounts");
         functionalities.add("printPlayersByTeam");
         functionalities.add("winnerWeapons");
+        functionalities.add("ranking (of a specific person)");
 
         boolean requestAccepted = false;
         if(request >= 0 && request < functionalities.size())
