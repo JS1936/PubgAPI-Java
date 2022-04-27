@@ -44,15 +44,9 @@ public class Main {
      */
     //NOTE: if this returned the prettyFile, calls like winnerWeapons could be made from main
     public static void makePretty(File fileName) throws IOException {
-        String originalName = fileName.getName();
-        String originalPath = fileName.getAbsolutePath();
-        //System.out.println("original name: " + originalName);
-        //System.out.println("original path: " + originalPath);
-
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
 
-        //System.out.println("pretty string: " + prettyString);
         //make "pretty" version of the string
         Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
         JsonElement je = JsonParser.parseString(uglyString);
@@ -65,8 +59,7 @@ public class Main {
             theDir.mkdirs();
         }
 
-        File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + originalName);
-        //prettyJsonString //LOOK //fix this
+        File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
 
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
@@ -232,7 +225,7 @@ public class Main {
             return;
         }
 
-        //Each
+        //Look at each player (WINNER) and store their weapons data
         JSONArray players = jsonObject.getJSONArray("characters");
         for(int i = 0; i < players.length(); i++)
         {
@@ -253,6 +246,7 @@ public class Main {
             int team_id_int = Integer.parseInt(team_id);
 
             //Add winners' match-end weapons to the appropriate vector.
+            //Note: ranking.equals("1") included because was initially trying to store data for winners AND everyone
             if(ranking.equals("1") && team_id_int < 200) //Only include real people, not bots or guards
             {
                 System.out.println("accountId: " + accountId);
@@ -340,10 +334,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //         50_ (like 501) means guards
     //         100000+ --> custom game, maybe?
     //if only team ids ar 1 and 2 --> deathmatch
+    //NOTE: Team size not always 4 (or even <=4!)
     public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE??? //rename this, too
     {
         System.out.println("NEW FILE_______________________________________________");
-        Vector<JSONObject> peopleByTeam = new Vector<JSONObject>();
+        Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
 
         JSONArray playersList = new JSONArray();
 
@@ -352,10 +347,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         int highest_team_id = 0;
         int team_count = 0; //still need to calculate this in code
 
-        //ALSO: log match teamSize... -> so not always 4
-
+        //Store data from LogMatchStart in match_start JSONObject
         JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
         int team_capacity = match_start.getInt("teamSize");
+
+        //Check if the game is custom
         boolean is_custom_game = match_start.getBoolean("isCustomGame");
         if(is_custom_game)
         {
@@ -366,7 +362,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //Use 425 or 500 or something else? 150?
         int max_num_teams = 500; //because bots start at 200 and guards start at 400 -->could have sorted them that way, too (identifying type)
         //int team_capacity = 4;
-        if(team_capacity > 4)
+        if(team_capacity > 4) //Only deathmatch is an option currently, since custom games are not handled
         {
             System.out.println("Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
             max_num_teams = 2;
@@ -374,6 +370,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         System.out.println("Maximum team capacity: " + team_capacity);
 
 
+        //
         int maxIndices = max_num_teams * team_capacity; //maybe adjust this depending on what the type of game is (singles, duos, squads, flexible squads)
         peopleByTeam.setSize(maxIndices);
 
@@ -384,76 +381,54 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             return;
         }
 
-        //for (int i = 0; i < jsonArray.length(); i++) {
+        playersList = jsonObject.getJSONArray("characters"); //attempt to fix
 
-            //JSONObject jsonObject = jsonArray.getJSONObject(i);
-            //String type = jsonObject.getString("_T");
-            //if (type.equalsIgnoreCase("LogMatchStart")) {
-            //if (type.equalsIgnoreCase("LogMatchEnd")) { //LogMatchEnd includes rankings
-            //   System.out.println(type);
-                playersList = jsonObject.getJSONArray("characters"); //attempt to fix
+        //Set up allTeams
+        for (int j = 0; j < playersList.length(); j++) {
+            JSONObject player = playersList.getJSONObject(j);
+            JSONObject character = player.getJSONObject("character"); //problem here
+            String team_id = character.get("teamId").toString();
 
-                //Set up allTeams
-                for (int j = 0; j < playersList.length(); j++) {
-                    JSONObject player = playersList.getJSONObject(j);
-                    JSONObject character = player.getJSONObject("character"); //problem here
-                    String team_id = character.get("teamId").toString();
+            int team_id_index = Integer.parseInt(team_id);
+            if(team_id_index >= 100000)
+            {
+                team_id_index = (team_id_index % 100000) + 1; //EX: weirdness with file6
+            }
+            int insert = (team_id_index * team_capacity); //replaced 4 with team_capacity (save space/time)
 
-                    int team_id_index = Integer.parseInt(team_id);
-                    if(team_id_index >= 100000)
-                    {
-                        team_id_index = (team_id_index % 100000) + 1; //EX: weirdness with file6
-                    }
-                    int insert = (team_id_index * team_capacity); //replaced 4 with team_capacity (save space/time)
-                    //if(team_id_index >= 200) //adjusting for bots and guards (which overwhelmed the array size-wise)
-                    //{
-                    //    insert = team_id_index;
-                    //}
-                    System.out.println("string of team_id: " + team_id);
-                    System.out.println("val of team_id_index: " + team_id_index + " for " + character.get("accountId").toString());
-                    System.out.println("val of insert: " + insert);
-                    System.out.println("peopleByTeam so far:" );
-                    for(int x = 0; x < peopleByTeam.size(); x++)
-                    {
-                        if(peopleByTeam.get(x) == null)
-                        {
-                            //System.out.println("null");
-                        }
-                        else
-                        {
-                            System.out.print(peopleByTeam.get(x).get("name") + " ");
-                        }
+            System.out.println("string of team_id: " + team_id);
+            System.out.println("val of team_id_index: " + team_id_index + " for " + character.get("accountId").toString());
+            System.out.println("val of insert: " + insert);
+            System.out.println("peopleByTeam so far:" );
 
-                    }
-                    for (int loc = 0; loc < team_capacity; loc++) {
-                        if((insert + loc) >= peopleByTeam.size())
-                        {
-                            System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
-                            System.exit(0);
-                        }
-                        if (peopleByTeam.get(insert + loc) != null) { //added insert + loc < peopleByTeam.size() trying to avoid "Array index out of range: " issue
-                            loc++;
-                        } else {
-                            peopleByTeam.set(insert + loc, character);
-                            loc = team_capacity;
-                        }
-                    }
-                    for (int in = 0; in < peopleByTeam.size(); in++) {
-
-                        if (in % team_capacity == 0 && peopleByTeam.get(in) != null) {
-                            System.out.println("-----");
-                        }
-                        if (peopleByTeam.get(in) != null) {
-                            System.out.print(peopleByTeam.get(in).get("name").toString());
-                            System.out.print(" " + peopleByTeam.get(in).get("teamId").toString());
-                            System.out.println(" " + peopleByTeam.get(in).get("ranking").toString());
-                            //peopleByTeam.s
-
-                        }
-                    }
+            for (int loc = 0; loc < team_capacity; loc++) {
+                if((insert + loc) >= peopleByTeam.size())
+                {
+                    System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
+                    System.exit(0);
                 }
-            //}
-        //}
+                if (peopleByTeam.get(insert + loc) != null) { //added insert + loc < peopleByTeam.size() trying to avoid "Array index out of range: " issue
+                    loc++;
+                } else {
+                    peopleByTeam.set(insert + loc, character);
+                    loc = team_capacity;
+                }
+            }
+
+        }
+        //Print name, teamId, and ranking of all players (from lowest to highest team id).
+        for (int in = 0; in < peopleByTeam.size(); in++) {
+
+            if (in % team_capacity == 0 && peopleByTeam.get(in) != null) {
+                System.out.println("-----");
+            }
+            if (peopleByTeam.get(in) != null) {
+                System.out.print(peopleByTeam.get(in).get("name").toString());
+                System.out.print(" " + peopleByTeam.get(in).get("teamId").toString());
+                System.out.println(" " + peopleByTeam.get(in).get("ranking").toString());
+            }
+        }
+
         System.out.println("RANKING SEARCH: ");
         ranking("JS1936", peopleByTeam); //Is this working?
         ranking("matt112", peopleByTeam);
