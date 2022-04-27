@@ -359,6 +359,12 @@ val of insert: 400000
 peopleByTeam so far:
 Can't add to index: 400000because peopleByTeam.size() is 2000
      */
+    //NOTE: For deathmatches, does not account for people leaving and entering midgame... (issue here?)
+    //team id: <100 means real people
+    //         20_ (like 201) means bots
+    //         50_ (like 501) means guards
+    //         100000+ --> custom game, maybe?
+    //if only team ids ar 1 and 2 --> deathmatch
     public static void singleStringOfFile(File prettyFile) //??? WHAT IS HAPPENING HERE??? //rename this, too
     {
         System.out.println("NEW FILE_______________________________________________");
@@ -481,57 +487,54 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     /*
      * Reads from a file to determine how many "people" in a pubg match were actually bots.
      * The file includes many, many details about the match.
+     * IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
      */
     public static void countBotsAndPeople(File prettyFile) {
         try {
             Scanner scan = new Scanner(prettyFile);
-            Vector<String> playerNames = new Vector<String>();
-            Vector<String> botNames = new Vector<String>(); //ai
-            String totalPlayers = ""; //why is this a string...?
+            Vector<String> playerNames = new Vector<String>(); //account.
+            Vector<String> botNames = new Vector<String>(); //ai.
 
             boolean gameHasStarted = false;
 
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
-                //System.out.println(data);
 
+                //Only start counting bots and people IF the game has started (people can enter and leave beforehand)
                 if (data.contains("numStartPlayers")) {
-                    //System.out.println(data);
-                    totalPlayers = data;
                     gameHasStarted = true;
                 }
 
+                //Account found, game has started
                 if (data.contains("accountId") && gameHasStarted) {
                     if (data.contains("account.")) //real person
                     {
+                        //Store the account_id
                         int accountStart = data.indexOf("account.");
-                        String account_id = data.substring(accountStart); //could remove this...
+                        String account_id = data.substring(accountStart);
+
+                        //Store it "pretty"/nicely
                         if (account_id.contains(",")) {
                             account_id = account_id.substring(0, account_id.length() - 1);
                         }
-                        if (!playerNames.contains(account_id)) //new player to add to the list
+
+                        //If new player, add to list of players (playerNames)
+                        if (!playerNames.contains(account_id)) //new player
                         {
                             playerNames.add(account_id);
-                            //System.out.println(account_id); //doubles...
                         }
                     } else //bot
                     {
-
-                        if (data.contains("ai.")) //important that gameHasStarted (which it has, if it reaches here)
+                        if (data.contains("ai."))
                         {
+                            //Store account_id
                             int accountStart = data.indexOf("ai.");
-                            //System.out.println(accountStart);
-                            String account_id = data.substring(accountStart, accountStart + 6); ///? Why are some ""? (-1)
-                            //System.out.println(account_id);
-                            //System.out.println("\nCurrent botNames list:");
-                            for (int i = 0; i < botNames.size(); i++) {
-                                //System.out.print("" + botNames.get(i) + " ");
-                            }
-                            //System.out.println();
-                            if (!botNames.contains(account_id)) //new bot to add to the list
+                            String account_id = data.substring(accountStart, accountStart + 6);
+
+                            //If new bot, add to list of bots (botNames).
+                            if (!botNames.contains(account_id)) //new bot
                             {
                                 botNames.add(account_id);
-                                //System.out.println("adding: " + account_id); //repeats...
                             }
                         }
                     }
