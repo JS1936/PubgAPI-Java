@@ -69,7 +69,7 @@ public class Main {
         //KEEP THESE:
         //countBotsAndPeople(prettyFile);
         //calculateKillCounts(prettyFile); //seems "done"
-        printPlayersByTeam(prettyFile); //in progress
+        //printPlayersByTeam(prettyFile); //in progress
         //winnerWeapons(prettyFile);
         return prettyFile; //added recently (4/27/2022)
     }
@@ -435,6 +435,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
      * NOTE: does not count guards as bots.
      */
     public static void countBotsAndPeople(File prettyFile) { //make private?
+        //System.out.println("HELLO! HERE! HELLO! IN COUNTBOTSANDPEOPLE");
         try {
             Scanner scan = new Scanner(prettyFile);
             Vector<String> playerNames = new Vector<String>(); //account.
@@ -588,11 +589,9 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             System.out.println(fileName);
             try {
                 //makePretty(fileName); //error here
-                System.out.println("LOOK HERE!");
+                //System.out.println("LOOK HERE!");
                 File pretty = makePretty(fileName);
-
-
-                //getInfo(desiredThing);
+                getInfo(request, pretty);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -604,20 +603,26 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //Like a user interface, where they are presented with options and type which ones they want
 
     //switch stmt?
+    //what about for ONE specific file, or  for specific fileS?
     public static void getInfo(int request, File prettyFile)
     {
         //
         if(request == 0)
         {
-            countBotsAndPeople(prettyFile);
+            countBotsAndPeople(prettyFile); //seems to work
         }
         else if(request == 1)
         {
-            calculateKillCounts(prettyFile);
+            calculateKillCounts(prettyFile); //seems to work
 
-        }else if(request == 2)
-        {
-            printPlayersByTeam(prettyFile);
+        }else if(request == 2) {
+
+            printPlayersByTeam(prettyFile); //seems to work (but quite messy)
+
+        }else if(request == 3) {
+
+            winnerWeapons(prettyFile); //seems to work
+
         }else
         {
             System.out.println("Invalid request"); //for example's sake (currently)
@@ -643,6 +648,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         System.out.println("0: countBotsAndPeople");
         System.out.println("1: calculateKillCounts");
         System.out.println("2: printPlayersByTeam");
+        System.out.println("3: winnerWeapons");
 
     }
 
@@ -660,6 +666,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         functionalities.add("countBotsAndPeople");
         functionalities.add("calculateKillCounts");
         functionalities.add("printPlayersByTeam");
+        functionalities.add("winnerWeapons");
 
         boolean requestAccepted = false;
         if(request >= 0 && request < functionalities.size())
