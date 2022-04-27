@@ -145,21 +145,8 @@ public class Main {
         }
     }
 
-    /*
-     //WHAT IF IT WAS JUST ONE VECTOR
-        //FOUR SLOTS AVAILABLE per team, up to 500 teams
-        //Team 0: indices 0,        1,      2,      3
-        //Team 1: indices 4,        5,      6,      7
-        //Team 2: indices 8,        9,      10,     11
-        //Team 3: indices 12,       13,     14,     15
-        //beginning index of Team X is (x*4)
 
-        //Each team shared the same team_id...
-        // index 0 || index 1 || index 2 || index 3 IN VECTOR
-
-        //   ^
-        //   Here: {person1, person2, person3, person4}
-     */
+    //WHAT IF IT WAS JUST ONE VECTOR
     //Since data was gathered at the beginning of the game, everyone has rank 0 so far --> need the pretty file?
     //_T, logmatchend, l
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
@@ -199,29 +186,21 @@ public class Main {
             //System.out.println("Weapons already listed: " + alreadyListed.toString());
             int count = 0;
             String weapon = weaponSlot.get(i);
-            //if (weapon.equalsIgnoreCase("") || weapon == null) {
-            //    weapon = "(None)";
-            //}
+
             boolean inAlreadyListed = false;
             for(int index = 0; index < alreadyListed.size(); index++)
             {
                 if(alreadyListed.get(index).equalsIgnoreCase(weapon))
                 {
                     inAlreadyListed = true;
-                    //System.out.println(alreadyListed.get(index) + " is already listed...");
                 }
             }
             if (!inAlreadyListed) { //already listed does not seem like it is getting updated properly...
                 alreadyListed.add(weapon);
                 count = 0;
-                //System.out.println("LOOKING FOR: " + weapon + "(i = " + i + ")");
                 for (int j = i; j < weaponSlot.size(); j++) //Compare against all the other weapons
                 {
                     String other_weapon = weaponSlot.get(j);
-                   // if (other_weapon.equalsIgnoreCase("") || other_weapon == null) {
-                    //    other_weapon = "(None)";
-                    //}
-                    //System.out.print(weapon + " =?= " + other_weapon);
                     if (weaponSlot.get(i).equalsIgnoreCase(weaponSlot.get(j))) {
                         count++;
                     }
@@ -237,6 +216,7 @@ public class Main {
     //PRINTING WEAPON FREQUENCIES:
     //Winners Only: 1/6 ended with WeapMosinNagant_C(primaryWeaponFirst) in this match. (WHAT?)
     //ALSO: what about if slot is empty (including in a primary, for instance)
+    //Would getting everyone else's weapons be a different call?
     public static void winnerWeapons(File prettyFile)
     {
         Vector<String> winnerSecondary = new Vector<String>();
@@ -303,16 +283,11 @@ public class Main {
                 System.out.println("-------------------------------------------------");
                 //considering 1 and 2 essentially the same? //like only considering primary weapons VS secondary... or even just weapons
             }
-
-
-
             //Note: winners get included in "everyone" data
             //System.out.println("Now including general populus..."); //weird
             //everyoneSecondary.add(secondaryWeapon);
             //everyonePrimary1.add(primaryWFirst);
             //everyonePrimary2.add(primaryWSecond);
-
-
 
             //System.out.println(one_player.toString());
             //System.out.println("RANKING IS: " );
