@@ -382,7 +382,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             return;
         }
 
-        //Use 425 or 500 or something else?
+        //Use 425 or 500 or something else? 150?
         int max_num_teams = 500; //because bots start at 200 and guards start at 400 -->could have sorted them that way, too (identifying type)
         //int team_capacity = 4;
         if(team_capacity > 4)
