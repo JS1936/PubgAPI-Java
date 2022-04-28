@@ -177,6 +177,7 @@ public class Main {
                     //stats
                         //killcount
 
+        //NON-WINNERS
         System.out.println("NOTE: this does not yet include the winners...");
         for(JSONObject kill_event : kill_events)
         {
@@ -198,38 +199,31 @@ public class Main {
         }
         printKillCountsJSON(namesByNumKills);
 
-
-
-
-
+        //Winners
         JSONObject match_end = returnObject(prettyFile, "LogMatchEnd");
-        JSONArray winners = match_end.getJSONArray("characters");
-        for(int i = 0; i < winners.length(); i++) {
-            JSONObject winner = winners.getJSONObject(i);
-            JSONObject game_result_on_finished = winner.getJSONObject("gameResultOnFinished");
-            JSONObject results = game_result_on_finished.getJSONObject("results");
-            JSONObject stats = results.getJSONObject("stats");
+        //JSONArray winners = match_end.getJSONArray("characters");
+        JSONObject game_result_on_finished = match_end.getJSONObject("gameResultOnFinished");
+        JSONArray results = game_result_on_finished.getJSONArray("results");
+        System.out.println("Kills by Winners:");
+        int killedByAnyWinner = 0;
+        for(int i = 0; i < results.length(); i++) {
+            //JSONObject winner = winners.getJSONObject(i);
+            //System.out.println("winner.toString() : " + winner.toString());
+            JSONObject player_result = results.getJSONObject(i);
+            System.out.println("i = " + i + "; results: " + results.get(i).toString());
+            JSONObject stats = player_result.getJSONObject("stats");
             String num_kills = stats.get("killCount").toString();
             int killCount = Integer.parseInt(num_kills);
-            if (killCount > maxKills)
-            {
-                maxKills = killCount;
-                Vector<String> names = new Vector<String>();
-                namesByNumKills.set(maxKills, names);
-                names.add()
-                //set non-null
-                //namesByNumKills.get(maxKills) = new Vector<String>();
-            }
-
-            //killCounts.add(num + )
+            System.out.println("\t" + killCount);
+            killedByAnyWinner += killCount;
         }
-        //*/
-
-
-
+        System.out.println("#people killed by winning team: " + killedByAnyWinner);
+        //or maybe just say "#kills by winning team" (in case of deathmatch)
+        //having trouble getting the winners' names... (account ids fine/okay, though)
         //printKillCoutns2(#kills per person, effects?)
         //printKillCounts(killCounts);
     }
+
     //Accidentally removed this! Found it again through github commits history
     //Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
     //Vector<Integer> killsByTeam = new Vector<Integer>();
