@@ -73,6 +73,7 @@ public class Main {
         //winnerWeapons(prettyFile);
         return prettyFile; //added recently (4/27/2022)
     }
+
     //find winners first (and log who they are)
     //THEN record stuff?
     //        //compare killcounts with everybody else?
@@ -88,25 +89,21 @@ public class Main {
         Vector<Integer> winnerKills = new Vector<Integer>();
      */
     //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
-    public static void printKillCounts(Vector<String> counts)
-    {
+    public static void printKillCounts(Vector<String> counts) {
         System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
         int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game
         int maxKills = 0;
-        int  killsByTopTen = 0;
-        for(int i =0; i < counts.size(); i++)
-        {
-            if(i%10 ==0) //For display clarity
+        int killsByTopTen = 0;
+        for (int i = 0; i < counts.size(); i++) {
+            if (i % 10 == 0) //For display clarity
             {
                 System.out.println();
             }
             int numKills = Integer.valueOf(counts.get(i));
-            if(maxKills < numKills)
-            {
+            if (maxKills < numKills) {
                 maxKills = numKills;
             }
-            if(counts.size() - 10 <= i)
-            {
+            if (counts.size() - 10 <= i) {
                 killsByTopTen += numKills;
             }
             frequencies[numKills]++;
@@ -115,15 +112,124 @@ public class Main {
 
         //Print out how many people got X number of kills
         System.out.println("\nKill Frequencies:");
-        for(int index = 0; index <= maxKills; index++)
-        {
-            System.out.println(frequencies[index] + " got " + index + " kills." );
+        for (int index = 0; index <= maxKills; index++) {
+            System.out.println(frequencies[index] + " got " + index + " kills.");
         }
         System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
         System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
         System.out.println("--------------------------------------------------------------------------");
     }
 
+    //Can print more details
+    public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills)
+    {
+        for(int index = 0; index < namesByNumKills.size(); index++)
+        {
+            Vector<String> names = namesByNumKills.get(index);
+            if(!names.isEmpty())
+            {
+                System.out.println(index + " KILLS: ");
+                for(int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++)
+                {
+                    System.out.println("\t" + names.get(indexOfNames));
+                    //if(indexOfNames % 3 == 0)
+                    //{
+                    //    System.out.println();
+                    //}
+                }
+                System.out.println("---------------");
+            }
+
+        }
+
+        //names of 0 kills go into index 0
+        //name of 1 kill go into index 1
+        //etc.
+    }
+
+    //"LogPlayerKillV2"
+    //victimGameResult
+        //rank
+        //stats
+             //killCount
+    //victim
+        //name
+
+    //BIG, NOT TESTED MESS
+    //NOTE: DOES NOT INCLUDE WINNERS
+    public static void calculateKillCountsJSON(File prettyFile)
+    {
+        //Vector<String> killCounts = new Vector<String>();
+        Vector<JSONObject> kill_events = returnMultipleObjects(prettyFile, "LogPlayerKillV2"); //winners don't die, though...?
+        Vector<Vector<String>> namesByNumKills = new Vector<Vector<String>>();
+
+        int maxKills = 0;
+
+        //Assumes no one will get more than 30 kills (make more efficient later... -> maxKills)
+        for(int i = 0; i < 30; i++)
+        {
+            Vector<String> names = new Vector<String>();
+            namesByNumKills.add(names);
+        }
+        //characters
+            //gameresultonfinished
+                //results
+                    //stats
+                        //killcount
+
+        System.out.println("NOTE: this does not yet include the winners...");
+        for(JSONObject kill_event : kill_events)
+        {
+            //System.out.println("HELLO! Looking at a kill event");
+            JSONObject victimGameResult = kill_event.getJSONObject("victimGameResult");
+            int rank = Integer.parseInt(victimGameResult.get("rank").toString());
+            ////System.out.println("rank: " + rank);
+
+            JSONObject stats = victimGameResult.getJSONObject("stats");
+            int killCount = Integer.parseInt(stats.get("killCount").toString());
+            //System.out.println("   killcount: " + killCount);
+            JSONObject victim = kill_event.getJSONObject("victim");
+            String name = victim.get("name").toString();
+            //System.out.println(name + " got " + killCount + " kills");
+
+            //index = number of kills they got
+            namesByNumKills.get(killCount).add(name);
+            //victim --> name
+        }
+        printKillCountsJSON(namesByNumKills);
+
+
+
+
+
+        JSONObject match_end = returnObject(prettyFile, "LogMatchEnd");
+        JSONArray winners = match_end.getJSONArray("characters");
+        for(int i = 0; i < winners.length(); i++) {
+            JSONObject winner = winners.getJSONObject(i);
+            JSONObject game_result_on_finished = winner.getJSONObject("gameResultOnFinished");
+            JSONObject results = game_result_on_finished.getJSONObject("results");
+            JSONObject stats = results.getJSONObject("stats");
+            String num_kills = stats.get("killCount").toString();
+            int killCount = Integer.parseInt(num_kills);
+            if (killCount > maxKills)
+            {
+                maxKills = killCount;
+                Vector<String> names = new Vector<String>();
+                namesByNumKills.set(maxKills, names);
+                names.add()
+                //set non-null
+                //namesByNumKills.get(maxKills) = new Vector<String>();
+            }
+
+            //killCounts.add(num + )
+        }
+        //*/
+
+
+
+        //printKillCoutns2(#kills per person, effects?)
+        //printKillCounts(killCounts);
+    }
     //Accidentally removed this! Found it again through github commits history
     //Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
     //Vector<Integer> killsByTeam = new Vector<Integer>();
@@ -132,7 +238,6 @@ public class Main {
     public static void calculateKillCounts(File prettyFile)
     {
         Vector<String> killCounts = new Vector<String>();
-
         try {
             Scanner scan = new Scanner(prettyFile);
             while(scan.hasNextLine())
@@ -154,30 +259,18 @@ public class Main {
     }
 
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
-    public static void ranking(String name, File prettyFile)
-    {
-        Vector<JSONObject> peopleByTeam = printPlayersByTeam(prettyFile); //misleading method call? //ALSO: people or players?
-        if(peopleByTeam == null)
-        {
-            System.out.println("peopleByTeam is null because a game had size issues");
-            return;
-        }
-        //System.out.println("RANKING SEARCH: ");
-        //ranking("JS1936", peopleByTeam);
-        //ranking("matt112", peopleByTeam);
-        //ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
-        boolean playedInGame = false;
-        for(JSONObject person : peopleByTeam)
-        {
-            if(person != null && person.get("name").equals(name))
-            {
-                playedInGame = true;
-                System.out.println(name + "'s ranking in this game was: " + person.get("ranking"));
+    //COULD use printPlayersByTeam (excess printouts) OR do it independently
+    public static void ranking(String name, File prettyFile) {
+        JSONObject match_end = returnObject(prettyFile, "LogMatchEnd");
+        JSONArray players = match_end.getJSONArray("characters");
+        for (int i = 0; i < players.length(); i++) {
+            JSONObject player = players.getJSONObject(i);
+            JSONObject player_details = player.getJSONObject("character");
+            String player_name = player_details.get("name").toString();
+            if (player_name.equalsIgnoreCase(name)) {
+                System.out.println(name + "rank in this game: " + player_details.get("ranking").toString());
+                return;
             }
-        }
-        if(!playedInGame)
-        {
-            System.out.println(name + " wasn't in that game");
         }
     }
 
@@ -292,7 +385,41 @@ public class Main {
         weaponFrequencies(winnerPrimary, true, "primary weapons");
         weaponFrequencies(winnerSecondary, true, "secondary weapon");
     }
-    
+
+    //VERY similar to returnObject, but can return multiple occurrences of a type via vector (instead of limited to 1)
+    public static Vector<JSONObject> returnMultipleObjects(File prettyFile, String type)
+    {
+        Vector<JSONObject> multipleObjects = new Vector<JSONObject>();
+        System.out.println("NEW FILE_______________________________________________");
+        //Store contents of prettyFile in a String called file_content
+        String file_content = "";
+        try {
+            file_content = FileUtils.readFileToString(prettyFile);
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //Return portion of file that matches given String type
+        System.out.println(type);
+        JSONArray jsonArray = new JSONArray(file_content);
+        for (int i = 0; i < jsonArray.length(); i++) {
+
+            JSONObject jsonObject = jsonArray.getJSONObject(i);
+            String type_T = jsonObject.getString("_T");
+
+            if (type_T.equalsIgnoreCase(type)) {
+                //System.out.println(type);
+                multipleObjects.add(jsonObject);
+                //return jsonObject;
+
+            }
+        }
+        //return null; //What if _T type is not found?
+        return multipleObjects;
+    }
     //WHAT IF you could search through a prettyfile for any _T and that method would return the contents?
     //Could also keep track of items equipped
     //Note: What if "String type" occurs multiple times (EX: item equip sort of thing)
@@ -676,6 +803,10 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
             ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors) //INTERESTING: new request, asks for name with every file...
 
+        }else if(request == 5) {
+            //NOT WORKING
+            calculateKillCountsJSON(prettyFile);
+
         }else
         {
             System.out.println("Invalid request"); //for example's sake (currently)
@@ -703,6 +834,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         System.out.println("2: printPlayersByTeam");
         System.out.println("3: winnerWeapons");
         System.out.println("4: ranking (of a specific person)");
+        System.out.println("5: calculateKillCountsJSON");
         //pass in and for loop instead?
 
     }
@@ -728,6 +860,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         functionalities.add("printPlayersByTeam");
         functionalities.add("winnerWeapons");
         functionalities.add("ranking (of a specific person)");
+        functionalities.add("calculateKillCountsJSON");
 
         boolean requestAccepted = false;
         if(request >= 0 && request < functionalities.size())
