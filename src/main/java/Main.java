@@ -421,7 +421,7 @@ public class Main {
     //Note: What if "String type" occurs multiple times (EX: item equip sort of thing)
     public static JSONObject returnObject(File prettyFile, String type)
     {
-        System.out.println("NEW FILE_______________________________________________");
+        //System.out.println("NEW FILE_______________________________________________");
         //Store contents of prettyFile in a String called file_content
         String file_content = "";
         try {
@@ -433,6 +433,11 @@ public class Main {
             e.printStackTrace();
         }
 
+
+        //if(file_content.length() == 0)
+        //{
+        //    System.out.println("Empty file...");
+        //}
         //Return portion of file that matches given String type
         JSONArray jsonArray = new JSONArray(file_content);
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -670,57 +675,40 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         Vector<String> mapsPlayed = new Vector<String>();
     }
      */
+    public static void printMapNames(Vector<String> mapNames)
+    {
+        //import java.util.Collections
+        Collections.sort(mapNames);
+        int count = 1;
+        for(int i = 1; i < mapNames.size(); i++)
+        {
+            if(mapNames.get(i).equalsIgnoreCase(mapNames.get(i-1)))
+            {
+                count++;
+            }
+            else
+            {
+                System.out.println(mapNames.get(i-1) + " x" + count);
+                count = 0;
+            }
+        }
+
+    }
+    public static String getMapName(File prettyFile)
+    {
+
+        JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
+        String mapName = match_start.get("mapName").toString();
+        System.out.println("mapName: " + mapName);
+        //mapNames.add(mapName);
+        return mapName;
+        //LogMatchStart
+        //mapName
+    }
 
     //VERY IN PROGRESS
     public static void psuedoMain(String desiredThing)
     {
-        //https://stackoverflow.com/questions/160970/how-do-i-invoke-a-java-method-when-given-the-method-name-as-a-string
-        //https://www.tutorialspoint.com/How-do-I-invoke-a-Java-method-when-given-the-method-name-as-a-string
-        // Class<?> c = Class.forName("class name");
-        //Method method = c.getDeclaredMethod("method name", parameterTypes);
-        //method.invoke(objectToInvokeOn, params);
-        //
-        //Vector<String>
-                //Could make a vector of methods, if you find a match, call that one
-        //OR just be less efficient and call individually with lots of ifs
-        /*
-        for(Method method : Main.class.getMethods())//getMethods(); //https://stackoverflow.com/questions/3023354/how-to-get-string-name-of-a-method-in-java
-        {
-            System.out.println("HERE!");
-            String name = method.getName();
-            if(name.equalsIgnoreCase(desiredThing))
-            {
-                TypeVariable<Method>[] parameter_types = method.getTypeParameters(); //?
-                try {
-                    System.out.println("Trying...");
-                    method.invoke(null, parameter_types);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
-                }
-            }
-            System.out.println("NAME of method : " + name);
-
-        }
-
-        //Check if it's a command, too, though
-
-
-        //Method countBotsAndPeople = Operations.class.getDeclaredMethod("somethinghere", File.class);
-
-        //Class c = null;
-        //try {
-        //    c = Class.forName("Main.java");
-         //   System.out.println("FOUND IT!");
-        ////    System.out.println("Class '" + c + "' not found");
-         //   e.printStackTrace();
-        //    return;
-        //}
-        //Method method_name = this.getDeclaredMethod("methodName", parameterTypes);
-        //Is there a way to check if the files (content or qty) have changed since last time?
-        */
-
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
         printFunctionalities();
         Scanner input = new Scanner(System.in);
@@ -804,16 +792,22 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             calculateKillCountsJSON(prettyFile);
             //having trouble accessing names of the winners specifically
 
+        }else if(request == 6) {
+            //getMaps
+            Vector<String> mapNames = new Vector<String>();
+            String name = getMapName(prettyFile);
+            if(name != null) //Tried to fix EOF exception with this but it didn't work (which makes sense, I guess)
+            {
+                mapNames.add(getMapName(prettyFile));
+            }
+            printMapNames(mapNames);
+
         }else
         {
             System.out.println("Invalid request"); //for example's sake (currently)
         }
-        //System.out.println("LEAVING getInfo");
-        //if(option1)
-        //{
-           //call option1 method
-        //}
     }
+
     //IN PROGRESSS
     public static void getMethods()
     {
@@ -826,12 +820,21 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
         System.out.println("What would you like to know? Type the corresponding letter and then press enter.");
         System.out.println();
+        //Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls)
+
+        //for(int i = 0; i < functionalities.size(); i++)
+        //{
+        //    System.out.println(i + ": " + functionalities.get(i));
+        //}
+
         System.out.println("0: countBotsAndPeople");
         System.out.println("1: calculateKillCounts");
         System.out.println("2: printPlayersByTeam");
         System.out.println("3: winnerWeapons");
         System.out.println("4: ranking (of a specific person)");
         System.out.println("5: calculateKillCountsJSON");
+        System.out.println("6: printMapsPlayed");
+
         //pass in and for loop instead?
 
     }
@@ -839,20 +842,9 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //IN PROGRESS
     public static int getRequest(Scanner input)
     {
-
-
-
         //Scanner input = new Scanner(System.in);
         int request = Integer.parseInt(input.next()); //careful...
         System.out.println("request is: " + request);
-        //String nameToLookfor = "";
-        //if(request == 4)
-        //{
-        //    nameToLookfor = input.nextLine();
-        //}
-        //input.close();
-        //System.out.println("LOOK: " + input.next());
-
 
         Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls)
         functionalities.add("countBotsAndPeople");
@@ -861,6 +853,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         functionalities.add("winnerWeapons");
         functionalities.add("ranking (of a specific person)");
         functionalities.add("calculateKillCountsJSON");
+        functionalities.add("printMapsPlayed");
 
         boolean requestAccepted = false;
         if(request >= 0 && request < functionalities.size())
@@ -901,3 +894,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         psuedoMain("desiredThing");
     }
 }
+
+//record maps used
+//for each file, get the map
+//have a vector existing outside of this that holds the map names
+//print names (and frequency)
