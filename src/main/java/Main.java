@@ -254,7 +254,8 @@ public class Main {
 
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
     //COULD use printPlayersByTeam (excess printouts) OR do it independently
-    public static void ranking(String name, File prettyFile) {
+    //Returns ranking as a string
+    public static String ranking(String name, File prettyFile) {
         JSONObject match_end = returnObject(prettyFile, "LogMatchEnd");
         JSONArray players = match_end.getJSONArray("characters");
         for (int i = 0; i < players.length(); i++) {
@@ -263,9 +264,10 @@ public class Main {
             String player_name = player_details.get("name").toString();
             if (player_name.equalsIgnoreCase(name)) {
                 System.out.println(name + "rank in this game: " + player_details.get("ranking").toString());
-                return;
+                return player_details.get("ranking").toString();
             }
         }
+        return ""; //was not in the game
     }
 
     //Stores and prints what weapons were used by a specific group (winnersOnly or everyone)
@@ -800,6 +802,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }else if(request == 5) {
             //NOT WORKING
             calculateKillCountsJSON(prettyFile);
+            //having trouble accessing names of the winners specifically
 
         }else
         {
@@ -836,6 +839,9 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //IN PROGRESS
     public static int getRequest(Scanner input)
     {
+
+
+
         //Scanner input = new Scanner(System.in);
         int request = Integer.parseInt(input.next()); //careful...
         System.out.println("request is: " + request);
@@ -877,6 +883,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //IN PROGRESS
     public static void main(String[] args)
     {
+
+        Vector<String> winnersRecorded; //winners across different games
+        //Player p = new Player("15511");
+        //System.out.println("Account ID: "+ p.getAccountID());
+
 
         //print options for what you can do
         //ask them what they want to do
