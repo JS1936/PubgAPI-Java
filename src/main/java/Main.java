@@ -13,7 +13,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.TypeVariable;
 import java.util.*;
 
-
 //Helpful sites:
 //https://stackoverflow.com/questions/2885173/how-do-i-create-a-file-and-write-to-it
 //https://stackoverflow.com/questions/4105795/pretty-print-json-in-java
@@ -421,7 +420,7 @@ public class Main {
     //Note: What if "String type" occurs multiple times (EX: item equip sort of thing)
     public static JSONObject returnObject(File prettyFile, String type)
     {
-        //System.out.println("NEW FILE_______________________________________________");
+        System.out.println("NEW FILE_______________________________________________");
         //Store contents of prettyFile in a String called file_content
         String file_content = "";
         try {
@@ -654,14 +653,19 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //Hopefully: Only for battle royale* (max 4 people per team)
     //Also, deathmatches probably don't have bots (would custom games?)
     ////Trying to get data that goes beyond just a single game
-    public static void maps(File prettyFile, Vector<String> mapsPlayed)
+    public static void maps(File prettyFile, Vector<String> theMapsPlayed) //added "the"... (because mapsPlayed  static was getting messed up)
     {
         JSONObject jsonObject = returnObject(prettyFile, "LogMatchStart");
         String mapName = jsonObject.getString("mapName");
         int max_team_size = jsonObject.getInt("teamSize");
         if(max_team_size <= 4)
         {
+            System.out.println("ATTEMPTING TO ADD " + mapName + " to mapsPlayed");
             mapsPlayed.add(mapName);
+        }
+        else
+        {
+            System.out.println("NOT adding " + mapName + " because team size > 4");
         }
 
         //logmatchstart
@@ -677,23 +681,65 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
      */
     public static void printMapNames(Vector<String> mapNames)
     {
+        System.out.println("Printing Map Names: ");
         //import java.util.Collections
-        Collections.sort(mapNames);
-        int count = 1;
-        for(int i = 1; i < mapNames.size(); i++)
+        //changed mapNames to mapsPlayed
+        Collections.sort(mapsPlayed);
+        System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
+        for(int i = 0; i < mapsPlayed.size(); i++)
         {
-            if(mapNames.get(i).equalsIgnoreCase(mapNames.get(i-1)))
+            System.out.println(mapsPlayed.get(i));
+        }
+        System.out.println("\n\n\n");
+        int frequency = 1;
+        int index = 1;
+        int i = 0;
+        while(i < mapsPlayed.size()) {
+            //System.out.print(mapsPlayed.get(i));
+            if(i + 1 == mapsPlayed.size())
             {
-                count++;
+                System.out.println(mapsPlayed.get(i) + " x" + frequency);
+                return;
             }
-            else
+            //if i = size - 1...?
+            for (int j = i + 1; j < mapsPlayed.size(); j++) {
+                //System.out.println("i = " + i);
+                //System.out.println("j = " + j);
+                //System.out.println("\t\t" + mapsPlayed.get(i) + " VS " + mapsPlayed.get(j));
+                if (mapsPlayed.get(i).equalsIgnoreCase(mapsPlayed.get(j))) {
+                    //System.out.println("val at index " + i + " = j");
+                    frequency++;
+                } else {
+                    System.out.println(mapsPlayed.get(i) + " x" + frequency);
+                    frequency = 1;
+                    //j = mapsPlayed.size(); //done with looking at i
+                    //System.out.println("Stuck at i = " + i);
+
+                }
+                i++;
+            }
+
+        }
+            //i = index + 1;
+
+            /*
+            for(int j = i +1; j < mapsPlayed.size(); j++)
             {
-                System.out.println(mapNames.get(i-1) + " x" + count);
-                count = 0;
+                if(mapsPlayed.get(i).equalsIgnoreCase(mapsPlayed.get(j)))
+                {
+                    count++;
+                }
+                else
+                {
+                    System.out.println(mapsPlayed.get(i-1) + " x" + count);
+                    count = 0;
+                }
             }
+            */
+
+
         }
 
-    }
     public static String getMapName(File prettyFile)
     {
 
@@ -701,9 +747,33 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         String mapName = match_start.get("mapName").toString();
         System.out.println("mapName: " + mapName);
         //mapNames.add(mapName);
+        //mapsPlayed.add(mapName);
         return mapName;
         //LogMatchStart
         //mapName
+    }
+
+    public static void printMapNameFrequencies(Vector<String> mapNames)
+    {
+        Map<String, Integer> mapOfMaps = new HashMap<>();
+        //for each map, if not key yet, add key
+        //increment qty of appearance either way
+        for(String mapName : mapNames)
+        {
+            if(mapOfMaps.containsKey(mapName))
+            {
+                int frequency = mapOfMaps.get(mapName) + 1;
+                mapOfMaps.put(mapName, frequency); //should replace previous value (same key)
+            }
+            else
+            {
+                System.out.println(mapName + "is a NEW MAP!");
+                mapOfMaps.put(mapName, 1);
+            }
+        }
+        //for each key in mapOfMaps, print out value (a.k.a. frequency)
+        mapOfMaps.keySet();
+
     }
 
     //VERY IN PROGRESS
@@ -726,25 +796,42 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             System.out.println("Now looking for: '" + name + "'");
         }
 
-
+        int max_files = 10; //temporary (remove later)
+        int filesSoFar = 0;
         for (File fileName : files) {
             //if(fileName.getName() != "prettyFiles")
             //{
             System.out.println(fileName);
+
             try {
                 //makePretty(fileName); //error here
                 //System.out.println("LOOK HERE!");
-                File pretty = makePretty(fileName);
-                getInfo(request, pretty, name);
+                if(filesSoFar >= 10)
+                {
+                    //System.out.println("Reached max_files of " + max_files + "...terminating program");
+                } else
+                {
+                    File pretty = makePretty(fileName);
+                    getInfo(request, pretty, name);
+                    filesSoFar++;
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+        if(request == 6) //trying this...
+        {
+            System.out.println("REQUEST = 6");
+            System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
+            printMapNames(mapsPlayed); //this would hold repeats
+            //printMapNameFrequencies(mapsPlayed);
+        }
 
         //BEING ABLE TO ENTER ANOTHER TASK DOES NOT WORK YET
-        System.out.println("HERE HERE HERE HERE!");
+        //System.out.println("HERE HERE HERE HERE!");
         String response = "y";
         System.out.println("Any other requests? (y/n)");
+        response = input.next();
 
         while(response.equalsIgnoreCase("Y"))
         {
@@ -756,6 +843,27 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         input.close(); //put here?
         //Call the appropriate method(s) based on user input
     }
+    //10 maps:
+    //Desert
+    //Heaven
+    //Summerland
+    //Tiger
+    //Baltic
+    //Summerland
+    //Baltic
+    //Tiger
+    //Desert
+    //Baltic
+
+    //Frequencies:              CLAIMS
+    //Desert:       2           1
+    //Heaven:       1           0
+    //Summerland:   2           1
+    //Tiger:        2           doesn't even show up
+    //Baltic:       3           3
+    //-------------------
+    //             =10
+
 
     //What if there were a container of "things you could access" about any given game (or all games?)
     //Like a user interface, where they are presented with options and type which ones they want
@@ -794,13 +902,26 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
         }else if(request == 6) {
             //getMaps
-            Vector<String> mapNames = new Vector<String>();
+            //Vector<String> mapNames = new Vector<String>(); //this is getting re-made with every file...
+            if(prettyFile == null)
+            {
+                System.out.println("FILE IS NULL");
+            }
             String name = getMapName(prettyFile);
             if(name != null) //Tried to fix EOF exception with this but it didn't work (which makes sense, I guess)
             {
-                mapNames.add(getMapName(prettyFile));
+                //mapNames.add(getMapName(prettyFile));
+                System.out.println("Attempting to add: " + name + " to mapsPlayed...");
+                mapsPlayed.add(name);
+                System.out.println("---------------------------");
+                System.out.println("mapsPlayed currently holds:");
+                for(String map : mapsPlayed)
+                {
+                    System.out.println(map);
+                }
+                System.out.println("---------------------------");
             }
-            printMapNames(mapNames);
+
 
         }else
         {
@@ -874,10 +995,12 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     }
 
     //IN PROGRESS
+    public static Vector<String> mapsPlayed = new Vector<String>();
     public static void main(String[] args)
     {
 
         Vector<String> winnersRecorded; //winners across different games
+        mapsPlayed.clear(); //clear at the beginning
         //Player p = new Player("15511");
         //System.out.println("Account ID: "+ p.getAccountID());
 
