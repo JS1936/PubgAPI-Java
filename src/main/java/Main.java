@@ -679,12 +679,12 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         Vector<String> mapsPlayed = new Vector<String>();
     }
      */
-    public static void printMapNames(Vector<String> mapNames)
+    public static void printMapNames() //don't need this parameter
     {
         System.out.println("Printing Map Names: ");
-        //import java.util.Collections
+
         //changed mapNames to mapsPlayed
-        Collections.sort(mapsPlayed);
+        Collections.sort(mapsPlayed); //import java.util.Collections
         System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
         for(int i = 0; i < mapsPlayed.size(); i++)
         {
@@ -692,53 +692,26 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
         System.out.println("\n\n\n");
         int frequency = 1;
-        int index = 1;
         int i = 0;
         while(i < mapsPlayed.size()) {
-            //System.out.print(mapsPlayed.get(i));
             if(i + 1 == mapsPlayed.size())
             {
                 System.out.println(mapsPlayed.get(i) + " x" + frequency);
                 return;
             }
-            //if i = size - 1...?
             for (int j = i + 1; j < mapsPlayed.size(); j++) {
-                //System.out.println("i = " + i);
-                //System.out.println("j = " + j);
-                //System.out.println("\t\t" + mapsPlayed.get(i) + " VS " + mapsPlayed.get(j));
+
                 if (mapsPlayed.get(i).equalsIgnoreCase(mapsPlayed.get(j))) {
                     //System.out.println("val at index " + i + " = j");
                     frequency++;
                 } else {
                     System.out.println(mapsPlayed.get(i) + " x" + frequency);
                     frequency = 1;
-                    //j = mapsPlayed.size(); //done with looking at i
-                    //System.out.println("Stuck at i = " + i);
-
                 }
                 i++;
             }
-
         }
-            //i = index + 1;
-
-            /*
-            for(int j = i +1; j < mapsPlayed.size(); j++)
-            {
-                if(mapsPlayed.get(i).equalsIgnoreCase(mapsPlayed.get(j)))
-                {
-                    count++;
-                }
-                else
-                {
-                    System.out.println(mapsPlayed.get(i-1) + " x" + count);
-                    count = 0;
-                }
-            }
-            */
-
-
-        }
+    }
 
     public static String getMapName(File prettyFile)
     {
@@ -753,6 +726,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //mapName
     }
 
+    /*
     public static void printMapNameFrequencies(Vector<String> mapNames)
     {
         Map<String, Integer> mapOfMaps = new HashMap<>();
@@ -775,6 +749,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         mapOfMaps.keySet();
 
     }
+    */
+
 
     //VERY IN PROGRESS
     public static void psuedoMain(String desiredThing)
@@ -823,8 +799,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         {
             System.out.println("REQUEST = 6");
             System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
-            printMapNames(mapsPlayed); //this would hold repeats
-            //printMapNameFrequencies(mapsPlayed);
+            printMapNames(); //this would hold repeats (but it also calculates the amt of repetitions)
+            //printMapNameFrequencies(mapsPlayed); //no longer needed
         }
 
         //BEING ABLE TO ENTER ANOTHER TASK DOES NOT WORK YET
