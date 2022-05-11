@@ -660,7 +660,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         int max_team_size = jsonObject.getInt("teamSize");
         if(max_team_size <= 4)
         {
-            System.out.println("ATTEMPTING TO ADD " + mapName + " to mapsPlayed");
+            //System.out.println("ATTEMPTING TO ADD " + mapName + " to mapsPlayed");
             mapsPlayed.add(mapName);
         }
         else
@@ -682,15 +682,15 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     public static void printMapNames() //don't need this parameter
     {
         System.out.println("Printing Map Names: ");
-
-        //changed mapNames to mapsPlayed
         Collections.sort(mapsPlayed); //import java.util.Collections
-        System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
         for(int i = 0; i < mapsPlayed.size(); i++)
         {
             System.out.println(mapsPlayed.get(i));
         }
         System.out.println("\n\n\n");
+
+
+        System.out.println("Frequencies of each map: ");
         int frequency = 1;
         int i = 0;
         while(i < mapsPlayed.size()) {
@@ -887,15 +887,15 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             if(name != null) //Tried to fix EOF exception with this but it didn't work (which makes sense, I guess)
             {
                 //mapNames.add(getMapName(prettyFile));
-                System.out.println("Attempting to add: " + name + " to mapsPlayed...");
+               // System.out.println("Attempting to add: " + name + " to mapsPlayed...");
                 mapsPlayed.add(name);
-                System.out.println("---------------------------");
-                System.out.println("mapsPlayed currently holds:");
-                for(String map : mapsPlayed)
-                {
-                    System.out.println(map);
-                }
-                System.out.println("---------------------------");
+                //System.out.println("---------------------------");
+                //System.out.println("mapsPlayed currently holds:");
+                //for(String map : mapsPlayed)
+                //{
+                //    System.out.println(map);
+                //}
+                //System.out.println("---------------------------");
             }
 
 
