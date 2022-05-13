@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @Test
+            //REDO THIS
     //should return a "prettified" file
     //verify that prettified file is actually pretty
     //to do that, need to independently make it pretty
@@ -60,21 +61,28 @@ class MainTest {
         {
             System.out.println("ACTUAL exists");
             File expect = new File(actual.getPath() + "test_pretty.json");//https://www.tabnine.com/code/java/methods/org.apache.commons.io.FileUtils/copyFile
-            //FileUtils.write()
-
             try {
+                System.out.println("Trying to copy file");
                 FileUtils.copyFile(actual, expect); //src, dest //https://www.tabnine.com/code/java/methods/org.apache.commons.io.FileUtils/copyFile
-                //S//tring fileString = actual.toString();
-                //System.out.println(fileString);
-                //System.out.println(expect.toString());
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
+            //String expectedUglyString = "";
+            //try {
+             //   FileUtils.readFileToString(expect, expectedUglyString);
+            //} catch (IOException e) {
+             //   e.printStackTrace();
+            //}
+
+            //assertEquals(expectedUglyString)
+
             //File expect = new File("C:\\Users\\jmast\\test_if_pretty_for_telemetryFile6.json");
 
             String actualPrettyString = "";
+            //actual.compareTo(expect);
+            //get pretty string using makePretty
+            //FileUtils.readLines(actual)
 
             try {
                 File actualResult = Main.makePretty(actual);
@@ -83,24 +91,46 @@ class MainTest {
                 e.printStackTrace(); //"Can't test makePretty becuase of IOExcpetion in file 'actual'"
             }
 
+            //get pretty using testcode
             //JsonElement je = JsonParser.parseString(uglyString);
             //String prettyJsonString = gson.toJson(je);
             //JSON.stringify(jsonobj,null,'\t') //https://stackoverflow.com/questions/4810841/pretty-print-json-using-javascript
-            Gson gson = new GsonBuilder().setPrettyPrinting().create(); //https://mkyong.com/java/how-to-enable-pretty-print-json-output-gson/
+            //Gson gson = new GsonBuilder().setPrettyPrinting().create(); //https://mkyong.com/java/how-to-enable-pretty-print-json-output-gson/
             //File prettyFile = gson.to
-            String expectedPrettyString = gson.toJson(expect);
+
+           // String expectedPrettyString = gson.toJson(expect);
+            //try {
+            //    FileUtils.writeStringToFile(expect, expectedPrettyString);
+            //} catch (IOException e) {
+            //    e.printStackTrace();
+            //} //make "pretty" version of the string
+            String uglyString = null;
             try {
-                FileUtils.writeStringToFile(expect, expectedPrettyString);
+                uglyString = FileUtils.readFileToString(expect, uglyString);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
+            JsonElement je = JsonParser.parseString(uglyString);
+            String prettyJsonString = gson.toJson(je);
+            String expectedPrettyString = prettyJsonString;
+
+            //make a file to put the "pretty" text in, if needed
+            //C:\Users\jmast\pubgFilesExtracted
+            //File theDir = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles");
+            //if (!theDir.exists()) {
+            //    theDir.mkdirs();
+           // }
+
 
 
             //System.out.println("ACTUAL: ");
-            System.out.println(actualPrettyString);
+            //System.out.println(actualPrettyString);
 
             //System.out.println("\n\n\nEXPECTED: ");
-            System.out.println(expectedPrettyString);
+            //System.out.println(expectedPrettyString);
+
+            ///assertEquals(actualPrettyString, expectedPrettyString); //right now it seems like one is pretty and the other is not...
 
             //check if string representation of file matches expected
             //assertEquals(expectedPrettyString, actualPrettyString);
