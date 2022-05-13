@@ -753,7 +753,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
 
     //VERY IN PROGRESS
-    public static void psuedoMain(String desiredThing)
+    public static void psuedoMain() //removed "String desiredThing"
     {
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
         printFunctionalities();
@@ -812,9 +812,10 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         while(response.equalsIgnoreCase("Y"))
         {
             printFunctionalities();
-            getRequest(input);
-            response = input.next();
+            //getRequest(input);
+            //response = input.next();
         }
+        //
         System.out.println("Shutting down program."); //change wording...
         input.close(); //put here?
         //Call the appropriate method(s) based on user input
@@ -915,15 +916,13 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //IN PROGRESS //make this more efficient...
     public static void printFunctionalities() {
 
-        System.out.println("What would you like to know? Type the corresponding letter and then press enter.");
-        System.out.println();
-        //Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls)
+        System.out.println("What would you like to know? Type the corresponding number and then press enter.\n");
+        for(int i = 0; i < functionalities.size(); i++)
+        {
+            System.out.println(i + ": " + functionalities.get(i));
+        }
 
-        //for(int i = 0; i < functionalities.size(); i++)
-        //{
-        //    System.out.println(i + ": " + functionalities.get(i));
-        //}
-
+        /*
         System.out.println("0: countBotsAndPeople");
         System.out.println("1: calculateKillCounts");
         System.out.println("2: printPlayersByTeam");
@@ -931,19 +930,15 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         System.out.println("4: ranking (of a specific person)");
         System.out.println("5: calculateKillCountsJSON");
         System.out.println("6: printMapsPlayed");
-
+           */
         //pass in and for loop instead?
 
     }
 
     //IN PROGRESS
-    public static int getRequest(Scanner input)
-    {
-        //Scanner input = new Scanner(System.in);
-        int request = Integer.parseInt(input.next()); //careful...
-        System.out.println("request is: " + request);
 
-        Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls)
+    public static void initiateFunctionalities()
+    {
         functionalities.add("countBotsAndPeople");
         functionalities.add("calculateKillCounts");
         functionalities.add("printPlayersByTeam");
@@ -951,6 +946,12 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         functionalities.add("ranking (of a specific person)");
         functionalities.add("calculateKillCountsJSON");
         functionalities.add("printMapsPlayed");
+    }
+    public static int getRequest(Scanner input)
+    {
+        //Scanner input = new Scanner(System.in);
+        int request = Integer.parseInt(input.next()); //careful...
+        System.out.println("request is: " + request);
 
         boolean requestAccepted = false;
         if(request >= 0 && request < functionalities.size())
@@ -972,9 +973,10 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
     //IN PROGRESS
     public static Vector<String> mapsPlayed = new Vector<String>();
-    public static void main(String[] args)
+    public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
+    public static void main(String[] args) //maybe put the "while" in here to having multiple requests actually works?
     {
-
+        initiateFunctionalities();
         Vector<String> winnersRecorded; //winners across different games
         mapsPlayed.clear(); //clear at the beginning
         //Player p = new Player("15511");
@@ -990,7 +992,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
         //"I want all the maps played and how often they were played"
 
-        psuedoMain("desiredThing");
+        psuedoMain();
     }
 }
 
