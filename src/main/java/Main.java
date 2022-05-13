@@ -8,9 +8,6 @@ import org.json.JSONObject;
 
 
 import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.TypeVariable;
 import java.util.*;
 
 //Helpful sites:
@@ -961,7 +958,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //IN PROGRESS
     public static Vector<String> mapsPlayed = new Vector<String>();
     public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
-    public static void main(String[] args) //maybe put the "while" in here to having multiple requests actually works?
+    public static void main() //maybe put the "while" in here to having multiple requests actually works?
     {
         initiateFunctionalities();
         Vector<String> winnersRecorded; //winners across different games
