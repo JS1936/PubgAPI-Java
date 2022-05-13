@@ -921,22 +921,9 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         {
             System.out.println(i + ": " + functionalities.get(i));
         }
-
-        /*
-        System.out.println("0: countBotsAndPeople");
-        System.out.println("1: calculateKillCounts");
-        System.out.println("2: printPlayersByTeam");
-        System.out.println("3: winnerWeapons");
-        System.out.println("4: ranking (of a specific person)");
-        System.out.println("5: calculateKillCountsJSON");
-        System.out.println("6: printMapsPlayed");
-           */
-        //pass in and for loop instead?
-
     }
 
     //IN PROGRESS
-
     public static void initiateFunctionalities()
     {
         functionalities.add("countBotsAndPeople");
