@@ -60,8 +60,11 @@ class MainTest {
     void makePretty()
     {
         String expected = "";
-        File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.pretty_of_telemetryFile6.json.txt");
+        File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.TwoSpaces.pretty_of_telemetryFile6.json.txt");
 
+
+
+        //jsonformatter.example.TwoSpaces.pretty_of_telemetryFile6.json
         //makePrettyExample
         //for each line
 
@@ -101,6 +104,42 @@ class MainTest {
         System.out.println("Comparing the two files");
         //equal returns 0
         //<-
+
+        try {
+            Scanner input = new Scanner(known_pretty);
+            Scanner input2 = new Scanner(attempted_pretty);
+            while(input.hasNextLine() && input2.hasNextLine())
+            {
+                System.out.println("This prints the whole file... are they equal?");
+
+                String nextLine = input.nextLine();
+
+
+                String nextLine2 = input2.nextLine();
+
+                System.out.println("LENGTH of nextLine: " + nextLine.length());
+                for(int i = 0; i < 10; i++)
+                {
+                    System.out.println(nextLine.substring(i, i + 1) + " VS " + nextLine2.substring(i, i + 1));
+                }
+                if(!nextLine.contentEquals(nextLine2))
+                {
+                    System.out.println("NOT EQUAL CONTENT");
+                }
+                else
+                {
+                    System.out.println("EQUAL CONTENT");
+                }
+                //System.out.println(nextLine);
+               // System.out.println("\n\n\n\n\n\n");
+                //System.out.println(nextLine2);
+
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
 
         System.out.println(known_pretty.compareTo(attempted_pretty));
         /*
