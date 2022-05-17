@@ -57,259 +57,80 @@ class MainTest {
     //maybe compare them line by line?
     //C:\Users\jmast\pubgFilesExtracted\testcaseFiles\jsonformatter.example.pretty_of_telemetryFile6.json.txt
     // // C:\Users\jmast\pubgFilesExtracted\testcaseFiles
-    void makePretty()
-    {
-        String expected = "";
-        File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.TwoSpaces.pretty_of_telemetryFile6.json.txt");
+    ////assertEquals(expectedPrettyString, actualPrettyString);
+    void makePretty() throws IOException {
 
+        File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.FourSpaces.pretty_of_telemetryFile2.json.txt");
+        File uglyOriginal = new File("C:\\Users\\jmast\\pubgFilesExtracted\\telemetryFile2.json"); //original)
+        File attempted_pretty = Main.makePretty(uglyOriginal);
 
+        if (!known_pretty.exists() || !uglyOriginal.exists() || !attempted_pretty.exists()) {
+            fail("Not all the needed files exist");
+        }
+        String expected = FileUtils.readFileToString(known_pretty);
+        String actual = FileUtils.readFileToString(attempted_pretty);
 
-        //jsonformatter.example.TwoSpaces.pretty_of_telemetryFile6.json
-        //makePrettyExample
-        //for each line
+        System.out.println("expected.length() : " + expected.length());
+        System.out.println("actual.length()   : " + actual.length());
+        System.out.println("DIFF: " + (expected.length() - actual.length()));
 
-        if(known_pretty.exists())
+        //while each has next line, print it, check if they are eqaul (maybe onnly print it not eaul)
+        Scanner scan = new Scanner(attempted_pretty);
+        Scanner scan2 = new Scanner(known_pretty);
+        int count = 0;
+        while(scan2.hasNext() && count < 10000 )
         {
-            System.out.println("known_pretty file exists");
-            try {
-                expected = FileUtils.readFileToString(known_pretty);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        else
-        {
-            System.out.println("known_pretty file does not exist");
-            System.exit(0);
-        }
-
-        File attempted_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\telemetryFile6.json"); //original
-        if(attempted_pretty.exists())
-        {
-            //Step 1: try to make it pretty
-            try {
-                Main.makePretty(attempted_pretty);
-            } catch (IOException e) {
-                //fail("error when calling Main.makePretty(attempted_pretty)");
-                e.printStackTrace();
-            }
-        }
-        //Do they ahve the same content?
-        try {
-            FileUtils.contentEquals(known_pretty, attempted_pretty);
-            System.out.println("Content is equal");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Comparing the two files");
-        //equal returns 0
-        //<-
-
-        try {
-            Scanner input = new Scanner(known_pretty);
-            Scanner input2 = new Scanner(attempted_pretty);
-            while(input.hasNextLine() && input2.hasNextLine())
+            String attempt = scan.next();
+            String known = scan2.next();
+            if(known.contains("\"vehicle\":")) //weird exception where some files have extra 2 lines saying vehicle is null
             {
-                System.out.println("This prints the whole file... are they equal?");
-
-                String nextLine = input.nextLine();
-
-
-                String nextLine2 = input2.nextLine();
-
-                System.out.println("LENGTH of nextLine: " + nextLine.length());
-                for(int i = 0; i < 10; i++)
-                {
-                    System.out.println(nextLine.substring(i, i + 1) + " VS " + nextLine2.substring(i, i + 1));
-                }
-                if(!nextLine.contentEquals(nextLine2))
-                {
-                    System.out.println("NOT EQUAL CONTENT");
-                }
-                else
-                {
-                    System.out.println("EQUAL CONTENT");
-                }
-                //System.out.println(nextLine);
-               // System.out.println("\n\n\n\n\n\n");
-                //System.out.println(nextLine2);
-
-
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-
-        System.out.println(known_pretty.compareTo(attempted_pretty));
-        /*
-        String actual = null;
-        try {
-            actual = FileUtils.readFileToString(attempted_pretty);
-        } catch (IOException e) {
-            e.printStackTrace();
-            fail("Cannot read file called actual into string");
-        }
-        System.out.println("HERE" );
-        if(actual.equals(expected))
-        {
-
-            return;
-        }
-        else
-        {
-            //System.out.println("ACTUAL: " + actual);
-            //System.out.println("EXPECT: " + expected);
-            fail("The pretty_file was received, but is unexpectedly formatted");
-        }
-        */
-
-
-        known_pretty.compareTo(attempted_pretty);
-        //C:\Users\jmast\pubgFilesExtracted\testcaseFiles
-    }
-    /*
-      //Step 2: Read each file to a string
-
-        /*
-        String expected = null;
-        try {
-            expected = FileUtils.readFileToString(known_pretty);
-        } catch (IOException e) {
-            e.printStackTrace();
-            //fail("Cannot read file called expected into string");
-        }
-        */
-
-
-
-    /*
-    void makePretty() {
-//C:\Users\jmast\pubgFilesExtracted\testcaseFiles
-        //you need two files:
-
-        //get the actual file
-        File actual = new File("C:\\Users\\jmast\\pubgFilesExtracted\\telemetryFile6.json"); //original
-        assertNotEquals(null, actual);
-
-        //if actual file exists, copy contents into new file called expect
-        if(actual.exists())
-        {
-            System.out.println("ACTUAL exists");
-            File expect = new File(actual.getPath() + "test_pretty.json");//https://www.tabnine.com/code/java/methods/org.apache.commons.io.FileUtils/copyFile
-            try {
-                System.out.println("Trying to copy file");
-                FileUtils.copyFile(actual, expect); //src, dest //https://www.tabnine.com/code/java/methods/org.apache.commons.io.FileUtils/copyFile
-            } catch (IOException e) {
-                e.printStackTrace();
+                known = scan2.next();
+                known = scan2.next();
             }
 
-            //String expectedUglyString = "";
-            //try {
-             //   FileUtils.readFileToString(expect, expectedUglyString);
-            //} catch (IOException e) {
-             //   e.printStackTrace();
+            if(!attempt.equalsIgnoreCase(known))
+            {
+                System.out.println("Attempt: " + attempt);
+                System.out.println("Known:   " + known);
+                System.out.println(count + 1);
+
+                System.out.println("NOT EQUAL" );
+            }
+            System.out.println("------------------------");
+            count++;
+            //scan2.nextByte();
+            //System.out.println("Attempt: " + attempt);
+            //System.out.println("Known: " + known);
+
+            //if(attempt.contentEquals(known))
+            //{
+
+            //}
+           // else
+            //{
+                //System.out.println("------------------------------");
+                //System.out.println("!=");
+                //System.out.println(attempt);
+                //System.out.println(known);
             //}
 
-            //assertEquals(expectedUglyString)
-
-            //File expect = new File("C:\\Users\\jmast\\test_if_pretty_for_telemetryFile6.json");
-
-            String actualPrettyString = "";
-            //actual.compareTo(expect);
-            //get pretty string using makePretty
-            //FileUtils.readLines(actual)
-
-            try {
-                File actualResult = Main.makePretty(actual);
-                actualPrettyString = FileUtils.readFileToString(actual);
-            } catch (IOException e) {
-                e.printStackTrace(); //"Can't test makePretty becuase of IOExcpetion in file 'actual'"
-            }
-
-            //get pretty using testcode
-            //JsonElement je = JsonParser.parseString(uglyString);
-            //String prettyJsonString = gson.toJson(je);
-            //JSON.stringify(jsonobj,null,'\t') //https://stackoverflow.com/questions/4810841/pretty-print-json-using-javascript
-            //Gson gson = new GsonBuilder().setPrettyPrinting().create(); //https://mkyong.com/java/how-to-enable-pretty-print-json-output-gson/
-            //File prettyFile = gson.to
-
-           // String expectedPrettyString = gson.toJson(expect);
-            //try {
-            //    FileUtils.writeStringToFile(expect, expectedPrettyString);
-            //} catch (IOException e) {
-            //    e.printStackTrace();
-            //} //make "pretty" version of the string
-            String uglyString = null;
-            try {
-                uglyString = FileUtils.readFileToString(expect, uglyString);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-            JsonElement je = JsonParser.parseString(uglyString);
-            String prettyJsonString = gson.toJson(je);
-            String expectedPrettyString = prettyJsonString;
-
-            //make a file to put the "pretty" text in, if needed
-            //C:\Users\jmast\pubgFilesExtracted
-            //File theDir = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles");
-            //if (!theDir.exists()) {
-            //    theDir.mkdirs();
-           // }
-
-
-
-            //System.out.println("ACTUAL: ");
-            //System.out.println(actualPrettyString);
-
-            //System.out.println("\n\n\nEXPECTED: ");
-            //System.out.println(expectedPrettyString);
-
-            ///assertEquals(actualPrettyString, expectedPrettyString); //right now it seems like one is pretty and the other is not...
-
-            //check if string representation of file matches expected
-            //assertEquals(expectedPrettyString, actualPrettyString);
-            //assertEquals(expectedPrettyString, actualPrettyString);
-            expect.delete();
-
-        }
-        else
-        {
-            System.out.println("ACTUAL does not exist");
-            fail();
         }
 
+        //System.out.println(attempted_pretty);
+        //assertEquals(FileUtils.readFileToString(attempted_pretty),FileUtils.readFileToString(known_pretty));
+        //Step 1: try to make it pretty
+        //attempted_pretty = Main.makePretty(uglyOriginal);
+        //System.out.println("Made attempted_pretty pretty");
+        //actual = FileUtils.readFileToString(attempted_pretty);
+        //System.out.println("Comparing... returns");
+        //System.out.println(expected.compareTo(actual)); //-113 --> s1<s2 //-91 now
+        //System.out.println(attempted_pretty); //prints: C:\Users\jmast\pubgFilesExtracted\testcaseFiles\jsonformatter.example.attempted_pretty_of_telemetryFile6.json.txt
+
+        //System.out.println(actual);
+        //System.out.println(expected);
 
 
-    /*
-        try {
-            FileUtils.copyFile(expect , actual);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        */
-
-
-
-
-
-        //actualPrettyString
-        //FileUtils
-                //
-                //writeFileToString();
-        //FileUtils.writeStringToFile(prettyFile, prettyJsonString);
-        //File expectedResult = new File(); //string child, File parent
-        //FileUtils.writeStringToFile(expectedResult, json);
-
-
-        //for each line, assert contents are equal
-
-
-
-    //}
-
-
+    }
     @Test
     void printKillCounts() {
     }
