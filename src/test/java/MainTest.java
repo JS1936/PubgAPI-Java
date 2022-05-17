@@ -48,8 +48,105 @@ class MainTest {
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
      */
-    void makePretty() {
 
+    //check contents of known_pretty against attempted_pretty
+    //Dependencies... --> want to be able to run this on a different computer, too...
+    //
+
+    //PRETTY example file: turn it into a string
+    //maybe compare them line by line?
+    //C:\Users\jmast\pubgFilesExtracted\testcaseFiles\jsonformatter.example.pretty_of_telemetryFile6.json.txt
+    // // C:\Users\jmast\pubgFilesExtracted\testcaseFiles
+    void makePretty()
+    {
+        String expected = "";
+        File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.pretty_of_telemetryFile6.json.txt");
+
+        //makePrettyExample
+        //for each line
+
+        if(known_pretty.exists())
+        {
+            System.out.println("known_pretty file exists");
+            try {
+                expected = FileUtils.readFileToString(known_pretty);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            System.out.println("known_pretty file does not exist");
+            System.exit(0);
+        }
+
+        File attempted_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\telemetryFile6.json"); //original
+        if(attempted_pretty.exists())
+        {
+            //Step 1: try to make it pretty
+            try {
+                Main.makePretty(attempted_pretty);
+            } catch (IOException e) {
+                //fail("error when calling Main.makePretty(attempted_pretty)");
+                e.printStackTrace();
+            }
+        }
+        //Do they ahve the same content?
+        try {
+            FileUtils.contentEquals(known_pretty, attempted_pretty);
+            System.out.println("Content is equal");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Comparing the two files");
+        //equal returns 0
+        //<-
+
+        System.out.println(known_pretty.compareTo(attempted_pretty));
+        /*
+        String actual = null;
+        try {
+            actual = FileUtils.readFileToString(attempted_pretty);
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail("Cannot read file called actual into string");
+        }
+        System.out.println("HERE" );
+        if(actual.equals(expected))
+        {
+
+            return;
+        }
+        else
+        {
+            //System.out.println("ACTUAL: " + actual);
+            //System.out.println("EXPECT: " + expected);
+            fail("The pretty_file was received, but is unexpectedly formatted");
+        }
+        */
+
+
+        known_pretty.compareTo(attempted_pretty);
+        //C:\Users\jmast\pubgFilesExtracted\testcaseFiles
+    }
+    /*
+      //Step 2: Read each file to a string
+
+        /*
+        String expected = null;
+        try {
+            expected = FileUtils.readFileToString(known_pretty);
+        } catch (IOException e) {
+            e.printStackTrace();
+            //fail("Cannot read file called expected into string");
+        }
+        */
+
+
+
+    /*
+    void makePretty() {
+//C:\Users\jmast\pubgFilesExtracted\testcaseFiles
         //you need two files:
 
         //get the actual file
@@ -171,7 +268,8 @@ class MainTest {
 
 
 
-    }
+    //}
+
 
     @Test
     void printKillCounts() {

@@ -15,6 +15,7 @@ public class Testcases {
     public static boolean access_java_main() {
         //assertEquals(5,6);
 
+
         System.out.println("\tTesting acccess_java_main:");
         try {
             Main.initiateFunctionalities();
