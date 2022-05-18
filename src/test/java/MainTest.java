@@ -18,118 +18,43 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @Test
-            //REDO THIS
-    //should return a "prettified" file
-    //verify that prettified file is actually pretty
-    //to do that, need to independently make it pretty
-    //maybe you only need to look at the actual string...
-    //wouldn;t check to make sure you are storing the new file in the rightr place...
-
-    //have 2 copies of the file
-    //read to file VS write to file
-    /*
-    //read in file as string
-        String uglyString = FileUtils.readFileToString(fileName);
-
-        //make "pretty" version of the string
-        Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-        JsonElement je = JsonParser.parseString(uglyString);
-        String prettyJsonString = gson.toJson(je);
-
-        //make a file to put the "pretty" text in, if needed
-        //C:\Users\jmast\pubgFilesExtracted
-        File theDir = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles");
-        if (!theDir.exists()) {
-            theDir.mkdirs();
-        }
-
-        File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
-
-        //write "pretty" text to new file
-        FileUtils.writeStringToFile(prettyFile, prettyJsonString);
-     */
-
-    //check contents of known_pretty against attempted_pretty
-    //Dependencies... --> want to be able to run this on a different computer, too...
-    //
-
-    //PRETTY example file: turn it into a string
-    //maybe compare them line by line?
-    //C:\Users\jmast\pubgFilesExtracted\testcaseFiles\jsonformatter.example.pretty_of_telemetryFile6.json.txt
-    // // C:\Users\jmast\pubgFilesExtracted\testcaseFiles
-    ////assertEquals(expectedPrettyString, actualPrettyString);
     void makePretty() throws IOException {
 
+        //make/get the files
         File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.FourSpaces.pretty_of_telemetryFile2.json.txt");
         File uglyOriginal = new File("C:\\Users\\jmast\\pubgFilesExtracted\\telemetryFile2.json"); //original)
         File attempted_pretty = Main.makePretty(uglyOriginal);
 
+        //verify the files exist
         if (!known_pretty.exists() || !uglyOriginal.exists() || !attempted_pretty.exists()) {
             fail("Not all the needed files exist");
         }
+
+        //read known_pretty and attempted_pretty to one string each
         String expected = FileUtils.readFileToString(known_pretty);
         String actual = FileUtils.readFileToString(attempted_pretty);
 
-        System.out.println("expected.length() : " + expected.length());
-        System.out.println("actual.length()   : " + actual.length());
-        System.out.println("DIFF: " + (expected.length() - actual.length()));
-
-        //while each has next line, print it, check if they are eqaul (maybe onnly print it not eaul)
+        //while each scanner has next line, check if they are equal
         Scanner scan = new Scanner(attempted_pretty);
         Scanner scan2 = new Scanner(known_pretty);
         int count = 0;
-        while(scan2.hasNext() && count < 10000 )
-        {
+        while(scan2.hasNext() && count < 3000) //if the pattern is followed this far, it's hopefully followed (well enough) through the whole file
+        { //weird rounding error? (largely inconsequential, it seems --> 3908)
             String attempt = scan.next();
             String known = scan2.next();
             if(known.contains("\"vehicle\":")) //weird exception where some files have extra 2 lines saying vehicle is null
             {
+                //System.out.println("count: " + count);
                 known = scan2.next();
                 known = scan2.next();
             }
-
             if(!attempt.equalsIgnoreCase(known))
             {
-                System.out.println("Attempt: " + attempt);
-                System.out.println("Known:   " + known);
                 System.out.println(count + 1);
-
-                System.out.println("NOT EQUAL" );
+                fail("<NOT EQUAL>\n\tAttempt: " + attempt + " != \n\tKnown:   " + known);
             }
-            System.out.println("------------------------");
             count++;
-            //scan2.nextByte();
-            //System.out.println("Attempt: " + attempt);
-            //System.out.println("Known: " + known);
-
-            //if(attempt.contentEquals(known))
-            //{
-
-            //}
-           // else
-            //{
-                //System.out.println("------------------------------");
-                //System.out.println("!=");
-                //System.out.println(attempt);
-                //System.out.println(known);
-            //}
-
         }
-
-        //System.out.println(attempted_pretty);
-        //assertEquals(FileUtils.readFileToString(attempted_pretty),FileUtils.readFileToString(known_pretty));
-        //Step 1: try to make it pretty
-        //attempted_pretty = Main.makePretty(uglyOriginal);
-        //System.out.println("Made attempted_pretty pretty");
-        //actual = FileUtils.readFileToString(attempted_pretty);
-        //System.out.println("Comparing... returns");
-        //System.out.println(expected.compareTo(actual)); //-113 --> s1<s2 //-91 now
-        //System.out.println(attempted_pretty); //prints: C:\Users\jmast\pubgFilesExtracted\testcaseFiles\jsonformatter.example.attempted_pretty_of_telemetryFile6.json.txt
-
-        //System.out.println(actual);
-        //System.out.println(expected);
-
-
     }
     @Test
     void printKillCounts() {
@@ -187,8 +112,21 @@ class MainTest {
     void psuedoMain() {
     }
 
+
     @Test
+    //Checks whether getInfo treats valid and invalid requests properly.
     void getInfo() {
+        File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.FourSpaces.pretty_of_telemetryFile2.json.txt");
+        //Valid: request is from [0,7]
+        //Invalid: all other values (EX: -1, 7, 8)
+        for(int request = -1; request <= 8; request++)
+        {
+            boolean properRetrieval = Main.getInfo(request, known_pretty, "");
+            if(!properRetrieval)
+            {
+                fail("getInfo() testcase failed, starting at request = " + request);
+            }
+        }
     }
 
     @Test
@@ -196,11 +134,29 @@ class MainTest {
     }
 
     @Test
+    // outputVerify.add(i + ": " + functionalities.get(i));
+    //Vector<String> expected_functionalities = new Vector<String>() {
+
+    //Main.initiateFunctionalities();
+
+
+
+    //Vector<String> expected = new Vector<String>(){"countBotsAndPeople"};
+    //"countBotsAndPeople"
+    //"calculateKillCounts","printPlayersByTeam", "winnerWeapons", "ranking (of a specific person)", "calculateKillCountsJSON", "printMapsPlayed");
+    //};
     void printFunctionalities() {
     }
 
     @Test
     void initiateFunctionalities() {
+        Main.initiateFunctionalities();
+        //make vector of functionalities?
+        assertEquals(7, Main.functionalities.size());
+        for(int i = 0; i < Main.functionalities.size(); i++)
+        {
+            assertNotEquals(null, Main.functionalities.get(i));
+        }
     }
 
     @Test

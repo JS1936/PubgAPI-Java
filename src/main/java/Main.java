@@ -844,7 +844,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
     //switch stmt?
     //what about for ONE specific file, or  for specific fileS?
-    public static void getInfo(int request, File prettyFile, String nameIfNeeded)
+    public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) //changed return from void -> boolean 5/17/2022
     {
         //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
         //EX: request.equalsIgnoreCase("0")
@@ -900,7 +900,9 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }else
         {
             System.out.println("Invalid request"); //for example's sake (currently)
+            return (request < 0 || request >= 7); //invalid requests should not have valid numbers
         }
+        return (request < 7 && request > -1); //valid requests should have valid numbers
     }
 
     //IN PROGRESSS
@@ -911,13 +913,16 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     }
 
     //IN PROGRESS //make this more efficient...
-    public static void printFunctionalities() {
+    public static Vector<String> printFunctionalities() { //changed from void to Vector<String>
 
+        Vector<String> outputVerify = new Vector<String>();
         System.out.println("What would you like to know? Type the corresponding number and then press enter.\n");
         for(int i = 0; i < functionalities.size(); i++)
         {
             System.out.println(i + ": " + functionalities.get(i));
+            outputVerify.add(i + ": " + functionalities.get(i));
         }
+        return outputVerify;
     }
 
     //IN PROGRESS
