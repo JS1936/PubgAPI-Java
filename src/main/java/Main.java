@@ -16,6 +16,22 @@ import java.util.*;
 //https://github.com/Corefinder89/SampleJavaCodes/blob/master/src/Dummy1.java
 //https://www.w3schools.com/java/java_files_read.asp
 
+//First, store the file somewhere.
+//Second, store information that is likely to be asked for
+//That way, if likely info is asked for, it can be foudn quickly. If unlikely info is asked for, it can still be found (albeit more slowly, looking through the files)
+//Is that even worth it?
+
+//How do you store stats across games/time?
+
+
+
+//What if you had a map of players
+//Once you found a player, you added them to the map
+//Then, if you encounter that player again, you can just look in the map instead of having to search for their basic information again
+//Basic information: player name, id,
+//Could store history: weapon usage, teammates, killcount avg, rankings, (numGamesRecorded), etc.
+
+
 //Current functionalities:
 //
 //      Using JSONObjects:
@@ -34,7 +50,7 @@ import java.util.*;
 
 //is an eof error happening...?
 //read the file to string first...
-public class Main {
+public class Main extends Memory { //added "extends Memory" 6/16/2022
 
     /*
      * Takes the contents of an "ugly" file and makes a new file
@@ -633,7 +649,6 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                             }
                         }
                     }
-
                 }
 
             }
@@ -851,6 +866,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         if(request == 0)
         {
             countBotsAndPeople(prettyFile); //seems to work
+            //could this be called somehow using vector (like something[0]) to make this more "adjustable"?
         }
         else if(request == 1)
         {
@@ -936,6 +952,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         functionalities.add("calculateKillCountsJSON");
         functionalities.add("printMapsPlayed");
     }
+
     public static int getRequest(Scanner input)
     {
         //Scanner input = new Scanner(System.in);
@@ -971,6 +988,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //Player p = new Player("15511");
         //System.out.println("Account ID: "+ p.getAccountID());
 
+        ///Map<Integer, String> m = new HashMap<>();
+        ///m.put(1, "hi");
 
         //print options for what you can do
         //ask them what they want to do
