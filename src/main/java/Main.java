@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.*;
 
 //Helpful sites:
@@ -52,6 +53,8 @@ import java.util.*;
 //read the file to string first...
 public class Main extends Memory { //added "extends Memory" 6/16/2022
 
+    static File currentFile = null; //added 9/15
+    static File requestHistory = null;
     /*
      * Takes the contents of an "ugly" file and makes a new file
      * where that content is stored in a way that looks "pretty".
@@ -103,7 +106,7 @@ public class Main extends Memory { //added "extends Memory" 6/16/2022
     //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
     public static void printKillCounts(Vector<String> counts) {
         System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
-        int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game
+        int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
         int maxKills = 0;
         int killsByTopTen = 0;
         for (int i = 0; i < counts.size(); i++) {
@@ -263,19 +266,39 @@ public class Main extends Memory { //added "extends Memory" 6/16/2022
             e.printStackTrace();
         }
     }
-
+//just get the matchID, too
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
     //COULD use printPlayersByTeam (excess printouts) OR do it independently
     //Returns ranking as a string
     public static String ranking(String name, File prettyFile) {
+        JSONObject match_definition = returnObject(prettyFile, "LogMatchDefinition");
+        //System.out.println("match definition: " + match_definition);
+        String match_id = match_definition.get("MatchId").toString();
+        System.out.println("match_id = " + match_id);
+
+
         JSONObject match_end = returnObject(prettyFile, "LogMatchEnd");
+        //System.out.println("Attempting to print match_end content: " + match_end);
         JSONArray players = match_end.getJSONArray("characters");
         for (int i = 0; i < players.length(); i++) {
             JSONObject player = players.getJSONObject(i);
+            System.out.println("Attempting to print match_end content (1line): " + player);
             JSONObject player_details = player.getJSONObject("character");
             String player_name = player_details.get("name").toString();
+            System.out.println("\t" + player_name);
             if (player_name.equalsIgnoreCase(name)) {
+                String player_ranking = player_details.get("ranking").toString();
                 System.out.println(name + "rank in this game: " + player_details.get("ranking").toString());
+                //added 9/15-> write to file here?
+
+                //probably want the matchID, too
+                //can it be made to automatically open the file, too?
+                try {
+                    FileUtils.writeStringToFile(currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //changed requestedResults to currentFile //added 9/15
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
                 return player_details.get("ranking").toString();
             }
         }
@@ -763,14 +786,47 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     }
     */
 
-
+    //ADDED 9/15/2022 for file creation in psuedomain for storing data (EX: request 4)
+    public static File getFile(String fileName)
+    {
+        File file = new File(fileName);
+        if(!file.exists())
+        {
+            System.out.println("Need to make file ");
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            System.out.println("file already exists.");
+        }
+        return file;
+    }
+    //For each file, there is a call to the corresponding request
     //VERY IN PROGRESS
     public static void psuedoMain() //removed "String desiredThing"
     {
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
+        //what if history of requests?
+        requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
+        currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+        //File requestedResults = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+        //FileUtils.writeStringToFile(currentFile, "\n-" + name, (Charset) null, true);
+
         printFunctionalities();
         Scanner input = new Scanner(System.in);
         int request = getRequest(input); //string or int? (Getting confused)
+
+        //Added the try/catch writeStringToFile for requestHistory 9/15
+        try {
+            //could even have a log-in system where differentiating user histories
+            FileUtils.writeStringToFile(requestHistory, request + "_", (Charset) null, true); //changed requestedResults to currentFile
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         if(request == -1) //remove?
         {
             System.out.println("Invalid request");
@@ -782,6 +838,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             System.out.println("Who are you looking for? (EX: matt112)");
             name = input.next();
             System.out.println("Now looking for: '" + name + "'");
+
         }
 
         int max_files = 10; //temporary (remove later)
@@ -802,6 +859,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                     File pretty = makePretty(fileName);
                     getInfo(request, pretty, name);
                     filesSoFar++;
+                    //FileUtils.writeStringToFile(currentFile, name, (Charset) null, true); //changed requestedResults to currentFile
+                //writeStringToFile(requestedResults, name); //added 9/15
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -882,7 +941,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
         }else if(request == 4) { //NOT WORKING (issue with scanner) -->
             // NOW switched... but still lots of extra printouts, and passing name in seems silly
-
+            ///TRY WRITING TO FILE HERE
             ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors) //INTERESTING: new request, asks for name with every file...
 
         }else if(request == 5) {
@@ -958,6 +1017,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //Scanner input = new Scanner(System.in);
         int request = Integer.parseInt(input.next()); //careful...
         System.out.println("request is: " + request);
+        //write to file (requestHistory) here? 9/15
 
         boolean requestAccepted = false;
         if(request >= 0 && request < functionalities.size())
