@@ -12,6 +12,7 @@ public class MakeRequest {
         Scanner input = new Scanner(System.in);
 
         //str.isDigit?
+
         int request = Integer.parseInt(input.nextLine()); //careful... //fails if not an int?
         /*
          String request_original = input.nextLine(); //careful... //fails if not an int?
