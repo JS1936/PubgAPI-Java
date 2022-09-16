@@ -48,6 +48,22 @@ import java.util.*;
 //              -calculateKillCounts
 //              -printKillCounts
 
+//Thinking...
+
+//Files (feed in the files?)
+
+//Individual
+//Team
+//Everyone/Game
+
+//killcounts
+//ranking
+//weapons
+//maps
+//countBots
+
+//print
+//store
 
 //makePretty
 //printKillCountsToHistory
@@ -75,7 +91,7 @@ import java.util.*;
 
 //is an eof error happening...?
 //read the file to string first...
-public class Main extends Memory { //added "extends Memory" 6/16/2022
+public class Main extends Request { //added "extends Memory" 6/16/2022 //added Request.java 9/15, removed extends Memory
 
     static File currentFile = null; //added 9/15
     static File requestHistory = null;
@@ -1017,6 +1033,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
     //switch stmt?
     //what about for ONE specific file, or  for specific fileS?
+    //factory-like abstraction thing here? (instead)
     public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) //changed return from void -> boolean 5/17/2022
     {
         //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
@@ -1131,6 +1148,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         else
         {
             System.out.println("Request accepted!");
+
             return request;
             //Do it...
         }
