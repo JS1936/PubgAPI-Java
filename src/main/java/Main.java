@@ -49,6 +49,30 @@ import java.util.*;
 //              -printKillCounts
 
 
+//makePretty
+//printKillCountsToHistory
+//printKillCounts
+//printKillCountsJSON
+//calculateKillCountsJSON
+//calculateKillCounts
+//ranking
+//weapon frequencies
+//winner weapons
+//returnMultipleObjects
+// returnObject
+// printPlayersByTeam
+// countBotsAndPeople
+// maps
+// printMapNames
+// getMapName
+// getFile
+// pseudomain
+// getInfo
+// printFunctionalities
+// initializeFunctionalities
+// main
+
+
 //is an eof error happening...?
 //read the file to string first...
 public class Main extends Memory { //added "extends Memory" 6/16/2022
@@ -787,16 +811,16 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
      */
     public static void printMapNames() //don't need this parameter
     {
-        System.out.println("Printing Map Names: ");
+        //System.out.println("Printing Map Names: ");
         Collections.sort(mapsPlayed); //import java.util.Collections
-        for(int i = 0; i < mapsPlayed.size(); i++)
-        {
-            System.out.println(mapsPlayed.get(i));
-        }
-        System.out.println("\n\n\n");
+        //for(int i = 0; i < mapsPlayed.size(); i++)
+        //{
+        //    System.out.println(mapsPlayed.get(i));
+        //}
+        //System.out.println("\n\n\n");
 
 
-        System.out.println("Frequencies of each map: ");
+        System.out.println("Frequencies of each map played: "); //added "played" 9/15
         int frequency = 1;
         int i = 0;
         while(i < mapsPlayed.size()) {
@@ -888,6 +912,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //FileUtils.writeStringToFile(currentFile, "\n-" + name, (Charset) null, true);
 
         printFunctionalities();
+        mapsPlayed.clear(); //avoid duplicates...
         input = new Scanner(System.in);
         int request = getRequest(input); //string or int? (Getting confused)
 
@@ -1055,11 +1080,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     }
 
     //IN PROGRESSS
-    public static void getMethods()
-    {
-            Vector<String> methods = new Vector<String>();
-            methods.add("countBotsAndPeople");
-    }
+    //public static void getMethods()
+    //{
+    //        Vector<String> methods = new Vector<String>();
+    //        methods.add("countBotsAndPeople");
+    //}
 
     //IN PROGRESS //make this more efficient...
     public static Vector<String> printFunctionalities() { //changed from void to Vector<String>
@@ -1135,6 +1160,10 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //"I want all the maps played and how often they were played"
         ///File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
         //what if history of requests?
+
+        //"Do you want to store this information in its own file?" idea
+        //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
+
         requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
         currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
 
@@ -1157,4 +1186,5 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 //EX: "destination" component (console only VS file only VS both)
 //what if it has already calculated something before? (Redo or try to track, store?)
 //how do you edit a file's contents?
+//could different request types go in different .cpp files entirely? (Likely more readable that way)
 //EX: record number of kills in a single game for matt112 --> over multiple games... 1, 3, 2, 6, 6, 7, 3, --> record should be 7, show only 7 (+ maybe match id)
