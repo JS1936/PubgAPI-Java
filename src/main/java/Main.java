@@ -103,8 +103,62 @@ public class Main extends Memory { //added "extends Memory" 6/16/2022
         Vector<Player> winners = new Vector<Player>();
         Vector<Integer> winnerKills = new Vector<Integer>();
      */
+    public static void printKillCountsToHistory(Vector<String> counts) throws IOException
+    {
+        //time of request?
+        //FileUtils.writeStringToFile();
+        String context = "Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.";
+        //try {
+            FileUtils.writeStringToFile(requestHistory, "\n" + context, (Charset) null, true); //added 9/15
+        //} catch (IOException e) {
+        //    e.printStackTrace();
+        //}
+        System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
+        int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
+        int maxKills = 0;
+        int killsByTopTen = 0;
+        for (int i = 0; i < counts.size(); i++) {
+            if (i % 10 == 0) //For display clarity
+            {
+                System.out.println();
+                FileUtils.writeStringToFile(requestHistory, "\n", (Charset) null, true); //added 9/15
+            }
+            int numKills = Integer.valueOf(counts.get(i));
+            if (maxKills < numKills) {
+                maxKills = numKills;
+            }
+            if (counts.size() - 10 <= i) {
+                killsByTopTen += numKills;
+            }
+            frequencies[numKills]++;
+            System.out.print(counts.get(i) + " ");
+            FileUtils.writeStringToFile(requestHistory, counts.get(i) +" ", (Charset) null, true); //added 9/15
+        }
+
+        //Print out how many people got X number of kills
+        System.out.println("\nKill Frequencies:");
+        FileUtils.writeStringToFile(requestHistory, "\nKill Frequencies:", (Charset) null, true); //added 9/15
+
+        for (int index = 0; index <= maxKills; index++) {
+            System.out.println(frequencies[index] + " got " + index + " kills.");
+            FileUtils.writeStringToFile(requestHistory, "\n" + frequencies[index] + " got " + index + " kills.", (Charset) null, true); //added 9/15
+        }
+        System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
+        System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
+        System.out.println("--------------------------------------------------------------------------");
+        FileUtils.writeStringToFile(requestHistory, "\nMAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")", (Charset) null, true); //added 9/15
+        FileUtils.writeStringToFile(requestHistory, "\n#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size(), (Charset) null, true); //added 9/15
+        FileUtils.writeStringToFile(requestHistory, "\n--------------------------------------------------------------------------", (Charset) null, true); //added 9/15
+    }
+
     //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
     public static void printKillCounts(Vector<String> counts) {
+
+        try {
+            printKillCountsToHistory(counts); //added 9/15
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
         int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
         int maxKills = 0;
@@ -136,6 +190,7 @@ public class Main extends Memory { //added "extends Memory" 6/16/2022
     }
 
     //Can print more details
+    //maybe print these to a file, instead
     public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills)
     {
         for(int index = 0; index < namesByNumKills.size(); index++)
@@ -144,15 +199,31 @@ public class Main extends Memory { //added "extends Memory" 6/16/2022
             if(!names.isEmpty())
             {
                 System.out.println(index + " KILLS: ");
+                //FileUtils.writeStringToFile();
+                try {
+                    FileUtils.writeStringToFile(requestHistory, "\n" + index + " KILLS: ", (Charset) null, true); //added 9/15
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 for(int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++)
                 {
                     System.out.println("\t" + names.get(indexOfNames));
+                    try {
+                        FileUtils.writeStringToFile(requestHistory, "\n\t" + names.get(indexOfNames), (Charset) null, true); //added 9/15
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     //if(indexOfNames % 3 == 0)
                     //{
                     //    System.out.println();
                     //}
                 }
                 System.out.println("---------------");
+                try {
+                    FileUtils.writeStringToFile(requestHistory, "\n---------------", (Charset) null, true); //added 9/15
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
         }
@@ -807,17 +878,17 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     }
     //For each file, there is a call to the corresponding request
     //VERY IN PROGRESS
-    public static void psuedoMain() //removed "String desiredThing"
+    public static void psuedoMain(Scanner input) //removed "String desiredThing"
     {
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
         //what if history of requests?
-        requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
-        currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+        ///requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
+        ///currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
         //File requestedResults = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
         //FileUtils.writeStringToFile(currentFile, "\n-" + name, (Charset) null, true);
 
         printFunctionalities();
-        Scanner input = new Scanner(System.in);
+        input = new Scanner(System.in);
         int request = getRequest(input); //string or int? (Getting confused)
 
         //Added the try/catch writeStringToFile for requestHistory 9/15
@@ -880,15 +951,18 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         System.out.println("Any other requests? (y/n)");
         response = input.next();
 
-        while(response.equalsIgnoreCase("Y"))
+        if(response.equalsIgnoreCase("Y"))
         {
-            printFunctionalities();
+            //printFunctionalities();
+            //input.close(); //put here?
+            psuedoMain(input); //this causes a problem with having multiple scanners open...
             //getRequest(input);
             //response = input.next();
         }
         //
+        //input.close(); //put here?
         System.out.println("Shutting down program."); //change wording...
-        input.close(); //put here?
+
         //Call the appropriate method(s) based on user input
     }
     //10 maps:
@@ -1059,8 +1133,15 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //A: "HMBAP" -- HowManyBotsAndPeople?
         //B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
         //"I want all the maps played and how often they were played"
+        ///File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
+        //what if history of requests?
+        requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
+        currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
 
-        psuedoMain();
+
+        Scanner input = new Scanner(System.in);
+        psuedoMain(input);
+        input.close();
     }
 }
 
@@ -1068,3 +1149,12 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 //for each file, get the map
 //have a vector existing outside of this that holds the map names
 //print names (and frequency)
+
+
+
+//Note: option to keep history/request or not?
+//what if it could make a separate file for the individual request, then link this file in the history file?
+//EX: "destination" component (console only VS file only VS both)
+//what if it has already calculated something before? (Redo or try to track, store?)
+//how do you edit a file's contents?
+//EX: record number of kills in a single game for matt112 --> over multiple games... 1, 3, 2, 6, 6, 7, 3, --> record should be 7, show only 7 (+ maybe match id)
