@@ -380,6 +380,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 //just get the matchID, too
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
     //COULD use printPlayersByTeam (excess printouts) OR do it independently
+    //could take in String[] names instead of String name? (In case of multiple names...?)
     //Returns ranking as a string
     public static String ranking(String name, File prettyFile) {
         JSONObject match_definition = returnObject(prettyFile, "LogMatchDefinition");
@@ -819,22 +820,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //could use team size (EX: only look at the ones that are actually "classic" battle royale games, not custom or deathmatch)
         //EX: desiredThing could be mapnames
     }
-    /*
-    public static void getInfo(String desiredThing)
-    {
-        Vector<String> mapsPlayed = new Vector<String>();
-    }
-     */
+
     public static void printMapNames() //don't need this parameter
     {
         //System.out.println("Printing Map Names: ");
         Collections.sort(mapsPlayed); //import java.util.Collections
-        //for(int i = 0; i < mapsPlayed.size(); i++)
-        //{
-        //    System.out.println(mapsPlayed.get(i));
-        //}
-        //System.out.println("\n\n\n");
-
 
         System.out.println("Frequencies of each map played: "); //added "played" 9/15
         int frequency = 1;
@@ -861,16 +851,15 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
     public static String getMapName(File prettyFile)
     {
-
         JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
         String mapName = match_start.get("mapName").toString();
         System.out.println("mapName: " + mapName);
-        //mapNames.add(mapName);
-        //mapsPlayed.add(mapName);
         return mapName;
-        //LogMatchStart
-        //mapName
     }
+    //mapNames.add(mapName);
+    //mapsPlayed.add(mapName);
+    //LogMatchStart
+    //mapName
 
     /*
     public static void printMapNameFrequencies(Vector<String> mapNames)
@@ -901,19 +890,19 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     public static File getFile(String fileName)
     {
         File file = new File(fileName);
-        if(!file.exists())
+        if(!file.exists()) //Need to make file
         {
-            System.out.println("Need to make file ");
+            //System.out.println("Need to make file ");
             try {
                 file.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        else
-        {
-            System.out.println("file already exists.");
-        }
+        //else
+        //{
+        //    System.out.println("file already exists.");
+        //}
         return file;
     }
     //For each file, there is a call to the corresponding request
@@ -1206,3 +1195,4 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 //how do you edit a file's contents?
 //could different request types go in different .cpp files entirely? (Likely more readable that way)
 //EX: record number of kills in a single game for matt112 --> over multiple games... 1, 3, 2, 6, 6, 7, 3, --> record should be 7, show only 7 (+ maybe match id)
+//could do file log with testcases passing/not passing records (Gradle...)
