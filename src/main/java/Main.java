@@ -111,7 +111,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
         //make a file to put the "pretty" text in, if needed
         //C:\Users\jmast\pubgFilesExtracted
-        File theDir = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles");
+        File theDir = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles"); //custom pathname?
         if (!theDir.exists()) {
             theDir.mkdirs();
         }
