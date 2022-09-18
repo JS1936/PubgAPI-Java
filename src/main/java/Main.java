@@ -11,6 +11,9 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
 
+//Make additional class for handling/executing the request?
+
+
 //Helpful sites:
 //https://stackoverflow.com/questions/2885173/how-do-i-create-a-file-and-write-to-it
 //https://stackoverflow.com/questions/4105795/pretty-print-json-in-java
@@ -149,6 +152,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     {
 
     }
+    //string array? (passed in)
+    //EX: individual-> 1
+    //EX: team-> usually 1-4
+    //EX: everyone --> empty (already printing the "everyone" data no matter what, just don't print it again at the end)
     public static void printKillCountsToHistory(Vector<String> counts) throws IOException
     {
         //time of request?
@@ -810,37 +817,10 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
     }
 
-    ////EVERYTHING BELOW THIS POINT IS A MESS CURRENTLY
-
-    //Hopefully: Only for battle royale* (max 4 people per team)
-    //Also, deathmatches probably don't have bots (would custom games?)
-    ////Trying to get data that goes beyond just a single game
-    public static void maps(File prettyFile, Vector<String> theMapsPlayed) //added "the"... (because mapsPlayed  static was getting messed up)
-    {
-        JSONObject jsonObject = returnObject(prettyFile, "LogMatchStart");
-        String mapName = jsonObject.getString("mapName");
-        int max_team_size = jsonObject.getInt("teamSize");
-        if(max_team_size <= 4)
-        {
-            //System.out.println("ATTEMPTING TO ADD " + mapName + " to mapsPlayed");
-            mapsPlayed.add(mapName);
-        }
-        else
-        {
-            System.out.println("NOT adding " + mapName + " because team size > 4");
-        }
-
-        //logmatchstart
-        //mapname
-        //could use team size (EX: only look at the ones that are actually "classic" battle royale games, not custom or deathmatch)
-        //EX: desiredThing could be mapnames
-    }
-
     //Prints the names of maps played and how many times they were played.
     //EX: "<mapName> x5" means <mapName> was played 5 times.
     public static void printMapNames() //don't need this parameter
     {
-        //System.out.println("Printing Map Names: ");
         Collections.sort(mapsPlayed); //import java.util.Collections
 
         System.out.println("Frequencies of each map played: "); //added "played" 9/15
@@ -874,35 +854,6 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //System.out.println("mapName: " + mapName);
         return mapName;
     }
-    //mapNames.add(mapName);
-    //mapsPlayed.add(mapName);
-    //LogMatchStart
-    //mapName
-
-    /*
-    public static void printMapNameFrequencies(Vector<String> mapNames)
-    {
-        Map<String, Integer> mapOfMaps = new HashMap<>();
-        //for each map, if not key yet, add key
-        //increment qty of appearance either way
-        for(String mapName : mapNames)
-        {
-            if(mapOfMaps.containsKey(mapName))
-            {
-                int frequency = mapOfMaps.get(mapName) + 1;
-                mapOfMaps.put(mapName, frequency); //should replace previous value (same key)
-            }
-            else
-            {
-                System.out.println(mapName + "is a NEW MAP!");
-                mapOfMaps.put(mapName, 1);
-            }
-        }
-        //for each key in mapOfMaps, print out value (a.k.a. frequency)
-        mapOfMaps.keySet();
-
-    }
-    */
 
     //ADDED 9/15/2022 for file creation in psuedomain for storing data (EX: request 4)
     //Returns a file called fileName.
@@ -995,19 +946,13 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             //printMapNameFrequencies(mapsPlayed); //no longer needed
         }
 
-        //BEING ABLE TO ENTER ANOTHER TASK DOES NOT WORK YET
-        //System.out.println("HERE HERE HERE HERE!");
         String response = "y";
         System.out.println("Any other requests? (y/n)");
         response = input.next();
 
         if(response.equalsIgnoreCase("Y"))
         {
-            //printFunctionalities();
-            //input.close(); //put here?
-            psuedoMain(input); //this causes a problem with having multiple scanners open...
-            //getRequest(input);
-            //response = input.next();
+            psuedoMain(input); //Caution: this causes a problem with having multiple scanners open...
         }
         //
         //input.close(); //put here?
@@ -1015,26 +960,6 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
         //Call the appropriate method(s) based on user input
     }
-    //10 maps:
-    //Desert
-    //Heaven
-    //Summerland
-    //Tiger
-    //Baltic
-    //Summerland
-    //Baltic
-    //Tiger
-    //Desert
-    //Baltic
-
-    //Frequencies:              CLAIMS
-    //Desert:       2           1
-    //Heaven:       1           0
-    //Summerland:   2           1
-    //Tiger:        2           doesn't even show up
-    //Baltic:       3           3
-    //-------------------
-    //             =10
 
 
     //What if there were a container of "things you could access" about any given game (or all games?)
@@ -1044,10 +969,14 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //what about for ONE specific file, or  for specific fileS?
     //factory-like abstraction thing here? (instead)
     //abstract this further?
+    //Is there a way to make this just thing.callRequestType() and it calls the right one?
+    //EX: class called countBotsAndPeople
+    //doing a method call but not (string from vector).call() --> actually call the method
     public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) //changed return from void -> boolean 5/17/2022
     {
         //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
         //EX: request.equalsIgnoreCase("0")
+        //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
         if(request == 0)
         {
             countBotsAndPeople(prettyFile); //seems to work
@@ -1088,15 +1017,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                 //mapNames.add(getMapName(prettyFile));
                // System.out.println("Attempting to add: " + name + " to mapsPlayed...");
                 mapsPlayed.add(name);
-                //System.out.println("---------------------------");
-                //System.out.println("mapsPlayed currently holds:");
-                //for(String map : mapsPlayed)
-                //{
-                //    System.out.println(map);
-                //}
-                //System.out.println("---------------------------");
             }
-
 
         }else
         {
@@ -1106,12 +1027,6 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         return (request < 7 && request > -1); //valid requests should have valid numbers
     }
 
-    //IN PROGRESSS
-    //public static void getMethods()
-    //{
-    //        Vector<String> methods = new Vector<String>();
-    //        methods.add("countBotsAndPeople");
-    //}
 
     public static void printOptionsToChooseFrom(Vector<String> options, String prompt)
     {
@@ -1123,20 +1038,6 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
     }
 
-    //IN PROGRESS //make this more efficient...
-    /*
-    public static Vector<String> printFunctionalities() { //changed from void to Vector<String>
-
-        Vector<String> outputVerify = new Vector<String>();
-        System.out.println("What would you like to know? Type the corresponding number and then press enter.\n");
-        for(int i = 0; i < functionalities.size(); i++)
-        {
-            System.out.println(i + ": " + functionalities.get(i));
-            outputVerify.add(i + ": " + functionalities.get(i));
-        }
-        return outputVerify;
-    }
-    */
 
     //IN PROGRESS
     public static void initiateFunctionalities()
@@ -1191,6 +1092,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //I want data about a particular player (EX: matt112).
     //I want data about a particular team (EX: team of matt112)
     //I want data about a particular match (everyone in that match).
+    ///WHAT ABOUT WANTING INFO ON MULTIPLE PEOPLE WHO ARE NOT ON THE SAME TEAM?
     ///int request = Integer.parseInt(input.next());
     //print the request scopes
     //could make prompt index 0? (or last, I suppose)
@@ -1203,51 +1105,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         return requestScope;
 
     }
-    /*
-    public static int getRequest(Scanner input) //more like validation?
-    {
-        //Scanner input = new Scanner(System.in);
-        int request = Integer.parseInt(input.next()); //careful...
-        System.out.println("request is: " + request);
-        //write to file (requestHistory) here? 9/15
 
-        boolean requestAccepted = false;
-        if(request >= 0 && request < functionalities.size())
-        {
-            requestAccepted = true;
-        }
-        if(!requestAccepted)
-        {
-            System.out.println("Sorry, '" + request + "' does not match any available functionalities.");
-            return -1; //invalid request
-        }
-        else
-        {
-            System.out.println("Request accepted!");
-
-            return request;
-            //Do it...
-        }
-    }
-     */
-
-    //printOptionsToChooseFrom(requestScopes);
-    //Player p = new Player("15511");
-    //System.out.println("Account ID: "+ p.getAccountID());
-
-    ///Map<Integer, String> m = new HashMap<>();
-    ///m.put(1, "hi");
-
-    //print options for what you can do
-    //ask them what they want to do
-    //do it (if possible), otherwise error message
-    //continue running? (y/n)
-
-    //A: "HMBAP" -- HowManyBotsAndPeople?
-    //B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
-    //"I want all the maps played and how often they were played"
-    ///File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
-    //what if history of requests?
 
     //"Do you want to store this information in its own file?" idea
     //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
@@ -1294,3 +1152,159 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
 
 //Only handles one request at a time, right?
+
+
+
+//"Removal buffer" (in case wanting it later):
+
+//mapNames.add(mapName);
+//mapsPlayed.add(mapName);
+//LogMatchStart
+//mapName
+
+//IN PROGRESS //make this more efficient...
+    /*
+    public static Vector<String> printFunctionalities() { //changed from void to Vector<String>
+
+        Vector<String> outputVerify = new Vector<String>();
+        System.out.println("What would you like to know? Type the corresponding number and then press enter.\n");
+        for(int i = 0; i < functionalities.size(); i++)
+        {
+            System.out.println(i + ": " + functionalities.get(i));
+            outputVerify.add(i + ": " + functionalities.get(i));
+        }
+        return outputVerify;
+    }
+    */
+
+  /*
+    public static int getRequest(Scanner input) //more like validation?
+    {
+        //Scanner input = new Scanner(System.in);
+        int request = Integer.parseInt(input.next()); //careful...
+        System.out.println("request is: " + request);
+        //write to file (requestHistory) here? 9/15
+
+        boolean requestAccepted = false;
+        if(request >= 0 && request < functionalities.size())
+        {
+            requestAccepted = true;
+        }
+        if(!requestAccepted)
+        {
+            System.out.println("Sorry, '" + request + "' does not match any available functionalities.");
+            return -1; //invalid request
+        }
+        else
+        {
+            System.out.println("Request accepted!");
+
+            return request;
+            //Do it...
+        }
+    }
+     */
+
+
+    /*
+    public static void printMapNameFrequencies(Vector<String> mapNames)
+    {
+        Map<String, Integer> mapOfMaps = new HashMap<>();
+        //for each map, if not key yet, add key
+        //increment qty of appearance either way
+        for(String mapName : mapNames)
+        {
+            if(mapOfMaps.containsKey(mapName))
+            {
+                int frequency = mapOfMaps.get(mapName) + 1;
+                mapOfMaps.put(mapName, frequency); //should replace previous value (same key)
+            }
+            else
+            {
+                System.out.println(mapName + "is a NEW MAP!");
+                mapOfMaps.put(mapName, 1);
+            }
+        }
+        //for each key in mapOfMaps, print out value (a.k.a. frequency)
+        mapOfMaps.keySet();
+
+    }
+    */
+
+
+//printOptionsToChooseFrom(requestScopes);
+//Player p = new Player("15511");
+//System.out.println("Account ID: "+ p.getAccountID());
+
+///Map<Integer, String> m = new HashMap<>();
+///m.put(1, "hi");
+
+//print options for what you can do
+//ask them what they want to do
+//do it (if possible), otherwise error message
+//continue running? (y/n)
+
+//A: "HMBAP" -- HowManyBotsAndPeople?
+//B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
+//"I want all the maps played and how often they were played"
+///File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
+//what if history of requests?
+
+
+//IN PROGRESSS
+//public static void getMethods()
+//{
+//        Vector<String> methods = new Vector<String>();
+//        methods.add("countBotsAndPeople");
+//}
+
+
+////EVERYTHING BELOW THIS POINT IS A MESS CURRENTLY
+
+//Hopefully: Only for battle royale* (max 4 people per team)
+//Also, deathmatches probably don't have bots (would custom games?)
+////Trying to get data that goes beyond just a single game
+    /*
+    public static void maps(File prettyFile, Vector<String> theMapsPlayed) //added "the"... (because mapsPlayed  static was getting messed up)
+    {
+        JSONObject jsonObject = returnObject(prettyFile, "LogMatchStart");
+        String mapName = jsonObject.getString("mapName");
+        int max_team_size = jsonObject.getInt("teamSize");
+        if(max_team_size <= 4)
+        {
+            //System.out.println("ATTEMPTING TO ADD " + mapName + " to mapsPlayed");
+            mapsPlayed.add(mapName);
+        }
+        else
+        {
+            System.out.println("NOT adding " + mapName + " because team size > 4");
+        }
+
+        //logmatchstart
+        //mapname
+        //could use team size (EX: only look at the ones that are actually "classic" battle royale games, not custom or deathmatch)
+        //EX: desiredThing could be mapnames
+    }
+    */
+
+//10 maps:
+//Desert
+//Heaven
+//Summerland
+//Tiger
+//Baltic
+//Summerland
+//Baltic
+//Tiger
+//Desert
+//Baltic
+
+//Frequencies:              CLAIMS
+//Desert:       2           1
+//Heaven:       1           0
+//Summerland:   2           1
+//Tiger:        2           doesn't even show up
+//Baltic:       3           3
+//-------------------
+//             =10
+

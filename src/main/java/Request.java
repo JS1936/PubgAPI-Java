@@ -32,6 +32,8 @@ import java.util.Date;
 
 //Want user to be able to put in a match id (or a directory that holds many match ids, for instance...?)
 //Customize the API call thing (to user's request details) EX: looking for Person X info vs Person Y
+//EX: Request r = new KillCounts?
+//going to need a name...?
 public class Request {
     String[] types = {"countBotsAndPeople", "calculateKillCounts", "printPlayersByTeam", "winnerWeapons", "ranking", "calculateKillCountsJSON", "mapsPlayed"};
     String[] scopes = {"individual", "team", "everyone"};

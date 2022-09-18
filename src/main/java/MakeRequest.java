@@ -1,10 +1,16 @@
 import java.util.Scanner;
 
+//what if it's like...
+//calculateKillCounts(Player)
+//calculateKillCounts(Team)
+//calculateKillCounts(Match)
+//diff object types...
 public class MakeRequest {
 
     //print
     //track
     //etc.?
+
     public static void main(String[] args)
     {
         System.out.println("Type the corresponding number and then press enter.");
