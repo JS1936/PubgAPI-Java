@@ -143,6 +143,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         Vector<Player> winners = new Vector<Player>();
         Vector<Integer> winnerKills = new Vector<Integer>();
      */
+    //add parameter for scope? (Request scope: individual, team, everyone/match)
+    //LOOK!
+    public static void printKillCountsToHistory(Vector<String> counts, Request r)
+    {
+
+    }
     public static void printKillCountsToHistory(Vector<String> counts) throws IOException
     {
         //time of request?
@@ -231,8 +237,11 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
     //Can print more details
     //maybe print these to a file, instead
+    //What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
     public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills)
     {
+        System.out.println("\n\n\nLOOK: printingKillCountsRequest SCOPE = " + requestCurrent.getScopes()[requestCurrent.getRequest_scope()]); //remove later
+
         for(int index = 0; index < namesByNumKills.size(); index++)
         {
             Vector<String> names = namesByNumKills.get(index);
@@ -283,9 +292,15 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
     //BIG, NOT TESTED MESS
     //NOTE: DOES NOT INCLUDE WINNERS
+    //EX: individual VS team VS everyone
+    //Default current is EVERYONE.
+    //For TEAM, need to know the names looking for.
+    //For INDIVIDUAL, need to know the singular name looking for.
+    //LOOK!!
     public static void calculateKillCountsJSON(File prettyFile)
     {
         //Vector<String> killCounts = new Vector<String>();
+
         Vector<JSONObject> kill_events = returnMultipleObjects(prettyFile, "LogPlayerKillV2"); //winners don't die, though...?
         Vector<Vector<String>> namesByNumKills = new Vector<Vector<String>>();
 
@@ -856,7 +871,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     {
         JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
         String mapName = match_start.get("mapName").toString();
-        System.out.println("mapName: " + mapName);
+        //System.out.println("mapName: " + mapName);
         return mapName;
     }
     //mapNames.add(mapName);
@@ -921,7 +936,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
         int request = getRequestType(input); //(requestType)
         int requestScope = getRequestScope(input);
-        Request r = new Request(request, requestScope);
+        //Request r = new Request(request, requestScope);
+        requestCurrent = new Request(request, requestScope);
         //int request = getRequest(input); //string or int? (Getting confused)
 
 
@@ -1027,6 +1043,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //switch stmt?
     //what about for ONE specific file, or  for specific fileS?
     //factory-like abstraction thing here? (instead)
+    //abstract this further?
     public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) //changed return from void -> boolean 5/17/2022
     {
         //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
@@ -1238,9 +1255,12 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     public static Vector<String> mapsPlayed = new Vector<String>();
     public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
     public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
+    //public static Request dummyRequest;// = new Request(0,0);
+    public static Request requestCurrent;// = new Request(0,0);
 
     public static void main(String[] args) //maybe put the "while" in here to having multiple requests actually works?
     {
+        //String[] types = dummyRequest.getTypes();
         Vector<String> winnersRecorded; //winners across different games
         mapsPlayed.clear(); //clear at the beginning
 
@@ -1271,3 +1291,6 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 //could different request types go in different .cpp files entirely? (Likely more readable that way)
 //EX: record number of kills in a single game for matt112 --> over multiple games... 1, 3, 2, 6, 6, 7, 3, --> record should be 7, show only 7 (+ maybe match id)
 //could do file log with testcases passing/not passing records (Gradle...)
+
+
+//Only handles one request at a time, right?
