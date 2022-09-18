@@ -7,11 +7,15 @@ public class Request {
     String[] scopes = {"individual", "team", "everyone"};
 
     private String requestID;
-    private String requestType; //changed from String to int (then back to String)
-    private String requestScope;
-    private File requestResults_File;
+    private int requestType; //changed from String to int (then back to String) ...back to int
+    private int requestScope;
+    private File requestResults_File = null; //for now
     private boolean requestUsesJSON;
 
+    public Request getRequest()
+    {
+        return this;
+    }
     //Default: individual scope, using JSON (if possible)?
 
     Request()
@@ -20,6 +24,10 @@ public class Request {
     }
     Request(int type, int scope)
     {
+        System.out.println("Creating a request of type: " + types[type] + ", scope: " + scopes[scope]);
+        requestID = "temporary requestID";
+        requestType = type;
+        requestScope = scope;
         //fix this
     }
     //For getting the date: https://stackabuse.com/how-to-get-current-date-and-time-in-java/
@@ -28,8 +36,8 @@ public class Request {
         System.out.println("Non-default request object");
         Date date = new Date(System.currentTimeMillis());
         SimpleDateFormat desiredFormat = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
-        requestScope = scopes[scope];
-        requestType = types[type];
+        //requestScope = scopes[scope];
+        //requestType = types[type];
         requestUsesJSON = useJSON;
         requestID = desiredFormat.format(date) + "_" + requestScope + "_" + requestType + "_" + "usesJSON";
         if(!requestUsesJSON)

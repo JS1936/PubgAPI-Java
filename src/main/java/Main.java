@@ -821,6 +821,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         //EX: desiredThing could be mapnames
     }
 
+    //Prints the names of maps played and how many times they were played.
+    //EX: "<mapName> x5" means <mapName> was played 5 times.
     public static void printMapNames() //don't need this parameter
     {
         //System.out.println("Printing Map Names: ");
@@ -835,8 +837,8 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                 System.out.println(mapsPlayed.get(i) + " x" + frequency);
                 return;
             }
-            for (int j = i + 1; j < mapsPlayed.size(); j++) {
-
+            for (int j = i + 1; j < mapsPlayed.size(); j++)
+            {
                 if (mapsPlayed.get(i).equalsIgnoreCase(mapsPlayed.get(j))) {
                     //System.out.println("val at index " + i + " = j");
                     frequency++;
@@ -849,6 +851,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
     }
 
+    //Given a prettified file holding data on a pubg match, returns the name of the map played on in the match.
     public static String getMapName(File prettyFile)
     {
         JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
@@ -887,22 +890,18 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     */
 
     //ADDED 9/15/2022 for file creation in psuedomain for storing data (EX: request 4)
+    //Returns a file called fileName.
+    //If this file does not yet exist, attempts to create a new file called fileName and return it.
     public static File getFile(String fileName)
     {
         File file = new File(fileName);
-        if(!file.exists()) //Need to make file
-        {
-            //System.out.println("Need to make file ");
+        if(!file.exists()) {
             try {
                 file.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        //else
-        //{
-        //    System.out.println("file already exists.");
-        //}
         return file;
     }
     //For each file, there is a call to the corresponding request
@@ -915,16 +914,21 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         ///currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
         //File requestedResults = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
         //FileUtils.writeStringToFile(currentFile, "\n-" + name, (Charset) null, true);
-
-        printFunctionalities();
         mapsPlayed.clear(); //avoid duplicates...
+        //printFunctionalities();
         input = new Scanner(System.in);
-        int request = getRequest(input); //string or int? (Getting confused)
+        //printOptionsToChooseFrom(functionalities, "What would you like to know?");
+
+        int request = getRequestType(input); //(requestType)
+        int requestScope = getRequestScope(input);
+        Request r = new Request(request, requestScope);
+        //int request = getRequest(input); //string or int? (Getting confused)
+
 
         //Added the try/catch writeStringToFile for requestHistory 9/15
         try {
             //could even have a log-in system where differentiating user histories
-            FileUtils.writeStringToFile(requestHistory, request + "_", (Charset) null, true); //changed requestedResults to currentFile
+            FileUtils.writeStringToFile(requestHistory, "request=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -1092,7 +1096,18 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //        methods.add("countBotsAndPeople");
     //}
 
+    public static void printOptionsToChooseFrom(Vector<String> options, String prompt)
+    {
+        System.out.print(prompt);
+        System.out.println(" Type the corresponding number and then press enter.\n");
+        for(int i = 0; i < options.size(); i++)
+        {
+            System.out.println(i + ": " + options.get(i));
+        }
+    }
+
     //IN PROGRESS //make this more efficient...
+    /*
     public static Vector<String> printFunctionalities() { //changed from void to Vector<String>
 
         Vector<String> outputVerify = new Vector<String>();
@@ -1104,6 +1119,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         }
         return outputVerify;
     }
+    */
 
     //IN PROGRESS
     public static void initiateFunctionalities()
@@ -1117,7 +1133,61 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
         functionalities.add("printMapsPlayed");
     }
 
-    public static int getRequest(Scanner input)
+    public static void initiateRequestScopes()
+    {
+        requestScopes.add("individual (EX: matt112)");
+        requestScopes.add("team       (EX: team of matt112)");
+        requestScopes.add("match      (all individuals in that match)");
+    }
+
+    //If requests are objects, then this is easier...?
+    //abstract these better...!
+    //write to file (requestHistory) here? 9/15
+    public static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
+    {
+        int request = -1; //not yet a valid request
+        boolean requestAccepted = false;
+
+        while(!requestAccepted)
+        {
+            request = Integer.parseInt(input.next()); //careful...
+            System.out.println("request is: " + request);
+            if(request >= 0 && request < optionsToChooseFrom.size())
+            {
+                requestAccepted = true; //technically not needed, but helps with clarity
+                System.out.println("Request accepted!");
+                return request;
+            }
+            System.out.println("Sorry, '" + request + "' does not match any available options. Try again.");
+        }
+        return request;
+    }
+
+    public static int getRequestType(Scanner input)
+    {
+        String prompt_requestType = "What would you like to know?";
+        printOptionsToChooseFrom(functionalities, prompt_requestType);
+        int requestType = getInput(input, functionalities);
+        return requestType;
+    }
+
+    //I want data about a particular player (EX: matt112).
+    //I want data about a particular team (EX: team of matt112)
+    //I want data about a particular match (everyone in that match).
+    ///int request = Integer.parseInt(input.next());
+    //print the request scopes
+    //could make prompt index 0? (or last, I suppose)
+    public static int getRequestScope(Scanner input)
+    {
+        String prompt_requestScope = "WHO are we learning about?";
+        printOptionsToChooseFrom(requestScopes, prompt_requestScope);
+        int requestScope = getInput(input, requestScopes);
+        //String[] requestScopeOptions = {"individual (EX: matt112)", "team (EX: team of matt112)", "match (everyone in that match)"};
+        return requestScope;
+
+    }
+    /*
+    public static int getRequest(Scanner input) //more like validation?
     {
         //Scanner input = new Scanner(System.in);
         int request = Integer.parseInt(input.next()); //careful...
@@ -1142,38 +1212,43 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
             //Do it...
         }
     }
+     */
 
+    //printOptionsToChooseFrom(requestScopes);
+    //Player p = new Player("15511");
+    //System.out.println("Account ID: "+ p.getAccountID());
+
+    ///Map<Integer, String> m = new HashMap<>();
+    ///m.put(1, "hi");
+
+    //print options for what you can do
+    //ask them what they want to do
+    //do it (if possible), otherwise error message
+    //continue running? (y/n)
+
+    //A: "HMBAP" -- HowManyBotsAndPeople?
+    //B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
+    //"I want all the maps played and how often they were played"
+    ///File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
+    //what if history of requests?
+
+    //"Do you want to store this information in its own file?" idea
+    //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
     //IN PROGRESS
     public static Vector<String> mapsPlayed = new Vector<String>();
     public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
+    public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
+
     public static void main(String[] args) //maybe put the "while" in here to having multiple requests actually works?
     {
-        initiateFunctionalities();
         Vector<String> winnersRecorded; //winners across different games
         mapsPlayed.clear(); //clear at the beginning
-        //Player p = new Player("15511");
-        //System.out.println("Account ID: "+ p.getAccountID());
 
-        ///Map<Integer, String> m = new HashMap<>();
-        ///m.put(1, "hi");
-
-        //print options for what you can do
-        //ask them what they want to do
-        //do it (if possible), otherwise error message
-        //continue running? (y/n)
-
-        //A: "HMBAP" -- HowManyBotsAndPeople?
-        //B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
-        //"I want all the maps played and how often they were played"
-        ///File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
-        //what if history of requests?
-
-        //"Do you want to store this information in its own file?" idea
-        //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
+        initiateFunctionalities();
+        initiateRequestScopes(); //added 9/17
 
         requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
         currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
-
 
         Scanner input = new Scanner(System.in);
         psuedoMain(input);

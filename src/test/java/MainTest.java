@@ -38,6 +38,7 @@ class MainTest {
         Scanner scan = new Scanner(attempted_pretty);
         Scanner scan2 = new Scanner(known_pretty);
         int count = 0;
+
         while(scan2.hasNext() && count < 3000) //if the pattern is followed this far, it's hopefully followed (well enough) through the whole file
         { //weird rounding error? (largely inconsequential, it seems --> 3908)
             String attempt = scan.next();
@@ -114,11 +115,11 @@ class MainTest {
 
 
     @Test
-    //Checks whether getInfo treats valid and invalid requests properly.
+    //Checks whether getInfo treats valid and invalid requests properly by checking integers of [-1,8].
+    //Valid: request is from [0,7]
+    //Invalid: all other values (EX: -1, 7, 8)
     void getInfo() {
         File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.FourSpaces.pretty_of_telemetryFile2.json.txt");
-        //Valid: request is from [0,7]
-        //Invalid: all other values (EX: -1, 7, 8)
         for(int request = -1; request <= 8; request++)
         {
             boolean properRetrieval = Main.getInfo(request, known_pretty, "");
@@ -160,6 +161,8 @@ class MainTest {
     }
 
     @Test
+    //Does it return the right kind of object?
+    //Does it return the expected content?
     void getRequest() {
     }
 
