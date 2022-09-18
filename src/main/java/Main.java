@@ -52,7 +52,7 @@ import java.util.*;
 //              -printKillCounts
 
 //Thinking...
-
+//countBotsAndPeople --> and JSON version?
 //Files (feed in the files?)
 
 //Individual
@@ -403,6 +403,14 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
     //COULD use printPlayersByTeam (excess printouts) OR do it independently
     //could take in String[] names instead of String name? (In case of multiple names...?)
+    //public static void ranking(String[] team, File prettyFile)
+    //{
+    //    for(String name : team)
+    //    {
+    //        ranking(name, prettyFile);
+    //    }
+    //}
+
     //Returns ranking as a string
     public static String ranking(String name, File prettyFile) {
         JSONObject match_definition = returnObject(prettyFile, "LogMatchDefinition");
@@ -416,10 +424,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         JSONArray players = match_end.getJSONArray("characters");
         for (int i = 0; i < players.length(); i++) {
             JSONObject player = players.getJSONObject(i);
-            System.out.println("Attempting to print match_end content (1line): " + player);
+            //System.out.println("Attempting to print match_end content (1line): " + player);
             JSONObject player_details = player.getJSONObject("character");
             String player_name = player_details.get("name").toString();
-            System.out.println("\t" + player_name);
+            //System.out.println("\t" + player_name);
             if (player_name.equalsIgnoreCase(name)) {
                 String player_ranking = player_details.get("ranking").toString();
                 System.out.println(name + "rank in this game: " + player_details.get("ranking").toString());
@@ -428,11 +436,16 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
                 //probably want the matchID, too
                 //can it be made to automatically open the file, too?
                 try {
-                    FileUtils.writeStringToFile(currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //changed requestedResults to currentFile //added 9/15
+                    //System.out.println("Inside try");
+                    //LOOK HERE-> fix
+                    FileUtils.writeStringToFile(currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //
+                    FileUtils.writeStringToFile(requestHistory, "\n-player:" + player_name + ", rank: " + player_ranking + ", match: " + match_id, (Charset) null, true); //changed requestedResults to currentFile //added 9/15
+                    //Note: match_id says whether fpp, tdm, etc.
+                    //Note #2: make writeStringToFile result look cleaner
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
+                //System.out.println("After try");
                 return player_details.get("ranking").toString();
             }
         }
@@ -623,20 +636,6 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         return null; //What if _T type is not found?
     }
 
-
-    /* ////////////////???
-    C:\Users\jmast\pubgFilesExtracted\telemetryFile6.json
-NEW FILE_______________________________________________
-NEW FILE_______________________________________________
-LogMatchStart
-Maximum team capacity: 4
-NEW FILE_______________________________________________
-LogMatchEnd
-val of team_id_index: 100000 for account.09126421272d4bbfac0dda6625d953b5
-val of insert: 400000
-peopleByTeam so far:
-Can't add to index: 400000because peopleByTeam.size() is 2000
-     */
     //NOTE: For deathmatches, does not account for people leaving and entering midgame... (issue here?)
     //team id: <100 means real people
     //         20_ (like 201) means bots
@@ -756,6 +755,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
      * IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
      * NOTE: does not count guards as bots.
      */
+    //Individual, team, and match scope --> results all look the same for countBotsAndPeople. (Right?) -> At least, for now.
     public static void countBotsAndPeople(File prettyFile) { //make private?
         //System.out.println("HELLO! HERE! HELLO! IN COUNTBOTSANDPEOPLE");
         try {
@@ -809,10 +809,18 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
                 }
 
             }
-            System.out.println("#bots:       " + botNames.size() + " / " + playerNames.size());
+            String text = "#bots:       " + botNames.size() + " / " + playerNames.size() + "\n";
+            //System.out.println("#bots:       " + botNames.size() + " / " + playerNames.size());
+            System.out.print(text);
+            FileUtils.writeStringToFile(requestHistory, text, (Charset) null, true); //added 9/17 //To-do: add match_id to this?
+            //Note: If you then read from the requestHistory file, would you be able to calculate things based off of what was just now stored in there?
+
 
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred: file not found.");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("An error occurred: unable to write string to file");
             e.printStackTrace();
         }
     }
@@ -874,7 +882,7 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
     //VERY IN PROGRESS
     public static void psuedoMain(Scanner input) //removed "String desiredThing"
     {
-        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
+        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
         //what if history of requests?
         ///requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
         ///currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
@@ -1155,6 +1163,11 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 
 
 
+
+
+
+
+
 //"Removal buffer" (in case wanting it later):
 
 //mapNames.add(mapName);
@@ -1308,3 +1321,18 @@ Can't add to index: 400000because peopleByTeam.size() is 2000
 //-------------------
 //             =10
 
+
+
+    /* ////////////////???
+    C:\Users\jmast\pubgFilesExtracted\telemetryFile6.json
+NEW FILE_______________________________________________
+NEW FILE_______________________________________________
+LogMatchStart
+Maximum team capacity: 4
+NEW FILE_______________________________________________
+LogMatchEnd
+val of team_id_index: 100000 for account.09126421272d4bbfac0dda6625d953b5
+val of insert: 400000
+peopleByTeam so far:
+Can't add to index: 400000because peopleByTeam.size() is 2000
+     */
