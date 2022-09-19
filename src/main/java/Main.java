@@ -98,9 +98,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
     static File currentFile = null; //added 9/15
     static File requestHistory = null;
+
     /*
      * Takes the contents of an "ugly" file and makes a new file
-     * where that content is stored in a way that looks "pretty".
+     * where that content is stored in a way that looks "pretty" (formatted).
      */
     //NOTE: if this returned the prettyFile, calls like winnerWeapons could be made from main
     public static File makePretty(File fileName) throws IOException {
@@ -148,21 +149,20 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
      */
     //add parameter for scope? (Request scope: individual, team, everyone/match)
     //LOOK!
-    public static void printKillCountsToHistory(Vector<String> counts, Request r)
-    {
+    public static void printKillCountsToHistory(Vector<String> counts, Request r) {
 
     }
+
     //string array? (passed in)
     //EX: individual-> 1
     //EX: team-> usually 1-4
     //EX: everyone --> empty (already printing the "everyone" data no matter what, just don't print it again at the end)
-    public static void printKillCountsToHistory(Vector<String> counts) throws IOException
-    {
+    public static void printKillCountsToHistory(Vector<String> counts) throws IOException {
         //time of request?
         //FileUtils.writeStringToFile();
         String context = "Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.";
         //try {
-            FileUtils.writeStringToFile(requestHistory, "\n" + context, (Charset) null, true); //added 9/15
+        FileUtils.writeStringToFile(requestHistory, "\n" + context, (Charset) null, true); //added 9/15
         //} catch (IOException e) {
         //    e.printStackTrace();
         //}
@@ -185,7 +185,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             }
             frequencies[numKills]++;
             System.out.print(counts.get(i) + " ");
-            FileUtils.writeStringToFile(requestHistory, counts.get(i) +" ", (Charset) null, true); //added 9/15
+            FileUtils.writeStringToFile(requestHistory, counts.get(i) + " ", (Charset) null, true); //added 9/15
         }
 
         //Print out how many people got X number of kills
@@ -245,15 +245,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     //Can print more details
     //maybe print these to a file, instead
     //What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
-    public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills)
-    {
+    public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills) {
         System.out.println("\n\n\nLOOK: printingKillCountsRequest SCOPE = " + requestCurrent.getScopes()[requestCurrent.getRequest_scope()]); //remove later
 
-        for(int index = 0; index < namesByNumKills.size(); index++)
-        {
+        for (int index = 0; index < namesByNumKills.size(); index++) {
             Vector<String> names = namesByNumKills.get(index);
-            if(!names.isEmpty())
-            {
+            if (!names.isEmpty()) {
                 System.out.println(index + " KILLS: ");
                 //FileUtils.writeStringToFile();
                 try {
@@ -261,8 +258,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                for(int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++)
-                {
+                for (int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++) {
                     System.out.println("\t" + names.get(indexOfNames));
                     try {
                         FileUtils.writeStringToFile(requestHistory, "\n\t" + names.get(indexOfNames), (Charset) null, true); //added 9/15
@@ -291,11 +287,11 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
     //"LogPlayerKillV2"
     //victimGameResult
-        //rank
-        //stats
-             //killCount
+    //rank
+    //stats
+    //killCount
     //victim
-        //name
+    //name
 
     //BIG, NOT TESTED MESS
     //NOTE: DOES NOT INCLUDE WINNERS
@@ -304,8 +300,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     //For TEAM, need to know the names looking for.
     //For INDIVIDUAL, need to know the singular name looking for.
     //LOOK!!
-    public static void calculateKillCountsJSON(File prettyFile)
-    {
+    public static void calculateKillCountsJSON(File prettyFile) {
         //Vector<String> killCounts = new Vector<String>();
 
         Vector<JSONObject> kill_events = returnMultipleObjects(prettyFile, "LogPlayerKillV2"); //winners don't die, though...?
@@ -314,21 +309,19 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         int maxKills = 0;
 
         //Assumes no one will get more than 30 kills (make more efficient later... -> maxKills)
-        for(int i = 0; i < 30; i++)
-        {
+        for (int i = 0; i < 30; i++) {
             Vector<String> names = new Vector<String>();
             namesByNumKills.add(names);
         }
         //characters
-            //gameresultonfinished
-                //results
-                    //stats
-                        //killcount
+        //gameresultonfinished
+        //results
+        //stats
+        //killcount
 
         //NON-WINNERS
         System.out.println("NOTE: this does not yet include the winners...");
-        for(JSONObject kill_event : kill_events)
-        {
+        for (JSONObject kill_event : kill_events) {
             //System.out.println("HELLO! Looking at a kill event");
             JSONObject victimGameResult = kill_event.getJSONObject("victimGameResult");
             int rank = Integer.parseInt(victimGameResult.get("rank").toString());
@@ -354,7 +347,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         JSONArray results = game_result_on_finished.getJSONArray("results");
         System.out.println("Kills by Winners:");
         int killedByAnyWinner = 0;
-        for(int i = 0; i < results.length(); i++) {
+        for (int i = 0; i < results.length(); i++) {
             //JSONObject winner = winners.getJSONObject(i);
             //System.out.println("winner.toString() : " + winner.toString());
             JSONObject player_result = results.getJSONObject(i);
@@ -377,17 +370,14 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     //Vector<Integer> killsByTeam = new Vector<Integer>();
     //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
     //IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
-    public static void calculateKillCounts(File prettyFile)
-    {
+    public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
         try {
             Scanner scan = new Scanner(prettyFile);
-            while(scan.hasNextLine())
-            {
+            while (scan.hasNextLine()) {
                 String data = scan.nextLine();
-                if(data.contains("killCount"))
-                {
-                    String killNum = data.substring(data.length() -2, data.length() -1);
+                if (data.contains("killCount")) {
+                    String killNum = data.substring(data.length() - 2, data.length() - 1);
                     killCounts.add(killNum);
                 }
             }
@@ -399,6 +389,57 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             e.printStackTrace();
         }
     }
+
+    /////////Added 9/18
+    public static String getMatchID(File prettyFile)
+    {
+        JSONObject match_definition = returnObject(prettyFile, "LogMatchDefinition");
+        String match_id = match_definition.get("MatchId").toString();
+        System.out.println("match_id = " + match_id);
+        return match_id;
+    }
+    public static String getPlayerPerspective(String match_id)
+    {
+        if(match_id.contains("fpp"))
+        {
+            return "fpp";
+        }
+        return "tpp";
+    }
+    public static String getMatchType(String match_id)
+    {
+        if(match_id.contains("arcade"))
+        {
+            return "arcade";
+        }
+        return "official";
+    }
+    public static String getTeamSizeForOfficialMatch(String match_id)
+    {
+        if(match_id.contains("duo"))
+        {
+            return "duo";
+        }
+        else if(match_id.contains("solo"))
+        {
+            return "solo";
+        }
+        else
+        {
+            return "squad"; //is this accurate?
+        }
+    }
+    public static void printMatchInfo(File prettyFile)
+    {
+        String match_id = getMatchID(prettyFile);
+        String player_perspective = getPlayerPerspective(match_id);
+        String match_type = getMatchType(match_id);
+        String teamSizeForOfficialMatch = getTeamSizeForOfficialMatch(match_id); //what about for arcade?
+        String match_info_summary = match_type +"-" + teamSizeForOfficialMatch + "-" + player_perspective;
+        System.out.println(match_info_summary); //still need to "history" this
+    }
+    /////Added 9/18^
+
 //just get the matchID, too
     //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
     //COULD use printPlayersByTeam (excess printouts) OR do it independently
@@ -732,7 +773,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             if (in % team_capacity == 0 && peopleByTeam.get(in) != null) {
                 System.out.println("-----"); //For display clarity. Separates teams.
             }
-            if (peopleByTeam.get(in) != null) {
+            if (peopleByTeam.get(in) != null) { //change the order? (EX: teamId, name, ranking) //add type of match? (EX: fpp duo)
                 System.out.print(peopleByTeam.get(in).get("name").toString());
                 System.out.print(" " + peopleByTeam.get(in).get("teamId").toString());
                 System.out.println(" " + peopleByTeam.get(in).get("ranking").toString());
@@ -809,10 +850,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
                 }
 
             }
-            String text = "#bots:       " + botNames.size() + " / " + playerNames.size() + "\n";
+            String text = "#bots:       " + botNames.size() + " / " + playerNames.size();
             //System.out.println("#bots:       " + botNames.size() + " / " + playerNames.size());
-            System.out.print(text);
-            FileUtils.writeStringToFile(requestHistory, text, (Charset) null, true); //added 9/17 //To-do: add match_id to this?
+            System.out.println(text);
+            FileUtils.writeStringToFile(requestHistory, "\n" + text, (Charset) null, true); //added 9/17 //To-do: add match_id to this?
             //Note: If you then read from the requestHistory file, would you be able to calculate things based off of what was just now stored in there?
 
 
@@ -903,7 +944,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         //Added the try/catch writeStringToFile for requestHistory 9/15
         try {
             //could even have a log-in system where differentiating user histories
-            FileUtils.writeStringToFile(requestHistory, "request=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
+            FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -927,6 +968,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             //if(fileName.getName() != "prettyFiles")
             //{
             System.out.println(fileName);
+            //try { //Added 9/18
+            //    FileUtils.writeStringToFile(requestHistory, fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile
+            //} catch (IOException e) {
+            //    e.printStackTrace();
+            //}
+
 
             try {
                 //makePretty(fileName); //error here
@@ -938,7 +985,9 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
                 {
                     File pretty = makePretty(fileName);
                     getInfo(request, pretty, name);
+                    printMatchInfo(pretty); //added 9/18
                     filesSoFar++;
+                    FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
                     //FileUtils.writeStringToFile(currentFile, name, (Charset) null, true); //changed requestedResults to currentFile
                 //writeStringToFile(requestedResults, name); //added 9/15
                 }
