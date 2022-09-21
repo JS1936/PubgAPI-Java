@@ -37,7 +37,7 @@ import java.util.Date;
 import java.util.*;
 public class Request {
     //change to vectors?
-    //Vector<String> types = {"countBotsAndPeople};
+    //Vector<String> typesOfRequests = new Vector<String>();//{"countBotsAndPeople};
     String[] types = {"countBotsAndPeople", "calculateKillCounts", "printPlayersByTeam", "winnerWeapons", "ranking", "calculateKillCountsJSON", "mapsPlayed"};
     String[] scopes = {"individual", "team", "everyone"};
 
@@ -55,6 +55,10 @@ public class Request {
     {
         return this.types;
     }
+    //public Vector<String> getTypesOfRequests()
+    //{
+    //    return this.typesOfRequests;
+    //}
     public String[] getScopes()
     {
         return this.scopes;
@@ -80,8 +84,23 @@ public class Request {
         requestID = "temporary requestID";
         requestType = type;
         requestScope = scope;
+        //typesOfRequests;
         //fix this
     }
+
+    /*
+    public static void initiatePossibleTypesOfRequests()
+    {
+        typesOfRequests.add("countBotsAndPeople");
+        typesOfRequests.add("calculateKillCounts");
+        typesOfRequests.add("printPlayersByTeam");
+        typesOfRequests.add("winnerWeapons");
+        functionalities.add("ranking (of a specific person)");
+        functionalities.add("calculateKillCountsJSON");
+        functionalities.add("printMapsPlayed");
+    }
+
+     */
     //For getting the date: https://stackabuse.com/how-to-get-current-date-and-time-in-java/
     Request(int type, int scope, boolean useJSON)
     {

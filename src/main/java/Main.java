@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+//Something is wrong with 6: maps played....
 
 import java.io.*;
 import java.nio.charset.Charset;
@@ -19,17 +20,17 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     static File currentFile = null; //added 9/15
     static File requestHistory = null;
 
+    public static Request requestCurrent;// = new Request(0,0);
     public static Vector<String> mapsPlayed = new Vector<String>();
+    //public static Vector<String> functionalities = requestCurrent.getTypesOfRequests();
     public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
     //public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
 
-    public static Request requestCurrent;// = new Request(0,0);
+
 
     public static void main(String[] args)
     {
-
         mapsPlayed.clear(); //clear at the beginning
-
         initiateFunctionalities();
         //initiateRequestScopes(); //added 9/17
 
@@ -105,6 +106,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         {
             System.out.println("REQUEST = 6");
             System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
+            //mapsPlayed.add(MapManager.getMapName(fileName));
             MapManager.printMapNames();
         }
 
@@ -158,6 +160,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             //    System.out.println("FILE IS NULL");
             //6}
             String name = MatchManager.getMapName(prettyFile);
+            mapsPlayed.add(name);
             System.out.println("map name: " + name);
             //if(name != null) //Tried to fix EOF exception with this but it didn't work (which makes sense, I guess)
             //{

@@ -17,7 +17,6 @@ public class BotCounts {
      */
     //Individual, team, and match scope --> results all look the same for countBotsAndPeople. (Right?) -> At least, for now.
     public static void countBotsAndPeople(File prettyFile) { //make private?
-        //System.out.println("HELLO! HERE! HELLO! IN COUNTBOTSANDPEOPLE");
         try {
             Scanner scan = new Scanner(prettyFile);
             Vector<String> playerNames = new Vector<String>(); //account.
