@@ -104,6 +104,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
      * where that content is stored in a way that looks "pretty" (formatted).
      */
     //NOTE: if this returned the prettyFile, calls like winnerWeapons could be made from main
+
     public static File makePretty(File fileName) throws IOException {
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
@@ -125,11 +126,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
 
-        //KEEP THESE:
-        //countBotsAndPeople(prettyFile);
-        //calculateKillCounts(prettyFile); //seems "done"
-        //printPlayersByTeam(prettyFile); //in progress
-        //winnerWeapons(prettyFile);
+
         return prettyFile; //added recently (4/27/2022)
     }
 
@@ -921,8 +918,14 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     }
     //For each file, there is a call to the corresponding request
     //VERY IN PROGRESS
+    public static final FileManager fileManager = new FileManager();
     public static void psuedoMain(Scanner input) //removed "String desiredThing"
     {
+        //File f = new File("hello");
+        //fileManager.makePretty(f);
+
+
+
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
         //what if history of requests?
         ///requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
