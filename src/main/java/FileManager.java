@@ -7,6 +7,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.Charset;
 
 public class FileManager {
     //constructor? //singleton?
@@ -65,5 +66,10 @@ public class FileManager {
             }
         }
         return file;
+    }
+
+    public static void writeToFileAndConsole(String text) throws IOException {
+        System.out.println(text);
+        FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true); //added 9/15
     }
 }

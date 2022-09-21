@@ -12,9 +12,10 @@ public class KillCounts extends Request {
     public static void printKillCountsToHistory(Vector<String> counts) throws IOException {
         //time of request?
         //FileUtils.writeStringToFile();
-        String context = "Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.";
+       //String context = "Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.";
         //try {
-        FileUtils.writeStringToFile(Main.requestHistory, "\n" + context, (Charset) null, true); //added 9/15
+        //FileUtils.writeStringToFile(Main.requestHistory, "\n" + context, (Charset) null, true); //added 9/15
+        FileManager.writeToFileAndConsole("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");
         //} catch (IOException e) {
         //    e.printStackTrace();
         //}
@@ -36,24 +37,30 @@ public class KillCounts extends Request {
                 killsByTopTen += numKills;
             }
             frequencies[numKills]++;
-            System.out.print(counts.get(i) + " ");
-            FileUtils.writeStringToFile(Main.requestHistory, counts.get(i) + " ", (Charset) null, true); //added 9/15
+            FileManager.writeToFileAndConsole(counts.get(i) + " ");
+            //System.out.print(counts.get(i) + " ");
+            //FileUtils.writeStringToFile(Main.requestHistory, counts.get(i) + " ", (Charset) null, true); //added 9/15
         }
 
         //Print out how many people got X number of kills
-        System.out.println("\nKill Frequencies:");
-        FileUtils.writeStringToFile(Main.requestHistory, "\nKill Frequencies:", (Charset) null, true); //added 9/15
+        FileManager.writeToFileAndConsole("\nKill Frequencies:");
+        //System.out.println("\nKill Frequencies:");
+        //FileUtils.writeStringToFile(Main.requestHistory, "\nKill Frequencies:", (Charset) null, true); //added 9/15
 
         for (int index = 0; index <= maxKills; index++) {
-            System.out.println(frequencies[index] + " got " + index + " kills.");
-            FileUtils.writeStringToFile(Main.requestHistory, "\n" + frequencies[index] + " got " + index + " kills.", (Charset) null, true); //added 9/15
+            FileManager.writeToFileAndConsole(frequencies[index] + " got " + index + " kills.");
+            //System.out.println(frequencies[index] + " got " + index + " kills.");
+            //FileUtils.writeStringToFile(Main.requestHistory, "\n" + frequencies[index] + " got " + index + " kills.", (Charset) null, true); //added 9/15
         }
-        System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
-        System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
-        System.out.println("--------------------------------------------------------------------------");
-        FileUtils.writeStringToFile(Main.requestHistory, "\nMAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")", (Charset) null, true); //added 9/15
-        FileUtils.writeStringToFile(Main.requestHistory, "\n#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size(), (Charset) null, true); //added 9/15
-        FileUtils.writeStringToFile(Main.requestHistory, "\n--------------------------------------------------------------------------", (Charset) null, true); //added 9/15
+        ///System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
+        ///System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
+        ///System.out.println("--------------------------------------------------------------------------");
+        ///FileUtils.writeStringToFile(Main.requestHistory, "\nMAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")", (Charset) null, true); //added 9/15
+       /// FileUtils.writeStringToFile(Main.requestHistory, "\n#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size(), (Charset) null, true); //added 9/15
+        ///FileUtils.writeStringToFile(Main.requestHistory, "\n--------------------------------------------------------------------------", (Charset) null, true); //added 9/15
+        FileManager.writeToFileAndConsole("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
+        FileManager.writeToFileAndConsole("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
+        FileManager.writeToFileAndConsole("--------------------------------------------------------------------------");
     }
     //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
     public static void printKillCounts(Vector<String> counts) {
