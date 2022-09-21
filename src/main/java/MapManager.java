@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Collections;
 
 public class MapManager {
+
     //Prints the names of maps played and how many times they were played.
     //EX: "<mapName> x5" means <mapName> was played 5 times.
     public static void printMapNames() //don't need this parameter

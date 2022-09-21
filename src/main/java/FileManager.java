@@ -11,6 +11,10 @@ import java.io.IOException;
 public class FileManager {
     //constructor? //singleton?
 
+    /*
+     * Takes the contents of an "ugly" file and makes a new file
+     * where that content is stored in a way that looks "pretty" (formatted).
+     */
     public static File makePretty(File fileName) throws IOException {
 
         //read in file as string

@@ -23,7 +23,7 @@ class MainTest {
         //make/get the files
         File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.FourSpaces.pretty_of_telemetryFile2.json.txt");
         File uglyOriginal = new File("C:\\Users\\jmast\\pubgFilesExtracted\\telemetryFile2.json"); //original)
-        File attempted_pretty = Main.makePretty(uglyOriginal);
+        File attempted_pretty = FileManager.makePretty(uglyOriginal);
 
         //verify the files exist
         if (!known_pretty.exists() || !uglyOriginal.exists() || !attempted_pretty.exists()) {
