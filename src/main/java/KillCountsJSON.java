@@ -12,37 +12,40 @@ public class KillCountsJSON {
     //Can print more details
     //maybe print these to a file, instead
     //What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
-    public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills) {
+    public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills) throws IOException {
         System.out.println("\n\n\nLOOK: printingKillCountsRequest SCOPE = " + Main.requestCurrent.getScopes()[Main.requestCurrent.getRequest_scope()]); //remove later
 
         for (int index = 0; index < namesByNumKills.size(); index++) {
             Vector<String> names = namesByNumKills.get(index);
             if (!names.isEmpty()) {
-                System.out.println(index + " KILLS: ");
+                //System.out.println(index + " KILLS: ");
                 //FileUtils.writeStringToFile();
-                try {
-                    FileUtils.writeStringToFile(Main.requestHistory, "\n" + index + " KILLS: ", (Charset) null, true); //added 9/15
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                //try {
+                    FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
+                    //FileUtils.writeStringToFile(Main.requestHistory, "\n" + index + " KILLS: ", (Charset) null, true); //added 9/15
+                //} catch (IOException e) {
+                //    e.printStackTrace();
+                //}
                 for (int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++) {
-                    System.out.println("\t" + names.get(indexOfNames));
-                    try {
-                        FileUtils.writeStringToFile(Main.requestHistory, "\n\t" + names.get(indexOfNames), (Charset) null, true); //added 9/15
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    FileManager.writeToFileAndConsole("\t" + names.get(indexOfNames));
+                    //System.out.println("\t" + names.get(indexOfNames));
+                    //try {
+                    //    FileUtils.writeStringToFile(Main.requestHistory, "\n\t" + names.get(indexOfNames), (Charset) null, true); //added 9/15
+                    //} catch (IOException e) {
+                    //    e.printStackTrace();
+                    //}
                     //if(indexOfNames % 3 == 0)
                     //{
                     //    System.out.println();
                     //}
                 }
-                System.out.println("---------------");
-                try {
-                    FileUtils.writeStringToFile(Main.requestHistory, "\n---------------", (Charset) null, true); //added 9/15
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                FileManager.writeToFileAndConsole("\n---------------");
+                //System.out.println("---------------");
+                //try {
+                //    FileUtils.writeStringToFile(Main.requestHistory, "\n---------------", (Charset) null, true); //added 9/15
+                //} catch (IOException e) {
+                //    e.printStackTrace();
+                //}
             }
 
         }
@@ -89,7 +92,11 @@ public class KillCountsJSON {
             namesByNumKills.get(killCount).add(name);
             //victim --> name
         }
-        printKillCountsJSON(namesByNumKills);
+        try {
+            printKillCountsJSON(namesByNumKills);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //Winners
         JSONObject match_end = JSONManager.returnObject(prettyFile, "LogMatchEnd");

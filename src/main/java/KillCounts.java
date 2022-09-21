@@ -9,17 +9,10 @@ import java.util.Vector;
 
 public class KillCounts extends Request {
 
-    public static void printKillCountsToHistory(Vector<String> counts) throws IOException {
-        //time of request?
-        //FileUtils.writeStringToFile();
-       //String context = "Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.";
-        //try {
-        //FileUtils.writeStringToFile(Main.requestHistory, "\n" + context, (Charset) null, true); //added 9/15
+    public static void printKillCountsToHistoryAndConsole(Vector<String> counts) throws IOException {
+
         FileManager.writeToFileAndConsole("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");
-        //} catch (IOException e) {
-        //    e.printStackTrace();
-        //}
-        System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
+
         int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
         int maxKills = 0;
         int killsByTopTen = 0;
@@ -38,26 +31,14 @@ public class KillCounts extends Request {
             }
             frequencies[numKills]++;
             FileManager.writeToFileAndConsole(counts.get(i) + " ");
-            //System.out.print(counts.get(i) + " ");
-            //FileUtils.writeStringToFile(Main.requestHistory, counts.get(i) + " ", (Charset) null, true); //added 9/15
         }
 
         //Print out how many people got X number of kills
         FileManager.writeToFileAndConsole("\nKill Frequencies:");
-        //System.out.println("\nKill Frequencies:");
-        //FileUtils.writeStringToFile(Main.requestHistory, "\nKill Frequencies:", (Charset) null, true); //added 9/15
 
         for (int index = 0; index <= maxKills; index++) {
             FileManager.writeToFileAndConsole(frequencies[index] + " got " + index + " kills.");
-            //System.out.println(frequencies[index] + " got " + index + " kills.");
-            //FileUtils.writeStringToFile(Main.requestHistory, "\n" + frequencies[index] + " got " + index + " kills.", (Charset) null, true); //added 9/15
         }
-        ///System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
-        ///System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
-        ///System.out.println("--------------------------------------------------------------------------");
-        ///FileUtils.writeStringToFile(Main.requestHistory, "\nMAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")", (Charset) null, true); //added 9/15
-       /// FileUtils.writeStringToFile(Main.requestHistory, "\n#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size(), (Charset) null, true); //added 9/15
-        ///FileUtils.writeStringToFile(Main.requestHistory, "\n--------------------------------------------------------------------------", (Charset) null, true); //added 9/15
         FileManager.writeToFileAndConsole("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
         FileManager.writeToFileAndConsole("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
         FileManager.writeToFileAndConsole("--------------------------------------------------------------------------");
@@ -66,10 +47,11 @@ public class KillCounts extends Request {
     public static void printKillCounts(Vector<String> counts) {
 
         try {
-            printKillCountsToHistory(counts); //added 9/15
+            printKillCountsToHistoryAndConsole(counts); //added 9/15
         } catch (IOException e) {
             e.printStackTrace();
         }
+        /*
         System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
         int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
         int maxKills = 0;
@@ -98,7 +80,11 @@ public class KillCounts extends Request {
         System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
         System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
         System.out.println("--------------------------------------------------------------------------");
+
+         */
     }
+
+
     //Accidentally removed this! Found it again through github commits history
     //Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
     //Vector<Integer> killsByTeam = new Vector<Integer>();
@@ -123,43 +109,4 @@ public class KillCounts extends Request {
             e.printStackTrace();
         }
     }
-    //this.scopes;
-      //  this.types;
-    KillCounts() //for everyone
-    {
-        if(this.getRequest_scope() == 0) //single person
-        {
-
-        }
-    }
-
-    public static void print()
-    {
-
-    }
-    public static void printJSON()
-    {
-
-    }
-    public static void calculate()
-    {
-
-    }
-    public static void calculateJSON()
-    {
-
-    }
-    public static void write()
-    {
-
-    }
-    public static void writeJSON()
-    {
-
-    }
-    //calculate
-    //print
-    //write...
-    //constructor
-    //how does it get called...?
 }
