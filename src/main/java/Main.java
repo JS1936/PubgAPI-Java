@@ -43,7 +43,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     }
 
     //Allows for multiple requests in a single running of the program.
-    public static void psuedoMain(Scanner input) //removed "String desiredThing"
+    public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
 
@@ -107,7 +107,11 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             System.out.println("REQUEST = 6");
             System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
             //mapsPlayed.add(MapManager.getMapName(fileName));
-            MapManager.printMapNames();
+            try {
+                MapManager.printMapNames();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
         String response = "y";
@@ -122,7 +126,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     }
 
     //Call the appropriate class(es) and method(s) based on user input
-    public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) //changed return from void -> boolean 5/17/2022
+    public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) throws IOException //changed return from void -> boolean 5/17/2022
     {
         //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
         //EX: request.equalsIgnoreCase("0")

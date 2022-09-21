@@ -45,43 +45,11 @@ public class KillCounts extends Request {
     }
     //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
     public static void printKillCounts(Vector<String> counts) {
-
         try {
             printKillCountsToHistoryAndConsole(counts); //added 9/15
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*
-        System.out.println("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");// People who die first and printed first. People who die first get their num of kills printed last.");
-        int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
-        int maxKills = 0;
-        int killsByTopTen = 0;
-        for (int i = 0; i < counts.size(); i++) {
-            if (i % 10 == 0) //For display clarity
-            {
-                System.out.println();
-            }
-            int numKills = Integer.valueOf(counts.get(i));
-            if (maxKills < numKills) {
-                maxKills = numKills;
-            }
-            if (counts.size() - 10 <= i) {
-                killsByTopTen += numKills;
-            }
-            frequencies[numKills]++;
-            System.out.print(counts.get(i) + " ");
-        }
-
-        //Print out how many people got X number of kills
-        System.out.println("\nKill Frequencies:");
-        for (int index = 0; index <= maxKills; index++) {
-            System.out.println(frequencies[index] + " got " + index + " kills.");
-        }
-        System.out.println("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
-        System.out.println("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
-        System.out.println("--------------------------------------------------------------------------");
-
-         */
     }
 
 

@@ -12,66 +12,39 @@ public class KillCountsJSON {
     //Can print more details
     //maybe print these to a file, instead
     //What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
+
+
+    //names of 0 kills go into index 0
+    //name of 1 kill go into index 1
+    //etc.
     public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills) throws IOException {
         System.out.println("\n\n\nLOOK: printingKillCountsRequest SCOPE = " + Main.requestCurrent.getScopes()[Main.requestCurrent.getRequest_scope()]); //remove later
 
         for (int index = 0; index < namesByNumKills.size(); index++) {
             Vector<String> names = namesByNumKills.get(index);
             if (!names.isEmpty()) {
-                //System.out.println(index + " KILLS: ");
-                //FileUtils.writeStringToFile();
-                //try {
-                    FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
-                    //FileUtils.writeStringToFile(Main.requestHistory, "\n" + index + " KILLS: ", (Charset) null, true); //added 9/15
-                //} catch (IOException e) {
-                //    e.printStackTrace();
-                //}
+                FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
+
                 for (int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++) {
                     FileManager.writeToFileAndConsole("\t" + names.get(indexOfNames));
-                    //System.out.println("\t" + names.get(indexOfNames));
-                    //try {
-                    //    FileUtils.writeStringToFile(Main.requestHistory, "\n\t" + names.get(indexOfNames), (Charset) null, true); //added 9/15
-                    //} catch (IOException e) {
-                    //    e.printStackTrace();
-                    //}
-                    //if(indexOfNames % 3 == 0)
-                    //{
-                    //    System.out.println();
-                    //}
                 }
                 FileManager.writeToFileAndConsole("\n---------------");
-                //System.out.println("---------------");
-                //try {
-                //    FileUtils.writeStringToFile(Main.requestHistory, "\n---------------", (Charset) null, true); //added 9/15
-                //} catch (IOException e) {
-                //    e.printStackTrace();
-                //}
             }
-
         }
-
-        //names of 0 kills go into index 0
-        //name of 1 kill go into index 1
-        //etc.
     }
+
     public static void calculateKillCountsJSON(File prettyFile) {
-        //Vector<String> killCounts = new Vector<String>();
 
         Vector<JSONObject> kill_events = JSONManager.returnMultipleObjects(prettyFile, "LogPlayerKillV2"); //winners don't die, though...?
         Vector<Vector<String>> namesByNumKills = new Vector<Vector<String>>();
 
-        int maxKills = 0;
+        //int maxKills = 0;
 
         //Assumes no one will get more than 30 kills (make more efficient later... -> maxKills)
         for (int i = 0; i < 30; i++) {
             Vector<String> names = new Vector<String>();
             namesByNumKills.add(names);
         }
-        //characters
-        //gameresultonfinished
-        //results
-        //stats
-        //killcount
 
         //NON-WINNERS
         System.out.println("NOTE: this does not yet include the winners...");

@@ -118,7 +118,7 @@ class MainTest {
     //Checks whether getInfo treats valid and invalid requests properly by checking integers of [-1,8].
     //Valid: request is from [0,7]
     //Invalid: all other values (EX: -1, 7, 8)
-    void getInfo() {
+    void getInfo() throws IOException {
         File known_pretty = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\jsonformatter.example.FourSpaces.pretty_of_telemetryFile2.json.txt");
         for(int request = -1; request <= 8; request++)
         {

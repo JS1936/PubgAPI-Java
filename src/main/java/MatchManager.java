@@ -2,6 +2,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Vector;
 
 public class MatchManager {
@@ -12,14 +13,19 @@ public class MatchManager {
         String match_type = getMatchType(match_id);
         String teamSizeForOfficialMatch = getTeamSizeForOfficialMatch(match_id); //what about for arcade?
         String match_info_summary = match_type +"-" + teamSizeForOfficialMatch + "-" + player_perspective;
-        System.out.println(match_info_summary); //still need to "history" this
+        //System.out.println(match_info_summary); //still need to "history" this
+        try {
+            FileManager.writeToFileAndConsole(match_info_summary);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     /////////Added 9/18
     public static String getMatchID(File prettyFile)
     {
         JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
         String match_id = match_definition.get("MatchId").toString();
-        System.out.println("match_id = " + match_id);
+        //System.out.println("match_id = " + match_id);
         return match_id;
     }
     public static String getPlayerPerspective(String match_id)
@@ -59,9 +65,9 @@ public class MatchManager {
     //Stores and prints what weapons were used by a specific group (winnersOnly or everyone)
     //Currently only works for winnersOnly
     //Made private (check other methods-- see if they need this as well)
-    private static void weaponFrequencies(Vector<String> weaponSlot, boolean winnersOnly, String weaponSlotName)
-    {
-        System.out.println(weaponSlotName.toUpperCase() + ": (winners only)");
+    private static void weaponFrequencies(Vector<String> weaponSlot, boolean winnersOnly, String weaponSlotName) throws IOException {
+        //System.out.println(weaponSlotName.toUpperCase() + ": (winners only)");
+        FileManager.writeToFileAndConsole(weaponSlotName.toUpperCase() + ": (winners only)");
         Vector<String> alreadyListed = new Vector<String>();
         for(int i = 0; i < weaponSlot.size(); i++) //One weapon
         {
@@ -88,14 +94,15 @@ public class MatchManager {
                     }
 
                 }
-                System.out.println("\t" + weapon + " x" + count);
+                FileManager.writeToFileAndConsole("\t" + weapon + " x" + count);
+                //System.out.println("\t" + weapon + " x" + count);
             }
         }
-        System.out.println();
+        FileManager.writeToFileAndConsole(""); //Essentially "System.out.println() visually", but for both
+        //System.out.println();
     }
 
-    public static void winnerWeapons(File prettyFile)
-    {
+    public static void winnerWeapons(File prettyFile) throws IOException {
         Vector<String> winnerSecondary = new Vector<String>(); //stores names of winners' match-end secondary weapons
         Vector<String> winnerPrimary = new Vector<String>(); //stores names of winners' match-end primary weapons
 
@@ -150,15 +157,16 @@ public class MatchManager {
                 winnerPrimary.add(primaryWSecond);
 
                 //OR: print one player at a time
-                System.out.println(player_details.get("name") + " Summary (Winner): ");
-                System.out.println("\tPrimary Weapon #1: \t" + primaryWFirst);
-                System.out.println("\tPrimary Weapon #2: \t" + primaryWSecond);
-                System.out.println("\tSecondary Weapon: \t" + secondaryWeapon);
-                System.out.println("-------------------------------------------------");
+                FileManager.writeToFileAndConsole(player_details.get("name") + " Summary (Winner): ");
+                FileManager.writeToFileAndConsole("\tPrimary Weapon #1: \t" + primaryWFirst);
+                FileManager.writeToFileAndConsole("\tPrimary Weapon #2: \t" + primaryWSecond);
+                FileManager.writeToFileAndConsole("\tSecondary Weapon: \t" + secondaryWeapon);
+                FileManager.writeToFileAndConsole("-------------------------------------------------");
             }
         }
 
-        System.out.println("PRINTING WEAPON FREQUENCIES: \n" );
+        //System.out.println("PRINTING WEAPON FREQUENCIES: \n" );
+        FileManager.writeToFileAndConsole("PRINTING WEAPON FREQUENCIES: \n" );
         weaponFrequencies(winnerPrimary, true, "primary weapons");
         weaponFrequencies(winnerSecondary, true, "secondary weapon");
     }
@@ -170,6 +178,7 @@ public class MatchManager {
     //         100000+ --> custom game, maybe?
     //if only team ids ar 1 and 2 --> deathmatch
     //NOTE: Team size not always 4 (or even <=4!)
+    //TO-DO: Adjust printouts so println and history
     public static Vector<JSONObject> printPlayersByTeam(File prettyFile) //used to be called singleString...
     {
         System.out.println("NEW FILE_______________________________________________");

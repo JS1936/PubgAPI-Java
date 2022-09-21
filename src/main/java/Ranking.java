@@ -21,6 +21,7 @@ public class Ranking {
     //}
 
     //Returns ranking as a string
+    //Console and history printouts intentionally differ slightly for readability of console user.
     public static String ranking(String name, File prettyFile) {
         JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
         //System.out.println("match definition: " + match_definition);

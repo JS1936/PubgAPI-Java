@@ -69,9 +69,8 @@ public class BotCounts {
 
             }
             String text = "#bots:       " + botNames.size() + " / " + playerNames.size();
-            //System.out.println("#bots:       " + botNames.size() + " / " + playerNames.size());
-            System.out.println(text);
-            FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true); //added 9/17 //To-do: add match_id to this?
+            //added 9/17 //To-do: add match_id to this?
+            FileManager.writeToFileAndConsole(text);
             //Note: If you then read from the requestHistory file, would you be able to calculate things based off of what was just now stored in there?
 
 
