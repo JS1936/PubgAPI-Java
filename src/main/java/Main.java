@@ -14,12 +14,6 @@ import java.util.*;
 //Make additional class for handling/executing the request?
 
 
-//Helpful sites:
-//https://stackoverflow.com/questions/2885173/how-do-i-create-a-file-and-write-to-it
-//https://stackoverflow.com/questions/4105795/pretty-print-json-in-java
-//https://github.com/Corefinder89/SampleJavaCodes/blob/master/src/Dummy1.java
-//https://www.w3schools.com/java/java_files_read.asp
-
 //First, store the file somewhere.
 //Second, store information that is likely to be asked for
 //That way, if likely info is asked for, it can be foudn quickly. If unlikely info is asked for, it can still be found (albeit more slowly, looking through the files)
@@ -104,7 +98,6 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
      * where that content is stored in a way that looks "pretty" (formatted).
      */
     //NOTE: if this returned the prettyFile, calls like winnerWeapons could be made from main
-
     public static File makePretty(File fileName) throws IOException {
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
@@ -130,13 +123,395 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         return prettyFile; //added recently (4/27/2022)
     }
 
-    //find winners first (and log who they are)
-    //THEN record stuff?
-    //        //compare killcounts with everybody else?
-    //        //find num teams
-    //        //make a vector of that many teams
-    //        //within that vector, hold a vector of ints of numKills made by each person on that team
-    //        //only start once game has started...?
+
+    //For each file, there is a call to the corresponding request
+    //VERY IN PROGRESS
+    public static final FileManager fileManager = new FileManager();
+    public static final BotCounts botCounter = new BotCounts();
+    public static final DoRequest doRequest = new DoRequest();
+    public static final JSONManager JSONManager = new JSONManager();
+    public static final KillCounts killCounts = new KillCounts();
+    public static final KillCountsJSON killCountsJSON = new KillCountsJSON();
+    public static final MapManager mapManager = new MapManager();
+    public static final MatchManager matchManager = new MatchManager();
+
+    public static void psuedoMain(Scanner input) //removed "String desiredThing"
+    {
+        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+
+        mapsPlayed.clear(); //avoid duplicates...
+
+        input = new Scanner(System.in);
+        //printOptionsToChooseFrom(functionalities, "What would you like to know?");
+
+        int request = getRequestType(input); //(requestType)
+        int requestScope = getRequestScope(input);
+        //Request r = new Request(request, requestScope);
+        requestCurrent = new Request(request, requestScope);
+        //int request = getRequest(input); //string or int? (Getting confused)
+
+
+        //Added the try/catch writeStringToFile for requestHistory 9/15
+        try {
+            //could even have a log-in system where differentiating user histories
+            FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(request == -1) //remove?
+        {
+            System.out.println("Invalid request");
+            return;
+        }
+        String name = "";
+        if(request == 4)
+        {
+            System.out.println("Who are you looking for? (EX: matt112)");
+            name = input.next();
+            System.out.println("Now looking for: '" + name + "'");
+
+        }
+
+        int max_files = 10; //temporary (remove later)
+        int filesSoFar = 0;
+        for (File fileName : files) {
+            //if(fileName.getName() != "prettyFiles")
+            //{
+            System.out.println(fileName);
+            //try { //Added 9/18
+            //    FileUtils.writeStringToFile(requestHistory, fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile
+            //} catch (IOException e) {
+            //    e.printStackTrace();
+            //}
+
+
+            try {
+                //makePretty(fileName); //error here
+                //System.out.println("LOOK HERE!");
+                if(filesSoFar >= 10)
+                {
+                    //System.out.println("Reached max_files of " + max_files + "...terminating program");
+                } else
+                {
+                    File pretty = FileManager.makePretty(fileName);
+                    getInfo(request, pretty, name);
+                    MatchManager.printMatchInfo(pretty); //added 9/18
+                    filesSoFar++;
+                    FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
+                    //FileUtils.writeStringToFile(currentFile, name, (Charset) null, true); //changed requestedResults to currentFile
+                //writeStringToFile(requestedResults, name); //added 9/15
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(request == 6) //trying this...
+        {
+            System.out.println("REQUEST = 6");
+            System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
+            MapManager.printMapNames(); //this would hold repeats (but it also calculates the amt of repetitions)
+            //printMapNameFrequencies(mapsPlayed); //no longer needed
+        }
+
+        String response = "y";
+        System.out.println("Any other requests? (y/n)");
+        response = input.next();
+
+        if(response.equalsIgnoreCase("Y"))
+        {
+            psuedoMain(input); //Caution: this causes a problem with having multiple scanners open...
+        }
+        //
+        //input.close(); //put here?
+        System.out.println("Shutting down program."); //change wording...
+
+        //Call the appropriate method(s) based on user input
+    }
+
+
+    //What if there were a container of "things you could access" about any given game (or all games?)
+    //Like a user interface, where they are presented with options and type which ones they want
+
+    //switch stmt?
+    //what about for ONE specific file, or  for specific fileS?
+    //factory-like abstraction thing here? (instead)
+    //abstract this further?
+    //Is there a way to make this just thing.callRequestType() and it calls the right one?
+    //EX: class called countBotsAndPeople
+    //doing a method call but not (string from vector).call() --> actually call the method
+    public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) //changed return from void -> boolean 5/17/2022
+    {
+        //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
+        //EX: request.equalsIgnoreCase("0")
+        //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
+        if(request == 0)
+        {
+            BotCounts.countBotsAndPeople(prettyFile); //seems to work
+            //could this be called somehow using vector (like something[0]) to make this more "adjustable"?
+        }
+        else if(request == 1)
+        {
+            KillCounts.calculateKillCounts(prettyFile); //seems to work
+
+        }else if(request == 2) {
+
+            MatchManager.printPlayersByTeam(prettyFile); //seems to work (but quite messy)
+
+        }else if(request == 3) {
+
+            MatchManager.winnerWeapons(prettyFile); //seems to work
+
+        }else if(request == 4) { //NOT WORKING (issue with scanner) -->
+            // NOW switched... but still lots of extra printouts, and passing name in seems silly
+            ///TRY WRITING TO FILE HERE
+            Ranking.ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors) //INTERESTING: new request, asks for name with every file...
+
+        }else if(request == 5) {
+            //NOT WORKING
+            KillCountsJSON.calculateKillCountsJSON(prettyFile);
+            //having trouble accessing names of the winners specifically
+
+        }else if(request == 6) {
+            //getMaps
+            //Vector<String> mapNames = new Vector<String>(); //this is getting re-made with every file...
+            if(prettyFile == null)
+            {
+                System.out.println("FILE IS NULL");
+            }
+            String name = MatchManager.getMapName(prettyFile);
+            if(name != null) //Tried to fix EOF exception with this but it didn't work (which makes sense, I guess)
+            {
+                //mapNames.add(getMapName(prettyFile));
+               // System.out.println("Attempting to add: " + name + " to mapsPlayed...");
+                mapsPlayed.add(name);
+            }
+
+        }else
+        {
+            System.out.println("Invalid request"); //for example's sake (currently)
+            return (request < 0 || request >= 7); //invalid requests should not have valid numbers
+        }
+        return (request < 7 && request > -1); //valid requests should have valid numbers
+    }
+
+
+    public static void printOptionsToChooseFrom(Vector<String> options, String prompt)
+    {
+        System.out.print(prompt);
+        System.out.println(" Type the corresponding number and then press enter.\n");
+        for(int i = 0; i < options.size(); i++)
+        {
+            System.out.println(i + ": " + options.get(i));
+        }
+    }
+
+
+    //IN PROGRESS
+    public static void initiateFunctionalities()
+    {
+        functionalities.add("countBotsAndPeople");
+        functionalities.add("calculateKillCounts");
+        functionalities.add("printPlayersByTeam");
+        functionalities.add("winnerWeapons");
+        functionalities.add("ranking (of a specific person)");
+        functionalities.add("calculateKillCountsJSON");
+        functionalities.add("printMapsPlayed");
+    }
+
+    public static void initiateRequestScopes()
+    {
+        requestScopes.add("individual (EX: matt112)");
+        requestScopes.add("team       (EX: team of matt112)");
+        requestScopes.add("match      (all individuals in that match)");
+    }
+
+    //If requests are objects, then this is easier...?
+    //abstract these better...!
+    //write to file (requestHistory) here? 9/15
+    public static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
+    {
+        int request = -1; //not yet a valid request
+        boolean requestAccepted = false;
+
+        while(!requestAccepted)
+        {
+            request = Integer.parseInt(input.next()); //careful...
+            System.out.println("request is: " + request);
+            if(request >= 0 && request < optionsToChooseFrom.size())
+            {
+                requestAccepted = true; //technically not needed, but helps with clarity
+                System.out.println("Request accepted!");
+                return request;
+            }
+            System.out.println("Sorry, '" + request + "' does not match any available options. Try again.");
+        }
+        return request;
+    }
+
+    public static int getRequestType(Scanner input)
+    {
+        String prompt_requestType = "What would you like to know?";
+        printOptionsToChooseFrom(functionalities, prompt_requestType);
+        int requestType = getInput(input, functionalities);
+        return requestType;
+    }
+
+    //I want data about a particular player (EX: matt112).
+    //I want data about a particular team (EX: team of matt112)
+    //I want data about a particular match (everyone in that match).
+    ///WHAT ABOUT WANTING INFO ON MULTIPLE PEOPLE WHO ARE NOT ON THE SAME TEAM?
+    ///int request = Integer.parseInt(input.next());
+    //print the request scopes
+    //could make prompt index 0? (or last, I suppose)
+    public static int getRequestScope(Scanner input)
+    {
+        String prompt_requestScope = "WHO are we learning about?";
+        printOptionsToChooseFrom(requestScopes, prompt_requestScope);
+        int requestScope = getInput(input, requestScopes);
+        //String[] requestScopeOptions = {"individual (EX: matt112)", "team (EX: team of matt112)", "match (everyone in that match)"};
+        return requestScope;
+
+    }
+
+
+    //"Do you want to store this information in its own file?" idea
+    //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
+    //IN PROGRESS
+    public static Vector<String> mapsPlayed = new Vector<String>();
+    public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
+    public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
+
+    public static Request requestCurrent;// = new Request(0,0);
+
+    public static void main(String[] args) //maybe put the "while" in here to having multiple requests actually works?
+    {
+
+        mapsPlayed.clear(); //clear at the beginning
+
+        initiateFunctionalities();
+        initiateRequestScopes(); //added 9/17
+
+        requestHistory = FileManager.getFile("C:\\Users\\jmast\\pubg_requestHistory");
+        currentFile = FileManager.getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+
+        Scanner input = new Scanner(System.in);
+        psuedoMain(input);
+        input.close();
+    }
+    //Was right above main:
+    //public static Request dummyRequest;// = new Request(0,0);
+
+    //Was in main:
+    //String[] types = dummyRequest.getTypes();
+    //Vector<String> winnersRecorded; //winners across different games
+}
+//PSEUDOMAIN prev:
+/*
+public static void psuedoMain(Scanner input) //removed "String desiredThing"
+    {
+        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+        //what if history of requests?
+        ///requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
+        ///currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+        //File requestedResults = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+        //FileUtils.writeStringToFile(currentFile, "\n-" + name, (Charset) null, true);
+        mapsPlayed.clear(); //avoid duplicates...
+        //printFunctionalities();
+        input = new Scanner(System.in);
+        //printOptionsToChooseFrom(functionalities, "What would you like to know?");
+
+        int request = getRequestType(input); //(requestType)
+        int requestScope = getRequestScope(input);
+        //Request r = new Request(request, requestScope);
+        requestCurrent = new Request(request, requestScope);
+        //int request = getRequest(input); //string or int? (Getting confused)
+
+
+        //Added the try/catch writeStringToFile for requestHistory 9/15
+        try {
+            //could even have a log-in system where differentiating user histories
+            FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(request == -1) //remove?
+        {
+            System.out.println("Invalid request");
+            return;
+        }
+        String name = "";
+        if(request == 4)
+        {
+            System.out.println("Who are you looking for? (EX: matt112)");
+            name = input.next();
+            System.out.println("Now looking for: '" + name + "'");
+
+        }
+
+        int max_files = 10; //temporary (remove later)
+        int filesSoFar = 0;
+        for (File fileName : files) {
+            //if(fileName.getName() != "prettyFiles")
+            //{
+            System.out.println(fileName);
+            //try { //Added 9/18
+            //    FileUtils.writeStringToFile(requestHistory, fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile
+            //} catch (IOException e) {
+            //    e.printStackTrace();
+            //}
+
+
+            try {
+                //makePretty(fileName); //error here
+                //System.out.println("LOOK HERE!");
+                if(filesSoFar >= 10)
+                {
+                    //System.out.println("Reached max_files of " + max_files + "...terminating program");
+                } else
+                {
+                    File pretty = FileManager.makePretty(fileName);
+                    getInfo(request, pretty, name);
+                    MatchManager.printMatchInfo(pretty); //added 9/18
+                    filesSoFar++;
+                    FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
+                    //FileUtils.writeStringToFile(currentFile, name, (Charset) null, true); //changed requestedResults to currentFile
+                //writeStringToFile(requestedResults, name); //added 9/15
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if(request == 6) //trying this...
+        {
+            System.out.println("REQUEST = 6");
+            System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
+            MapManager.printMapNames(); //this would hold repeats (but it also calculates the amt of repetitions)
+            //printMapNameFrequencies(mapsPlayed); //no longer needed
+        }
+
+        String response = "y";
+        System.out.println("Any other requests? (y/n)");
+        response = input.next();
+
+        if(response.equalsIgnoreCase("Y"))
+        {
+            psuedoMain(input); //Caution: this causes a problem with having multiple scanners open...
+        }
+        //
+        //input.close(); //put here?
+        System.out.println("Shutting down program."); //change wording...
+
+        //Call the appropriate method(s) based on user input
+    }
+ */
+
+//find winners first (and log who they are)
+//THEN record stuff?
+//        //compare killcounts with everybody else?
+//        //find num teams
+//        //make a vector of that many teams
+//        //within that vector, hold a vector of ints of numKills made by each person on that team
+//        //only start once game has started...?
     /*
      *
      *  boolean foundWinners = false;
@@ -144,16 +519,17 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         Vector<Player> winners = new Vector<Player>();
         Vector<Integer> winnerKills = new Vector<Integer>();
      */
-    //add parameter for scope? (Request scope: individual, team, everyone/match)
-    //LOOK!
-    public static void printKillCountsToHistory(Vector<String> counts, Request r) {
+//add parameter for scope? (Request scope: individual, team, everyone/match)
+//LOOK!
+//public static void printKillCountsToHistory(Vector<String> counts, Request r) {
 
-    }
+//}
 
-    //string array? (passed in)
-    //EX: individual-> 1
-    //EX: team-> usually 1-4
-    //EX: everyone --> empty (already printing the "everyone" data no matter what, just don't print it again at the end)
+//string array? (passed in)
+//EX: individual-> 1
+//EX: team-> usually 1-4
+//EX: everyone --> empty (already printing the "everyone" data no matter what, just don't print it again at the end)
+    /*
     public static void printKillCountsToHistory(Vector<String> counts) throws IOException {
         //time of request?
         //FileUtils.writeStringToFile();
@@ -201,7 +577,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         FileUtils.writeStringToFile(requestHistory, "\n--------------------------------------------------------------------------", (Charset) null, true); //added 9/15
     }
 
-    //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
+     */
+
+//IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
+    /*
     public static void printKillCounts(Vector<String> counts) {
 
         try {
@@ -239,9 +618,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         System.out.println("--------------------------------------------------------------------------");
     }
 
-    //Can print more details
-    //maybe print these to a file, instead
-    //What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
+     */
+
+//Can print more details
+//maybe print these to a file, instead
+//What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
+    /*
     public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills) {
         System.out.println("\n\n\nLOOK: printingKillCountsRequest SCOPE = " + requestCurrent.getScopes()[requestCurrent.getRequest_scope()]); //remove later
 
@@ -282,21 +664,24 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         //etc.
     }
 
-    //"LogPlayerKillV2"
-    //victimGameResult
-    //rank
-    //stats
-    //killCount
-    //victim
-    //name
+     */
 
-    //BIG, NOT TESTED MESS
-    //NOTE: DOES NOT INCLUDE WINNERS
-    //EX: individual VS team VS everyone
-    //Default current is EVERYONE.
-    //For TEAM, need to know the names looking for.
-    //For INDIVIDUAL, need to know the singular name looking for.
-    //LOOK!!
+//"LogPlayerKillV2"
+//victimGameResult
+//rank
+//stats
+//killCount
+//victim
+//name
+
+//BIG, NOT TESTED MESS
+//NOTE: DOES NOT INCLUDE WINNERS
+//EX: individual VS team VS everyone
+//Default current is EVERYONE.
+//For TEAM, need to know the names looking for.
+//For INDIVIDUAL, need to know the singular name looking for.
+//LOOK!!
+    /*
     public static void calculateKillCountsJSON(File prettyFile) {
         //Vector<String> killCounts = new Vector<String>();
 
@@ -338,7 +723,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         printKillCountsJSON(namesByNumKills);
 
         //Winners
-        JSONObject match_end = returnObject(prettyFile, "LogMatchEnd");
+        JSONObject match_end = JSONManager.returnObject(prettyFile, "LogMatchEnd");
         //JSONArray winners = match_end.getJSONArray("characters");
         JSONObject game_result_on_finished = match_end.getJSONObject("gameResultOnFinished");
         JSONArray results = game_result_on_finished.getJSONArray("results");
@@ -362,11 +747,14 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         //printKillCounts(killCounts);
     }
 
-    //Accidentally removed this! Found it again through github commits history
-    //Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
-    //Vector<Integer> killsByTeam = new Vector<Integer>();
-    //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
-    //IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
+     */
+
+//Accidentally removed this! Found it again through github commits history
+//Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
+//Vector<Integer> killsByTeam = new Vector<Integer>();
+//Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
+//IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
+    /*
     public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
         try {
@@ -386,11 +774,13 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             e.printStackTrace();
         }
     }
+     */
 
-    /////////Added 9/18
+/////////Added 9/18
+    /*
     public static String getMatchID(File prettyFile)
     {
-        JSONObject match_definition = returnObject(prettyFile, "LogMatchDefinition");
+        JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
         String match_id = match_definition.get("MatchId").toString();
         System.out.println("match_id = " + match_id);
         return match_id;
@@ -411,6 +801,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         }
         return "official";
     }
+
     public static String getTeamSizeForOfficialMatch(String match_id)
     {
         if(match_id.contains("duo"))
@@ -426,6 +817,8 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             return "squad"; //is this accurate?
         }
     }
+    */
+    /*
     public static void printMatchInfo(File prettyFile)
     {
         String match_id = getMatchID(prettyFile);
@@ -435,29 +828,32 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         String match_info_summary = match_type +"-" + teamSizeForOfficialMatch + "-" + player_perspective;
         System.out.println(match_info_summary); //still need to "history" this
     }
-    /////Added 9/18^
+
+     */
+/////Added 9/18^
 
 //just get the matchID, too
-    //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
-    //COULD use printPlayersByTeam (excess printouts) OR do it independently
-    //could take in String[] names instead of String name? (In case of multiple names...?)
-    //public static void ranking(String[] team, File prettyFile)
-    //{
-    //    for(String name : team)
-    //    {
-    //        ranking(name, prettyFile);
-    //    }
-    //}
+//Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
+//COULD use printPlayersByTeam (excess printouts) OR do it independently
+//could take in String[] names instead of String name? (In case of multiple names...?)
+//public static void ranking(String[] team, File prettyFile)
+//{
+//    for(String name : team)
+//    {
+//        ranking(name, prettyFile);
+//    }
+//}
 
-    //Returns ranking as a string
+//Returns ranking as a string
+    /*
     public static String ranking(String name, File prettyFile) {
-        JSONObject match_definition = returnObject(prettyFile, "LogMatchDefinition");
+        JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
         //System.out.println("match definition: " + match_definition);
         String match_id = match_definition.get("MatchId").toString();
         System.out.println("match_id = " + match_id);
 
 
-        JSONObject match_end = returnObject(prettyFile, "LogMatchEnd");
+        JSONObject match_end = JSONManager.returnObject(prettyFile, "LogMatchEnd");
         //System.out.println("Attempting to print match_end content: " + match_end);
         JSONArray players = match_end.getJSONArray("characters");
         for (int i = 0; i < players.length(); i++) {
@@ -490,9 +886,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         return ""; //was not in the game
     }
 
-    //Stores and prints what weapons were used by a specific group (winnersOnly or everyone)
-    //Currently only works for winnersOnly
-    //Made private (check other methods-- see if they need this as well)
+     */
+
+//Stores and prints what weapons were used by a specific group (winnersOnly or everyone)
+//Currently only works for winnersOnly
+//Made private (check other methods-- see if they need this as well)
+    /*
     private static void weaponFrequencies(Vector<String> weaponSlot,  boolean winnersOnly, String weaponSlotName)
     {
         System.out.println(weaponSlotName.toUpperCase() + ": (winners only)");
@@ -528,18 +927,21 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         System.out.println();
     }
 
-    //Would getting everyone else's weapons be a different call?
+     */
+
+//Would getting everyone else's weapons be a different call?
     /*
         Vector<String> everyoneSecondary = new Vector<String>();
         Vector<String> everyonePrimary = new Vector<String>();
      */
+    /*
     public static void winnerWeapons(File prettyFile)
     {
         Vector<String> winnerSecondary = new Vector<String>(); //stores names of winners' match-end secondary weapons
         Vector<String> winnerPrimary = new Vector<String>(); //stores names of winners' match-end primary weapons
 
         //Gather "LogMatchEnd" data and store in jsonObject
-        JSONObject jsonObject = returnObject(prettyFile, "LogMatchEnd");
+        JSONObject jsonObject = JSONManager.returnObject(prettyFile, "LogMatchEnd");
         if(jsonObject == null)
         {
             System.out.println("Error");
@@ -602,7 +1004,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         weaponFrequencies(winnerSecondary, true, "secondary weapon");
     }
 
-    //VERY similar to returnObject, but can return multiple occurrences of a type via vector (instead of limited to 1)
+     */
+
+//VERY similar to returnObject, but can return multiple occurrences of a type via vector (instead of limited to 1)
+    /*
     public static Vector<JSONObject> returnMultipleObjects(File prettyFile, String type)
     {
         Vector<JSONObject> multipleObjects = new Vector<JSONObject>();
@@ -636,9 +1041,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         //return null; //What if _T type is not found?
         return multipleObjects;
     }
-    //WHAT IF you could search through a prettyfile for any _T and that method would return the contents?
-    //Could also keep track of items equipped
-    //Note: What if "String type" occurs multiple times (EX: item equip sort of thing)
+
+     */
+//WHAT IF you could search through a prettyfile for any _T and that method would return the contents?
+//Could also keep track of items equipped
+//Note: What if "String type" occurs multiple times (EX: item equip sort of thing)
+    /*
     public static JSONObject returnObject(File prettyFile, String type)
     {
         System.out.println("NEW FILE_______________________________________________");
@@ -673,14 +1081,16 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         }
         return null; //What if _T type is not found?
     }
+     */
 
-    //NOTE: For deathmatches, does not account for people leaving and entering midgame... (issue here?)
-    //team id: <100 means real people
-    //         20_ (like 201) means bots
-    //         50_ (like 501) means guards
-    //         100000+ --> custom game, maybe?
-    //if only team ids ar 1 and 2 --> deathmatch
-    //NOTE: Team size not always 4 (or even <=4!)
+//NOTE: For deathmatches, does not account for people leaving and entering midgame... (issue here?)
+//team id: <100 means real people
+//         20_ (like 201) means bots
+//         50_ (like 501) means guards
+//         100000+ --> custom game, maybe?
+//if only team ids ar 1 and 2 --> deathmatch
+//NOTE: Team size not always 4 (or even <=4!)
+    /*
     public static Vector<JSONObject> printPlayersByTeam(File prettyFile) //used to be called singleString...
     {
         System.out.println("NEW FILE_______________________________________________");
@@ -784,16 +1194,17 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         ranking("matt112", peopleByTeam);
         ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
 
-         */
-    }
 
+    }
+    */
+/*
+ * Reads from a file to determine how many "people" in a pubg match were actually bots.
+ * The file includes many, many details about the match.
+ * IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
+ * NOTE: does not count guards as bots.
+ */
+//Individual, team, and match scope --> results all look the same for countBotsAndPeople. (Right?) -> At least, for now.
     /*
-     * Reads from a file to determine how many "people" in a pubg match were actually bots.
-     * The file includes many, many details about the match.
-     * IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
-     * NOTE: does not count guards as bots.
-     */
-    //Individual, team, and match scope --> results all look the same for countBotsAndPeople. (Right?) -> At least, for now.
     public static void countBotsAndPeople(File prettyFile) { //make private?
         //System.out.println("HELLO! HERE! HELLO! IN COUNTBOTSANDPEOPLE");
         try {
@@ -862,9 +1273,11 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             e.printStackTrace();
         }
     }
+     */
 
-    //Prints the names of maps played and how many times they were played.
-    //EX: "<mapName> x5" means <mapName> was played 5 times.
+//Prints the names of maps played and how many times they were played.
+//EX: "<mapName> x5" means <mapName> was played 5 times.
+    /*
     public static void printMapNames() //don't need this parameter
     {
         Collections.sort(mapsPlayed); //import java.util.Collections
@@ -891,8 +1304,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             }
         }
     }
+     */
 
-    //Given a prettified file holding data on a pubg match, returns the name of the map played on in the match.
+//Given a prettified file holding data on a pubg match, returns the name of the map played on in the match.
+    /*
     public static String getMapName(File prettyFile)
     {
         JSONObject match_start = returnObject(prettyFile, "LogMatchStart");
@@ -900,10 +1315,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         //System.out.println("mapName: " + mapName);
         return mapName;
     }
+     */
 
-    //ADDED 9/15/2022 for file creation in psuedomain for storing data (EX: request 4)
-    //Returns a file called fileName.
-    //If this file does not yet exist, attempts to create a new file called fileName and return it.
+//ADDED 9/15/2022 for file creation in psuedomain for storing data (EX: request 4)
+//Returns a file called fileName.
+//If this file does not yet exist, attempts to create a new file called fileName and return it.
+    /*
     public static File getFile(String fileName)
     {
         File file = new File(fileName);
@@ -916,475 +1333,4 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         }
         return file;
     }
-    //For each file, there is a call to the corresponding request
-    //VERY IN PROGRESS
-    public static final FileManager fileManager = new FileManager();
-    public static void psuedoMain(Scanner input) //removed "String desiredThing"
-    {
-        //File f = new File("hello");
-        //fileManager.makePretty(f);
-
-
-
-        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
-        //what if history of requests?
-        ///requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
-        ///currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
-        //File requestedResults = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
-        //FileUtils.writeStringToFile(currentFile, "\n-" + name, (Charset) null, true);
-        mapsPlayed.clear(); //avoid duplicates...
-        //printFunctionalities();
-        input = new Scanner(System.in);
-        //printOptionsToChooseFrom(functionalities, "What would you like to know?");
-
-        int request = getRequestType(input); //(requestType)
-        int requestScope = getRequestScope(input);
-        //Request r = new Request(request, requestScope);
-        requestCurrent = new Request(request, requestScope);
-        //int request = getRequest(input); //string or int? (Getting confused)
-
-
-        //Added the try/catch writeStringToFile for requestHistory 9/15
-        try {
-            //could even have a log-in system where differentiating user histories
-            FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if(request == -1) //remove?
-        {
-            System.out.println("Invalid request");
-            return;
-        }
-        String name = "";
-        if(request == 4)
-        {
-            System.out.println("Who are you looking for? (EX: matt112)");
-            name = input.next();
-            System.out.println("Now looking for: '" + name + "'");
-
-        }
-
-        int max_files = 10; //temporary (remove later)
-        int filesSoFar = 0;
-        for (File fileName : files) {
-            //if(fileName.getName() != "prettyFiles")
-            //{
-            System.out.println(fileName);
-            //try { //Added 9/18
-            //    FileUtils.writeStringToFile(requestHistory, fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile
-            //} catch (IOException e) {
-            //    e.printStackTrace();
-            //}
-
-
-            try {
-                //makePretty(fileName); //error here
-                //System.out.println("LOOK HERE!");
-                if(filesSoFar >= 10)
-                {
-                    //System.out.println("Reached max_files of " + max_files + "...terminating program");
-                } else
-                {
-                    File pretty = makePretty(fileName);
-                    getInfo(request, pretty, name);
-                    printMatchInfo(pretty); //added 9/18
-                    filesSoFar++;
-                    FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
-                    //FileUtils.writeStringToFile(currentFile, name, (Charset) null, true); //changed requestedResults to currentFile
-                //writeStringToFile(requestedResults, name); //added 9/15
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        if(request == 6) //trying this...
-        {
-            System.out.println("REQUEST = 6");
-            System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
-            printMapNames(); //this would hold repeats (but it also calculates the amt of repetitions)
-            //printMapNameFrequencies(mapsPlayed); //no longer needed
-        }
-
-        String response = "y";
-        System.out.println("Any other requests? (y/n)");
-        response = input.next();
-
-        if(response.equalsIgnoreCase("Y"))
-        {
-            psuedoMain(input); //Caution: this causes a problem with having multiple scanners open...
-        }
-        //
-        //input.close(); //put here?
-        System.out.println("Shutting down program."); //change wording...
-
-        //Call the appropriate method(s) based on user input
-    }
-
-
-    //What if there were a container of "things you could access" about any given game (or all games?)
-    //Like a user interface, where they are presented with options and type which ones they want
-
-    //switch stmt?
-    //what about for ONE specific file, or  for specific fileS?
-    //factory-like abstraction thing here? (instead)
-    //abstract this further?
-    //Is there a way to make this just thing.callRequestType() and it calls the right one?
-    //EX: class called countBotsAndPeople
-    //doing a method call but not (string from vector).call() --> actually call the method
-    public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) //changed return from void -> boolean 5/17/2022
-    {
-        //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
-        //EX: request.equalsIgnoreCase("0")
-        //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
-        if(request == 0)
-        {
-            countBotsAndPeople(prettyFile); //seems to work
-            //could this be called somehow using vector (like something[0]) to make this more "adjustable"?
-        }
-        else if(request == 1)
-        {
-            calculateKillCounts(prettyFile); //seems to work
-
-        }else if(request == 2) {
-
-            printPlayersByTeam(prettyFile); //seems to work (but quite messy)
-
-        }else if(request == 3) {
-
-            winnerWeapons(prettyFile); //seems to work
-
-        }else if(request == 4) { //NOT WORKING (issue with scanner) -->
-            // NOW switched... but still lots of extra printouts, and passing name in seems silly
-            ///TRY WRITING TO FILE HERE
-            ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors) //INTERESTING: new request, asks for name with every file...
-
-        }else if(request == 5) {
-            //NOT WORKING
-            calculateKillCountsJSON(prettyFile);
-            //having trouble accessing names of the winners specifically
-
-        }else if(request == 6) {
-            //getMaps
-            //Vector<String> mapNames = new Vector<String>(); //this is getting re-made with every file...
-            if(prettyFile == null)
-            {
-                System.out.println("FILE IS NULL");
-            }
-            String name = getMapName(prettyFile);
-            if(name != null) //Tried to fix EOF exception with this but it didn't work (which makes sense, I guess)
-            {
-                //mapNames.add(getMapName(prettyFile));
-               // System.out.println("Attempting to add: " + name + " to mapsPlayed...");
-                mapsPlayed.add(name);
-            }
-
-        }else
-        {
-            System.out.println("Invalid request"); //for example's sake (currently)
-            return (request < 0 || request >= 7); //invalid requests should not have valid numbers
-        }
-        return (request < 7 && request > -1); //valid requests should have valid numbers
-    }
-
-
-    public static void printOptionsToChooseFrom(Vector<String> options, String prompt)
-    {
-        System.out.print(prompt);
-        System.out.println(" Type the corresponding number and then press enter.\n");
-        for(int i = 0; i < options.size(); i++)
-        {
-            System.out.println(i + ": " + options.get(i));
-        }
-    }
-
-
-    //IN PROGRESS
-    public static void initiateFunctionalities()
-    {
-        functionalities.add("countBotsAndPeople");
-        functionalities.add("calculateKillCounts");
-        functionalities.add("printPlayersByTeam");
-        functionalities.add("winnerWeapons");
-        functionalities.add("ranking (of a specific person)");
-        functionalities.add("calculateKillCountsJSON");
-        functionalities.add("printMapsPlayed");
-    }
-
-    public static void initiateRequestScopes()
-    {
-        requestScopes.add("individual (EX: matt112)");
-        requestScopes.add("team       (EX: team of matt112)");
-        requestScopes.add("match      (all individuals in that match)");
-    }
-
-    //If requests are objects, then this is easier...?
-    //abstract these better...!
-    //write to file (requestHistory) here? 9/15
-    public static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
-    {
-        int request = -1; //not yet a valid request
-        boolean requestAccepted = false;
-
-        while(!requestAccepted)
-        {
-            request = Integer.parseInt(input.next()); //careful...
-            System.out.println("request is: " + request);
-            if(request >= 0 && request < optionsToChooseFrom.size())
-            {
-                requestAccepted = true; //technically not needed, but helps with clarity
-                System.out.println("Request accepted!");
-                return request;
-            }
-            System.out.println("Sorry, '" + request + "' does not match any available options. Try again.");
-        }
-        return request;
-    }
-
-    public static int getRequestType(Scanner input)
-    {
-        String prompt_requestType = "What would you like to know?";
-        printOptionsToChooseFrom(functionalities, prompt_requestType);
-        int requestType = getInput(input, functionalities);
-        return requestType;
-    }
-
-    //I want data about a particular player (EX: matt112).
-    //I want data about a particular team (EX: team of matt112)
-    //I want data about a particular match (everyone in that match).
-    ///WHAT ABOUT WANTING INFO ON MULTIPLE PEOPLE WHO ARE NOT ON THE SAME TEAM?
-    ///int request = Integer.parseInt(input.next());
-    //print the request scopes
-    //could make prompt index 0? (or last, I suppose)
-    public static int getRequestScope(Scanner input)
-    {
-        String prompt_requestScope = "WHO are we learning about?";
-        printOptionsToChooseFrom(requestScopes, prompt_requestScope);
-        int requestScope = getInput(input, requestScopes);
-        //String[] requestScopeOptions = {"individual (EX: matt112)", "team (EX: team of matt112)", "match (everyone in that match)"};
-        return requestScope;
-
-    }
-
-
-    //"Do you want to store this information in its own file?" idea
-    //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
-    //IN PROGRESS
-    public static Vector<String> mapsPlayed = new Vector<String>();
-    public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
-    public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
-    //public static Request dummyRequest;// = new Request(0,0);
-    public static Request requestCurrent;// = new Request(0,0);
-
-    public static void main(String[] args) //maybe put the "while" in here to having multiple requests actually works?
-    {
-        //String[] types = dummyRequest.getTypes();
-        Vector<String> winnersRecorded; //winners across different games
-        mapsPlayed.clear(); //clear at the beginning
-
-        initiateFunctionalities();
-        initiateRequestScopes(); //added 9/17
-
-        requestHistory = getFile("C:\\Users\\jmast\\pubg_requestHistory");
-        currentFile = getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
-
-        Scanner input = new Scanner(System.in);
-        psuedoMain(input);
-        input.close();
-    }
-}
-
-//record maps used
-//for each file, get the map
-//have a vector existing outside of this that holds the map names
-//print names (and frequency)
-
-
-
-//Note: option to keep history/request or not?
-//what if it could make a separate file for the individual request, then link this file in the history file?
-//EX: "destination" component (console only VS file only VS both)
-//what if it has already calculated something before? (Redo or try to track, store?)
-//how do you edit a file's contents?
-//could different request types go in different .cpp files entirely? (Likely more readable that way)
-//EX: record number of kills in a single game for matt112 --> over multiple games... 1, 3, 2, 6, 6, 7, 3, --> record should be 7, show only 7 (+ maybe match id)
-//could do file log with testcases passing/not passing records (Gradle...)
-
-
-//Only handles one request at a time, right?
-
-
-
-
-
-
-
-
-//"Removal buffer" (in case wanting it later):
-
-//mapNames.add(mapName);
-//mapsPlayed.add(mapName);
-//LogMatchStart
-//mapName
-
-//IN PROGRESS //make this more efficient...
-    /*
-    public static Vector<String> printFunctionalities() { //changed from void to Vector<String>
-
-        Vector<String> outputVerify = new Vector<String>();
-        System.out.println("What would you like to know? Type the corresponding number and then press enter.\n");
-        for(int i = 0; i < functionalities.size(); i++)
-        {
-            System.out.println(i + ": " + functionalities.get(i));
-            outputVerify.add(i + ": " + functionalities.get(i));
-        }
-        return outputVerify;
-    }
     */
-
-  /*
-    public static int getRequest(Scanner input) //more like validation?
-    {
-        //Scanner input = new Scanner(System.in);
-        int request = Integer.parseInt(input.next()); //careful...
-        System.out.println("request is: " + request);
-        //write to file (requestHistory) here? 9/15
-
-        boolean requestAccepted = false;
-        if(request >= 0 && request < functionalities.size())
-        {
-            requestAccepted = true;
-        }
-        if(!requestAccepted)
-        {
-            System.out.println("Sorry, '" + request + "' does not match any available functionalities.");
-            return -1; //invalid request
-        }
-        else
-        {
-            System.out.println("Request accepted!");
-
-            return request;
-            //Do it...
-        }
-    }
-     */
-
-
-    /*
-    public static void printMapNameFrequencies(Vector<String> mapNames)
-    {
-        Map<String, Integer> mapOfMaps = new HashMap<>();
-        //for each map, if not key yet, add key
-        //increment qty of appearance either way
-        for(String mapName : mapNames)
-        {
-            if(mapOfMaps.containsKey(mapName))
-            {
-                int frequency = mapOfMaps.get(mapName) + 1;
-                mapOfMaps.put(mapName, frequency); //should replace previous value (same key)
-            }
-            else
-            {
-                System.out.println(mapName + "is a NEW MAP!");
-                mapOfMaps.put(mapName, 1);
-            }
-        }
-        //for each key in mapOfMaps, print out value (a.k.a. frequency)
-        mapOfMaps.keySet();
-
-    }
-    */
-
-
-//printOptionsToChooseFrom(requestScopes);
-//Player p = new Player("15511");
-//System.out.println("Account ID: "+ p.getAccountID());
-
-///Map<Integer, String> m = new HashMap<>();
-///m.put(1, "hi");
-
-//print options for what you can do
-//ask them what they want to do
-//do it (if possible), otherwise error message
-//continue running? (y/n)
-
-//A: "HMBAP" -- HowManyBotsAndPeople?
-//B: "WWDTWU" -- WhatWeaponsDidTheWinnersUse?
-//"I want all the maps played and how often they were played"
-///File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles();
-//what if history of requests?
-
-
-//IN PROGRESSS
-//public static void getMethods()
-//{
-//        Vector<String> methods = new Vector<String>();
-//        methods.add("countBotsAndPeople");
-//}
-
-
-////EVERYTHING BELOW THIS POINT IS A MESS CURRENTLY
-
-//Hopefully: Only for battle royale* (max 4 people per team)
-//Also, deathmatches probably don't have bots (would custom games?)
-////Trying to get data that goes beyond just a single game
-    /*
-    public static void maps(File prettyFile, Vector<String> theMapsPlayed) //added "the"... (because mapsPlayed  static was getting messed up)
-    {
-        JSONObject jsonObject = returnObject(prettyFile, "LogMatchStart");
-        String mapName = jsonObject.getString("mapName");
-        int max_team_size = jsonObject.getInt("teamSize");
-        if(max_team_size <= 4)
-        {
-            //System.out.println("ATTEMPTING TO ADD " + mapName + " to mapsPlayed");
-            mapsPlayed.add(mapName);
-        }
-        else
-        {
-            System.out.println("NOT adding " + mapName + " because team size > 4");
-        }
-
-        //logmatchstart
-        //mapname
-        //could use team size (EX: only look at the ones that are actually "classic" battle royale games, not custom or deathmatch)
-        //EX: desiredThing could be mapnames
-    }
-    */
-
-//10 maps:
-//Desert
-//Heaven
-//Summerland
-//Tiger
-//Baltic
-//Summerland
-//Baltic
-//Tiger
-//Desert
-//Baltic
-
-//Frequencies:              CLAIMS
-//Desert:       2           1
-//Heaven:       1           0
-//Summerland:   2           1
-//Tiger:        2           doesn't even show up
-//Baltic:       3           3
-//-------------------
-//             =10
-
-
-
-    /* ////////////////???
-    C:\Users\jmast\pubgFilesExtracted\telemetryFile6.json
-NEW FILE_______________________________________________
-NEW FILE_______________________________________________
-LogMatchStart
-Maximum team capacity: 4
-NEW FILE_______________________________________________
-LogMatchEnd
-val of team_id_index: 100000 for account.09126421272d4bbfac0dda6625d953b5
-val of insert: 400000
-peopleByTeam so far:
-Can't add to index: 400000because peopleByTeam.size() is 2000
-     */
