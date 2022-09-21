@@ -19,7 +19,29 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     static File currentFile = null; //added 9/15
     static File requestHistory = null;
 
+    public static Vector<String> mapsPlayed = new Vector<String>();
+    public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
+    //public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
 
+    public static Request requestCurrent;// = new Request(0,0);
+
+    public static void main(String[] args)
+    {
+
+        mapsPlayed.clear(); //clear at the beginning
+
+        initiateFunctionalities();
+        //initiateRequestScopes(); //added 9/17
+
+        requestHistory = FileManager.getFile("C:\\Users\\jmast\\pubg_requestHistory");
+        currentFile = FileManager.getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+
+        Scanner input = new Scanner(System.in);
+        psuedoMain(input);
+        input.close();
+    }
+
+    //Allows for multiple requests in a single running of the program.
     public static void psuedoMain(Scanner input) //removed "String desiredThing"
     {
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
@@ -29,8 +51,10 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         input = new Scanner(System.in);
 
         int request = getRequestType(input); //(requestType)
-        int requestScope = getRequestScope(input);
+        ///int requestScope = getRequestScope(input);
         //Request r = new Request(request, requestScope);
+        int dummyForNow = 0;
+        int requestScope = dummyForNow;
         requestCurrent = new Request(request, requestScope);
         //int request = getRequest(input); //string or int? (Getting confused)
 
@@ -161,6 +185,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         }
     }
 
+    //getTypes
     //IN PROGRESS
     public static void initiateFunctionalities()
     {
@@ -173,12 +198,15 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         functionalities.add("printMapsPlayed");
     }
 
+    /*
+    //Not yet fully implemented
     public static void initiateRequestScopes()
     {
         requestScopes.add("individual (EX: matt112)");
         requestScopes.add("team       (EX: team of matt112)");
         requestScopes.add("match      (all individuals in that match)");
     }
+    */
 
     //If requests are objects, then this is easier...?
     //abstract these better...!
@@ -211,6 +239,8 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         return requestType;
     }
 
+    /*
+    //Not yet fully implemented
     public static int getRequestScope(Scanner input)
     {
         String prompt_requestScope = "WHO are we learning about?"; //Alternative: putting prompt as index 0
@@ -218,85 +248,14 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         int requestScope = getInput(input, requestScopes);
         //String[] requestScopeOptions = {"individual (EX: matt112)", "team (EX: team of matt112)", "match (everyone in that match)"};
         return requestScope;
-
     }
+     */
 
 
     //"Do you want to store this information in its own file?" idea
     //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
     //IN PROGRESS
-    public static Vector<String> mapsPlayed = new Vector<String>();
-    public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
-    public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
-
-    public static Request requestCurrent;// = new Request(0,0);
-
-    public static void main(String[] args) //maybe put the "while" in here to having multiple requests actually works?
-    {
-
-        mapsPlayed.clear(); //clear at the beginning
-
-        initiateFunctionalities();
-        initiateRequestScopes(); //added 9/17
-
-        requestHistory = FileManager.getFile("C:\\Users\\jmast\\pubg_requestHistory");
-        currentFile = FileManager.getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
-
-        Scanner input = new Scanner(System.in);
-        psuedoMain(input);
-        input.close();
-
-        /*
-        delete fileManager;
-        delete botCounter;
-        delete doRequest;
-        delete JSONManager = new JSONManager();
-        delete killCounts;
-        delete killCountsJSON;
-        delete mapManager;
-        delete matchManager;
-         */
-
-    }
 
 }
-//Was right above main:
-//public static Request dummyRequest;// = new Request(0,0);
 
-//Was in main:
-//String[] types = dummyRequest.getTypes();
-//Vector<String> winnersRecorded; //winners across different games
-
-
-
-
-//For each file, there is a call to the corresponding request
-
-//VERY IN PROGRESS
-//public static final FileManager fileManager = new FileManager();
-//public static final BotCounts botCounter = new BotCounts();
-//public static final DoRequest doRequest = new DoRequest();
-//public static final JSONManager JSONManager = new JSONManager();
-//public static final KillCounts killCounts = new KillCounts();
-//public static final KillCountsJSON killCountsJSON = new KillCountsJSON();
-//public static final MapManager mapManager = new MapManager();
-//public static final MatchManager matchManager = new MatchManager();
-
-
-//Make additional class for handling/executing the request?
-
-
-//First, store the file somewhere.
-//Second, store information that is likely to be asked for
-//That way, if likely info is asked for, it can be foudn quickly. If unlikely info is asked for, it can still be found (albeit more slowly, looking through the files)
-//Is that even worth it?
-
-//How do you store stats across games/time?
-
-
-
-//What if you had a map of players
-//Once you found a player, you added them to the map
-//Then, if you encounter that player again, you can just look in the map instead of having to search for their basic information again
-//Basic information: player name, id,
-//Could store history: weapon usage, teammates, killcount avg, rankings, (numGamesRecorded), etc.
+//maybe put the "while" in here (main method) to having multiple requests actually works?

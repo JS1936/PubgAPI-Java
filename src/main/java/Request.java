@@ -34,7 +34,10 @@ import java.util.Date;
 //Customize the API call thing (to user's request details) EX: looking for Person X info vs Person Y
 //EX: Request r = new KillCounts?
 //going to need a name...?
+import java.util.*;
 public class Request {
+    //change to vectors?
+    //Vector<String> types = {"countBotsAndPeople};
     String[] types = {"countBotsAndPeople", "calculateKillCounts", "printPlayersByTeam", "winnerWeapons", "ranking", "calculateKillCountsJSON", "mapsPlayed"};
     String[] scopes = {"individual", "team", "everyone"};
 
