@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Vector;
 
 public class JSONManager {
+
     public static JSONObject getJSONObject(String file_content, String object_type)
     {
         JSONArray jsonArray = new JSONArray(file_content);
@@ -21,20 +22,21 @@ public class JSONManager {
                 return jsonObject;
             }
         }
-        return null; //What if _T type is not found?
+        return null; //_T object type not found
     }
+
     //Returns JSONObject in prettyFile corresponding to String type. "_T" in prettyFile precedes JSONObject name.
-    //WHAT IF you could search through a prettyfile for any _T and that method would return the contents?
     public static JSONObject returnObject(File prettyFile, String type)
     {
-        System.out.println("NEW FILE_______________________________________________"); //remove?
+        //System.out.println("NEW FILE_______________________________________________"); //Helps visually with debugging
         String file_content = FileManager.storeFileAsString(prettyFile);
         return getJSONObject(file_content, type);
     }
-    //VERY similar to returnObject, but can return multiple occurrences of a type via vector (instead of limited to 1)
+
+    //VERY similar to returnObject, but can return multiple occurrences of ONE type via vector (instead of limited to 1)
     public static Vector<JSONObject> returnMultipleObjects(File prettyFile, String type)
     {
-        System.out.println("NEW FILE_______________________________________________"); //remove?
+        //System.out.println("NEW FILE_______________________________________________"); //Helps visually with debugging
         Vector<JSONObject> multipleObjects = new Vector<JSONObject>();
         String file_content = FileManager.storeFileAsString(prettyFile);
 

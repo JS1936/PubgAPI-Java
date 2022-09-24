@@ -1,9 +1,6 @@
-import org.apache.commons.io.FileUtils;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -15,8 +12,7 @@ public class BotCounts {
      * IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
      * NOTE: does not count guards as bots.
      */
-    //Individual, team, and match scope --> results all look the same for countBotsAndPeople. (Right?) -> At least, for now.
-    public static void countBotsAndPeople(File prettyFile) { //make private?
+    public static void countBotsAndPeople(File prettyFile) {
         try {
             Scanner scan = new Scanner(prettyFile);
             Vector<String> playerNames = new Vector<String>(); //account.
@@ -69,9 +65,7 @@ public class BotCounts {
 
             }
             String text = "#bots:       " + botNames.size() + " / " + playerNames.size();
-            //added 9/17 //To-do: add match_id to this?
             FileManager.writeToFileAndConsole(text);
-            //Note: If you then read from the requestHistory file, would you be able to calculate things based off of what was just now stored in there?
 
 
         } catch (FileNotFoundException e) {
@@ -84,3 +78,9 @@ public class BotCounts {
     }
 
 }
+
+//Potential future updates:
+//0: Adjust depending on request scope (individual, team, match) -> minor changes, if any
+//1: Include match_id when printing #bots
+//2: Read from requestHistory file -> calculate ___ based off of what was just stored in there
+//      (like total percentage of bots across a group of games)

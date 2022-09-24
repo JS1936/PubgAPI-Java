@@ -26,7 +26,7 @@ public class Ranking {
         JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
         //System.out.println("match definition: " + match_definition);
         String match_id = match_definition.get("MatchId").toString();
-        System.out.println("match_id = " + match_id);
+        //System.out.println("match_id = " + match_id);
 
 
         JSONObject match_end = JSONManager.returnObject(prettyFile, "LogMatchEnd");
@@ -43,22 +43,19 @@ public class Ranking {
                 System.out.println(name + "rank in this game: " + player_details.get("ranking").toString());
                 //added 9/15-> write to file here?
 
-                //probably want the matchID, too
-                //can it be made to automatically open the file, too?
                 try {
-                    //System.out.println("Inside try");
-                    //LOOK HERE-> fix
                     FileUtils.writeStringToFile(Main.currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //
                     FileUtils.writeStringToFile(Main.requestHistory, "\n-player:" + player_name + ", rank: " + player_ranking + ", match: " + match_id, (Charset) null, true); //changed requestedResults to currentFile //added 9/15
-                    //Note: match_id says whether fpp, tdm, etc.
-                    //Note #2: make writeStringToFile result look cleaner
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                //System.out.println("After try");
                 return player_details.get("ranking").toString();
             }
         }
         return ""; //was not in the game
     }
 }
+
+//Note: match_id says whether fpp, tdm, etc.
+//Note #2: make writeStringToFile result look cleaner

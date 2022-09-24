@@ -52,12 +52,13 @@ public class KillCounts extends Request {
         }
     }
 
-
-    //Accidentally removed this! Found it again through github commits history
-    //Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
+    //Tallies how many players in the game got ___ number of kills using a vector where the index corresponds to #kills,
+    //and the value at that index indicates how many players got precisely index number of kills.
+    //Calls printKillCounts.
+    //IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
+    //NOTE: Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
     //Vector<Integer> killsByTeam = new Vector<Integer>();
     //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
-    //IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
     public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
         try {

@@ -56,6 +56,7 @@ public class FileManager {
         return file_content;
     }
 
+    //If a file called fileName exists, returns it. If it does not exist, creates one and returns it.
     public static File getFile(String fileName)
     {
         File file = new File(fileName);
@@ -69,8 +70,9 @@ public class FileManager {
         return file;
     }
 
+    //Writes the given text both to the requestHistory file and to console.
     public static void writeToFileAndConsole(String text) throws IOException {
         System.out.println(text);
-        FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true); //added 9/15
+        FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true);
     }
 }
