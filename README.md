@@ -15,3 +15,17 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 |4: ranking (of a specific person)|	JSON | Ranking.java |
 |5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java |
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
+
+## Classes Breakdown ##
+* APIManager.java //empty
+* BotCounts.java //countBotsAndPeople(File prettyFile) --> end
+* DoRequest.java //empty
+* FileManager.java //makePretty, storeFileAsString, getFile, wrtieToFileAndConsole
+* JSONManager.java //getJSONObject, returnObject, returnMultipleObjects
+* KillCounts.java //printKillCountsToHistoryAndConsole, printKillCounts, calculateKillCounts
+* KillCountsJSON.java //printKillCountsJSON, calculateKillCountsJSON
+* Main.java //main, pseudoMain, getInfo, printOptionsToChooseFrom, initiateFunctionalities, getInput, getRequestType
+* MapManager.java //printMapNames (and getMapName, dashed out because present in MatchManager.java)
+* MatchManager.java //printMatchInfo, getMatchID, getPlayerPerspective, getMatchType, getTeamSizeForOfficialMatch, weaponFrequencies, winnerWeapons, printPlayersByTeam, getMapName
+* Ranking.java //ranking
+* Request.java //getRequest, getTypes, getScopes, getRequest_type, getRequest_scope
