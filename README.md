@@ -20,7 +20,7 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 * APIManager.java  //empty
 * BotCounts.java //countBotsAndPeople(File prettyFile) --> end
 * DoRequest.java //empty
-* FileManager.java //makePretty, storeFileAsString, getFile, wrtieToFileAndConsole
+* FileManager.java //makePretty, storeFileAsString, getFile, writeToFileAndConsole
 * JSONManager.java //getJSONObject, returnObject, returnMultipleObjects
 * KillCounts.java //printKillCountsToHistoryAndConsole, printKillCounts, calculateKillCounts
 * KillCountsJSON.java //printKillCountsJSON, calculateKillCountsJSON
