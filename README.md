@@ -17,7 +17,7 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
 
 ## Classes Breakdown ##
-* APIManager.java //empty
+* APIManager.java  //empty
 * BotCounts.java //countBotsAndPeople(File prettyFile) --> end
 * DoRequest.java //empty
 * FileManager.java //makePretty, storeFileAsString, getFile, wrtieToFileAndConsole
@@ -29,3 +29,7 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 * MatchManager.java //printMatchInfo, getMatchID, getPlayerPerspective, getMatchType, getTeamSizeForOfficialMatch, weaponFrequencies, winnerWeapons, printPlayersByTeam, getMapName
 * Ranking.java //ranking
 * Request.java //getRequest, getTypes, getScopes, getRequest_type, getRequest_scope
+
+## Updates ##
+
+1. Can now store history of searches
