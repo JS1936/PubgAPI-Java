@@ -8,18 +8,6 @@ import java.nio.charset.Charset;
 
 public class Ranking {
 
-//just get the matchID, too
-    //Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
-    //COULD use printPlayersByTeam (excess printouts) OR do it independently
-    //could take in String[] names instead of String name? (In case of multiple names...?)
-    //public static void ranking(String[] team, File prettyFile)
-    //{
-    //    for(String name : team)
-    //    {
-    //        ranking(name, prettyFile);
-    //    }
-    //}
-
     //Returns ranking as a string
     //Console and history printouts intentionally differ slightly for readability of console user.
     public static String ranking(String name, File prettyFile) {
@@ -59,3 +47,17 @@ public class Ranking {
 
 //Note: match_id says whether fpp, tdm, etc.
 //Note #2: make writeStringToFile result look cleaner
+
+//Potential future changes:
+
+//just get the matchID, too
+//Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
+//COULD use printPlayersByTeam (excess printouts) OR do it independently
+//could take in String[] names instead of String name? (In case of multiple names...?)
+//public static void ranking(String[] team, File prettyFile)
+//{
+//    for(String name : team)
+//    {
+//        ranking(name, prettyFile);
+//    }
+//}

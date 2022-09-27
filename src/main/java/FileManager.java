@@ -28,7 +28,7 @@ public class FileManager {
         String prettyJsonString = gson.toJson(je);
 
         //make a file to put the "pretty" text in, if needed
-        String pathToDir  = "C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles";
+        String pathToDir  = "C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles"; //look for copyOfSampleFile_JS1936.txt here...
         File theDir = new File(pathToDir); //custom pathname?
         if (!theDir.exists()) {
             theDir.mkdirs();

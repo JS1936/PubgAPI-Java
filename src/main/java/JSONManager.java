@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Vector;
 
+//add a method to return the whole file?
 public class JSONManager {
 
     public static JSONObject getJSONObject(String file_content, String object_type)

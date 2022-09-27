@@ -30,6 +30,12 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
     public static void main(String[] args)
     {
+        try {
+            APIManager.workingWithSampleFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         mapsPlayed.clear(); //clear at the beginning
         initiateFunctionalities();
         //initiateRequestScopes(); //added 9/17
