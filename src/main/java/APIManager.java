@@ -10,12 +10,17 @@
 import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
+import java.io.*;
+import java.net.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -25,6 +30,91 @@ public class APIManager {
 
     //https://mkyong.com/java/java-read-a-file-from-resources-folder/
     //InputStream is = JavaClassName.class.getClassLoader().getResourceAsStream("file.txt");
+
+    //public static void get()
+    //{
+
+    //}
+    public static String getDateOfRequest()
+    {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date currentDate = new Date();
+        //System.out.println(dateFormat.format(currentDate));
+        return dateFormat.format(currentDate);
+    }
+    //curl "https://api.pubg.com/shards/$platformn/matches/$matchId" \
+    public static void makeRequest_givenMatchID(String match_id) throws IOException
+    {
+
+        System.out.println("makeRequest_givenMatchID(" + match_id + ")");
+        String API_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMjdiZDY0MC05ODk5LTAxM2EtYjVmNS0wYzc0NWVlZDY1NjQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjQ5MzMzNTYxLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InB1YmdfYXBpX2xlYXJuIn0.aQZbXGdwOM8HwXLvulYN2nmUUCVgG6susMmAE6oKopY";
+        //String playerName = "JS1936";
+        //URL url = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + playerName);
+        URL url = new URL("https://api.pubg.com/shards/$platformn/matches/" + match_id);
+
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.setRequestProperty("Authorization","Bearer " + API_key);
+        conn.setRequestProperty("Accept", "application/vnd.api+json");
+        //conn.setRequestProperty("Accept-Encoding","gzip"); //confused
+
+        InputStream inputStream = conn.getInputStream();
+        //Reader inputStreamReader = new InputStreamReader(inputStream);
+        //ObjectInputStream ois = new ObjectInputStream(inputStream);
+        //System.out.println("Look2: " + inputStreamReader.toString());
+        String dateOfRequest = getDateOfRequest();
+        //System.out.println("Date of request: " + dateOfRequest);
+        //String filePath = "C:\\sampleFile_" + playerName + "_[" + dateOfRequest + "].txt";
+        //System.out.println("FILE PATH: " + filePath);
+        //File data = new File("C:\\sampleFile_" + playerName + "_[" + dateOfRequest + "].txt"); //add time component?
+        File data = new File("C:\\sampleFile_" + match_id + ".txt"); //add time component
+        if(!data.exists())
+        {
+            System.out.println("File does not yet exist");
+            data.getParentFile().mkdirs();//createNewFile();
+            data.createNewFile();
+        }
+
+        OutputStream output = new FileOutputStream(data);
+        inputStream.transferTo(output);
+        //inputStreamReader.close();
+        output.close();
+        ///data.deleteOnExit();
+        //account.9c618f3851b646f9a6de9bbd6962d73f
+        //How would these files get added into the other program?
+    }
+    public static void something()
+    {
+        //
+    }
+    public static void getMatchIDsFromSampleFile() throws IOException
+    {
+        Path src = (Path) Paths.get("/Users", "jmast", "IdeaProjects", "PubgAPI-Java", "src", "main", "resources", "sampleFile_JS1936.txt");
+        File s = src.toFile();
+        File s_pretty = FileManager.makePretty(s);
+        System.out.println("Pretty path: " + s_pretty.getAbsolutePath());
+
+        String fileAsString = FileManager.storeFileAsString(s_pretty);
+        System.out.println(fileAsString);
+
+        JSONObject jsonObject = new JSONObject(fileAsString);
+        JSONArray jsonArrayOfMatches = jsonObject.getJSONArray("data").getJSONObject(0).getJSONObject("relationships").getJSONObject("matches").getJSONArray("data");
+        System.out.println("jsonArray.length = " + jsonArrayOfMatches.length());
+        Vector<String> match_ids = new Vector<String>();
+
+        for(int i = 0; i < jsonArrayOfMatches.length(); i++)
+        {
+            JSONObject id = jsonArrayOfMatches.getJSONObject(i);
+            String match_id = id.get("id").toString();
+            //System.out.println("match_id = " + match_id);
+            makeRequest_givenMatchID(match_id);
+            match_ids.add(match_id);
+        }
+        System.out.println("match_ids.size() = " + match_ids.size());
+        exit(0);
+
+    }
+
     public static void workingWithSampleFile() throws IOException {
         //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
         System.out.println("Attempting to work with sample file...");
@@ -57,8 +147,9 @@ public class APIManager {
             //System.out.println(jsonArray.getJSONObject(i));
             JSONObject id = jsonArray.getJSONObject(i);
             String match_id = id.get("id").toString();
-            System.out.println("match_id = " + match_id);
+            //System.out.println("match_id = " + match_id);
             match_ids.add(match_id);
+            makeRequest_givenMatchID(match_id);
             //System.out.println(id.toString());
             //System.out.println(id.keySet());
         }

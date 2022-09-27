@@ -31,7 +31,8 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     public static void main(String[] args)
     {
         try {
-            APIManager.workingWithSampleFile();
+            //APIManager.workingWithSampleFile();
+            APIManager.getMatchIDsFromSampleFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
