@@ -1,4 +1,5 @@
 ## Pubg-API-Java ##
+Project in-progress
 
 ## Purpose ## 
 This project started because I wanted to know how many bots were in the pubg games I played. Upon seeing what the telemetry data looked like, I realized there were a lot of other statistics I could learn about, too. 
