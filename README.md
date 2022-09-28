@@ -33,7 +33,7 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 
 ## Updates ##
 
-1. Can now store history of searches
+1. Can now store history of searches (via "requestHistory" in Main.cpp)
 
 ## Areas for Improvement ##
 * Efficient memory usage/storage
