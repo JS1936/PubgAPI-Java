@@ -41,5 +41,5 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 * Readability / simplicity
 * Clarity with naming
 * Removal of unneeded code and/or comments
-* Ease of API request --> project request transference
+* Ease of API request --> project request transference (currently is unclear and likely labor-intensive for outside viewer)
 * Current state of API requests is very limited in how the request can vary
