@@ -37,7 +37,7 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 
 ### Top 3 Upcoming Updates ###
 
-1. Pinpoint sources of memory leaks and resolve the leaks(caution: frequent repetition of program runs can cause computer to freeze as of Oct 3, 2022) 
+1. Pinpoint sources of memory leaks and resolve the leaks (caution: frequent repetition of program runs can cause computer to freeze as of Oct 3, 2022) 
 2. Transfer PubgAPI-Request-Java repository content into APIManager.java and DoRequest.java
 3. Add instructions for how to make various requests (e.g. for specific player(ers) and/or match(es))
 
