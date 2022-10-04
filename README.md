@@ -45,12 +45,15 @@ As of Oct 3, 2022, the Pubg-API-Java project has the following primary functiona
 
 ## Areas for Improvement ##
 * Efficient memory usage/storage
-* Consistent organization of classes
 * Readability / simplicity
-* Clarity with naming
-* Removal of unneeded code and/or comments
-* Ease of API request --> project request transference (currently is unclear and likely labor-intensive for outside viewer)
-* Current state of API requests is very limited in how the request can vary
+    * Removal of unneeded code and/or comments
+    * Clarity with naming
+    * Brevity / clarity of commit messages
+    * Inclusion of dates when making updates
+    * Consistent organization of classes
+* API request process
+    * Ease of API request --> project request transference (currently is unclear and likely labor-intensive for outside viewer)
+    * Current state of API requests is very limited in how the request can vary
 * Comprehensiveness and speed of testcases
-* Brevity/clarity of commit messages
-* Inclusion of dates when making updates
+
+
