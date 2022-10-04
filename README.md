@@ -35,6 +35,12 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 
 1. Can now store history of searches (via "requestHistory" in Main.cpp)
 
+### Top 3 Upcoming Updates ###
+
+1. Pinpoint sources of memory leaks and resolve the leaks(caution: frequent repetition of program runs can cause computer to freeze as of Oct 3, 2022) 
+2. Transfer pubg-request-api repository content into APIManager.java and DoRequest.java
+3. Add instructions for how to make various requests (e.g. for specific player(ers) and/or match(es))
+
 ## Areas for Improvement ##
 * Efficient memory usage/storage
 * Consistent organization of classes
@@ -43,3 +49,5 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 * Removal of unneeded code and/or comments
 * Ease of API request --> project request transference (currently is unclear and likely labor-intensive for outside viewer)
 * Current state of API requests is very limited in how the request can vary
+* Comprehensiveness and speed of testcases
+* Brevity/clarity of commit messages
