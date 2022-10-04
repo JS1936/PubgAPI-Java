@@ -5,7 +5,7 @@ In-progress. Actively updated
 This project started because I wanted to know how many bots were in the pubg games I played. Upon seeing what the telemetry data looked like, I realized there were a lot of other statistics I could learn about, too. 
 
 ## Functionalities ##
-Currently, the Pubg-API-Java project has the following primary functionalities:
+As of Oct 3, 2022, the Pubg-API-Java project has the following primary functionalities:
 
 | WHAT      |   HOW   | WHERE |
 |---------- | ------- | ----- |
@@ -34,6 +34,8 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 ## Updates ##
 
 1. Can now store history of searches (via "requestHistory" in Main.cpp)
+2. Can make multiple requests per program run
+3. Can now access [sample files](https://github.com/JS1936/PubgAPI-Java/tree/work/src/main/resources) showing original and "prettified" versions of a file
 
 ### Top 3 Upcoming Updates ###
 
@@ -51,3 +53,4 @@ Currently, the Pubg-API-Java project has the following primary functionalities:
 * Current state of API requests is very limited in how the request can vary
 * Comprehensiveness and speed of testcases
 * Brevity/clarity of commit messages
+* Inclusion of dates when making updates
