@@ -31,14 +31,15 @@ public class FileManager {
         return inactiveFolder.getAbsolutePath();
     }
     public static void setAbsolutePathToActiveFolder(String proposedPath) throws IOException {
+        System.out.println("Proposed path: " + proposedPath);
         File newDestForActiveFolder = new File(proposedPath);
-        //if(!newDestForActiveFolder.exists())
-        //{
-        //    System.out.println("DEST does not yet exist");
+        if(!newDestForActiveFolder.exists())
+        {
+            System.out.println("DEST does not yet exist");
          //   newDestForActiveFolder.mkdirs();
         //    newDestForActiveFolder.createNewFile();
-       // }//
-        System.out.println("Pre: " + getAbsolutePathToActiveFolder());
+       }//
+        ///System.out.println("Pre: " + getAbsolutePathToActiveFolder());
 
         //FileUtils.moveDirectory()
         //FileUtils.moveDirectoryToDirectory(activeFolder, newDestForActiveFolder);
@@ -49,17 +50,19 @@ public class FileManager {
         //FileUtils.moveDirectoryToDirectory(activeFolder, newDestForActiveFolder, true);
         //activeFolder.renameTo(newDestForActiveFolder); //f
         moveFile(activeFolder, newDestForActiveFolder);
-        activeFolder.getAbsolutePath();
+        ///activeFolder.getAbsolutePath();
         //activeFolder.renameTo(newDestForActiveFolder);//. moveFile(activeFolder, newDestForActiveFolder);
-        System.out.println("Post: " + getAbsolutePathToActiveFolder());
+        ///System.out.println("Post: " + getAbsolutePathToActiveFolder());
         //if(isValidProposedPath(proposedPath))
         //{
         //    activeFolder.renameTo(newDestForActiveFolder);
         //}
     }
     public static void setAbsolutePathToInactiveFolder(String proposedPath) throws IOException {
+
         File newDestForInactiveFolder = new File(proposedPath);
         moveFile(inactiveFolder, newDestForInactiveFolder);
+        //FileUtils.moveDirectoryToDirectory(inactiveFolder, newDestForInactiveFolder, false);
     }
 
     /*
@@ -142,18 +145,28 @@ public class FileManager {
         System.out.println("dest: " + dest.getAbsolutePath());
         if(!src.exists())
         {
-            //src.mkdirs();
-            //src.createNewFile();
+            src.mkdirs();
+            src.createNewFile();
             throw new FileNotFoundException("Error: src file not found");
         }
         if(dest.exists())
         {
+
+            dest.deleteOnExit();
             throw new FileAlreadyExistsException("Error: dest file already exists but should not exist yet");
         }
         System.out.println("SRC: " + src.getAbsolutePath());
         System.out.println("Attempted DEST: " + dest.getAbsolutePath());
         System.out.println("About to move file");
-        src.renameTo(dest); //fileTail
+        boolean isRenamed = src.renameTo(dest); //fileTail
+        if(isRenamed)
+        {
+            System.out.println("isRenamed");
+        }
+        else
+        {
+            System.out.println("is not renamed");
+        }
         System.out.println("Post-move");
     }
 

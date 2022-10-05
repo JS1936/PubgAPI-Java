@@ -39,8 +39,9 @@ public class FileManagerTests {
     @Test
     //
     void setAbsolutePathToActiveFolder_Test() throws IOException {
-       // System.out.println("Current path: " + FileManager.getAbsolutePathToActiveFolder());
-                getAbsolutePathToActiveFolder_Test();
+       System.out.println("Current path: " + FileManager.getAbsolutePathToActiveFolder());
+       //         getAbsolutePathToActiveFolder_Test();
+       //         System.out.println(FileManager.activeFolder.getAbsolutePath());
 
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
         String expect = newPath;
@@ -59,7 +60,8 @@ public class FileManagerTests {
 
     @Test
     void setAbsolutePathToInactiveFolder() throws IOException {
-        getAbsolutePathToInactiveFolder_Test();
+        System.out.println("Current path: " + FileManager.getAbsolutePathToInactiveFolder());
+        //getAbsolutePathToInactiveFolder_Test();
         String newPath = "C:\\sample\\path\\newPathToInactiveFolder";
         String expect = newPath;
         FileManager.setAbsolutePathToInactiveFolder(newPath);
