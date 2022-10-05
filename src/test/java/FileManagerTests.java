@@ -36,6 +36,19 @@ public class FileManagerTests {
         //    throw new UnexpectedException("(EXPECT)" + expect + " != " + actual + " (ACTUAL)");
         //}
     }
+
+    @Test
+    //Seems to be working
+    void setAbsolutePathToActiveFolder_TestSendingFile() throws IOException {
+        String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
+       // File replacement = FileManager.getFile(newPath);
+       // if(replacement.exists())
+      //  {
+      //      System.out.println("replacement file exists");
+      //  }
+        FileManager.trialMove(FileManager.activeFolder, newPath);
+        //FileManager.setAbsolutePathActiveFolder_FolderExistsAlready(replacement);
+    }
     @Test
     //
     void setAbsolutePathToActiveFolder_Test() throws IOException {
@@ -65,7 +78,7 @@ public class FileManagerTests {
         String newPath = "C:\\sample\\path\\newPathToInactiveFolder";
         String expect = newPath;
         FileManager.setAbsolutePathToInactiveFolder(newPath);
-        String actual = FileManager.getAbsolutePathToActiveFolder();
+        String actual = FileManager.getAbsolutePathToInactiveFolder();
         checkIfExpectEqualsActual(expect, actual);
     }
     /*

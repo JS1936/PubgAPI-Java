@@ -9,6 +9,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+
+import static java.nio.file.Files.copy;
 
 //add file? Remove file?
 public class FileManager {
@@ -30,6 +35,52 @@ public class FileManager {
         System.out.println("Absolute path to inactive folder: " + inactiveFolder.getAbsolutePath());
         return inactiveFolder.getAbsolutePath();
     }
+
+    //Changing folder to something that already exists, or making a new one?
+
+    public static void trialMove(File src, String destPath)
+    {
+
+        try {
+            FileUtils.moveDirectory(src, new File(destPath));
+            //copy and delete?
+            System.out.println("Trial move was attempted");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+
+    }
+    //1) Does activeFolder exist?
+    //2) Does currentlyInactive exist?
+    //3) If both exist, copy the contents of activeFolder to currentlyInactive.
+    //4) Delete activeFolder if it exists.
+    //5) Assign activeFolder to be the currentlyInactive folder/file.
+    public static void setAbsolutePathActiveFolder_FolderExistsAlready(File currentlyInactive) throws IOException {
+        System.out.println("Attempting to copy directory from active folder to currently inactive");
+        if(activeFolder.exists())
+        {
+            System.out.println("activeFolder file exists");
+        }
+        else
+        {
+            if(activeFolder.isFile())
+            {
+                System.out.println("activeFolder is a file");
+            }
+            //System.out.println(activeFolder.getAbsolutePath());
+            //activeFolder.createNewFile();// = new File("C:\\activeFolder");
+            //activeFolder = getFile( "C:\\activeFolder");
+            System.out.println("activeFolder file does not exist");
+        }
+        System.out.println("DEST: " + currentlyInactive.getAbsolutePath());
+        FileUtils.copyDirectory(activeFolder, currentlyInactive);
+        Files.deleteIfExists(activeFolder.toPath());
+        activeFolder = currentlyInactive;
+    }
+
+
+
     public static void setAbsolutePathToActiveFolder(String proposedPath) throws IOException {
         System.out.println("Proposed path: " + proposedPath);
         File newDestForActiveFolder = new File(proposedPath);
@@ -138,9 +189,54 @@ public class FileManager {
 
     //Activate and inactivate are really just the same thing... moving a file. (And both could assume the file is already "pretty")
 
+    public static void printWhetherFileExists(File file)
+    {
+        System.out.println("FILE: " + file.getAbsolutePath());
+        if(file.exists())
+        {
+            System.out.println("File exists");
+        }
+        else
+        {
+            System.out.println("File does not exist.");
+        }
+    }
     //call with string (string name) or file itself?
     //Note: make this private helper?
     public static void moveFile(File src, File dest) throws IOException {
+
+        Path sourcePath = Path.of(src.getPath());
+        Path destPath = Path.of(dest.getPath());
+
+        System.out.println("sourcePath: " + sourcePath);
+        System.out.println("destPath: " + destPath);
+
+        System.out.println("DEST: " + dest.getAbsolutePath());
+        src = getFile(src.getAbsolutePath());
+        if(dest.exists())
+        {
+
+            System.out.println("DEST file exists");
+        }
+        else
+        {
+            dest.mkdirs();
+            dest.createNewFile();
+            System.out.println("DEST file does not exist");
+        }
+        //dest = getFile(dest.getAbsolutePath());
+        printWhetherFileExists(src);
+        printWhetherFileExists(dest);
+        System.out.println("source path's file name: " + sourcePath.getFileName());
+        //dest.delete();
+        //Files.move(sourcePath, destPath);
+
+        //https://www.codejava.net/java-se/file-io/how-to-rename-move-file-or-directory-in-java
+        copy(sourcePath, destPath, StandardCopyOption.REPLACE_EXISTING);
+        //Files.deleteIfExists(sourcePath);
+        //Files.move(sourcePath, destPath,
+        //        StandardCopyOption.REPLACE_EXISTING);
+        /*
         System.out.println("src:" + src.getAbsolutePath());
         System.out.println("dest: " + dest.getAbsolutePath());
         if(!src.exists())
@@ -159,6 +255,8 @@ public class FileManager {
         System.out.println("Attempted DEST: " + dest.getAbsolutePath());
         System.out.println("About to move file");
         boolean isRenamed = src.renameTo(dest); //fileTail
+
+
         if(isRenamed)
         {
             System.out.println("isRenamed");
@@ -167,6 +265,8 @@ public class FileManager {
         {
             System.out.println("is not renamed");
         }
+        */
+
         System.out.println("Post-move");
     }
 
