@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Path;
 import java.rmi.UnexpectedException;
 
 public class FileManagerTests {
@@ -31,60 +32,42 @@ public class FileManagerTests {
         String expect = "C:\\inactiveFolder";
         String actual = FileManager.getAbsolutePathToInactiveFolder();
         checkIfExpectEqualsActual(expect, actual);
-        //if(!expect.equals(actual))
-        //{
-        //    throw new UnexpectedException("(EXPECT)" + expect + " != " + actual + " (ACTUAL)");
-        //}
     }
 
     @Test
     //Seems to be working
     void setAbsolutePathToActiveFolder_TestSendingFile() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
-        FileManager.trialMove(FileManager.activeFolder, newPath);
-        //FileManager.setAbsolutePathActiveFolder_FolderExistsAlready(replacement);
+        FileManager.moveFileToPath(FileManager.activeFolder, newPath);
     }
 
     @Test
     void setAbsolutePathToInactiveFolder_TestSendingFile() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToInactiveFolder";
-        FileManager.trialMove(FileManager.inactiveFolder, newPath);
+        FileManager.moveFileToPath(FileManager.inactiveFolder, newPath);
     }
 
     @Test
-    //
     void setAbsolutePathToActiveFolder_Test() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
-        FileManager.trialMove(FileManager.activeFolder, newPath);
+        FileManager.moveFileToPath(FileManager.activeFolder, newPath);
     }
 
     /*
     @Test
-    void setAbsolutePathToInactiveFolder() throws IOException {
-        System.out.println("Current path: " + FileManager.getAbsolutePathToInactiveFolder());
-        //getAbsolutePathToInactiveFolder_Test();
-        String newPath = "C:\\sample\\path\\newPathToInactiveFolder";
-        String expect = newPath;
-        FileManager.setAbsolutePathToInactiveFolder(newPath);
-        String actual = FileManager.getAbsolutePathToInactiveFolder();
-        checkIfExpectEqualsActual(expect, actual);
+    void setAbsolutePathToInactiveFolder_Indirect() throws IOException {
+        String newPath = "C:\\sampleFile\\path\\newPathToInactiveFolder";
+        FileManager.setAbsolutePathToInactiveFolder(newPath);// throws IOException {
     }
 
-     */
-    /*
-    public static void setAbsolutePathToActiveFolder(String proposedPath) throws FileAlreadyExistsException, FileNotFoundException {
-        File newDestForActiveFolder = new File(proposedPath);
-        moveFile(activeFolder, newDestForActiveFolder);
-        //if(isValidProposedPath(proposedPath))
-        //{
-        //    activeFolder.renameTo(newDestForActiveFolder);
-        //}
-    }
-    public static void setAbsolutePathToInactiveFolder(String proposedPath) throws FileAlreadyExistsException, FileNotFoundException {
-        File newDestForInactiveFolder = new File(proposedPath);
-        moveFile(inactiveFolder, newDestForInactiveFolder);
+    @Test
+    void setAbsolutePathToActiveFolder_Indirect() throws IOException {
+        String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
+        FileManager.setAbsolutePathToActiveFolder(newPath);// throws IOException {
     }
     */
+
+
     @Test
     void activateFile() throws IOException {
         System.out.println("Attempting to activate file");
@@ -118,7 +101,36 @@ public class FileManagerTests {
             throw new FileNotFoundException("Error: File not found.");
         }
     }
+}
+
+ /*
+    @Test
+    void setAbsolutePathToInactiveFolder() throws IOException {
+        System.out.println("Current path: " + FileManager.getAbsolutePathToInactiveFolder());
+        //getAbsolutePathToInactiveFolder_Test();
+        String newPath = "C:\\sample\\path\\newPathToInactiveFolder";
+        String expect = newPath;
+        FileManager.setAbsolutePathToInactiveFolder(newPath);
+        String actual = FileManager.getAbsolutePathToInactiveFolder();
+        checkIfExpectEqualsActual(expect, actual);
+    }
+
+     */
     /*
+    public static void setAbsolutePathToActiveFolder(String proposedPath) throws FileAlreadyExistsException, FileNotFoundException {
+        File newDestForActiveFolder = new File(proposedPath);
+        moveFile(activeFolder, newDestForActiveFolder);
+        //if(isValidProposedPath(proposedPath))
+        //{
+        //    activeFolder.renameTo(newDestForActiveFolder);
+        //}
+    }
+    public static void setAbsolutePathToInactiveFolder(String proposedPath) throws FileAlreadyExistsException, FileNotFoundException {
+        File newDestForInactiveFolder = new File(proposedPath);
+        moveFile(inactiveFolder, newDestForInactiveFolder);
+    }
+    */
+   /*
     public static File inactivateFile(File fileToInactivate) throws IOException {
         String fileName = fileToInactivate.getAbsolutePath();
         for(int index = fileName.length() - 1; index >= 0; index--)
@@ -135,5 +147,3 @@ public class FileManagerTests {
         fileToInactivate.renameTo(new File("C:\\Users\\jmast\\pubgFilesExtracted\\inactiveFiles\\" + fileTail));
     }
      */
-
-}

@@ -21,26 +21,38 @@ public class FileManager {
     static File activeFolder = new File("C:\\activeFolder");
     static File inactiveFolder = new File("C:\\inactiveFolder");
 
-    //public static boolean isValidProposedPath(String path)
-    //{
-    //    return false;
-    //}
+
+    //Returns a String holding the absolute path to file activeFolder.
     public static String getAbsolutePathToActiveFolder()
     {
         System.out.println("Absolute path to active folder: " + activeFolder.getAbsolutePath());
         return activeFolder.getAbsolutePath();
     }
+
+    //Returns a String holding the absolute path to file inactiveFolder.
     public static String getAbsolutePathToInactiveFolder()
     {
         System.out.println("Absolute path to inactive folder: " + inactiveFolder.getAbsolutePath());
         return inactiveFolder.getAbsolutePath();
     }
 
+    /*
+    public static void setAbsolutePathToInactiveFolder(String newPath) throws IOException {
+        moveFile(inactiveFolder, new File(newPath));
+    }
+
+    public static void setAbsolutePathToActiveFolder(String newPath) throws IOException {
+        moveFile(activeFolder, new File(newPath));
+    }
+     */
+
     //Changing folder to something that already exists, or making a new one?
 
     //ASSUMES: src file exists
     //ASSUMES: file does not yet exist at path destPath
-    //Helps trialMove
+    //Helps moveFileToPath
+
+    //Assumes src file does not yet exist. Creates it.
     public static void makeTheFileExist(File src)
     {
         try {
@@ -52,7 +64,8 @@ public class FileManager {
         }
     }
 
-    public static void trialMove(File src, String destPath) {//throws FileNotFoundException {
+    //If possible, moves src folder (and nested contents) to a new path described by destPath.
+    public static void moveFileToPath(File src, String destPath) {//throws FileNotFoundException {
         //src.listFiles();
         if(!src.exists())
         {
@@ -78,6 +91,7 @@ public class FileManager {
     //3) If both exist, copy the contents of activeFolder to currentlyInactive.
     //4) Delete activeFolder if it exists.
     //5) Assign activeFolder to be the currentlyInactive folder/file.
+    /*
     public static void setAbsolutePathActiveFolder_FolderExistsAlready(File currentlyInactive) throws IOException {
         System.out.println("Attempting to copy directory from active folder to currently inactive");
         if(activeFolder.exists())
@@ -100,9 +114,9 @@ public class FileManager {
         Files.deleteIfExists(activeFolder.toPath());
         activeFolder = currentlyInactive;
     }
+*/
 
-
-
+    /*
     public static void setAbsolutePathToActiveFolder(String proposedPath) throws IOException {
         System.out.println("Proposed path: " + proposedPath);
         File newDestForActiveFolder = new File(proposedPath);
@@ -131,12 +145,17 @@ public class FileManager {
         //    activeFolder.renameTo(newDestForActiveFolder);
         //}
     }
+
+     */
+    /*
     public static void setAbsolutePathToInactiveFolder(String proposedPath) throws IOException {
 
         File newDestForInactiveFolder = new File(proposedPath);
         moveFile(inactiveFolder, newDestForInactiveFolder);
         //FileUtils.moveDirectoryToDirectory(inactiveFolder, newDestForInactiveFolder, false);
     }
+
+     */
 
     /*
      * Takes the contents of an "ugly" file and makes a new file
@@ -311,6 +330,7 @@ public class FileManager {
 
 
     //Pre: assumes (for now, at least) that file is "pretty"
+    //Pre: fileToActivate should exist
     public static void activateFile(File fileToActivate) throws IOException {
         System.out.println("Attempting to activate file");
         if(!fileToActivate.exists())
