@@ -38,9 +38,33 @@ public class FileManager {
 
     //Changing folder to something that already exists, or making a new one?
 
-    public static void trialMove(File src, String destPath)
+    //ASSUMES: src file exists
+    //ASSUMES: file does not yet exist at path destPath
+    //Helps trialMove
+    public static void makeTheFileExist(File src)
     {
+        try {
+            src.mkdirs();
+            src.createNewFile();
+        } catch (IOException e) {
+            //throw new FileNotFoundException("Error: Folder to move does not exist.");//To move a folder, it needs to exist.");
+            e.printStackTrace();
+        }
+    }
 
+    public static void trialMove(File src, String destPath) {//throws FileNotFoundException {
+        //src.listFiles();
+        if(!src.exists())
+        {
+            makeTheFileExist(src);
+        }
+
+        File dest = new File(destPath);
+        if(dest.exists())
+        {
+            //System.out.println("Deleting dest file (should not exist yet).");
+            dest.delete();
+        }
         try {
             FileUtils.moveDirectory(src, new File(destPath));
             //copy and delete?
@@ -48,8 +72,6 @@ public class FileManager {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
-
     }
     //1) Does activeFolder exist?
     //2) Does currentlyInactive exist?
