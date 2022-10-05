@@ -28,7 +28,9 @@ public class FileManager {
         String prettyJsonString = gson.toJson(je);
 
         //make a file to put the "pretty" text in, if needed
-        String pathToDir  = "C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles"; //look for copyOfSampleFile_JS1936.txt here...
+        //C:\Users\jmast\pubgFilesExtracted
+        //Remove this?
+        String pathToDir  = "C:\\Users\\jmast\\pubgFilesExtracted"; //look for copyOfSampleFile_JS1936.txt here...
         File theDir = new File(pathToDir); //custom pathname?
         if (!theDir.exists()) {
             theDir.mkdirs();
@@ -47,7 +49,8 @@ filename.getName(): prettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprett
 #bots:       10 / 85
          */
         System.out.println("filename.getName(): " + fileName.getName());
-        File prettyFile = new File(pathToDir + fileName.getName());
+        //File prettyFile = new File(pathToDir + fileName.getName());
+        File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
 
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
