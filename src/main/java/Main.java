@@ -39,6 +39,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
         mapsPlayed.clear(); //clear at the beginning
         initiateFunctionalities();
+        //
         //initiateRequestScopes(); //added 9/17
 
         requestHistory = FileManager.getFile("C:\\Users\\jmast\\pubg_requestHistory");
