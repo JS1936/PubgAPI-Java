@@ -134,6 +134,44 @@ class MainTest {
     void getMethods() {
     }
 
+
+    @Test
+    void inactivateFile() throws IOException {
+        System.out.println("Attempting to inactivate file...");
+        File f = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\testcaseFile_inactivate.txt");
+        //"C:\\MainTest-inactivateFile-sampleFolder\\testcaseFile_inactivate.txt");
+        //C:\Users\jmast\pubgFilesExtracted\testcaseFiles
+        if(f.exists())
+        {
+            System.out.println("Found the file!");
+            FileManager.inactivateFile(f);
+        }
+        else
+        {
+            throw new FileNotFoundException("Error: File not found.");
+        }
+
+
+    }
+    /*
+    public static File inactivateFile(File fileToInactivate) throws IOException {
+        String fileName = fileToInactivate.getAbsolutePath();
+        for(int index = fileName.length() - 1; index >= 0; index--)
+        {
+            System.out.println("FILENAME: " + fileName);
+            if(fileName.substring(index, index+1) == "\\")
+            {
+                fileName = fileName.substring(0, index) + "\\" + fileName.substring(index+1);
+            }
+        }
+        String[] pathParts = fileToInactivate.getAbsolutePath().split("\\\\");
+        String fileTail = pathParts[pathParts.length - 1];
+        writeToFileAndConsole("(inactivateFolder) File '" + fileToInactivate.getAbsolutePath() + "' should be moved to inactiveFolder when program terminates.");
+        fileToInactivate.renameTo(new File("C:\\Users\\jmast\\pubgFilesExtracted\\inactiveFiles\\" + fileTail));
+    }
+     */
+
+
     @Test
     // outputVerify.add(i + ": " + functionalities.get(i));
     //Vector<String> expected_functionalities = new Vector<String>() {
