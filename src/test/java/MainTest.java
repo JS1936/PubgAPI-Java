@@ -134,13 +134,27 @@ class MainTest {
     void getMethods() {
     }
 
-
+    @Test
+    void activateFile() throws IOException {
+        System.out.println("Attempting to activate file");
+        File f = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\testcaseFile_activate.txt");
+        if(f.exists())
+        {
+            System.out.println("File exists!");
+            FileManager.activateFile(f);
+        }
+        else
+        {
+            throw new FileNotFoundException("Error: File not found.");
+        }
+    }
     @Test
     void inactivateFile() throws IOException {
         System.out.println("Attempting to inactivate file...");
-        File f = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\testcaseFile_inactivate.txt");
-        //"C:\\MainTest-inactivateFile-sampleFolder\\testcaseFile_inactivate.txt");
-        //C:\Users\jmast\pubgFilesExtracted\testcaseFiles
+        File f = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\testcaseFile_activate.txt");
+        //File f = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\testcaseFile_inactivate.txt");
+        //////"C:\\MainTest-inactivateFile-sampleFolder\\testcaseFile_inactivate.txt");
+        ////C:\Users\jmast\pubgFilesExtracted\testcaseFiles
         if(f.exists())
         {
             System.out.println("Found the file!");

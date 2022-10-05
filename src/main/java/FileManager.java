@@ -81,47 +81,82 @@ public class FileManager {
     //    fileToDelete.deleteOnExit();
     //}
 
+    //"Activating a file" is essentially done by "makePretty" right now... but the user can't control than manually
+    //Move file from original location into folder where pubg pretty files are read from.
+    //DEST:
+
+    //Activate and inactivate are really just the same thing... moving a file. (And both could assume the file is already "pretty")
+
+    //call with string (string name) or file itself?
+    public static void moveFile(File src, File dest) throws FileNotFoundException, FileAlreadyExistsException {
+        if(!src.exists())
+        {
+            throw new FileNotFoundException("Error: src file not found");
+        }
+        if(dest.exists())
+        {
+            throw new FileAlreadyExistsException("Error: dest file already exists but should not exist yet");
+        }
+        System.out.println("SRC: " + src.getAbsolutePath());
+        System.out.println("Attempted DEST: " + dest.getAbsolutePath());
+        System.out.println("About to move file");
+        src.renameTo(dest); //fileTail
+        System.out.println("Post-move");
+    }
+
+    public static String getTailOfFile(File file)
+    {
+        String src_fileName = file.getAbsolutePath();
+        for(int index = src_fileName.length() - 1; index >= 0; index--)
+        {
+            if(src_fileName.substring(index, index+1) == "\\")
+            {
+                src_fileName = src_fileName.substring(0, index) + "\\" + src_fileName.substring(index+1);
+                index = -1;
+            }
+        }
+        String[] pathParts = file.getAbsolutePath().split("\\\\");
+        String fileTail = pathParts[pathParts.length - 1];
+        System.out.println("TAIL: " + fileTail);
+        return fileTail;
+    }
+
+
+    //Pre: assumes (for now, at least) that file is "pretty"
+    public static void activateFile(File fileToActivate) throws IOException {
+        System.out.println("Attempting to activate file");
+        if(!fileToActivate.exists())
+        {
+            throw new FileNotFoundException("Error: file not found.");
+        }
+        String fileTail = getTailOfFile(fileToActivate);
+        File active = new File( "C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileTail);
+        moveFile(fileToActivate, active); //add bool to know if succeeded?
+    }
     //Pre: file exists and is in the file folder meant for "active" files; does NOT exist in file folder meant for inactive files
     //Post: moves fileName into file folder called inactiveFiles, should no longer exist in folder meant for active files (or whatever folder it was originally in)
     //UNTESTED
     //Seems to be working! (basic tests)
     //
-    public static void inactivateFile(File fileToInactivate) throws IOException {
-        System.out.println("SRC: " + fileToInactivate.getAbsolutePath());
-        if(!fileToInactivate.exists())
-        {
-            throw new FileNotFoundException("Error: file not found.");
-        }
-        //System.out.println("LENGTH: " + fileToInactivate.length());
-        if(fileToInactivate.length() == 0)
-        {
-            System.out.println("File has a length of 0.");
-            return;
-            //throw new IOException("Error: File has a length of 0.");
-        }
+      /*
         String fileName = fileToInactivate.getAbsolutePath();
-        //String tail = "";
         for(int index = fileName.length() - 1; index >= 0; index--)
         {
-            //System.out.println(fileName.substring(index));
             if(fileName.substring(index, index+1) == "\\")
             {
-                //System.out.println("FILENAME: " + fileName);
                 fileName = fileName.substring(0, index) + "\\" + fileName.substring(index+1);
-                //tail += fileName.substring(index + 1);
                 index = -1;
             }
         }
         String[] pathParts = fileToInactivate.getAbsolutePath().split("\\\\");
         String fileTail = pathParts[pathParts.length - 1];
         System.out.println("TAIL: " + fileTail);
-        File inactive = new File("C:\\Users\\jmast\\pubgFilesExtracted\\inactiveFiles\\" + fileTail); //fileTail
-        System.out.println("Attempted DEST: " + inactive.getAbsolutePath());
+
+         */
+       /*
         if(!inactive.exists())
         {
             System.out.println("INACTIVE doesn't exist");
-            //inactive.createNewFile();
-            //return;
         }
         else
         {
@@ -137,13 +172,21 @@ public class FileManager {
                 System.out.println("EXISTS");
             }
         }
-       // writeToFileAndConsole("(inactivateFolder) File '" + fileToInactivate.getAbsolutePath() + "' should be moved to inactiveFolder when program terminates.");
+        //Writing to file is currently causing nullpointer exception (for file)
+        //writeToFileAndConsole("(inactivateFolder) File '" + fileToInactivate.getAbsolutePath() + "' should be moved to inactiveFolder when program terminates.");
         System.out.println("About to move file");
-        //FileUtils.moveFile(fileToInactivate, inactive);
-
         fileToInactivate.renameTo(inactive); //fileTail
         System.out.println("Post-move");
-        //return fileToInactivate;
+        */
+    public static void inactivateFile(File fileToInactivate) throws IOException { // /deactivate
+        System.out.println("Attempting to in-/de-activate file");
+        if(!fileToInactivate.exists())
+        {
+            throw new FileNotFoundException("Error: file not found.");
+        }
+        String fileTail = getTailOfFile(fileToInactivate);
+        File inactive = new File("C:\\Users\\jmast\\pubgFilesExtracted\\inactiveFiles\\" + fileTail); //fileTail  //make this a global var?
+        moveFile(fileToInactivate, inactive);
     }
 
     //Writes the given text both to the requestHistory file and to console.
@@ -152,3 +195,8 @@ public class FileManager {
         FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true);
     }
 }
+
+
+
+//File pretty = FileManager.makePretty(fileToActivate); //Note: may ALREADY be pretty...
+//File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
