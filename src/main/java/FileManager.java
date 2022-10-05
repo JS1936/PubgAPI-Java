@@ -33,6 +33,20 @@ public class FileManager {
         if (!theDir.exists()) {
             theDir.mkdirs();
         }
+        /*
+        filename.getName(): prettyFilescopyOfSampleFile_JS1936.txt
+#bots:       0 / 0
+C:\Users\jmast\pubgFilesExtracted\prettyFilesprettyFilescopyOfSampleFile_JS1936.txt
+filename.getName(): prettyFilesprettyFilescopyOfSampleFile_JS1936.txt
+#bots:       0 / 0
+C:\Users\jmast\pubgFilesExtracted\prettyFilesprettyFilesprettyFilescopyOfSampleFile_JS1936.txt
+filename.getName(): prettyFilesprettyFilesprettyFilescopyOfSampleFile_JS1936.txt
+#bots:       0 / 0
+C:\Users\jmast\pubgFilesExtracted\prettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilestelemetryFile0.json
+filename.getName(): prettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilesprettyFilestelemetryFile0.json
+#bots:       10 / 85
+         */
+        System.out.println("filename.getName(): " + fileName.getName());
         File prettyFile = new File(pathToDir + fileName.getName());
 
         //write "pretty" text to new file

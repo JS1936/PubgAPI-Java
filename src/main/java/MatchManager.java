@@ -8,17 +8,17 @@ import java.util.Vector;
 public class MatchManager {
     public static void printMatchInfo(File prettyFile)
     {
-        String match_id = getMatchID(prettyFile);
-        String player_perspective = getPlayerPerspective(match_id);
-        String match_type = getMatchType(match_id);
-        String teamSizeForOfficialMatch = getTeamSizeForOfficialMatch(match_id); //what about for arcade?
-        String match_info_summary = match_type +"-" + teamSizeForOfficialMatch + "-" + player_perspective;
-        //System.out.println(match_info_summary); //still need to "history" this
-        try {
-            FileManager.writeToFileAndConsole(match_info_summary);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //String match_id = getMatchID(prettyFile);
+        //String player_perspective = getPlayerPerspective(match_id);
+        //String match_type = getMatchType(match_id);
+        //String teamSizeForOfficialMatch = getTeamSizeForOfficialMatch(match_id); //what about for arcade?
+        //String match_info_summary = match_type +"-" + teamSizeForOfficialMatch + "-" + player_perspective;
+        ////System.out.println(match_info_summary); //still need to "history" this
+        //try {
+        //    FileManager.writeToFileAndConsole(match_info_summary);
+        //} catch (IOException e) {
+        //    e.printStackTrace();
+        //}
     }
     /////////Added 9/18
     public static String getMatchID(File prettyFile)
