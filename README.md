@@ -55,5 +55,6 @@ As of Oct 3, 2022, the Pubg-API-Java project has the following primary functiona
     * Ease of API request --> project request transference (currently is unclear and likely labor-intensive for outside viewer)
     * Current state of API requests is very limited in how the request can vary
 * Comprehensiveness and speed of testcases
+* Inclusion of more example files (with explanations for how to install/run the program, step-by-step)
 
 
