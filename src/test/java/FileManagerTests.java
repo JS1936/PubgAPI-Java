@@ -34,20 +34,30 @@ public class FileManagerTests {
         checkIfExpectEqualsActual(expect, actual);
     }
 
+    //@Test
+    //void printListOfActiveFiles_Test()
+    //{
+    //    FileManager.printListOfActiveFiles();
+    //}
     @Test
     //Seems to be working
     void setAbsolutePathToActiveFolder_TestSendingFile() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
+        //System.out.println(FileManager.getAbsolutePathToInactiveFolder());
         FileManager.moveFileToPath(FileManager.activeFolder, newPath);
+        //System.out.println(FileManager.getAbsolutePathToInactiveFolder());
+        //checkIfExpectEqualsActual(FileManager.activeFolder.getAbsolutePath(), newPath);
     }
 
     @Test
+    //Assumes inactiveFolder exists and file at newPath does not yet exist.
     void setAbsolutePathToInactiveFolder_TestSendingFile() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToInactiveFolder";
         FileManager.moveFileToPath(FileManager.inactiveFolder, newPath);
     }
 
     @Test
+    //Assumes activeFolder exists and file at newPath does not yet exist.
     void setAbsolutePathToActiveFolder_Test() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
         FileManager.moveFileToPath(FileManager.activeFolder, newPath);

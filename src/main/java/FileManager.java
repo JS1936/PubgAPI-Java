@@ -14,6 +14,7 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
 import static java.nio.file.Files.copy;
+import static java.nio.file.Files.list;
 
 //add file? Remove file?
 public class FileManager {
@@ -35,6 +36,23 @@ public class FileManager {
         System.out.println("Absolute path to inactive folder: " + inactiveFolder.getAbsolutePath());
         return inactiveFolder.getAbsolutePath();
     }
+
+    /*
+    public static void printListOfActiveFiles()
+    {
+        System.out.println("active folder = " + activeFolder.getAbsolutePath());
+        String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
+        moveFileToPath(activeFolder, newPath);
+        System.out.println("active folder = " + activeFolder.getAbsolutePath());
+        if(!activeFolder.isDirectory())
+        {
+            System.out.println("active folder is not a directory");
+            return;
+        }
+        File[] listFiles_activeFolder = activeFolder.listFiles();
+        System.out.println(listFiles_activeFolder.toString());
+    }
+    */
 
     /*
     public static void setAbsolutePathToInactiveFolder(String newPath) throws IOException {

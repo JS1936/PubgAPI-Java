@@ -91,8 +91,8 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
         int max_files = 10; //temporary (remove later)
         int filesSoFar = 0;
-        for (File fileName : files) {
-
+        for (File fileName : files)
+        {
             System.out.println(fileName);
             try {
                 if(filesSoFar >= 10)
@@ -100,11 +100,14 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
                     //System.out.println("Reached max_files of " + max_files + "...terminating program");
                 } else
                 {
-                    File pretty = FileManager.makePretty(fileName);
-                    getInfo(request, pretty, name);
-                    MatchManager.printMatchInfo(pretty); //added 9/18
-                    filesSoFar++;
-                    FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
+                    if(!fileName.isDirectory()) //added 10/5
+                    {
+                        File pretty = FileManager.makePretty(fileName);
+                        getInfo(request, pretty, name);
+                        MatchManager.printMatchInfo(pretty); //added 9/18
+                        filesSoFar++;
+                        FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
