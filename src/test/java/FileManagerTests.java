@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Path;
 import java.rmi.UnexpectedException;
 
 public class FileManagerTests {
@@ -20,34 +21,48 @@ public class FileManagerTests {
     void getAbsolutePathToActiveFolder_Test() throws UnexpectedException {
         String expect = "C:\\activeFolder";
         String actual = FileManager.getAbsolutePathToActiveFolder();
-        if(!expect.equals(actual))
-        {
-            throw new UnexpectedException("(EXPECT)" + expect + " != " + actual + " (ACTUAL)");
-        }
+        checkIfExpectEqualsActual(expect, actual);
     }
+
     @Test
     //Assumes default original file and path is --> File inactiveFolder = new File("C:\\inactiveFolder");
     void getAbsolutePathToInactiveFolder_Test() throws UnexpectedException {
         String expect = "C:\\inactiveFolder";
         String actual = FileManager.getAbsolutePathToInactiveFolder();
         checkIfExpectEqualsActual(expect, actual);
-        //if(!expect.equals(actual))
-        //{
-        //    throw new UnexpectedException("(EXPECT)" + expect + " != " + actual + " (ACTUAL)");
-        //}
     }
 
     @Test
     //Seems to be working
+    //path vs string issue, though
     void setAbsolutePathToActiveFolder_TestSendingFile() throws IOException {
+        if(FileManager.activeFolder.exists())
+        {
+            System.out.println("active folder exists");
+        }
+        else
+        {
+            System.out.println("active folder does not exist");
+            FileManager.activeFolder = new File(FileManager.getAbsolutePathToActiveFolder());//getAbsolutePathToA
+            //return;
+        }
+
+
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
-       // File replacement = FileManager.getFile(newPath);
-       // if(replacement.exists())
-      //  {
-      //      System.out.println("replacement file exists");
-      //  }
+
+        String oldPath = "C:\\activeFolder"; // \\\\?
         FileManager.trialMove(FileManager.activeFolder, newPath);
-        //FileManager.setAbsolutePathActiveFolder_FolderExistsAlready(replacement);
+
+        System.out.println(newPath + " =?= " + FileManager.activeFolder.getAbsolutePath());
+        if(FileManager.activeFolder.getAbsolutePath() == newPath)
+        {
+            System.out.println("MOVED");
+        }
+
+        //Reset to original state (before testcase started)
+        System.out.println("activeFolder is located at : " + FileManager.activeFolder.getAbsolutePath());
+        FileManager.trialMove(FileManager.activeFolder, oldPath);
+
     }
     @Test
     //
