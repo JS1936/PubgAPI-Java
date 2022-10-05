@@ -13,6 +13,54 @@ import java.nio.file.FileAlreadyExistsException;
 //add file? Remove file?
 public class FileManager {
     //constructor? //singleton?
+    static File activeFolder = new File("C:\\activeFolder");
+    static File inactiveFolder = new File("C:\\inactiveFolder");
+
+    //public static boolean isValidProposedPath(String path)
+    //{
+    //    return false;
+    //}
+    public static String getAbsolutePathToActiveFolder()
+    {
+        System.out.println("Absolute path to active folder: " + activeFolder.getAbsolutePath());
+        return activeFolder.getAbsolutePath();
+    }
+    public static String getAbsolutePathToInactiveFolder()
+    {
+        System.out.println("Absolute path to inactive folder: " + inactiveFolder.getAbsolutePath());
+        return inactiveFolder.getAbsolutePath();
+    }
+    public static void setAbsolutePathToActiveFolder(String proposedPath) throws IOException {
+        File newDestForActiveFolder = new File(proposedPath);
+        //if(!newDestForActiveFolder.exists())
+        //{
+        //    System.out.println("DEST does not yet exist");
+         //   newDestForActiveFolder.mkdirs();
+        //    newDestForActiveFolder.createNewFile();
+       // }//
+        System.out.println("Pre: " + getAbsolutePathToActiveFolder());
+
+        //FileUtils.moveDirectory()
+        //FileUtils.moveDirectoryToDirectory(activeFolder, newDestForActiveFolder);
+        ///if(newDestForActiveFolder.exists())
+        //{
+
+        //}
+        //FileUtils.moveDirectoryToDirectory(activeFolder, newDestForActiveFolder, true);
+        //activeFolder.renameTo(newDestForActiveFolder); //f
+        moveFile(activeFolder, newDestForActiveFolder);
+        activeFolder.getAbsolutePath();
+        //activeFolder.renameTo(newDestForActiveFolder);//. moveFile(activeFolder, newDestForActiveFolder);
+        System.out.println("Post: " + getAbsolutePathToActiveFolder());
+        //if(isValidProposedPath(proposedPath))
+        //{
+        //    activeFolder.renameTo(newDestForActiveFolder);
+        //}
+    }
+    public static void setAbsolutePathToInactiveFolder(String proposedPath) throws IOException {
+        File newDestForInactiveFolder = new File(proposedPath);
+        moveFile(inactiveFolder, newDestForInactiveFolder);
+    }
 
     /*
      * Takes the contents of an "ugly" file and makes a new file
@@ -28,16 +76,7 @@ public class FileManager {
         JsonElement je = JsonParser.parseString(uglyString);
         String prettyJsonString = gson.toJson(je);
 
-        //make a file to put the "pretty" text in, if needed
-        //C:\Users\jmast\pubgFilesExtracted
-        //Remove this?
-        //String pathToDir  = "C:\\Users\\jmast\\pubgFilesExtracted"; //look for copyOfSampleFile_JS1936.txt here...
-        //File theDir = new File(pathToDir); //custom pathname?
-        //if (!theDir.exists()) {
-        //    theDir.mkdirs();
-        //}
         System.out.println("filename.getName(): " + fileName.getName());
-        //File prettyFile = new File(pathToDir + fileName.getName());
         File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
 
         //write "pretty" text to new file
@@ -45,6 +84,15 @@ public class FileManager {
 
         return prettyFile;
     }
+    //^
+    // make a file to put the "pretty" text in, if needed
+    //C:\Users\jmast\pubgFilesExtracted
+    //Remove this?
+    //String pathToDir  = "C:\\Users\\jmast\\pubgFilesExtracted"; //look for copyOfSampleFile_JS1936.txt here...
+    //File theDir = new File(pathToDir); //custom pathname?
+    //if (!theDir.exists()) {
+    //    theDir.mkdirs();
+    //}
 
     //Store contents of prettyFile in a String called file_content
     //Example of prettified file result: telemetry_json0cfba5cb-c088-488d-86fc-86458cb91b9d.json (in src/java/resources)
@@ -88,9 +136,14 @@ public class FileManager {
     //Activate and inactivate are really just the same thing... moving a file. (And both could assume the file is already "pretty")
 
     //call with string (string name) or file itself?
-    public static void moveFile(File src, File dest) throws FileNotFoundException, FileAlreadyExistsException {
+    //Note: make this private helper?
+    public static void moveFile(File src, File dest) throws IOException {
+        System.out.println("src:" + src.getAbsolutePath());
+        System.out.println("dest: " + dest.getAbsolutePath());
         if(!src.exists())
         {
+            //src.mkdirs();
+            //src.createNewFile();
             throw new FileNotFoundException("Error: src file not found");
         }
         if(dest.exists())
