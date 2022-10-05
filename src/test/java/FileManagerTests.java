@@ -8,7 +8,6 @@ import java.rmi.UnexpectedException;
 
 public class FileManagerTests {
 
-    //
     void checkIfExpectEqualsActual(String expect, String actual) throws UnexpectedException {
         if(!expect.equals(actual))
         {
@@ -42,30 +41,12 @@ public class FileManagerTests {
     //Seems to be working
     void setAbsolutePathToActiveFolder_TestSendingFile() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
-        File originalFile = FileManager.activeFolder;
-        if(!originalFile.exists())
-        {
-
-        }
-        //File replacement = FileManager.getFile(newPath);
-        //if(replacement.exists())
-        //{
-        ///      System.out.println("replacement file exists");
-        //      replacement.
-        //}
         FileManager.trialMove(FileManager.activeFolder, newPath);
         //FileManager.setAbsolutePathActiveFolder_FolderExistsAlready(replacement);
     }
 
     @Test
-
     void setAbsolutePathToInactiveFolder_TestSendingFile() throws IOException {
-        //String originalPath = "C:\\inactiveFolder";
-        //File originalFile = FileManager.inactiveFolder;
-        ///if(!originalFile.exists())
-        ///{
-        ///    throw new FileNotFoundException("Error: Folder to move does not exist.");//To move a folder, it needs to exist.");
-        ///}
         String newPath = "C:\\sampleFile\\path\\newPathToInactiveFolder";
         FileManager.trialMove(FileManager.inactiveFolder, newPath);
     }
@@ -73,27 +54,8 @@ public class FileManagerTests {
     @Test
     //
     void setAbsolutePathToActiveFolder_Test() throws IOException {
-       //System.out.println("Current path: " + FileManager.getAbsolutePathToActiveFolder());
-       //         getAbsolutePathToActiveFolder_Test();
-       //         System.out.println(FileManager.activeFolder.getAbsolutePath());
-
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
         FileManager.trialMove(FileManager.activeFolder, newPath);
-
-        /*
-        String expect = newPath;
-        System.out.println("Desire new path: " + newPath);
-        FileManager.setAbsolutePathToActiveFolder(newPath);
-        String actual = FileManager.getAbsolutePathToActiveFolder();
-        System.out.println("EXPECT: " + expect);
-        System.out.println("ACTUAL: " + actual);
-        checkIfExpectEqualsActual(expect, actual);
-        //if(!expect.equals(actual))
-        //{
-        //    throw new UnexpectedException("(EXPECT)" + expect + " != " + actual + " (ACTUAL)");
-        //}
-        */
-
     }
 
     /*
@@ -130,7 +92,6 @@ public class FileManagerTests {
         if(f.exists())
         {
             System.out.println("File exists!");
-
         }
         else
         {
@@ -156,8 +117,6 @@ public class FileManagerTests {
         {
             throw new FileNotFoundException("Error: File not found.");
         }
-
-
     }
     /*
     public static File inactivateFile(File fileToInactivate) throws IOException {
