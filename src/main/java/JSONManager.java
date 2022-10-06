@@ -1,15 +1,15 @@
-import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Vector;
 
-//add a method to return the whole file?
 public class JSONManager {
 
+    /*
+     * Retrieves JSONObject of object_type for method returnObject(File prettyFile, String type).
+     * Returns null if object_type not found in file_content.
+     */
     public static JSONObject getJSONObject(String file_content, String object_type)
     {
         JSONArray jsonArray = new JSONArray(file_content);

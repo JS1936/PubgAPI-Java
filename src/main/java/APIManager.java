@@ -1,13 +1,3 @@
-//EX:
-//get player-focused list of matches
-//prettify that file
-//look through that file to get the list of match_ids and store them
-//for each stored match_id, request full match telemetry information
-//for each stored match_id, store the full match telemetry information
-//put full match telemetry information in a directory such that this program can use it...
-
-
-import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.*;
@@ -28,13 +18,10 @@ import static java.lang.System.exit;
 
 public class APIManager {
 
-    //https://mkyong.com/java/java-read-a-file-from-resources-folder/
+    //RESOURCE: https://mkyong.com/java/java-read-a-file-from-resources-folder/
     //InputStream is = JavaClassName.class.getClassLoader().getResourceAsStream("file.txt");
 
-    //public static void get()
-    //{
 
-    //}
     public static String getDateOfRequest()
     {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -383,3 +370,10 @@ public class Main
     }
 }
  */
+//EX:
+//get player-focused list of matches
+//prettify that file
+//look through that file to get the list of match_ids and store them
+//for each stored match_id, request full match telemetry information
+//for each stored match_id, store the full match telemetry information
+//put full match telemetry information in a directory such that this program can use it...

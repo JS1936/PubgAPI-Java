@@ -8,15 +8,29 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
 import static java.nio.file.Files.copy;
-import static java.nio.file.Files.list;
 
-//add file? Remove file?
+/*
+ * The FileManager class allows access to and manipulation of files.
+ *
+ * Functionalities as of 10/5/2022:
+ *          - getAbsolutePathToActiveFolder
+ *          - getAbsolutePathToInactiveFolder
+ *          - makeTheFileExist
+ *          - moveFileToPath
+ *          - makePretty
+ *          - storeFileAsString
+ *          - getFile
+ *          - printWhetherFileExists
+ *          - moveFile
+ *          - getTailOfFile
+ *          - activateFile
+ *          - inactivateFile
+ *          - writeToFileAndConsole
+ */
 public class FileManager {
     //constructor? //singleton?
     static File activeFolder = new File("C:\\activeFolder");
@@ -178,6 +192,7 @@ public class FileManager {
     /*
      * Takes the contents of an "ugly" file and makes a new file
      * where that content is stored in a way that looks "pretty" (formatted).
+     * Returns "prettified" file.
      */
     public static File makePretty(File fileName) throws IOException {
 
@@ -237,16 +252,6 @@ public class FileManager {
         return file;
     }
 
-    //public static void deleteFile(File fileToDelete) throws IOException {
-    //    writeToFileAndConsole("(deleteFile) File '" + fileToDelete.getAbsolutePath() + "' should be deleted when program terminates.");
-    //    fileToDelete.deleteOnExit();
-    //}
-
-    //"Activating a file" is essentially done by "makePretty" right now... but the user can't control than manually
-    //Move file from original location into folder where pubg pretty files are read from.
-    //DEST:
-
-    //Activate and inactivate are really just the same thing... moving a file. (And both could assume the file is already "pretty")
 
     public static void printWhetherFileExists(File file)
     {
@@ -260,6 +265,8 @@ public class FileManager {
             System.out.println("File does not exist.");
         }
     }
+
+    //Move File src (and nested files) to exist at location for File dest
     //call with string (string name) or file itself?
     //Note: make this private helper?
     public static void moveFile(File src, File dest) throws IOException {
@@ -426,3 +433,14 @@ public class FileManager {
 
 //File pretty = FileManager.makePretty(fileToActivate); //Note: may ALREADY be pretty...
 //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+
+//public static void deleteFile(File fileToDelete) throws IOException {
+//    writeToFileAndConsole("(deleteFile) File '" + fileToDelete.getAbsolutePath() + "' should be deleted when program terminates.");
+//    fileToDelete.deleteOnExit();
+//}
+
+//"Activating a file" is essentially done by "makePretty" right now... but the user can't control than manually
+//Move file from original location into folder where pubg pretty files are read from.
+//DEST:
+
+//Activate and inactivate are really just the same thing... moving a file. (And both could assume the file is already "pretty")

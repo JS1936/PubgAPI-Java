@@ -1,13 +1,4 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import org.apache.commons.io.FileUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-//Something is wrong with 6: maps played....
-
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
@@ -15,6 +6,7 @@ import java.util.*;
 
 //is an eof error happening...?
 //read the file to string first...
+//Something is wrong with 6: maps played....
 public class Main extends Request { //added "extends Memory" 6/16/2022 //added Request.java 9/15, removed extends Memory
 
     static File currentFile = null; //added 9/15
@@ -158,9 +150,9 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
 
             MatchManager.winnerWeapons(prettyFile); //seems to work
 
-        }else if(request == 4) { //NOT WORKING (issue with scanner) -->
-            // NOW switched... but still lots of extra printouts, and passing name in seems silly
-            Ranking.ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors) //INTERESTING: new request, asks for name with every file...
+        }else if(request == 4) {
+
+            Ranking.ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors)
 
         }else if(request == 5) {
             //NOT WORKING
@@ -168,21 +160,9 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
             //having trouble accessing names of the winners specifically
 
         }else if(request == 6) {
-            //getMaps
-            //Vector<String> mapNames = new Vector<String>(); //this is getting re-made with every file...
-            //if(prettyFile == null)
-            //{
-            //    System.out.println("FILE IS NULL");
-            //6}
             String name = MatchManager.getMapName(prettyFile);
             mapsPlayed.add(name);
             System.out.println("map name: " + name);
-            //if(name != null) //Tried to fix EOF exception with this but it didn't work (which makes sense, I guess)
-            //{
-                //mapNames.add(getMapName(prettyFile));
-               // System.out.println("Attempting to add: " + name + " to mapsPlayed...");
-            //    mapsPlayed.add(name);
-            //}
 
         }else
         {

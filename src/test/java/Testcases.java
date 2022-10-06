@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.jupiter.api.Assertions.assertEquals; //https://mkyong.com/gradle/junit-5-gradle-examples/
+//import static org.junit.jupiter.api.Assertions.assertEquals; //https://mkyong.com/gradle/junit-5-gradle-examples/
 public class Testcases {
 
     public static void main(String[] args) {
