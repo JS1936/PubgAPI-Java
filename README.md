@@ -36,6 +36,7 @@ As of Oct 3, 2022, the Pubg-API-Java project has the following primary functiona
 1. Can now store history of searches (via "requestHistory" in Main.cpp)
 2. Can make multiple requests per program run
 3. Can now access [sample files](https://github.com/JS1936/PubgAPI-Java/tree/work/src/main/resources) showing original and "prettified" versions of a file
+4. Resolved file duplication error in FileManager.java. Details
 
 ### Top 3 Upcoming Updates ###
 
