@@ -5,6 +5,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Vector;
 
+/*
+ * The MatchManager class reports data regarding a single match.
+ * For example, match id, type of match, or what weapons the winners used.
+ */
 public class MatchManager {
     public static void printMatchInfo(File prettyFile)
     {
@@ -20,7 +24,8 @@ public class MatchManager {
         //    e.printStackTrace();
         //}
     }
-    /////////Added 9/18
+    //Added 9/18
+    //Uses JSONObjects  to return the match id of a prettified file.
     public static String getMatchID(File prettyFile)
     {
         JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
@@ -28,6 +33,12 @@ public class MatchManager {
         //System.out.println("match_id = " + match_id);
         return match_id;
     }
+
+    /*
+     * Returns the player perspective (fpp or tpp) for the given match_id.
+     *      fpp = first player perspective
+     *      tpp = third player perspective
+     */
     public static String getPlayerPerspective(String match_id)
     {
         if(match_id.contains("fpp"))
@@ -36,6 +47,12 @@ public class MatchManager {
         }
         return "tpp";
     }
+
+    /*
+     * Returns the "type" of match for the given match_id.
+     *      arcade = two teams, maximum of 8v8, minimum start of 4v4
+     *      official = 25-100 teams, can be individual, duo, or squad/one-man-squad (maximum team size of 4)
+     */
     public static String getMatchType(String match_id)
     {
         if(match_id.contains("arcade"))
@@ -44,6 +61,8 @@ public class MatchManager {
         }
         return "official";
     }
+
+    //Returns the specific team size for an official match (solo = 1, duo = 2, squad can be [1,4]).
     public static String getTeamSizeForOfficialMatch(String match_id)
     {
         //what if match_id for arcade match is entered?
@@ -62,7 +81,8 @@ public class MatchManager {
             return "squad"; //is this accurate?
         }
     }
-    //Stores and prints what weapons were used by a specific group (winnersOnly or everyone)
+
+    //Stores and prints what weapons were used by a specific group (winnersOnly or everyone), and in what frequencies.
     //Currently only works for winnersOnly
     //Made private (check other methods-- see if they need this as well)
     private static void weaponFrequencies(Vector<String> weaponSlot, boolean winnersOnly, String weaponSlotName) throws IOException {
@@ -102,6 +122,7 @@ public class MatchManager {
         //System.out.println();
     }
 
+    //Determines (and prints) what weapons were used by the players who won the match described in the given file.
     public static void winnerWeapons(File prettyFile) throws IOException {
         Vector<String> winnerSecondary = new Vector<String>(); //stores names of winners' match-end secondary weapons
         Vector<String> winnerPrimary = new Vector<String>(); //stores names of winners' match-end primary weapons
@@ -171,14 +192,23 @@ public class MatchManager {
         weaponFrequencies(winnerSecondary, true, "secondary weapon");
     }
 
-    //NOTE: For deathmatches, does not account for people leaving and entering midgame... (issue here?)
-    //team id: <100 means real people
-    //         20_ (like 201) means bots
-    //         50_ (like 501) means guards
-    //         100000+ --> custom game, maybe?
-    //if only team ids ar 1 and 2 --> deathmatch
-    //NOTE: Team size not always 4 (or even <=4!)
-    //TO-DO: Adjust printouts so println and history
+    /*
+     * Given a file representing data on a specific match, prints all players, sorted by team.
+     *
+     * NOTES:
+     * -Does not printPlayersByTeam for custom games.
+     * -For deathmatches, does not account for people leaving and entering midgame
+     * -Team size not always 4 (or even <=4!) Example of size>4: team deathmatches.
+     *
+     * TEAM IDs:
+     *  official game:      <100 means real people
+     *                      20_ (like 201) means bots
+     *                      50_ (like 501) means guards
+     *                      100000+ --> custom game, maybe?
+     *
+     *  arcade/deathmatch:  only two teams. IDs are 1 and 2.
+     */
+    //TO-DO: Adjust printouts so println and history align better.
     public static Vector<JSONObject> printPlayersByTeam(File prettyFile) //used to be called singleString...
     {
         System.out.println("NEW FILE_______________________________________________");
@@ -281,9 +311,9 @@ public class MatchManager {
         ranking("JS1936", peopleByTeam);
         ranking("matt112", peopleByTeam);
         ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
-
          */
     }
+
     //ALSO EXISTS IN MAP MANAGER:
     public static String getMapName(File prettyFile)
     {

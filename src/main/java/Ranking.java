@@ -6,10 +6,13 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
+//The Ranking class calculates and prints the ranking of a specific player in a specific match or matches.
 public class Ranking {
 
-    //Returns ranking as a string
-    //Console and history printouts intentionally differ slightly for readability of console user.
+    /*
+     * Returns ranking as a string
+     * Console and history printouts intentionally differ slightly for readability of console user.
+     */
     public static String ranking(String name, File prettyFile) {
         JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
         //System.out.println("match definition: " + match_definition);
@@ -29,7 +32,6 @@ public class Ranking {
             if (player_name.equalsIgnoreCase(name)) {
                 String player_ranking = player_details.get("ranking").toString();
                 System.out.println(name + "rank in this game: " + player_details.get("ranking").toString());
-                //added 9/15-> write to file here?
 
                 try {
                     FileUtils.writeStringToFile(Main.currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //
@@ -45,19 +47,21 @@ public class Ranking {
     }
 }
 
-//Note: match_id says whether fpp, tdm, etc.
-//Note #2: make writeStringToFile result look cleaner
 
-//Potential future changes:
-
-//just get the matchID, too
-//Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
-//COULD use printPlayersByTeam (excess printouts) OR do it independently
-//could take in String[] names instead of String name? (In case of multiple names...?)
-//public static void ranking(String[] team, File prettyFile)
-//{
+//Notes-buffer (will be removed soon):
+//
+//  Note: match_id says whether fpp, tdm, etc.
+//  Note #2: make writeStringToFile result look cleaner
+//
+//  Potential future changes:
+//      just get the matchID, too
+//      Given a name, searches for that person, and if they were in the provided games, gives their ranking(s)
+//      COULD use printPlayersByTeam (excess printouts) OR do it independently
+//      could take in String[] names instead of String name? (In case of multiple names...?)
+//  public static void ranking(String[] team, File prettyFile)
+//  {
 //    for(String name : team)
 //    {
 //        ranking(name, prettyFile);
 //    }
-//}
+//  }

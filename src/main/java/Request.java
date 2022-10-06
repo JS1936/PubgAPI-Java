@@ -2,41 +2,10 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//countBotsAndPeople --> match
-//calculateKillCoutns --> individual, team, or match
-//printPlayersByTeam --> team, match
-//ranking --> individual, team, match   *Note: all members of the same team end up getting the same ranking, right?
-//winnerWeapons --> match
-//calculateKillCountsJSON --> individual, team, or match
-//mapsPlayed --> individual, team, or match
-
-
-//What would it mean to count bots and people...?
-//SCOPE:
-//  -individual:    Of the given match(es), how many bots and people has Person X encountered?
-//                          EX: Match 1 had 5 bots of 95 total; Match 2 had 10 bots of 60 total; Match 3 had 2 bots of 99 total.
-//                              Cumulative result: (5 + 10 + 2) / (95 + 60 + 99) = 17 bots out of 254 total.
-//                                      //How is this information going to be stored? Does it *need* to be stored?
-//  -team      :    Of the given match(es), how many bots and people has this TEAM played against?
-//                          -> How is "team" being defined? EX: group of exactly (or more?) the same people VS any team Person X participates in/joins
-//                              EX: 2person team playing squads, 2person team having 1 extra person, etc.
-//  -match     :    Of the given match(es), how many bots and people existed?
-//                          -->
-//Very much the same math. Just redefining which matches to examine.            //Search parameter
-//Individual : Is Person X in that match? If so, look at it.                        Person  X
-//Team       : Is Team X in that match? If so, look at it.                          Team    X (EX: Person X AND Person Y AND Person Z)
-//Match      : Does the user want data for this match? If so, look at it.           matchID X
-//
-// Database?
-//Pass the request aroudn instead of the input stuff?
-
-//Want user to be able to put in a match id (or a directory that holds many match ids, for instance...?)
-//Customize the API call thing (to user's request details) EX: looking for Person X info vs Person Y
-//EX: Request r = new KillCounts?
-//going to need a name...?
-import java.util.*;
+//The Request class represents a request about a pubg file (or files) made by the user.
+//TO-DO: restructure/rewrite into more clear/efficient/intuitive format.
 public class Request {
-    //change to vectors?
+
     //Vector<String> typesOfRequests = new Vector<String>();//{"countBotsAndPeople};
     String[] types = {"countBotsAndPeople", "calculateKillCounts", "printPlayersByTeam", "winnerWeapons", "ranking", "calculateKillCountsJSON", "mapsPlayed"};
     String[] scopes = {"individual", "team", "everyone"};
@@ -132,3 +101,38 @@ public static void initiateFunctionalities()
         functionalities.add("printMapsPlayed");
     }
  */
+
+
+//NOTES:
+//countBotsAndPeople --> match
+//calculateKillCoutns --> individual, team, or match
+//printPlayersByTeam --> team, match
+//ranking --> individual, team, match   *Note: all members of the same team end up getting the same ranking, right?
+//winnerWeapons --> match
+//calculateKillCountsJSON --> individual, team, or match
+//mapsPlayed --> individual, team, or match
+
+
+//What would it mean to count bots and people...?
+//SCOPE:
+//  -individual:    Of the given match(es), how many bots and people has Person X encountered?
+//                          EX: Match 1 had 5 bots of 95 total; Match 2 had 10 bots of 60 total; Match 3 had 2 bots of 99 total.
+//                              Cumulative result: (5 + 10 + 2) / (95 + 60 + 99) = 17 bots out of 254 total.
+//                                      //How is this information going to be stored? Does it *need* to be stored?
+//  -team      :    Of the given match(es), how many bots and people has this TEAM played against?
+//                          -> How is "team" being defined? EX: group of exactly (or more?) the same people VS any team Person X participates in/joins
+//                              EX: 2person team playing squads, 2person team having 1 extra person, etc.
+//  -match     :    Of the given match(es), how many bots and people existed?
+//                          -->
+//Very much the same math. Just redefining which matches to examine.            //Search parameter
+//Individual : Is Person X in that match? If so, look at it.                        Person  X
+//Team       : Is Team X in that match? If so, look at it.                          Team    X (EX: Person X AND Person Y AND Person Z)
+//Match      : Does the user want data for this match? If so, look at it.           matchID X
+//
+// Database?
+//Pass the request aroudn instead of the input stuff?
+
+//Want user to be able to put in a match id (or a directory that holds many match ids, for instance...?)
+//Customize the API call thing (to user's request details) EX: looking for Person X info vs Person Y
+//EX: Request r = new KillCounts?
+//going to need a name...?

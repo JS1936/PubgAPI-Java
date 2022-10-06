@@ -3,23 +3,36 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
 
-
-//is an eof error happening...?
-//read the file to string first...
-//Something is wrong with 6: maps played....
-public class Main extends Request { //added "extends Memory" 6/16/2022 //added Request.java 9/15, removed extends Memory
+//The Main class serves as a driver for the PubgAPI-Java project.
+//As of 10/5: being restructured.
+public class Main extends Request {
 
     static File currentFile = null; //added 9/15
     static File requestHistory = null;
 
     public static Request requestCurrent;// = new Request(0,0);
     public static Vector<String> mapsPlayed = new Vector<String>();
-    //public static Vector<String> functionalities = requestCurrent.getTypesOfRequests();
+
     public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
+
+    //public static Vector<String> functionalities = requestCurrent.getTypesOfRequests();
     //public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
 
 
+    //TO-DO: allow customizable location for requestHistory
+    /*
+    public static void setPathForRequestHistory(Scanner input)
+    {
+        System.out.println("Please enter fi")
+        System.out.println("Where would you like your requestHistory to be stored?");
+        System.out.println("0: default location --> 'C:\\\\Users\\\\jmast\\\\pubg_requestHistory\"");
+        System.out.println("1: custom location");
+        int requestHistoryStorage = input.nextInt();
+    }
+     */
 
+    //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
+    //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
     public static void main(String[] args)
     {
         //try {
@@ -38,6 +51,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         currentFile = FileManager.getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
 
         Scanner input = new Scanner(System.in);
+        //setPathForRequestHistory(input);
         psuedoMain(input);
         input.close();
     }
@@ -173,6 +187,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
     }
 
 
+    //For a specific request type, print the appropriate prompt to console, as well the options the use can choose.
     public static void printOptionsToChooseFrom(Vector<String> options, String prompt)
     {
         System.out.print(prompt);
@@ -183,8 +198,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         }
     }
 
-    //getTypes
-    //IN PROGRESS
+    //Add desired functionalities to vector of functionalities.
     public static void initiateFunctionalities()
     {
         functionalities.add("countBotsAndPeople");
@@ -229,6 +243,7 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         return request;
     }
 
+    //Returns an integer from [0, functionalities.size()-1] representing a specific type of request/functionality.
     public static int getRequestType(Scanner input)
     {
         String prompt_requestType = "What would you like to know?";
@@ -248,12 +263,11 @@ public class Main extends Request { //added "extends Memory" 6/16/2022 //added R
         return requestScope;
     }
      */
-
-
-    //"Do you want to store this information in its own file?" idea
-    //Could just automatically store it, then only keep at the end if user says to keep it (at the end...) --> both more and less work
-    //IN PROGRESS
-
 }
 
-//maybe put the "while" in here (main method) to having multiple requests actually works?
+//NOTES:
+//-Check for occasional eof error.
+//-Check to make sure request 6 (maps played) is still working properly
+//-Possibly make the default storage location for active files --> .../main/resources
+//-File storage --> ask user if/where. Could automatically store it, then only keep at the end if user says to keep it
+// (at the end...) --> both more and less work

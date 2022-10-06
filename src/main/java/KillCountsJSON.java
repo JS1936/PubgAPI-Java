@@ -5,16 +5,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Vector;
 
+//The KillCountsJSON class uses JSONObjects to calculate and print data on kills from a match.
 public class KillCountsJSON {
 
-    //Can print more details
-    //maybe print these to a file, instead
-    //What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
-
-
-    //names of 0 kills go into index 0
-    //name of 1 kill go into index 1
-    //etc.
+    /*
+     * Prints (to console and requestHistory) the names of all players in order of how many kills they got in the match.
+     * Console includes minor additional printouts.
+     */
     public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills) throws IOException {
         System.out.println("\n\n\nLOOK: printingKillCountsRequest SCOPE = " + Main.requestCurrent.getScopes()[Main.requestCurrent.getRequest_scope()]); //remove later
 
@@ -31,14 +28,20 @@ public class KillCountsJSON {
         }
     }
 
+    /*
+     * Calculates how many kills each player got in the match described by the given file.
+     * Calls printKillCountsJSON.
+     *
+     * Note: At least one player in the winning team will survive. Thus, the tracking of kills made by the winning team
+     * is separate from that for kills made by players not on the winning team. Winning team kills are only written
+     * to console, not to history.
+     */
     public static void calculateKillCountsJSON(File prettyFile) {
 
-        Vector<JSONObject> kill_events = JSONManager.returnMultipleObjects(prettyFile, "LogPlayerKillV2"); //winners don't die, though...?
+        Vector<JSONObject> kill_events = JSONManager.returnMultipleObjects(prettyFile, "LogPlayerKillV2");
         Vector<Vector<String>> namesByNumKills = new Vector<Vector<String>>();
 
-        //int maxKills = 0;
-
-        //Assumes no one will get more than 30 kills (make more efficient later... -> maxKills)
+        //Assumes no one will get more than 30 kills (make more efficient later... -> int maxKills)
         for (int i = 0; i < 30; i++) {
             Vector<String> names = new Vector<String>();
             namesByNumKills.add(names);
@@ -90,7 +93,14 @@ public class KillCountsJSON {
         System.out.println("#people killed by winning team: " + killedByAnyWinner);
         //or maybe just say "#kills by winning team" (in case of deathmatch)
         //having trouble getting the winners' names... (account ids fine/okay, though)
-        //printKillCoutns2(#kills per person, effects?)
-        //printKillCounts(killCounts);
     }
 }
+
+//Notes-buffer (will be removed soon):
+//
+//  Can print more details
+//  maybe print these to a file, instead
+//  What if: individual means PRINT ALL, then individual; team--> print all, then SPECIFICALLY team, etc.?
+//  names of 0 kills go into index 0
+//  name of 1 kill go into index 1
+//  etc.

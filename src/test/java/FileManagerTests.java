@@ -32,13 +32,9 @@ public class FileManagerTests {
         checkIfExpectEqualsActual(expect, actual);
     }
 
-    //@Test
-    //void printListOfActiveFiles_Test()
-    //{
-    //    FileManager.printListOfActiveFiles();
-    //}
     @Test
-    //Seems to be working
+    //Assumes activeFolder exists and file at newPath does not yet exist. Seems to be working.
+    //Can see the movement occur using File Explorer, but need to verify path change in project.
     void setAbsolutePathToActiveFolder_TestSendingFile() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
         //System.out.println(FileManager.getAbsolutePathToInactiveFolder());
@@ -49,6 +45,7 @@ public class FileManagerTests {
 
     @Test
     //Assumes inactiveFolder exists and file at newPath does not yet exist.
+    //Can see the movement occur using File Explorer, but need to verify path change in project.
     void setAbsolutePathToInactiveFolder_TestSendingFile() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToInactiveFolder";
         FileManager.moveFileToPath(FileManager.inactiveFolder, newPath);
@@ -56,6 +53,7 @@ public class FileManagerTests {
 
     @Test
     //Assumes activeFolder exists and file at newPath does not yet exist.
+    //Note: is duplicate of content for setAbsolutePathToActiveFolder_TestSendingFile()
     void setAbsolutePathToActiveFolder_Test() throws IOException {
         String newPath = "C:\\sampleFile\\path\\newPathToActiveFolder";
         FileManager.moveFileToPath(FileManager.activeFolder, newPath);
@@ -97,8 +95,8 @@ public class FileManagerTests {
         System.out.println("Attempting to inactivate file...");
         File f = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\testcaseFile_activate.txt");
         //File f = new File("C:\\Users\\jmast\\pubgFilesExtracted\\testcaseFiles\\testcaseFile_inactivate.txt");
-        //////"C:\\MainTest-inactivateFile-sampleFolder\\testcaseFile_inactivate.txt");
-        ////C:\Users\jmast\pubgFilesExtracted\testcaseFiles
+        //"C:\\MainTest-inactivateFile-sampleFolder\\testcaseFile_inactivate.txt");
+        //C:\Users\jmast\pubgFilesExtracted\testcaseFiles
         if(f.exists())
         {
             System.out.println("Found the file!");
@@ -110,6 +108,15 @@ public class FileManagerTests {
         }
     }
 }
+
+
+/*
+    @Test
+    void printListOfActiveFiles_Test()
+    {
+        FileManager.printListOfActiveFiles();
+    }
+ */
 
  /*
     @Test

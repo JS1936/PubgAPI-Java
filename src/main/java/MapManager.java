@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Collections;
 
+//The MapManager tracks the frequency of various pubg maps across multiple matches.
 public class MapManager {
 
     //Prints the names of maps played and how many times they were played.

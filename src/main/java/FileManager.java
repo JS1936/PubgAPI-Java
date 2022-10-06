@@ -31,8 +31,9 @@ import static java.nio.file.Files.copy;
  *          - inactivateFile
  *          - writeToFileAndConsole
  */
+//TO-DO: Preferably, allow only one instance of FileManager class (singleton).
 public class FileManager {
-    //constructor? //singleton?
+
     static File activeFolder = new File("C:\\activeFolder");
     static File inactiveFolder = new File("C:\\inactiveFolder");
 
@@ -444,3 +445,7 @@ public class FileManager {
 //DEST:
 
 //Activate and inactivate are really just the same thing... moving a file. (And both could assume the file is already "pretty")
+
+
+//TO-DO: Move pubgFilesExtracted telemetry files into appropriate folders (active, inactive)
+//          -Note: not code. Just move them manually for now.

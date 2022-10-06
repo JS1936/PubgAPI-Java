@@ -7,8 +7,20 @@ import java.nio.charset.Charset;
 import java.util.Scanner;
 import java.util.Vector;
 
+//The KillCounts class is a MANUAL approximation of the KillCountsJSON class. Reports killCount data on a single match.
 public class KillCounts extends Request {
 
+    /*
+     * IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
+     *
+     * Prints killCounts to requestHistory AND to user console.
+     *
+     * Includes:
+     *  -chronological killCounts (the first killCount shown represents the first player to die)
+     *  -frequency-based killCounts (specifies how many people got ___ #kills).
+     *  -maxKills by a single person
+     *  -how many people were killed by the last ten surviving players
+     */
     public static void printKillCountsToHistoryAndConsole(Vector<String> counts) throws IOException {
 
         FileManager.writeToFileAndConsole("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");
@@ -43,7 +55,11 @@ public class KillCounts extends Request {
         FileManager.writeToFileAndConsole("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());
         FileManager.writeToFileAndConsole("--------------------------------------------------------------------------");
     }
-    //IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
+
+    /*
+     * IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
+     * Deliberately has primary function of calling printKillCountsToHistoryAndConsole(counts).
+     */
     public static void printKillCounts(Vector<String> counts) {
         try {
             printKillCountsToHistoryAndConsole(counts); //added 9/15
@@ -52,13 +68,29 @@ public class KillCounts extends Request {
         }
     }
 
-    //Tallies how many players in the game got ___ number of kills using a vector where the index corresponds to #kills,
-    //and the value at that index indicates how many players got precisely index number of kills.
-    //Calls printKillCounts.
-    //IS A MANUAL VERSION: Does not use JSONObjects. Instead, scans line by line.
-    //NOTE: Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
-    //Vector<Integer> killsByTeam = new Vector<Integer>();
-    //Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
+    /*
+     * IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based. Scans line by line.
+     *
+     * Given a file describing a match, anonymously counts how many kills each player got in the match. Tracks players'
+     * killCounts based on when they themselves die, and therefore will not get any more kills in the match.
+     *
+     * Uses a String to track the statistics chronologically
+     * (players who die first have their killCount appear earlier in the String).
+     *
+     * Uses a vector to tally how many players in the game got ___ number of kills. The index corresponds to #kills,
+     * and the value at that index indicates how many players in the match got precisely index number of kills.
+     * In other words, vector[#kills] = #players who got that number of kills)
+     * Example: If index 5 holds 3, that means 3 players got 5 kills.
+     *
+     * Calls printKillCounts.
+     *
+     * NOTE: Could re-implement this using jsonobjects (AND also be able to get teams, kills by team)
+     *       --> Vector<Integer> killsByTeam = new Vector<Integer>();
+     *      --> Vector<Vector<Integer>> teams = new Vector<Vector<Integer>>();
+     * Uses both a String to track order of events, and a vector  ___ number of kills using a vector where the index
+     * Calls printKillCounts. printing a player's kill count when they themselves
+     * actually die.
+     */
     public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
         try {

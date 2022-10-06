@@ -8,20 +8,28 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.DateFormat;
-import java.util.Date;
-import java.text.SimpleDateFormat;
-import java.util.Scanner;
 import java.util.Vector;
-
 import static java.lang.System.exit;
 
+//Not currently used:
+//import java.text.DateFormat;
+//import java.util.Date;
+//import java.text.SimpleDateFormat;
+//import java.util.Scanner;
+
+
+//APIManager class: NOT CURRENTLY USED
+//The APIManager class is intended to help the user request files from the API and retrieve specific telemetry data.
+//TO-DO: redo this file. Make it efficient and clear.
+//Note: need to verify successful request attempt when using various formats.
+//Note: need to verify correct transfer of files into/out of activeFolder and/or inactiveFolder.
 public class APIManager {
 
     //RESOURCE: https://mkyong.com/java/java-read-a-file-from-resources-folder/
     //InputStream is = JavaClassName.class.getClassLoader().getResourceAsStream("file.txt");
 
-
+    /*
+    //Not currently used. Could be used by makeRequest_givenMatchID to make File ids more specific.
     public static String getDateOfRequest()
     {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -29,13 +37,17 @@ public class APIManager {
         //System.out.println(dateFormat.format(currentDate));
         return dateFormat.format(currentDate);
     }
-    //curl "https://api.pubg.com/shards/$platformn/matches/$matchId" \
+     */
+
+    //Basic format: curl "https://api.pubg.com/shards/$platformn/matches/$matchId" \
+    //Note: These files would get added into FileManager my activating them.
     public static void makeRequest_givenMatchID(String match_id) throws IOException
     {
-
         System.out.println("makeRequest_givenMatchID(" + match_id + ")");
+
         String API_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMjdiZDY0MC05ODk5LTAxM2EtYjVmNS0wYzc0NWVlZDY1NjQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjQ5MzMzNTYxLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InB1YmdfYXBpX2xlYXJuIn0.aQZbXGdwOM8HwXLvulYN2nmUUCVgG6susMmAE6oKopY";
         //String playerName = "JS1936";
+        //String playerAccountID = "account.9c618f3851b646f9a6de9bbd6962d73f";
         //URL url = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + playerName);
         URL url = new URL("https://api.pubg.com/shards/$platformn/matches/" + match_id);
 
@@ -43,40 +55,26 @@ public class APIManager {
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Authorization","Bearer " + API_key);
         conn.setRequestProperty("Accept", "application/vnd.api+json");
-        //conn.setRequestProperty("Accept-Encoding","gzip"); //confused
 
         InputStream inputStream = conn.getInputStream();
-        //Reader inputStreamReader = new InputStreamReader(inputStream);
-        //ObjectInputStream ois = new ObjectInputStream(inputStream);
-        //System.out.println("Look2: " + inputStreamReader.toString());
-        String dateOfRequest = getDateOfRequest();
-        //System.out.println("Date of request: " + dateOfRequest);
-        //String filePath = "C:\\sampleFile_" + playerName + "_[" + dateOfRequest + "].txt";
-        //System.out.println("FILE PATH: " + filePath);
-        //File data = new File("C:\\sampleFile_" + playerName + "_[" + dateOfRequest + "].txt"); //add time component?
+        //String dateOfRequest = getDateOfRequest();
         File data = new File("C:\\sampleFile_" + match_id + ".txt"); //add time component
         if(!data.exists())
         {
             System.out.println("File does not yet exist");
-            data.getParentFile().mkdirs();//createNewFile();
+            data.getParentFile().mkdirs();
             data.createNewFile();
         }
 
         OutputStream output = new FileOutputStream(data);
         inputStream.transferTo(output);
-        //inputStreamReader.close();
+
         output.close();
-        ///data.deleteOnExit();
-        //account.9c618f3851b646f9a6de9bbd6962d73f
-        //How would these files get added into the other program?
     }
-    public static void something()
-    {
-        //
-    }
+
     public static void getMatchIDsFromSampleFile() throws IOException
     {
-        Path src = (Path) Paths.get("/Users", "jmast", "IdeaProjects", "PubgAPI-Java", "src", "main", "resources", "sampleFile_JS1936.txt");
+        Path src = Paths.get("/Users", "jmast", "IdeaProjects", "PubgAPI-Java", "src", "main", "resources", "sampleFile_JS1936.txt");
         File s = src.toFile();
         File s_pretty = FileManager.makePretty(s);
         System.out.println("Pretty path: " + s_pretty.getAbsolutePath());
@@ -101,6 +99,10 @@ public class APIManager {
         exit(0);
 
     }
+
+    //public static void workingWithSampleFile2() throws IOException {
+    //    File[] files = new File(FileManager.getAbsolutePathToActiveFolder()).listFiles();
+    //}
 
     public static void workingWithSampleFile() throws IOException {
         //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
@@ -162,14 +164,14 @@ public class APIManager {
 
 
         //File d = new File(dest.toString());
-       // d = FileManager.makePretty(s);
-       // File d =
+        // d = FileManager.makePretty(s);
+        // File d =
         //if(!d.exists())
         //{
-       //     d.createNewFile();
-       //     FileUtils.copyFile(s, d);
+        //     d.createNewFile();
+        //     FileUtils.copyFile(s, d);
         //    d = FileManager.makePretty(d);
-       // }
+        // }
         //C:\Users\jmast\pubgFilesExtracted
 
 
@@ -186,6 +188,81 @@ public class APIManager {
         //File f = new File("C:\\Users\\jmast\\IdeaProjects\\PubgAPI-Java\\src\\main\\resources\\sampleFile_JS1936_prettifiedViaOnlineJsonFormatter_2.txt");
     }
 }
+
+
+
+//NOTES BUFFER:
+//
+// EX:
+//get player-focused list of matches
+//prettify that file
+//look through that file to get the list of match_ids and store them
+//for each stored match_id, request full match telemetry information
+//for each stored match_id, store the full match telemetry information
+//put full match telemetry information in a directory such that this program can use it...
+
+//Prev versions:
+/*
+import java.io.*;
+import java.net.*;
+public class Main
+{
+    public static void given() throws IOException
+    {
+        String API_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMjdiZDY0MC05ODk5LTAxM2EtYjVmNS0wYzc0NWVlZDY1NjQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjQ5MzMzNTYxLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InB1YmdfYXBpX2xlYXJuIn0.aQZbXGdwOM8HwXLvulYN2nmUUCVgG6susMmAE6oKopY";
+        //URL url = new URL("endpoint-url");
+        ///URL url = new URL("https://api.pubg.com/shards/$steam/players?filter[playerNames]=$JS1936,matt112");
+        ///URL url = new URL("https://api.pubg.com/shards/$steam/samples?");
+        URL url = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=JS1936");
+        //URL url = new URL("https://api.pubg.com/shards/$steam/players?filter[playerNames]=$JS1936");
+        //https://api.pubg.com/shards/$platform/samples?filter[createdAt-start]=$startTime"
+        //"https://api.pubg.com/shards/$steam/players?filter[playerNames]=$JS1936"
+        //curl -g "https://api.pubg.com/shards/$platform/players?filter[playerIds]=$playerId-1,$playerId-2" \
+        //"https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName"
+        //shards/$platform - the platform shard --> steam
+        //conn.setRequestProperty("Accept-Encoding","gzip");
+        //EX of game mode: squad fpp
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        //conn.setRequestProperty("Authorization","Bearer <api-key>");
+        conn.setRequestProperty("Authorization","Bearer " + API_key);
+        conn.setRequestProperty("Accept", "application/vnd.api+json");
+        //conn.setRequestProperty("Accept-Encoding","gzip");
+        InputStream inputStream = conn.getInputStream();
+        //System.out.println("Look..." + inputStream.readAllBytes());
+        Reader inputStreamReader = new InputStreamReader(inputStream);
+        //ObjectInputStream ois = new ObjectInputStream(inputStream);
+        System.out.println("Look2: " + inputStreamReader.toString());
+        File data = new File("C:\\sampleFile.txt");
+        OutputStream output = new FileOutputStream(data);
+        inputStream.transferTo(output);
+       /// while(inputStreamReader.)
+        //while(inputStream.
+        //transfer it to an output stream?
+        ///while(inputStreamReader.ready())
+        ///{
+        ///    char ch = (char) inputStreamReader.read();
+            //System.out.println("Look3: " + inputStreamReader.read());
+        ///    System.out.print(ch);
+            //convert ascii to character
+        //}
+        inputStreamReader.close();
+        //`conn.set
+        //System.out.println("Attempting to print..." + conn.getInputStream());
+        //conn.setRequestProperty("Accept-Encoding","gzip");
+        //"...pubg.com/shards/steam/endpoint..."
+        //filter?
+    }
+    public static void main(String[] args)
+    {
+        try {
+            given();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+ */
 /*
 import java.io.*;
 import java.net.*;
@@ -308,72 +385,3 @@ public class Main
     //EX of game mode: squad fpp
     //conn.setRequestProperty("Authorization","Bearer <api-key>");
  */
-
-/*
-import java.io.*;
-import java.net.*;
-public class Main
-{
-    public static void given() throws IOException
-    {
-        String API_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMjdiZDY0MC05ODk5LTAxM2EtYjVmNS0wYzc0NWVlZDY1NjQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjQ5MzMzNTYxLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InB1YmdfYXBpX2xlYXJuIn0.aQZbXGdwOM8HwXLvulYN2nmUUCVgG6susMmAE6oKopY";
-        //URL url = new URL("endpoint-url");
-        ///URL url = new URL("https://api.pubg.com/shards/$steam/players?filter[playerNames]=$JS1936,matt112");
-        ///URL url = new URL("https://api.pubg.com/shards/$steam/samples?");
-        URL url = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=JS1936");
-        //URL url = new URL("https://api.pubg.com/shards/$steam/players?filter[playerNames]=$JS1936");
-        //https://api.pubg.com/shards/$platform/samples?filter[createdAt-start]=$startTime"
-        //"https://api.pubg.com/shards/$steam/players?filter[playerNames]=$JS1936"
-        //curl -g "https://api.pubg.com/shards/$platform/players?filter[playerIds]=$playerId-1,$playerId-2" \
-        //"https://api.pubg.com/shards/$platform/players?filter[playerNames]=$playerName"
-        //shards/$platform - the platform shard --> steam
-        //conn.setRequestProperty("Accept-Encoding","gzip");
-        //EX of game mode: squad fpp
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        //conn.setRequestProperty("Authorization","Bearer <api-key>");
-        conn.setRequestProperty("Authorization","Bearer " + API_key);
-        conn.setRequestProperty("Accept", "application/vnd.api+json");
-        //conn.setRequestProperty("Accept-Encoding","gzip");
-        InputStream inputStream = conn.getInputStream();
-        //System.out.println("Look..." + inputStream.readAllBytes());
-        Reader inputStreamReader = new InputStreamReader(inputStream);
-        //ObjectInputStream ois = new ObjectInputStream(inputStream);
-        System.out.println("Look2: " + inputStreamReader.toString());
-        File data = new File("C:\\sampleFile.txt");
-        OutputStream output = new FileOutputStream(data);
-        inputStream.transferTo(output);
-       /// while(inputStreamReader.)
-        //while(inputStream.
-        //transfer it to an output stream?
-        ///while(inputStreamReader.ready())
-        ///{
-        ///    char ch = (char) inputStreamReader.read();
-            //System.out.println("Look3: " + inputStreamReader.read());
-        ///    System.out.print(ch);
-            //convert ascii to character
-        //}
-        inputStreamReader.close();
-        //`conn.set
-        //System.out.println("Attempting to print..." + conn.getInputStream());
-        //conn.setRequestProperty("Accept-Encoding","gzip");
-        //"...pubg.com/shards/steam/endpoint..."
-        //filter?
-    }
-    public static void main(String[] args)
-    {
-        try {
-            given();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
- */
-//EX:
-//get player-focused list of matches
-//prettify that file
-//look through that file to get the list of match_ids and store them
-//for each stored match_id, request full match telemetry information
-//for each stored match_id, store the full match telemetry information
-//put full match telemetry information in a directory such that this program can use it...
