@@ -5,7 +5,7 @@ In-progress. Actively updated
 This project started because I wanted to know how many bots were in the pubg games I played. Upon seeing what the telemetry data looked like, I realized there were a lot of other statistics I could learn about, too. 
 
 ## Functionalities ##
-As of Oct 3, 2022, the Pubg-API-Java project has the following primary functionalities:
+As of October 2022, the Pubg-API-Java project has the following primary functionalities:
 
 | WHAT      |   HOW   | WHERE |
 |---------- | ------- | ----- |
@@ -18,9 +18,9 @@ As of Oct 3, 2022, the Pubg-API-Java project has the following primary functiona
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
 
 ## Classes Breakdown ##
-* APIManager.java  //empty
-* BotCounts.java //countBotsAndPeople(File prettyFile) --> end
-* DoRequest.java //empty
+* APIManager.java  //needs significant rework
+* BotCounts.java //countBotsAndPeople(File prettyFile)
+* DoRequest.java //needs significant rework
 * FileManager.java //makePretty, storeFileAsString, getFile, writeToFileAndConsole
 * JSONManager.java //getJSONObject, returnObject, returnMultipleObjects
 * KillCounts.java //printKillCountsToHistoryAndConsole, printKillCounts, calculateKillCounts
