@@ -38,7 +38,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 3. Can now access [sample files](https://github.com/JS1936/PubgAPI-Java/tree/work/src/main/resources) showing original and "prettified" versions of a file
 4. Resolved [file duplication error](https://github.com/JS1936/PubgAPI-Java/files/9720547/PubgAPI-Java_.Update.4.Details.pdf) in FileManager.java
 5. Can now reference [draft1 of User-View](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Draft%201_%20User-View%20(Requester%20%26%26%20Selector%20%26%26%20.pdf)) (Requester, Selector, !Analyzer) | 18 Oct 2022 |
-6. Can now reference [draft1 of User-Input Preset](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Draft%201_%20User-Input%20Preset%20(!Requester%20%26%26%20Selector%20%26%26%20Analyzer).pdf) (!Requester, Selector, Analyzer)| 19 Oct 2022 |
+6. Can now reference [draft1 of User-Input Preset](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Draft%201_%20User-Input%20Preset%20(!Requester%20%26%26%20Selector%20%26%26%20Analyzer).pdf) (!Requester, Selector, Analyzer) | 19 Oct 2022 |
 
 ### Top 3 Upcoming Updates ###
 
