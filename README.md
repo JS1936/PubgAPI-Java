@@ -12,8 +12,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 |0: countBotsAndPeople | Manually | BotCounts.java |
 |1: calculateKillCounts	| Manually | KillCounts.java |	
 |2: printPlayersByTeam | JSON | MatchManager.java |
-|3: winnerWeapons |	JSON | MatchManager.java |[Draft 1_ User-View (Requester && Selector &&  (1).pdf](https://github.com/JS1936/PubgAPI-Java/files/9836660/Draft.1_.User-View.Requester.Selector.1.pdf)
-
+|3: winnerWeapons |	JSON | MatchManager.java |
 |4: ranking (of a specific person)|	JSON | Ranking.java |
 |5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java |
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
