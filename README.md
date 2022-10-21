@@ -12,7 +12,8 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 |0: countBotsAndPeople | Manually | BotCounts.java |
 |1: calculateKillCounts	| Manually | KillCounts.java |	
 |2: printPlayersByTeam | JSON | MatchManager.java |
-|3: winnerWeapons |	JSON | MatchManager.java |
+|3: winnerWeapons |	JSON | MatchManager.java |[Draft 1_ User-View (Requester && Selector &&  (1).pdf](https://github.com/JS1936/PubgAPI-Java/files/9836660/Draft.1_.User-View.Requester.Selector.1.pdf)
+
 |4: ranking (of a specific person)|	JSON | Ranking.java |
 |5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java |
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
@@ -37,10 +38,11 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 2. Can make multiple requests per program run
 3. Can now access [sample files](https://github.com/JS1936/PubgAPI-Java/tree/work/src/main/resources) showing original and "prettified" versions of a file
 4. Resolved [file duplication error](https://github.com/JS1936/PubgAPI-Java/files/9720547/PubgAPI-Java_.Update.4.Details.pdf) in FileManager.java
-5. Can now reference [draft1 of User-View](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Draft%201_%20User-Input%20Preset%20(!Requester%20%26%26%20Selector%20%26%26%20Analyzer).pdf) (Requester, Selector, !Analyzer) | 18 Oct 2022 |
+5. Can now reference [draft1 of User-View](https://github.com/JS1936/PubgAPI-Java/files/9836661/Draft.1_.User-View.Requester.Selector.1.pdf) (Requester && Selector && !Analyzer) | 18 Oct 2022
 6. Can now reference [draft1 of User-Input Preset](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Draft%201_%20User-Input%20Preset%20(!Requester%20%26%26%20Selector%20%26%26%20Analyzer).pdf) (!Requester, Selector, Analyzer) | 19 Oct 2022 |
 
 ### Top 3 Upcoming Updates ###
+
 
 1. Pinpoint sources of memory leaks and resolve the leaks (caution: frequent repetition of program runs can cause computer to freeze as of Oct 3, 2022) 
 2. Transfer PubgAPI-Request-Java repository content into APIManager.java and DoRequest.java. Classes breakdown should reflect current state of all files mentioned.
