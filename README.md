@@ -40,7 +40,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 5. Can now reference [draft1 of User-View](https://github.com/JS1936/PubgAPI-Java/files/9836661/Draft.1_.User-View.Requester.Selector.1.pdf) (Requester && Selector && !Analyzer) | 18 Oct 2022
 6. Can now reference [draft1 of User-Input Preset](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Draft%201_%20User-Input%20Preset%20(!Requester%20%26%26%20Selector%20%26%26%20Analyzer).pdf) (!Requester, Selector, Analyzer) | 19 Oct 2022 |
 7. Can now reference [draft1 of Basic End-User Descriptions](https://github.com/JS1936/PubgAPI-Java/files/9836733/PubgAPI-Java_.Draft1.of.Basic.End-User.Descriptions.pdf) | 21 Oct 2022 | 
-8. Can now reference [draft1 of Use Case Diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/PubgAPI-Java_%20Draft1%20of%20Basic%20End-User%20Descriptions.pdf) | 28 Oct 2022 
+8. Can now reference [draft1 of Use Case Diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/PubgAPI-Java_%20Draft1%20of%20Basic%20End-User%20Descriptions.pdf) | 28 Oct 2022 |
 
 
 ### Top 3 Upcoming Updates ###
