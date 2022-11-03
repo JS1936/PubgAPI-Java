@@ -1,0 +1,12 @@
+Sending Request to Pubg API (Making a Request)
+
+In order to learn about a match, you need to request its data.
+
+Requirements:
+-Gaming platform is steam
+-Player's name will be provided by the user
+-As of November 2022, the user may only provide one player name per request
+
+Abilities:
+-Store results of request (if valid: match_ids based on 1 player's activity within the last 14 days) in a .txt file
+-The results of a request can be used to access and analyze telemetry for individual matches.
