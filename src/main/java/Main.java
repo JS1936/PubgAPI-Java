@@ -5,6 +5,7 @@ import java.util.*;
 
 //The Main class serves as a driver for the PubgAPI-Java project.
 //As of 10/5: being restructured.
+//
 public class Main extends Request {
 
     static File currentFile = null; //added 9/15
