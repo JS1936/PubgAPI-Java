@@ -72,6 +72,46 @@ public class APIManager {
         output.close();
     }
 
+    //TRIAL
+    public static Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
+    {
+        //Path src = Paths.get("/Users", "jmast", "IdeaProjects", "PubgAPI-Java", "src", "main", "resources", "sampleFile_JS1936.txt");
+        //File s = p.toFile();
+        if(s.isFile())
+        {
+            System.out.println("is file");
+        }
+        else
+        {
+            System.out.println("is not file");
+        }
+        System.out.println("Attempting to get match ids from request file");
+        File s_pretty = FileManager.makePretty(s);
+
+        System.out.println("Pretty path: " + s_pretty.getAbsolutePath());
+
+        String fileAsString = FileManager.storeFileAsString(s_pretty);
+        System.out.println(fileAsString);
+
+        JSONObject jsonObject = new JSONObject(fileAsString);
+        JSONArray jsonArrayOfMatches = jsonObject.getJSONArray("data").getJSONObject(0).getJSONObject("relationships").getJSONObject("matches").getJSONArray("data");
+        System.out.println("jsonArray.length = " + jsonArrayOfMatches.length());
+        Vector<String> match_ids = new Vector<String>();
+
+        for(int i = 0; i < jsonArrayOfMatches.length(); i++)
+        {
+            JSONObject id = jsonArrayOfMatches.getJSONObject(i);
+            String match_id = id.get("id").toString();
+            //System.out.println("match_id = " + match_id);
+            ///makeRequest_givenMatchID(match_id); //LOOK
+
+            match_ids.add(match_id);
+        }
+        System.out.println("match_ids.size() = " + match_ids.size());
+        return match_ids;
+        //exit(0);
+
+    }
     public static void getMatchIDsFromSampleFile() throws IOException
     {
         Path src = Paths.get("/Users", "jmast", "IdeaProjects", "PubgAPI-Java", "src", "main", "resources", "sampleFile_JS1936.txt");
