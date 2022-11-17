@@ -54,10 +54,9 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 -7.1. Can now reference [draft2](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/PubgAPI-Java_%20Draft2%20of%20Basic%20End-User%20Descriptions.pdf) | 2 Nov 2022 |
 8. Can now reference [draft1 of Use Case Diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft1-%20Use%20Case%20Diagram%20-%20Pubg-API-Java%20Program.pdf) | 28 Oct 2022 |
 9. Can now automatically get match telemetries from request to API for player's recent history. Previously: separate events | 17 Nov 2022 | 
+10. Resolved merge error. Branch work2 is now properly updated | 17 Nov 2022 |
 
 ### Top 3 Upcoming Updates ###
-
-NOTE: work2 should have been updated to match work3. However, work3 has more information.
 
 1. Pinpoint sources of memory leaks and resolve the leaks (caution: frequent repetition of program runs can cause computer to freeze as of Oct 3, 2022) 
 2. Transfer PubgAPI-Request-Java repository content into APIManager.java and DoRequest.java. Classes breakdown should reflect current state of all files mentioned.
