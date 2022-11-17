@@ -57,6 +57,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 
 ### Top 3 Upcoming Updates ###
 
+NOTE: work2 should have been updated to match work3. However, work3 has more information.
 
 1. Pinpoint sources of memory leaks and resolve the leaks (caution: frequent repetition of program runs can cause computer to freeze as of Oct 3, 2022) 
 2. Transfer PubgAPI-Request-Java repository content into APIManager.java and DoRequest.java. Classes breakdown should reflect current state of all files mentioned.
