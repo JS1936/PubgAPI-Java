@@ -42,6 +42,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 7. Can now reference [draft1 of Basic End-User Descriptions](https://github.com/JS1936/PubgAPI-Java/files/9836733/PubgAPI-Java_.Draft1.of.Basic.End-User.Descriptions.pdf) | 21 Oct 2022 |  
 -7.1. Can now reference [draft2](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/PubgAPI-Java_%20Draft2%20of%20Basic%20End-User%20Descriptions.pdf) | 2 Nov 2022 |
 8. Can now reference [draft1 of Use Case Diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft1-%20Use%20Case%20Diagram%20-%20Pubg-API-Java%20Program.pdf) | 28 Oct 2022 |
+9. Can now automatically get match telemetries from request to API for player's recent history. Previously: separate events | 17 Nov 2022 | 
 
 ### Top 3 Upcoming Updates ###
 
