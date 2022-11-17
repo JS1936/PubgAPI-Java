@@ -11,7 +11,7 @@ public class Main_API {
         System.out.println("Hello, world");
         //API api = new API_Request();
         API request = new API_Request("TGLTN");
-        //API request2 = new API_Request("CDOME");
+        //API request2 = new API_Request("WackyJacky101");
 
     }
 }
