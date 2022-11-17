@@ -18,18 +18,29 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
 
 ## Classes Breakdown ##
+
+### Acquire Data ###
+* API.java //getAPIkey(), getAPIplatform()
+* API_Request.java //getPlayer(), getConnection(), getTimestamp(), connectToAPI(URL url), storeResponseToSpecifiedFileLocation(String dstPath)
+* Main_API.java //main. As of 17 Nov 2022, program runs for Main_API.java.
+
+### Managers ###
 * APIManager.java  //needs significant rework
-* BotCounts.java //countBotsAndPeople(File prettyFile)
-* DoRequest.java //needs significant rework
 * FileManager.java //makePretty, storeFileAsString, getFile, writeToFileAndConsole
 * JSONManager.java //getJSONObject, returnObject, returnMultipleObjects
+* MapManager.java //printMapNames (and getMapName, dashed out because present in MatchManager.java)
+* MatchManager.java //printMatchInfo, getMatchID, getPlayerPerspective, getMatchType, 
+
+### Calculate Statistics ###
+* BotCounts.java //countBotsAndPeople(File prettyFile)
 * KillCounts.java //printKillCountsToHistoryAndConsole, printKillCounts, calculateKillCounts
 * KillCountsJSON.java //printKillCountsJSON, calculateKillCountsJSON
-* Main.java //main, pseudoMain, getInfo, printOptionsToChooseFrom, initiateFunctionalities, getInput, getRequestType
-* MapManager.java //printMapNames (and getMapName, dashed out because present in MatchManager.java)
-* MatchManager.java //printMatchInfo, getMatchID, getPlayerPerspective, getMatchType, getTeamSizeForOfficialMatch, weaponFrequencies, winnerWeapons, printPlayersByTeam, getMapName
+* Main.java //main, pseudoMain, getInfo, printOptionsToChooseFrom, initiateFunctionalities, getInput, getRequestType, getTeamSizeForOfficialMatch, weaponFrequencies, winnerWeapons, printPlayersByTeam, getMapName
 * Ranking.java //ranking
+
+### Inefficient ###
 * Request.java //getRequest, getTypes, getScopes, getRequest_type, getRequest_scope
+* DoRequest.java //needs significant rework
 
 ## Updates ##
 
