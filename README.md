@@ -36,6 +36,8 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 * KillCountsJSON.java //printKillCountsJSON, calculateKillCountsJSON
 * Main.java //main, pseudoMain, getInfo, printOptionsToChooseFrom, initiateFunctionalities, getInput, getRequestType, getTeamSizeForOfficialMatch, weaponFrequencies, winnerWeapons, printPlayersByTeam, getMapName
 * Ranking.java //ranking
+* MapManager.java and MatchManager.java //printMapNames; MatchManager methods being reworked
+![img_1.png](img_1.png)
 
 ### Inefficient ###
 * Request.java //getRequest, getTypes, getScopes, getRequest_type, getRequest_scope

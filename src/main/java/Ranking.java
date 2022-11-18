@@ -31,7 +31,7 @@ public class Ranking {
             //System.out.println("\t" + player_name);
             if (player_name.equalsIgnoreCase(name)) {
                 String player_ranking = player_details.get("ranking").toString();
-                System.out.println(name + "rank in this game: " + player_details.get("ranking").toString());
+                System.out.println(name + " rank in this game: " + player_details.get("ranking").toString());
 
                 try {
                     FileUtils.writeStringToFile(Main.currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //

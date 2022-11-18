@@ -210,6 +210,7 @@ public class FileManager {
         System.out.println("filename.getParentFile():" + fileName.getParentFile());
         //File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
         File prettyFile = new File(fileName.getPath() + "-userFriendly");
+        //File prettyFile = new File(fileName.getPath() + "-userFriendly");
 
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
@@ -421,7 +422,7 @@ public class FileManager {
     public static void writeToFileAndConsole(String text) throws IOException {
         System.out.println(text);
         FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true);
-        //Note: \n is affecting printout for (1)
+        //Note: ln, \n are affecting printout for (1)
     }
 }
 
