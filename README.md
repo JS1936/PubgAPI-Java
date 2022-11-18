@@ -55,6 +55,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 8. Can now reference [draft1 of Use Case Diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft1-%20Use%20Case%20Diagram%20-%20Pubg-API-Java%20Program.pdf) | 28 Oct 2022 |
 9. Can now automatically get match telemetries from request to API for player's recent history. Previously: separate events | 17 Nov 2022 | 
 10. Resolved merge error. Branch work2 is now properly updated | 17 Nov 2022 |
+11. Can now reference [draft1 of Get_Data activity diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft%201_%20Activity%20Diagram.pdf)
 
 ### Top 3 Upcoming Updates ###
 
