@@ -22,7 +22,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 ### Acquire Data ###
 * API.java //getAPIkey(), getAPIplatform()
 * API_Request.java //getPlayer(), getConnection(), getTimestamp(), connectToAPI(URL url), storeResponseToSpecifiedFileLocation(String dstPath)
-* Main_API.java //main. As of 17 Nov 2022, program runs for Main_API.java.
+* Main_API.java //main. As of 17 Nov 2022, program runs from Main_API.java.
 
 ### Managers ###
 * APIManager.java  //needs significant rework
