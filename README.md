@@ -31,7 +31,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 * MatchManager.java //printMatchInfo, getMatchID, getPlayerPerspective, getMatchType, 
 
 ### Calculate Statistics ###
-* BotCounts.java //countBotsAndPeople(File prettyFile)
+* BotCounts.java //countBotsAndPeople(File prettyFile) ![img.png](img.png)
 * KillCounts.java //printKillCountsToHistoryAndConsole, printKillCounts, calculateKillCounts
 * KillCountsJSON.java //printKillCountsJSON, calculateKillCountsJSON
 * Main.java //main, pseudoMain, getInfo, printOptionsToChooseFrom, initiateFunctionalities, getInput, getRequestType, getTeamSizeForOfficialMatch, weaponFrequencies, winnerWeapons, printPlayersByTeam, getMapName
