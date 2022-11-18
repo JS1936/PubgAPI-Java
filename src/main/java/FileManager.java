@@ -216,15 +216,6 @@ public class FileManager {
 
         return prettyFile;
     }
-    //^
-    // make a file to put the "pretty" text in, if needed
-    //C:\Users\jmast\pubgFilesExtracted
-    //Remove this?
-    //String pathToDir  = "C:\\Users\\jmast\\pubgFilesExtracted"; //look for copyOfSampleFile_JS1936.txt here...
-    //File theDir = new File(pathToDir); //custom pathname?
-    //if (!theDir.exists()) {
-    //    theDir.mkdirs();
-    //}
 
     //Store contents of prettyFile in a String called file_content
     //Example of prettified file result: telemetry_json0cfba5cb-c088-488d-86fc-86458cb91b9d.json (in src/java/resources)
