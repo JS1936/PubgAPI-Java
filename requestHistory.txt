@@ -1,0 +1,1920 @@
+
+request=0_requestScope=0_
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly
+#bots:       0 / 26	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json
+#bots:       0 / 26	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly
+#bots:       0 / 26	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly-userFriendly
+#bots:       0 / 26	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly-userFriendly-userFriendly
+request=1_requestScope=0_
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+4 
+0 
+8 
+2 
+
+Kill Frequencies:
+18 got 0 kills.
+4 got 1 kills.
+2 got 2 kills.
+0 got 3 kills.
+1 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 26
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+4 
+0 
+8 
+2 
+
+Kill Frequencies:
+18 got 0 kills.
+4 got 1 kills.
+2 got 2 kills.
+0 got 3 kills.
+1 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 26
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+4 
+0 
+8 
+2 
+
+Kill Frequencies:
+18 got 0 kills.
+4 got 1 kills.
+2 got 2 kills.
+0 got 3 kills.
+1 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 26
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly-userFriendly
+request=0_requestScope=0_
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly
+#bots:       10 / 85	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly
+request=4_requestScope=0_
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly
+-player:JS1936, rank: 4, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.0fcf1f46-3962-4266-b844-9edbb7092d5f	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly
+-player:JS1936, rank: 13, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.943ed4a4-b308-49e7-a0ee-3ccc067ef3d1	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json
+-player:JS1936, rank: 13, match: match.bro.official.pc-2018-16.steam.duo-fpp.na.2022.04.04.04.943ed4a4-b308-49e7-a0ee-3ccc067ef3d1	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly
+request=6_requestScope=0_	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json
+Frequencies of each map played: 
+Heaven_Main x1
+request=6_requestScope=0_	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly-userFriendly
+Frequencies of each map played: 
+Desert_Main x10
+request=6_requestScope=0_	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile3.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile4.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile5.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile6.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile6.jsontest_pretty.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile7.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile8.json
+Frequencies of each map played: 
+Tiger_Main x2
+request=1_requestScope=0_
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+0 
+0 
+
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+2 
+0 
+0 
+0 
+1 
+
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+
+0 
+2 
+0 
+0 
+0 
+1 
+1 
+1 
+1 
+2 
+
+0 
+0 
+0 
+0 
+1 
+1 
+4 
+0 
+0 
+0 
+
+0 
+1 
+5 
+1 
+0 
+0 
+0 
+1 
+0 
+4 
+
+1 
+0 
+1 
+1 
+0 
+3 
+1 
+0 
+0 
+0 
+
+0 
+4 
+1 
+0 
+0 
+3 
+2 
+6 
+6 
+0 
+
+2 
+2 
+3 
+8 
+0 
+
+Kill Frequencies:
+56 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+2 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 32 of 95
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+4 
+0 
+8 
+2 
+
+Kill Frequencies:
+18 got 0 kills.
+4 got 1 kills.
+2 got 2 kills.
+0 got 3 kills.
+1 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 26
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+2 
+0 
+0 
+
+0 
+0 
+4 
+0 
+8 
+2 
+
+Kill Frequencies:
+18 got 0 kills.
+4 got 1 kills.
+2 got 2 kills.
+0 got 3 kills.
+1 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 26
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+0 
+0 
+1 
+0 
+0 
+
+0 
+2 
+1 
+0 
+0 
+0 
+0 
+0 
+3 
+1 
+
+0 
+1 
+1 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+
+2 
+0 
+0 
+3 
+3 
+2 
+0 
+0 
+0 
+2 
+
+3 
+5 
+2 
+6 
+0 
+1 
+4 
+1 
+4 
+0 
+
+5 
+
+Kill Frequencies:
+37 got 0 kills.
+10 got 1 kills.
+5 got 2 kills.
+4 got 3 kills.
+2 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 28 of 61
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+0 
+0 
+1 
+0 
+0 
+
+0 
+2 
+1 
+0 
+0 
+0 
+0 
+0 
+3 
+1 
+
+0 
+1 
+1 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+
+2 
+0 
+0 
+3 
+3 
+2 
+0 
+0 
+0 
+2 
+
+3 
+5 
+2 
+6 
+0 
+1 
+4 
+1 
+4 
+0 
+
+5 
+
+Kill Frequencies:
+37 got 0 kills.
+10 got 1 kills.
+5 got 2 kills.
+4 got 3 kills.
+2 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 28 of 61
+--------------------------------------------------------------------------	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json-userFriendly
+request=3_requestScope=0_
+dtemp7 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	WeapRhino_C
+-------------------------------------------------
+Shinagin Summary (Winner): 
+	Primary Weapon #1: 	WeapAK47_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	WeapKar98k_C x1
+	WeapAK47_C x1
+	WeapMk12_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapRhino_C x1
+	WeapM79_C x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json
+dtemp7 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	WeapRhino_C
+-------------------------------------------------
+Shinagin Summary (Winner): 
+	Primary Weapon #1: 	WeapAK47_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	WeapKar98k_C x1
+	WeapAK47_C x1
+	WeapMk12_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapRhino_C x1
+	WeapM79_C x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly
+dtemp7 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	WeapRhino_C
+-------------------------------------------------
+Shinagin Summary (Winner): 
+	Primary Weapon #1: 	WeapAK47_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	WeapKar98k_C x1
+	WeapAK47_C x1
+	WeapMk12_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapRhino_C x1
+	WeapM79_C x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json-userFriendly-userFriendly
+davdev Summary (Winner): 
+	Primary Weapon #1: 	WeapMG3_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+havrillaz Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMG3_C x1
+	WeapM24_C x1
+	WeapAUG_C x1
+	WeapKar98k_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json
+davdev Summary (Winner): 
+	Primary Weapon #1: 	WeapMG3_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+havrillaz Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMG3_C x1
+	WeapM24_C x1
+	WeapAUG_C x1
+	WeapKar98k_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly
+davdev Summary (Winner): 
+	Primary Weapon #1: 	WeapMG3_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+havrillaz Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMG3_C x1
+	WeapM24_C x1
+	WeapAUG_C x1
+	WeapKar98k_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json-userFriendly-userFriendly
+Other__Barry Summary (Winner): 
+	Primary Weapon #1: 	WeapM16A4_C
+	Primary Weapon #2: 	WeapMP5K_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iDabOG Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapAK47_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapM16A4_C x1
+	WeapMP5K_C x1
+	WeapAUG_C x1
+	WeapAK47_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json
+Other__Barry Summary (Winner): 
+	Primary Weapon #1: 	WeapM16A4_C
+	Primary Weapon #2: 	WeapMP5K_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iDabOG Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapAK47_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapM16A4_C x1
+	WeapMP5K_C x1
+	WeapAUG_C x1
+	WeapAK47_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json-userFriendly
+Other__Barry Summary (Winner): 
+	Primary Weapon #1: 	WeapM16A4_C
+	Primary Weapon #2: 	WeapMP5K_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iDabOG Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapAK47_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapM16A4_C x1
+	WeapMP5K_C x1
+	WeapAUG_C x1
+	WeapAK47_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json-userFriendly-userFriendly
+Ignignokt Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapMini14_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+karinmarie Summary (Winner): 
+	Primary Weapon #1: 	WeapBerylM762_C
+	Primary Weapon #2: 	WeapAWM_C
+	Secondary Weapon: 	WeapFlareGun_C
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapHK416_C x1
+	WeapMini14_C x1
+	WeapBerylM762_C x1
+	WeapAWM_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x1
+	WeapFlareGun_C x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile3.json
+request=3_requestScope=0_
+dtemp7 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	WeapRhino_C
+-------------------------------------------------
+Shinagin Summary (Winner): 
+	Primary Weapon #1: 	WeapAK47_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	WeapKar98k_C x1
+	WeapAK47_C x1
+	WeapMk12_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapRhino_C x1
+	WeapM79_C x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json
+davdev Summary (Winner): 
+	Primary Weapon #1: 	WeapMG3_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+havrillaz Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMG3_C x1
+	WeapM24_C x1
+	WeapAUG_C x1
+	WeapKar98k_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json
+Other__Barry Summary (Winner): 
+	Primary Weapon #1: 	WeapM16A4_C
+	Primary Weapon #2: 	WeapMP5K_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iDabOG Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapAK47_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapM16A4_C x1
+	WeapMP5K_C x1
+	WeapAUG_C x1
+	WeapAK47_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json
+Ignignokt Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapMini14_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+karinmarie Summary (Winner): 
+	Primary Weapon #1: 	WeapBerylM762_C
+	Primary Weapon #2: 	WeapAWM_C
+	Secondary Weapon: 	WeapFlareGun_C
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapHK416_C x1
+	WeapMini14_C x1
+	WeapBerylM762_C x1
+	WeapAWM_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x1
+	WeapFlareGun_C x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile3.json
+mobster909 Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+DrDixieWrecked Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapHK416_C x2
+	WeapM24_C x2
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile4.json
+im-ur-dad Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Im-ur-son Summary (Winner): 
+	Primary Weapon #1: 	WeapP90_C
+	Primary Weapon #2: 	WeapDP12_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapP90_C x1
+	WeapDP12_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile5.json
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+
+SECONDARY WEAPON: (winners only)
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile6.json
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+
+SECONDARY WEAPON: (winners only)
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile6.jsontest_pretty.json
+6IX_Rookie Summary (Winner): 
+	Primary Weapon #1: 	WeapMosinNagant_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapSawnoff_C
+-------------------------------------------------
+Kirpeht Summary (Winner): 
+	Primary Weapon #1: 	WeapKar98k_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapSawnoff_C
+-------------------------------------------------
+STEPDAD127 Summary (Winner): 
+	Primary Weapon #1: 	WeapM24_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapSawnoff_C
+-------------------------------------------------
+matt112 Summary (Winner): 
+	Primary Weapon #1: 	WeapM24_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapSawnoff_C
+-------------------------------------------------
+Hw1nd Summary (Winner): 
+	Primary Weapon #1: 	WeapBerylM762_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapDesertEagle_C
+-------------------------------------------------
+Scroopy_Nooper Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapSawnoff_C
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMosinNagant_C x1
+	N/A x6
+	WeapKar98k_C x1
+	WeapM24_C x2
+	WeapBerylM762_C x1
+	WeapFNFal_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapSawnoff_C x5
+	WeapDesertEagle_C x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile7.json
+0NEmanW0LFpack Summary (Winner): 
+	Primary Weapon #1: 	WeapDP12_C
+	Primary Weapon #2: 	WeapMini14_C
+	Secondary Weapon: 	WeapM1911_C
+-------------------------------------------------
+Bubb_Rubb Summary (Winner): 
+	Primary Weapon #1: 	WeapUMP_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapDP12_C x1
+	WeapMini14_C x1
+	WeapUMP_C x1
+	WeapKar98k_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM1911_C x1
+	N/A x1
+	C:\Users\jmast\pubgFilesExtracted\telemetryFile8.json
+request=2_requestScope=0_	C:\Users\jmast\pubgFilesExtracted\telemetryFile0.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile1.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile2.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile3.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile4.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile5.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile6.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile6.jsontest_pretty.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile7.json	C:\Users\jmast\pubgFilesExtracted\telemetryFile8.json
