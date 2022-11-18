@@ -55,6 +55,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 10. Resolved merge error. Branch work2 is now properly updated | 17 Nov 2022 |
 11. Can now reference [draft1 of Get_Data activity diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft%201_%20Activity%20Diagram.pdf) | 17 Nov 2022 |
 12. Remove file - APIManager.java. Any retained content placed to API_Request.java | 17 Nov 2022 |
+13. Remove file - DoRequest.java (was empty) | 18 Nov 2022 |
 
 ### Top 3 Upcoming Updates ###
 
