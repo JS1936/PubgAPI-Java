@@ -1,4 +1,6 @@
 import org.apache.commons.io.FileUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -9,6 +11,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Vector;
+
+import java.io.File;
+import java.io.IOException;
+
 
 //custom request option? (For matches)
 //wait, acquiring vs using...
@@ -90,7 +96,7 @@ public class API_Request extends API {
         this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
 
         //use summary to get recent match_ids. They are then formatted to be more visually user-friendly.
-        Vector<String> match_ids = APIManager.getMatchIDsFromRequestPath(summary_File);
+        Vector<String> match_ids = getMatchIDsFromRequestPath(summary_File);
         int numMatches = 0;
         for(String match_id : match_ids) {
             URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
@@ -157,7 +163,42 @@ public class API_Request extends API {
         output.close();
         return responseFile;
     }
+    //TRIAL
+    //Moved from APIManager to API_Request
+    public static Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
+    {
+        if(s.isFile())
+        {
+            System.out.println("is file");
+        }
+        else
+        {
+            System.out.println("is not file");
+        }
+        System.out.println("Attempting to get match ids from request file");
+        File s_pretty = FileManager.makePretty(s);
 
+        System.out.println("Pretty path: " + s_pretty.getAbsolutePath());
+
+        String fileAsString = FileManager.storeFileAsString(s_pretty);
+        System.out.println(fileAsString);
+
+        JSONObject jsonObject = new JSONObject(fileAsString);
+        JSONArray jsonArrayOfMatches = jsonObject.getJSONArray("data").getJSONObject(0).getJSONObject("relationships").getJSONObject("matches").getJSONArray("data");
+        System.out.println("jsonArray.length = " + jsonArrayOfMatches.length());
+        Vector<String> match_ids = new Vector<String>();
+
+        for(int i = 0; i < jsonArrayOfMatches.length(); i++)
+        {
+            JSONObject id = jsonArrayOfMatches.getJSONObject(i);
+            String match_id = id.get("id").toString();
+            //System.out.println("match_id = " + match_id);
+
+            match_ids.add(match_id);
+        }
+        System.out.println("match_ids.size() = " + match_ids.size());
+        return match_ids;
+    }
     //Consider: allowing custom dst
     //public void getRequest(URL url) throws IOException {
 
@@ -209,3 +250,16 @@ public class API_Request extends API {
     //getters
     //setters
 }
+//NOTES BUFFER:
+//
+// EX:
+//get player-focused list of matches
+//prettify that file
+//look through that file to get the list of match_ids and store them
+//for each stored match_id, request full match telemetry information
+//for each stored match_id, store the full match telemetry information
+//put full match telemetry information in a directory such that this program can use it...
+
+//public static void workingWithSampleFile2() throws IOException {
+//    File[] files = new File(FileManager.getAbsolutePathToActiveFolder()).listFiles();
+//}

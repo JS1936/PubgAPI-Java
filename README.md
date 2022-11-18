@@ -25,7 +25,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 * Main_API.java //main. As of 17 Nov 2022, program runs from Main_API.java.
 
 ### Managers ###
-* APIManager.java  //needs significant rework
+* APIManager.java  //cleared --> will be removed
 * FileManager.java //makePretty, storeFileAsString, getFile, writeToFileAndConsole
 * JSONManager.java //getJSONObject, returnObject, returnMultipleObjects
 * MapManager.java //printMapNames (and getMapName, dashed out because present in MatchManager.java)
