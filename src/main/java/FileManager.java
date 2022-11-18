@@ -421,6 +421,7 @@ public class FileManager {
     public static void writeToFileAndConsole(String text) throws IOException {
         System.out.println(text);
         FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true);
+        //Note: \n is affecting printout for (1)
     }
 }
 

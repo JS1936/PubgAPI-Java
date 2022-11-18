@@ -48,7 +48,15 @@ public class Main extends Request {
         //
         //initiateRequestScopes(); //added 9/17
 
-        requestHistory = FileManager.getFile("C:\\Users\\jmast\\pubg_requestHistory");
+        requestHistory = FileManager.getFile("requestHistory.txt");
+        if(!requestHistory.exists())
+        {
+            System.out.println("specific request Does not yet exist");
+            requestHistory.mkdirs();
+            requestHistory.getParentFile().mkdirs();
+
+        }
+        //requestHistory = FileManager.getFile("C:\\Users\\jmast\\pubg_requestHistory");
         currentFile = FileManager.getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
 
         Scanner input = new Scanner(System.in);
