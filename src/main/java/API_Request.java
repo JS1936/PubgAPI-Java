@@ -20,6 +20,7 @@ import java.io.IOException;
 //wait, acquiring vs using...
 //add "uses" diagram? Domain diagram?
 
+//Consider: incorporating request history here
 public class API_Request extends API {
 
     private String player = "<playerName>";
