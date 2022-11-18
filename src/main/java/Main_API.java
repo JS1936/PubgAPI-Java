@@ -10,7 +10,7 @@ public class Main_API {
 	// write your code here
         System.out.println("Hello, world");
         //API api = new API_Request();
-        API request = new API_Request("TGLTN");
+        API request = new API_Request("CoorsLatte");
         //API request2 = new API_Request("WackyJacky101");
 
     }

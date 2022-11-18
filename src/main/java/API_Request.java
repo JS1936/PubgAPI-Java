@@ -33,12 +33,13 @@ public class API_Request extends API {
     //private boolean isValidRequest = false;
     //private boolean isConnected = false;
 
-
-
     public String getPlayer() { return this.player; }
-    //public boolean isConnectedToAPI() { return this.isConnected; }
     public HttpURLConnection getConnection() { return this.connection; }
     public long getTimestamp() { return this.timestamp; }
+
+    //public boolean isConnectedToAPI() { return this.isConnected; }
+
+
 
     //Incomplete
     /*
@@ -59,9 +60,6 @@ public class API_Request extends API {
     //getSummary? //getMatches?
 
 //FileManager HAS makePretty(File)
-    //
-    //URL url = new URL("https://api.pubg.com/shards/steam/matches/"+ match_id);
-//this.oneMatch = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
     public API_Request(String player) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
@@ -202,46 +200,9 @@ public class API_Request extends API {
     //Consider: allowing custom dst
     //public void getRequest(URL url) throws IOException {
 
-    //connection.disconnect();
-    //}
-
-    //Consider: make for single match instead...
-    /*
-    public void getMatchTelemetry() throws IOException { //fix?
-            Vector<String> match_ids = null; //fix
-
-            for(String match_id : match_ids)
-            {
-                this.oneMatch = new URL("https://api.pubg.com/shards/steam/matches/"+ match_id);
-                connectToAPI(this.oneMatch);
-                //if(isConnected)
-                //{
-                       //
-                //}
-                //else
-                //{
-                    //error. Did not connect
-                //}
-
-            }
-            String id = "1e1e3cd3-1a5e-4c97-9444-1e882dda0628";
-            this.oneMatch = new URL("https://api.pubg.com/shards/steam/matches/"+ id);
-            connectToAPI(this.oneMatch);
-            //Path summary_Path = Path.of(specificRequest + "/summary_matchList.txt");
-            //Files.createDirectory(Path.of(specificRequest + "/matches"));
-            //storeResponseToSpecifiedFileLocation(summary_Path.toString());
-    }
-     */
-    //reportMatchTelemetry
-
 
     //get_matchID
     //get_match_info
-
-    // HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-    //     conn.setRequestMethod("GET");
-    //             conn.setRequestProperty("Authorization","Bearer " + API_key);
-    //             conn.setRequestProperty("Accept", "application/vnd.api+json");
 
     //constructor(s)
     //copy constructor
