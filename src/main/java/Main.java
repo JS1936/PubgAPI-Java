@@ -98,7 +98,7 @@ public class Main {
             System.out.println("Error. Invalid input."); //Does not yet allow retry or give further feedback
             System.exit(0); //temporary. Terminate program.
         }
-
+        //
 
 
         File requestsDir = new File("requestsDir");
