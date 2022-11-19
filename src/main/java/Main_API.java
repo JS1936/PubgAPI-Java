@@ -2,6 +2,8 @@ import java.io.IOException;
 
 //Associated classes: API, API_Request
 //Associated test classes: APITest, API_RequestTest
+//Note: Main_API seems to function when cloned from GitHub onto a new device.
+//However, Main still relies on local files.
 public class Main_API {
 
 

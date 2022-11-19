@@ -32,10 +32,14 @@ import static java.nio.file.Files.copy;
  *          - writeToFileAndConsole
  */
 //TO-DO: Preferably, allow only one instance of FileManager class (singleton).
+//TODO: simplify class.
 public class FileManager {
 
+    //TODO: update storage use of "activeFolder" and "inactiveFolder"
     static File activeFolder = new File("C:\\activeFolder");
     static File inactiveFolder = new File("C:\\inactiveFolder");
+    //Remove: static File activeFolder = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
+
 
 
     //Returns a String holding the absolute path to file activeFolder.
@@ -359,6 +363,7 @@ public class FileManager {
             throw new FileNotFoundException("Error: file not found.");
         }
         String fileTail = getTailOfFile(fileToActivate);
+        //TODO: (activateFile) remove reliance on the specific file locations and files pre-downloaded locally
         File active = new File( "C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileTail);
         moveFile(fileToActivate, active); //add bool to know if succeeded?
     }
@@ -414,6 +419,7 @@ public class FileManager {
             throw new FileNotFoundException("Error: file not found.");
         }
         String fileTail = getTailOfFile(fileToInactivate);
+        //TODO: (inactivateFile) remove reliance on the specific file locations and files pre-downloaded locally
         File inactive = new File("C:\\Users\\jmast\\pubgFilesExtracted\\inactiveFiles\\" + fileTail); //fileTail  //make this a global var?
         moveFile(fileToInactivate, inactive);
     }

@@ -34,7 +34,7 @@ public class Ranking {
                 System.out.println(name + " rank in this game: " + player_details.get("ranking").toString());
 
                 try {
-                    FileUtils.writeStringToFile(Main.currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //
+                    //FileUtils.writeStringToFile(Main.currentFile, "\n-" + player_name + ", " + player_ranking + ", " + match_id, (Charset) null, true); //Not currently used (11/18)
                     FileUtils.writeStringToFile(Main.requestHistory, "\n-player:" + player_name + ", rank: " + player_ranking + ", match: " + match_id, (Charset) null, true); //changed requestedResults to currentFile //added 9/15
 
                 } catch (IOException e) {

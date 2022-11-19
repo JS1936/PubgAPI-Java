@@ -6,61 +6,41 @@ import java.util.*;
 //The Main class serves as a driver for the PubgAPI-Java project.
 //As of 10/5: being restructured.
 //
-public class Main extends Request {
+//Consider: removing Request.java
+//public class Main extends Request {
+public class Main {
 
-    static File currentFile = null; //added 9/15
-    static File requestHistory = null;
 
-    public static Request requestCurrent;// = new Request(0,0);
+    //static File currentFile = null; //added 9/15 //not currently used (11/18)
+    //public static Request requestCurrent;// = new Request(0,0); //not currently used (11/18)
+
+    static File requestHistory = null; //Consider: make non-global
     public static Vector<String> mapsPlayed = new Vector<String>();
-
     public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
 
-    //public static Vector<String> functionalities = requestCurrent.getTypesOfRequests();
-    //public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
 
-
-    //TO-DO: allow customizable location for requestHistory
-    /*
-    public static void setPathForRequestHistory(Scanner input)
+    private static void setupRequestHistory()
     {
-        System.out.println("Please enter fi")
-        System.out.println("Where would you like your requestHistory to be stored?");
-        System.out.println("0: default location --> 'C:\\\\Users\\\\jmast\\\\pubg_requestHistory\"");
-        System.out.println("1: custom location");
-        int requestHistoryStorage = input.nextInt();
-    }
-     */
-
-    //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
-    //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
-    public static void main(String[] args)
-    {
-        //try {
-         //   APIManager.workingWithSampleFile();
-        //    //APIManager.getMatchIDsFromSampleFile();
-        //} catch (IOException e) {
-        ////    e.printStackTrace();
-        //}
-
-        mapsPlayed.clear(); //clear at the beginning
-        initiateFunctionalities();
-        //
-        //initiateRequestScopes(); //added 9/17
-
         requestHistory = FileManager.getFile("requestHistory.txt");
         if(!requestHistory.exists())
         {
-            System.out.println("specific request Does not yet exist");
+            System.out.println("requestHistory.txt Does not yet exist. Creating it now.");
             requestHistory.mkdirs();
             requestHistory.getParentFile().mkdirs();
-
         }
-        //requestHistory = FileManager.getFile("C:\\Users\\jmast\\pubg_requestHistory");
-        currentFile = FileManager.getFile("C:\\Users\\jmast\\sampleFile"); //added 9/15
+    }
+    //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
+    //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
+    //WON'T: include requestScopes (as of 11/18)
+    public static void main(String[] args)
+    {
+        //Do basic setup
+        mapsPlayed.clear(); //clear at the beginning
+        initiateFunctionalities();
+        setupRequestHistory(); //if needed, creates a file to store information about requests
 
+        //Provide Scanner for pseudoMain to use.
         Scanner input = new Scanner(System.in);
-        //setPathForRequestHistory(input);
         psuedoMain(input);
         input.close();
     }
@@ -68,18 +48,21 @@ public class Main extends Request {
     //Allows for multiple requests in a single running of the program.
     public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
+        //TODO: remove reliance on specific file locations and files pre-downloaded locally
+        //TODO: switch to target specific requestDir item
         File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
 
         mapsPlayed.clear(); //avoid duplicates...
 
         input = new Scanner(System.in);
 
+        //TODO: allow presets to utilize this
         int request = getRequestType(input); //(requestType)
         ///int requestScope = getRequestScope(input);
         //Request r = new Request(request, requestScope);
         int dummyForNow = 0;
         int requestScope = dummyForNow;
-        requestCurrent = new Request(request, requestScope);
+        //requestCurrent = new Request(request, requestScope);
         //int request = getRequest(input); //string or int? (Getting confused)
 
 
@@ -104,6 +87,7 @@ public class Main extends Request {
 
         }
 
+        //TODO: allow max_files to be specified (EX: in a preset?)
         int max_files = 10; //temporary (remove later)
         int filesSoFar = 0;
         for (File fileName : files)
@@ -232,6 +216,7 @@ public class Main extends Request {
     //If requests are objects, then this is easier...?
     //abstract these better...!
     //write to file (requestHistory) here? 9/15
+    //TODO: allow presets to utilize this ("input"...)
     public static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
     {
         int request = -1; //not yet a valid request
@@ -280,3 +265,17 @@ public class Main extends Request {
 //-Possibly make the default storage location for active files --> .../main/resources
 //-File storage --> ask user if/where. Could automatically store it, then only keep at the end if user says to keep it
 // (at the end...) --> both more and less work
+
+/////
+
+//public static Vector<String> functionalities = requestCurrent.getTypesOfRequests();
+//public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
+
+
+//Was in main:
+//        //try {
+//         //   APIManager.workingWithSampleFile();
+//        //    //APIManager.getMatchIDsFromSampleFile();
+//        //} catch (IOException e) {
+//        ////    e.printStackTrace();
+//        //}
