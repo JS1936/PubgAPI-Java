@@ -36,6 +36,7 @@ public class Main {
 
     //Note: example.txt is showing up as a folder, but should appear as .txt
     //Note: example is not yet included (filled in)
+    //Note: follows same process as setupRequestHistory()
     private static void setupPresetsFolder()
     {
         File presets = new File("presetsDir/example.txt");//FileManager.getFile("presetsDir/example.txt");
@@ -72,61 +73,42 @@ public class Main {
 
     //Allows for multiple requests in a single running of the program.
     //Consider: acquisition vs evaluation vs edit
+    //TODO: remove reliance on specific file locations and files pre-downloaded locally
+    //TODO: switch to target specific requestDir item
+    //TODO: list the files to console successfully here
+    //Need: location of user's desired folder.
     public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
-        //TODO: remove reliance on specific file locations and files pre-downloaded locally
-        //TODO: switch to target specific requestDir item
-        //Need: location of user's desired folder.
-        System.out.println("pseudoMain" );
+        mapsPlayed.clear(); //avoid duplicates...
 
-        //Check if using a preset
-        //Directory holding presets. Prints the names of the files in that directory.
-        //Consider: requiring a preset.
+
+        //Directory holding presets. Print the names of the files in that directory.
         System.out.println("Which preset would you like to use? Type the corresponding number and then press enter.");
         File presets = new File("presetsDir");
-        //File requestsDir = new File("requestsDir");
-        if(presets.exists())
-        {
-            System.out.println("presets already exists.");
-            presets.listFiles();
-        }
         File[] filesPresets = presets.listFiles(); //Let user decide, though?
         for(int i = 1; i < filesPresets.length; i++) //starts at 1 to avoid .DS_STORE file
         {
             System.out.println(i + ": " + filesPresets[i].getName());
         }
         System.out.println("SIZE: " + filesPresets.length);
-        //System.out.println("0: Yes. Choose a preset.");
-        //System.out.println("1: No. Continue without a preset."); //Default preset?
-        //System.out.println();
+        input = new Scanner(System.in);
+        int chosenPreset = input.nextInt();
+        if(chosenPreset <= 0 || chosenPreset >= filesPresets.length)
+        {
+            System.out.println("Error. Invalid input."); //Does not yet allow retry or give further feedback
+            System.exit(0); //temporary. Terminate program.
+        }
 
-        //If using a preset, need to select the preset.
-        //If not using a preset, consult general "database" and/or default sample files.
 
-        //System.out.println("To use a preset, type 1 and then press enter.");
-        //System.out.println("To not use a preset, type 0 and then press enter.");
-        System.out.println("List fileS: ");
-        //TODO: list the files to console successfully here
+
         File requestsDir = new File("requestsDir");
-        if(requestsDir.exists())
-        {
-            System.out.println("requestsDir already exists.");
-            requestsDir.listFiles();
-        }
         File[] files = requestsDir.listFiles(); //Let user decide, though?
-        for(int i = 1; i < files.length; i++) //starts at 1 to avoid .DS_STORE file
-        {
-            System.out.println(i + ": " + files[i].getName());
-        }
-
-        System.out.println("SIZE: " + files.length);
-
         //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
 
 
-        mapsPlayed.clear(); //avoid duplicates...
 
-        input = new Scanner(System.in);
+
+        //input = new Scanner(System.in);
 
         //TODO: allow presets to utilize this
         int request = getRequestType(input); //(requestType)
