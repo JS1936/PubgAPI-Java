@@ -5,7 +5,7 @@ import java.util.Date;
 //The Request class represents a request about a pubg file (or files) made by the user.
 //TO-DO: restructure/rewrite into more clear/efficient/intuitive format.
 public class Request {
-
+/*
     //Vector<String> typesOfRequests = new Vector<String>();//{"countBotsAndPeople};
     String[] types = {"countBotsAndPeople", "calculateKillCounts", "printPlayersByTeam", "winnerWeapons", "ranking", "calculateKillCountsJSON", "mapsPlayed"};
     String[] scopes = {"individual", "team", "everyone"};
@@ -68,8 +68,8 @@ public class Request {
         functionalities.add("calculateKillCountsJSON");
         functionalities.add("printMapsPlayed");
     }
-
-     */
+    */
+    /*
     //For getting the date: https://stackabuse.com/how-to-get-current-date-and-time-in-java/
     Request(int type, int scope, boolean useJSON)
     {
@@ -86,6 +86,8 @@ public class Request {
         }
 
     }
+    */
+
 
 
 }

@@ -4,6 +4,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.Vector;
 
+//Consider: adding convert txt to json
 public class JSONManager {
 
     /*

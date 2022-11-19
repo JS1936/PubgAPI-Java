@@ -7,6 +7,7 @@ import java.rmi.UnexpectedException;
 
 public class FileManagerTests {
 
+    /*
     void checkIfExpectEqualsActual(String expect, String actual) throws UnexpectedException {
         if(!expect.equals(actual))
         {
@@ -73,7 +74,7 @@ public class FileManagerTests {
     }
     */
 
-
+/*
     @Test
     void activateFile() throws IOException {
         System.out.println("Attempting to activate file");
@@ -108,7 +109,7 @@ public class FileManagerTests {
         }
     }
 }
-
+*/
 
 /*
     @Test
@@ -162,3 +163,4 @@ public class FileManagerTests {
         fileToInactivate.renameTo(new File("C:\\Users\\jmast\\pubgFilesExtracted\\inactiveFiles\\" + fileTail));
     }
      */
+}

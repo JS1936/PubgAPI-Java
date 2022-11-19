@@ -7,6 +7,7 @@ import java.util.*;
 //As of 10/5: being restructured.
 //
 //Consider: removing Request.java
+//Consider: adding some sort of PresetReader
 //public class Main extends Request {
 public class Main {
 
@@ -21,13 +22,36 @@ public class Main {
 
     private static void setupRequestHistory()
     {
-        requestHistory = FileManager.getFile("requestHistory.txt");
+        //requestHistory = FileManager.getFile("requestHistory.txt");
+        requestHistory = new File("requestHistory.txt");//FileManager.getFile("presetsDir/example.txt");
+
         if(!requestHistory.exists())
         {
             System.out.println("requestHistory.txt Does not yet exist. Creating it now.");
             requestHistory.mkdirs();
             requestHistory.getParentFile().mkdirs();
         }
+        System.out.println("requestHistory is stored at " + requestHistory.getAbsolutePath());
+    }
+
+    //Note: example.txt is showing up as a folder, but should appear as .txt
+    //Note: example is not yet included (filled in)
+    private static void setupPresetsFolder()
+    {
+        File presets = new File("presetsDir/example.txt");//FileManager.getFile("presetsDir/example.txt");
+        if(!presets.exists())
+        {
+            System.out.println("presetsDir/example.txt Does not yet exist. Creating it now.");
+            presets.mkdirs();
+            //presets.getParentFile().mkdirs();
+        }
+        System.out.println("presetsDir/example is stored at " + presets.getAbsolutePath());
+    }
+
+
+    private static void checkIfUsingPreset()
+    {
+
     }
     //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
     //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
@@ -38,6 +62,7 @@ public class Main {
         mapsPlayed.clear(); //clear at the beginning
         initiateFunctionalities();
         setupRequestHistory(); //if needed, creates a file to store information about requests
+        setupPresetsFolder();
 
         //Provide Scanner for pseudoMain to use.
         Scanner input = new Scanner(System.in);
@@ -46,11 +71,33 @@ public class Main {
     }
 
     //Allows for multiple requests in a single running of the program.
+    //Consider: acquisition vs evaluation vs edit
     public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
         //TODO: remove reliance on specific file locations and files pre-downloaded locally
         //TODO: switch to target specific requestDir item
-        File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+        //Need: location of user's desired folder.
+        System.out.println("pseudoMain" );
+
+        //Check if using a preset
+        //Directory holding presets. Prints the names of the files in that directory.
+        //Consider: requiring a preset.
+        System.out.println("Would you like to use a preset? Type the corresponding number and then press enter.");
+        System.out.println("0: Yes. Choose a preset.");
+        System.out.println("1: No. Continue without a preset."); //Default preset?
+        System.out.println();
+
+        //If using a preset, need to select the preset.
+        //If not using a preset, consult general "database" and/or default sample files.
+
+        //System.out.println("To use a preset, type 1 and then press enter.");
+        //System.out.println("To not use a preset, type 0 and then press enter.");
+        System.out.println("List fileS: ");
+        //TODO: list the files to console successfully here
+        File[] files = new File("requestsDir").listFiles(); //Let user decide, though?
+
+        //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+        File[] presets = new File("presetsDir/").listFiles();
 
         mapsPlayed.clear(); //avoid duplicates...
 
@@ -58,18 +105,15 @@ public class Main {
 
         //TODO: allow presets to utilize this
         int request = getRequestType(input); //(requestType)
-        ///int requestScope = getRequestScope(input);
-        //Request r = new Request(request, requestScope);
-        int dummyForNow = 0;
-        int requestScope = dummyForNow;
-        //requestCurrent = new Request(request, requestScope);
-        //int request = getRequest(input); //string or int? (Getting confused)
 
 
         //Added the try/catch writeStringToFile for requestHistory 9/15
+        //Consider: storing request name and/or content (if using a preset)
         try {
             //could even have a log-in system where differentiating user histories
-            FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
+           //TODO: ensure print to console and write to file are synced properly
+            //FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
+            FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_", (Charset) null, true); //changed requestedResults to currentFile
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -245,6 +289,12 @@ public class Main {
         int requestType = getInput(input, functionalities);
         return requestType;
     }
+
+
+
+
+
+
 
     /*
     //Not yet fully implemented

@@ -36,25 +36,25 @@ import static java.nio.file.Files.copy;
 public class FileManager {
 
     //TODO: update storage use of "activeFolder" and "inactiveFolder"
-    static File activeFolder = new File("C:\\activeFolder");
-    static File inactiveFolder = new File("C:\\inactiveFolder");
+    //static File activeFolder = new File("C:\\activeFolder");
+    //static File inactiveFolder = new File("C:\\inactiveFolder");
     //Remove: static File activeFolder = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
 
 
 
     //Returns a String holding the absolute path to file activeFolder.
-    public static String getAbsolutePathToActiveFolder()
-    {
-        System.out.println("Absolute path to active folder: " + activeFolder.getAbsolutePath());
-        return activeFolder.getAbsolutePath();
-    }
+   // public static String getAbsolutePathToActiveFolder()
+   // {
+   //     System.out.println("Absolute path to active folder: " + activeFolder.getAbsolutePath());
+   //     return activeFolder.getAbsolutePath();
+   // }
 
     //Returns a String holding the absolute path to file inactiveFolder.
-    public static String getAbsolutePathToInactiveFolder()
-    {
-        System.out.println("Absolute path to inactive folder: " + inactiveFolder.getAbsolutePath());
-        return inactiveFolder.getAbsolutePath();
-    }
+    //public static String getAbsolutePathToInactiveFolder()
+   // {
+   //     System.out.println("Absolute path to inactive folder: " + inactiveFolder.getAbsolutePath());
+   //     return inactiveFolder.getAbsolutePath();
+   // }
 
     /*
     public static void printListOfActiveFiles()
@@ -102,6 +102,7 @@ public class FileManager {
     }
 
     //If possible, moves src folder (and nested contents) to a new path described by destPath.
+    /*
     public static void moveFileToPath(File src, String destPath) {//throws FileNotFoundException {
         //src.listFiles();
         if(!src.exists())
@@ -123,6 +124,7 @@ public class FileManager {
             ex.printStackTrace();
         }
     }
+     */
     //1) Does activeFolder exist?
     //2) Does currentlyInactive exist?
     //3) If both exist, copy the contents of activeFolder to currentlyInactive.
@@ -269,6 +271,7 @@ public class FileManager {
     //Move File src (and nested files) to exist at location for File dest
     //call with string (string name) or file itself?
     //Note: make this private helper?
+    /*
     public static void moveFile(File src, File dest) throws IOException {
 
         Path sourcePath = Path.of(src.getPath());
@@ -331,10 +334,11 @@ public class FileManager {
         {
             System.out.println("is not renamed");
         }
-        */
+
 
         System.out.println("Post-move");
     }
+    */
 
     public static String getTailOfFile(File file)
     {
@@ -356,6 +360,7 @@ public class FileManager {
 
     //Pre: assumes (for now, at least) that file is "pretty"
     //Pre: fileToActivate should exist
+    /*
     public static void activateFile(File fileToActivate) throws IOException {
         System.out.println("Attempting to activate file");
         if(!fileToActivate.exists())
@@ -367,6 +372,7 @@ public class FileManager {
         File active = new File( "C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileTail);
         moveFile(fileToActivate, active); //add bool to know if succeeded?
     }
+    */
     //Pre: file exists and is in the file folder meant for "active" files; does NOT exist in file folder meant for inactive files
     //Post: moves fileName into file folder called inactiveFiles, should no longer exist in folder meant for active files (or whatever folder it was originally in)
     //UNTESTED
@@ -412,6 +418,7 @@ public class FileManager {
         fileToInactivate.renameTo(inactive); //fileTail
         System.out.println("Post-move");
         */
+    /*
     public static void inactivateFile(File fileToInactivate) throws IOException { // /deactivate
         System.out.println("Attempting to in-/de-activate file");
         if(!fileToInactivate.exists())
@@ -423,12 +430,14 @@ public class FileManager {
         File inactive = new File("C:\\Users\\jmast\\pubgFilesExtracted\\inactiveFiles\\" + fileTail); //fileTail  //make this a global var?
         moveFile(fileToInactivate, inactive);
     }
+     */
 
     //Writes the given text both to the requestHistory file and to console.
     public static void writeToFileAndConsole(String text) throws IOException {
         System.out.println(text);
-        FileUtils.writeStringToFile(Main.requestHistory, "\n" + text, (Charset) null, true);
+        FileUtils.writeStringToFile(Main.requestHistory, text + "\n", (Charset) null, true);
         //Note: ln, \n are affecting printout for (1)
+        //Would "text + \n" work? (Rather than "\n + text")
     }
 }
 
