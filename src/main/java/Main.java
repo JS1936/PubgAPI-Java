@@ -82,10 +82,23 @@ public class Main {
         //Check if using a preset
         //Directory holding presets. Prints the names of the files in that directory.
         //Consider: requiring a preset.
-        System.out.println("Would you like to use a preset? Type the corresponding number and then press enter.");
-        System.out.println("0: Yes. Choose a preset.");
-        System.out.println("1: No. Continue without a preset."); //Default preset?
-        System.out.println();
+        System.out.println("Which preset would you like to use? Type the corresponding number and then press enter.");
+        File presets = new File("presetsDir");
+        //File requestsDir = new File("requestsDir");
+        if(presets.exists())
+        {
+            System.out.println("presets already exists.");
+            presets.listFiles();
+        }
+        File[] filesPresets = presets.listFiles(); //Let user decide, though?
+        for(int i = 1; i < filesPresets.length; i++) //starts at 1 to avoid .DS_STORE file
+        {
+            System.out.println(i + ": " + filesPresets[i].getName());
+        }
+        System.out.println("SIZE: " + filesPresets.length);
+        //System.out.println("0: Yes. Choose a preset.");
+        //System.out.println("1: No. Continue without a preset."); //Default preset?
+        //System.out.println();
 
         //If using a preset, need to select the preset.
         //If not using a preset, consult general "database" and/or default sample files.
@@ -94,10 +107,22 @@ public class Main {
         //System.out.println("To not use a preset, type 0 and then press enter.");
         System.out.println("List fileS: ");
         //TODO: list the files to console successfully here
-        File[] files = new File("requestsDir").listFiles(); //Let user decide, though?
+        File requestsDir = new File("requestsDir");
+        if(requestsDir.exists())
+        {
+            System.out.println("requestsDir already exists.");
+            requestsDir.listFiles();
+        }
+        File[] files = requestsDir.listFiles(); //Let user decide, though?
+        for(int i = 1; i < files.length; i++) //starts at 1 to avoid .DS_STORE file
+        {
+            System.out.println(i + ": " + files[i].getName());
+        }
+
+        System.out.println("SIZE: " + files.length);
 
         //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
-        File[] presets = new File("presetsDir/").listFiles();
+
 
         mapsPlayed.clear(); //avoid duplicates...
 
