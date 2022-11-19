@@ -31,7 +31,7 @@ public class Main {
             requestHistory.mkdirs();
             requestHistory.getParentFile().mkdirs();
         }
-        System.out.println("requestHistory is stored at " + requestHistory.getAbsolutePath());
+        //System.out.println("requestHistory is stored at " + requestHistory.getAbsolutePath());
     }
 
     //Note: example.txt is showing up as a folder, but should appear as .txt
@@ -46,7 +46,7 @@ public class Main {
             presets.mkdirs();
             //presets.getParentFile().mkdirs();
         }
-        System.out.println("presetsDir/example is stored at " + presets.getAbsolutePath());
+        //System.out.println("presetsDir/example is stored at " + presets.getAbsolutePath());
     }
 
 
@@ -77,20 +77,21 @@ public class Main {
     //TODO: switch to target specific requestDir item
     //TODO: list the files to console successfully here
     //Need: location of user's desired folder.
+    //Error message 11/19: "Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 26 path $"
     public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
         mapsPlayed.clear(); //avoid duplicates...
 
 
         //Directory holding presets. Print the names of the files in that directory.
-        System.out.println("Which preset would you like to use? Type the corresponding number and then press enter.");
+        System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
         File presets = new File("presetsDir");
         File[] filesPresets = presets.listFiles(); //Let user decide, though?
         for(int i = 1; i < filesPresets.length; i++) //starts at 1 to avoid .DS_STORE file
         {
             System.out.println(i + ": " + filesPresets[i].getName());
         }
-        System.out.println("SIZE: " + filesPresets.length);
+        //System.out.println("SIZE: " + filesPresets.length);
         input = new Scanner(System.in);
         int chosenPreset = input.nextInt();
         if(chosenPreset <= 0 || chosenPreset >= filesPresets.length)

@@ -201,6 +201,8 @@ public class FileManager {
      * where that content is stored in a way that looks "pretty" (formatted).
      * Returns "prettified" file.
      */
+    //New error message 11/19: "com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 26 path $
+    //	at com.google.gson.JsonParser.parseReader(JsonParser.java:66)"
     public static File makePretty(File fileName) throws IOException {
 
         //read in file as string
