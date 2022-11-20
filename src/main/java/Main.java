@@ -71,6 +71,24 @@ public class Main {
         input.close();
     }
 
+    public static void printOptions(File[] f_array)
+    {
+        for(int i = 1; i < f_array.length; i++)
+        {
+            System.out.println(i + ": " + f_array[i].getName());
+        }
+    }
+    public static void validateChosenOption(int chosenOption, File[] f_array)
+    {
+        if(chosenOption <= 0 || chosenOption >= f_array.length)
+        {
+            System.out.println("Error. Invalid input.");
+        }
+        else
+        {
+            System.out.println("Using " + f_array[chosenOption].getName());
+        }
+    }
     //Allows for multiple requests in a single running of the program.
     //Consider: acquisition vs evaluation vs edit
     //TODO: remove reliance on specific file locations and files pre-downloaded locally
@@ -78,9 +96,11 @@ public class Main {
     //TODO: list the files to console successfully here
     //Need: location of user's desired folder.
     //Error message 11/19: "Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 26 path $"
+    //11/19: trying to simplify file selection process. I/O...
     public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
         mapsPlayed.clear(); //avoid duplicates...
+
 
 
         //Directory holding presets. Print the names of the files in that directory.
@@ -91,25 +111,47 @@ public class Main {
         {
             System.out.println(i + ": " + filesPresets[i].getName());
         }
-        System.out.println("SIZE: " + filesPresets.length);
+
+        //Receive preset choice
         input = new Scanner(System.in);
         int chosenPreset = input.nextInt();
-        if(chosenPreset <= 0 || chosenPreset >= filesPresets.length)
-        {
+
+        //Validate preset choice
+        //if(chosenPreset <= 0 || chosenPreset >= filesPresets.length)
+       / {
             System.out.println("Error. Invalid input."); //Does not yet allow retry or give further feedback
             System.exit(0); //temporary. Terminate program.
         }
-        //
+        else
+        {
+            System.out.println("Using preset " + chosenPreset);
+        }
 
 
         File requestsDir = new File("requestsDir");
-        File[] files = requestsDir.listFiles(); //Let user decide, though?
-        for(int i = 1; i < files.length; i++) //starts at 1 to avoid .DS_STORE file
-        {
-            System.out.println(i + ": " + files[i].getName());
-        }
-        //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+        System.out.println("\nWhich requestDir would you like to use? Type the corresponding number and then press enter.");
 
+        File[] filesRequestDir = requestsDir.listFiles(); //Let user decide, though?
+        for(int i = 1; i < filesRequestDir.length; i++) //starts at 1 to avoid .DS_STORE file
+        {
+            System.out.println(i + ": " + filesRequestDir[i].getName());
+        }
+        //Receive preset choice
+        //input = new Scanner(System.in);
+        int chosenRequestDir = input.nextInt();
+        System.out.println("Chosen requestDir = " + chosenRequestDir);
+        if(chosenRequestDir < 1 || chosenRequestDir >= filesRequestDir.length)
+        {
+            System.out.println("Invalid request dir.");
+        }
+        else
+        {
+            System.out.println("Valid request dir. Chose " + filesRequestDir[chosenRequestDir].getName());
+        }
+
+        //"Enter the name of the folder you want to use"
+        //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+        //File[] matchFiles = new File(filesRequestDir[chosenRequestDir].getAbsolutePath() + "")
 
 
 
@@ -159,6 +201,7 @@ public class Main {
                 {
                     if(!fileName.isDirectory()) //added 10/5
                     {
+                        System.out.println("File name is: " + fileName.getName());
                         File pretty = FileManager.makePretty(fileName);
                         getInfo(request, pretty, name);
                         MatchManager.printMatchInfo(pretty); //added 9/18
