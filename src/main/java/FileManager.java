@@ -214,9 +214,9 @@ public class FileManager {
         JsonElement je = JsonParser.parseString(uglyString);
         String prettyJsonString = gson.toJson(je);
 
-        System.out.println("filename.getName(): " + fileName.getName());
-        System.out.println("filename.getPath(): " + fileName.getPath());
-        System.out.println("filename.getParentFile():" + fileName.getParentFile());
+        ////System.out.println("filename.getName(): " + fileName.getName());
+        ////System.out.println("filename.getPath(): " + fileName.getPath());
+        /////System.out.println("filename.getParentFile():" + fileName.getParentFile());
         //File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
         File prettyFile = new File(fileName.getPath());
         //File prettyFile = new File(fileName.getPath() + "-userFriendly");

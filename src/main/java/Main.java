@@ -1,6 +1,7 @@
 import org.apache.commons.io.FileUtils;
 import java.io.*;
 import java.nio.charset.Charset;
+import java.nio.file.Path;
 import java.util.*;
 
 //The Main class serves as a driver for the PubgAPI-Java project.
@@ -78,6 +79,13 @@ public class Main {
             System.out.println(i + ": " + f_array[i].getName());
         }
     }
+    /*
+    public static void selectPreset()
+    {
+        System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
+
+    }
+     */
     public static void validateChosenOption(int chosenOption, File[] f_array)
     {
         if(chosenOption <= 0 || chosenOption >= f_array.length)
@@ -101,60 +109,51 @@ public class Main {
     {
         mapsPlayed.clear(); //avoid duplicates...
 
+        //selectPreset();
 
-
+        System.out.println("Enter the name of the folder you want to focus on.");
+        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1668915593200/matches");
+        Path name_path = Path.of(input.nextLine());
+        System.out.println("NAME path: " + name_path);
+        File desiredFolder = new File(name_path.toFile().getAbsolutePath());
+        System.out.println("desiredFolder: " + desiredFolder.getAbsolutePath());
+        if(desiredFolder.isDirectory())
+        {
+            System.out.println("Found it.");
+        }
+        else
+        {
+            System.out.println("Did not find it.");
+        }
+        
         //Directory holding presets. Print the names of the files in that directory.
-        System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
-        File presets = new File("presetsDir");
-        File[] filesPresets = presets.listFiles(); //Let user decide, though?
-        for(int i = 1; i < filesPresets.length; i++) //starts at 1 to avoid .DS_STORE file
-        {
-            System.out.println(i + ": " + filesPresets[i].getName());
-        }
+        //System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
+        //File presets = new File("presetsDir");
+        //File[] filesPresets = presets.listFiles(); //Let user decide, though?
+        //printOptions(filesPresets);
 
-        //Receive preset choice
-        input = new Scanner(System.in);
-        int chosenPreset = input.nextInt();
-
-        //Validate preset choice
-        //if(chosenPreset <= 0 || chosenPreset >= filesPresets.length)
-       / {
-            System.out.println("Error. Invalid input."); //Does not yet allow retry or give further feedback
-            System.exit(0); //temporary. Terminate program.
-        }
-        else
-        {
-            System.out.println("Using preset " + chosenPreset);
-        }
-
-
-        File requestsDir = new File("requestsDir");
-        System.out.println("\nWhich requestDir would you like to use? Type the corresponding number and then press enter.");
-
-        File[] filesRequestDir = requestsDir.listFiles(); //Let user decide, though?
-        for(int i = 1; i < filesRequestDir.length; i++) //starts at 1 to avoid .DS_STORE file
-        {
-            System.out.println(i + ": " + filesRequestDir[i].getName());
-        }
-        //Receive preset choice
+        //Receive and validate preset choice
         //input = new Scanner(System.in);
-        int chosenRequestDir = input.nextInt();
-        System.out.println("Chosen requestDir = " + chosenRequestDir);
-        if(chosenRequestDir < 1 || chosenRequestDir >= filesRequestDir.length)
-        {
-            System.out.println("Invalid request dir.");
-        }
-        else
-        {
-            System.out.println("Valid request dir. Chose " + filesRequestDir[chosenRequestDir].getName());
-        }
+        //int chosenPreset = input.nextInt();
+        //validateChosenOption(chosenPreset, filesPresets);
+
+
+
+        //File requestsDir = new File("requestsDir");
+        //System.out.println("\nWhich requestDir would you like to use? Type the corresponding number and then press enter.");
+
+        //File[] filesRequestDir = requestsDir.listFiles(); //Let user decide, though?
+        //printOptions(filesRequestDir);
+        //int chosenRequestDir = input.nextInt();
+        //System.out.println("Chosen requestDir = " + chosenRequestDir);
+        //validateChosenOption(chosenRequestDir, filesRequestDir);
 
         //"Enter the name of the folder you want to use"
         //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
         //File[] matchFiles = new File(filesRequestDir[chosenRequestDir].getAbsolutePath() + "")
 
 
-
+        File[] files = new File((desiredFolder).toString()).listFiles();
         //input = new Scanner(System.in);
 
         //TODO: allow presets to utilize this
@@ -203,7 +202,7 @@ public class Main {
                     {
                         System.out.println("File name is: " + fileName.getName());
                         File pretty = FileManager.makePretty(fileName);
-                        getInfo(request, pretty, name);
+                        getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
                         MatchManager.printMatchInfo(pretty); //added 9/18
                         filesSoFar++;
                         FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
