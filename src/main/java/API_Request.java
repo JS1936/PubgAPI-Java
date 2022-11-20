@@ -85,7 +85,9 @@ public class API_Request extends API {
 
         //save
         storeResponseToSpecifiedFileLocation(summary_Path.toString());
-        File summary_File = new File(summary_Path.toString() + ".txt");
+        //TODO - test .json vs .txt
+        //File summary_File = new File(summary_Path.toString() + ".txt");
+        File summary_File = new File(summary_Path.toString() + ".json");
         //if(f.isFile())
         //{
         //    System.out.println("file f exists...");
@@ -143,8 +145,8 @@ public class API_Request extends API {
     public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
         InputStream inputStream = connection.getInputStream();
-        File responseFile = new File(dstPath + ".txt"); //could just make brand new file instead of using this.responseFile (remove global variable)
-
+        File responseFile = new File(dstPath + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
+        //Note: changed .txt to .json (11/19/2022)
         if(responseFile.exists())
         {
             System.out.println("Response file exists!");

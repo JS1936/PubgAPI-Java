@@ -91,7 +91,7 @@ public class Main {
         {
             System.out.println(i + ": " + filesPresets[i].getName());
         }
-        //System.out.println("SIZE: " + filesPresets.length);
+        System.out.println("SIZE: " + filesPresets.length);
         input = new Scanner(System.in);
         int chosenPreset = input.nextInt();
         if(chosenPreset <= 0 || chosenPreset >= filesPresets.length)
@@ -104,6 +104,10 @@ public class Main {
 
         File requestsDir = new File("requestsDir");
         File[] files = requestsDir.listFiles(); //Let user decide, though?
+        for(int i = 1; i < files.length; i++) //starts at 1 to avoid .DS_STORE file
+        {
+            System.out.println(i + ": " + files[i].getName());
+        }
         //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
 
 
@@ -142,12 +146,14 @@ public class Main {
         //TODO: allow max_files to be specified (EX: in a preset?)
         int max_files = 10; //temporary (remove later)
         int filesSoFar = 0;
+        int count = 0;
         for (File fileName : files)
         {
             System.out.println(fileName);
             try {
-                if(filesSoFar >= 10)
+                if(filesSoFar >= 10 || count == 0) //added count == 0 on 11/19
                 {
+                    count++;
                     //System.out.println("Reached max_files of " + max_files + "...terminating program");
                 } else
                 {

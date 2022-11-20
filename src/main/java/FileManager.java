@@ -207,6 +207,7 @@ public class FileManager {
 
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
+        System.out.println("filename = " + fileName);
 
         //make "pretty" version of the string
         Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
