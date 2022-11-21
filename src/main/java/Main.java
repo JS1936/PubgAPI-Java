@@ -148,12 +148,18 @@ public class Main {
         //System.out.println("Chosen requestDir = " + chosenRequestDir);
         //validateChosenOption(chosenRequestDir, filesRequestDir);
 
+        System.out.println("Makes it here");
         //"Enter the name of the folder you want to use"
         //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
+        //File[] files = new File("C:/Users/jenniferstibbins/Documents/GitHub/PubgAPI-Java/requestsDir/WackyJacky101/matches").listFiles(); //Let user decide, though?
+        //System.out.println("Files.length = " + files.length);
+
         //File[] matchFiles = new File(filesRequestDir[chosenRequestDir].getAbsolutePath() + "")
 
 
         File[] files = new File((desiredFolder).toString()).listFiles();
+        System.out.println("FILES.length = " + files.length);
+        //System.exit(0);
         //input = new Scanner(System.in);
 
         //TODO: allow presets to utilize this
@@ -243,6 +249,8 @@ public class Main {
         //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
         if(request == 0)
         {
+
+            System.out.println("about to call bots and people");
             BotCounts.countBotsAndPeople(prettyFile); //seems to work
         }
         else if(request == 1)
