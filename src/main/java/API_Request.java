@@ -1,19 +1,12 @@
-import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.Vector;
-
-import java.io.File;
-import java.io.IOException;
 
 
 //custom request option? (For matches)
@@ -104,7 +97,9 @@ public class API_Request extends API {
             connectToAPI(oneMatch_);
             Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
             File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
-            FileManager.makePretty(ugly);
+            File pretty = FileManager.makePretty(ugly); //check this
+            //JSONObject jsonobject = new JSONObject(pretty.toString()); //check this
+            //System.out.println("LOOKL " + jsonobject);
         }
         //getNumMatches();
         ///getMatches();

@@ -10,6 +10,9 @@ import java.util.*;
 //Consider: removing Request.java
 //Consider: adding some sort of PresetReader
 //public class Main extends Request {
+
+
+//NOTE: get the json via the URL link... don't just convert the general/OVERVIEW txt file to a json!
 public class Main {
 
 
@@ -105,6 +108,20 @@ public class Main {
     //Need: location of user's desired folder.
     //Error message 11/19: "Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 26 path $"
     //11/19: trying to simplify file selection process. I/O...
+
+
+
+
+   //IN-PROGRESS
+    public static void getHttps()
+    {
+        String https = "https://telemetry-cdn.pubg.com/bluehole-pubg-steam/";
+        String when = "";
+        String id = "";
+        https = https + when + id;
+
+    }
+
     public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
         mapsPlayed.clear(); //avoid duplicates...
@@ -208,6 +225,7 @@ public class Main {
                     {
                         System.out.println("File name is: " + fileName.getName());
                         File pretty = FileManager.makePretty(fileName);
+
                         getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
                         MatchManager.printMatchInfo(pretty); //added 9/18
                         filesSoFar++;

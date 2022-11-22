@@ -1,9 +1,14 @@
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 
 class API_RequestTest {
 
@@ -14,6 +19,35 @@ class API_RequestTest {
     //@Test
     //void getAPIplatform() {
     //}
+    @Test
+    void test() throws IOException {
+       File f = new File("/Users/jenniferstibbins/Documents/GitHub/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1668915593200/matches/match_id_a97d838d-6560-4962-8029-dfa04405b07a.json");
+       if(f.exists())
+       {
+           System.out.println("File exists.");
+       }
+       else
+       {
+           System.out.println("File does not exist");
+       }
+       if(f.canRead())
+       {
+           System.out.println("CAN read f");
+       }
+       //f.
+       File pretty_f = FileManager.makePretty(f);
+
+       //Scanner input = new Scanner(System.in);
+       //while()
+
+    }
+    public static String getDateOfRequest()
+    {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date currentDate = new Date();
+        //System.out.println(dateFormat.format(currentDate));
+        return dateFormat.format(currentDate);
+    }
 
     @Test
     //Currently very minimal

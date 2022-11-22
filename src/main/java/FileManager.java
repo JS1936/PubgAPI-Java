@@ -8,10 +8,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
-
-import static java.nio.file.Files.copy;
 
 /*
  * The FileManager class allows access to and manipulation of files.
@@ -195,6 +191,23 @@ public class FileManager {
     }
 
      */
+    //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
+    public static void findTelemetryURL(File f) throws IOException {
+        String fileAsString = FileUtils.readFileToString(f);
+        System.out.println("fileAsString: \n\n" + fileAsString);
+        int index = fileAsString.indexOf("URL");
+        int index2 = fileAsString.indexOf("https://telemetry-");
+        System.out.println("INDEX: " + index2);
+        String https = fileAsString.substring(index2, index2 + 119);
+        System.out.println("https = ... " + https);
+
+        //length is 119
+        String sample = "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2022/11/10/10/59/d1c11373-60e6-11ed-9421-66440331ec25-telemetry.json";
+        int length = sample.length();
+        System.out.println("length:" + length);
+
+    }
+
 
     /*
      * Takes the contents of an "ugly" file and makes a new file
@@ -208,6 +221,7 @@ public class FileManager {
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
         System.out.println("filename = " + fileName);
+        parser(fileName); //temporary
 
         //make "pretty" version of the string
         Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
