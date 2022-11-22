@@ -1,3 +1,4 @@
+import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -97,7 +98,31 @@ public class API_Request extends API {
             connectToAPI(oneMatch_);
             Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
             File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
+
+            //then do the thing
+
             File pretty = FileManager.makePretty(ugly); //check this
+            URL oneMatch_telemetryURL_ = getTelemetryURL(pretty);
+            connectToAPI(oneMatch_telemetryURL_);
+            String telemetryIndicator = "-telemetry";
+            Path telemetry_Path = Path.of(specificRequest + "/telemetry_for_match_id_" + match_id + telemetryIndicator);
+            System.out.println("telemetry path: " + telemetry_Path.toString());
+            File telemetry_Path_ugly = storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
+            System.out.println("telemetry file: " + telemetry_Path_ugly);
+
+            /*
+            File uglyTelemetry = telemetry_Path.toFile();
+            if(uglyTelemetry.isFile())
+            {
+                System.out.println("ugly telemetry location: " + uglyTelemetry.getAbsolutePath());
+            }
+            else
+            {
+                System.out.println("uglyTelemetry is not yet a file. Creating it now.");
+                uglyTelemetry.mkdirs();
+            }
+            */
+            //File uglyTelemetry = storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
             //JSONObject jsonobject = new JSONObject(pretty.toString()); //check this
             //System.out.println("LOOKL " + jsonobject);
         }
@@ -105,7 +130,33 @@ public class API_Request extends API {
         ///getMatches();
     }
 
+    //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
+    public static URL getTelemetryURL(File f) throws IOException {
+        System.out.println("Attempting to get the telemetry URL");
+        String fileAsString = FileUtils.readFileToString(f);
+        //System.out.println("fileAsString: \n\n" + fileAsString);
 
+        int index = fileAsString.indexOf("https://telemetry-");
+        //System.out.println("INDEX: " + index);
+        String https = fileAsString.substring(index, index + 119);
+        System.out.println("telemetry URL is " + https);
+
+        URL telemetryURL = new URL(https);
+        //File toFile = new File("/Users/jenniferStibbins/Documents/GitHub/PubgAPI-Java/requestsDir/" + telemetryURL.getFile());
+        //System.out.println("toFile absolute path = " + toFile.getAbsolutePath());
+        //if (toFile.exists()) {
+        //    System.out.println("toFile exists");
+        //} else {
+        //    System.out.println("toFile does not exist. Creating it now.");
+
+            //toFile.createNewFile();
+            //toFile.getParentFile().mkdirs();
+
+            //API_Request.storeResponseToSpecifiedFileLocation("Path");
+
+        //}
+        return telemetryURL;
+    }
 
     //acquire?
 
@@ -126,6 +177,7 @@ public class API_Request extends API {
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
         if(this.connection.getResponseCode() == 200) //response is valid/OK
         {
+            System.out.println("Connection made. URL: " + url.toString());
             //System.out.println("Preparing to get matches telemetry");
         }
         else
@@ -149,8 +201,9 @@ public class API_Request extends API {
         else
         {
             System.out.println("Response file does not exist. Creating it now");
+
+            responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
             responseFile.createNewFile();
-            responseFile.getParentFile().mkdirs();
         }
 
         OutputStream output = new FileOutputStream(responseFile);
@@ -158,6 +211,8 @@ public class API_Request extends API {
         output.close();
         return responseFile;
     }
+
+
     //TRIAL
     //Moved from APIManager to API_Request
     public static Vector<String> getMatchIDsFromRequestPath(File s) throws IOException

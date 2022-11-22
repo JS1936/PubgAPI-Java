@@ -7,6 +7,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.charset.Charset;
 
 /*
@@ -191,20 +192,70 @@ public class FileManager {
     }
 
      */
+    /*
+        //Consider: returning file so that it can be custom-saved
+    public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
+        System.out.println("dstPath = " + dstPath);
+        InputStream inputStream = connection.getInputStream();
+        File responseFile = new File(dstPath + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
+        //Note: changed .txt to .json (11/19/2022)
+        if(responseFile.exists())
+        {
+            System.out.println("Response file exists!");
+        }
+        else
+        {
+            System.out.println("Response file does not exist. Creating it now");
+            responseFile.createNewFile();
+            responseFile.getParentFile().mkdirs();
+        }
+
+        OutputStream output = new FileOutputStream(responseFile);
+        inputStream.transferTo(output);
+        output.close();
+        return responseFile;
+    }
+     */
     //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
     public static void findTelemetryURL(File f) throws IOException {
         String fileAsString = FileUtils.readFileToString(f);
-        System.out.println("fileAsString: \n\n" + fileAsString);
-        int index = fileAsString.indexOf("URL");
-        int index2 = fileAsString.indexOf("https://telemetry-");
-        System.out.println("INDEX: " + index2);
-        String https = fileAsString.substring(index2, index2 + 119);
-        System.out.println("https = ... " + https);
+        //System.out.println("fileAsString: \n\n" + fileAsString);
+
+        int index = fileAsString.indexOf("https://telemetry-");
+        //System.out.println("INDEX: " + index);
+        String https = fileAsString.substring(index, index + 119);
+        System.out.println("telemetry URL is " + https);
+
+        URL telemetryURL = new URL(https);
+        File toFile = new File("/Users/jenniferStibbins/Documents/GitHub/PubgAPI-Java/requestsDir/" + telemetryURL.getFile());
+        System.out.println("toFile absolute path = " + toFile.getAbsolutePath());
+        if(toFile.exists())
+        {
+            System.out.println("toFile exists");
+        }
+        else
+        {
+            System.out.println("toFile does not exist. Creating it now.");
+
+            //toFile.createNewFile();
+            //toFile.getParentFile().mkdirs();
+
+            //API_Request.storeResponseToSpecifiedFileLocation("Path");
+
+        }
+        //System.out.println("FILE path: " + toFile.getAbsolutePath());
+        //String toString = FileUtils.readFileToString(toFile);
+        //System.out.println("The file as string: \n\n\n");
+        //System.out.println(toString);
+
+
+        //then request the telemetry information for that match
+
 
         //length is 119
-        String sample = "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2022/11/10/10/59/d1c11373-60e6-11ed-9421-66440331ec25-telemetry.json";
-        int length = sample.length();
-        System.out.println("length:" + length);
+        //String sample = "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2022/11/10/10/59/d1c11373-60e6-11ed-9421-66440331ec25-telemetry.json";
+        //int length = sample.length();
+        //System.out.println("length:" + length);
 
     }
 
@@ -221,7 +272,7 @@ public class FileManager {
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
         System.out.println("filename = " + fileName);
-        parser(fileName); //temporary
+        //findTelemetryURL(fileName); //temporary
 
         //make "pretty" version of the string
         Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
