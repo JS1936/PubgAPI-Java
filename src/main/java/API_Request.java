@@ -98,7 +98,24 @@ public class API_Request extends API {
             connectToAPI(oneMatch_);
             Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
             File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
+            File pretty = FileManager.makePretty(ugly);
 
+            URL telemetryURL = getTelemetryURL(pretty);
+            connectToAPI(telemetryURL);
+            Path telemetry_path = Path.of(specificRequest + "/telemetry/match_id" + match_id);
+            File ugly_telemetry = storeResponseToSpecifiedFileLocation(telemetry_path.toString());
+            File pretty_telemetry = FileManager.makePretty(ugly_telemetry);
+            String pretty_telemetry_FileAsString = FileManager.storeFileAsString(pretty_telemetry);
+            System.out.println("pretty_telemetry_FileAsString:\n");
+            System.out.println(pretty_telemetry_FileAsString);
+            System.exit(0);
+
+            //System.out.println("external form: " + telemetryURL.toExternalForm());
+            //System.out.println("file: " + telemetryURL.getFile());
+            File telemetry_pathToFile = telemetry_path.toFile();
+            System.out.println("telemetry_pathToFile absolute path = " + telemetry_pathToFile.getAbsolutePath());
+
+            //File pretty_telemetry = FileManager.makePretty(ugly_telemetry);
             //then do the thing
             /*
             File pretty = FileManager.makePretty(ugly); //check this
@@ -162,8 +179,8 @@ public class API_Request extends API {
     }
 
     //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
-    public static URL getTelemetryURL(File f) throws IOException {
-        System.out.println("Attempting to get the telemetry URL");
+    public URL getTelemetryURL(File f) throws IOException {
+        System.out.println("Attempting to get the telemetry URL for file: " + f.getName());
         String fileAsString = FileUtils.readFileToString(f);
         //System.out.println("fileAsString: \n\n" + fileAsString);
 
@@ -173,6 +190,72 @@ public class API_Request extends API {
         System.out.println("telemetry URL is " + https);
 
         URL telemetryURL = new URL(https);
+        //this.connection = (HttpURLConnection) telemetryURL.openConnection();
+
+        //System.out.println("Content: " + telemetryURL.getContent());
+        //System.out.println("Response code: " + conn.getResponseCode());
+        //System.out.println("toString: " + conn.toString());
+        //System.out.println(conn.getPermission());
+        //System.out.println("conn.getDoOutput() = " + conn.getDoOutput());
+        //System.out.println("conn.getContentEncoding(): " + conn.getContentEncoding());
+
+        //conn.setDoOutput(true);
+        //System.out.println("conn.getDoOutput() = " + conn.getDoOutput());
+        //System.out.println("output stream: " + conn.getOutputStream());
+        this.connection = connectToAPI(telemetryURL);
+
+        //System.exit(0);
+
+/*
+        this.connection = connectToAPI(telemetryURL);
+
+
+        Path match_Path = Path.of(specificRequest + "/telemetry/match_id_telemetry_"+ getTimestamp());
+        System.out.println("dstPath = " + match_Path);
+        InputStream inputStream = connection.getInputStream();
+        System.out.println("inputStream = " + inputStream);
+        File responseFile = new File(match_Path + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
+        //Note: changed .txt to .json (11/19/2022)
+        if(responseFile.exists())
+        {
+            System.out.println("Response file exists!");
+        }
+        else
+        {
+            System.out.println("Response file does not exist. Creating it now");
+
+            responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+            responseFile.createNewFile();
+        }
+
+        OutputStream output = new FileOutputStream(responseFile);
+        //inputStream.transferTo(output);
+        FileUtils.copyURLToFile(telemetryURL, responseFile);
+        output.close();
+
+        if(responseFile.exists())
+        {
+            System.out.println("Response file exists!");
+        }
+        else
+        {
+            System.out.println("--Response file does not exist. Creating it now");
+
+            responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+            responseFile.createNewFile();
+
+            if(responseFile.exists())
+            {
+                System.out.println("Creating it was successful.");
+            }
+            else
+            {
+                System.out.println("Creating it was not successful.");
+                System.exit(0);
+            }
+        }
+        //return responseFile;
+        //File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
         /*
         File telemetryFile = new File("hello.json");
         FileUtils.copyURLToFile(telemetryURL, telemetryFile);

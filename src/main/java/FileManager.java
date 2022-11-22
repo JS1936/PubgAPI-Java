@@ -272,10 +272,12 @@ public class FileManager {
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);
         System.out.println("filename = " + fileName);
+        System.out.println("uglyString: " + uglyString); //added
         //findTelemetryURL(fileName); //temporary
 
         //make "pretty" version of the string
         Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
+        //JSONReader reader = new JSONReader.setLenient(true);
         JsonElement je = JsonParser.parseString(uglyString);
         String prettyJsonString = gson.toJson(je);
 
