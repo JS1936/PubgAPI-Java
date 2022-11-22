@@ -111,17 +111,6 @@ public class Main {
 
 
 
-
-   //IN-PROGRESS
-    public static void getHttps()
-    {
-        String https = "https://telemetry-cdn.pubg.com/bluehole-pubg-steam/";
-        String when = "";
-        String id = "";
-        https = https + when + id;
-
-    }
-
     public static void psuedoMain(Scanner input)//removed "String desiredThing"
     {
         mapsPlayed.clear(); //avoid duplicates...
@@ -129,7 +118,8 @@ public class Main {
         //selectPreset();
 
         System.out.println("Enter the name of the folder you want to focus on.");
-        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1668915593200/matches");
+        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1669102725185/matches_telemetry");
+        //timestamp_1669102725185
         Path name_path = Path.of(input.nextLine());
         System.out.println("NAME path: " + name_path);
         File desiredFolder = new File(name_path.toFile().getAbsolutePath());
@@ -176,6 +166,10 @@ public class Main {
 
         File[] files = new File((desiredFolder).toString()).listFiles();
         System.out.println("FILES.length = " + files.length);
+        for(File file : files)
+        {
+            System.out.println("\t" + file.getName());
+        }
         //System.exit(0);
         //input = new Scanner(System.in);
 
@@ -224,8 +218,10 @@ public class Main {
                     if(!fileName.isDirectory()) //added 10/5
                     {
                         System.out.println("File name is: " + fileName.getName());
-                        File pretty = FileManager.makePretty(fileName);
-
+                        System.out.println("Absolute file path is: " + fileName.getAbsolutePath());
+                        //FileUtils.copyURLToFile(URL, file);
+                        //File pretty = FileManager.makePretty(fileName);
+                        File pretty = fileName;
                         getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
                         MatchManager.printMatchInfo(pretty); //added 9/18
                         filesSoFar++;
