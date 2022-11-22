@@ -100,21 +100,37 @@ public class API_Request extends API {
             File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
 
             //then do the thing
-
-            File pretty = ugly;//FileManager.makePretty(ugly); //check this
+            /*
+            File pretty = FileManager.makePretty(ugly); //check this
             URL oneMatch_telemetryURL_ = getTelemetryURL(pretty);
             connectToAPI(oneMatch_telemetryURL_);
-            Path telemetry_Path = Path.of(specificRequest + "/matches_telemetry/telemetry_for_match_id_" + match_id);
+            File telemetry = new File("telemetryTrial");
+            if(telemetry.exists())
+            {
+                System.out.println("file exists (telemetry)");
 
-            File ugly_telemetry = storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
+            }
+            else
+            {
+                //telemetry.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+                telemetry.createNewFile();
+            }
+            File pretty_telemetry = FileManager.makePretty(telemetry);
+            FileUtils.copyURLToFile(oneMatch_telemetryURL_, pretty_telemetry);
+
+            //Path telemetry_Path = Path.of(specificRequest + "/matches_telemetry/telemetry_for_match_id_" + match_id);
+
+            //File ugly_telemetry = storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
             //String telemetryIndicator = "-telemetry";
+
+             */
 
 
             //Path telemetry_Path = Path.of(specificRequest + "/matches_telemetry/telemetry_for_match_id_" + match_id);
-            System.out.println("telemetry path: " + telemetry_Path.toString());
-            String ugly_telemetry_as_string = FileManager.storeFileAsString(ugly_telemetry);
-            System.out.println(oneMatch_telemetryURL_.openConnection());
-            //System.out.println(ugly_telemetry_as_string);
+            //System.out.println("telemetry path: " + telemetry_Path.toString());
+            //String ugly_telemetry_as_string = FileManager.storeFileAsString(ugly_telemetry);
+            //System.out.println(oneMatch_telemetryURL_.openConnection());
+             //System.out.println(ugly_telemetry_as_string);
 
 
             //File telemetry = new File(telemetry_Path.toString());
@@ -157,12 +173,15 @@ public class API_Request extends API {
         System.out.println("telemetry URL is " + https);
 
         URL telemetryURL = new URL(https);
+        /*
         File telemetryFile = new File("hello.json");
         FileUtils.copyURLToFile(telemetryURL, telemetryFile);
 
         //FileUtils.toFile(telemetryURL);
         String telemetryString = FileManager.storeFileAsString(telemetryFile);
         System.out.println("telemetry string: \n \n " + telemetryString);
+        */
+
         //File toFile = new File("/Users/jenniferStibbins/Documents/GitHub/PubgAPI-Java/requestsDir/" + telemetryURL.getFile());
         //System.out.println("toFile absolute path = " + toFile.getAbsolutePath());
         //if (toFile.exists()) {
