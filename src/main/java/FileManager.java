@@ -270,15 +270,15 @@ public class FileManager {
     public static File makePretty(File fileName) throws IOException {
 
         //read in file as string
-        String uglyString = FileUtils.readFileToString(fileName);
+        String uglyString = FileUtils.readFileToString(fileName);//, StandardCharsets.UTF_8);
         System.out.println("filename = " + fileName);
-        System.out.println("uglyString: " + uglyString); //added
+        //System.out.println("uglyString: " + uglyString); //added //commented out 11/29. Trying to find exact error location and this is clogging output
         //findTelemetryURL(fileName); //temporary
 
         //make "pretty" version of the string
         Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
         //JSONReader reader = new JSONReader.setLenient(true);
-        JsonElement je = JsonParser.parseString(uglyString);
+        JsonElement je = JsonParser.parseString(uglyString); //breaks here (11/29)
         String prettyJsonString = gson.toJson(je);
 
         ////System.out.println("filename.getName(): " + fileName.getName());
@@ -287,6 +287,7 @@ public class FileManager {
         //File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
         File prettyFile = new File(fileName.getPath());
         //File prettyFile = new File(fileName.getPath() + "-userFriendly");
+        //Consider: add mkdirs precaution here?
 
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);

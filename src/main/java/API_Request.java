@@ -89,30 +89,50 @@ public class API_Request extends API {
 
         //create "matches" subdirectory for timestamp
         this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
-
+        File match_telemetries_list = (Files.createDirectory(Path.of(specificRequest + "/telemeTREE!")).toFile()); //added 11/29
         //use summary to get recent match_ids. They are then formatted to be more visually user-friendly.
         Vector<String> match_ids = getMatchIDsFromRequestPath(summary_File);
         int numMatches = 0;
         for(String match_id : match_ids) {
             URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
+            //System.out.println("get connection match_part1: " + getConnection());
             connectToAPI(oneMatch_);
+            //System.out.println("get connection match_part2: " + getConnection());
             Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
             File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
-            File pretty = FileManager.makePretty(ugly);
+            //System.out.println("CONTENT: \n:" + ugly.toString() );
+            //File pretty = FileManager.makePretty(ugly);
+            //System.out.println("CONTENT: \n:" + pretty.toString() );
 
-            URL telemetryURL = getTelemetryURL(pretty);
+            URL telemetryURL = getTelemetryURL(ugly); //changed to ugly from pretty
+            //System.out.println("getconnection2 match_part2: " + getConnection());
             connectToAPI(telemetryURL);
-            Path telemetry_path = Path.of(specificRequest + "/telemetry/match_id" + match_id);
+            //System.out.println("getconnection2 match_part2: " + getConnection());
+
+
+            Path telemetry_path = Path.of(specificRequest + "/telemeTREE!/telemetry-for-match_id" + match_id);
+            System.out.println("Telemetry path: " + telemetry_path.toString());
+            //Is the telemetry_path redundant with connectToAPI (doing "connection made" twice...) //11/29
+
             File ugly_telemetry = storeResponseToSpecifiedFileLocation(telemetry_path.toString());
-            File pretty_telemetry = FileManager.makePretty(ugly_telemetry);
-            String pretty_telemetry_FileAsString = FileManager.storeFileAsString(pretty_telemetry);
-            System.out.println("pretty_telemetry_FileAsString:\n");
-            System.out.println(pretty_telemetry_FileAsString);
+            System.out.println("ugly telemetry is stored at: " + ugly_telemetry.getAbsolutePath()); //added 11/29
+            System.out.println("CONTENT: \n" + ugly_telemetry.toString());
+            //File pretty_telemetry = FileManager.makePretty(ugly_telemetry); //Will it fail here? (YES, it will) //11/29
+            JSONObject j = new JSONObject(telemetryURL);
+            System.out.println(j.toString());
+            //Does makePretty need to handle .txt vs .json files differently? //Or... just save as text? LOOK HERE 11/29
+            ////////System.out.println("MAKES IT HERE (past makePretty)");
+            ////////System.out.println("pretty telemetry should be stored at: " + pretty_telemetry.getAbsolutePath()); //added 11/29
+            ///////String pretty_telemetry_FileAsString = FileManager.storeFileAsString(pretty_telemetry);
+            //////System.out.println("pretty_telemetry_FileAsString:\n");
+            //////System.out.println(pretty_telemetry_FileAsString);
             System.exit(0);
 
             //System.out.println("external form: " + telemetryURL.toExternalForm());
             //System.out.println("file: " + telemetryURL.getFile());
-            File telemetry_pathToFile = telemetry_path.toFile();
+            ///File telemetry_pathToFile = telemetry_path.toFile(); //temporarily commented out
+            File telemetry_pathToFile = (Files.createDirectory(Path.of(telemetry_path + "-trial")).toFile()); //temporarily added
+
             System.out.println("telemetry_pathToFile absolute path = " + telemetry_pathToFile.getAbsolutePath());
 
             //File pretty_telemetry = FileManager.makePretty(ugly_telemetry);
@@ -180,6 +200,7 @@ public class API_Request extends API {
 
     //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
     public URL getTelemetryURL(File f) throws IOException {
+        System.out.println(">Entering getTelemetryURL");
         System.out.println("Attempting to get the telemetry URL for file: " + f.getName());
         String fileAsString = FileUtils.readFileToString(f);
         //System.out.println("fileAsString: \n\n" + fileAsString);
@@ -190,6 +211,11 @@ public class API_Request extends API {
         System.out.println("telemetry URL is " + https);
 
         URL telemetryURL = new URL(https);
+        System.out.println("<Exiting  getTelemetryURL, returning the url");
+        return telemetryURL;
+    }
+        //EXAMPLE: this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
+
         //this.connection = (HttpURLConnection) telemetryURL.openConnection();
 
         //System.out.println("Content: " + telemetryURL.getContent());
@@ -202,7 +228,8 @@ public class API_Request extends API {
         //conn.setDoOutput(true);
         //System.out.println("conn.getDoOutput() = " + conn.getDoOutput());
         //System.out.println("output stream: " + conn.getOutputStream());
-        this.connection = connectToAPI(telemetryURL);
+        //this.connection = connectToAPI(telemetryURL); //remember to re-i
+
 
         //System.exit(0);
 
@@ -278,8 +305,8 @@ public class API_Request extends API {
             //API_Request.storeResponseToSpecifiedFileLocation("Path");
 
         //}
-        return telemetryURL;
-    }
+        //return telemetryURL;
+    //}
 
     //acquire?
 
@@ -315,6 +342,8 @@ public class API_Request extends API {
     public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
         InputStream inputStream = connection.getInputStream();
+        System.out.println("input stream:" + inputStream.toString());
+
         File responseFile = new File(dstPath + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
         //Note: changed .txt to .json (11/19/2022)
         if(responseFile.exists())
@@ -330,6 +359,7 @@ public class API_Request extends API {
         }
 
         OutputStream output = new FileOutputStream(responseFile);
+        System.out.println("OUTPUT: \n\n\n" + output.toString());
         inputStream.transferTo(output);
         output.close();
         return responseFile;
