@@ -37,6 +37,9 @@ public class API_Request extends API {
     public long getTimestamp() { return this.timestamp; }
 
 
+    //public API_Request(String player, int match_limit) { }
+    //Would need a way to tell the file history how many (/which) matches
+    //-->could adjust summary_Path
 
     public API_Request(String player) throws IOException {
 
@@ -59,19 +62,13 @@ public class API_Request extends API {
         connectToAPI(this.recentMatches);
         Path summary_Path = Path.of(specificRequest + "/summary_matchList"); //no .txt here (don't want duplicate)
 
-        //save
+        //save/create summary file
         storeResponseToSpecifiedFileLocation(summary_Path.toString());
-        //TODO - test .json vs .txt
-        //File summary_File = new File(summary_Path.toString() + ".txt");
         File summary_File = new File(summary_Path.toString() + ".json");
-        //if(f.isFile())
-        //{
-        //    System.out.println("file f exists...");
-        //}
 
         //create "matches" subdirectory for timestamp
         this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
-        //File match_telemetries_list = (Files.createDirectory(Path.of(specificRequest + "/telemeTREE!")).toFile()); //added 11/29
+
         //use summary to get recent match_ids. They are then formatted to be more visually user-friendly.
         Vector<String> match_ids = getMatchIDsFromRequestPath(summary_File);
         Vector<URL> telemetry_urls = new Vector<URL>();
@@ -121,29 +118,34 @@ public class API_Request extends API {
         return telemetryURL;
     }
 
+    //Given a URL, checks the current response code for the HttpURLConnection connection.
+    //Expect: response code is 200 (valid/OK). Otherwise, invalid connection.
+    public void printResponseCodeSuccessFail(URL url) throws IOException {
+        System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
+        if(this.connection.getResponseCode() == 200) //response is valid/OK
+        {
+            System.out.println("Connection made. URL: " + url.toString());
+        }
+        else
+        {
+            System.out.println("Error: connection to api has invalid response");
+        }
+    }
+
     public HttpURLConnection connectToAPI(URL url) throws IOException {
 
         this.connection = (HttpURLConnection) url.openConnection();
 
         if(connection == null) //!isConnected
         {
-            System.out.println("connection is null");
+            System.out.println("Error: connection is null");
             System.exit(0);
         }
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
         connection.setRequestProperty("Accept", "application/vnd.api+json");
 
-        System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
-        if(this.connection.getResponseCode() == 200) //response is valid/OK
-        {
-            System.out.println("Connection made. URL: " + url.toString());
-            //System.out.println("Preparing to get matches telemetry");
-        }
-        else
-        {
-            System.out.println("Error: connection to api has invalid response");
-        }
+        printResponseCodeSuccessFail(url);
         return this.connection;
 
     }
@@ -160,7 +162,7 @@ public class API_Request extends API {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
         connection.setRequestProperty("Accept", "application/vnd.api+json");
-        connection.setRequestProperty("Content-Type", "UTF-16" + "; charset=utf-16"); //added 12/15
+        connection.setRequestProperty("Content-Type", "UTF-16" + "; charset=utf-16"); //added 12/15 (change to utf-8?)
         connection.setRequestProperty("Accept", "gzip"); //added 11/29
 
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
@@ -187,12 +189,13 @@ public class API_Request extends API {
             File file = new File("/Users/jenniferstibbins/PubgAPI-Java-pubgEndOfNov/file");
             //
             //Transfer the information
-            OutputStream outputStream = new FileOutputStream(file);
-            inputStream.transferTo(outputStream);
+            transferInputStreamToFile(inputStream, file);
+            //OutputStream outputStream = new FileOutputStream(file);
+            //inputStream.transferTo(outputStream);
             FileManager.makePretty(file); //seems to work
             //
             //Note: this does NOT print the content
-            System.out.println("output stream = " + outputStream.toString());
+            //System.out.println("output stream = " + outputStream.toString());
             //
             //processBuilder.command(command);
             ////////////////////////////////////////////////////////////////////////////////
@@ -207,6 +210,16 @@ public class API_Request extends API {
 
     }
 
+    //Pre: File file exists and is not null.
+    //Transfers desired content from input stream into given file.
+    public void transferInputStreamToFile(InputStream inputStream, File file) throws IOException
+    {
+        OutputStream output = new FileOutputStream(file);
+        inputStream.transferTo(output);
+        inputStream.close();
+        output.close();
+    }
+
     //Consider: returning file so that it can be custom-saved
     public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
@@ -216,7 +229,6 @@ public class API_Request extends API {
         System.out.println("input stream:" + inputStream.toString());
 
         File responseFile = new File(dstPath + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
-        //Note: changed .txt to .json (11/19/2022)
 
         //Check if file exists (and create it, if needed)
         if(responseFile.exists()) {
@@ -230,12 +242,12 @@ public class API_Request extends API {
             responseFile.createNewFile();
         }
 
+        transferInputStreamToFile(inputStream, responseFile);
         //Transfer desired content into responseFile
-        OutputStream output = new FileOutputStream(responseFile);
-        inputStream.transferTo(output);
-        //System.out.println("LOOK: " + output.g());
-        inputStream.close();
-        output.close();
+        //OutputStream output = new FileOutputStream(responseFile);
+        //inputStream.transferTo(output);
+        //inputStream.close();
+        //output.close();
         return responseFile;
     }
 
