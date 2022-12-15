@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
 
+//TO-DO:  REVISIT (CHANGE IN FORMAT SEEMS TO BE MESSING THINGS UP)
 public class BotCounts {
 
     /*

@@ -272,12 +272,9 @@ public class FileManager {
         //read in file as string
         String uglyString = FileUtils.readFileToString(fileName);//, StandardCharsets.UTF_8);
         System.out.println("filename = " + fileName);
-        //System.out.println("uglyString: " + uglyString); //added //commented out 11/29. Trying to find exact error location and this is clogging output
-        //findTelemetryURL(fileName); //temporary
 
         //make "pretty" version of the string
         Gson gson = new GsonBuilder().setPrettyPrinting().setLenient().create();
-        //JSONReader reader = new JSONReader.setLenient(true);
         JsonElement je = JsonParser.parseString(uglyString); //breaks here (11/29)
         String prettyJsonString = gson.toJson(je);
 
@@ -286,8 +283,6 @@ public class FileManager {
         /////System.out.println("filename.getParentFile():" + fileName.getParentFile());
         //File prettyFile = new File("C:\\Users\\jmast\\pubgFilesExtracted\\prettyFiles\\" + fileName.getName());
         File prettyFile = new File(fileName.getPath());
-        //File prettyFile = new File(fileName.getPath() + "-userFriendly");
-        //Consider: add mkdirs precaution here?
 
         //write "pretty" text to new file
         FileUtils.writeStringToFile(prettyFile, prettyJsonString);
@@ -325,6 +320,19 @@ public class FileManager {
         return file;
     }
 
+    //Moved into FileManager from API_Request (12/15)
+    public static void createNewFileAndParentFilesIfTheyDoNotExist(File file) throws IOException {
+        if(file.exists()) {
+            System.out.println("Response file exists!");
+        }
+        else {
+            System.out.println("Response file does not exist. Creating it now");
+            if(file.getParentFile() != null) {
+                file.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+            }
+            file.createNewFile();
+        }
+    }
 
     public static void printWhetherFileExists(File file)
     {

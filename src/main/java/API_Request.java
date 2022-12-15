@@ -1,51 +1,51 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-import com.google.gson.internal.JsonReaderInternalAccess;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.output.WriterOutputStream;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONPointer;
 
 import java.io.*;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Scanner;
 import java.util.Vector;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
+
 
 //
 public class API_Request extends API {
 
-    private String player = "<playerName>";
-    private HttpURLConnection connection = null;
+    private String player = "<playerName>";         //  player-chosen name (EX: JS1936)
+    private HttpURLConnection connection = null;    //
 
-    private File specificRequest;
-    private URL recentMatches;
-    private File match_list;
-    private long timestamp;
+    private File specificRequest;                   //
+    private URL recentMatches;                      //
+    private File match_list;                        //
+    private long timestamp;                         // time of initial request
+    private int matchLimit;                         // maximum number of matches analyzed per request
     //private File responseFile;// = null;
 
     public String getPlayer() { return this.player; }
     public HttpURLConnection getConnection() { return this.connection; }
     public long getTimestamp() { return this.timestamp; }
+    public int getMatchLimit() { return this.matchLimit; };
 
 
-    //public API_Request(String player, int match_limit) { }
+    //If no limit is specified on the number of matches to look at, then the default is 5.
+    public API_Request(String player) throws IOException {
+        this(player, 5);
+    }
     //Would need a way to tell the file history how many (/which) matches
     //-->could adjust summary_Path
 
-    public API_Request(String player) throws IOException {
+    //Note: could check how many requests  there already are about the player...
+
+
+    public API_Request(String player, int matchLimit) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
 
         this.player = player;
+        this.matchLimit = matchLimit; //default
         this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
 
         //initialize specificRequest
@@ -57,7 +57,39 @@ public class API_Request extends API {
             specificRequest.mkdirs();
             specificRequest.getParentFile().mkdirs();
         }
+        //create "matches" subdirectory for timestamp
+        this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
 
+        doRequest();
+    }
+
+    public File getMatchOverviewContent(String match_id) throws IOException {
+        //Match Overview
+        URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
+        Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
+
+        connectToAPI(oneMatch_);
+
+        File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
+        File pretty = FileManager.makePretty(ugly);
+        return pretty;
+    }
+    /*
+    public File getTelemetryContent(String match_id, File pretty) throws IOException {
+        //Match Overview
+        URL telemetryURL = getTelemetryURL(pretty); //changed to ugly from pretty (back to pretty)
+        Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
+        File newFile = new File(telemetry_Path.toString());
+        if(!newFile.exists())
+        {
+            createNewFileAndParentFilesIfTheyDoNotExist(newFile);
+        }
+        File newFile2 = FileManager.makePretty(newFile);
+        connectToAPI_wantZIP(telemetryURL, newFile2);
+        telemetry_urls.add(telemetryURL);
+    }
+     */
+    public void doRequest() throws IOException {
         //connect
         connectToAPI(this.recentMatches);
         Path summary_Path = Path.of(specificRequest + "/summary_matchList"); //no .txt here (don't want duplicate)
@@ -66,45 +98,35 @@ public class API_Request extends API {
         storeResponseToSpecifiedFileLocation(summary_Path.toString());
         File summary_File = new File(summary_Path.toString() + ".json");
 
-        //create "matches" subdirectory for timestamp
-        this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
+
 
         //use summary to get recent match_ids. They are then formatted to be more visually user-friendly.
         Vector<String> match_ids = getMatchIDsFromRequestPath(summary_File);
         Vector<URL> telemetry_urls = new Vector<URL>();
         int numMatches = 0;
         for(String match_id : match_ids) {
-            if(numMatches >= 3)
-            {
-                break;
-            }
+
+            if(numMatches >= this.matchLimit) { break; }
+
             //Match Overview
-            URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
-            Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
-
-            connectToAPI(oneMatch_);
-
-            File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
-            File pretty = FileManager.makePretty(ugly);
+            File pretty = getMatchOverviewContent(match_id);
+            pretty.deleteOnExit(); //revisit
 
 
             //Match Telemetry
             URL telemetryURL = getTelemetryURL(pretty); //changed to ugly from pretty (back to pretty)
-
             Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
             File newFile = new File(telemetry_Path.toString());
-            if(!newFile.exists())
-            {
-                createNewFileAndParentFilesIfTheyDoNotExist(newFile);
+            if(!newFile.exists()) {
+                FileManager.createNewFileAndParentFilesIfTheyDoNotExist(newFile);
             }
             File newFile2 = FileManager.makePretty(newFile);
-
             connectToAPI_wantZIP(telemetryURL, newFile2);
 
             telemetry_urls.add(telemetryURL);
+
             numMatches++;
         }
-
     }
     /*
     public File getMatchFile(URL url, String match_id) throws IOException {
@@ -121,12 +143,11 @@ public class API_Request extends API {
 
         String fileAsString = FileUtils.readFileToString(f);
 
-        int index = fileAsString.indexOf("https://telemetry-");     //unique...
+        int index = fileAsString.indexOf("https://telemetry-");
         String https = fileAsString.substring(index, index + 119);
         System.out.println("telemetry URL is " + https);
 
         URL telemetryURL = new URL(https);
-
 
         return telemetryURL;
     }
@@ -166,6 +187,29 @@ public class API_Request extends API {
         return this.connection;
 
     }
+
+    //This method was created following/using
+    //SOURCE: https://www.baeldung.com/java-curl.
+    //Includes minor modifications from original source.
+    //
+    //Assumes: url is valid and destFile exists.
+    public void transferInputUsingProcessBuilder(URL url, File destFile) throws IOException {
+
+        //Command format (curl)
+        String command = "curl --compressed " + url + " -H Accept: application/vnd.api+json";
+        ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
+        Process process = processBuilder.start();
+
+        //Get the input
+        InputStream inputStream = process.getInputStream();
+
+        //Transfer the input
+        transferInputStreamToFile(inputStream, destFile);
+
+        process.destroy();
+    }
+
+
     public HttpURLConnection connectToAPI_wantZIP(URL url, File destFile) throws IOException {
         //System.out.println("CONTENT ENCODING: " + connection.getContentEncoding());
         this.connection = (HttpURLConnection) url.openConnection();
@@ -174,34 +218,15 @@ public class API_Request extends API {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
         connection.setRequestProperty("Accept", "application/vnd.api+json");
-        connection.setRequestProperty("Content-Type", "UTF-16" + "; charset=utf-16"); //added 12/15 (change to utf-8?)
+        connection.setRequestProperty("Content-Type", "UTF-8" + "; charset=utf-8"); //added 12/15 (change to utf-8?)
         connection.setRequestProperty("Accept", "gzip"); //added 11/29
 
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
         if(this.connection.getResponseCode() == 200) //response is valid/OK
         {
             System.out.println("Connection made. URL: " + url.toString());
-
-            //SOURCE: https://www.baeldung.com/java-curl //////////////////////////////
-            //
-            //Command format (curl)
-            String command = "curl --compressed " + url + " -H Accept: application/vnd.api+json";
-            //
-            ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
-            //
-            Process process = processBuilder.start();
-            //
-            InputStream inputStream = process.getInputStream();
-            //
-            //Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
-            //            File newFile = new File(telemetry_Path.toString());//)
-            //
-            transferInputStreamToFile(inputStream, destFile);
+            transferInputUsingProcessBuilder(url, destFile); //Credit: https://www.baeldung.com/java-curl.
             FileManager.makePretty(destFile); //seems to work
-            //
-            //
-            //processBuilder.command(command);
-            ////////////////////////////////////////////////////////////////////////////////
 
         }
         else
@@ -221,8 +246,9 @@ public class API_Request extends API {
         inputStream.transferTo(output);
         inputStream.close();
         output.close();
+        //file.deleteOnExit(); //revisit
     }
-
+    /*
     public void createNewFileAndParentFilesIfTheyDoNotExist(File file) throws IOException {
         if(file.exists()) {
             System.out.println("Response file exists!");
@@ -235,6 +261,7 @@ public class API_Request extends API {
             file.createNewFile();
         }
     }
+     */
     //Consider: returning file so that it can be custom-saved
     public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
@@ -243,7 +270,7 @@ public class API_Request extends API {
         //System.out.println("input stream:" + inputStream.toString()); //Does NOT print content
 
         File responseFile = new File(dstPath + ".json");
-        createNewFileAndParentFilesIfTheyDoNotExist(responseFile);
+        FileManager.createNewFileAndParentFilesIfTheyDoNotExist(responseFile);
         transferInputStreamToFile(inputStream, responseFile);
 
         return responseFile;
@@ -253,7 +280,8 @@ public class API_Request extends API {
 
     //TRIAL
     //Moved from APIManager to API_Request
-    public static Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
+    //Note: was previously static
+    public Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
     {
         if(!s.isFile())
         {
@@ -284,6 +312,8 @@ public class API_Request extends API {
         System.out.println("match_ids.size() = " + match_ids.size());
         return match_ids;
     }
+
+
     //Consider: allowing custom dst
     //public void getRequest(URL url) throws IOException {
 

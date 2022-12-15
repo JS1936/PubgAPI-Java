@@ -66,20 +66,9 @@ public class MatchManager {
     public static String getTeamSizeForOfficialMatch(String match_id)
     {
         //what if match_id for arcade match is entered?
-
-
-        if(match_id.contains("duo"))
-        {
-            return "duo";
-        }
-        else if(match_id.contains("solo"))
-        {
-            return "solo";
-        }
-        else
-        {
-            return "squad"; //is this accurate?
-        }
+        if(match_id.contains("duo")) {  return "duo"; }
+        else if(match_id.contains("solo")) {  return "solo"; }
+        else { return "squad"; }//is this accurate?
     }
 
     //Stores and prints what weapons were used by a specific group (winnersOnly or everyone), and in what frequencies.

@@ -118,7 +118,7 @@ public class Main {
         //selectPreset();
 
         System.out.println("Enter the name of the folder you want to focus on.");
-        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1669102725185/matches_telemetry");
+        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1671139062656/matches");
         //timestamp_1669102725185
         Path name_path = Path.of(input.nextLine());
         System.out.println("NAME path: " + name_path);
