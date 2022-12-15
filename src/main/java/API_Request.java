@@ -20,12 +20,7 @@ import java.util.Vector;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
-
-//custom request option? (For matches)
-//wait, acquiring vs using...
-//add "uses" diagram? Domain diagram?
-
-//Consider: incorporating request history here
+//
 public class API_Request extends API {
 
     private String player = "<playerName>";
@@ -41,29 +36,8 @@ public class API_Request extends API {
     public HttpURLConnection getConnection() { return this.connection; }
     public long getTimestamp() { return this.timestamp; }
 
-    //public boolean isConnectedToAPI() { return this.isConnected; }
 
 
-
-    //Incomplete
-    /*
-    public void getNumMatches()
-    {
-        System.out.println("List match_list files: " + Arrays.toString(this.match_list.listFiles()));
-        System.out.println(" match_list length: " + this.match_list.length());
-        //this.match_list.listFiles();
-        //requestsDir, name, timestamp, matches, how many matches
-        System.out.println("num matches = ?");
-    }
-     */
-   // public void getMatches() {
-   //     System.out.println("GET MATCHES");
-   //     System.out.println(match_list.list());
-   //     match_list.listFiles();
-   // }
-    //getSummary? //getMatches?
-
-//FileManager HAS makePretty(File)
     public API_Request(String player) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
@@ -79,7 +53,6 @@ public class API_Request extends API {
             System.out.println("specific request Does not yet exist");
             specificRequest.mkdirs();
             specificRequest.getParentFile().mkdirs();
-
         }
 
         //connect
@@ -116,11 +89,9 @@ public class API_Request extends API {
 
 
             URL telemetryURL = getTelemetryURL(pretty); //changed to ugly from pretty (back to pretty)
-            //connection.disconnect();
-            //connection.setRequestProperty("Accept-Encoding","gzip");;
             connectToAPI(telemetryURL);
-            //InputStream f = connection.getInputStream();
-            //System.out.println("LOOK...: + " + f.available());
+
+
             Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
             File newFile = new File(telemetry_Path.toString());//)//storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
             //newFile.mkdirs();
@@ -132,15 +103,7 @@ public class API_Request extends API {
             telemetry_urls.add(telemetryURL);
             numMatches++;
         }
-        //System.out.println("MATCH TELEMETRY URLS: ");
-        //numMatches = 0;
-        //for(URL match_telemetry_url : telemetry_urls) {
-        //    if (numMatches >= 5) {
-        //        break;
-        //    }
-        //    System.out.println(match_telemetry_url.toString());
-        //    connectToAPI(match_telemetry_url);
-        //}
+
     }
 
     //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
@@ -148,7 +111,7 @@ public class API_Request extends API {
 
         String fileAsString = FileUtils.readFileToString(f);
 
-        int index = fileAsString.indexOf("https://telemetry-");
+        int index = fileAsString.indexOf("https://telemetry-");     //unique...
         String https = fileAsString.substring(index, index + 119);
         System.out.println("telemetry URL is " + https);
 
@@ -204,9 +167,6 @@ public class API_Request extends API {
         if(this.connection.getResponseCode() == 200) //response is valid/OK
         {
             System.out.println("Connection made. URL: " + url.toString());
-            //File newFile = new File(specificRequest + "/connect");
-            //File newFile2 = new File("/Users/jenniferstibbins/PubgAPI-Java-pubgEndOfNov/file");
-
 
             //SOURCE: https://www.baeldung.com/java-curl //////////////////////////////
             //
@@ -243,7 +203,6 @@ public class API_Request extends API {
             System.out.println("Error: connection to api has invalid response");
         }
 
-
         return this.connection;
 
     }
@@ -258,25 +217,24 @@ public class API_Request extends API {
 
         File responseFile = new File(dstPath + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
         //Note: changed .txt to .json (11/19/2022)
-        if(responseFile.exists())
-        {
+
+        //Check if file exists (and create it, if needed)
+        if(responseFile.exists()) {
             System.out.println("Response file exists!");
         }
-        else
-        {
+        else {
             System.out.println("Response file does not exist. Creating it now");
-
-            if(responseFile.getParentFile() != null)
-            {
+            if(responseFile.getParentFile() != null) {
                 responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
             }
-
             responseFile.createNewFile();
         }
+
+        //Transfer desired content into responseFile
         OutputStream output = new FileOutputStream(responseFile);
         inputStream.transferTo(output);
         //System.out.println("LOOK: " + output.g());
-        //inputStream.close();
+        inputStream.close();
         output.close();
         return responseFile;
     }
@@ -344,4 +302,48 @@ public class API_Request extends API {
 
 //public static void workingWithSampleFile2() throws IOException {
 //    File[] files = new File(FileManager.getAbsolutePathToActiveFolder()).listFiles();
+//}
+
+
+
+//custom request option? (For matches)
+//wait, acquiring vs using...
+//add "uses" diagram? Domain diagram?
+
+//Consider: incorporating request history here
+
+//public boolean isConnectedToAPI() { return this.isConnected; }
+
+
+
+//Incomplete
+    /*
+    public void getNumMatches()
+    {
+        System.out.println("List match_list files: " + Arrays.toString(this.match_list.listFiles()));
+        System.out.println(" match_list length: " + this.match_list.length());
+        //this.match_list.listFiles();
+        //requestsDir, name, timestamp, matches, how many matches
+        System.out.println("num matches = ?");
+    }
+     */
+// public void getMatches() {
+//     System.out.println("GET MATCHES");
+//     System.out.println(match_list.list());
+//     match_list.listFiles();
+// }
+//getSummary? //getMatches?
+
+//FileManager HAS makePretty(File)
+
+
+
+//System.out.println("MATCH TELEMETRY URLS: ");
+//numMatches = 0;
+//for(URL match_telemetry_url : telemetry_urls) {
+//    if (numMatches >= 5) {
+//        break;
+//    }
+//    System.out.println(match_telemetry_url.toString());
+//    connectToAPI(match_telemetry_url);
 //}
