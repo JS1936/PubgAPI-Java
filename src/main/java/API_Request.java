@@ -39,7 +39,7 @@ public class API_Request extends API {
 
     //Note: could check how many requests  there already are about the player...
 
-    //
+    /////
     public API_Request(String player, int matchLimit) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
