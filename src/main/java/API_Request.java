@@ -23,7 +23,7 @@ public class API_Request extends API {
     protected long timestamp;                         // time of initial request
     protected int matchLimit;                         // maximum number of matches analyzed per request
     //private File responseFile;// = null;
-
+//
     public String getPlayer() { return this.player; }
     public HttpURLConnection getConnection() { return this.connection; }
     public long getTimestamp() { return this.timestamp; }
