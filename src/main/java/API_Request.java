@@ -164,63 +164,15 @@ public class API_Request extends API {
         System.out.println("telemetry URL is " + https);
 
         URL telemetryURL = new URL(https);
-        //JSONObject j = (JSONObject) (telemetryURL.getContent());
-        //System.out.println("j = " + j.toString(4));
-        //j.keySet();
         System.out.println("\t\t>Attempting to connect to API. Looking at telemetryURL");
         connectToAPI_wantZIP(telemetryURL);
-        /*
-        InputStream is = telemetryURL.openStream();
-        InputStreamReader isr = new InputStreamReader(is);
-        System.out.println("isr encoding: " + isr.getEncoding()); //UTF8
-        if(isr.ready())
-        {
-            System.out.println("isr is ready");
-            System.out.println("isr.toString(): " + isr.toString());
-            Writer wr = new Writer();
-            WriterOutputStream w = new WriterOutputStream(new File("hello"));
-            isr.transferTo(w));
-            System.out.println("Reads..." + isr.read());
-        }
-         */
         System.out.println("QUERY: " + telemetryURL.getQuery());
-
-       // GZIPCompressorInputStream
-        //GZIPInputStream gzipInputStream = new GZIPInputStream(new FileInputStream());
-
-        //storeResponseToSpecifiedFileLocation("storeTelemetry");
-        File unknown = storeResponseToSpecifiedFileLocation("storeTelemetry");
-        if(!unknown.exists())
-        {
-            System.out.println("File <unknown> does not yet exist. Attempting to make it now.");
-            unknown.mkdirs();
-
-
-        }
-        System.out.println("unknown.length = " + unknown.length());
-        Scanner input = new Scanner(unknown);
-        int linesRead = 0;
-        while(linesRead < 5)
-        {
-            //String text = input.();
-            System.out.println(unknown.canRead());
-            //System.out.println(text);
-            //System.out.println(input.nextLine());
-            linesRead++;
-        }
-        //System.out.println("List: " + unknown.list().toString());
-        System.out.println("-----");
-
-
         System.out.println("\t\t<Exiting  getTelemetryURL, returning the url");
         return telemetryURL;
     }
 
     public HttpURLConnection connectToAPI(URL url) throws IOException {
 
-        System.out.println("url.getFile() : " + url.getFile());
-        //System.out.println("CONTENT TYPE: " + url.getContent());
-        System.out.println("url.getRef() : " + url.getRef());
         this.connection = (HttpURLConnection) url.openConnection();
 
         if(connection == null) //!isConnected
@@ -238,9 +190,7 @@ public class API_Request extends API {
         if(this.connection.getResponseCode() == 200) //response is valid/OK
         {
             System.out.println("Connection made. URL: " + url.toString());
-            File newFile = new File(specificRequest + "/connect");
-
-
+            //File newFile = new File(specificRequest + "/connect");
             //System.out.println("Preparing to get matches telemetry");
         }
         else
@@ -298,38 +248,7 @@ public class API_Request extends API {
             //Note: this does NOT print the content
             System.out.println("output stream = " + outputStream.toString());
 
-            processBuilder.command(command);
-            //////storeResponseToSpecifiedFileLocation(newFile2.toString(), true);
-
-            //File newFile = new File("file");
-            //if(!newFile.exists())
-            //{
-            //    newFile.createNewFile();
-                //newFile.createNewFile();
-                //newFile.mkdirs();
-
-            //}
-            //BORROWED:
-            //InputStreamReader inputStreamReader = new InputStreamReader(connection.getInputStream());
-            //if (responseCode >= 200 && responseCode < 400) {
-            //     inputStreamReader =
-            //} else {
-            //    inputStreamReader = new InputStreamReader(con.getErrorStream());
-            //}
-            //BufferedReader in = new BufferedReader(inputStreamReader);
-            //String inputLine;
-            //StringBuilder response = new StringBuilder();
-            //while ((inputLine = in.readLine()) != null) {
-            //    response.append(inputLine);
-            //}
-            //in.close();
-
-           // System.out.println(response.toString());
-            //END OF BORROWED
-            //Object o = this.connection.getContent(); //added 12/15
-            //System.out.println("object o.tostring = " + o.toString()); //added 12/15
-
-            //System.out.println("Preparing to get matches telemetry");
+            //processBuilder.command(command);
         }
         else
         {
@@ -395,55 +314,8 @@ public class API_Request extends API {
 
             responseFile.createNewFile();
         }
-
-        //BORROWED: https://www.codejava.net/java-se/networking/use-httpurlconnection-to-download-file-from-an-http-url
-        /*
-        FileOutputStream outputStream = new FileOutputStream(responseFile);
-        int BUFFER_SIZE = 4096 * 16 * 16;
-        int bytesRead = -1;
-        byte[] buffer = new byte[BUFFER_SIZE];
-        while ((bytesRead = inputStream.read(buffer)) != -1) {
-            outputStream.write(buffer, 0, bytesRead);
-            System.out.println(outputStream.toString());
-
-            System.out.println("\tResponse file length: " + responseFile.length());
-            //System.out.println("\tCapacity: " + responseFile.getTotalSpace());
-            //System.out.println("\tUsable space:" + responseFile.getUsableSpace() );
-            //System.out.println("\tFree space:" + responseFile.getFreeSpace());
-            //System.out.println();
-            System.out.println();
-        }
-
-        outputStream.close();
-
-        inputStream.close();
-
-        System.out.println("File downloaded");
-
-        */
-        /////////
-        //BORROWED #2:
-        // headers to import
-//import java.io.*;
-//import java.net.*;
-
-        //URL url = new URL("https://telemetry-cdn.pubg.com/pc-krjp/2018/01/01/0/0/1ad97f85-cf9b-11e7-b84e-0a586460f004-telemetry.json");
-        //HttpURLConnection con = (HttpURLConnection) url.openConnection();
-
-        //con.setRequestProperty("Accept", "application/vnd.api+json");
-
-        //con.setRequestMethod("GET");
-
-        //int responseCode = con.getResponseCode();
-        //System.out.println("Response code: " + responseCode);
-
-
-
-        /////
         OutputStream output = new FileOutputStream(responseFile);
-        //System.out.println(output.)
-            //Gzip input stream
-       inputStream.transferTo(output);
+        inputStream.transferTo(output);
         //System.out.println("LOOK: " + output.g());
         //inputStream.close();
         output.close();
