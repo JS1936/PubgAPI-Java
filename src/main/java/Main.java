@@ -165,7 +165,8 @@ public class Main {
 
 
         File[] files = new File((desiredFolder).toString()).listFiles();
-        System.out.println("FILES.length = " + files.length);
+        //System.out.println("FILES.length = " + files.length);
+        //NOTE: case where null
         for(File file : files)
         {
             System.out.println("\t" + file.getName());
