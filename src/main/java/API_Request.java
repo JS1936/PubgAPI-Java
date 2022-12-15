@@ -78,31 +78,44 @@ public class API_Request extends API {
             {
                 break;
             }
+            //Match Overview
             URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
-            connectToAPI(oneMatch_);
             Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
+
+            connectToAPI(oneMatch_);
+
             File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
             File pretty = FileManager.makePretty(ugly);
 
 
+            //Match Telemetry
             URL telemetryURL = getTelemetryURL(pretty); //changed to ugly from pretty (back to pretty)
-            connectToAPI(telemetryURL);
-
 
             Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
-            File newFile = new File(telemetry_Path.toString());//)//storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
-            //newFile.mkdirs();
-            if(newFile.exists())
+            File newFile = new File(telemetry_Path.toString());
+            if(!newFile.exists())
             {
-                File newFile2 = FileManager.makePretty(newFile);
+                createNewFileAndParentFilesIfTheyDoNotExist(newFile);
             }
+            File newFile2 = FileManager.makePretty(newFile);
+
+            connectToAPI_wantZIP(telemetryURL, newFile2);
 
             telemetry_urls.add(telemetryURL);
             numMatches++;
         }
 
     }
+    /*
+    public File getMatchFile(URL url, String match_id) throws IOException {
+        URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
+        connectToAPI(oneMatch_);
+        Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
+        File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
 
+        return ugly;
+    }
+     */
     //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
     public URL getTelemetryURL(File f) throws IOException {
 
@@ -113,7 +126,7 @@ public class API_Request extends API {
         System.out.println("telemetry URL is " + https);
 
         URL telemetryURL = new URL(https);
-        connectToAPI_wantZIP(telemetryURL);
+
 
         return telemetryURL;
     }
@@ -132,15 +145,19 @@ public class API_Request extends API {
         }
     }
 
-    public HttpURLConnection connectToAPI(URL url) throws IOException {
-
-        this.connection = (HttpURLConnection) url.openConnection();
-
+    public void endProgramIfNullConnection()
+    {
         if(connection == null) //!isConnected
         {
             System.out.println("Error: connection is null");
             System.exit(0);
         }
+    }
+    public HttpURLConnection connectToAPI(URL url) throws IOException {
+
+        this.connection = (HttpURLConnection) url.openConnection();
+
+        endProgramIfNullConnection();
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
         connection.setRequestProperty("Accept", "application/vnd.api+json");
@@ -149,15 +166,10 @@ public class API_Request extends API {
         return this.connection;
 
     }
-    public HttpURLConnection connectToAPI_wantZIP(URL url) throws IOException {
+    public HttpURLConnection connectToAPI_wantZIP(URL url, File destFile) throws IOException {
         //System.out.println("CONTENT ENCODING: " + connection.getContentEncoding());
         this.connection = (HttpURLConnection) url.openConnection();
-
-        if(connection == null) //!isConnected
-        {
-            System.out.println("connection is null");
-            System.exit(0);
-        }
+        endProgramIfNullConnection();
 
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
@@ -175,27 +187,18 @@ public class API_Request extends API {
             //Command format (curl)
             String command = "curl --compressed " + url + " -H Accept: application/vnd.api+json";
             //
-            //Process builder to help with curl command
             ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
             //
-            //Process
             Process process = processBuilder.start();
             //
-            //Input stream
             InputStream inputStream = process.getInputStream();
             //
             //Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
             //            File newFile = new File(telemetry_Path.toString());//)
-            File file = new File("/Users/jenniferstibbins/PubgAPI-Java-pubgEndOfNov/file");
             //
-            //Transfer the information
-            transferInputStreamToFile(inputStream, file);
-            //OutputStream outputStream = new FileOutputStream(file);
-            //inputStream.transferTo(outputStream);
-            FileManager.makePretty(file); //seems to work
+            transferInputStreamToFile(inputStream, destFile);
+            FileManager.makePretty(destFile); //seems to work
             //
-            //Note: this does NOT print the content
-            //System.out.println("output stream = " + outputStream.toString());
             //
             //processBuilder.command(command);
             ////////////////////////////////////////////////////////////////////////////////
@@ -220,49 +223,42 @@ public class API_Request extends API {
         output.close();
     }
 
-    //Consider: returning file so that it can be custom-saved
-    public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
-        System.out.println("dstPath = " + dstPath);
-
-
-        InputStream inputStream = connection.getInputStream();
-        System.out.println("input stream:" + inputStream.toString());
-
-        File responseFile = new File(dstPath + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
-
-        //Check if file exists (and create it, if needed)
-        if(responseFile.exists()) {
+    public void createNewFileAndParentFilesIfTheyDoNotExist(File file) throws IOException {
+        if(file.exists()) {
             System.out.println("Response file exists!");
         }
         else {
             System.out.println("Response file does not exist. Creating it now");
-            if(responseFile.getParentFile() != null) {
-                responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+            if(file.getParentFile() != null) {
+                file.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
             }
-            responseFile.createNewFile();
+            file.createNewFile();
         }
+    }
+    //Consider: returning file so that it can be custom-saved
+    public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
+        System.out.println("dstPath = " + dstPath);
 
+        InputStream inputStream = connection.getInputStream();
+        //System.out.println("input stream:" + inputStream.toString()); //Does NOT print content
+
+        File responseFile = new File(dstPath + ".json");
+        createNewFileAndParentFilesIfTheyDoNotExist(responseFile);
         transferInputStreamToFile(inputStream, responseFile);
-        //Transfer desired content into responseFile
-        //OutputStream output = new FileOutputStream(responseFile);
-        //inputStream.transferTo(output);
-        //inputStream.close();
-        //output.close();
+
         return responseFile;
     }
 
+    //Consider: adding a checker for whether a file is pretty already? (Or rather, is NOT pretty)
 
     //TRIAL
     //Moved from APIManager to API_Request
     public static Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
     {
-        if(s.isFile())
+        if(!s.isFile())
         {
-            System.out.println("is file");
-        }
-        else
-        {
-            System.out.println("is not file");
+            System.out.println("Error: file " + s.getAbsolutePath() + " should be a file but is not a file.");
+            System.exit(0);
         }
         System.out.println("Attempting to get match ids from request file");
         File s_pretty = FileManager.makePretty(s);
