@@ -1,13 +1,24 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import com.google.gson.internal.JsonReaderInternalAccess;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.output.WriterOutputStream;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONPointer;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Scanner;
 import java.util.Vector;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 
 //custom request option? (For matches)
@@ -92,117 +103,59 @@ public class API_Request extends API {
         File match_telemetries_list = (Files.createDirectory(Path.of(specificRequest + "/telemeTREE!")).toFile()); //added 11/29
         //use summary to get recent match_ids. They are then formatted to be more visually user-friendly.
         Vector<String> match_ids = getMatchIDsFromRequestPath(summary_File);
+        Vector<URL> telemetry_urls = new Vector<URL>();
         int numMatches = 0;
         for(String match_id : match_ids) {
+            if(numMatches >= 3)
+            {
+                break;
+            }
             URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
-            //System.out.println("get connection match_part1: " + getConnection());
             connectToAPI(oneMatch_);
-            //System.out.println("get connection match_part2: " + getConnection());
             Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
             File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
-            //System.out.println("CONTENT: \n:" + ugly.toString() );
-            //File pretty = FileManager.makePretty(ugly);
-            //System.out.println("CONTENT: \n:" + pretty.toString() );
+            File pretty = FileManager.makePretty(ugly);
 
-            URL telemetryURL = getTelemetryURL(ugly); //changed to ugly from pretty
-            //System.out.println("getconnection2 match_part2: " + getConnection());
+
+            URL telemetryURL = getTelemetryURL(pretty); //changed to ugly from pretty (back to pretty)
+            //connection.disconnect();
+            //connection.setRequestProperty("Accept-Encoding","gzip");;
             connectToAPI(telemetryURL);
-            //System.out.println("getconnection2 match_part2: " + getConnection());
-
-
-            Path telemetry_path = Path.of(specificRequest + "/telemeTREE!/telemetry-for-match_id" + match_id);
-            System.out.println("Telemetry path: " + telemetry_path.toString());
-            //Is the telemetry_path redundant with connectToAPI (doing "connection made" twice...) //11/29
-
-            File ugly_telemetry = storeResponseToSpecifiedFileLocation(telemetry_path.toString());
-            System.out.println("ugly telemetry is stored at: " + ugly_telemetry.getAbsolutePath()); //added 11/29
-            System.out.println("CONTENT: \n" + ugly_telemetry.toString());
-            //File pretty_telemetry = FileManager.makePretty(ugly_telemetry); //Will it fail here? (YES, it will) //11/29
-            JSONObject j = new JSONObject(telemetryURL);
-            System.out.println(j.toString());
-            //Does makePretty need to handle .txt vs .json files differently? //Or... just save as text? LOOK HERE 11/29
-            ////////System.out.println("MAKES IT HERE (past makePretty)");
-            ////////System.out.println("pretty telemetry should be stored at: " + pretty_telemetry.getAbsolutePath()); //added 11/29
-            ///////String pretty_telemetry_FileAsString = FileManager.storeFileAsString(pretty_telemetry);
-            //////System.out.println("pretty_telemetry_FileAsString:\n");
-            //////System.out.println(pretty_telemetry_FileAsString);
-            System.exit(0);
-
-            //System.out.println("external form: " + telemetryURL.toExternalForm());
-            //System.out.println("file: " + telemetryURL.getFile());
-            ///File telemetry_pathToFile = telemetry_path.toFile(); //temporarily commented out
-            File telemetry_pathToFile = (Files.createDirectory(Path.of(telemetry_path + "-trial")).toFile()); //temporarily added
-
-            System.out.println("telemetry_pathToFile absolute path = " + telemetry_pathToFile.getAbsolutePath());
-
-            //File pretty_telemetry = FileManager.makePretty(ugly_telemetry);
-            //then do the thing
-            /*
-            File pretty = FileManager.makePretty(ugly); //check this
-            URL oneMatch_telemetryURL_ = getTelemetryURL(pretty);
-            connectToAPI(oneMatch_telemetryURL_);
-            File telemetry = new File("telemetryTrial");
-            if(telemetry.exists())
+            //InputStream f = connection.getInputStream();
+            //System.out.println("LOOK...: + " + f.available());
+            Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
+            File newFile = new File(telemetry_Path.toString());//)//storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
+            //newFile.mkdirs();
+            if(newFile.exists())
             {
-                System.out.println("file exists (telemetry)");
-
+                File newFile2 = FileManager.makePretty(newFile);
             }
-            else
-            {
-                //telemetry.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
-                telemetry.createNewFile();
-            }
-            File pretty_telemetry = FileManager.makePretty(telemetry);
-            FileUtils.copyURLToFile(oneMatch_telemetryURL_, pretty_telemetry);
-
-            //Path telemetry_Path = Path.of(specificRequest + "/matches_telemetry/telemetry_for_match_id_" + match_id);
-
-            //File ugly_telemetry = storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
-            //String telemetryIndicator = "-telemetry";
-
-             */
 
 
-            //Path telemetry_Path = Path.of(specificRequest + "/matches_telemetry/telemetry_for_match_id_" + match_id);
-            //System.out.println("telemetry path: " + telemetry_Path.toString());
-            //String ugly_telemetry_as_string = FileManager.storeFileAsString(ugly_telemetry);
-            //System.out.println(oneMatch_telemetryURL_.openConnection());
-             //System.out.println(ugly_telemetry_as_string);
 
-
-            //File telemetry = new File(telemetry_Path.toString());
-            //FileUtils.copyURLToFile(oneMatch_telemetryURL_, telemetry);
-            //System.out.println("AFTER copy url to file");
-            //String telemetryFileToString = FileManager.storeFileAsString(telemetry);
-            //System.out.println("telemetry file to string: " + telemetryFileToString);
-           // File telemetry_Path_ugly = storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
-            //System.out.println("telemetry file: " + telemetry_Path_ugly);
-
-            /*
-            File uglyTelemetry = telemetry_Path.toFile();
-            if(uglyTelemetry.isFile())
-            {
-                System.out.println("ugly telemetry location: " + uglyTelemetry.getAbsolutePath());
-            }
-            else
-            {
-                System.out.println("uglyTelemetry is not yet a file. Creating it now.");
-                uglyTelemetry.mkdirs();
-            }
-            */
-            //File uglyTelemetry = storeResponseToSpecifiedFileLocation(telemetry_Path.toString());
-            //JSONObject jsonobject = new JSONObject(pretty.toString()); //check this
-            //System.out.println("LOOKL " + jsonobject);
+            telemetry_urls.add(telemetryURL);
+            numMatches++;
         }
-        //getNumMatches();
-        ///getMatches();
+        //System.out.println("MATCH TELEMETRY URLS: ");
+        //numMatches = 0;
+        //for(URL match_telemetry_url : telemetry_urls) {
+        //    if (numMatches >= 5) {
+        //        break;
+        //    }
+        //    System.out.println(match_telemetry_url.toString());
+        //    connectToAPI(match_telemetry_url);
+        //}
     }
 
     //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
     public URL getTelemetryURL(File f) throws IOException {
-        System.out.println(">Entering getTelemetryURL");
-        System.out.println("Attempting to get the telemetry URL for file: " + f.getName());
+        //System.out.println(">Entering getTelemetryURL");
+        //System.out.println("Attempting to get the telemetry URL for file: " + f.getName());
+
+
         String fileAsString = FileUtils.readFileToString(f);
+        //File pretty_version = FileManager.makePretty(f);
+        //System.out.println("Segment: " + fileAsString.substring(0,100));
         //System.out.println("fileAsString: \n\n" + fileAsString);
 
         int index = fileAsString.indexOf("https://telemetry-");
@@ -211,108 +164,63 @@ public class API_Request extends API {
         System.out.println("telemetry URL is " + https);
 
         URL telemetryURL = new URL(https);
-        System.out.println("<Exiting  getTelemetryURL, returning the url");
+        //JSONObject j = (JSONObject) (telemetryURL.getContent());
+        //System.out.println("j = " + j.toString(4));
+        //j.keySet();
+        System.out.println("\t\t>Attempting to connect to API. Looking at telemetryURL");
+        connectToAPI_wantZIP(telemetryURL);
+        /*
+        InputStream is = telemetryURL.openStream();
+        InputStreamReader isr = new InputStreamReader(is);
+        System.out.println("isr encoding: " + isr.getEncoding()); //UTF8
+        if(isr.ready())
+        {
+            System.out.println("isr is ready");
+            System.out.println("isr.toString(): " + isr.toString());
+            Writer wr = new Writer();
+            WriterOutputStream w = new WriterOutputStream(new File("hello"));
+            isr.transferTo(w));
+            System.out.println("Reads..." + isr.read());
+        }
+         */
+        System.out.println("QUERY: " + telemetryURL.getQuery());
+
+       // GZIPCompressorInputStream
+        //GZIPInputStream gzipInputStream = new GZIPInputStream(new FileInputStream());
+
+        //storeResponseToSpecifiedFileLocation("storeTelemetry");
+        File unknown = storeResponseToSpecifiedFileLocation("storeTelemetry");
+        if(!unknown.exists())
+        {
+            System.out.println("File <unknown> does not yet exist. Attempting to make it now.");
+            unknown.mkdirs();
+
+
+        }
+        System.out.println("unknown.length = " + unknown.length());
+        Scanner input = new Scanner(unknown);
+        int linesRead = 0;
+        while(linesRead < 5)
+        {
+            //String text = input.();
+            System.out.println(unknown.canRead());
+            //System.out.println(text);
+            //System.out.println(input.nextLine());
+            linesRead++;
+        }
+        //System.out.println("List: " + unknown.list().toString());
+        System.out.println("-----");
+
+
+        System.out.println("\t\t<Exiting  getTelemetryURL, returning the url");
         return telemetryURL;
     }
-        //EXAMPLE: this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
-
-        //this.connection = (HttpURLConnection) telemetryURL.openConnection();
-
-        //System.out.println("Content: " + telemetryURL.getContent());
-        //System.out.println("Response code: " + conn.getResponseCode());
-        //System.out.println("toString: " + conn.toString());
-        //System.out.println(conn.getPermission());
-        //System.out.println("conn.getDoOutput() = " + conn.getDoOutput());
-        //System.out.println("conn.getContentEncoding(): " + conn.getContentEncoding());
-
-        //conn.setDoOutput(true);
-        //System.out.println("conn.getDoOutput() = " + conn.getDoOutput());
-        //System.out.println("output stream: " + conn.getOutputStream());
-        //this.connection = connectToAPI(telemetryURL); //remember to re-i
-
-
-        //System.exit(0);
-
-/*
-        this.connection = connectToAPI(telemetryURL);
-
-
-        Path match_Path = Path.of(specificRequest + "/telemetry/match_id_telemetry_"+ getTimestamp());
-        System.out.println("dstPath = " + match_Path);
-        InputStream inputStream = connection.getInputStream();
-        System.out.println("inputStream = " + inputStream);
-        File responseFile = new File(match_Path + ".json"); //could just make brand new file instead of using this.responseFile (remove global variable)
-        //Note: changed .txt to .json (11/19/2022)
-        if(responseFile.exists())
-        {
-            System.out.println("Response file exists!");
-        }
-        else
-        {
-            System.out.println("Response file does not exist. Creating it now");
-
-            responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
-            responseFile.createNewFile();
-        }
-
-        OutputStream output = new FileOutputStream(responseFile);
-        //inputStream.transferTo(output);
-        FileUtils.copyURLToFile(telemetryURL, responseFile);
-        output.close();
-
-        if(responseFile.exists())
-        {
-            System.out.println("Response file exists!");
-        }
-        else
-        {
-            System.out.println("--Response file does not exist. Creating it now");
-
-            responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
-            responseFile.createNewFile();
-
-            if(responseFile.exists())
-            {
-                System.out.println("Creating it was successful.");
-            }
-            else
-            {
-                System.out.println("Creating it was not successful.");
-                System.exit(0);
-            }
-        }
-        //return responseFile;
-        //File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
-        /*
-        File telemetryFile = new File("hello.json");
-        FileUtils.copyURLToFile(telemetryURL, telemetryFile);
-
-        //FileUtils.toFile(telemetryURL);
-        String telemetryString = FileManager.storeFileAsString(telemetryFile);
-        System.out.println("telemetry string: \n \n " + telemetryString);
-        */
-
-        //File toFile = new File("/Users/jenniferStibbins/Documents/GitHub/PubgAPI-Java/requestsDir/" + telemetryURL.getFile());
-        //System.out.println("toFile absolute path = " + toFile.getAbsolutePath());
-        //if (toFile.exists()) {
-        //    System.out.println("toFile exists");
-        //} else {
-        //    System.out.println("toFile does not exist. Creating it now.");
-
-            //toFile.createNewFile();
-            //toFile.getParentFile().mkdirs();
-
-            //API_Request.storeResponseToSpecifiedFileLocation("Path");
-
-        //}
-        //return telemetryURL;
-    //}
-
-    //acquire?
-
-
 
     public HttpURLConnection connectToAPI(URL url) throws IOException {
+
+        System.out.println("url.getFile() : " + url.getFile());
+        //System.out.println("CONTENT TYPE: " + url.getContent());
+        System.out.println("url.getRef() : " + url.getRef());
         this.connection = (HttpURLConnection) url.openConnection();
 
         if(connection == null) //!isConnected
@@ -323,11 +231,16 @@ public class API_Request extends API {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
         connection.setRequestProperty("Accept", "application/vnd.api+json");
+        //connection.setRequestProperty("Content-Type", "UTF-16" + "; charset=utf-16"); //added 12/15
+        //connection.setRequestProperty("Accept", "gzip"); //added 11/29
 
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
         if(this.connection.getResponseCode() == 200) //response is valid/OK
         {
             System.out.println("Connection made. URL: " + url.toString());
+            File newFile = new File(specificRequest + "/connect");
+
+
             //System.out.println("Preparing to get matches telemetry");
         }
         else
@@ -337,10 +250,131 @@ public class API_Request extends API {
         return this.connection;
 
     }
+    public HttpURLConnection connectToAPI_wantZIP(URL url) throws IOException {
+        System.out.println("CONTENT ENCODING: " + connection.getContentEncoding());
+        this.connection = (HttpURLConnection) url.openConnection();
 
+        if(connection == null) //!isConnected
+        {
+            System.out.println("connection is null");
+            System.exit(0);
+        }
+
+        //System.out.println("REQUEST PROPERTIes: " + connection.getRequestProperties().toString());//getProperty("file.encoding"));
+        connection.setRequestMethod("GET");
+        connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
+        connection.setRequestProperty("Accept", "application/vnd.api+json");
+        connection.setRequestProperty("Content-Type", "UTF-16" + "; charset=utf-16"); //added 12/15
+        connection.setRequestProperty("Accept", "gzip"); //added 11/29
+
+        System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
+        if(this.connection.getResponseCode() == 200) //response is valid/OK
+        {
+            System.out.println("Connection made. URL: " + url.toString());
+            File newFile = new File(specificRequest + "/connect");
+            File newFile2 = new File("/Users/jenniferstibbins/PubgAPI-Java-pubgEndOfNov/file");
+
+
+            //SOURCE: https://www.baeldung.com/java-curl
+
+            //Command format (curl)
+            String command = "curl --compressed " + url + " -H Accept: application/vnd.api+json";
+
+            //Process builder to help with curl command
+            ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
+
+            //Process
+            Process process = processBuilder.start();
+
+            //Input stream
+            InputStream inputStream = process.getInputStream();
+
+            File file = new File("/Users/jenniferstibbins/PubgAPI-Java-pubgEndOfNov/file");
+
+            //Transfer the information
+            OutputStream outputStream = new FileOutputStream(file);
+            inputStream.transferTo(outputStream);
+
+            //Note: this does NOT print the content
+            System.out.println("output stream = " + outputStream.toString());
+
+            processBuilder.command(command);
+            //////storeResponseToSpecifiedFileLocation(newFile2.toString(), true);
+
+            //File newFile = new File("file");
+            //if(!newFile.exists())
+            //{
+            //    newFile.createNewFile();
+                //newFile.createNewFile();
+                //newFile.mkdirs();
+
+            //}
+            //BORROWED:
+            //InputStreamReader inputStreamReader = new InputStreamReader(connection.getInputStream());
+            //if (responseCode >= 200 && responseCode < 400) {
+            //     inputStreamReader =
+            //} else {
+            //    inputStreamReader = new InputStreamReader(con.getErrorStream());
+            //}
+            //BufferedReader in = new BufferedReader(inputStreamReader);
+            //String inputLine;
+            //StringBuilder response = new StringBuilder();
+            //while ((inputLine = in.readLine()) != null) {
+            //    response.append(inputLine);
+            //}
+            //in.close();
+
+           // System.out.println(response.toString());
+            //END OF BORROWED
+            //Object o = this.connection.getContent(); //added 12/15
+            //System.out.println("object o.tostring = " + o.toString()); //added 12/15
+
+            //System.out.println("Preparing to get matches telemetry");
+        }
+        else
+        {
+            System.out.println("Error: connection to api has invalid response");
+        }
+
+
+        return this.connection;
+
+    }
+
+    public File storeResponseToSpecifiedFileLocation(String dstPath, boolean gzip) throws IOException {
+        System.out.println("dstPath = " + dstPath);
+
+
+        InputStream inputStream = connection.getInputStream();
+        System.out.println("input stream:" + inputStream.toString());
+
+        File responseFile = new File(dstPath + ".gz"); //could just make brand new file instead of using this.responseFile (remove global variable)
+        //Note: changed .txt to .json (11/19/2022)
+        if (responseFile.exists()) {
+            System.out.println("Response file exists!");
+        } else {
+            System.out.println("Response file does not exist. Creating it now");
+
+            if (responseFile.getParentFile() != null) {
+                responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+            }
+
+            responseFile.createNewFile();
+        }
+        FileOutputStream output = new FileOutputStream(responseFile);
+        //System.out.println(output.)
+        //Gzip input stream
+        inputStream.transferTo(output);
+        //System.out.println("LOOK: " + output.g());
+        //inputStream.close();
+        output.close();
+        return responseFile;
+    }
     //Consider: returning file so that it can be custom-saved
     public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
+
+
         InputStream inputStream = connection.getInputStream();
         System.out.println("input stream:" + inputStream.toString());
 
@@ -354,13 +388,64 @@ public class API_Request extends API {
         {
             System.out.println("Response file does not exist. Creating it now");
 
-            responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+            if(responseFile.getParentFile() != null)
+            {
+                responseFile.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
+            }
+
             responseFile.createNewFile();
         }
 
+        //BORROWED: https://www.codejava.net/java-se/networking/use-httpurlconnection-to-download-file-from-an-http-url
+        /*
+        FileOutputStream outputStream = new FileOutputStream(responseFile);
+        int BUFFER_SIZE = 4096 * 16 * 16;
+        int bytesRead = -1;
+        byte[] buffer = new byte[BUFFER_SIZE];
+        while ((bytesRead = inputStream.read(buffer)) != -1) {
+            outputStream.write(buffer, 0, bytesRead);
+            System.out.println(outputStream.toString());
+
+            System.out.println("\tResponse file length: " + responseFile.length());
+            //System.out.println("\tCapacity: " + responseFile.getTotalSpace());
+            //System.out.println("\tUsable space:" + responseFile.getUsableSpace() );
+            //System.out.println("\tFree space:" + responseFile.getFreeSpace());
+            //System.out.println();
+            System.out.println();
+        }
+
+        outputStream.close();
+
+        inputStream.close();
+
+        System.out.println("File downloaded");
+
+        */
+        /////////
+        //BORROWED #2:
+        // headers to import
+//import java.io.*;
+//import java.net.*;
+
+        //URL url = new URL("https://telemetry-cdn.pubg.com/pc-krjp/2018/01/01/0/0/1ad97f85-cf9b-11e7-b84e-0a586460f004-telemetry.json");
+        //HttpURLConnection con = (HttpURLConnection) url.openConnection();
+
+        //con.setRequestProperty("Accept", "application/vnd.api+json");
+
+        //con.setRequestMethod("GET");
+
+        //int responseCode = con.getResponseCode();
+        //System.out.println("Response code: " + responseCode);
+
+
+
+        /////
         OutputStream output = new FileOutputStream(responseFile);
-        System.out.println("OUTPUT: \n\n\n" + output.toString());
-        inputStream.transferTo(output);
+        //System.out.println(output.)
+            //Gzip input stream
+       inputStream.transferTo(output);
+        //System.out.println("LOOK: " + output.g());
+        //inputStream.close();
         output.close();
         return responseFile;
     }

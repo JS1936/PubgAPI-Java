@@ -4,6 +4,7 @@
     <module name="pubg_how_many_bots.main" />
     <method v="2">
       <option name="Make" enabled="true" />
+      ;<meta http-equiv="Content-Type" content="text/html; charset=UTF-32" /> //added per https://stackoverflow.com/questions/15276191/why-does-a-diamond-with-a-questionmark-in-it-appear-in-my-html
     </method>
   </configuration>
 </component>
