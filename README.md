@@ -17,6 +17,12 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 |5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java |
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
 
+## User's Guide ##
+* [How do I make an API request?](https://github.com/JS1936/PubgAPI-Java/files/10244822/Q_.How.do.I.make.an.API.request_.pdf)
+* [What file(s) should I modify?](https://github.com/JS1936/PubgAPI-Java/files/10245164/Q_.What.file.s.should.I.modify.pdf)
+* [What does it mean when a file is “ugly”, “pretty”, or becomes “prettified”?](https://github.com/JS1936/PubgAPI-Java/files/10245177/PubgAPI-Java.Q.pdf)
+
+
 ## Classes Breakdown ##
 
 ### Acquire Data ###
@@ -54,12 +60,16 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 6. Can now reference [draft1 of User-Input Preset](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Draft%201_%20User-Input%20Preset%20(!Requester%20%26%26%20Selector%20%26%26%20Analyzer).pdf) (!Requester, Selector, Analyzer) | 19 Oct 2022 |
 7. Can now reference [draft1 of Basic End-User Descriptions](https://github.com/JS1936/PubgAPI-Java/files/9836733/PubgAPI-Java_.Draft1.of.Basic.End-User.Descriptions.pdf) | 21 Oct 2022 |  
 -7.1. Can now reference [draft2](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/PubgAPI-Java_%20Draft2%20of%20Basic%20End-User%20Descriptions.pdf) | 2 Nov 2022 |
+<br />-7.2. Can now reference [draft3](https://github.com/JS1936/PubgAPI-Java/files/10244863/PubgAPI-Java_.Draft3.of.Basic.End-User.Descriptions.1.pdf) | 16 Dec 2022 |
 8. Can now reference [draft1 of Use Case Diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft1-%20Use%20Case%20Diagram%20-%20Pubg-API-Java%20Program.pdf) | 28 Oct 2022 |
 9. Can now automatically get match telemetries from request to API for player's recent history. Previously: separate events | 17 Nov 2022 | 
 10. Resolved merge error. Branch work2 is now properly updated | 17 Nov 2022 |
 11. Can now reference [draft1 of Get_Data activity diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft%201_%20Activity%20Diagram.pdf) | 17 Nov 2022 |
 12. Remove file - APIManager.java. Retained content enters API_Request.java | 17 Nov 2022 |
 13. Remove file - DoRequest.java (was empty) | 18 Nov 2022 |
+14. Can now access/search/store HTTPS found within JSON file | 15 Dec 2022 |
+15. Add new section to README.md - "User's Guide" | 16 Dec 2022 |
+16. Add "What file(s) should I modify?" link and "What does it mean when a file is “ugly”, “pretty”, or becomes “prettified”?" link to User's Guide | 16 Dec 2022 |
 
 ### Top 3 Upcoming Updates ###
 
