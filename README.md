@@ -4,6 +4,9 @@ In-progress. Actively updated
 ## Purpose ## 
 This project started because I wanted to know how many bots were in the pubg games I played. Upon seeing what the telemetry data looked like, I realized there were a lot of other statistics I could learn about, too. 
 
+## User's Guide ##
+* [How do I make an API request?](https://github.com/JS1936/PubgAPI-Java/files/10244822/Q_.How.do.I.make.an.API.request_.pdf)
+
 ## Functionalities ##
 As of October 2022, the Pubg-API-Java project has the following primary functionalities:
 
