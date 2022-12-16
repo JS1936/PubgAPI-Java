@@ -60,6 +60,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 11. Can now reference [draft1 of Get_Data activity diagram](https://github.com/JS1936/PubgAPI-Java/blob/work2/src/main/resources/Drafts/Draft%201_%20Activity%20Diagram.pdf) | 17 Nov 2022 |
 12. Remove file - APIManager.java. Retained content enters API_Request.java | 17 Nov 2022 |
 13. Remove file - DoRequest.java (was empty) | 18 Nov 2022 |
+14. Can now access/search/store HTTPS found within JSON file | 15 Dec 2022 |
 
 ### Top 3 Upcoming Updates ###
 
