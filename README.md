@@ -19,6 +19,9 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 
 ## User's Guide ##
 * [How do I make an API request?](https://github.com/JS1936/PubgAPI-Java/files/10244822/Q_.How.do.I.make.an.API.request_.pdf)
+* [What file(s) should I modify?](https://github.com/JS1936/PubgAPI-Java/files/10245164/Q_.What.file.s.should.I.modify.pdf)
+* [What does it mean when a file is “ugly”, “pretty”, or becomes “prettified”?](https://github.com/JS1936/PubgAPI-Java/files/10245177/PubgAPI-Java.Q.pdf)
+
 
 ## Classes Breakdown ##
 
@@ -66,6 +69,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 13. Remove file - DoRequest.java (was empty) | 18 Nov 2022 |
 14. Can now access/search/store HTTPS found within JSON file | 15 Dec 2022 |
 15. Add new section to README.md - "User's Guide" | 16 Dec 2022 |
+16. Add "What file(s) should I modify?" link and "What does it mean when a file is “ugly”, “pretty”, or becomes “prettified”?" link to User's Guide | 16 Dec 2022 |
 
 ### Top 3 Upcoming Updates ###
 
