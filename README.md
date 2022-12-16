@@ -4,9 +4,6 @@ In-progress. Actively updated
 ## Purpose ## 
 This project started because I wanted to know how many bots were in the pubg games I played. Upon seeing what the telemetry data looked like, I realized there were a lot of other statistics I could learn about, too. 
 
-## User's Guide ##
-* [How do I make an API request?](https://github.com/JS1936/PubgAPI-Java/files/10244822/Q_.How.do.I.make.an.API.request_.pdf)
-
 ## Functionalities ##
 As of October 2022, the Pubg-API-Java project has the following primary functionalities:
 
@@ -19,6 +16,9 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 |4: ranking (of a specific person)|	JSON | Ranking.java |
 |5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java |
 |6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
+
+## User's Guide ##
+* [How do I make an API request?](https://github.com/JS1936/PubgAPI-Java/files/10244822/Q_.How.do.I.make.an.API.request_.pdf)
 
 ## Classes Breakdown ##
 
@@ -64,6 +64,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 12. Remove file - APIManager.java. Retained content enters API_Request.java | 17 Nov 2022 |
 13. Remove file - DoRequest.java (was empty) | 18 Nov 2022 |
 14. Can now access/search/store HTTPS found within JSON file | 15 Dec 2022 |
+15. Add new section to README.md - "User's Guide" | 16 Dec 2022 |
 
 ### Top 3 Upcoming Updates ###
 
