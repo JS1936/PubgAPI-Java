@@ -31,8 +31,7 @@ public class KillCounts extends Request {
         for (int i = 0; i < counts.size(); i++) {
             if (i % 10 == 0) //For display clarity
             {
-                System.out.println();
-                FileUtils.writeStringToFile(Main.requestHistory, "\n", (Charset) null, true); //added 9/15
+                FileManager.writeToFileAndConsole("", true); //new line after
             }
             int numKills = Integer.valueOf(counts.get(i));
             if (maxKills < numKills) {
@@ -42,11 +41,11 @@ public class KillCounts extends Request {
                 killsByTopTen += numKills;
             }
             frequencies[numKills]++;
-            FileManager.writeToFileAndConsole(counts.get(i) + " ");
+            FileManager.writeToFileAndConsole(counts.get(i) + " ", false); //no new line after
         }
 
         //Print out how many people got X number of kills
-        FileManager.writeToFileAndConsole("\nKill Frequencies:");
+        FileManager.writeToFileAndConsole("\n\nKill Frequencies:");
 
         for (int index = 0; index <= maxKills; index++) {
             FileManager.writeToFileAndConsole(frequencies[index] + " got " + index + " kills.");

@@ -7388,3 +7388,891 @@ MAX #kills by a single person: 8 (#people who achieved this: 1)
 #people killed by 'TOP TEN' : 27 of 97
 --------------------------------------------------------------------------
 	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+request=1_Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+2 
+0 
+
+0 
+0 
+2 
+0 
+0 
+0 
+0 
+1 
+2 
+0 
+
+0 
+1 
+0 
+0 
+0 
+1 
+3 
+2 
+0 
+0 
+
+1 
+0 
+0 
+0 
+0 
+4 
+0 
+1 
+0 
+0 
+
+0 
+1 
+1 
+2 
+0 
+0 
+1 
+0 
+1 
+1 
+
+0 
+3 
+1 
+1 
+1 
+0 
+0 
+0 
+2 
+0 
+
+0 
+2 
+2 
+4 
+0 
+2 
+2 
+0 
+1 
+1 
+
+3 
+5 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+
+5 
+0 
+0 
+3 
+6 
+4 
+0 
+1 
+4 
+1 
+
+3 
+0 
+3 
+1 
+0 
+1 
+3 
+7 
+3 
+
+Kill Frequencies:
+61 got 0 kills.
+22 got 1 kills.
+10 got 2 kills.
+8 got 3 kills.
+4 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 109
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+
+1 
+0 
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+1 
+0 
+0 
+0 
+0 
+
+1 
+1 
+3 
+1 
+0 
+0 
+1 
+1 
+2 
+0 
+
+2 
+0 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+0 
+
+2 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+2 
+0 
+
+1 
+0 
+0 
+0 
+0 
+0 
+3 
+0 
+2 
+0 
+
+0 
+0 
+2 
+1 
+2 
+0 
+4 
+0 
+1 
+0 
+
+1 
+6 
+1 
+2 
+0 
+1 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+0 
+0 
+2 
+4 
+6 
+
+1 
+1 
+1 
+3 
+0 
+2 
+0 
+6 
+2 
+0 
+
+4 
+2 
+3 
+1 
+2 
+0 
+2 
+5 
+4 
+5 
+
+0 
+7 
+4 
+5 
+
+Kill Frequencies:
+70 got 0 kills.
+24 got 1 kills.
+14 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+3 got 5 kills.
+3 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 34 of 124
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+1 
+0 
+0 
+0 
+1 
+0 
+1 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+1 
+0 
+2 
+0 
+0 
+0 
+1 
+0 
+2 
+0 
+
+2 
+5 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+
+0 
+0 
+1 
+1 
+3 
+1 
+0 
+0 
+1 
+0 
+
+1 
+0 
+2 
+1 
+1 
+0 
+0 
+1 
+0 
+5 
+
+0 
+2 
+1 
+2 
+1 
+0 
+0 
+1 
+4 
+0 
+
+2 
+5 
+2 
+2 
+0 
+0 
+3 
+0 
+2 
+0 
+
+5 
+2 
+4 
+1 
+1 
+2 
+1 
+1 
+3 
+8 
+
+0 
+1 
+1 
+1 
+0 
+3 
+3 
+5 
+3 
+5 
+
+Kill Frequencies:
+77 got 0 kills.
+26 got 1 kills.
+12 got 2 kills.
+6 got 3 kills.
+2 got 4 kills.
+6 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 130
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+1 
+0 
+2 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+1 
+0 
+0 
+0 
+1 
+1 
+0 
+0 
+1 
+
+0 
+1 
+2 
+2 
+0 
+0 
+0 
+0 
+1 
+0 
+
+4 
+0 
+0 
+0 
+2 
+0 
+2 
+1 
+0 
+1 
+
+0 
+6 
+0 
+0 
+0 
+4 
+7 
+1 
+1 
+1 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+0 
+0 
+
+0 
+0 
+0 
+0 
+1 
+3 
+5 
+1 
+2 
+2 
+
+2 
+0 
+1 
+4 
+4 
+8 
+3 
+
+Kill Frequencies:
+63 got 0 kills.
+16 got 1 kills.
+8 got 2 kills.
+2 got 3 kills.
+4 got 4 kills.
+1 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 27 of 97
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+request=1_Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 2 0 
+0 0 2 0 0 0 0 1 2 0 
+0 1 0 0 0 1 3 2 0 0 
+1 0 0 0 0 4 0 1 0 0 
+0 1 1 2 0 0 1 0 1 1 
+0 3 1 1 1 0 0 0 2 0 
+0 2 2 4 0 2 2 0 1 1 
+3 5 1 0 0 0 0 0 0 1 
+5 0 0 3 6 4 0 1 4 1 
+3 0 3 1 0 1 3 7 3 
+Kill Frequencies:
+61 got 0 kills.
+22 got 1 kills.
+10 got 2 kills.
+8 got 3 kills.
+4 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 109
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 1 
+1 0 1 1 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 
+1 1 3 1 0 0 1 1 2 0 
+2 0 0 0 0 1 1 0 0 0 
+2 0 0 0 0 0 0 1 2 0 
+1 0 0 0 0 0 3 0 2 0 
+0 0 2 1 2 0 4 0 1 0 
+1 6 1 2 0 1 0 0 0 0 
+0 0 1 0 0 0 0 2 4 6 
+1 1 1 3 0 2 0 6 2 0 
+4 2 3 1 2 0 2 5 4 5 
+0 7 4 5 
+Kill Frequencies:
+70 got 0 kills.
+24 got 1 kills.
+14 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+3 got 5 kills.
+3 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 34 of 124
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 1 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 
+1 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 0 2 0 0 0 1 0 2 0 
+2 5 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 
+0 0 1 1 3 1 0 0 1 0 
+1 0 2 1 1 0 0 1 0 5 
+0 2 1 2 1 0 0 1 4 0 
+2 5 2 2 0 0 3 0 2 0 
+5 2 4 1 1 2 1 1 3 8 
+0 1 1 1 0 3 3 5 3 5 
+Kill Frequencies:
+77 got 0 kills.
+26 got 1 kills.
+12 got 2 kills.
+6 got 3 kills.
+2 got 4 kills.
+6 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 130
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 2 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 1 1 0 0 1 
+0 1 2 2 0 0 0 0 1 0 
+4 0 0 0 2 0 2 1 0 1 
+0 6 0 0 0 4 7 1 1 1 
+0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 1 3 5 1 2 2 
+2 0 1 4 4 8 3 
+Kill Frequencies:
+63 got 0 kills.
+16 got 1 kills.
+8 got 2 kills.
+2 got 3 kills.
+4 got 4 kills.
+1 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 27 of 97
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+request=1_Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 2 0 
+0 0 2 0 0 0 0 1 2 0 
+0 1 0 0 0 1 3 2 0 0 
+1 0 0 0 0 4 0 1 0 0 
+0 1 1 2 0 0 1 0 1 1 
+0 3 1 1 1 0 0 0 2 0 
+0 2 2 4 0 2 2 0 1 1 
+3 5 1 0 0 0 0 0 0 1 
+5 0 0 3 6 4 0 1 4 1 
+3 0 3 1 0 1 3 7 3 
+Kill Frequencies:
+61 got 0 kills.
+22 got 1 kills.
+10 got 2 kills.
+8 got 3 kills.
+4 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 109
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 1 
+1 0 1 1 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 
+1 1 3 1 0 0 1 1 2 0 
+2 0 0 0 0 1 1 0 0 0 
+2 0 0 0 0 0 0 1 2 0 
+1 0 0 0 0 0 3 0 2 0 
+0 0 2 1 2 0 4 0 1 0 
+1 6 1 2 0 1 0 0 0 0 
+0 0 1 0 0 0 0 2 4 6 
+1 1 1 3 0 2 0 6 2 0 
+4 2 3 1 2 0 2 5 4 5 
+0 7 4 5 
+Kill Frequencies:
+70 got 0 kills.
+24 got 1 kills.
+14 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+3 got 5 kills.
+3 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 34 of 124
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 1 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 
+1 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 0 2 0 0 0 1 0 2 0 
+2 5 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 
+0 0 1 1 3 1 0 0 1 0 
+1 0 2 1 1 0 0 1 0 5 
+0 2 1 2 1 0 0 1 4 0 
+2 5 2 2 0 0 3 0 2 0 
+5 2 4 1 1 2 1 1 3 8 
+0 1 1 1 0 3 3 5 3 5 
+Kill Frequencies:
+77 got 0 kills.
+26 got 1 kills.
+12 got 2 kills.
+6 got 3 kills.
+2 got 4 kills.
+6 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 130
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 2 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 1 1 0 0 1 
+0 1 2 2 0 0 0 0 1 0 
+4 0 0 0 2 0 2 1 0 1 
+0 6 0 0 0 4 7 1 1 1 
+0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 1 3 5 1 2 2 
+2 0 1 4 4 8 3 
+Kill Frequencies:
+63 got 0 kills.
+16 got 1 kills.
+8 got 2 kills.
+2 got 3 kills.
+4 got 4 kills.
+1 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 27 of 97
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+request=1_Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 2 0 
+0 0 2 0 0 0 0 1 2 0 
+0 1 0 0 0 1 3 2 0 0 
+1 0 0 0 0 4 0 1 0 0 
+0 1 1 2 0 0 1 0 1 1 
+0 3 1 1 1 0 0 0 2 0 
+0 2 2 4 0 2 2 0 1 1 
+3 5 1 0 0 0 0 0 0 1 
+5 0 0 3 6 4 0 1 4 1 
+3 0 3 1 0 1 3 7 3 
+
+Kill Frequencies:
+61 got 0 kills.
+22 got 1 kills.
+10 got 2 kills.
+8 got 3 kills.
+4 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 109
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 1 
+1 0 1 1 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 
+1 1 3 1 0 0 1 1 2 0 
+2 0 0 0 0 1 1 0 0 0 
+2 0 0 0 0 0 0 1 2 0 
+1 0 0 0 0 0 3 0 2 0 
+0 0 2 1 2 0 4 0 1 0 
+1 6 1 2 0 1 0 0 0 0 
+0 0 1 0 0 0 0 2 4 6 
+1 1 1 3 0 2 0 6 2 0 
+4 2 3 1 2 0 2 5 4 5 
+0 7 4 5 
+
+Kill Frequencies:
+70 got 0 kills.
+24 got 1 kills.
+14 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+3 got 5 kills.
+3 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 34 of 124
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 1 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 
+1 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 0 2 0 0 0 1 0 2 0 
+2 5 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 
+0 0 1 1 3 1 0 0 1 0 
+1 0 2 1 1 0 0 1 0 5 
+0 2 1 2 1 0 0 1 4 0 
+2 5 2 2 0 0 3 0 2 0 
+5 2 4 1 1 2 1 1 3 8 
+0 1 1 1 0 3 3 5 3 5 
+
+Kill Frequencies:
+77 got 0 kills.
+26 got 1 kills.
+12 got 2 kills.
+6 got 3 kills.
+2 got 4 kills.
+6 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 130
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 2 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 1 1 0 0 1 
+0 1 2 2 0 0 0 0 1 0 
+4 0 0 0 2 0 2 1 0 1 
+0 6 0 0 0 4 7 1 1 1 
+0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 1 3 5 1 2 2 
+2 0 1 4 4 8 3 
+
+Kill Frequencies:
+63 got 0 kills.
+16 got 1 kills.
+8 got 2 kills.
+2 got 3 kills.
+4 got 4 kills.
+1 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 27 of 97
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32

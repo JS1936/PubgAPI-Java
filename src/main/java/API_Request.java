@@ -185,7 +185,6 @@ public class API_Request extends API {
 
         printResponseCodeSuccessFail(url);
         return this.connection;
-
     }
 
     //This method was created following/using

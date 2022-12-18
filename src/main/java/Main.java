@@ -135,24 +135,7 @@ public class Main {
     {
         mapsPlayed.clear(); //avoid duplicates...
 
-        //selectPreset();
-        /*
-        System.out.println("Enter the name of the folder you want to focus on.");
-        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1671342490462/matches");
 
-        Path name_path = Path.of(input.nextLine());
-        System.out.println("NAME path: " + name_path);
-        File desiredFolder = new File(name_path.toFile().getAbsolutePath());
-        System.out.println("desiredFolder: " + desiredFolder.getAbsolutePath());
-        if(desiredFolder.isDirectory())
-        {
-            System.out.println("Found it.");
-        }
-        else
-        {
-            System.out.println("Did not find it.");
-        }
-        */
         //Directory holding presets. Print the names of the files in that directory.
         //System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
         //File presets = new File("presetsDir");
@@ -274,8 +257,6 @@ public class Main {
         //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
         if(request == 0)
         {
-
-            //System.out.println("about to call bots and people");
             BotCounts.countBotsAndPeople(prettyFile); //seems to work
         }
         else if(request == 1)

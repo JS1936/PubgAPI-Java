@@ -85,6 +85,18 @@ public class FileManager {
         //Note: ln, \n are affecting printout for (1)
         //Would "text + \n" work? (Rather than "\n + text")
     }
+    public static void writeToFileAndConsole(String text, boolean newLineAfter) throws IOException {
+        System.out.print(text);
+        FileUtils.writeStringToFile(Main.requestHistory, text, (Charset) null, true);
+
+        if(newLineAfter)
+        {
+            System.out.println();
+            FileUtils.writeStringToFile(Main.requestHistory, "\n", (Charset) null, true);
+        }
+        //Note: ln, \n are affecting printout for (1)
+        //Would "text + \n" work? (Rather than "\n + text")
+    }
 
 }
 
