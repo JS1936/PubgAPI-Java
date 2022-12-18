@@ -1,7 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.Vector;
 
 //TO-DO:  REVISIT (CHANGE IN FORMAT SEEMS TO BE MESSING THINGS UP)
@@ -65,7 +67,7 @@ public class BotCounts {
                 }
 
             }
-            String text = "#bots:       " + botNames.size() + " / " + playerNames.size();
+            String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size());
             FileManager.writeToFileAndConsole(text);
 
 

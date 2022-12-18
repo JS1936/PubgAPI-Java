@@ -13,6 +13,7 @@ import java.util.*;
 
 
 //NOTE: get the json via the URL link... don't just convert the general/OVERVIEW txt file to a json!
+//NOTE: make sure file order reset with new command within same run
 public class Main {
 
 
@@ -71,7 +72,8 @@ public class Main {
 
         //Provide Scanner for pseudoMain to use.
         Scanner input = new Scanner(System.in);
-        psuedoMain(input);
+        File desiredFolder = chooseFolder(input); //only choose once per runtime.
+        psuedoMain(input, desiredFolder);
         input.close();
     }
 
@@ -108,18 +110,11 @@ public class Main {
     //Need: location of user's desired folder.
     //Error message 11/19: "Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 26 path $"
     //11/19: trying to simplify file selection process. I/O...
-
-
-
-    public static void psuedoMain(Scanner input)//removed "String desiredThing"
+    public static File chooseFolder(Scanner input)
     {
-        mapsPlayed.clear(); //avoid duplicates...
-
-        //selectPreset();
-
         System.out.println("Enter the name of the folder you want to focus on.");
-        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1671139062656/matches");
-        //timestamp_1669102725185
+        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1671342490462/matches");
+
         Path name_path = Path.of(input.nextLine());
         System.out.println("NAME path: " + name_path);
         File desiredFolder = new File(name_path.toFile().getAbsolutePath());
@@ -132,7 +127,32 @@ public class Main {
         {
             System.out.println("Did not find it.");
         }
-        
+        return desiredFolder;
+    }
+
+
+    public static void psuedoMain(Scanner input, File desiredFolder)//removed "String desiredThing"
+    {
+        mapsPlayed.clear(); //avoid duplicates...
+
+        //selectPreset();
+        /*
+        System.out.println("Enter the name of the folder you want to focus on.");
+        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1671342490462/matches");
+
+        Path name_path = Path.of(input.nextLine());
+        System.out.println("NAME path: " + name_path);
+        File desiredFolder = new File(name_path.toFile().getAbsolutePath());
+        System.out.println("desiredFolder: " + desiredFolder.getAbsolutePath());
+        if(desiredFolder.isDirectory())
+        {
+            System.out.println("Found it.");
+        }
+        else
+        {
+            System.out.println("Did not find it.");
+        }
+        */
         //Directory holding presets. Print the names of the files in that directory.
         //System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
         //File presets = new File("presetsDir");
@@ -156,13 +176,6 @@ public class Main {
         //validateChosenOption(chosenRequestDir, filesRequestDir);
 
         System.out.println("Makes it here");
-        //"Enter the name of the folder you want to use"
-        //File[] files = new File("C:\\Users\\jmast\\pubgFilesExtracted").listFiles(); //Let user decide, though?
-        //File[] files = new File("C:/Users/jenniferstibbins/Documents/GitHub/PubgAPI-Java/requestsDir/WackyJacky101/matches").listFiles(); //Let user decide, though?
-        //System.out.println("Files.length = " + files.length);
-
-        //File[] matchFiles = new File(filesRequestDir[chosenRequestDir].getAbsolutePath() + "")
-
 
         File[] files = new File((desiredFolder).toString()).listFiles();
         //System.out.println("FILES.length = " + files.length);
@@ -208,7 +221,7 @@ public class Main {
         int count = 0;
         for (File fileName : files)
         {
-            System.out.println(fileName);
+            //System.out.println(fileName);
             try {
                 if(filesSoFar >= 10 || count == 0) //added count == 0 on 11/19
                 {
@@ -219,12 +232,9 @@ public class Main {
                     if(!fileName.isDirectory()) //added 10/5
                     {
                         System.out.println("File name is: " + fileName.getName());
-                        System.out.println("Absolute file path is: " + fileName.getAbsolutePath());
-                        //FileUtils.copyURLToFile(URL, file);
-                        //File pretty = FileManager.makePretty(fileName);
                         File pretty = fileName;
                         getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
-                        MatchManager.printMatchInfo(pretty); //added 9/18
+                        //MatchManager.printMatchInfo(pretty); //added 9/18
                         filesSoFar++;
                         FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
                     }
@@ -251,7 +261,7 @@ public class Main {
 
         if(response.equalsIgnoreCase("Y"))
         {
-            psuedoMain(input); //Caution: this causes a problem with having multiple scanners open...
+            psuedoMain(input, desiredFolder); //Caution: this causes a problem with having multiple scanners open...
         }
         System.out.println("Shutting down program.");
     }
@@ -265,7 +275,7 @@ public class Main {
         if(request == 0)
         {
 
-            System.out.println("about to call bots and people");
+            //System.out.println("about to call bots and people");
             BotCounts.countBotsAndPeople(prettyFile); //seems to work
         }
         else if(request == 1)
@@ -368,13 +378,7 @@ public class Main {
         int requestType = getInput(input, functionalities);
         return requestType;
     }
-
-
-
-
-
-
-
+}
     /*
     //Not yet fully implemented
     public static int getRequestScope(Scanner input)
@@ -386,25 +390,3 @@ public class Main {
         return requestScope;
     }
      */
-}
-
-//NOTES:
-//-Check for occasional eof error.
-//-Check to make sure request 6 (maps played) is still working properly
-//-Possibly make the default storage location for active files --> .../main/resources
-//-File storage --> ask user if/where. Could automatically store it, then only keep at the end if user says to keep it
-// (at the end...) --> both more and less work
-
-/////
-
-//public static Vector<String> functionalities = requestCurrent.getTypesOfRequests();
-//public static Vector<String> requestScopes = new Vector<String>(); //added 9/17
-
-
-//Was in main:
-//        //try {
-//         //   APIManager.workingWithSampleFile();
-//        //    //APIManager.getMatchIDsFromSampleFile();
-//        //} catch (IOException e) {
-//        ////    e.printStackTrace();
-//        //}

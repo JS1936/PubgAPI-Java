@@ -28,7 +28,7 @@ public class Ranking {
             //System.out.println("Attempting to print match_end content (1line): " + player);
             JSONObject player_details = player.getJSONObject("character");
             String player_name = player_details.get("name").toString();
-            //System.out.println("\t" + player_name);
+
             if (player_name.equalsIgnoreCase(name)) {
                 String player_ranking = player_details.get("ranking").toString();
                 System.out.println(name + " rank in this game: " + player_details.get("ranking").toString());

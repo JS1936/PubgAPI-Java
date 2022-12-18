@@ -20,6 +20,8 @@ public class KillCountsJSON {
             if (!names.isEmpty()) {
                 FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
 
+                FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
+
                 for (int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++) {
                     FileManager.writeToFileAndConsole("\t" + names.get(indexOfNames));
                 }
@@ -91,7 +93,6 @@ public class KillCountsJSON {
             killedByAnyWinner += killCount;
         }
         System.out.println("#people killed by winning team: " + killedByAnyWinner);
-        //or maybe just say "#kills by winning team" (in case of deathmatch)
         //having trouble getting the winners' names... (account ids fine/okay, though)
     }
 }

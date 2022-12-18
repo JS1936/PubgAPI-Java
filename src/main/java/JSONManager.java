@@ -4,8 +4,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.Vector;
 
-
-//Consider: adding convert txt to json
+//The JSONManager class helps with searching through PUBG match telemetry files and returning specific chunks.
 public class JSONManager {
 
     /*
