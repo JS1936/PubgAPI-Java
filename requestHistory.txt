@@ -10985,3 +10985,494 @@ MAX #kills by a single person: 8 (#people who achieved this: 1)
 #people killed by 'TOP TEN' : 27 of 97
 --------------------------------------------------------------------------
 	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=0_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+#bots:       89 / 100
+#players:        11
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+#bots:       1 / 98
+#players:        97
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+#bots:       7 / 98
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+#bots:       7 / 100
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+#bots:       65 / 97
+#players:        32
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=1_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 1 1 0 0 0 0 
+0 0 0 0 0 0 1 0 2 0 
+0 0 0 1 0 0 4 4 0 0 
+0 0 0 0 0 1 1 2 1 2 
+0 1 0 0 2 1 0 0 0 0 
+0 1 2 1 0 0 0 1 0 0 
+0 0 0 0 2 0 0 0 0 0 
+2 0 0 1 0 0 1 0 0 1 
+0 1 1 0 1 1 6 6 1 0 
+
+Kill Frequencies:
+68 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+0 got 3 kills.
+2 got 4 kills.
+0 got 5 kills.
+2 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 17 of 100
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 2 0 
+0 0 2 0 0 0 0 1 2 0 
+0 1 0 0 0 1 3 2 0 0 
+1 0 0 0 0 4 0 1 0 0 
+0 1 1 2 0 0 1 0 1 1 
+0 3 1 1 1 0 0 0 2 0 
+0 2 2 4 0 2 2 0 1 1 
+3 5 1 0 0 0 0 0 0 1 
+5 0 0 3 6 4 0 1 4 1 
+3 0 3 1 0 1 3 7 3 
+
+Kill Frequencies:
+61 got 0 kills.
+22 got 1 kills.
+10 got 2 kills.
+8 got 3 kills.
+4 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 109
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 1 
+1 0 1 1 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 
+1 1 3 1 0 0 1 1 2 0 
+2 0 0 0 0 1 1 0 0 0 
+2 0 0 0 0 0 0 1 2 0 
+1 0 0 0 0 0 3 0 2 0 
+0 0 2 1 2 0 4 0 1 0 
+1 6 1 2 0 1 0 0 0 0 
+0 0 1 0 0 0 0 2 4 6 
+1 1 1 3 0 2 0 6 2 0 
+4 2 3 1 2 0 2 5 4 5 
+0 7 4 5 
+
+Kill Frequencies:
+70 got 0 kills.
+24 got 1 kills.
+14 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+3 got 5 kills.
+3 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 34 of 124
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 1 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 
+1 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 0 2 0 0 0 1 0 2 0 
+2 5 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 
+0 0 1 1 3 1 0 0 1 0 
+1 0 2 1 1 0 0 1 0 5 
+0 2 1 2 1 0 0 1 4 0 
+2 5 2 2 0 0 3 0 2 0 
+5 2 4 1 1 2 1 1 3 8 
+0 1 1 1 0 3 3 5 3 5 
+
+Kill Frequencies:
+77 got 0 kills.
+26 got 1 kills.
+12 got 2 kills.
+6 got 3 kills.
+2 got 4 kills.
+6 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 130
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 2 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 1 1 0 0 1 
+0 1 2 2 0 0 0 0 1 0 
+4 0 0 0 2 0 2 1 0 1 
+0 6 0 0 0 4 7 1 1 1 
+0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 1 3 5 1 2 2 
+2 0 1 4 4 8 3 
+
+Kill Frequencies:
+63 got 0 kills.
+16 got 1 kills.
+8 got 2 kills.
+2 got 3 kills.
+4 got 4 kills.
+1 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 27 of 97
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=3_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+UPnHer Summary (Winner): 
+	Primary Weapon #1: 	WeapM24_C
+	Primary Weapon #2: 	WeapHK416_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+CoorsLatte Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Shadow7PR Summary (Winner): 
+	Primary Weapon #1: 	WeapAK47_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Bearded_Taint Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapFNFal_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapM24_C x1
+	WeapHK416_C x2
+	WeapMk12_C x1
+	WeapAK47_C x1
+	WeapSKS_C x1
+	WeapMP5K_C x1
+	WeapFNFal_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x3
+	WeapM79_C x1
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+Sirphistalot Summary (Winner): 
+	Primary Weapon #1: 	WeapKar98k_C
+	Primary Weapon #2: 	WeapACE32_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+IrradiatedBear Summary (Winner): 
+	Primary Weapon #1: 	WeapMini14_C
+	Primary Weapon #2: 	WeapMP5K_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapKar98k_C x1
+	WeapACE32_C x1
+	WeapMini14_C x1
+	WeapMP5K_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+TurkIsAwesome Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapMini14_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+crezzd Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Grunntt Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapHK416_C x1
+	WeapMini14_C x1
+	N/A x4
+
+SECONDARY WEAPON: (winners only)
+	N/A x3
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+ClamaLama Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	WeapACE32_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapFNFal_C x1
+	WeapACE32_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x1
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+YEAHBOYYYYY Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Scratchy83 Summary (Winner): 
+	Primary Weapon #1: 	WeapM24_C
+	Primary Weapon #2: 	WeapP90_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMP5K_C x1
+	WeapSKS_C x1
+	WeapM24_C x1
+	WeapP90_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM79_C x1
+	N/A x1
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=2_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=4_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+
+-player:CoorsLatte, rank: 1, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.16.16.13b62b91-55ff-41cb-8daf-5a2fc166ce51	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+
+-player:CoorsLatte, rank: 33, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.01.6e96c200-8b55-479e-811a-1874d52e0e77	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+
+-player:CoorsLatte, rank: 24, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.e8006669-3e80-4875-8bdb-c6daac8bbaa9	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+
+-player:CoorsLatte, rank: 12, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.ef562314-ace4-4c7d-a8ef-0687a8fc6155	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+-player:CoorsLatte, rank: 6, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.00.2bb36edb-bd00-4d96-9673-e2d91a855a32	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=4_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+
+-player:CoorsLatte, rank: 1, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.16.16.13b62b91-55ff-41cb-8daf-5a2fc166ce51	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+
+-player:CoorsLatte, rank: 33, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.01.6e96c200-8b55-479e-811a-1874d52e0e77	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+
+-player:CoorsLatte, rank: 24, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.e8006669-3e80-4875-8bdb-c6daac8bbaa9	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+
+-player:CoorsLatte, rank: 12, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.ef562314-ace4-4c7d-a8ef-0687a8fc6155	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+-player:CoorsLatte, rank: 6, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.00.2bb36edb-bd00-4d96-9673-e2d91a855a32	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=3_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+UPnHer Summary (Winner): 
+	Primary Weapon #1: 	WeapM24_C
+	Primary Weapon #2: 	WeapHK416_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+CoorsLatte Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Shadow7PR Summary (Winner): 
+	Primary Weapon #1: 	WeapAK47_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Bearded_Taint Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapFNFal_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapM24_C x1
+	WeapHK416_C x2
+	WeapMk12_C x1
+	WeapAK47_C x1
+	WeapSKS_C x1
+	WeapMP5K_C x1
+	WeapFNFal_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x3
+	WeapM79_C x1
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+Sirphistalot Summary (Winner): 
+	Primary Weapon #1: 	WeapKar98k_C
+	Primary Weapon #2: 	WeapACE32_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+IrradiatedBear Summary (Winner): 
+	Primary Weapon #1: 	WeapMini14_C
+	Primary Weapon #2: 	WeapMP5K_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapKar98k_C x1
+	WeapACE32_C x1
+	WeapMini14_C x1
+	WeapMP5K_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+TurkIsAwesome Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapMini14_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+crezzd Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Grunntt Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapHK416_C x1
+	WeapMini14_C x1
+	N/A x4
+
+SECONDARY WEAPON: (winners only)
+	N/A x3
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+ClamaLama Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	WeapACE32_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapFNFal_C x1
+	WeapACE32_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x1
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+YEAHBOYYYYY Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Scratchy83 Summary (Winner): 
+	Primary Weapon #1: 	WeapM24_C
+	Primary Weapon #2: 	WeapP90_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMP5K_C x1
+	WeapSKS_C x1
+	WeapM24_C x1
+	WeapP90_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM79_C x1
+	N/A x1
+
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=4_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=4_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+matt112 was not in the game (telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+matt112 was not in the game (telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+matt112 was not in the game (telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+matt112 was not in the game (telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+matt112 was not in the game (telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32

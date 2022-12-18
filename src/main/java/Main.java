@@ -72,6 +72,7 @@ public class Main {
         File desiredFolder = chooseFolder(input); //only choose once per runtime.
         psuedoMain(input, desiredFolder);
         input.close();
+        System.out.println("Shutting down program.");
     }
 
     public static void printOptions(File[] f_array)
@@ -239,7 +240,8 @@ public class Main {
         {
             psuedoMain(input, desiredFolder);
         }
-        System.out.println("Shutting down program.");
+        //program shutdown should begin shortly
+        //System.out.println("Shutting down program.");
     }
 
     //Call the appropriate class(es) and method(s) based on user input
