@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Vector;
 
 //The KillCountsJSON class uses JSONObjects to calculate and print data on kills from a match.
+//TODO: Decide whether to print full calculations to file (not just console)
 public class KillCountsJSON {
 
     /*
@@ -20,7 +21,7 @@ public class KillCountsJSON {
             if (!names.isEmpty()) {
                 FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
 
-                FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
+                //FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
 
                 for (int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++) {
                     FileManager.writeToFileAndConsole("\t" + names.get(indexOfNames));
@@ -49,12 +50,12 @@ public class KillCountsJSON {
             namesByNumKills.add(names);
         }
 
-        //NON-WINNERS
+        //NON-WINNERS. Kill events.
         System.out.println("NOTE: this does not yet include the winners...");
         for (JSONObject kill_event : kill_events) {
-            //System.out.println("HELLO! Looking at a kill event");
+
             JSONObject victimGameResult = kill_event.getJSONObject("victimGameResult");
-            int rank = Integer.parseInt(victimGameResult.get("rank").toString());
+            //int rank = Integer.parseInt(victimGameResult.get("rank").toString());
             ////System.out.println("rank: " + rank);
 
             JSONObject stats = victimGameResult.getJSONObject("stats");
@@ -85,7 +86,7 @@ public class KillCountsJSON {
             //JSONObject winner = winners.getJSONObject(i);
             //System.out.println("winner.toString() : " + winner.toString());
             JSONObject player_result = results.getJSONObject(i);
-            System.out.println("i = " + i + "; results: " + results.get(i).toString());
+            //System.out.println("i = " + i + "; results: " + results.get(i).toString());
             JSONObject stats = player_result.getJSONObject("stats");
             String num_kills = stats.get("killCount").toString();
             int killCount = Integer.parseInt(num_kills);

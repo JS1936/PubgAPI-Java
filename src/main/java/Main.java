@@ -10,7 +10,7 @@ import java.util.*;
 //Consider: removing Request.java
 //Consider: adding some sort of PresetReader
 //public class Main extends Request {
-
+//Idea: numAlive players against timestamp, graphing that
 
 //NOTE: get the json via the URL link... don't just convert the general/OVERVIEW txt file to a json!
 //NOTE: make sure file order reset with new command within same run
@@ -27,9 +27,7 @@ public class Main {
 
     private static void setupRequestHistory()
     {
-        //requestHistory = FileManager.getFile("requestHistory.txt");
-        requestHistory = new File("requestHistory.txt");//FileManager.getFile("presetsDir/example.txt");
-
+        requestHistory = new File("requestHistory.txt");
         if(!requestHistory.exists())
         {
             System.out.println("requestHistory.txt Does not yet exist. Creating it now.");
@@ -62,8 +60,7 @@ public class Main {
     //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
     //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
     //WON'T: include requestScopes (as of 11/18)
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
         //Do basic setup
         mapsPlayed.clear(); //clear at the beginning
         initiateFunctionalities();
@@ -131,7 +128,7 @@ public class Main {
     }
 
 
-    public static void psuedoMain(Scanner input, File desiredFolder)//removed "String desiredThing"
+    public static void psuedoMain(Scanner input, File desiredFolder) throws IOException//removed "String desiredThing"
     {
         mapsPlayed.clear(); //avoid duplicates...
 
@@ -167,8 +164,6 @@ public class Main {
         {
             System.out.println("\t" + file.getName());
         }
-        //System.exit(0);
-        //input = new Scanner(System.in);
 
         //TODO: allow presets to utilize this
         int request = getRequestType(input); //(requestType)
@@ -180,6 +175,7 @@ public class Main {
             //could even have a log-in system where differentiating user histories
            //TODO: ensure print to console and write to file are synced properly
             //FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
+
             FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_", (Charset) null, true); //changed requestedResults to currentFile
         } catch (IOException e) {
             e.printStackTrace();
@@ -204,33 +200,30 @@ public class Main {
         int count = 0;
         for (File fileName : files)
         {
-            //System.out.println(fileName);
             try {
-                if(filesSoFar >= 10 || count == 0) //added count == 0 on 11/19
-                {
-                    count++;
+                //if(filesSoFar >= 10 || count == 0) //added count == 0 on 11/19
+                //{
+                //    count++;
                     //System.out.println("Reached max_files of " + max_files + "...terminating program");
-                } else
-                {
+                //} else
+                //{
                     if(!fileName.isDirectory()) //added 10/5
                     {
-                        System.out.println("File name is: " + fileName.getName());
+                        FileManager.writeToFileAndConsole("File name is: " + fileName.getName());
                         File pretty = fileName;
                         getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
-                        //MatchManager.printMatchInfo(pretty); //added 9/18
                         filesSoFar++;
-                        FileUtils.writeStringToFile(requestHistory, "\t" + fileName.getAbsolutePath(), (Charset) null, true); //changed requestedResults to currentFile //added 9/18
+                        FileManager.writeToFileAndConsole("\t" + fileName.getAbsolutePath(), true);
                     }
-                }
+                //}
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         if(request == 6)
         {
-            System.out.println("REQUEST = 6");
-            System.out.println("mapsPlayed.size() : " + mapsPlayed.size());
-            //mapsPlayed.add(MapManager.getMapName(fileName));
+            FileManager.writeToFileAndConsole("REQUEST = 6");
+            FileManager.writeToFileAndConsole("mapsPlayed.size() : " + mapsPlayed.size());
             try {
                 MapManager.printMapNames();
             } catch (IOException e) {
@@ -244,7 +237,7 @@ public class Main {
 
         if(response.equalsIgnoreCase("Y"))
         {
-            psuedoMain(input, desiredFolder); //Caution: this causes a problem with having multiple scanners open...
+            psuedoMain(input, desiredFolder);
         }
         System.out.println("Shutting down program.");
     }
@@ -317,15 +310,6 @@ public class Main {
         functionalities.add("printMapsPlayed");
     }
 
-    /*
-    //Not yet fully implemented
-    public static void initiateRequestScopes()
-    {
-        requestScopes.add("individual (EX: matt112)");
-        requestScopes.add("team       (EX: team of matt112)");
-        requestScopes.add("match      (all individuals in that match)");
-    }
-    */
 
     //If requests are objects, then this is easier...?
     //abstract these better...!
@@ -371,3 +355,14 @@ public class Main {
         return requestScope;
     }
      */
+
+
+    /*
+    //Not yet fully implemented
+    public static void initiateRequestScopes()
+    {
+        requestScopes.add("individual (EX: matt112)");
+        requestScopes.add("team       (EX: team of matt112)");
+        requestScopes.add("match      (all individuals in that match)");
+    }
+    */

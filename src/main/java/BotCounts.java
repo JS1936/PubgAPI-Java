@@ -69,6 +69,7 @@ public class BotCounts {
             }
             String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size());
             FileManager.writeToFileAndConsole(text);
+            FileManager.writeToFileAndConsole("#players:        " + playerNames.size());
 
 
         } catch (FileNotFoundException e) {

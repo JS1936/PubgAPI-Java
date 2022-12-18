@@ -8,6 +8,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 //The KillCounts class is a MANUAL approximation of the KillCountsJSON class. Reports killCount data on a single match.
+//TODO: Decide -> more accurate to say downCounts/knockCounts? (can exceed #players in case of res)
 public class KillCounts extends Request {
 
     /*
