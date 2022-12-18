@@ -63,7 +63,7 @@ public class API_Request extends API {
         doRequest();
     }
 
-    public File getMatchOverviewContent(String match_id) throws IOException {
+    private File getMatchOverviewContent(String match_id) throws IOException {
         //Match Overview
         URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
         Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
@@ -89,7 +89,7 @@ public class API_Request extends API {
         telemetry_urls.add(telemetryURL);
     }
      */
-    public void doRequest() throws IOException {
+    private void doRequest() throws IOException {
         //connect
         connectToAPI(this.recentMatches);
         Path summary_Path = Path.of(specificRequest + "/summary_matchList"); //no .txt here (don't want duplicate)
@@ -139,7 +139,7 @@ public class API_Request extends API {
     }
      */
     //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
-    public URL getTelemetryURL(File f) throws IOException {
+    private URL getTelemetryURL(File f) throws IOException {
 
         String fileAsString = FileUtils.readFileToString(f);
 
@@ -154,7 +154,7 @@ public class API_Request extends API {
 
     //Given a URL, checks the current response code for the HttpURLConnection connection.
     //Expect: response code is 200 (valid/OK). Otherwise, invalid connection.
-    public void printResponseCodeSuccessFail(URL url) throws IOException {
+    private void printResponseCodeSuccessFail(URL url) throws IOException {
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
         if(this.connection.getResponseCode() == 200) //response is valid/OK
         {
@@ -166,7 +166,7 @@ public class API_Request extends API {
         }
     }
 
-    public void endProgramIfNullConnection()
+    private void endProgramIfNullConnection()
     {
         if(connection == null) //!isConnected
         {
@@ -174,7 +174,7 @@ public class API_Request extends API {
             System.exit(0);
         }
     }
-    public HttpURLConnection connectToAPI(URL url) throws IOException {
+    private HttpURLConnection connectToAPI(URL url) throws IOException {
 
         this.connection = (HttpURLConnection) url.openConnection();
 
@@ -192,7 +192,7 @@ public class API_Request extends API {
     //Includes minor modifications from original source.
     //
     //Assumes: url is valid and destFile exists.
-    public void transferInputUsingProcessBuilder(URL url, File destFile) throws IOException {
+    private void transferInputUsingProcessBuilder(URL url, File destFile) throws IOException {
 
         //Command format (curl)
         String command = "curl --compressed " + url + " -H Accept: application/vnd.api+json";
@@ -209,7 +209,7 @@ public class API_Request extends API {
     }
 
 
-    public HttpURLConnection connectToAPI_wantZIP(URL url, File destFile) throws IOException {
+    private HttpURLConnection connectToAPI_wantZIP(URL url, File destFile) throws IOException {
         //System.out.println("CONTENT ENCODING: " + connection.getContentEncoding());
         this.connection = (HttpURLConnection) url.openConnection();
         endProgramIfNullConnection();
@@ -239,7 +239,7 @@ public class API_Request extends API {
 
     //Pre: File file exists and is not null.
     //Transfers desired content from input stream into given file.
-    public void transferInputStreamToFile(InputStream inputStream, File file) throws IOException
+    private void transferInputStreamToFile(InputStream inputStream, File file) throws IOException
     {
         OutputStream output = new FileOutputStream(file);
         inputStream.transferTo(output);
@@ -262,7 +262,7 @@ public class API_Request extends API {
     }
      */
     //Consider: returning file so that it can be custom-saved
-    public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
+    private File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
 
         InputStream inputStream = connection.getInputStream();
@@ -280,7 +280,7 @@ public class API_Request extends API {
     //TRIAL
     //Moved from APIManager to API_Request
     //Note: was previously static
-    public Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
+    private Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
     {
         if(!s.isFile())
         {
