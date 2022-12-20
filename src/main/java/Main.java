@@ -144,6 +144,8 @@ public class Main {
         if(desiredFolder.isDirectory())
         {
             System.out.println("Found it.");
+            //Trying this...
+            //desiredFolder.deleteOnExit();
         }
         else
         {
@@ -188,7 +190,11 @@ public class Main {
         for(File file : files)
         {
             System.out.println("\t" + file.getName());
+            //Trying this...
+            //System.out.println("Attempting to delete folder called " + desiredFolder.toString());
+            //file.deleteOnExit();
         }
+        //Trying this...
 
         //TODO: allow presets to utilize this
         int request = getRequestType(input); //(requestType)

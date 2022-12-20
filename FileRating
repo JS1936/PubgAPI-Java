@@ -91,3 +91,33 @@
 //LogPlayerMakeGroggy
 //LogPlayerRevive
 //TODO-FIX/CLARIFY "KILL" VS GROGGY, ETC.
+
+
+//Consider: save match_ids. When calling upon a request, then do get the telemetry, etc.
+//...Then get rid of it again once done with it (don't save it--> huge amount of space)
+//So, how would you specify to save a timestamp?
+
+//If UserDriver,
+//then API_Request(player, #games, saveFullTelemetry boolean(?))
+// "deleteOnExit" --> for each file in "matches", then also the matches file itself. KEEP summary, though.
+//...Would calling directory for matches and then deleting it automatically delete the innards?
+//
+//VS
+//API_Request(summary_matchList.json)
+
+//    public API_Request(String player) throws IOException {  this(player, 5);    }
+//    public API_Request(File file) {
+//
+//      //check if file exists.
+//          --> If the file does exist, try to execute it.
+//          --> If the file does NOT exist, error message? Create it?
+//
+//    }
+
+//    public API_Request(File file) {
+//
+//      //check if file exists.
+//          --> If the file does exist, try to execute it.
+//          --> If the file does NOT exist, error message? Create it?
+//
+//    }

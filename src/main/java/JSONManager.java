@@ -20,7 +20,7 @@ public class JSONManager {
             String type_T = jsonObject.getString("_T");
 
             if (type_T.equalsIgnoreCase(object_type)) {
-                System.out.println(object_type);
+                //System.out.println(object_type);
                 return jsonObject;
             }
         }
