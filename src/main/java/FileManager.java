@@ -78,13 +78,18 @@ public class FileManager {
         }
     }
 
-    //Writes the given text both to the requestHistory file and to console.
+    //Writes the given text both to the requestHistory file and to console. Both outputs conclude with a new line.
     public static void writeToFileAndConsole(String text) throws IOException {
         System.out.println(text);
         FileUtils.writeStringToFile(Main.requestHistory, text + "\n", (Charset) null, true);
         //Note: ln, \n are affecting printout for (1)
         //Would "text + \n" work? (Rather than "\n + text")
     }
+
+    /*
+     * Writes the given text to the file Main.requestHistory. Also writes the text to console.
+     * If newLineAfter = true, the output concludes with a new line. Otherwise, the line will continue upon next output.
+     */
     public static void writeToFileAndConsole(String text, boolean newLineAfter) throws IOException {
         System.out.print(text);
         FileUtils.writeStringToFile(Main.requestHistory, text, (Charset) null, true);

@@ -6,7 +6,10 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.Vector;
 
-//TO-DO:  REVISIT (CHANGE IN FORMAT SEEMS TO BE MESSING THINGS UP)
+/*
+ * The BotCounts class counts the number of non-player-characters in a match ("bots")
+ * and the number of player characters ("players").
+ */
 public class BotCounts {
 
     /*

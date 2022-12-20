@@ -84,7 +84,7 @@ public class Main {
     //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
     //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
     //WON'T: include requestScopes (as of 11/18)
-    public static void main() throws IOException {
+    public static void main(String[] args) throws IOException {
         //Do basic setup
         mapsPlayed.clear(); //clear at the beginning
         initiateFunctionalities();

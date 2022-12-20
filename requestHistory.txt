@@ -14824,3 +14824,24 @@ File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
 #bots:       65 / 97
 #players:        32
 	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=4_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+
+-player:CoorsLatte, rank: 1, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.16.16.13b62b91-55ff-41cb-8daf-5a2fc166ce51
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+
+-player:CoorsLatte, rank: 33, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.01.6e96c200-8b55-479e-811a-1874d52e0e77
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+
+-player:CoorsLatte, rank: 24, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.e8006669-3e80-4875-8bdb-c6daac8bbaa9
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+
+-player:CoorsLatte, rank: 12, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.ef562314-ace4-4c7d-a8ef-0687a8fc6155
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+-player:CoorsLatte, rank: 6, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.00.2bb36edb-bd00-4d96-9673-e2d91a855a32
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
