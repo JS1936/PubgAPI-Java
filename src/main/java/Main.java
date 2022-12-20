@@ -37,9 +37,21 @@ public class Main {
         //System.out.println("requestHistory is stored at " + requestHistory.getAbsolutePath());
     }
 
+
     //Note: example.txt is showing up as a folder, but should appear as .txt
     //Note: example is not yet included (filled in)
     //Note: follows same process as setupRequestHistory()
+
+    //private static void setupRequestHistory()
+    //{
+    //    setupFolderGivenPathname("requestHistory.txt");
+    //}
+    //private static void setupPresetsFolder()
+    //{
+    //    setupFolderGivenPathname("presetsDir/example.txt");
+    //}
+
+
     private static void setupPresetsFolder()
     {
         File presets = new File("presetsDir/example.txt");//FileManager.getFile("presetsDir/example.txt");
@@ -52,6 +64,18 @@ public class Main {
         //System.out.println("presetsDir/example is stored at " + presets.getAbsolutePath());
     }
 
+    /*
+    private static void setupFolderGivenPathname(String pathname) {
+        File newFolder = new File(pathname);
+        if (!newFolder.exists())
+        {
+            newFolder.mkdirs();
+            newFolder.getParentFile().mkdirs();
+            System.out.println(pathname + " does not yet exist. Creating it now.");
+        }
+    }
+     */
+
 
     private static void checkIfUsingPreset()
     {
@@ -60,7 +84,7 @@ public class Main {
     //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
     //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
     //WON'T: include requestScopes (as of 11/18)
-    public static void main(String[] args) throws IOException {
+    public static void main() throws IOException {
         //Do basic setup
         mapsPlayed.clear(); //clear at the beginning
         initiateFunctionalities();

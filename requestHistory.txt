@@ -13211,3 +13211,1616 @@ REQUEST = 6
 mapsPlayed.size() : 5
 Frequencies of each map played: 
 DihorOtok_Main x5
+
+request=1_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 1 1 0 0 0 0 
+0 0 0 0 0 0 1 0 2 0 
+0 0 0 1 0 0 4 4 0 0 
+0 0 0 0 0 1 1 2 1 2 
+0 1 0 0 2 1 0 0 0 0 
+0 1 2 1 0 0 0 1 0 0 
+0 0 0 0 2 0 0 0 0 0 
+2 0 0 1 0 0 1 0 0 1 
+0 1 1 0 1 1 6 6 1 0 
+
+Kill Frequencies:
+68 got 0 kills.
+21 got 1 kills.
+7 got 2 kills.
+0 got 3 kills.
+2 got 4 kills.
+0 got 5 kills.
+2 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 17 of 100
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 2 0 
+0 0 2 0 0 0 0 1 2 0 
+0 1 0 0 0 1 3 2 0 0 
+1 0 0 0 0 4 0 1 0 0 
+0 1 1 2 0 0 1 0 1 1 
+0 3 1 1 1 0 0 0 2 0 
+0 2 2 4 0 2 2 0 1 1 
+3 5 1 0 0 0 0 0 0 1 
+5 0 0 3 6 4 0 1 4 1 
+3 0 3 1 0 1 3 7 3 
+
+Kill Frequencies:
+61 got 0 kills.
+22 got 1 kills.
+10 got 2 kills.
+8 got 3 kills.
+4 got 4 kills.
+2 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 109
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 1 
+1 0 1 1 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 
+1 1 3 1 0 0 1 1 2 0 
+2 0 0 0 0 1 1 0 0 0 
+2 0 0 0 0 0 0 1 2 0 
+1 0 0 0 0 0 3 0 2 0 
+0 0 2 1 2 0 4 0 1 0 
+1 6 1 2 0 1 0 0 0 0 
+0 0 1 0 0 0 0 2 4 6 
+1 1 1 3 0 2 0 6 2 0 
+4 2 3 1 2 0 2 5 4 5 
+0 7 4 5 
+
+Kill Frequencies:
+70 got 0 kills.
+24 got 1 kills.
+14 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+3 got 5 kills.
+3 got 6 kills.
+1 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 34 of 124
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 1 0 0 0 0 0 
+0 0 1 0 0 0 0 0 0 0 
+1 0 0 0 1 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 0 2 0 0 0 1 0 2 0 
+2 5 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 
+0 0 1 1 3 1 0 0 1 0 
+1 0 2 1 1 0 0 1 0 5 
+0 2 1 2 1 0 0 1 4 0 
+2 5 2 2 0 0 3 0 2 0 
+5 2 4 1 1 2 1 1 3 8 
+0 1 1 1 0 3 3 5 3 5 
+
+Kill Frequencies:
+77 got 0 kills.
+26 got 1 kills.
+12 got 2 kills.
+6 got 3 kills.
+2 got 4 kills.
+6 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 22 of 130
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 2 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 1 0 0 0 1 1 0 0 1 
+0 1 2 2 0 0 0 0 1 0 
+4 0 0 0 2 0 2 1 0 1 
+0 6 0 0 0 4 7 1 1 1 
+0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 1 3 5 1 2 2 
+2 0 1 4 4 8 3 
+
+Kill Frequencies:
+63 got 0 kills.
+16 got 1 kills.
+8 got 2 kills.
+2 got 3 kills.
+4 got 4 kills.
+1 got 5 kills.
+1 got 6 kills.
+1 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 27 of 97
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=0_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+#bots:       89 / 100
+#players:        11
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+#bots:       1 / 98
+#players:        97
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+#bots:       7 / 98
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+#bots:       7 / 100
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+#bots:       65 / 97
+#players:        32
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=5_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+
+0 KILLS: 
+	Leu_kii
+	Sky__Style_ya
+	kifonh
+	Sup_er-Ye-
+	goo_dplayer76
+	kbwgi_rl00
+	PFpizzamaq
+	Jessi_cagao
+	wun2drd
+	HOJ_OONGY
+	Jewca_ster
+	jet063
+	lvA_mber
+	JK123_UU
+	Sropher480
+	JK__xiuke
+	IFearLe_ssI
+	InfinityD_NF
+	Pugalgal_77_25
+	Vashshdixhr
+	niK_namme
+	Kha_lilZoo
+	Jenkz_zz
+	LUOZEYU_33
+	Hastel204
+	Jeong_Jaok
+	qiannian656
+	Pan_Ruchao
+	iriday96
+	NikkiFath_er
+	jhx_bbb123
+	KernorLan_ce
+	tatum_iii1230
+	H-ASDFG_HJKL
+	Jensbmx_2_02
+	HIN_aCl
+	QeroRavyq
+	H_JGOGI
+	JHyipilan_g
+	Leung_YuenSan
+	ho411_4
+	Lol_lypopz
+	ItsaG_ouda
+	Gones_M_emory
+	LvH_AnG1
+	hot00_00
+	TuD_oYan
+	wOAOu
+	Ker_shik
+	Ush_tari
+	rnlyboy215
+	GrCocr
+	jesse_cold
+	VG-007xuxia_o
+	fjh2331762810
+	KingsFo_rever
+	JJu_mNatic
+	JUL_3NZO
+	OUODA04
+	Ku_Ma_rk
+	buanying941018
+	Riing22
+	yezicitiz
+	Lig_htofpeace
+	IRo_ugeI
+	Itz_FumPi
+	tuanz_hang6664
+
+---------------
+
+1 KILLS: 
+	JacuzziCaca
+	oanglangKO4
+	NINGSTONH
+	tgdtgdj_gh789
+	wendows
+	ZZW_like
+	isuga_me
+	tud_ou1199
+	PountainBoy810
+	houlong_5555
+	Vynyster3
+	Tank_sn_ake
+	JYM_97
+	vpidigonzalez19
+	Ko0_paStar
+	WGRA3
+	IF__John-HS
+	Just5o5_o
+	KO-bo_ys
+
+---------------
+
+2 KILLS: 
+	LeGio_n23
+	teddy_jjang
+	VASKinj
+	Jax_M_aves
+	Ing_ves
+	LrritatedWalruv
+	idrum_7
+
+---------------
+
+4 KILLS: 
+	No_Rice21
+	BuuD-
+
+---------------
+
+11 KILLS: 
+	OkraFried
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+
+0 KILLS: 
+	BlixkyApe
+	Vortex079
+	NeXuS
+	surviving_martyr
+	Tasuperman
+	BoBoDash
+	TheStrategist1
+	SexyBakedPotato
+	GOLDBUDDA
+	Rotom_
+	AnSolius
+	sevesseves
+	mp3s
+	Detenal
+	Cookiesndmilk
+	ButterBall420
+	poop_on_my_chest
+	iLzy_-
+	TranquilEnvy
+	RushRM
+	UmpDA_DADADA
+	buckeyeluke
+	dramon93
+	Xprinkler
+	shalamanaya
+	O-Lava
+	sevesseves
+	Phrostii
+	UncreativeIdea
+	casper980
+	Insane_C4_Biker
+	FlaminSharkChito
+	JueCatcher
+	buckeyeluke
+	IrradiatedBear
+	EroticExpulsion
+	BlixkyApe
+	TheVigiLante760
+	mshy_
+	G4NSKI
+	klmraiden
+	Hoodifyyy
+	Ronin_R1356
+	DiegoPeIba
+	TOXANDROIDMX
+	buckeyeluke
+	uzyciem
+	Shinbasu
+	Blind_Monkey
+	SoNotTyler
+	xXxCellARatOr
+	forgemaster
+	Bleech_Boi
+	Rev_Panik
+	Thunder__
+	Myrovh
+	RoostRider
+	knabelism
+	AxoBullet-TTV
+	The_Super_Deuce
+	Arg5
+
+---------------
+
+1 KILLS: 
+	Da-Badger
+	Sposhh
+	Richard_Marx
+	HaeBlinkin
+	Pogmothan
+	STARZAP
+	sevesseves
+	HaeBlinkin
+	miguel_pirate
+	Meecs
+	Malfuryion
+	RaiD_Night
+	PicklesWasTakenn
+	GlutenFreeBread
+	Vortex079
+	kuhalko
+	rdharste
+	StraightUpChill
+	suckmyplums
+	Outer_Space_Ape
+	Slider_954
+	Terrin_Adams
+
+---------------
+
+2 KILLS: 
+	doc_villa
+	Teegrey
+	kittiesyay
+	Potato_Sybil
+	casper980
+	HaeBlinkin
+	Tavion
+	MoistDinosaur
+	FFL_Ruachibi
+	austiN_G
+
+---------------
+
+3 KILLS: 
+	CoorsLatte
+	Zuckles
+	TwitchTerry
+	SweetCaribou
+	The_Big_Deuce
+	Mr-Pickles-
+	angryPanado
+
+---------------
+
+4 KILLS: 
+	CoorsLatte
+	JustLikeDSouls
+	LindsayLohan
+	KingOfCrypto
+
+---------------
+
+5 KILLS: 
+	Stevegamer
+	ParkerPPKyoutube
+
+---------------
+
+6 KILLS: 
+	i5las
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+
+0 KILLS: 
+	Grunntt
+	ATownDowner
+	Idu-RB
+	Mast3rT0ny
+	Sp33dman
+	UNDE3AD4EV3R
+	Monstereo
+	TheDeplorable
+	ARCHREAP3R
+	Theassking
+	Mikoto_akana
+	McJuniorWhopper
+	saucehole
+	Hoagie805
+	llacert
+	TurkIsAwesome
+	DarkDude
+	some_bum
+	McJuniorWhopper
+	Grunntt
+	Shnose
+	Herb0021
+	llacert
+	SalsaGuacamole
+	WeinerRomancer
+	UNDE3AD4EV3R
+	Sandy24
+	Jamal317
+	leblond666
+	Jadesama
+	XXLYeYe
+	lcewind2148
+	Ronaweyslave
+	BirdsTheWord
+	SE_uDEAD
+	Shnose
+	UNDE3AD4EV3R
+	tud_ou1199
+	SwaeJayy
+	hld_100
+	Grunntt
+	TakeTooD2
+	Ronaweyslave
+	SE_uDEAD
+	Fleeaa
+	UNDE3AD4EV3R
+	Sandy24
+	Shnose
+	shortenedFUSE
+	Jamal317
+	FireSetter
+	ARCHREAP3R
+	I_AM_JUSTIN
+	luckychar
+	xcom1
+	Im-0u_there
+	HDeathm_anH
+	umoo0_2
+	Lurkingoon
+	Fido0253
+	KDD37
+	pH-Skwurly
+	space_monk3y
+	QuOkZee
+	BkMSHOCK
+	VN1_Peach102
+	Beefybuddy
+	QueensBound
+	ESPN-Changelings
+	cornhusker_
+
+---------------
+
+1 KILLS: 
+	DonAce4
+	ventrezzz
+	DenzelWshngtn
+	Spinnerzz
+	DarkDude
+	CHIM-RICHALDS
+	SativanDaniK
+	LebronsRabbi
+	dudebrochillin
+	Pogmothan
+	Aeromotor1
+	apezaddiction
+	OSE4F_XoaiiOppa
+	dn1al
+	Ninjamigs1
+	AD78
+	SalsaGuacamole
+	McJuniorWhopper
+	ButtonPusher86tv
+	SwollenSac
+	Herb0021
+	pH-Skezix
+	ThEmEcHaNiC69
+	romestar
+
+---------------
+
+2 KILLS: 
+	CoorsLatte
+	WaliStructorTTV
+	ROYZz-
+	H___ovErwaTcH
+	KhungLongDiLac
+	OSE4F_XoaiiOppa
+	Mast3rT0ny
+	saucehole
+	BentUpFork
+	Hell-Storm
+	NextLvLCash
+	ChubbyCheek_
+	JackRipBurn
+	GreatBombino
+
+---------------
+
+3 KILLS: 
+	Noobers_TTV
+	Zizitop-
+	OMC_DangPheThuoc
+	HippywithGun
+
+---------------
+
+4 KILLS: 
+	TheWILLMORIN
+	Larzak
+	crezzd
+	H3nr1_1
+
+---------------
+
+5 KILLS: 
+	Grunntt
+	MlST1
+
+---------------
+
+6 KILLS: 
+	theH3
+	ROYZz-
+	pH-JaeGer
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+
+0 KILLS: 
+	Pogmothan
+	CharlesLazerhawk
+	utuw
+	EurekaV3
+	DarknessNF
+	CoorsLatte
+	CrimsonPurgatory
+	Runii
+	TheShambleR
+	InjusticeMachine
+	Blackest20
+	McJudd
+	VarioDanis
+	ElViejoKRAKEN
+	LikeNineCows
+	ttv_Th3HighElf
+	Leaf____
+	SecretRevealer
+	EwokyBalboa
+	DarknessNF
+	Oyeh1337
+	Alien-Being
+	Sinonymes
+	Stebe120
+	7ayne
+	CharlesLazerhawk
+	InjusticeMachine
+	Osaskoh
+	Runii
+	utuw
+	Jeong_Jaok
+	Twitch-Tunl
+	NateDawg9
+	attilthecucked
+	pupuhao_shuai
+	PJB_ok
+	21__gh0st-------
+	SANGUINARIO7U7
+	Olympian205
+	X135BuZZard
+	CoorsLatte
+	I1rstB1o0g
+	Osaskoh
+	Nfknblvbl
+	LebronsRabbi
+	Ush_tari
+	TAN_LUNK
+	INITIALLI_NG
+	CharlesLazerhawk
+	ElViejoKRAKEN
+	STEELHEADSLAYER
+	SecretRevealer
+	LikeNineCows
+	GabeRed09
+	BigScarySeaBug
+	CoorsLatte
+	ScottyMcScotty
+	LikeNineCows
+	GabeRed09
+	CoorsLatte
+	Nfknblvbl
+	FREE-PURO
+	WeinerRomancer
+	OldGregg6969
+	Osaskoh
+	MrFineHowAreYou
+	DongkeyNuts
+	Hunts-
+	AKjijiOEH
+	Pickles_Chuck
+	CharlesLazerhawk
+	Screamsavor
+	CBWilden
+	247CzrWarrior
+	xXBlardXx
+	kreeture
+	CraigTruman
+
+---------------
+
+1 KILLS: 
+	dudebrochillin
+	Predator9705
+	CHIM-RICHALDS
+	Juha_
+	Nights_Blood
+	packsondragon
+	SquirtyMudfart
+	VahalaBound
+	Noobers_TTV
+	PsychoCabbage
+	TheBenjibootyTV
+	dan4skin
+	BigScarySeaBug
+	Birdkee
+	Shakenbake177
+	zeeker_
+	LebronsRabbi
+	hittingsheets
+	Darkflaw
+	SecretRevealer
+	GoopedUp
+	CoochieFlap
+	Rental_Metard
+	vxBad_Wolfxv
+	Big_Doyle
+	Hill_Be_Back
+
+---------------
+
+2 KILLS: 
+	Flashbang_urgirl
+	DarthDonnie
+	Eikko
+	vxBad_Wolfvx
+	dudebrochillin
+	DarknessNF
+	STEELHEADSLAYER
+	llacert
+	Pogmothan
+	Hizmend
+	skap444
+	J_Burrz
+
+---------------
+
+3 KILLS: 
+	RJSimz
+	EurekaV3
+	MeatWhistle007
+	hakasedannya
+	VarioDanis
+	ElViejoKRAKEN
+
+---------------
+
+4 KILLS: 
+	Kemerp
+	EwokyBalboa
+
+---------------
+
+5 KILLS: 
+	Gavaza
+	Eikko
+	chainzaws
+	Hades_Doorman
+	OdeToSpot
+
+---------------
+
+8 KILLS: 
+	yoitsjimmy_
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+0 KILLS: 
+	Ush_tari
+	jea_won0710
+	dylanator
+	theskweeg
+	Simple_Man
+	Twang13
+	INTOFLA_ME
+	jyjy0_401
+	A___handsom_eBOY
+	LiGhTze_ra_
+	Jos_huaOhneEd
+	cebazhaxi05
+	Iss_rhat
+	JBS_Temer
+	Mokernocrb
+	JohnnyRotten_
+	houlong_5555
+	kuu_uno
+	ItsaG_ouda
+	PRPIGPIGPIJ
+	Idol_MyBo_ys
+	Kurricanesherr
+	umi_naion
+	hambo_go
+	mia_oa__
+	JDQS0_77
+	JimmY_H_S
+	Caratan32
+	Hik_ki777
+	Pasochisp
+	eaibiandaly
+	jediddw_231
+	Khaba_r
+	Mch_tYlmz
+	krusty__krab3
+	ITFireF_ly
+	LGpri_nter
+	Ku_Ma_rk
+	NaiSeRTah
+	huliain_i1
+	LGY-vio_lin
+	hunie_yo
+	ILu_vPotato
+	sengjiangtizl
+	DS2783914135
+	5CENTEROUNIES
+	PKT_Boy
+	Jayvee1_12
+	VG-007xuxia_o
+	PYdalar
+	LrritatedWalruv
+	ETDS-BeerHunter
+	Wojo-jojo
+	Per_inoza
+	Jewca_ster
+	prisstt
+	JBKGT_VUJTF
+	kbwgi_rl00
+	Lbangyuo
+	penggod_888
+	Ker_shik
+	InfinityD_NF
+	Nyggle
+
+---------------
+
+1 KILLS: 
+	Jman644_4
+	Tatchia_z
+	OAWllL5
+	JonasAv_elar
+	inraputre_s
+	Just5o5_o
+	Tcy81_04
+	Vet_re
+	BurntCharcoal
+	bay_k95
+	XxFasterMasonxX
+	Jeongye_on38
+	savao2
+	oesfeuilles184
+	SmAk_8
+	Yonder_
+
+---------------
+
+2 KILLS: 
+	Berrys7
+	shalamanaya
+	Teegrey
+	Pershmi_ne
+	KOF19_84
+	Zetu
+	sevesseves
+	mshy_
+
+---------------
+
+3 KILLS: 
+	CoorsLatte
+
+---------------
+
+4 KILLS: 
+	Batlship
+	buulats
+	METZ13R
+	TwoLiterLuke
+
+---------------
+
+5 KILLS: 
+	Pogmothan
+
+---------------
+
+6 KILLS: 
+	Zapp92
+
+---------------
+
+7 KILLS: 
+	KcazKA
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=5_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+
+0 KILLS: 
+	Leu_kii
+	Sky__Style_ya
+	kifonh
+	Sup_er-Ye-
+	goo_dplayer76
+	kbwgi_rl00
+	PFpizzamaq
+	Jessi_cagao
+	wun2drd
+	HOJ_OONGY
+	Jewca_ster
+	jet063
+	lvA_mber
+	JK123_UU
+	Sropher480
+	JK__xiuke
+	IFearLe_ssI
+	InfinityD_NF
+	Pugalgal_77_25
+	Vashshdixhr
+	niK_namme
+	Kha_lilZoo
+	Jenkz_zz
+	LUOZEYU_33
+	Hastel204
+	Jeong_Jaok
+	qiannian656
+	Pan_Ruchao
+	iriday96
+	NikkiFath_er
+	jhx_bbb123
+	KernorLan_ce
+	tatum_iii1230
+	H-ASDFG_HJKL
+	Jensbmx_2_02
+	HIN_aCl
+	QeroRavyq
+	H_JGOGI
+	JHyipilan_g
+	Leung_YuenSan
+	ho411_4
+	Lol_lypopz
+	ItsaG_ouda
+	Gones_M_emory
+	LvH_AnG1
+	hot00_00
+	TuD_oYan
+	wOAOu
+	Ker_shik
+	Ush_tari
+	rnlyboy215
+	GrCocr
+	jesse_cold
+	VG-007xuxia_o
+	fjh2331762810
+	KingsFo_rever
+	JJu_mNatic
+	JUL_3NZO
+	OUODA04
+	Ku_Ma_rk
+	buanying941018
+	Riing22
+	yezicitiz
+	Lig_htofpeace
+	IRo_ugeI
+	Itz_FumPi
+	tuanz_hang6664
+
+---------------
+
+1 KILLS: 
+	JacuzziCaca
+	oanglangKO4
+	NINGSTONH
+	tgdtgdj_gh789
+	wendows
+	ZZW_like
+	isuga_me
+	tud_ou1199
+	PountainBoy810
+	houlong_5555
+	Vynyster3
+	Tank_sn_ake
+	JYM_97
+	vpidigonzalez19
+	Ko0_paStar
+	WGRA3
+	IF__John-HS
+	Just5o5_o
+	KO-bo_ys
+
+---------------
+
+2 KILLS: 
+	LeGio_n23
+	teddy_jjang
+	VASKinj
+	Jax_M_aves
+	Ing_ves
+	LrritatedWalruv
+	idrum_7
+
+---------------
+
+4 KILLS: 
+	No_Rice21
+	BuuD-
+
+---------------
+
+11 KILLS: 
+	OkraFried
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+
+0 KILLS: 
+	BlixkyApe
+	Vortex079
+	NeXuS
+	surviving_martyr
+	Tasuperman
+	BoBoDash
+	TheStrategist1
+	SexyBakedPotato
+	GOLDBUDDA
+	Rotom_
+	AnSolius
+	sevesseves
+	mp3s
+	Detenal
+	Cookiesndmilk
+	ButterBall420
+	poop_on_my_chest
+	iLzy_-
+	TranquilEnvy
+	RushRM
+	UmpDA_DADADA
+	buckeyeluke
+	dramon93
+	Xprinkler
+	shalamanaya
+	O-Lava
+	sevesseves
+	Phrostii
+	UncreativeIdea
+	casper980
+	Insane_C4_Biker
+	FlaminSharkChito
+	JueCatcher
+	buckeyeluke
+	IrradiatedBear
+	EroticExpulsion
+	BlixkyApe
+	TheVigiLante760
+	mshy_
+	G4NSKI
+	klmraiden
+	Hoodifyyy
+	Ronin_R1356
+	DiegoPeIba
+	TOXANDROIDMX
+	buckeyeluke
+	uzyciem
+	Shinbasu
+	Blind_Monkey
+	SoNotTyler
+	xXxCellARatOr
+	forgemaster
+	Bleech_Boi
+	Rev_Panik
+	Thunder__
+	Myrovh
+	RoostRider
+	knabelism
+	AxoBullet-TTV
+	The_Super_Deuce
+	Arg5
+
+---------------
+
+1 KILLS: 
+	Da-Badger
+	Sposhh
+	Richard_Marx
+	HaeBlinkin
+	Pogmothan
+	STARZAP
+	sevesseves
+	HaeBlinkin
+	miguel_pirate
+	Meecs
+	Malfuryion
+	RaiD_Night
+	PicklesWasTakenn
+	GlutenFreeBread
+	Vortex079
+	kuhalko
+	rdharste
+	StraightUpChill
+	suckmyplums
+	Outer_Space_Ape
+	Slider_954
+	Terrin_Adams
+
+---------------
+
+2 KILLS: 
+	doc_villa
+	Teegrey
+	kittiesyay
+	Potato_Sybil
+	casper980
+	HaeBlinkin
+	Tavion
+	MoistDinosaur
+	FFL_Ruachibi
+	austiN_G
+
+---------------
+
+3 KILLS: 
+	CoorsLatte
+	Zuckles
+	TwitchTerry
+	SweetCaribou
+	The_Big_Deuce
+	Mr-Pickles-
+	angryPanado
+
+---------------
+
+4 KILLS: 
+	CoorsLatte
+	JustLikeDSouls
+	LindsayLohan
+	KingOfCrypto
+
+---------------
+
+5 KILLS: 
+	Stevegamer
+	ParkerPPKyoutube
+
+---------------
+
+6 KILLS: 
+	i5las
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+
+0 KILLS: 
+	Grunntt
+	ATownDowner
+	Idu-RB
+	Mast3rT0ny
+	Sp33dman
+	UNDE3AD4EV3R
+	Monstereo
+	TheDeplorable
+	ARCHREAP3R
+	Theassking
+	Mikoto_akana
+	McJuniorWhopper
+	saucehole
+	Hoagie805
+	llacert
+	TurkIsAwesome
+	DarkDude
+	some_bum
+	McJuniorWhopper
+	Grunntt
+	Shnose
+	Herb0021
+	llacert
+	SalsaGuacamole
+	WeinerRomancer
+	UNDE3AD4EV3R
+	Sandy24
+	Jamal317
+	leblond666
+	Jadesama
+	XXLYeYe
+	lcewind2148
+	Ronaweyslave
+	BirdsTheWord
+	SE_uDEAD
+	Shnose
+	UNDE3AD4EV3R
+	tud_ou1199
+	SwaeJayy
+	hld_100
+	Grunntt
+	TakeTooD2
+	Ronaweyslave
+	SE_uDEAD
+	Fleeaa
+	UNDE3AD4EV3R
+	Sandy24
+	Shnose
+	shortenedFUSE
+	Jamal317
+	FireSetter
+	ARCHREAP3R
+	I_AM_JUSTIN
+	luckychar
+	xcom1
+	Im-0u_there
+	HDeathm_anH
+	umoo0_2
+	Lurkingoon
+	Fido0253
+	KDD37
+	pH-Skwurly
+	space_monk3y
+	QuOkZee
+	BkMSHOCK
+	VN1_Peach102
+	Beefybuddy
+	QueensBound
+	ESPN-Changelings
+	cornhusker_
+
+---------------
+
+1 KILLS: 
+	DonAce4
+	ventrezzz
+	DenzelWshngtn
+	Spinnerzz
+	DarkDude
+	CHIM-RICHALDS
+	SativanDaniK
+	LebronsRabbi
+	dudebrochillin
+	Pogmothan
+	Aeromotor1
+	apezaddiction
+	OSE4F_XoaiiOppa
+	dn1al
+	Ninjamigs1
+	AD78
+	SalsaGuacamole
+	McJuniorWhopper
+	ButtonPusher86tv
+	SwollenSac
+	Herb0021
+	pH-Skezix
+	ThEmEcHaNiC69
+	romestar
+
+---------------
+
+2 KILLS: 
+	CoorsLatte
+	WaliStructorTTV
+	ROYZz-
+	H___ovErwaTcH
+	KhungLongDiLac
+	OSE4F_XoaiiOppa
+	Mast3rT0ny
+	saucehole
+	BentUpFork
+	Hell-Storm
+	NextLvLCash
+	ChubbyCheek_
+	JackRipBurn
+	GreatBombino
+
+---------------
+
+3 KILLS: 
+	Noobers_TTV
+	Zizitop-
+	OMC_DangPheThuoc
+	HippywithGun
+
+---------------
+
+4 KILLS: 
+	TheWILLMORIN
+	Larzak
+	crezzd
+	H3nr1_1
+
+---------------
+
+5 KILLS: 
+	Grunntt
+	MlST1
+
+---------------
+
+6 KILLS: 
+	theH3
+	ROYZz-
+	pH-JaeGer
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+
+0 KILLS: 
+	Pogmothan
+	CharlesLazerhawk
+	utuw
+	EurekaV3
+	DarknessNF
+	CoorsLatte
+	CrimsonPurgatory
+	Runii
+	TheShambleR
+	InjusticeMachine
+	Blackest20
+	McJudd
+	VarioDanis
+	ElViejoKRAKEN
+	LikeNineCows
+	ttv_Th3HighElf
+	Leaf____
+	SecretRevealer
+	EwokyBalboa
+	DarknessNF
+	Oyeh1337
+	Alien-Being
+	Sinonymes
+	Stebe120
+	7ayne
+	CharlesLazerhawk
+	InjusticeMachine
+	Osaskoh
+	Runii
+	utuw
+	Jeong_Jaok
+	Twitch-Tunl
+	NateDawg9
+	attilthecucked
+	pupuhao_shuai
+	PJB_ok
+	21__gh0st-------
+	SANGUINARIO7U7
+	Olympian205
+	X135BuZZard
+	CoorsLatte
+	I1rstB1o0g
+	Osaskoh
+	Nfknblvbl
+	LebronsRabbi
+	Ush_tari
+	TAN_LUNK
+	INITIALLI_NG
+	CharlesLazerhawk
+	ElViejoKRAKEN
+	STEELHEADSLAYER
+	SecretRevealer
+	LikeNineCows
+	GabeRed09
+	BigScarySeaBug
+	CoorsLatte
+	ScottyMcScotty
+	LikeNineCows
+	GabeRed09
+	CoorsLatte
+	Nfknblvbl
+	FREE-PURO
+	WeinerRomancer
+	OldGregg6969
+	Osaskoh
+	MrFineHowAreYou
+	DongkeyNuts
+	Hunts-
+	AKjijiOEH
+	Pickles_Chuck
+	CharlesLazerhawk
+	Screamsavor
+	CBWilden
+	247CzrWarrior
+	xXBlardXx
+	kreeture
+	CraigTruman
+
+---------------
+
+1 KILLS: 
+	dudebrochillin
+	Predator9705
+	CHIM-RICHALDS
+	Juha_
+	Nights_Blood
+	packsondragon
+	SquirtyMudfart
+	VahalaBound
+	Noobers_TTV
+	PsychoCabbage
+	TheBenjibootyTV
+	dan4skin
+	BigScarySeaBug
+	Birdkee
+	Shakenbake177
+	zeeker_
+	LebronsRabbi
+	hittingsheets
+	Darkflaw
+	SecretRevealer
+	GoopedUp
+	CoochieFlap
+	Rental_Metard
+	vxBad_Wolfxv
+	Big_Doyle
+	Hill_Be_Back
+
+---------------
+
+2 KILLS: 
+	Flashbang_urgirl
+	DarthDonnie
+	Eikko
+	vxBad_Wolfvx
+	dudebrochillin
+	DarknessNF
+	STEELHEADSLAYER
+	llacert
+	Pogmothan
+	Hizmend
+	skap444
+	J_Burrz
+
+---------------
+
+3 KILLS: 
+	RJSimz
+	EurekaV3
+	MeatWhistle007
+	hakasedannya
+	VarioDanis
+	ElViejoKRAKEN
+
+---------------
+
+4 KILLS: 
+	Kemerp
+	EwokyBalboa
+
+---------------
+
+5 KILLS: 
+	Gavaza
+	Eikko
+	chainzaws
+	Hades_Doorman
+	OdeToSpot
+
+---------------
+
+8 KILLS: 
+	yoitsjimmy_
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+0 KILLS: 
+	Ush_tari
+	jea_won0710
+	dylanator
+	theskweeg
+	Simple_Man
+	Twang13
+	INTOFLA_ME
+	jyjy0_401
+	A___handsom_eBOY
+	LiGhTze_ra_
+	Jos_huaOhneEd
+	cebazhaxi05
+	Iss_rhat
+	JBS_Temer
+	Mokernocrb
+	JohnnyRotten_
+	houlong_5555
+	kuu_uno
+	ItsaG_ouda
+	PRPIGPIGPIJ
+	Idol_MyBo_ys
+	Kurricanesherr
+	umi_naion
+	hambo_go
+	mia_oa__
+	JDQS0_77
+	JimmY_H_S
+	Caratan32
+	Hik_ki777
+	Pasochisp
+	eaibiandaly
+	jediddw_231
+	Khaba_r
+	Mch_tYlmz
+	krusty__krab3
+	ITFireF_ly
+	LGpri_nter
+	Ku_Ma_rk
+	NaiSeRTah
+	huliain_i1
+	LGY-vio_lin
+	hunie_yo
+	ILu_vPotato
+	sengjiangtizl
+	DS2783914135
+	5CENTEROUNIES
+	PKT_Boy
+	Jayvee1_12
+	VG-007xuxia_o
+	PYdalar
+	LrritatedWalruv
+	ETDS-BeerHunter
+	Wojo-jojo
+	Per_inoza
+	Jewca_ster
+	prisstt
+	JBKGT_VUJTF
+	kbwgi_rl00
+	Lbangyuo
+	penggod_888
+	Ker_shik
+	InfinityD_NF
+	Nyggle
+
+---------------
+
+1 KILLS: 
+	Jman644_4
+	Tatchia_z
+	OAWllL5
+	JonasAv_elar
+	inraputre_s
+	Just5o5_o
+	Tcy81_04
+	Vet_re
+	BurntCharcoal
+	bay_k95
+	XxFasterMasonxX
+	Jeongye_on38
+	savao2
+	oesfeuilles184
+	SmAk_8
+	Yonder_
+
+---------------
+
+2 KILLS: 
+	Berrys7
+	shalamanaya
+	Teegrey
+	Pershmi_ne
+	KOF19_84
+	Zetu
+	sevesseves
+	mshy_
+
+---------------
+
+3 KILLS: 
+	CoorsLatte
+
+---------------
+
+4 KILLS: 
+	Batlship
+	buulats
+	METZ13R
+	TwoLiterLuke
+
+---------------
+
+5 KILLS: 
+	Pogmothan
+
+---------------
+
+6 KILLS: 
+	Zapp92
+
+---------------
+
+7 KILLS: 
+	KcazKA
+
+---------------
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=4_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+
+-player:CoorsLatte, rank: 1, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.16.16.13b62b91-55ff-41cb-8daf-5a2fc166ce51	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+
+-player:CoorsLatte, rank: 33, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.01.6e96c200-8b55-479e-811a-1874d52e0e77	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+
+-player:CoorsLatte, rank: 24, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.e8006669-3e80-4875-8bdb-c6daac8bbaa9	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+
+-player:CoorsLatte, rank: 12, match: match.bro.seasonal.pc-2018-21.steam.squad-fpp.na.2022.12.15.01.ef562314-ace4-4c7d-a8ef-0687a8fc6155	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+-player:CoorsLatte, rank: 6, match: match.bro.seasonal.pc-2018-21.steam.duo-fpp.na.2022.12.15.00.2bb36edb-bd00-4d96-9673-e2d91a855a32	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=0_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+#bots:       89 / 100
+#players:        11
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+#bots:       1 / 98
+#players:        97
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+#bots:       7 / 98
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+#bots:       7 / 100
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+#bots:       65 / 97
+#players:        32
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+
+request=0_File name is: telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+#bots:       89 / 100
+#players:        11
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_13b62b91-55ff-41cb-8daf-5a2fc166ce51
+File name is: telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+#bots:       1 / 98
+#players:        97
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_6e96c200-8b55-479e-811a-1874d52e0e77
+File name is: telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+#bots:       7 / 98
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_e8006669-3e80-4875-8bdb-c6daac8bbaa9
+File name is: telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+#bots:       7 / 100
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_ef562314-ace4-4c7d-a8ef-0687a8fc6155
+File name is: telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32
+#bots:       65 / 97
+#players:        32
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1671342490462/matches/telemetry-for-match_id_2bb36edb-bd00-4d96-9673-e2d91a855a32

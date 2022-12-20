@@ -31,21 +31,14 @@ public class API_Request extends API {
 
 
     //If no limit is specified on the number of matches to look at, then the default is 5.
-    public API_Request(String player) throws IOException {
-        this(player, 5);
-    }
-    //Would need a way to tell the file history how many (/which) matches
-    //-->could adjust summary_Path
+    public API_Request(String player) throws IOException {  this(player, 5);    }
 
-    //Note: could check how many requests  there already are about the player...
-
-    /////
     public API_Request(String player, int matchLimit) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
 
         this.player = player;
-        this.matchLimit = matchLimit; //default
+        this.matchLimit = matchLimit; //default is 5 unless specified
         this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
 
         //initialize specificRequest
@@ -384,3 +377,10 @@ public class API_Request extends API {
 //    System.out.println(match_telemetry_url.toString());
 //    connectToAPI(match_telemetry_url);
 //}
+
+//Would need a way to tell the file history how many (/which) matches
+//-->could adjust summary_Path
+
+//Note: could check how many requests  there already are about the player...
+
+/////
