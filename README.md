@@ -52,12 +52,6 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 
 ## [Updates](https://github.com/JS1936/PubgAPI-Java/blob/work2/UpdatesRecord.md)
 
-### Top 3 Upcoming Updates ###
-
-1. Pinpoint sources of memory leaks and resolve the leaks (caution: frequent repetition of program runs can cause computer to freeze as of Oct 3, 2022) 
-2. Transfer PubgAPI-Request-Java repository content into APIManager.java and DoRequest.java. Classes breakdown should reflect current state of all files mentioned.
-3. Add instructions for how to make various requests (e.g. for specific player(ers) and/or match(es)). This should include instructions for how to operate the various sample match files, which are currently only accessible locally.
-
 ## Areas for Improvement ##
 * Efficient memory usage/storage
 * Readability / simplicity
