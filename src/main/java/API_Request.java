@@ -33,6 +33,31 @@ public class API_Request extends API {
     //If no limit is specified on the number of matches to look at, then the default is 5.
     public API_Request(String player) throws IOException {  this(player, 5);    }
 
+    //In-progress
+    public API_Request(Preset preset) throws IOException {
+        System.out.println("Creating a preset-based API_request");
+        initializeSpecificRequest();
+        //this.matchLimit =...
+        this.match_list = (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
+        //
+    }
+    //public void doCustomRequestPreset()
+    //{
+
+    //}
+
+    private void initializeSpecificRequest()
+    {
+        //initialize specificRequest
+        this.timestamp = System.currentTimeMillis();
+        this.specificRequest = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
+        if(!specificRequest.exists())
+        {
+            System.out.println("specific request Does not yet exist");
+            specificRequest.mkdirs();
+            specificRequest.getParentFile().mkdirs();
+        }
+    }
     public API_Request(String player, int matchLimit) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
