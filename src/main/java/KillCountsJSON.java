@@ -3,6 +3,8 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Vector;
 
 //The KillCountsJSON class uses JSONObjects to calculate and print data on kills from a match.
@@ -43,6 +45,9 @@ public class KillCountsJSON {
 
         Vector<JSONObject> kill_events = JSONManager.returnMultipleObjects(prettyFile, "LogPlayerKillV2");
         Vector<Vector<String>> namesByNumKills = new Vector<Vector<String>>();
+        Vector<String> namesList = new Vector<>(); //temp
+        //temporary:
+        //Set<String> namesList = new HashSet<String>();
 
         //Assumes no one will get more than 30 kills (make more efficient later... -> int maxKills)
         for (int i = 0; i < 30; i++) {
@@ -52,7 +57,13 @@ public class KillCountsJSON {
 
         //NON-WINNERS. Kill events.
         System.out.println("NOTE: this does not yet include the winners...");
-        for (JSONObject kill_event : kill_events) {
+        int countKillEvents = 0; //temp
+        //temp:
+        for(int kill_event_index = kill_events.size() - 1; kill_event_index >= 0; kill_event_index--)
+        {
+            JSONObject kill_event = kill_events.get(kill_event_index);
+        //}
+        //for (JSONObject kill_event : kill_events) {
 
             JSONObject victimGameResult = kill_event.getJSONObject("victimGameResult");
             //int rank = Integer.parseInt(victimGameResult.get("rank").toString());
@@ -63,10 +74,30 @@ public class KillCountsJSON {
             //System.out.println("   killcount: " + killCount);
             JSONObject victim = kill_event.getJSONObject("victim");
             String name = victim.get("name").toString();
-            //System.out.println(name + " got " + killCount + " kills");
+            //System.out.println(name + " got " + killCount + " kills"); //comment out
 
             //index = number of kills they got
-            namesByNumKills.get(killCount).add(name);
+            //TEMP:
+            //if(killCount > 0)
+            //{
+            //    boolean removed = namesByNumKills.get(killCount - 1).remove(name); //temporary. Trying this to try to get rid of duplicate / progression. 12/22/2022.
+            //    if(removed)
+            //    {
+            //        System.out.println("REMOVED");
+            //        countKillEvents--;
+            //    }
+            //}
+            //namesByNumKills.remove(name); //temporary. Trying this to try to get rid of duplicate / progression. 12/22/2022.
+            if(!namesList.contains(name))
+            {
+                namesByNumKills.get(killCount).add(name);
+                namesList.add(name);
+                countKillEvents++; //temp
+            }
+            else
+            {
+                System.out.println("Already have: " + name.toString());
+            }
             //victim --> name
         }
         try {
@@ -80,6 +111,8 @@ public class KillCountsJSON {
         //JSONArray winners = match_end.getJSONArray("characters");
         JSONObject game_result_on_finished = match_end.getJSONObject("gameResultOnFinished");
         JSONArray results = game_result_on_finished.getJSONArray("results");
+        //temp:
+        System.out.println("countKillEvents pre-winners: " + countKillEvents);
         System.out.println("Kills by Winners:");
         int killedByAnyWinner = 0;
         for (int i = 0; i < results.length(); i++) {
@@ -89,11 +122,16 @@ public class KillCountsJSON {
             //System.out.println("i = " + i + "; results: " + results.get(i).toString());
             JSONObject stats = player_result.getJSONObject("stats");
             String num_kills = stats.get("killCount").toString();
+            //temp:
+            //countKillEvents++;
+            //
+
             int killCount = Integer.parseInt(num_kills);
             System.out.println("\t" + killCount);
             killedByAnyWinner += killCount;
         }
         System.out.println("#people killed by winning team: " + killedByAnyWinner);
+        System.out.println("adjusted #kill events: " + countKillEvents); //temp
         //having trouble getting the winners' names... (account ids fine/okay, though)
     }
 }

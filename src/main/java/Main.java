@@ -1,4 +1,6 @@
 import org.apache.commons.io.FileUtils;
+import org.json.JSONObject;
+
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
@@ -242,9 +244,18 @@ public class Main {
                     {
                         FileManager.writeToFileAndConsole("File name is: " + fileName.getName());
                         File pretty = fileName;
-                        getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
-                        filesSoFar++;
-                        FileManager.writeToFileAndConsole("\t" + fileName.getAbsolutePath(), true);
+                        //if file type is OFFICIAL, then do getInfo, otherwise, don't count it
+                        if(isOfficialMatch(fileName))
+                        {
+                            getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
+                            filesSoFar++;
+                            FileManager.writeToFileAndConsole("\t" + fileName.getAbsolutePath(), true);
+                        }
+                        else
+                        {
+                            System.out.println(fileName.toString() + " is not an official match. Not going to analyze it.");
+                        }
+
                     }
                 //}
             } catch (IOException e) {
@@ -274,6 +285,17 @@ public class Main {
         //System.out.println("Shutting down program.");
     }
 
+    public static boolean isOfficialMatch(File file)
+    {
+        JSONObject jsonObject = JSONManager.returnObject(file, "LogMatchDefinition");
+        String match_id = jsonObject.get("MatchId").toString();
+        if(match_id.contains("official"))
+        {
+            return true;
+        }
+        //use LogMatchDefinition
+        return false;
+    }
     //Call the appropriate class(es) and method(s) based on user input
     public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) throws IOException //changed return from void -> boolean 5/17/2022
     {

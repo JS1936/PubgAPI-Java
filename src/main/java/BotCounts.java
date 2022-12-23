@@ -21,18 +21,57 @@ public class BotCounts {
     public static void countBotsAndPeople(File prettyFile) {
         try {
             Scanner scan = new Scanner(prettyFile);
+
             Vector<String> playerNames = new Vector<String>(); //account.
             Vector<String> botNames = new Vector<String>(); //ai.
 
             boolean gameHasStarted = false;
 
+            int countLogPlayerKillV2 = 0; //part of checker
+            int countKillCounts = 0; //part of checker
+            int countRevivals = 0; // part of checker
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
-
-                //Only start counting bots and people IF the game has started (people can enter and leave beforehand)
-                if (data.contains("numStartPlayers")) {
-                    gameHasStarted = true;
+                if(data.contains("arcade"))
+                {
+                    System.out.println("ARCADE: Zero bots");
                 }
+                if(data.contains("LogMatchEnd"))
+                {
+                    System.out.println("----END OF MATCH=====");
+                    //break;
+                    gameHasStarted = false; //imperfect
+                }
+                //Only start counting bots and people IF the game has started (people can enter and leave beforehand)
+                if (data.contains("LogMatchStart")) { //changecFrom numStartPlayer to LogMatchStart
+                    gameHasStarted = true; //could change this to game in progress (then make it false once logmatch end it found...)
+                }
+                //Checker... (temporary)
+
+                //if(data.contains("numAlivePlayers") && gameHasStarted)
+                //{
+                //    System.out.println(data);
+                //}
+                //if(data.contains("LogPlayerKillV2") && gameHasStarted)
+                //{
+                //    countLogPlayerKillV2++;
+                //    System.out.println(data);
+                //    System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
+                //}
+                if(data.contains("killCount") && gameHasStarted)
+                {
+                  System.out.println(data);
+                    countKillCounts++;
+                 //   System.out.println("countKillCounts =      " + countKillCounts);
+                }
+                if(data.contains("LogPlayerRevive") && gameHasStarted)
+                {
+                    countRevivals++;
+                    System.out.println(data + " (revival #" + countRevivals);
+                }
+                //System.out.println("countKillCounts =      " + countKillCounts);
+                //System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
+                //End of temporary checker
 
                 //Account found, game has started
                 if (data.contains("accountId") && gameHasStarted) {
@@ -71,6 +110,8 @@ public class BotCounts {
 
             }
             String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size());
+            System.out.println("#revivals = " + countRevivals); //temp
+            System.out.println("#killCounts = " + countKillCounts); //temp
             FileManager.writeToFileAndConsole(text);
             FileManager.writeToFileAndConsole("#players:        " + playerNames.size());
 

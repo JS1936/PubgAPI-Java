@@ -240,20 +240,7 @@ public class API_Request extends API {
         output.close();
         //file.deleteOnExit(); //revisit
     }
-    /*
-    public void createNewFileAndParentFilesIfTheyDoNotExist(File file) throws IOException {
-        if(file.exists()) {
-            System.out.println("Response file exists!");
-        }
-        else {
-            System.out.println("Response file does not exist. Creating it now");
-            if(file.getParentFile() != null) {
-                file.getParentFile().mkdirs(); //previously order was create self, then check parent... (switched to parent, then self 11/21)
-            }
-            file.createNewFile();
-        }
-    }
-     */
+
     //Consider: returning file so that it can be custom-saved
     private File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);

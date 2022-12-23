@@ -55,10 +55,8 @@ public class MatchManager {
      */
     public static String getMatchType(String match_id)
     {
-        if(match_id.contains("arcade"))
-        {
-            return "arcade";
-        }
+        if(match_id.contains("arcade"))   {  return "arcade"; }
+        if(match_id.contains("seasonal")) {  return "seasonal"; }   //added 12/22/2022
         return "official";
     }
 

@@ -91,18 +91,47 @@ public class KillCounts extends Request {
      * Calls printKillCounts. printing a player's kill count when they themselves
      * actually die.
      */
+    //NOTE: May need to actually track the name and #kills in pairs so that it can be updated
+    //properly without repeats
     public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
         try {
             Scanner scan = new Scanner(prettyFile);
+            int count = 0; //added 12/21/2022
+            boolean matchHasStarted = false; //temp
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
-                if (data.contains("killCount")) {
+                if(data.contains("LogMatchStart"))
+                {
+                    matchHasStarted = true;
+                }
+                if(data.contains("LogMatchEnd"))
+                {
+                    matchHasStarted = false; //misleading
+                }
+                //temporary:
+                if(data.contains("arcade"))
+                {
+                    System.out.println("ARCADE");
+                }
+                if(data.contains("official"))
+                {
+                    System.out.println("OFFICIAL");
+                }
+                if(data.contains("seasonal"))
+                {
+                    System.out.println("SEASONAL");
+                }
+                //end of temporary
+
+                if (data.contains("killCount") && matchHasStarted) { //added "matchHasStarted" temp 12/22/2022
                     String killNum = data.substring(data.length() - 2, data.length() - 1);
                     killCounts.add(killNum);
+                    count++;
                 }
             }
             scan.close();
+            System.out.println("Noted " + count + " instances of 'killCount'");
             printKillCounts(killCounts);
 
         } catch (FileNotFoundException e) {
