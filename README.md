@@ -7,15 +7,15 @@ This project started because I wanted to know how many bots were in the pubg gam
 ## Functionalities ##
 As of October 2022, the Pubg-API-Java project has the following primary functionalities:
 
-| WHAT      |   HOW   | WHERE |
-|---------- | ------- | ----- |
-|0: countBotsAndPeople | Manually | BotCounts.java |
-|1: calculateKillCounts	| Manually | KillCounts.java |	
-|2: printPlayersByTeam | JSON | MatchManager.java |
-|3: winnerWeapons |	JSON | MatchManager.java |
-|4: ranking (of a specific person)|	JSON | Ranking.java |
-|5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java |
-|6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java|
+| WHAT      |   HOW   | WHERE | EXAMPLE OUTPUT |
+|---------- | ------- | ----- | -------------- |
+|0: countBotsAndPeople | Manually | BotCounts.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/screenshot_countBotsAndPeople_example.png) |
+|1: calculateKillCounts	| Manually | KillCounts.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/screenshot_killCounts.png)|	
+|2: printPlayersByTeam | JSON | MatchManager.java | TODO |
+|3: winnerWeapons |	JSON | MatchManager.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/screenshot_winnerWeapons_example.png) |
+|4: ranking (of a specific person)|	JSON | Ranking.java | TODO |
+|5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java | TODO |
+|6: printMapsPlayed |	JSON | MapManager.java, MatchManager.java| [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/screenshot_printMapsPlayed_example.png) |
 
 ## User's Guide ##
 * [How do I make an API request?](https://github.com/JS1936/PubgAPI-Java/files/10244822/Q_.How.do.I.make.an.API.request_.pdf)
