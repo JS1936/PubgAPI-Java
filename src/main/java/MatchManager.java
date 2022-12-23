@@ -271,8 +271,19 @@ public class MatchManager {
                     System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
                     return null; //careful
                 }
-                if (peopleByTeam.get(insert + loc) != null) { //Other team member holds that spot.
-                    loc++;
+                //System.out.println("CURR: " + peopleByTeam.get(insert + loc));
+                //System.out.println("ADD?: " + character.get("name"));
+                if (peopleByTeam.get(insert + loc) != null) { //Some team member holds that spot.
+                    if(peopleByTeam.get(insert + loc).get("name") == character.get("name")) //Self holds that spot
+                    {
+                        System.out.println("Already listed " + character + " as part of the team. Don't want to list duplicately");
+                        //j++;
+                        loc = team_capacity;
+                    }
+                    else //Other team member holds that spot
+                    {
+                        //loc++;
+                    }
                 } else {
                     peopleByTeam.set(insert + loc, character); //Adding player here
                     loc = team_capacity; //Don't want to add the multiple times (leave room for other people!)
