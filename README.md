@@ -11,7 +11,7 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 |---------- | ------- | ----- | -------------- |
 |0: countBotsAndPeople | Manually | BotCounts.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/screenshot_countBotsAndPeople_example.png) |
 |1: calculateKillCounts	| Manually | KillCounts.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/screenshot_killCounts.png)|	
-|2: printPlayersByTeam | JSON | MatchManager.java | TODO |
+|2: printPlayersByTeam | JSON | MatchManager.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/Screenshot_PubgAPI-Java_printPlayersByTeam(still%20need%20to%20update%20maximum%20team%20capacity).png) |
 |3: winnerWeapons |	JSON | MatchManager.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/screenshot_winnerWeapons_example.png) |
 |4: ranking (of a specific person)|	JSON | Ranking.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/Screenshot_PubgAPI-Java_ranking.png) |
 |5: calculateKillCountsJSON	|	JSON | KillCountsJSON.java | [Screenshot](https://github.com/JS1936/PubgAPI-Java/blob/work2/Screenshot_PubgAPI-Java_partialOutputForKillCountsJSON.png) |
