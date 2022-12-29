@@ -19,7 +19,7 @@ public class KillCounts {
      *  -maxKills by a single person
      *  -how many people were killed by the last ten surviving players
      */
-    public static void printKillCountsToHistoryAndConsole(Vector<String> counts) throws IOException {
+    private static void printKillCountsToHistoryAndConsole(Vector<String> counts) throws IOException {
 
         FileManager.writeToFileAndConsole("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");
 
@@ -58,7 +58,7 @@ public class KillCounts {
      * IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
      * Deliberately has primary function of calling printKillCountsToHistoryAndConsole(counts).
      */
-    public static void printKillCounts(Vector<String> counts) {
+    private static void printKillCounts(Vector<String> counts) {
         try {
             printKillCountsToHistoryAndConsole(counts); //added 9/15
         } catch (IOException e) {
@@ -94,34 +94,38 @@ public class KillCounts {
     public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
         String matchType = MatchManager.getMatchType(prettyFile.toString()); //added 28 Dec 2022
-        if(matchType != "official")
-        {
-            System.out.println(prettyFile.toString() + " is not an official match. Only calculating data on official matches.");
-            return;
-        }
+
         try {
+            //Check match type. Only calculate killCounts if match type is "official" (for now)
+            if(matchType != "official")
+            {
+                FileManager.writeToFileAndConsole(prettyFile.toString() + " is not an official match. " +
+                        "Only calculating data on official matches.", true);
+                return;
+            }
+
+            //Examine each line in the file once
             Scanner scan = new Scanner(prettyFile);
             int count = 0; //added 12/21/2022 //moved out of try 12/28/2022
             boolean matchHasStarted = false; //temp
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
-                if(data.contains("LogMatchStart"))
-                {
-                    System.out.println("---LogMatchStart:");
+                //"LogMatchStart" occurs once per match
+                if(data.contains("LogMatchStart")) {
                     matchHasStarted = true;
                 }
-                if (data.contains("killCount") && matchHasStarted) { //added "matchHasStarted" temp 12/22/2022
-                    //System.out.println("-->Death # " + count);
+                //"killCount" occurs with each death per match
+                if (data.contains("killCount") && matchHasStarted) {
                     String killNum = data.substring(data.length() - 2, data.length() - 1);
                     killCounts.add(killNum);
                     count++;
                 }
             }
             scan.close();
-            System.out.println("Noted " + count + " instances of 'killCount'"); //count should equal # (bots + players)
+            FileManager.writeToFileAndConsole("Noted " + count + " instances of 'killCount'", true); //count should equal # (bots + players)
             printKillCounts(killCounts);
 
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }

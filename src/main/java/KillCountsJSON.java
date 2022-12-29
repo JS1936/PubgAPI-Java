@@ -16,15 +16,10 @@ public class KillCountsJSON {
      * Console includes minor additional printouts.
      */
     public static void printKillCountsJSON(Vector<Vector<String>> namesByNumKills) throws IOException {
-        //System.out.println("\n\n\nLOOK: printingKillCountsRequest SCOPE = " + Main.requestCurrent.getScopes()[Main.requestCurrent.getRequest_scope()]); //remove later
-
         for (int index = 0; index < namesByNumKills.size(); index++) {
             Vector<String> names = namesByNumKills.get(index);
             if (!names.isEmpty()) {
                 FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
-
-                //FileManager.writeToFileAndConsole("\n" + index + " KILLS: ");
-
                 for (int indexOfNames = 0; indexOfNames < names.size(); indexOfNames++) {
                     FileManager.writeToFileAndConsole("\t" + names.get(indexOfNames));
                 }
