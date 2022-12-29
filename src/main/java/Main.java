@@ -16,8 +16,6 @@ public abstract class Main {
 
 
     //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
-    //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
-    //WON'T: include requestScopes (as of 11/18)
     public static void main(String[] args) throws IOException {
 
         //Do basic setup
@@ -32,7 +30,7 @@ public abstract class Main {
         System.out.println("Shutting down program.");
     }
 
-
+    //Preserves requestHistory from previous program runs. (Further histories will be appended.)
     private static void setupRequestHistory()
     {
         requestHistory = new File("requestHistory.txt");
@@ -65,7 +63,6 @@ public abstract class Main {
         if(desiredFolder.isDirectory())
         {
             System.out.println("Found it.");
-            //Trying this...
             //desiredFolder.deleteOnExit();
         }
         else
@@ -75,20 +72,13 @@ public abstract class Main {
         return desiredFolder;
     }
 
-
     //Allows multiple requests per runtime.
     public static void psuedoMain(Scanner input, File desiredFolder) throws IOException//removed "String desiredThing"
     {
         mapsPlayed.clear(); //avoid duplicates...
 
         File[] files = new File((desiredFolder).toString()).listFiles();
-        //System.out.println("FILES.length = " + files.length);
-        //NOTE: case where null
-        for(File file : files)
-        {
-            System.out.println("\t" + file.getName());
-            //file.deleteOnExit();
-        }
+        printFileNames(files);
 
         //TODO: allow presets to utilize this
         String prompt_requestType = "What would you like to know?";
@@ -216,6 +206,17 @@ public abstract class Main {
         for(int i = 0; i < options.size(); i++)
         {
             System.out.println(i + ": " + options.get(i));
+        }
+    }
+
+    private static void printFileNames(File[] directory)
+    {
+        //System.out.println("FILES.length = " + files.length);
+        //NOTE: case where null
+        for(File file : directory)
+        {
+            System.out.println("\t" + file.getName());
+            //file.deleteOnExit();
         }
     }
 

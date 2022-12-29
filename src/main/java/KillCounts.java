@@ -1,15 +1,12 @@
-import org.apache.commons.io.FileUtils;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.Scanner;
 import java.util.Vector;
 
 //The KillCounts class is a MANUAL approximation of the KillCountsJSON class. Reports killCount data on a single match.
 //TODO: Decide -> more accurate to say downCounts/knockCounts? (can exceed #players in case of res)
-public class KillCounts extends Request {
+public class KillCounts {
 
     /*
      * IS A MANUAL VERSION: Does not use JSONObjects. Scanner-based.
