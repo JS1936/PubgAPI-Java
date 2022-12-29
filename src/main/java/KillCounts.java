@@ -26,7 +26,8 @@ public class KillCounts extends Request {
 
         FileManager.writeToFileAndConsole("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");
 
-        int[] frequencies = new int[30]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
+        //28 Dec 2022 edit: Changed constant of 30 for size of frequency array to instead be new int[counts.size()]
+        int[] frequencies = new int[counts.size()]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
         int maxKills = 0;
         int killsByTopTen = 0;
         for (int i = 0; i < counts.size(); i++) {
@@ -95,43 +96,32 @@ public class KillCounts extends Request {
     //properly without repeats
     public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
+        String matchType = MatchManager.getMatchType(prettyFile.toString()); //added 28 Dec 2022
+        if(matchType != "official")
+        {
+            System.out.println(prettyFile.toString() + " is not an official match. Only calculating data on official matches.");
+            return;
+        }
         try {
             Scanner scan = new Scanner(prettyFile);
-            int count = 0; //added 12/21/2022
+            int count = 0; //added 12/21/2022 //moved out of try 12/28/2022
             boolean matchHasStarted = false; //temp
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
                 if(data.contains("LogMatchStart"))
                 {
+                    System.out.println("---LogMatchStart:");
                     matchHasStarted = true;
                 }
-                if(data.contains("LogMatchEnd"))
-                {
-                    matchHasStarted = false; //misleading
-                }
-                //temporary:
-                if(data.contains("arcade"))
-                {
-                    System.out.println("ARCADE");
-                }
-                if(data.contains("official"))
-                {
-                    System.out.println("OFFICIAL");
-                }
-                if(data.contains("seasonal"))
-                {
-                    System.out.println("SEASONAL");
-                }
-                //end of temporary
-
                 if (data.contains("killCount") && matchHasStarted) { //added "matchHasStarted" temp 12/22/2022
+                    //System.out.println("-->Death # " + count);
                     String killNum = data.substring(data.length() - 2, data.length() - 1);
                     killCounts.add(killNum);
                     count++;
                 }
             }
             scan.close();
-            System.out.println("Noted " + count + " instances of 'killCount'");
+            System.out.println("Noted " + count + " instances of 'killCount'"); //count should equal # (bots + players)
             printKillCounts(killCounts);
 
         } catch (FileNotFoundException e) {

@@ -46,9 +46,9 @@ public class API_Request extends API {
 
     //}
 
+    //Create/save a specificRequest based on the established player and timestamp.
     private void initializeSpecificRequest()
     {
-        //initialize specificRequest
         this.timestamp = System.currentTimeMillis();
         this.specificRequest = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
         if(!specificRequest.exists())
@@ -58,6 +58,7 @@ public class API_Request extends API {
             specificRequest.getParentFile().mkdirs();
         }
     }
+
     public API_Request(String player, int matchLimit) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
@@ -66,15 +67,16 @@ public class API_Request extends API {
         this.matchLimit = matchLimit; //default is 5 unless specified
         this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
 
+        initializeSpecificRequest(); //added 12/28/2022
         //initialize specificRequest
-        this.timestamp = System.currentTimeMillis();
-        this.specificRequest = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
-        if(!specificRequest.exists())
-        {
-            System.out.println("specific request Does not yet exist");
-            specificRequest.mkdirs();
-            specificRequest.getParentFile().mkdirs();
-        }
+        //this.timestamp = System.currentTimeMillis();
+        //this.specificRequest = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
+        //if(!specificRequest.exists())
+        //{
+        //    System.out.println("specific request Does not yet exist");
+        //    specificRequest.mkdirs();
+        //    specificRequest.getParentFile().mkdirs();
+        //}
         //create "matches" subdirectory for timestamp
         this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
 
