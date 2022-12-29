@@ -6,83 +6,15 @@ import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.*;
 
+
 //The Main class serves as a driver for the PubgAPI-Java project.
-//As of 10/5: being restructured.
-//
-//Consider: removing Request.java
-//Consider: adding some sort of PresetReader
-//public class Main extends Request {
-//Idea: numAlive players against timestamp, graphing that
+public abstract class Main {
 
-//NOTE: get the json via the URL link... don't just convert the general/OVERVIEW txt file to a json!
-//NOTE: make sure file order reset with new command within same run
-public class Main {
-
-
-    //static File currentFile = null; //added 9/15 //not currently used (11/18)
-    //public static Request requestCurrent;// = new Request(0,0); //not currently used (11/18)
-
-    static File requestHistory = null; //Consider: make non-global
+    public static File requestHistory = null; //Consider: make non-global
     public static Vector<String> mapsPlayed = new Vector<String>();
-    public static Vector<String> functionalities = new Vector<String>(); //call it options instead ("functionalities" could be like the method calls) //not public?
+    public static Vector<String> functionalities = new Vector<String>();
 
 
-    private static void setupRequestHistory()
-    {
-        requestHistory = new File("requestHistory.txt");
-        if(!requestHistory.exists())
-        {
-            System.out.println("requestHistory.txt Does not yet exist. Creating it now.");
-            requestHistory.mkdirs();
-            requestHistory.getParentFile().mkdirs();
-        }
-        //System.out.println("requestHistory is stored at " + requestHistory.getAbsolutePath());
-    }
-
-
-    //Note: example.txt is showing up as a folder, but should appear as .txt
-    //Note: example is not yet included (filled in)
-    //Note: follows same process as setupRequestHistory()
-
-    //private static void setupRequestHistory()
-    //{
-    //    setupFolderGivenPathname("requestHistory.txt");
-    //}
-    //private static void setupPresetsFolder()
-    //{
-    //    setupFolderGivenPathname("presetsDir/example.txt");
-    //}
-
-
-    private static void setupPresetsFolder()
-    {
-        File presets = new File("presetsDir/example.txt");//FileManager.getFile("presetsDir/example.txt");
-        if(!presets.exists())
-        {
-            System.out.println("presetsDir/example.txt Does not yet exist. Creating it now.");
-            presets.mkdirs();
-            //presets.getParentFile().mkdirs();
-        }
-        //System.out.println("presetsDir/example is stored at " + presets.getAbsolutePath());
-    }
-
-    /*
-    private static void setupFolderGivenPathname(String pathname) {
-        File newFolder = new File(pathname);
-        if (!newFolder.exists())
-        {
-            newFolder.mkdirs();
-            newFolder.getParentFile().mkdirs();
-            System.out.println(pathname + " does not yet exist. Creating it now.");
-        }
-    }
-     */
-
-
-    private static void checkIfUsingPreset()
-    {
-
-    }
     //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
     //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
     //WON'T: include requestScopes (as of 11/18)
@@ -101,31 +33,29 @@ public class Main {
         System.out.println("Shutting down program.");
     }
 
-    public static void printOptions(File[] f_array)
+    private static void setupPresetsFolder()
     {
-        for(int i = 1; i < f_array.length; i++)
+        File presets = new File("presetsDir/example.txt");//FileManager.getFile("presetsDir/example.txt");
+        if(!presets.exists())
         {
-            System.out.println(i + ": " + f_array[i].getName());
+            System.out.println("presetsDir/example.txt Does not yet exist. Creating it now.");
+            presets.mkdirs();
+            //presets.getParentFile().mkdirs();
         }
+        //System.out.println("presetsDir/example is stored at " + presets.getAbsolutePath());
     }
-    /*
-    public static void selectPreset()
+    private static void setupRequestHistory()
     {
-        System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
+        requestHistory = new File("requestHistory.txt");
+        if(!requestHistory.exists())
+        {
+            System.out.println("requestHistory.txt Does not yet exist. Creating it now.");
+            requestHistory.mkdirs();
+            requestHistory.getParentFile().mkdirs();
+        }
+        //System.out.println("requestHistory is stored at " + requestHistory.getAbsolutePath());
+    }
 
-    }
-     */
-    public static void validateChosenOption(int chosenOption, File[] f_array)
-    {
-        if(chosenOption <= 0 || chosenOption >= f_array.length)
-        {
-            System.out.println("Error. Invalid input.");
-        }
-        else
-        {
-            System.out.println("Using " + f_array[chosenOption].getName());
-        }
-    }
     //Allows for multiple requests in a single running of the program.
     //Consider: acquisition vs evaluation vs edit
     //TODO: remove reliance on specific file locations and files pre-downloaded locally
@@ -151,7 +81,7 @@ public class Main {
         }
         else
         {
-            System.out.println("Did not find it.");
+            System.out.println("Did not find it. Note: Must be a directory.");
         }
         return desiredFolder;
     }
@@ -161,42 +91,14 @@ public class Main {
     {
         mapsPlayed.clear(); //avoid duplicates...
 
-
-        //Directory holding presets. Print the names of the files in that directory.
-        //System.out.println("\nWhich preset would you like to use? Type the corresponding number and then press enter.");
-        //File presets = new File("presetsDir");
-        //File[] filesPresets = presets.listFiles(); //Let user decide, though?
-        //printOptions(filesPresets);
-
-        //Receive and validate preset choice
-        //input = new Scanner(System.in);
-        //int chosenPreset = input.nextInt();
-        //validateChosenOption(chosenPreset, filesPresets);
-
-
-
-        //File requestsDir = new File("requestsDir");
-        //System.out.println("\nWhich requestDir would you like to use? Type the corresponding number and then press enter.");
-
-        //File[] filesRequestDir = requestsDir.listFiles(); //Let user decide, though?
-        //printOptions(filesRequestDir);
-        //int chosenRequestDir = input.nextInt();
-        //System.out.println("Chosen requestDir = " + chosenRequestDir);
-        //validateChosenOption(chosenRequestDir, filesRequestDir);
-
-        System.out.println("Makes it here");
-
         File[] files = new File((desiredFolder).toString()).listFiles();
         //System.out.println("FILES.length = " + files.length);
         //NOTE: case where null
         for(File file : files)
         {
             System.out.println("\t" + file.getName());
-            //Trying this...
-            //System.out.println("Attempting to delete folder called " + desiredFolder.toString());
             //file.deleteOnExit();
         }
-        //Trying this...
 
         //TODO: allow presets to utilize this
         int request = getRequestType(input); //(requestType)
@@ -228,36 +130,25 @@ public class Main {
         }
 
         //TODO: allow max_files to be specified (EX: in a preset?)
-        int max_files = 10; //temporary (remove later)
-        int filesSoFar = 0;
-        int count = 0;
         for (File fileName : files)
         {
             try {
-                //if(filesSoFar >= 10 || count == 0) //added count == 0 on 11/19
-                //{
-                //    count++;
-                    //System.out.println("Reached max_files of " + max_files + "...terminating program");
-                //} else
-                //{
                     if(!fileName.isDirectory()) //added 10/5
                     {
                         FileManager.writeToFileAndConsole("File name is: " + fileName.getName());
                         File pretty = fileName;
+
                         //if file type is OFFICIAL, then do getInfo, otherwise, don't count it
-                        if(isOfficialMatch(fileName))
+                        if(MatchManager.isOfficialMatch(fileName))
                         {
-                            getInfo(request, pretty, name); //changed name to name.toString... --> and reverted
-                            filesSoFar++;
+                            getInfo(request, pretty, name);
                             FileManager.writeToFileAndConsole("\t" + fileName.getAbsolutePath(), true);
                         }
                         else
                         {
                             System.out.println(fileName.toString() + " is not an official match. Not going to analyze it.");
                         }
-
                     }
-                //}
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -285,22 +176,10 @@ public class Main {
         //System.out.println("Shutting down program.");
     }
 
-    public static boolean isOfficialMatch(File file)
-    {
-        JSONObject jsonObject = JSONManager.returnObject(file, "LogMatchDefinition");
-        String match_id = jsonObject.get("MatchId").toString();
-        if(match_id.contains("official"))
-        {
-            return true;
-        }
-        //use LogMatchDefinition
-        return false;
-    }
+
     //Call the appropriate class(es) and method(s) based on user input
     public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) throws IOException //changed return from void -> boolean 5/17/2022
     {
-        //Could also have request be a string... (to try to avoid the nextInt(), nextLine(), etc. issue (and verifying if actually int)
-        //EX: request.equalsIgnoreCase("0")
         //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
         if(request == 0)
         {
@@ -364,10 +243,6 @@ public class Main {
         functionalities.add("printMapsPlayed");
     }
 
-
-    //If requests are objects, then this is easier...?
-    //abstract these better...!
-    //write to file (requestHistory) here? 9/15
     //TODO: allow presets to utilize this ("input"...)
     public static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
     {
@@ -378,9 +253,9 @@ public class Main {
         {
             request = Integer.parseInt(input.next()); //careful...
             System.out.println("request is: " + request);
-            if(request >= 0 && request < optionsToChooseFrom.size())
+            if(chosenOptionIsValid(request))
             {
-                requestAccepted = true; //technically not needed, but helps with clarity
+                //requestAccepted = true; //technically not needed, but helps with clarity
                 System.out.println("Request accepted!");
                 return request;
             }
@@ -397,26 +272,23 @@ public class Main {
         int requestType = getInput(input, functionalities);
         return requestType;
     }
-}
-    /*
-    //Not yet fully implemented
-    public static int getRequestScope(Scanner input)
+
+    //Returns false if chosenOption < 0 or chosenOption >= functionalities.size().
+    //Returns true if chosenOption >= 0 and chosenOption < functionalities.size().
+    public static boolean chosenOptionIsValid(int chosenOption)
     {
-        String prompt_requestScope = "WHO are we learning about?"; //Alternative: putting prompt as index 0
-        printOptionsToChooseFrom(requestScopes, prompt_requestScope);
-        int requestScope = getInput(input, requestScopes);
-        //String[] requestScopeOptions = {"individual (EX: matt112)", "team (EX: team of matt112)", "match (everyone in that match)"};
-        return requestScope;
+        return (chosenOption >= 0 && chosenOption < functionalities.size());
+    }
+}
+
+    /*
+    private static void setupFolderGivenPathname(String pathname) {
+        File newFolder = new File(pathname);
+        if (!newFolder.exists())
+        {
+            newFolder.mkdirs();
+            newFolder.getParentFile().mkdirs();
+            System.out.println(pathname + " does not yet exist. Creating it now.");
+        }
     }
      */
-
-
-    /*
-    //Not yet fully implemented
-    public static void initiateRequestScopes()
-    {
-        requestScopes.add("individual (EX: matt112)");
-        requestScopes.add("team       (EX: team of matt112)");
-        requestScopes.add("match      (all individuals in that match)");
-    }
-    */

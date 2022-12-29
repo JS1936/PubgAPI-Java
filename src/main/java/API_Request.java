@@ -68,15 +68,7 @@ public class API_Request extends API {
         this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
 
         initializeSpecificRequest(); //added 12/28/2022
-        //initialize specificRequest
-        //this.timestamp = System.currentTimeMillis();
-        //this.specificRequest = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
-        //if(!specificRequest.exists())
-        //{
-        //    System.out.println("specific request Does not yet exist");
-        //    specificRequest.mkdirs();
-        //    specificRequest.getParentFile().mkdirs();
-        //}
+
         //create "matches" subdirectory for timestamp
         this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
 

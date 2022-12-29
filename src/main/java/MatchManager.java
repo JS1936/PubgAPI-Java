@@ -60,6 +60,16 @@ public class MatchManager {
         return "official";
     }
 
+    //Given: File (rather than match_id)
+    //Pre: File file represents data for a Pubg a match.
+    //Returns true if File file represents data for an official match. Otherwise, returns false.
+    public static boolean isOfficialMatch(File file)
+    {
+        JSONObject jsonObject = JSONManager.returnObject(file, "LogMatchDefinition");
+        String match_id = jsonObject.get("MatchId").toString();
+        return (match_id.contains("official"));
+    }
+
     //Returns the specific team size for an official match (solo = 1, duo = 2, squad can be [1,4]).
     public static String getTeamSizeForOfficialMatch(String match_id)
     {
