@@ -99,9 +99,7 @@ public abstract class Main {
         //Added the try/catch writeStringToFile for requestHistory 9/15
         //Consider: storing request name and/or content (if using a preset)
         try {
-            //could even have a log-in system where differentiating user histories
            //TODO: ensure print to console and write to file are synced properly
-            //FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_requestScope=" + requestScope + "_", (Charset) null, true); //changed requestedResults to currentFile
 
             FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_", (Charset) null, true); //changed requestedResults to currentFile
         } catch (IOException e) {
@@ -223,7 +221,7 @@ public abstract class Main {
         }
     }
 
-    //Adds desired functionalities to vector of functionalities.
+    //Adds desired functionalities to vector of functionalities. Customizable before/after runtime.
     protected static void initiateFunctionalities()
     {
         functionalities.add("countBotsAndPeople");
