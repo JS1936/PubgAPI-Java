@@ -96,20 +96,18 @@ public abstract class Main {
         int request = getRequestType(input); //(requestType)
 
 
-        //Added the try/catch writeStringToFile for requestHistory 9/15
-        //Consider: storing request name and/or content (if using a preset)
         try {
-           //TODO: ensure print to console and write to file are synced properly
-
             FileUtils.writeStringToFile(requestHistory, "\nrequest=" + request + "_", (Charset) null, true); //changed requestedResults to currentFile
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(request == -1) //remove?
+
+        if(!chosenOptionIsValid(request))
         {
             System.out.println("Invalid request");
             return;
         }
+
         String name = "";
         if(request == 4)
         {
@@ -233,7 +231,7 @@ public abstract class Main {
         functionalities.add("printMapsPlayed");
     }
 
-    //TODO: allow presets to utilize this ("input"...)
+    //TODO: allow presets to utilize this ("input"...) //abandon
     private static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
     {
         int request = -1; //not yet a valid request
@@ -261,8 +259,7 @@ public abstract class Main {
         return requestType;
     }
 
-    //Returns false if chosenOption < 0 or chosenOption >= functionalities.size().
-    //Returns true if chosenOption >= 0 and chosenOption < functionalities.size().
+    //Returns true if chosenOption >= 0 and chosenOption < functionalities.size(). Otherwise, returns false.
     private static boolean chosenOptionIsValid(int chosenOption)
     {
         return (chosenOption >= 0 && chosenOption < functionalities.size());
