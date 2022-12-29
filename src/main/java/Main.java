@@ -19,11 +19,10 @@ public abstract class Main {
     //TO-DO: Use FileManager.java to incorporate specific file activation/inactivation.
     //WON'T: include requestScopes (as of 11/18)
     public static void main(String[] args) throws IOException {
+
         //Do basic setup
-        mapsPlayed.clear(); //clear at the beginning
-        initiateFunctionalities();
-        setupRequestHistory(); //if needed, creates a file to store information about requests
-        setupPresetsFolder();
+        initiateFunctionalities();  // adds desired abilities to vector "functionalities" (EX: countBotsAndPeople)
+        setupRequestHistory();      // if needed, creates a file to store information about requests
 
         //Provide Scanner for pseudoMain to use.
         Scanner input = new Scanner(System.in);
@@ -33,17 +32,7 @@ public abstract class Main {
         System.out.println("Shutting down program.");
     }
 
-    private static void setupPresetsFolder()
-    {
-        File presets = new File("presetsDir/example.txt");//FileManager.getFile("presetsDir/example.txt");
-        if(!presets.exists())
-        {
-            System.out.println("presetsDir/example.txt Does not yet exist. Creating it now.");
-            presets.mkdirs();
-            //presets.getParentFile().mkdirs();
-        }
-        //System.out.println("presetsDir/example is stored at " + presets.getAbsolutePath());
-    }
+
     private static void setupRequestHistory()
     {
         requestHistory = new File("requestHistory.txt");
@@ -87,6 +76,7 @@ public abstract class Main {
     }
 
 
+    //Allows multiple requests per runtime.
     public static void psuedoMain(Scanner input, File desiredFolder) throws IOException//removed "String desiredThing"
     {
         mapsPlayed.clear(); //avoid duplicates...
@@ -101,6 +91,8 @@ public abstract class Main {
         }
 
         //TODO: allow presets to utilize this
+        String prompt_requestType = "What would you like to know?";
+        printOptionsToChooseFrom(functionalities, prompt_requestType);
         int request = getRequestType(input); //(requestType)
 
 
@@ -146,7 +138,8 @@ public abstract class Main {
                         }
                         else
                         {
-                            System.out.println(fileName.toString() + " is not an official match. Not going to analyze it.");
+                            FileManager.writeToFileAndConsole(fileName.toString() + " is not an official match." +
+                                    " Not going to analyze it.", true);
                         }
                     }
             } catch (IOException e) {
@@ -177,7 +170,7 @@ public abstract class Main {
     }
 
 
-    //Call the appropriate class(es) and method(s) based on user input
+    //Calls the appropriate class(es) and method(s) based on user input
     public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) throws IOException //changed return from void -> boolean 5/17/2022
     {
         //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
@@ -220,19 +213,18 @@ public abstract class Main {
     }
 
 
-    //For a specific request type, print the appropriate prompt to console, as well the options the use can choose.
+    //For a specific request type, prints the appropriate prompt to console, as well the options the use can choose.
     public static void printOptionsToChooseFrom(Vector<String> options, String prompt)
     {
-        System.out.print(prompt);
-        System.out.println(" Type the corresponding number and then press enter.\n");
+        System.out.println(prompt + " Type the corresponding number and then press enter.\n");
         for(int i = 0; i < options.size(); i++)
         {
             System.out.println(i + ": " + options.get(i));
         }
     }
 
-    //Add desired functionalities to vector of functionalities.
-    public static void initiateFunctionalities()
+    //Adds desired functionalities to vector of functionalities.
+    protected static void initiateFunctionalities()
     {
         functionalities.add("countBotsAndPeople");
         functionalities.add("calculateKillCounts");
@@ -244,7 +236,7 @@ public abstract class Main {
     }
 
     //TODO: allow presets to utilize this ("input"...)
-    public static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
+    private static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
     {
         int request = -1; //not yet a valid request
         boolean requestAccepted = false;
@@ -265,17 +257,15 @@ public abstract class Main {
     }
 
     //Returns an integer from [0, functionalities.size()-1] representing a specific type of request/functionality.
-    public static int getRequestType(Scanner input)
+    private static int getRequestType(Scanner input)
     {
-        String prompt_requestType = "What would you like to know?";
-        printOptionsToChooseFrom(functionalities, prompt_requestType);
         int requestType = getInput(input, functionalities);
         return requestType;
     }
 
     //Returns false if chosenOption < 0 or chosenOption >= functionalities.size().
     //Returns true if chosenOption >= 0 and chosenOption < functionalities.size().
-    public static boolean chosenOptionIsValid(int chosenOption)
+    private static boolean chosenOptionIsValid(int chosenOption)
     {
         return (chosenOption >= 0 && chosenOption < functionalities.size());
     }

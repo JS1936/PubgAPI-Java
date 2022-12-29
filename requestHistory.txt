@@ -40244,3 +40244,82 @@ MAX #kills by a single person: 8 (#people who achieved this: 1)
 #people killed by 'TOP TEN' : 28 of 99
 --------------------------------------------------------------------------
 	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_99ab4567-8f6d-4707-a213-3fbfde73523b
+
+request=6_File name is: telemetry-for-match_id_19959c0b-ab07-4173-bb3d-3c2a2931026b
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_19959c0b-ab07-4173-bb3d-3c2a2931026b
+File name is: telemetry-for-match_id_fd5ddb38-b141-4176-8060-87bdfddde99a
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_fd5ddb38-b141-4176-8060-87bdfddde99a
+File name is: telemetry-for-match_id_11061279-c8a3-4664-a872-99d8444cdf92
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_11061279-c8a3-4664-a872-99d8444cdf92
+File name is: telemetry-for-match_id_8fbd50fb-65a8-4b59-a447-29b6f7ae6ecb
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_8fbd50fb-65a8-4b59-a447-29b6f7ae6ecb
+File name is: telemetry-for-match_id_ce527da5-8e5d-4a6c-90fd-635ed744bd1a
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_ce527da5-8e5d-4a6c-90fd-635ed744bd1a
+File name is: telemetry-for-match_id_c01cbee5-f91c-49bb-9469-2c811c1af68f
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_c01cbee5-f91c-49bb-9469-2c811c1af68f
+File name is: telemetry-for-match_id_90b9ff05-71a1-408c-aa4b-6a16585f4dfd
+File name is: telemetry-for-match_id_b46cd734-abd2-48de-989d-2741ec7e6986
+File name is: telemetry-for-match_id_eea4bdb4-9c81-4171-94fb-9e7379128e0d
+File name is: telemetry-for-match_id_406fcd87-c868-42b0-ade5-776f91e0d263
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_406fcd87-c868-42b0-ade5-776f91e0d263
+File name is: telemetry-for-match_id_6cfd60fa-b9e5-489a-900d-6f789fbb3260
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_6cfd60fa-b9e5-489a-900d-6f789fbb3260
+File name is: telemetry-for-match_id_1ded7a28-e0c9-487e-b49e-90217255e152
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_1ded7a28-e0c9-487e-b49e-90217255e152
+File name is: telemetry-for-match_id_e1e031ea-27e9-43c9-a708-a060b6a4a5c2
+File name is: telemetry-for-match_id_dfb9599f-96c8-4b1d-9257-efed912fb984
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_dfb9599f-96c8-4b1d-9257-efed912fb984
+File name is: telemetry-for-match_id_99ab4567-8f6d-4707-a213-3fbfde73523b
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_99ab4567-8f6d-4707-a213-3fbfde73523b
+REQUEST = 6
+mapsPlayed.size() : 11
+Frequencies of each map played: 
+Tiger_Main x2
+
+request=6_File name is: telemetry-for-match_id_19959c0b-ab07-4173-bb3d-3c2a2931026b
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_19959c0b-ab07-4173-bb3d-3c2a2931026b
+File name is: telemetry-for-match_id_fd5ddb38-b141-4176-8060-87bdfddde99a
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_fd5ddb38-b141-4176-8060-87bdfddde99a
+File name is: telemetry-for-match_id_11061279-c8a3-4664-a872-99d8444cdf92
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_11061279-c8a3-4664-a872-99d8444cdf92
+File name is: telemetry-for-match_id_8fbd50fb-65a8-4b59-a447-29b6f7ae6ecb
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_8fbd50fb-65a8-4b59-a447-29b6f7ae6ecb
+File name is: telemetry-for-match_id_ce527da5-8e5d-4a6c-90fd-635ed744bd1a
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_ce527da5-8e5d-4a6c-90fd-635ed744bd1a
+File name is: telemetry-for-match_id_c01cbee5-f91c-49bb-9469-2c811c1af68f
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_c01cbee5-f91c-49bb-9469-2c811c1af68f
+File name is: telemetry-for-match_id_90b9ff05-71a1-408c-aa4b-6a16585f4dfd
+File name is: telemetry-for-match_id_b46cd734-abd2-48de-989d-2741ec7e6986
+File name is: telemetry-for-match_id_eea4bdb4-9c81-4171-94fb-9e7379128e0d
+File name is: telemetry-for-match_id_406fcd87-c868-42b0-ade5-776f91e0d263
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_406fcd87-c868-42b0-ade5-776f91e0d263
+File name is: telemetry-for-match_id_6cfd60fa-b9e5-489a-900d-6f789fbb3260
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_6cfd60fa-b9e5-489a-900d-6f789fbb3260
+File name is: telemetry-for-match_id_1ded7a28-e0c9-487e-b49e-90217255e152
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_1ded7a28-e0c9-487e-b49e-90217255e152
+File name is: telemetry-for-match_id_e1e031ea-27e9-43c9-a708-a060b6a4a5c2
+File name is: telemetry-for-match_id_dfb9599f-96c8-4b1d-9257-efed912fb984
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_dfb9599f-96c8-4b1d-9257-efed912fb984
+File name is: telemetry-for-match_id_99ab4567-8f6d-4707-a213-3fbfde73523b
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_99ab4567-8f6d-4707-a213-3fbfde73523b
+REQUEST = 6
+mapsPlayed.size() : 11
+Frequencies of each map played: 
+Tiger_Main x2
+
+request=4_File name is: telemetry-for-match_id_19959c0b-ab07-4173-bb3d-3c2a2931026b
+:q was not in the game (telemetry-for-match_id_19959c0b-ab07-4173-bb3d-3c2a2931026b)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_19959c0b-ab07-4173-bb3d-3c2a2931026b
+File name is: telemetry-for-match_id_fd5ddb38-b141-4176-8060-87bdfddde99a
+:q was not in the game (telemetry-for-match_id_fd5ddb38-b141-4176-8060-87bdfddde99a)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_fd5ddb38-b141-4176-8060-87bdfddde99a
+File name is: telemetry-for-match_id_11061279-c8a3-4664-a872-99d8444cdf92
+:q was not in the game (telemetry-for-match_id_11061279-c8a3-4664-a872-99d8444cdf92)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_11061279-c8a3-4664-a872-99d8444cdf92
+File name is: telemetry-for-match_id_8fbd50fb-65a8-4b59-a447-29b6f7ae6ecb
+:q was not in the game (telemetry-for-match_id_8fbd50fb-65a8-4b59-a447-29b6f7ae6ecb)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_8fbd50fb-65a8-4b59-a447-29b6f7ae6ecb
+File name is: telemetry-for-match_id_ce527da5-8e5d-4a6c-90fd-635ed744bd1a
+:q was not in the game (telemetry-for-match_id_ce527da5-8e5d-4a6c-90fd-635ed744bd1a)
+	/Users/jenniferstibbins/PubgAPI-Java-December2022/requestsDir/CoorsLatte/timestamp_1672290458707/matches/telemetry-for-match_id_ce527da5-8e5d-4a6c-90fd-635ed744bd1a
+File name is: telemetry-for-match_id_c01cbee5-f91c-49bb-9469-2c811c1af68f
