@@ -57,9 +57,6 @@ public class KillCountsJSON {
         for(int kill_event_index = kill_events.size() - 1; kill_event_index >= 0; kill_event_index--)
         {
             JSONObject kill_event = kill_events.get(kill_event_index);
-        //}
-        //for (JSONObject kill_event : kill_events) {
-
             JSONObject victimGameResult = kill_event.getJSONObject("victimGameResult");
             //int rank = Integer.parseInt(victimGameResult.get("rank").toString());
             ////System.out.println("rank: " + rank);
@@ -69,7 +66,7 @@ public class KillCountsJSON {
             //System.out.println("   killcount: " + killCount);
             JSONObject victim = kill_event.getJSONObject("victim");
             String name = victim.get("name").toString();
-            //System.out.println(name + " got " + killCount + " kills"); //comment out
+            System.out.println(name + " got " + killCount + " kills"); //comment out //REVISIT
 
             //index = number of kills they got
             //TEMP:
