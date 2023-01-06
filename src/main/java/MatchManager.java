@@ -216,8 +216,8 @@ public class MatchManager {
 
         //Store data from LogMatchStart in match_start JSONObject
         JSONObject match_start = JSONManager.returnObject(prettyFile, "LogMatchStart");
-        //int team_capacity = match_start.getInt("teamSize"); //1/5/2023 remove
 
+        //int team_capacity = match_start.getInt("teamSize"); //1/5/2023 remove
         //Added 1/5/2023:
         String match_id = getMatchID(prettyFile);
         int team_capacity = getMaximumTeamSizeForOfficialMatch(match_id);
