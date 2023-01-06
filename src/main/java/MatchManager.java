@@ -71,12 +71,13 @@ public class MatchManager {
     }
 
     //Returns the specific team size for an official match (solo = 1, duo = 2, squad can be [1,4]).
-    public static String getTeamSizeForOfficialMatch(String match_id)
+    //Edit: 1/5/2023 --> changed return type from String to int
+    public static int getMaximumTeamSizeForOfficialMatch(String match_id)
     {
         //what if match_id for arcade match is entered?
-        if(match_id.contains("duo")) {  return "duo"; }
-        else if(match_id.contains("solo")) {  return "solo"; }
-        else { return "squad"; }//is this accurate?
+        if(match_id.contains("duo")) {  return 2; }
+        else if(match_id.contains("solo")) {  return 1; }
+        else { return 4; }//is this accurate? //squad
     }
 
     //Stores and prints what weapons were used by a specific group (winnersOnly or everyone), and in what frequencies.
@@ -215,7 +216,12 @@ public class MatchManager {
 
         //Store data from LogMatchStart in match_start JSONObject
         JSONObject match_start = JSONManager.returnObject(prettyFile, "LogMatchStart");
-        int team_capacity = match_start.getInt("teamSize");
+        //int team_capacity = match_start.getInt("teamSize"); //1/5/2023 remove
+
+        //Added 1/5/2023:
+        String match_id = getMatchID(prettyFile);
+        int team_capacity = getMaximumTeamSizeForOfficialMatch(match_id);
+        System.out.println("Team capacity = " + team_capacity);
 
         //Check if the game is custom
         boolean is_custom_game = match_start.getBoolean("isCustomGame");
