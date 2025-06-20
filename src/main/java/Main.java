@@ -18,16 +18,16 @@ public abstract class Main {
     //Conducts setup (initialize files, create Scanner, etc.) so that pseudoMain can do the brunt of the work.
     public static void main(String[] args) throws IOException {
 
-        //Do basic setup
-        initiateFunctionalities();  // adds desired abilities to vector "functionalities" (EX: countBotsAndPeople)
-        setupRequestHistory();      // if needed, creates a file to store information about requests
+        // //Do basic setup
+        // initiateFunctionalities();  // adds desired abilities to vector "functionalities" (EX: countBotsAndPeople)
+        // setupRequestHistory();      // if needed, creates a file to store information about requests
 
-        //Provide Scanner for pseudoMain to use.
-        Scanner input = new Scanner(System.in);
-        File desiredFolder = chooseFolder(input); //only choose once per runtime.
-        psuedoMain(input, desiredFolder);
-        input.close();
-        System.out.println("Shutting down program.");
+        // //Provide Scanner for pseudoMain to use.
+        // Scanner input = new Scanner(System.in);
+        // File desiredFolder = chooseFolder(input); //only choose once per runtime.
+        // psuedoMain(input, desiredFolder);
+        // input.close();
+        // System.out.println("Shutting down program.");
     }
 
     //Preserves requestHistory from previous program runs. (Further histories will be appended.)
