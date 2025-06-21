@@ -16,7 +16,6 @@ public class Main_API { //extends API_Request
     public static void main(String[] args) throws IOException 
     {
         API a = new API_Request("WackyJacky101"); 
-
         System.out.println("Hello, world");
         //API api = new API();
         System.out.println("API key: \n" + a.getAPIkey());
