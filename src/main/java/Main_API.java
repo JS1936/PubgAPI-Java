@@ -17,7 +17,7 @@ public class Main_API {
         //API api = new API_Request();
         
         //API request = new API_Request("CoorsLatte", 15);
-        API request = new API_Request("seoul", 5);
+        API request = new API_Request("not-a-real-player", 5);
         //API request = new API_Request("JS1936");
         //Main.main();
         //API request2 = new API_Request("WackyJacky101");

@@ -166,6 +166,7 @@ public class API_Request extends API {
 
     //Given a URL, checks the current response code for the HttpURLConnection connection.
     //Expect: response code is 200 (valid/OK). Otherwise, invalid connection.
+    //        If invalid connection, exit with status 0.
     private void printResponseCodeSuccessFail(URL url) throws IOException {
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
         if(this.connection.getResponseCode() == 200) //response is valid/OK
@@ -175,6 +176,7 @@ public class API_Request extends API {
         else
         {
             System.out.println("Error: connection to api has invalid response");
+            System.exit(0); // Added 06/22/25.
         }
     }
 
