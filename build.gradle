@@ -31,8 +31,8 @@ test {
 
 //Added 06/21/25:
 application {
-    mainClass = 'Main_API'
-    //mainClass = 'Main'
+    //mainClass = 'Main_API'
+    mainClass = 'Main'
 }
 run {
     standardInput = System.in

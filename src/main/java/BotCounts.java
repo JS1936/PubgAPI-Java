@@ -68,11 +68,16 @@ public class BotCounts {
                     countKillCounts++;
                  //   System.out.println("countKillCounts =      " + countKillCounts);
                 }
+
+                //A "revival" is when a player resurrects a downed / down-but-not-out (DBNO) teammate.
+                //Comment out LogPlayerRevive count 06/22/25.
+                /*
                 if(data.contains("LogPlayerRevive") && gameHasStarted)
                 {
                     countRevivals++;
                     //System.out.println(data + " (revival #" + countRevivals); //Temporarily remove 06/21/25
                 }
+                */
                 //System.out.println("countKillCounts =      " + countKillCounts);
                 //System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
                 //End of temporary checker
