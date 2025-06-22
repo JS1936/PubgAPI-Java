@@ -72,7 +72,7 @@ set CLASSPATH=%APP_HOME%\lib\pubg_how_many_bots-1.0-SNAPSHOT.jar;%APP_HOME%\lib\
 
 
 @rem Execute pubg_how_many_bots
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %PUBG_HOW_MANY_BOTS_OPTS%  -classpath "%CLASSPATH%" Main %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %PUBG_HOW_MANY_BOTS_OPTS%  -classpath "%CLASSPATH%" Main_API %*
 
 :end
 @rem End local scope for the variables with windows NT shell

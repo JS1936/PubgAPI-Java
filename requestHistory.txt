@@ -41605,3 +41605,612 @@ MAX #kills by a single person: 7 (#people who achieved this: 1)
 #people killed by 'TOP TEN' : 31 of 103
 --------------------------------------------------------------------------
 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+
+request=0_File name is: telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+#bots:       78 / 100
+#players:        22
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+File name is: telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+#bots:       2 / 98
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+File name is: telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+#bots:       2 / 93
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+File name is: telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+#bots:       3 / 98
+#players:        95
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+File name is: telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+#bots:       3 / 99
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+File name is: telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+#bots:       4 / 100
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+File name is: telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+#bots:       3 / 96
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+File name is: telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+#bots:       18 / 96
+#players:        78
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+File name is: telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+#bots:       70 / 100
+#players:        30
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+File name is: telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+File name is: telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+#bots:       8 / 97
+#players:        89
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+File name is: telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+#bots:       4 / 91
+#players:        87
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+File name is: telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+#bots:       7 / 99
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+File name is: telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+File name is: telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+#bots:       4 / 95
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+
+request=0_File name is: telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+#bots:       78 / 100
+#players:        22
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+File name is: telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+#bots:       2 / 98
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+File name is: telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+#bots:       2 / 93
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+File name is: telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+#bots:       3 / 98
+#players:        95
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+File name is: telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+#bots:       3 / 99
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+File name is: telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+#bots:       4 / 100
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+File name is: telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+#bots:       3 / 96
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+File name is: telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+#bots:       18 / 96
+#players:        78
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+File name is: telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+#bots:       70 / 100
+#players:        30
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+File name is: telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+File name is: telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+#bots:       8 / 97
+#players:        89
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+File name is: telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+#bots:       4 / 91
+#players:        87
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+File name is: telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+#bots:       7 / 99
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+File name is: telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+File name is: telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+#bots:       4 / 95
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+
+request=0_File name is: telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+#bots:       78 / 100
+#players:        22
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+File name is: telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+#bots:       2 / 98
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+File name is: telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+#bots:       2 / 93
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+File name is: telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+#bots:       3 / 98
+#players:        95
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+File name is: telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+#bots:       3 / 99
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+File name is: telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+#bots:       4 / 100
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+File name is: telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+#bots:       3 / 96
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+File name is: telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+#bots:       18 / 96
+#players:        78
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+File name is: telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+#bots:       70 / 100
+#players:        30
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+File name is: telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+File name is: telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+#bots:       8 / 97
+#players:        89
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+File name is: telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+#bots:       4 / 91
+#players:        87
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+File name is: telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+#bots:       7 / 99
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+File name is: telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+File name is: telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+#bots:       4 / 95
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+
+request=0_File name is: telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+#bots:       78 / 100
+#players:        22
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+File name is: telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+#bots:       2 / 98
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+File name is: telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+#bots:       2 / 93
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+File name is: telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+#bots:       3 / 98
+#players:        95
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+File name is: telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+#bots:       3 / 99
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+File name is: telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+#bots:       4 / 100
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+File name is: telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+#bots:       3 / 96
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+File name is: telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+#bots:       18 / 96
+#players:        78
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+File name is: telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+#bots:       70 / 100
+#players:        30
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+File name is: telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+File name is: telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+#bots:       8 / 97
+#players:        89
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+File name is: telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+#bots:       4 / 91
+#players:        87
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+File name is: telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+#bots:       7 / 99
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+File name is: telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+File name is: telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+#bots:       4 / 95
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+
+request=0_File name is: telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+File name is: telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+File name is: telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       36 / 126
+#players:        90
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+File name is: telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       35 / 123
+#players:        88
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+File name is: telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94
+#players:        90
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+request=1_File name is: telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+File name is: telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+File name is: telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+File name is: telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+File name is: telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+request=0_File name is: telemetry-for-match_id_2be9e065-0585-4719-8838-87abceaf104d
+#bots:       2 / 96
+#players:        94
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/hwinn/timestamp_1750557739961/matches/telemetry-for-match_id_2be9e065-0585-4719-8838-87abceaf104d
+File name is: telemetry-for-match_id_f12dee85-51a2-4b54-81e0-65aee1d37740
+#bots:       4 / 97
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/hwinn/timestamp_1750557739961/matches/telemetry-for-match_id_f12dee85-51a2-4b54-81e0-65aee1d37740
+File name is: telemetry-for-match_id_67ac75b3-6a38-4c7d-a284-b41fa1a6f71b
+/Users/jenniferstibbins/PubgAPI-Java/requestsDir/hwinn/timestamp_1750557739961/matches/telemetry-for-match_id_67ac75b3-6a38-4c7d-a284-b41fa1a6f71b is not an official match. Not going to analyze it.
+File name is: telemetry-for-match_id_154623a2-8713-4e65-ac29-2050b326259a
+#bots:       4 / 99
+#players:        95
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/hwinn/timestamp_1750557739961/matches/telemetry-for-match_id_154623a2-8713-4e65-ac29-2050b326259a
+File name is: telemetry-for-match_id_2c50193b-8300-45a1-8d30-93f1ebb9ceeb
+#bots:       2 / 99
+#players:        97
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/hwinn/timestamp_1750557739961/matches/telemetry-for-match_id_2c50193b-8300-45a1-8d30-93f1ebb9ceeb
+
+request=0_File name is: telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+#bots:       78 / 100
+#players:        22
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+File name is: telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+#bots:       2 / 98
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+File name is: telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+#bots:       2 / 93
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+File name is: telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+#bots:       3 / 98
+#players:        95
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+File name is: telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+#bots:       3 / 99
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+File name is: telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+#bots:       4 / 100
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+File name is: telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+#bots:       3 / 96
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+File name is: telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+#bots:       18 / 96
+#players:        78
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+File name is: telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+#bots:       70 / 100
+#players:        30
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+File name is: telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+File name is: telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+#bots:       8 / 97
+#players:        89
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+File name is: telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+#bots:       4 / 91
+#players:        87
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+File name is: telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+#bots:       7 / 99
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+File name is: telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+File name is: telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+#bots:       4 / 95
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+
+request=6_File name is: telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+File name is: telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+File name is: telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+File name is: telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+File name is: telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+File name is: telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+File name is: telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+File name is: telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+File name is: telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+File name is: telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+File name is: telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+File name is: telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+File name is: telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+File name is: telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+File name is: telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+REQUEST = 6
+mapsPlayed.size() : 15
+Frequencies of each map played: 
+Savage_Main x2
+
+request=0_File name is: match_id_5bcd70e2-2923-479f-b65a-b61a054a02e4.txt
+
+request=0_File name is: match_id_5bcd70e2-2923-479f-b65a-b61a054a02e4.txt
+
+request=0_File name is: telemetry-for-match_id_225f89ae-cda2-4ca2-8d91-70288ba2ab26
+/Users/jenniferstibbins/PubgAPI-Java/requestsDir/TGLTN/timestamp_1750561101401/matches/telemetry-for-match_id_225f89ae-cda2-4ca2-8d91-70288ba2ab26 is not an official match. Not going to analyze it.
+File name is: telemetry-for-match_id_3a833abf-ca08-4bfe-866b-4500f009ca08
+#bots:       3 / 99
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/TGLTN/timestamp_1750561101401/matches/telemetry-for-match_id_3a833abf-ca08-4bfe-866b-4500f009ca08
+File name is: telemetry-for-match_id_a3e90d68-45cf-4ee8-85ae-e07ed9eec2ae
+#bots:       4 / 93
+#players:        89
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/TGLTN/timestamp_1750561101401/matches/telemetry-for-match_id_a3e90d68-45cf-4ee8-85ae-e07ed9eec2ae
+File name is: telemetry-for-match_id_82f437a0-4482-4877-855f-24bcb4f2a064
+#bots:       4 / 94
+#players:        90
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/TGLTN/timestamp_1750561101401/matches/telemetry-for-match_id_82f437a0-4482-4877-855f-24bcb4f2a064
+File name is: telemetry-for-match_id_cca13c15-be09-475f-a1b2-16e21a09b626
+/Users/jenniferstibbins/PubgAPI-Java/requestsDir/TGLTN/timestamp_1750561101401/matches/telemetry-for-match_id_cca13c15-be09-475f-a1b2-16e21a09b626 is not an official match. Not going to analyze it.
+
+request=0_File name is: match_id_17cdebaa-712d-4316-85a8-62882f1299df.txt-userFriendly
+
+request=0_File name is: telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+#bots:       78 / 100
+#players:        22
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_5d62631d-1379-4ca5-a5a5-ae52bcaae748
+File name is: telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+#bots:       2 / 98
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a3562cba-0f9c-45f5-8510-ccdd23548e3f
+File name is: telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+#bots:       2 / 93
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_d622e9d3-fa7d-4468-80a0-f2a4dad539b8
+File name is: telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+#bots:       3 / 98
+#players:        95
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a7006638-f1e1-451d-92b2-2fa1a50bf2cf
+File name is: telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+#bots:       3 / 99
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_612fc8f1-4e29-403b-9281-90e04a3a0947
+File name is: telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+#bots:       4 / 100
+#players:        96
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_60cb9e46-06f3-4a6f-bd00-4a5c8080582c
+File name is: telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+#bots:       3 / 96
+#players:        93
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a8564b73-c4b6-4f7f-a35c-9049980db088
+File name is: telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+#bots:       18 / 96
+#players:        78
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_0851be2d-ee46-4ea3-834e-c8511ad4717e
+File name is: telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+#bots:       70 / 100
+#players:        30
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_766af086-115a-4655-82e4-ac268f02d409
+File name is: telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_25bd4c59-0808-453e-85f2-03ff252874f6
+File name is: telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+#bots:       8 / 97
+#players:        89
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_005c8487-149e-4e70-8a09-c9394cac3352
+File name is: telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+#bots:       4 / 91
+#players:        87
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_11b0cfa7-36a7-4bc1-a0ca-8c713a143648
+File name is: telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+#bots:       7 / 99
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_ad93225b-b0cf-4469-bf1a-978183fc206c
+File name is: telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+#bots:       4 / 96
+#players:        92
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_a66f7151-51d3-4306-babc-e3d065287075
+File name is: telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d
+#bots:       4 / 95
+#players:        91
+	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1750546022433/matches/telemetry-for-match_id_85d6d02d-9428-4486-861b-3e14df8b1d5d

@@ -32,10 +32,14 @@ public class BotCounts {
             int countRevivals = 0; // part of checker
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
+
+                //Remove 06/21/25:
+                /*
                 if(data.contains("arcade"))
                 {
                     System.out.println("ARCADE: Zero bots");
                 }
+                */
                 if(data.contains("LogMatchEnd"))
                 {
                     System.out.println("----END OF MATCH=====");
@@ -60,14 +64,14 @@ public class BotCounts {
                 //}
                 if(data.contains("killCount") && gameHasStarted)
                 {
-                  System.out.println(data);
+                  //System.out.println("killCount data = " + data); //Temporarily remove 06/21/25
                     countKillCounts++;
                  //   System.out.println("countKillCounts =      " + countKillCounts);
                 }
                 if(data.contains("LogPlayerRevive") && gameHasStarted)
                 {
                     countRevivals++;
-                    System.out.println(data + " (revival #" + countRevivals);
+                    //System.out.println(data + " (revival #" + countRevivals); //Temporarily remove 06/21/25
                 }
                 //System.out.println("countKillCounts =      " + countKillCounts);
                 //System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);

@@ -1,0 +1,141 @@
+{
+  "data": [
+    {
+      "type": "player",
+      "id": "account.5bf6cf33fb4e456ea747e3d43fb2ca01",
+      "attributes": {
+        "patchVersion": "",
+        "banType": "Innocent",
+        "clanId": "clan.7e41009b212341a5a62d46430b391533",
+        "name": "Shrimzy",
+        "titleId": "pubg",
+        "shardId": "steam"
+      },
+      "relationships": {
+        "matches": {
+          "data": [
+            {
+              "type": "match",
+              "id": "9e1122ff-11ce-4dac-90ad-1b041200539c"
+            },
+            {
+              "type": "match",
+              "id": "6d3a19db-fb2c-4d29-b64c-47cc67073bad"
+            },
+            {
+              "type": "match",
+              "id": "8d385883-2a04-4035-85cd-49a4f8372159"
+            },
+            {
+              "type": "match",
+              "id": "fc5e5e57-a256-4f47-b268-9f28e0da22dd"
+            },
+            {
+              "type": "match",
+              "id": "4cf12543-1522-4d48-8074-be49d0605afe"
+            },
+            {
+              "type": "match",
+              "id": "009b1585-7639-4264-bb84-0c7eece6a0c0"
+            },
+            {
+              "type": "match",
+              "id": "0edaff34-8bf2-4060-8103-4623973852af"
+            },
+            {
+              "type": "match",
+              "id": "348fa6ac-b681-40b8-9647-bd498f550e67"
+            },
+            {
+              "type": "match",
+              "id": "2cf795e7-3f13-4d4c-bb28-69dbd40f7c2d"
+            },
+            {
+              "type": "match",
+              "id": "9761bdee-ec57-45f0-a57c-3c229ceed93f"
+            },
+            {
+              "type": "match",
+              "id": "4d408a98-897d-4c66-8935-e6d37d8dea50"
+            },
+            {
+              "type": "match",
+              "id": "1cc3f9fd-a246-42f3-a4ea-2926450d8c66"
+            },
+            {
+              "type": "match",
+              "id": "736fbdcd-17c9-4622-b096-b6bcf9570517"
+            },
+            {
+              "type": "match",
+              "id": "9b18c34c-10af-4ac4-ba1a-68f8deeffb0c"
+            },
+            {
+              "type": "match",
+              "id": "82bea183-3b4e-4780-8086-d262d25bc274"
+            },
+            {
+              "type": "match",
+              "id": "74659e4d-2247-4bde-bd6f-0f28bf0300b5"
+            },
+            {
+              "type": "match",
+              "id": "e0f5612b-566e-433f-9c83-940b63a69daf"
+            },
+            {
+              "type": "match",
+              "id": "64c72825-afbb-41a4-b9ea-c223a4335fd3"
+            },
+            {
+              "type": "match",
+              "id": "641380ce-98bc-41d4-9735-4406019c0825"
+            },
+            {
+              "type": "match",
+              "id": "477412a1-948d-4156-9bd2-2e9decb86858"
+            },
+            {
+              "type": "match",
+              "id": "21dcf7ae-8ff9-4130-a735-b51abf7dd657"
+            },
+            {
+              "type": "match",
+              "id": "1dcd90a1-fe8d-458c-ad6b-26c0ee598901"
+            },
+            {
+              "type": "match",
+              "id": "d7e7b4a1-9125-40af-8b77-f4061107b43b"
+            },
+            {
+              "type": "match",
+              "id": "0a671bcc-7c29-4a68-91e1-eba5026e384e"
+            },
+            {
+              "type": "match",
+              "id": "f0187068-2526-43c0-9ef4-76874bdb2687"
+            },
+            {
+              "type": "match",
+              "id": "dc2eab5f-fb6a-47be-a8fa-5892a95f5e92"
+            },
+            {
+              "type": "match",
+              "id": "445dd39f-4860-41e7-87f9-5b0dc61e914e"
+            }
+          ]
+        },
+        "assets": {
+          "data": []
+        }
+      },
+      "links": {
+        "self": "https://api.pubg.com/shards/steam/players/account.5bf6cf33fb4e456ea747e3d43fb2ca01",
+        "schema": ""
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]\u003dShrimzy"
+  },
+  "meta": {}
+}
