@@ -29,7 +29,7 @@ public class BotCounts {
 
             int countLogPlayerKillV2 = 0; //part of checker
             int countKillCounts = 0; //part of checker
-            int countRevivals = 0; // part of checker
+            //int countRevivals = 0; // part of checker
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
 
@@ -42,7 +42,7 @@ public class BotCounts {
                 */
                 if(data.contains("LogMatchEnd"))
                 {
-                    System.out.println("----END OF MATCH=====");
+                    System.out.println("----END OF MATCH=====\n");
                     //break;
                     gameHasStarted = false; //imperfect
                 }
@@ -68,6 +68,11 @@ public class BotCounts {
                     countKillCounts++;
                  //   System.out.println("countKillCounts =      " + countKillCounts);
                 }
+                //Temporary:
+                //if(data.contains("numParticipatedPlayers"))
+                //{
+                //    System.out.println(data);
+                //}
 
                 //A "revival" is when a player resurrects a downed / down-but-not-out (DBNO) teammate.
                 //Comment out LogPlayerRevive count 06/22/25.
@@ -102,10 +107,10 @@ public class BotCounts {
                         }
                     } else //bot (or guard, potentially)
                     {
-                        if (data.contains("ai.")) //bot
+                        if (data.contains("ai.3")) //bot //<-- change to ai.3 to identify user_ai, not guards
                         {
                             //Store account_id
-                            int accountStart = data.indexOf("ai.");
+                            int accountStart = data.indexOf("ai.3");
                             String account_id = data.substring(accountStart, accountStart + 6);
 
                             //If new bot, add to list of bots (botNames).
@@ -119,10 +124,18 @@ public class BotCounts {
 
             }
             String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size());
-            System.out.println("#revivals = " + countRevivals); //temp
+            //System.out.println("#revivals = " + countRevivals); //temp
             System.out.println("#killCounts = " + countKillCounts); //temp
             FileManager.writeToFileAndConsole(text);
             FileManager.writeToFileAndConsole("#players:        " + playerNames.size());
+
+
+            //Temporary:
+            //System.out.println("Players:" + playerNames);
+            //System.out.println("Bots   :" + botNames);
+            
+
+            
 
 
         } catch (FileNotFoundException e) {
@@ -132,8 +145,9 @@ public class BotCounts {
             System.out.println("An error occurred: unable to write string to file");
             e.printStackTrace();
         }
+        //System.exit(0); //temporary. REMOVE LATER
     }
-
+   
 }
 
 //Potential future updates:
