@@ -113,7 +113,7 @@ public abstract class Main {
             try {
                     if(!fileName.isDirectory()) //added 10/5
                     {
-                        FileManager.writeToFileAndConsole("File name is: " + fileName.getName());
+                        FileManager.writeToFileAndConsole("\n\n----------------\nFile name is: " + fileName.getName()); //added 06/24/25
                         File pretty = fileName;
 
                         //if file type is OFFICIAL, then do getInfo, otherwise, don't count it
