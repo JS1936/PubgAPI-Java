@@ -62,12 +62,12 @@ public class BotCounts {
                 //    System.out.println(data);
                 //    System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
                 //}
-                if(data.contains("killCount") && gameHasStarted)
-                {
-                  //System.out.println("killCount data = " + data); //Temporarily remove 06/21/25
-                    countKillCounts++;
-                 //   System.out.println("countKillCounts =      " + countKillCounts);
-                }
+                //if(data.contains("killCount") && gameHasStarted)
+                //{
+                //  //System.out.println("killCount data = " + data); //Temporarily remove 06/21/25
+                //    countKillCounts++;
+                // //   System.out.println("countKillCounts =      " + countKillCounts);
+                //}
                 //Temporary:
                 //if(data.contains("numParticipatedPlayers"))
                 //{
@@ -125,7 +125,7 @@ public class BotCounts {
             }
             String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size());
             //System.out.println("#revivals = " + countRevivals); //temp
-            System.out.println("#killCounts = " + countKillCounts); //temp
+            //System.out.println("#killCounts = " + countKillCounts); //temp
             FileManager.writeToFileAndConsole(text);
             FileManager.writeToFileAndConsole("#players:        " + playerNames.size());
 
