@@ -75,5 +75,3 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 * Comprehensiveness and speed of testcases
 * Inclusion of more example files (with explanations for how to install/run the program, step-by-step)
 * Inclusion of sample description of end-user personas
-
-
