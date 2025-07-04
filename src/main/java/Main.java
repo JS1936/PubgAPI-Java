@@ -54,7 +54,7 @@ public abstract class Main {
     public static File chooseFolder(Scanner input)
     {
         System.out.println("Enter the name of the folder you want to focus on.");
-        System.out.println("EX: requestsDir/CoorsLatte/timestamp_1671342490462/matches");
+        System.out.println("EX: requestsDir/Shrimzy/timestamp_1750557892980/matches");
 
         Path name_path = Path.of(input.nextLine());
         System.out.println("NAME path: " + name_path);
