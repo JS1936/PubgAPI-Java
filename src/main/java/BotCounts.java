@@ -17,6 +17,7 @@ public class BotCounts {
      * NOTE: does not count guards as bots.
      */
     public static void countBotsAndPeople(File prettyFile) {
+        //System.out.println("countBotsAndPeople - file name = " + prettyFile.getAbsolutePath());
         try {
             Scanner scan = new Scanner(prettyFile);
 
@@ -29,7 +30,7 @@ public class BotCounts {
                 
                 if(data.contains("LogMatchEnd"))
                 {
-                    System.out.println("----END OF MATCH=====\n");
+                    //System.out.println("----END OF MATCH=====\n");
                     gameHasStarted = false; //imperfect
                 }
                 //Only start counting bots and people IF the game has started (people can enter and leave beforehand)
@@ -73,9 +74,10 @@ public class BotCounts {
                 }
 
             }
-            String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size());
+            String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size())
+                + " [" + prettyFile.getAbsolutePath() + "]";  //+ ". " + playerNames.size() + " real players."
             FileManager.writeToFileAndConsole(text);
-            FileManager.writeToFileAndConsole("#players:        " + playerNames.size());
+            //FileManager.writeToFileAndConsole("#players:        " + playerNames.size());
 
             scan.close();
 
