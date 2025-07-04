@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application' //added 06/21/25
 }
 
 group 'org.example'
@@ -17,11 +18,22 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.9.0'
     implementation 'commons-io:commons-io:2.11.0'
     // https://mvnrepository.com/artifact/org.json/json
-    implementation 'org.json:json:20220320'
+    //implementation 'org.json:json:20220320'
+    implementation 'org.json:json:20231013'
 
 
 }
 
 test {
-    useJUnitPlatform() //look!
+    enabled = false // added 06/21/25
+    //useJUnitPlatform() //look! //removed 06/21/25
+}
+
+//Added 06/21/25:
+application {
+    //mainClass = 'Main_API'
+    mainClass = 'Main'
+}
+run {
+    standardInput = System.in
 }

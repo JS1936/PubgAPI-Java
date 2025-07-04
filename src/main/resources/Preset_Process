@@ -1,0 +1,22 @@
+If the preset already exists, then what?
+May be easier to name the presets such that they are more easily findable by name. (EX: number).
+Then read through the file.
+
+Create a folder.
+    Where: in .../requestsDir/custom/<player_name>/<timestamp>
+    (Or .../<player_name>_custom/...
+    Essentially the same as naming a different folder...
+
+Attempt to add each active file to the folder.
+If a file does not exist or is invalid, do not include it. Error message.
+If a file exists and is valid, add it to the folder. Note: add, not move.
+
+Once the folder is set up, do the actions.
+Consider: specific results-file for that request, stored in folder.
+(This would be in addition to an overall results-file, for every request)
+
+
+Read through the file
+
+To do a custom selection of match files, copy these files and put them in a folder.
+Tell the program where to find the folder.

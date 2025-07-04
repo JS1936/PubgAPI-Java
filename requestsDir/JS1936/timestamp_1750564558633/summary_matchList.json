@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "type": "player",
+      "id": "account.9c618f3851b646f9a6de9bbd6962d73f",
+      "attributes": {
+        "shardId": "steam",
+        "patchVersion": "",
+        "banType": "Innocent",
+        "clanId": "",
+        "name": "JS1936",
+        "titleId": "pubg"
+      },
+      "relationships": {
+        "assets": {
+          "data": []
+        },
+        "matches": {
+          "data": []
+        }
+      },
+      "links": {
+        "self": "https://api.pubg.com/shards/steam/players/account.9c618f3851b646f9a6de9bbd6962d73f",
+        "schema": ""
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]\u003dJS1936"
+  },
+  "meta": {}
+}

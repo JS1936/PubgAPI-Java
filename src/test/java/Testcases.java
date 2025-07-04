@@ -1,21 +1,16 @@
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.jupiter.api.Assertions.assertEquals; //https://mkyong.com/gradle/junit-5-gradle-examples/
+//import static org.junit.jupiter.api.Assertions.assertEquals; //https://mkyong.com/gradle/junit-5-gradle-examples/
 public class Testcases {
 
     public static void main(String[] args) {
         System.out.println("Beginning to run testcases now");
-
         Assertions.assertTrue(access_java_main());
         //Assertions.assertFalse(access_java_main());
-
     }
 
 
     public static boolean access_java_main() {
         //assertEquals(5,6);
-
-
         System.out.println("\tTesting acccess_java_main:");
         try {
             Main.initiateFunctionalities();
@@ -27,22 +22,4 @@ public class Testcases {
         System.out.println("access_java_main PASSED");
         return true;
     }
-
-    public static void test()
-    {
-
-    }
-
-
 }
-
-//EXAMPLE FORMAT?
-/*
-TEST(problem_4, binary_search_null_array) {
-    std::vector<int> lengths = {0, 1, -2};
-    for (int length: lengths) {
-        int actual = binary_search(nullptr, length, 3);
-        ASSERT_EQ(actual, -1);
-    }
-}
- */

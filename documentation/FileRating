@@ -1,0 +1,126 @@
+//FileRating provides a numerical indicator of how "complete" a file is for the project.
+//      Higher # = "better"
+//-3: largely does not function as intended
+//-2: at least half is implemented, and some does not function as intended
+//-1: skeleton (outline, undesired implementation results)
+// 0: no implementation
+// 1: skeleton (outline but very little implementation)
+// 2: at least half is implemented (and function as intended)
+// 3: no known functionality errors
+
+
+//Importance:
+//3: need
+//2: want
+//1: may remove
+//0: not currently used, will likely remove
+
+
+//14 Dec 2022:
+//           Importance |   CodeCompletionRating | CommentCompletionRating      |  COMPLEXITY    |  # functionalities |  #functionalities needing work |
+//           ___________|________________________|______________________________|________________|____________________|________________________________|
+//API                 3 |  adequate (3)          |  no comments             (0) |  simple        |2 strings, 2 getters| N/A                            |
+//API_Request         3 |  half+      (2)        |  TO-DO: better comments  (1) |  complex       |6 methods           | Revisit all. In particular, Https access via URL
+//BotCounts           2 |  adequate (3)          |  TO-DO: minimize comments(2) |  simple        |1 method            | N/A
+//FileManager       2-3 |  adequate (3)          |  consistent commenting   (3) |  simple        |3 methods           | N/A
+//JSONManager         3 |  adequate (3)          |  needs minor adjustments (2) |  simple        |3 methods           | N/A
+//KillCounts          2 |  adequate (3)          |  consistent commenting   (3) |  simple        |3 methods, 2 main functionalities | N/A
+//KillCountsJSON      2 |  adequate (3)          |  TO-DO: minimize comments(2) |  simple        |2 methods^          | N/A
+//Main                3 |  half+      (2)        |  TO-DO: minimize comments(2) |  overly complex|9 methods used (of 12)| All
+//Main_API            3 |  half+      (2)        |  TO-DO: de-messy comments(2) |  simple        |1 method            | Uncertain
+//MapManager          2 |  adequate (3)          |  TO-DO: minimize comments(2) |  simple        |1 method used (of 2)| Revisit getMapName placement
+//MatchManager        2 |  needsWork        (-2) |  TO-DO: minimize comments(2) |  medium        |4 methods used(of 9)| Revisit all methods, test them
+//PresetManager       0 |  empty        (0)      |  empty (0)                   |  N/A           |0                   | Decide whether to keep/implement
+//Ranking             2 |  adequate (3)          |  TO-DO: minimize comments(2) |  simple        |1 method            | N/A
+//Request             0 |  commented out(0)      |  no relevant (and used) code |  N/A           |0                   | Decide whether to keep/implement
+
+
+//14 classes
+//  12 used     - 2 complex     -> need | Main | overly complex
+//                              -> need | API_Request
+//
+//              - 1 medium      -> want | MatchManager
+//
+//
+//              - 9 simple      -> need | Main_API
+//                              -> need | JSONManager
+//
+//                              -> want/need | FileManager
+//
+//                              -> want | BotCounts
+//                              -> want | KillCounts
+//                              -> want | KillCountsJSON
+//                              -> want | MapManager
+//                              -> want | MatchManager
+//                              -> want | Ranking
+//////////////////
+//  2 unused    - PresetManager
+//              - Request
+//
+//////////////////
+//  4 files "need":     2 complex, 0 medium, 2 simple
+//  1 file "want/need": 0 complex, 0 medium, 1 simple
+//  7 files "want":     0 complex, 1 medium, 6 simple
+// Simpler is (often) better...
+// The "need" files include both complex files.
+
+//API_REQUEST
+//Can it be split up?
+//Methods:
+//  public API_Request(String player) throws IOException {
+//  public URL getTelemetryURL(File f) throws IOException {
+//  public HttpURLConnection connectToAPI(URL url) throws IOException {
+//  public HttpURLConnection connectToAPI_wantZIP(URL url) throws IOException {
+//  public File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
+//  public static Vector<String> getMatchIDsFromRequestPath(File s) throws IOException {
+//
+//                 Request
+//            /      |      \
+//           /       |       \
+//          /        |        \
+//     connect   get matches    use match data to get match telemetry (more specific) via Https
+//
+//curl?
+//...records
+//
+//
+// Only save the summary (match ids) long-term?
+
+
+
+//LogPlayerMakeGroggy
+//LogPlayerRevive
+//TODO-FIX/CLARIFY "KILL" VS GROGGY, ETC.
+
+
+//Consider: save match_ids. When calling upon a request, then do get the telemetry, etc.
+//...Then get rid of it again once done with it (don't save it--> huge amount of space)
+//So, how would you specify to save a timestamp?
+
+//If UserDriver,
+//then API_Request(player, #games, saveFullTelemetry boolean(?))
+// "deleteOnExit" --> for each file in "matches", then also the matches file itself. KEEP summary, though.
+//...Would calling directory for matches and then deleting it automatically delete the innards?
+//
+//VS
+//API_Request(summary_matchList.json)
+
+//    public API_Request(String player) throws IOException {  this(player, 5);    }
+//    public API_Request(File file) {
+//
+//      //check if file exists.
+//          --> If the file does exist, try to execute it.
+//          --> If the file does NOT exist, error message? Create it?
+//
+//    }
+
+//    public API_Request(File file) {
+//
+//      //check if file exists.
+//          --> If the file does exist, try to execute it.
+//          --> If the file does NOT exist, error message? Create it?
+//
+//    }
+
+// (1) summary_matchList.json. Have it? Good. | Not have it? --> Get it.
+/  (2) Ru

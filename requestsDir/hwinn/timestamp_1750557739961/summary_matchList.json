@@ -1,0 +1,277 @@
+{
+  "data": [
+    {
+      "type": "player",
+      "id": "account.ed7fbcf212b3456392f2959641cd738c",
+      "attributes": {
+        "shardId": "steam",
+        "patchVersion": "",
+        "banType": "Innocent",
+        "clanId": "clan.7e41009b212341a5a62d46430b391533",
+        "name": "hwinn",
+        "titleId": "pubg"
+      },
+      "relationships": {
+        "assets": {
+          "data": []
+        },
+        "matches": {
+          "data": [
+            {
+              "type": "match",
+              "id": "f12dee85-51a2-4b54-81e0-65aee1d37740"
+            },
+            {
+              "type": "match",
+              "id": "2c50193b-8300-45a1-8d30-93f1ebb9ceeb"
+            },
+            {
+              "type": "match",
+              "id": "154623a2-8713-4e65-ac29-2050b326259a"
+            },
+            {
+              "type": "match",
+              "id": "2be9e065-0585-4719-8838-87abceaf104d"
+            },
+            {
+              "type": "match",
+              "id": "67ac75b3-6a38-4c7d-a284-b41fa1a6f71b"
+            },
+            {
+              "type": "match",
+              "id": "1733deb5-908e-4dc2-a11e-17e6a93e11fe"
+            },
+            {
+              "type": "match",
+              "id": "bb617a1f-e0d3-49a5-9c52-a584ca07ff53"
+            },
+            {
+              "type": "match",
+              "id": "d5032a48-affa-4b63-b066-8eda9a441044"
+            },
+            {
+              "type": "match",
+              "id": "3882791f-4c08-4831-afc3-12f18a606116"
+            },
+            {
+              "type": "match",
+              "id": "9b18c34c-10af-4ac4-ba1a-68f8deeffb0c"
+            },
+            {
+              "type": "match",
+              "id": "82bea183-3b4e-4780-8086-d262d25bc274"
+            },
+            {
+              "type": "match",
+              "id": "74659e4d-2247-4bde-bd6f-0f28bf0300b5"
+            },
+            {
+              "type": "match",
+              "id": "e0f5612b-566e-433f-9c83-940b63a69daf"
+            },
+            {
+              "type": "match",
+              "id": "e10f1983-c490-4346-80fd-4fae7c59cd51"
+            },
+            {
+              "type": "match",
+              "id": "7e4b56d5-8df6-4879-ad7f-318c6c2d0e4b"
+            },
+            {
+              "type": "match",
+              "id": "64c72825-afbb-41a4-b9ea-c223a4335fd3"
+            },
+            {
+              "type": "match",
+              "id": "641380ce-98bc-41d4-9735-4406019c0825"
+            },
+            {
+              "type": "match",
+              "id": "477412a1-948d-4156-9bd2-2e9decb86858"
+            },
+            {
+              "type": "match",
+              "id": "21dcf7ae-8ff9-4130-a735-b51abf7dd657"
+            },
+            {
+              "type": "match",
+              "id": "1dcd90a1-fe8d-458c-ad6b-26c0ee598901"
+            },
+            {
+              "type": "match",
+              "id": "d7e7b4a1-9125-40af-8b77-f4061107b43b"
+            },
+            {
+              "type": "match",
+              "id": "0a671bcc-7c29-4a68-91e1-eba5026e384e"
+            },
+            {
+              "type": "match",
+              "id": "f0187068-2526-43c0-9ef4-76874bdb2687"
+            },
+            {
+              "type": "match",
+              "id": "dc2eab5f-fb6a-47be-a8fa-5892a95f5e92"
+            },
+            {
+              "type": "match",
+              "id": "445dd39f-4860-41e7-87f9-5b0dc61e914e"
+            },
+            {
+              "type": "match",
+              "id": "9a5c8233-73f6-4577-b5f8-5c5a062774b9"
+            },
+            {
+              "type": "match",
+              "id": "d0fe604b-2ab1-4d96-a56a-e71a53411776"
+            },
+            {
+              "type": "match",
+              "id": "605312fd-8cac-4517-8a96-d37d46225710"
+            },
+            {
+              "type": "match",
+              "id": "03c6124c-ae1a-4c9d-879e-4d33c6e788f2"
+            },
+            {
+              "type": "match",
+              "id": "d58f08c9-8115-439f-82bc-2553000bfa68"
+            },
+            {
+              "type": "match",
+              "id": "573199b0-0fa0-49bd-9324-71951a838d6a"
+            },
+            {
+              "type": "match",
+              "id": "f6465fad-63e0-4fa1-87b3-ecaf9aa6303b"
+            },
+            {
+              "type": "match",
+              "id": "b0f59de3-c56d-4fe5-a0ae-8cf1c40ac349"
+            },
+            {
+              "type": "match",
+              "id": "383cdd49-f1bd-4ab2-9712-2fab7799795b"
+            },
+            {
+              "type": "match",
+              "id": "52bc11e5-9f49-4eaf-ae91-3a211a3b0f89"
+            },
+            {
+              "type": "match",
+              "id": "172806e7-0026-4d96-a7a3-9e0d70406af5"
+            },
+            {
+              "type": "match",
+              "id": "ecad5eb0-26ec-4ab1-aec2-65621f3e7eea"
+            },
+            {
+              "type": "match",
+              "id": "8a91cec8-9515-4801-a3df-ffcbaeed98a2"
+            },
+            {
+              "type": "match",
+              "id": "db732102-4107-4be2-abbf-2f9e9cea4b17"
+            },
+            {
+              "type": "match",
+              "id": "1134fe88-f263-4105-b3d3-c9860fac9503"
+            },
+            {
+              "type": "match",
+              "id": "8b89e56c-e399-44bc-bae8-54974cbdbcea"
+            },
+            {
+              "type": "match",
+              "id": "555c4acb-a883-42e7-8b08-dd27b914013b"
+            },
+            {
+              "type": "match",
+              "id": "0baf1cb8-e855-4d9a-9593-e8b1cc24bb13"
+            },
+            {
+              "type": "match",
+              "id": "15e8967c-79e0-4cb0-8215-e26360b6b304"
+            },
+            {
+              "type": "match",
+              "id": "3da094e0-c331-459d-a0f0-3d1f586c190a"
+            },
+            {
+              "type": "match",
+              "id": "c12b2cc2-15ba-42d8-a017-3538f8662f2d"
+            },
+            {
+              "type": "match",
+              "id": "632231dc-809c-4943-99b8-d4a9b2945c3a"
+            },
+            {
+              "type": "match",
+              "id": "e933ec23-4dd4-46e8-9c37-fdc9d1518d99"
+            },
+            {
+              "type": "match",
+              "id": "9ddec6ab-1376-44aa-b382-fe961940c3ae"
+            },
+            {
+              "type": "match",
+              "id": "0994b43e-2c96-4a4d-bf16-36a5324356d6"
+            },
+            {
+              "type": "match",
+              "id": "1b5a4b17-019d-4cb8-bdd8-6affdaa9babe"
+            },
+            {
+              "type": "match",
+              "id": "0780f796-b01d-447d-a31b-73ebdbb9bf13"
+            },
+            {
+              "type": "match",
+              "id": "49241f69-48bc-480d-9318-bfe852e5ca32"
+            },
+            {
+              "type": "match",
+              "id": "18fabffd-5d50-4468-90f1-4a280a073850"
+            },
+            {
+              "type": "match",
+              "id": "af097c6a-916d-4a73-9722-09e99a4ac6a1"
+            },
+            {
+              "type": "match",
+              "id": "576847d3-4802-4731-ac06-9b2be23e4890"
+            },
+            {
+              "type": "match",
+              "id": "6fac8a68-3e33-45f5-b7aa-9d8ce4ea8d1b"
+            },
+            {
+              "type": "match",
+              "id": "9de76c59-8280-4a23-84f9-1b22bca3e74e"
+            },
+            {
+              "type": "match",
+              "id": "77b95c17-7d5f-4d0f-bfef-c8a59c5288be"
+            },
+            {
+              "type": "match",
+              "id": "1be05e72-2a6b-429c-b365-01dabed9a9b2"
+            },
+            {
+              "type": "match",
+              "id": "520a3fca-83c8-4294-b3e0-281d04d41dbd"
+            }
+          ]
+        }
+      },
+      "links": {
+        "self": "https://api.pubg.com/shards/steam/players/account.ed7fbcf212b3456392f2959641cd738c",
+        "schema": ""
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]\u003dhwinn"
+  },
+  "meta": {}
+}
