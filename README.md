@@ -26,7 +26,13 @@ As of July 2025, the PubgAPI-Java project has the following primary functionalit
 * 5: "killCounts" - ambiguity in API's definition
 * 6: None
 
-## Acquire Data ##
+## Getting Started ##
+
+### Clone Project ###
+1. Clone PubgAPI-Java/work2 to local device.
+2. Open project in Visual Studio Code (VSC).
+
+### Acquire Data ###
 To acquire new match data, run Main_API.java as follows:
 
 1. Open Main_API.java.
@@ -43,7 +49,7 @@ Data should be stored at requestsDir/< player >/< timestamp >/matches. <br>
 Example: requestsDir/Shrimzy/timestamp_1750557892980/matches <br>
 
 
-## Analyze Data ##
+### Analyze Data ###
 To analyze match data collected, run Main.java as follows:
 
 1. In build.sh, uncomment “mainClass = ‘Main’. Comment out “mainClass = ‘Main_API’.
