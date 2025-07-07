@@ -100,40 +100,8 @@ public class BotCounts {
 //      (like total percentage of bots across a group of games)
 
 
-//Checker... (temporary)
-
-//if(data.contains("numAlivePlayers") && gameHasStarted)
-//{
-//    System.out.println(data);
-//}
-//if(data.contains("LogPlayerKillV2") && gameHasStarted)
-//{
-//    countLogPlayerKillV2++;
-//    System.out.println(data);
-//    System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
-//}
-//if(data.contains("killCount") && gameHasStarted)
-//{
-//  //System.out.println("killCount data = " + data); //Temporarily remove 06/21/25
-//    countKillCounts++;
-// //   System.out.println("countKillCounts =      " + countKillCounts);
-//}
-//Temporary:
-//if(data.contains("numParticipatedPlayers"))
-//{
-//    System.out.println(data);
-//}
-
-
+// "numAlivePlayers" && gameHasStarted
+// "LogPlayerKillV2" && gameHasStarted
+// "killCount" && gameHasStarted
+// "numParticipatedPlayers"
 //A "revival" is when a player resurrects a downed / down-but-not-out (DBNO) teammate.
-//Comment out LogPlayerRevive count 06/22/25.
-/*
-if(data.contains("LogPlayerRevive") && gameHasStarted)
-{
-    countRevivals++;
-    //System.out.println(data + " (revival #" + countRevivals); //Temporarily remove 06/21/25
-}
-*/
-//System.out.println("countKillCounts =      " + countKillCounts);
-//System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
-//End of temporary checker
