@@ -2,10 +2,10 @@
 In-progress. Actively updated
 
 ## Purpose ## 
-This project started because I wanted to know how many bots were in the pubg games I played. Upon seeing what the telemetry data looked like, I realized there were a lot of other statistics I could learn about, too. 
+This project started because I wanted to know how many bots were in the Pubg games I played. Upon seeing what the telemetry data looked like, I realized there were a lot of other statistics I could learn about, too. 
 
 ## Functionalities ##
-As of October 2022, the Pubg-API-Java project has the following primary functionalities:
+As of July 2025, the PubgAPI-Java project has the following primary functionalities:
 
 | WHAT    |   HOW   | WHERE | EXAMPLE OUTPUT |
 |-------- | ------- | ----- | -------------- |
@@ -25,6 +25,44 @@ As of October 2022, the Pubg-API-Java project has the following primary function
 * 4: None
 * 5: "killCounts" - ambiguity in API's definition
 * 6: None
+
+## Getting Started ##
+
+### Clone Project ###
+1. Clone PubgAPI-Java/work2 to local device.
+2. Open project in Visual Studio Code (VSC).
+
+### Acquire Data ###
+To acquire new match data, run Main_API.java as follows:
+
+1. Open Main_API.java.
+2. See “API request = new API_Request(player, matchLimit)”. EX: (CoorsLatte, 15).
+3. Replace the player name if desired. Use an existing player.
+4. Replace the matchLimit if desired (recommended range: 1-15).
+5. In build.sh, uncomment “mainClass = ‘Main_API’. Comment out “mainClass = ‘Main’.
+6. In terminal, navigate to PubgAPI-Java.
+7. Type “./gradle clean build"
+8. Type “./gradlew run”
+
+A "BUILD SUCCESSFUL" message means data collection is complete. <br>
+Data should be stored at requestsDir/< player >/< timestamp >/matches. <br>
+Example: requestsDir/Shrimzy/timestamp_1750557892980/matches <br>
+
+
+### Analyze Data ###
+To analyze match data collected, run Main.java as follows:
+
+1. In build.sh, uncomment “mainClass = ‘Main’. Comment out “mainClass = ‘Main_API’.
+2. In terminal, navigate to PubgAPI-Java.
+3. Type “./gradle clean build"
+4. Type “./gradlew run”
+5. When prompted, enter the data storage location of the directory with files to analyze. <br> EX: "requestsDir/Shrimzy/timestamp_1750557892980/matches"
+6. Choose a functionality to analyze the data with. EX: To countBotsAndPeople, type 0 and press enter.
+7. Wait for data collection to complete.
+7. To continue, type 'y' when prompted with "Any other requests? (y/n)".
+8. To exit, type 'n' when prompted with "Any other requests? (y/n)".
+7. The requestHistory.txt file should update to include recent analysis requests.
+
 
 ## User's Guide ##
 * [How do I make an API request?](https://github.com/JS1936/PubgAPI-Java/files/10244822/Q_.How.do.I.make.an.API.request_.pdf)
