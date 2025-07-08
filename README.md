@@ -95,7 +95,7 @@ To analyze match data collected, run Main.java as follows:
 
 
 ### Inefficient ###
-* Request.java //getRequest, getTypes, getScopes, getRequest_type, getRequest_scope
+* Request.java //getRequest, getTypes, getScopes, getRequest_type, getRequest_scope -- removed
 
 ## [Updates](https://github.com/JS1936/PubgAPI-Java/blob/work2/UpdatesRecord.md)
 
