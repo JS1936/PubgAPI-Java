@@ -34,13 +34,13 @@ public class API_Request extends API {
     public API_Request(String player) throws IOException {  this(player, 5);    }
 
     //In-progress
-    public API_Request(Preset preset) throws IOException {
-        System.out.println("Creating a preset-based API_request");
-        initializeSpecificRequest();
-        //this.matchLimit =...
-        this.match_list = (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
-        //
-    }
+    // public API_Request(Preset preset) throws IOException {
+    //     System.out.println("Creating a preset-based API_request");
+    //     initializeSpecificRequest();
+    //     //this.matchLimit =...
+    //     this.match_list = (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
+    //     //
+    // }
     //public void doCustomRequestPreset()
     //{
 

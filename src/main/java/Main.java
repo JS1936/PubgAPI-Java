@@ -172,15 +172,16 @@ public abstract class Main {
 
         }else if(request == 2) {
 
-            MatchManager.printPlayersByTeam(prettyFile); //seems to work (but quite messy)
+            MatchPlayers.printPlayersByTeam(prettyFile);
+            //MatchManager.printPlayersByTeam(prettyFile); //seems to work (but quite messy)
 
         }else if(request == 3) {
 
-            MatchManager.winnerWeapons(prettyFile); //seems to work
+            MatchWeapons.winnerWeapons(prettyFile); //seems to work
 
         }else if(request == 4) {
 
-            Ranking.ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors)
+            MatchRanking.ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors)
 
         }else if(request == 5) {
             //NOT WORKING
@@ -192,6 +193,9 @@ public abstract class Main {
             mapsPlayed.add(name);
             System.out.println("map name: " + name);
 
+        }else if(request == 7) {
+            System.out.println("Death Board is not fully implemented yet.");
+        
         }else
         {
             System.out.println("Invalid request"); //for example's sake (currently)
@@ -232,6 +236,7 @@ public abstract class Main {
         functionalities.add("ranking (of a specific person)");
         functionalities.add("calculateKillCountsJSON");
         functionalities.add("printMapsPlayed");
+        functionalities.add("watchDeathBoard"); //not fully implemented
     }
 
     //TODO: allow presets to utilize this ("input"...) //abandon

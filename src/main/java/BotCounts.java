@@ -22,7 +22,7 @@ public class BotCounts {
             Scanner scan = new Scanner(prettyFile);
 
             Vector<String> playerNames = new Vector<String>(); //account.
-            Vector<String> botNames = new Vector<String>(); //ai.3
+            Vector<String> botNames = new Vector<String>(); //ai.3 (not guards)
             boolean gameHasStarted = false;
 
             while (scan.hasNextLine()) {
@@ -30,7 +30,6 @@ public class BotCounts {
                 
                 if(data.contains("LogMatchEnd"))
                 {
-                    //System.out.println("----END OF MATCH=====\n");
                     gameHasStarted = false; //imperfect
                 }
                 //Only start counting bots and people IF the game has started (people can enter and leave beforehand)
@@ -56,9 +55,9 @@ public class BotCounts {
                         {
                             playerNames.add(account_id);
                         }
-                    } else //bot (or guard, potentially)
+                    } else //bot
                     {
-                        if (data.contains("ai.3")) //bot //<-- change to ai.3 to identify user_ai, not guards
+                        if (data.contains("ai.3"))
                         {
                             //Store account_id
                             int accountStart = data.indexOf("ai.3");
@@ -100,40 +99,8 @@ public class BotCounts {
 //      (like total percentage of bots across a group of games)
 
 
-//Checker... (temporary)
-
-//if(data.contains("numAlivePlayers") && gameHasStarted)
-//{
-//    System.out.println(data);
-//}
-//if(data.contains("LogPlayerKillV2") && gameHasStarted)
-//{
-//    countLogPlayerKillV2++;
-//    System.out.println(data);
-//    System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
-//}
-//if(data.contains("killCount") && gameHasStarted)
-//{
-//  //System.out.println("killCount data = " + data); //Temporarily remove 06/21/25
-//    countKillCounts++;
-// //   System.out.println("countKillCounts =      " + countKillCounts);
-//}
-//Temporary:
-//if(data.contains("numParticipatedPlayers"))
-//{
-//    System.out.println(data);
-//}
-
-
+// "numAlivePlayers" && gameHasStarted
+// "LogPlayerKillV2" && gameHasStarted
+// "killCount" && gameHasStarted
+// "numParticipatedPlayers"
 //A "revival" is when a player resurrects a downed / down-but-not-out (DBNO) teammate.
-//Comment out LogPlayerRevive count 06/22/25.
-/*
-if(data.contains("LogPlayerRevive") && gameHasStarted)
-{
-    countRevivals++;
-    //System.out.println(data + " (revival #" + countRevivals); //Temporarily remove 06/21/25
-}
-*/
-//System.out.println("countKillCounts =      " + countKillCounts);
-//System.out.println("countLogPlayerKillV2 = " + countLogPlayerKillV2);
-//End of temporary checker
