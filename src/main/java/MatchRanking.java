@@ -12,8 +12,7 @@ public class MatchRanking {
      * and prints a message to console and requestHistory.
      */
     public static String ranking(String name, File prettyFile) throws IOException {
-        JSONObject match_definition = JSONManager.returnObject(prettyFile, "LogMatchDefinition");
-        String match_id = match_definition.get("MatchId").toString();
+        String match_id = JSONManager.getJSONValue(prettyFile, "LogMatchDefinition", "MatchId");
         JSONObject match_end = JSONManager.returnObject(prettyFile, "LogMatchEnd");
 
         JSONArray players = match_end.getJSONArray("characters");
@@ -26,7 +25,7 @@ public class MatchRanking {
                 String player_ranking = player_details.get("ranking").toString();
                 String formal_rankStatement = "\n-player:" + player_name + ", rank: " + player_ranking + ", match: " + match_id;
                 FileManager.writeToFileAndConsole(formal_rankStatement);
-                return player_details.get("ranking").toString();
+                return player_ranking;
             }
         }
         String playerWasAbsent = name + " was not in the game (" + prettyFile.getName() + ")";
