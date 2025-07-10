@@ -232,6 +232,7 @@ public abstract class Main {
         functionalities.add("ranking (of a specific person)");
         functionalities.add("calculateKillCountsJSON");
         functionalities.add("printMapsPlayed");
+        functionalities.add("watchDeathBoard");
     }
 
     //TODO: allow presets to utilize this ("input"...) //abandon

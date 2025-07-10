@@ -45109,3 +45109,165 @@ Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timesta
 File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
 Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
 #bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=3_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	WeapP90_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapFNFal_C x1
+	WeapP90_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+BigChorizoXXL Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Bertoxxulous69 Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+TallenZek Summary (Winner): 
+	Primary Weapon #1: 	WeapMini14_C
+	Primary Weapon #2: 	WeapUMP_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	N/A x1
+	WeapMP5K_C x1
+	WeapM24_C x1
+	WeapMini14_C x1
+	WeapUMP_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM79_C x1
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+ParksNRec Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+SlouchGodRandy Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iLostCausei Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Wassssa Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMP5K_C x2
+	WeapKar98k_C x1
+	N/A x4
+	WeapM24_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x4
+
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapMk12_C
+	Primary Weapon #2: 	WeapMG3_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapMk12_C x1
+	WeapMG3_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Jeggred Summary (Winner): 
+	Primary Weapon #1: 	WeapL6_C
+	Primary Weapon #2: 	WeapAUG_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Johnson1004 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapIntegratedRepair_C
+-------------------------------------------------
+pH-Matranse Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapFNFal_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+vV1RuZz Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapL6_C x1
+	WeapAUG_C x2
+	WeapMk12_C x1
+	WeapHK416_C x1
+	WeapFNFal_C x1
+	WeapMP5K_C x1
+	WeapSKS_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	WeapIntegratedRepair_C x1
+	WeapM79_C x1
+
