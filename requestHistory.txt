@@ -47117,3 +47117,105 @@ File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
 Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
 
 -player:Shrimzy, rank: 2, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.8d385883-2a04-4035-85cd-49a4f8372159
+
+request=6_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+REQUEST = 6
+mapsPlayed.size() : 5
+Frequencies of each map played: 
+Tiger_Main x2
+
+request=4_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+-player:Shrimzy, rank: 29, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+-player:Shrimzy, rank: 7, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+-player:Shrimzy, rank: 2, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.8d385883-2a04-4035-85cd-49a4f8372159
+
+request=4_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+-player:Shrimzy, rank: 29, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+-player:Shrimzy, rank: 7, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+-player:Shrimzy, rank: 2, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.8d385883-2a04-4035-85cd-49a4f8372159

@@ -56,4 +56,12 @@ public class JSONManager {
         //return null; //What if _T type is not found?
         return multipleObjects;
     }
+
+    /* 
+     * Return value from a particular JSON object section.
+     */
+    public static String getJSONValue(File prettyFile, String section, String key) {
+        JSONObject JSON = JSONManager.returnObject(prettyFile, section);
+        return JSON.get(key).toString();
+    }
 }
