@@ -7,7 +7,6 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.charset.Charset;
 
 /*
@@ -31,7 +30,7 @@ public class FileManager {
     public static File makePretty(File fileName) throws IOException {
 
         //read in file as string
-        String uglyString = FileUtils.readFileToString(fileName);
+        String uglyString = FileUtils.readFileToString(fileName, "UTF-8");
         System.out.println("filename = " + fileName);
 
         //make "pretty" version of the string
@@ -42,7 +41,7 @@ public class FileManager {
         File prettyFile = new File(fileName.getPath());
 
         //write "pretty" text to new file
-        FileUtils.writeStringToFile(prettyFile, prettyJsonString);
+        FileUtils.writeStringToFile(prettyFile, prettyJsonString, "UTF-8");
 
         return prettyFile;
     }
@@ -53,7 +52,7 @@ public class FileManager {
     {
         String file_content = "";
         try {
-            file_content = FileUtils.readFileToString(prettyFile);
+            file_content = FileUtils.readFileToString(prettyFile, "UTF-8");
         } catch (FileNotFoundException e) {
             System.out.println("Error: file not found.");
             e.printStackTrace();
