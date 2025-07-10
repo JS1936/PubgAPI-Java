@@ -9,27 +9,6 @@ import java.util.Vector;
  */
 public class MatchManager {
 
-
-    /*
-     * Prints a match summary as follows: match_type, teamSize, perspective, map name, match id.
-     * Example: official-4-fpp: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.8d385883-2a04-4035-85cd-49a4f8372159
-     */
-    public static void printMatchSummary(File prettyFile)
-    {
-        String match_id = getMatchID(prettyFile);
-        String player_perspective = getPlayerPerspective(match_id);
-        String match_type = getMatchType(match_id);
-        int teamSizeForOfficialMatch = getMaximumTeamSizeForOfficialMatch(match_id); //what about for arcade?
-        String map_name = getMapName(prettyFile);
-
-        String match_summary = match_type +"-" + teamSizeForOfficialMatch + "-" + player_perspective + "-" + map_name + ": " + match_id;
-        try {
-            FileManager.writeToFileAndConsole("Match summary:\t" + match_summary);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     /*
      * Returns the match id of a prettified file.
      * Example: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.6d3a19db-fb2c-4d29-b64c-47cc67073bad

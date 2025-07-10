@@ -164,7 +164,6 @@ public abstract class Main {
         //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
         if(request == 0)
         {
-            //MatchManager.printMatchSummary(prettyFile);
             BotCounts.countBotsAndPeople(prettyFile); //seems to work
         }
         else if(request == 1)
