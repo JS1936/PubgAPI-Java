@@ -25,20 +25,12 @@ public class MatchPlayers {
     //TO-DO: Adjust printouts so println and history align better.
     public static Vector<JSONObject> printPlayersByTeam(File prettyFile)
     {
-        System.out.println("NEW FILE_______________________________________________");
         Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
-
         JSONArray playersList = new JSONArray();
 
         //Store data from LogMatchStart in match_start JSONObject
         JSONObject match_start = JSONManager.returnObject(prettyFile, "LogMatchStart");
-
-        //int team_capacity = match_start.getInt("teamSize"); //1/5/2023 remove
-        //Added 1/5/2023:
-        String match_id = MatchManager.getMatchID(prettyFile);
-        int team_capacity = MatchManager.getMaximumTeamSizeForOfficialMatch(match_id);
-        System.out.println("Team capacity = " + team_capacity);
-
+        
         //Check if the game is custom
         boolean is_custom_game = match_start.getBoolean("isCustomGame");
         if(is_custom_game)
@@ -47,9 +39,11 @@ public class MatchPlayers {
             System.exit(0);
         }
 
-        //Use 425 or 500 or something else? 150?
-        //Establish maximum number of teams*
-        int max_num_teams = 500; //because bots start at 200 and guards start at 400 -->could have sorted them that way, too (identifying type)
+        String match_id = MatchManager.getMatchID(prettyFile);
+        int team_capacity = MatchManager.getMaximumTeamSizeForOfficialMatch(match_id);
+
+        //Establish maximum number of teams
+        int max_num_teams = 150; //>100 (+ buffer), otherwise arbitrary
         if(team_capacity > 4) //Only deathmatch is then an option currently, since custom games are not handled
         {
             System.out.println("Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
@@ -91,18 +85,12 @@ public class MatchPlayers {
                     System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
                     return null; //careful
                 }
-                //System.out.println("CURR: " + peopleByTeam.get(insert + loc));
-                //System.out.println("ADD?: " + character.get("name"));
                 if (peopleByTeam.get(insert + loc) != null) { //Some team member holds that spot.
                     if(peopleByTeam.get(insert + loc).get("name") == character.get("name")) //Self holds that spot
                     {
                         System.out.println("Already listed " + character + " as part of the team. Don't want to list duplicately");
                         //j++;
                         loc = team_capacity;
-                    }
-                    else //Other team member holds that spot
-                    {
-                        //loc++;
                     }
                 } else {
                     peopleByTeam.set(insert + loc, character); //Adding player here
@@ -122,14 +110,6 @@ public class MatchPlayers {
                 System.out.println(" " + peopleByTeam.get(in).get("ranking").toString());
             }
         }
-
         return peopleByTeam; //adding this so that ranking method can be more "independent"
-        /*
-        System.out.println("RANKING SEARCH: ");
-        ranking("JS1936", peopleByTeam);
-        ranking("matt112", peopleByTeam);
-        ranking("SlipperyKoala", peopleByTeam); //should be 1 (at least once)
-         */
     }
-    
 }
