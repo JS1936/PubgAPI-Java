@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 //The Ranking class calculates and prints the ranking of a specific player in a specific match or matches.
-public class Ranking {
+public class MatchRanking {
 
     /*
      * Returns ranking as a string

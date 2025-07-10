@@ -22,7 +22,7 @@ public class BotCounts {
             Scanner scan = new Scanner(prettyFile);
 
             Vector<String> playerNames = new Vector<String>(); //account.
-            Vector<String> botNames = new Vector<String>(); //ai.3
+            Vector<String> botNames = new Vector<String>(); //ai.3 (not guards)
             boolean gameHasStarted = false;
 
             while (scan.hasNextLine()) {
@@ -30,7 +30,6 @@ public class BotCounts {
                 
                 if(data.contains("LogMatchEnd"))
                 {
-                    //System.out.println("----END OF MATCH=====\n");
                     gameHasStarted = false; //imperfect
                 }
                 //Only start counting bots and people IF the game has started (people can enter and leave beforehand)
@@ -56,9 +55,9 @@ public class BotCounts {
                         {
                             playerNames.add(account_id);
                         }
-                    } else //bot (or guard, potentially)
+                    } else //bot
                     {
-                        if (data.contains("ai.3")) //bot //<-- change to ai.3 to identify user_ai, not guards
+                        if (data.contains("ai.3"))
                         {
                             //Store account_id
                             int accountStart = data.indexOf("ai.3");
