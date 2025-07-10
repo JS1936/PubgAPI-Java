@@ -43,7 +43,7 @@ public class MatchPlayers {
         int team_capacity = MatchManager.getMaximumTeamSizeForOfficialMatch(match_id);
 
         //Establish maximum number of teams
-        int max_num_teams = 150; //>100 (+ buffer), otherwise arbitrary
+        int max_num_teams = 500; //>100 (+ buffer), otherwise arbitrary
         if(team_capacity > 4) //Only deathmatch is then an option currently, since custom games are not handled
         {
             System.out.println("Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
@@ -112,4 +112,8 @@ public class MatchPlayers {
         }
         return peopleByTeam; //adding this so that ranking method can be more "independent"
     }
+    //public static Vector<JSONObject> addPlayerToTeam(Vector<Object> peopleByTeam)
+    //{
+    //    return peopleByTeam;
+    //}
 }
