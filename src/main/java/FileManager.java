@@ -63,7 +63,7 @@ public class FileManager {
         return file_content;
     }
 
-    //Moved into FileManager from API_Request (12/15)
+    //Creates a new file and parent files if they do not exist.
     public static void createNewFileAndParentFilesIfTheyDoNotExist(File file) throws IOException {
         if(file.exists()) {
             System.out.println("Response file exists!");
@@ -81,8 +81,6 @@ public class FileManager {
     public static void writeToFileAndConsole(String text) throws IOException {
         System.out.println(text);
         FileUtils.writeStringToFile(Main.requestHistory, text + "\n", (Charset) null, true);
-        //Note: ln, \n are affecting printout for (1)
-        //Would "text + \n" work? (Rather than "\n + text")
     }
 
     /*
@@ -98,24 +96,8 @@ public class FileManager {
             System.out.println();
             FileUtils.writeStringToFile(Main.requestHistory, "\n", (Charset) null, true);
         }
-        //Note: ln, \n are affecting printout for (1)
-        //Would "text + \n" work? (Rather than "\n + text")
     }
 
 }
 
-//If a file called fileName exists, returns it. If it does not exist, creates one and returns it.
-    /*
-    public static File getFile(String fileName)
-    {
-        File file = new File(fileName);
-        if(!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return file;
-    }
-     */
+//Note: for writeToFileAndConsole --> ln, \n are affecting printout for (1). Would "text + \n" work? (Rather than "\n + text")

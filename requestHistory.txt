@@ -47569,3 +47569,337 @@ Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/time
 File name: 	telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81
 Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752183792742/matches/telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81
 #bots:       4 / 100 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752183792742/matches/telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81]
+
+request=4_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+-player:Shrimzy, rank: 29, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+-player:Shrimzy, rank: 7, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+-player:Shrimzy, rank: 2, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.8d385883-2a04-4035-85cd-49a4f8372159
+
+request=3_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	WeapP90_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapFNFal_C x1
+	WeapP90_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+BigChorizoXXL Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Bertoxxulous69 Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+TallenZek Summary (Winner): 
+	Primary Weapon #1: 	WeapMini14_C
+	Primary Weapon #2: 	WeapUMP_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	N/A x1
+	WeapMP5K_C x1
+	WeapM24_C x1
+	WeapMini14_C x1
+	WeapUMP_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM79_C x1
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+ParksNRec Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+SlouchGodRandy Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iLostCausei Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Wassssa Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMP5K_C x2
+	WeapKar98k_C x1
+	N/A x4
+	WeapM24_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x4
+
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapMk12_C
+	Primary Weapon #2: 	WeapMG3_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapMk12_C x1
+	WeapMG3_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Jeggred Summary (Winner): 
+	Primary Weapon #1: 	WeapL6_C
+	Primary Weapon #2: 	WeapAUG_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Johnson1004 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapIntegratedRepair_C
+-------------------------------------------------
+pH-Matranse Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapFNFal_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+vV1RuZz Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapL6_C x1
+	WeapAUG_C x2
+	WeapMk12_C x1
+	WeapHK416_C x1
+	WeapFNFal_C x1
+	WeapMP5K_C x1
+	WeapSKS_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	WeapIntegratedRepair_C x1
+	WeapM79_C x1
+
+
+request=2_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+request=2_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+request=2_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+request=2_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+request=2_
+
+----------------
+File name: 	requestHistory.txt
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestHistory.txt
+
+request=2_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159

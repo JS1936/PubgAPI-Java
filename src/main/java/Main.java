@@ -162,33 +162,13 @@ public abstract class Main {
     public static boolean getInfo(int request, File prettyFile, String nameIfNeeded) throws IOException //changed return from void -> boolean 5/17/2022
     {
         //If doing separate task-objects (EX: kill counts), could "create" them here in an array, call via the ifs)
-        if(request == 0)
-        {
-            BotCounts.countBotsAndPeople(prettyFile); //seems to work
-        }
-        else if(request == 1)
-        {
-            KillCounts.calculateKillCounts(prettyFile); //seems to work
-
-        }else if(request == 2) {
-
-            MatchPlayers.printPlayersByTeam(prettyFile);
-            //MatchManager.printPlayersByTeam(prettyFile); //seems to work (but quite messy)
-
-        }else if(request == 3) {
-
-            MatchWeapons.winnerWeapons(prettyFile); //seems to work
-
-        }else if(request == 4) {
-
-            MatchRanking.ranking(nameIfNeeded, prettyFile); //seems to work (ALMOST --> getting null errors)
-
-        }else if(request == 5) {
-            //NOT WORKING
-            KillCountsJSON.calculateKillCountsJSON(prettyFile);
-            //having trouble accessing names of the winners specifically
-
-        }else if(request == 6) {
+        if(request == 0)        {  BotCounts.countBotsAndPeople(prettyFile);    } //seems to work
+        else if(request == 1)   {  KillCounts.calculateKillCounts(prettyFile);  } //seems to work
+        else if(request == 2)   {  MatchPlayers.printPlayersByTeam(prettyFile); } //seems to work (but quite messy)
+        else if(request == 3)   {  MatchWeapons.winnerWeapons(prettyFile);      } //seems to work
+        else if(request == 4)   {  MatchRanking.ranking(nameIfNeeded, prettyFile);} //seems to work (ALMOST --> getting null errors)
+        else if(request == 5)   {  KillCountsJSON.calculateKillCountsJSON(prettyFile); } ////NOT WORKING. Having trouble accessing names of the winners specifically
+        else if(request == 6) {
             String name = MatchManager.getMapName(prettyFile);
             mapsPlayed.add(name);
             System.out.println("map name: " + name);
