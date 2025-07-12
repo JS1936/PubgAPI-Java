@@ -1,5 +1,5 @@
 import org.apache.commons.io.FileUtils;
-import org.json.JSONObject;
+//import org.json.JSONObject;
 
 import java.io.*;
 import java.nio.charset.Charset;
@@ -7,7 +7,9 @@ import java.nio.file.Path;
 import java.util.*;
 
 
-//The Main class serves as a driver for the PubgAPI-Java project.
+/*
+ * The Main class serves as a driver for the PubgAPI-Java project.
+ */
 public abstract class Main {
 
     public static File requestHistory = null; //Consider: make non-global
@@ -28,6 +30,19 @@ public abstract class Main {
         psuedoMain(input, desiredFolder);
         input.close();
         System.out.println("Shutting down program.");
+    }
+
+    //Adds desired functionalities to vector of functionalities. Customizable before/after runtime.
+    protected static void initiateFunctionalities()
+    {
+        functionalities.add("countBotsAndPeople");
+        functionalities.add("calculateKillCounts");
+        functionalities.add("printPlayersByTeam");
+        functionalities.add("winnerWeapons");
+        functionalities.add("ranking (of a specific person)");
+        functionalities.add("calculateKillCountsJSON");
+        functionalities.add("printMapsPlayed");
+        //functionalities.add("watchDeathBoard"); //not fully implemented
     }
 
     //Preserves requestHistory from previous program runs. (Further histories will be appended.)
@@ -83,7 +98,7 @@ public abstract class Main {
         //TODO: allow presets to utilize this
         String prompt_requestType = "What would you like to know?";
         printOptionsToChooseFrom(functionalities, prompt_requestType);
-        int request = getRequestType(input); //(requestType)
+        int request = getRequestType(input, functionalities); //(requestType)
 
 
         try {
@@ -206,21 +221,9 @@ public abstract class Main {
         }
     }
 
-    //Adds desired functionalities to vector of functionalities. Customizable before/after runtime.
-    protected static void initiateFunctionalities()
-    {
-        functionalities.add("countBotsAndPeople");
-        functionalities.add("calculateKillCounts");
-        functionalities.add("printPlayersByTeam");
-        functionalities.add("winnerWeapons");
-        functionalities.add("ranking (of a specific person)");
-        functionalities.add("calculateKillCountsJSON");
-        functionalities.add("printMapsPlayed");
-        functionalities.add("watchDeathBoard"); //not fully implemented
-    }
-
     //TODO: allow presets to utilize this ("input"...) //abandon
-    private static int getInput(Scanner input, Vector<String> optionsToChooseFrom)
+    //Returns an integer from [0, functionalities.size()-1] representing a specific type of request/functionality.
+    private static int getRequestType(Scanner input, Vector<String> optionsToChooseFrom)
     {
         int request = -1; //not yet a valid request
         boolean requestAccepted = false;
@@ -241,11 +244,11 @@ public abstract class Main {
     }
 
     //Returns an integer from [0, functionalities.size()-1] representing a specific type of request/functionality.
-    private static int getRequestType(Scanner input)
-    {
-        int requestType = getInput(input, functionalities);
-        return requestType;
-    }
+    // private static int getRequestType(Scanner input)
+    // {
+    //     int requestType = getInput(input, functionalities);
+    //     return requestType;
+    // }
 
     //Returns true if chosenOption >= 0 and chosenOption < functionalities.size(). Otherwise, returns false.
     private static boolean chosenOptionIsValid(int chosenOption)
