@@ -48340,3 +48340,34 @@ Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/time
 File name: 	telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81
 Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81
 #bots:       4 / 100 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81]
+
+request=0_
+
+----------------
+File name: 	telemetry-for-match_id_c916e74c-455a-422a-9aff-c099176600f0
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_c916e74c-455a-422a-9aff-c099176600f0
+/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_c916e74c-455a-422a-9aff-c099176600f0 is not an official match. Not going to analyze it.
+
+
+----------------
+File name: 	telemetry-for-match_id_42a4d25a-c001-4912-9783-6db80f4f0e03
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_42a4d25a-c001-4912-9783-6db80f4f0e03
+#bots:       5 / 87 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_42a4d25a-c001-4912-9783-6db80f4f0e03]
+
+
+----------------
+File name: 	telemetry-for-match_id_a07b9636-450b-405e-8aeb-aeea54bd3f0d
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_a07b9636-450b-405e-8aeb-aeea54bd3f0d
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_a07b9636-450b-405e-8aeb-aeea54bd3f0d]
+
+
+----------------
+File name: 	telemetry-for-match_id_b5693f7f-fa9f-4720-ae66-a471b93a47e2
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_b5693f7f-fa9f-4720-ae66-a471b93a47e2
+/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_b5693f7f-fa9f-4720-ae66-a471b93a47e2 is not an official match. Not going to analyze it.
+
+
+----------------
+File name: 	telemetry-for-match_id_f341a6b0-b609-4ce0-9be1-9f1e0abce882
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_f341a6b0-b609-4ce0-9be1-9f1e0abce882
+/Users/jenniferstibbins/PubgAPI-Java/requestsDir/matt112/timestamp_1752345313064/matches/telemetry-for-match_id_f341a6b0-b609-4ce0-9be1-9f1e0abce882 is not an official match. Not going to analyze it.
