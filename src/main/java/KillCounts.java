@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
 
-//The KillCounts class is a MANUAL approximation of the KillCountsJSON class. Reports killCount data on a single match.
-//TODO: Decide -> more accurate to say downCounts/knockCounts? (can exceed #players in case of res)
+/*
+ * The KillCounts class is a MANUAL approximation of the KillCountsJSON class. Reports killCount data on a single match.
+ */
 public class KillCounts {
 
     /*
@@ -22,8 +23,6 @@ public class KillCounts {
     private static void printKillCountsToHistoryAndConsole(Vector<String> counts) throws IOException {
 
         FileManager.writeToFileAndConsole("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");
-
-        //28 Dec 2022 edit: Changed constant of 30 for size of frequency array to instead be new int[counts.size()]
         int[] frequencies = new int[counts.size()]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
         int maxKills = 0;
         int killsByTopTen = 0;
@@ -93,7 +92,7 @@ public class KillCounts {
     //properly without repeats
     public static void calculateKillCounts(File prettyFile) {
         Vector<String> killCounts = new Vector<String>();
-        String matchType = MatchManager.getMatchType(prettyFile.toString()); //added 28 Dec 2022
+        String matchType = MatchManager.getMatchType(prettyFile.toString());
 
         try {
             //Check match type. Only calculate killCounts if match type is "official" (for now)

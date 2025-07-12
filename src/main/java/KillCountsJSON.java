@@ -3,11 +3,13 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
+//import java.util.HashSet;
+//import java.util.Set;
 import java.util.Vector;
 
-//The KillCountsJSON class uses JSONObjects to calculate and print data on kills from a match.
+/*
+ * The KillCountsJSON class uses JSONObjects to calculate and print data on kills from a match.
+ */
 //TODO: Decide whether to print full calculations to file (not just console)
 public class KillCountsJSON {
 
@@ -66,20 +68,8 @@ public class KillCountsJSON {
             //System.out.println("   killcount: " + killCount);
             JSONObject victim = kill_event.getJSONObject("victim");
             String name = victim.get("name").toString();
-            System.out.println(name + " got " + killCount + " kills"); //comment out //REVISIT
+            //System.out.println(name + " got " + killCount + " kills"); //comment out //REVISIT
 
-            //index = number of kills they got
-            //TEMP:
-            //if(killCount > 0)
-            //{
-            //    boolean removed = namesByNumKills.get(killCount - 1).remove(name); //temporary. Trying this to try to get rid of duplicate / progression. 12/22/2022.
-            //    if(removed)
-            //    {
-            //        System.out.println("REMOVED");
-            //        countKillEvents--;
-            //    }
-            //}
-            //namesByNumKills.remove(name); //temporary. Trying this to try to get rid of duplicate / progression. 12/22/2022.
             if(!namesList.contains(name))
             {
                 namesByNumKills.get(killCount).add(name);

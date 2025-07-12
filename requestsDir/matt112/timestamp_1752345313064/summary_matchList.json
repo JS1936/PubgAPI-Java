@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "type": "player",
+      "id": "account.9698ab78f0394caf8b545a660ca6d8b2",
+      "attributes": {
+        "name": "matt112",
+        "titleId": "pubg",
+        "shardId": "steam",
+        "patchVersion": "",
+        "banType": "Innocent",
+        "clanId": ""
+      },
+      "relationships": {
+        "matches": {
+          "data": [
+            {
+              "type": "match",
+              "id": "a07b9636-450b-405e-8aeb-aeea54bd3f0d"
+            },
+            {
+              "type": "match",
+              "id": "42a4d25a-c001-4912-9783-6db80f4f0e03"
+            },
+            {
+              "type": "match",
+              "id": "f341a6b0-b609-4ce0-9be1-9f1e0abce882"
+            },
+            {
+              "type": "match",
+              "id": "c916e74c-455a-422a-9aff-c099176600f0"
+            },
+            {
+              "type": "match",
+              "id": "b5693f7f-fa9f-4720-ae66-a471b93a47e2"
+            }
+          ]
+        },
+        "assets": {
+          "data": []
+        }
+      },
+      "links": {
+        "schema": "",
+        "self": "https://api.pubg.com/shards/steam/players/account.9698ab78f0394caf8b545a660ca6d8b2"
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]\u003dmatt112"
+  },
+  "meta": {}
+}

@@ -12,7 +12,7 @@ public class MatchRanking {
      * and prints a message to console and requestHistory.
      */
     public static String ranking(String name, File prettyFile) throws IOException {
-        String match_id = JSONManager.getJSONValue(prettyFile, "LogMatchDefinition", "MatchId");
+        String match_id = MatchManager.getMatchID(prettyFile);
         JSONObject match_end = JSONManager.returnObject(prettyFile, "LogMatchEnd");
 
         JSONArray players = match_end.getJSONArray("characters");

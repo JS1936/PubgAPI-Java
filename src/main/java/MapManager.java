@@ -1,15 +1,19 @@
 import java.io.IOException;
 import java.util.Collections;
 
-//The MapManager tracks the frequency of various pubg maps across multiple matches.
+/*
+ * The MapManager class tracks and reports the frequency of various pubg maps across multiple matches.
+ * Note: getMapName(File prettyFile), previously located in MapManager.java, is now in MatchManager.java.
+ */
 public class MapManager {
 
-    //Prints the names of maps played and how many times they were played.
-    //EX: "<mapName> x5" means <mapName> was played 5 times.
+    /*
+     * Prints the names of maps played and how many times they were played.
+     * EX: "<mapName> x5" means <mapName> was played 5 times.
+     */
     public static void printMapNames() throws IOException
     {
         Collections.sort(Main.mapsPlayed); //alphabetical
-
         FileManager.writeToFileAndConsole("Frequencies of each map played: ");
         int frequency = 1;
         int i = 0;
@@ -31,15 +35,4 @@ public class MapManager {
             }
         }
     }
-
-    /*
-    //NOTE: Commented out because instead used in MatchManager.
-    //Given a prettified file holding data on a pubg match, returns the name of the map played on in the match.
-    public static String getMapName(File prettyFile)
-    {
-        JSONObject match_start = JSONManager.returnObject(prettyFile, "LogMatchStart");
-        String mapName = match_start.get("mapName").toString();
-        return mapName;
-    }
-     */
 }

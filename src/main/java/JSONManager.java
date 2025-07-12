@@ -4,12 +4,15 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.Vector;
 
-//The JSONManager class helps with searching through PUBG match telemetry files and returning specific chunks.
+/*
+ * The JSONManager class helps with searching through PUBG match telemetry files and returning specific chunks.
+ */
 public class JSONManager {
 
     /*
      * Retrieves JSONObject of object_type for method returnObject(File prettyFile, String type).
      * Returns null if object_type not found in file_content.
+     * Example object_type: "LogMatchDefinition"
      */
     public static JSONObject getJSONObject(String file_content, String object_type)
     {
@@ -20,14 +23,15 @@ public class JSONManager {
             String type_T = jsonObject.getString("_T");
 
             if (type_T.equalsIgnoreCase(object_type)) {
-                //System.out.println(object_type);
                 return jsonObject;
             }
         }
         return null; //_T object type not found
     }
 
-    //Returns JSONObject in prettyFile corresponding to String type. "_T" in prettyFile precedes JSONObject name.
+    /*
+     * Returns JSONObject in prettyFile corresponding to String type. "_T" in prettyFile precedes JSONObject name.
+     */
     public static JSONObject returnObject(File prettyFile, String type)
     {
         //System.out.println("NEW FILE_______________________________________________"); //Helps visually with debugging
@@ -35,9 +39,13 @@ public class JSONManager {
         return getJSONObject(file_content, type);
     }
 
-    //VERY similar to returnObject, but can return multiple occurrences of ONE type via vector (instead of limited to 1)
+    /*
+     * VERY similar to returnObject, but can return multiple occurrences of ONE type via vector (instead of limited to 1).
+     * Assumes valid type (_T type). Example type: "LogPlayerKillV2". If invalid type, expect empty vector returned.
+     */
     public static Vector<JSONObject> returnMultipleObjects(File prettyFile, String type)
     {
+        System.out.println("type = " + type);
         //System.out.println("NEW FILE_______________________________________________"); //Helps visually with debugging
         Vector<JSONObject> multipleObjects = new Vector<JSONObject>();
         String file_content = FileManager.storeFileAsString(prettyFile);
@@ -53,14 +61,14 @@ public class JSONManager {
                 multipleObjects.add(jsonObject);
             }
         }
-        //return null; //What if _T type is not found?
         return multipleObjects;
     }
 
     /* 
-     * Return value from a particular JSON object section.
+     * Returns value from a particular JSON object section.
      */
-    public static String getJSONValue(File prettyFile, String section, String key) {
+    public static String getJSONValue(File prettyFile, String section, String key) 
+    {
         JSONObject JSON = JSONManager.returnObject(prettyFile, section);
         return JSON.get(key).toString();
     }
