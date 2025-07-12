@@ -7,6 +7,16 @@ import java.util.Vector;
 public class MatchPlayers {
 
 
+    // printPlayersByTeam should just be getPlayersByTeam + printing them
+    // public static Vector<JSONObject> printPlayersByTeam(File prettyFile)
+    // {
+    //     Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
+    //     peopleByTeam = getPlayersByTeam(prettyFile);
+    //     actuallyPrintTheTeam()
+    // }
+
+
+
     // public static Vector<JSONObject> getPlayersByTeam(File prettyFile)
     // {
     //     exitIfGameIsCustom(prettyFile);

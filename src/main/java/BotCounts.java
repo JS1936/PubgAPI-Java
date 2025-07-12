@@ -17,7 +17,7 @@ public class BotCounts {
      * NOTE: does not count guards as bots.
      */
     public static void countBotsAndPeople(File prettyFile) {
-        //System.out.println("countBotsAndPeople - file name = " + prettyFile.getAbsolutePath());
+        
         try {
             Scanner scan = new Scanner(prettyFile);
 
@@ -30,11 +30,11 @@ public class BotCounts {
                 
                 if(data.contains("LogMatchEnd"))
                 {
-                    gameHasStarted = false; //imperfect
+                    gameHasStarted = false;
                 }
                 //Only start counting bots and people IF the game has started (people can enter and leave beforehand)
-                if (data.contains("LogMatchStart")) { //change from numStartPlayer to LogMatchStart
-                    gameHasStarted = true; //could change this to game in progress (then make it false once logmatch end it found...)
+                if (data.contains("LogMatchStart")) {
+                    gameHasStarted = true;
                 }
 
                 //Account found, game has started
@@ -46,7 +46,8 @@ public class BotCounts {
                         String account_id = data.substring(accountStart);
 
                         //Store it "pretty"/nicely
-                        if (account_id.contains(",")) {
+                        if (account_id.contains(","))
+                        {
                             account_id = account_id.substring(0, account_id.length() - 1);
                         }
 
@@ -71,13 +72,10 @@ public class BotCounts {
                         }
                     }
                 }
-
             }
             String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size())
-                + " [" + prettyFile.getAbsolutePath() + "]";  //+ ". " + playerNames.size() + " real players."
+                + " [" + prettyFile.getAbsolutePath() + "]";
             FileManager.writeToFileAndConsole(text);
-            //FileManager.writeToFileAndConsole("#players:        " + playerNames.size());
-
             scan.close();
 
         } catch (FileNotFoundException e) {
@@ -87,20 +85,5 @@ public class BotCounts {
             System.out.println("An error occurred: unable to write string to file");
             e.printStackTrace();
         }
-        //System.exit(0); //temporary. REMOVE LATER
     }
-   
 }
-
-//Potential future updates:
-//0: Adjust depending on request scope (individual, team, match) -> minor changes, if any
-//1: Include match_id when printing #bots
-//2: Read from requestHistory file -> calculate ___ based off of what was just stored in there
-//      (like total percentage of bots across a group of games)
-
-
-// "numAlivePlayers" && gameHasStarted
-// "LogPlayerKillV2" && gameHasStarted
-// "killCount" && gameHasStarted
-// "numParticipatedPlayers"
-//A "revival" is when a player resurrects a downed / down-but-not-out (DBNO) teammate.
