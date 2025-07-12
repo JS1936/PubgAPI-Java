@@ -1,18 +1,17 @@
 import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.URI;
-//import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Vector;
 
 
-//
+/*
+ * ADD COMMENT
+ */
 public class API_Request extends API {
 
     private String player = "<playerName>";         //  player-chosen name (EX: JS1936)
@@ -20,10 +19,8 @@ public class API_Request extends API {
 
     private File specificRequest;                   //
     private URL recentMatches;                      //
-    private File match_list;                        //
     private long timestamp;                         // time of initial request
     private int matchLimit;                         // maximum number of matches analyzed per request
-    //private File responseFile;// = null;
 
     public String getPlayer() { return this.player; }
     public HttpURLConnection getConnection() { return this.connection; }
@@ -33,19 +30,6 @@ public class API_Request extends API {
 
     //If no limit is specified on the number of matches to look at, then the default is 5.
     public API_Request(String player) throws IOException {  this(player, 5);    }
-
-    //In-progress
-    // public API_Request(Preset preset) throws IOException {
-    //     System.out.println("Creating a preset-based API_request");
-    //     initializeSpecificRequest();
-    //     //this.matchLimit =...
-    //     this.match_list = (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
-    //     //
-    // }
-    //public void doCustomRequestPreset()
-    //{
-
-    //}
 
     //Create/save a specificRequest based on the established player and timestamp.
     private void initializeSpecificRequest()
@@ -60,6 +44,10 @@ public class API_Request extends API {
         }
     }
 
+    /*
+     * Given a player name and a maximum number of matches to collect data on, ...
+     * ADD COMMENT
+     */
     public API_Request(String player, int matchLimit) throws IOException {
 
         System.out.println("Creating an API_Request about player: " + player);
@@ -68,14 +56,17 @@ public class API_Request extends API {
         this.matchLimit = matchLimit; //default is 5 unless specified
         this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
 
-        initializeSpecificRequest(); //added 12/28/2022
+        initializeSpecificRequest();
 
         //create "matches" subdirectory for timestamp
-        this.match_list =  (Files.createDirectory(Path.of(specificRequest + "/matches")).toFile());
+        Files.createDirectory(Path.of(specificRequest + "/matches")).toFile();
 
         doRequest();
     }
 
+    /*
+     * ADD COMMENT
+     */
     private File getMatchOverviewContent(String match_id) throws IOException {
         //Match Overview
         URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
@@ -87,20 +78,9 @@ public class API_Request extends API {
         File pretty = FileManager.makePretty(ugly);
         return pretty;
     }
+    
     /*
-    public File getTelemetryContent(String match_id, File pretty) throws IOException {
-        //Match Overview
-        URL telemetryURL = getTelemetryURL(pretty); //changed to ugly from pretty (back to pretty)
-        Path telemetry_Path = Path.of(specificRequest + "/matches/telemetry-for-match_id_" + match_id);
-        File newFile = new File(telemetry_Path.toString());
-        if(!newFile.exists())
-        {
-            createNewFileAndParentFilesIfTheyDoNotExist(newFile);
-        }
-        File newFile2 = FileManager.makePretty(newFile);
-        connectToAPI_wantZIP(telemetryURL, newFile2);
-        telemetry_urls.add(telemetryURL);
-    }
+     * ADD COMMENT
      */
     private void doRequest() throws IOException {
         //connect
@@ -141,17 +121,11 @@ public class API_Request extends API {
             numMatches++;
         }
     }
-    /*
-    public File getMatchFile(URL url, String match_id) throws IOException {
-        URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
-        connectToAPI(oneMatch_);
-        Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
-        File ugly = storeResponseToSpecifiedFileLocation(match_Path.toString()); //save
 
-        return ugly;
-    }
+    /*
+     * Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
+     * Returns the telemetry url for a specific match.
      */
-    //Guide: https://www.tutorialspoint.com/how-can-we-read-a-json-file-in-java
     private URL getTelemetryURL(File f) throws IOException {
 
         String fileAsString = FileUtils.readFileToString(f);
@@ -165,9 +139,11 @@ public class API_Request extends API {
         return telemetryURL;
     }
 
-    //Given a URL, checks the current response code for the HttpURLConnection connection.
-    //Expect: response code is 200 (valid/OK). Otherwise, invalid connection.
-    //        If invalid connection, exit with status 0.
+    /*
+     * Given a URL, checks the current response code for the HttpURLConnection connection.
+     * Expect: response code is 200 (valid/OK). Otherwise, invalid connection.
+     *         If invalid connection, exit with status 0
+     */
     private void printResponseCodeSuccessFail(URL url) throws IOException {
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
         if(this.connection.getResponseCode() == 200) //response is valid/OK
@@ -177,10 +153,13 @@ public class API_Request extends API {
         else
         {
             System.out.println("Error: connection to api has invalid response");
-            System.exit(0); // Added 06/22/25.
+            System.exit(0);
         }
     }
 
+    /*
+     * Ends the program if null connection.
+     */
     private void endProgramIfNullConnection()
     {
         if(connection == null) //!isConnected
@@ -189,6 +168,10 @@ public class API_Request extends API {
             System.exit(0);
         }
     }
+
+    /*
+     * Returns a connection to the pubg API.
+     */
     private HttpURLConnection connectToAPI(URL url) throws IOException {
 
         this.connection = (HttpURLConnection) url.openConnection();
@@ -202,11 +185,12 @@ public class API_Request extends API {
         return this.connection;
     }
 
-    //This method was created following/using
-    //SOURCE: https://www.baeldung.com/java-curl.
-    //Includes minor modifications from original source.
-    //
-    //Assumes: url is valid and destFile exists.
+    /* This method was created following/using
+     * SOURCE: https://www.baeldung.com/java-curl.
+     * Includes minor modifications from original source.
+     * 
+     * Assumes: url is valid and destFile exists.
+     */
     private void transferInputUsingProcessBuilder(URL url, File destFile) throws IOException {
 
         //Command format (curl)
@@ -223,7 +207,13 @@ public class API_Request extends API {
         process.destroy();
     }
 
-
+    /*
+     * Connect to pubg API and attempt to store gzip data to destFile.
+     * If connection successful, prints success message and saves contents of gzip to destFile.
+     * If connection null, ends program. 
+     * If connection otherwise fails, prints error message.
+     * Returns the connection as an HttpURLConnection.
+     */
     private HttpURLConnection connectToAPI_wantZIP(URL url, File destFile) throws IOException {
         //System.out.println("CONTENT ENCODING: " + connection.getContentEncoding());
         this.connection = (HttpURLConnection) url.openConnection();
@@ -252,17 +242,23 @@ public class API_Request extends API {
 
     }
 
-    //Pre: File file exists and is not null.
-    //Transfers desired content from input stream into given file.
+    /*
+     * Pre: File file exists and is not null.
+     * Transfers desired content from input stream into given file.
+     */
     private void transferInputStreamToFile(InputStream inputStream, File file) throws IOException
     {
         OutputStream output = new FileOutputStream(file);
         inputStream.transferTo(output);
         inputStream.close();
         output.close();
-        //file.deleteOnExit(); //revisit
     }
 
+    /* 
+     * Given a String destination path, stores one match's telemetry data at that location in a file.
+     * Creates a new file and new directories as needed.
+     * Returns file holding one match's telemetry data.
+     */
     //Consider: returning file so that it can be custom-saved
     private File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
@@ -277,11 +273,11 @@ public class API_Request extends API {
         return responseFile;
     }
 
-    //Consider: adding a checker for whether a file is pretty already? (Or rather, is NOT pretty)
 
-    //TRIAL
-    //Moved from APIManager to API_Request
-    //Note: was previously static
+    /*
+     * Given a summary_matchList.json file, gathers the match ids it mentions.
+     * Returns a Vector<String> where each String is a match id gathered,
+     */
     private Vector<String> getMatchIDsFromRequestPath(File s) throws IOException
     {
         if(!s.isFile())
@@ -289,17 +285,17 @@ public class API_Request extends API {
             System.out.println("Error: file " + s.getAbsolutePath() + " should be a file but is not a file.");
             System.exit(0);
         }
-        System.out.println("Attempting to get match ids from request file");
+        System.out.println("Attempting to get match ids from request file " + s.getAbsolutePath());
         File s_pretty = FileManager.makePretty(s);
 
         System.out.println("Pretty path: " + s_pretty.getAbsolutePath());
 
         String fileAsString = FileManager.storeFileAsString(s_pretty);
-        System.out.println(fileAsString);
+        //System.out.println(fileAsString);
 
         JSONObject jsonObject = new JSONObject(fileAsString);
         JSONArray jsonArrayOfMatches = jsonObject.getJSONArray("data").getJSONObject(0).getJSONObject("relationships").getJSONObject("matches").getJSONArray("data");
-        System.out.println("jsonArray.length = " + jsonArrayOfMatches.length());
+        //System.out.println("jsonArray.length = " + jsonArrayOfMatches.length());
         Vector<String> match_ids = new Vector<String>();
 
         for(int i = 0; i < jsonArrayOfMatches.length(); i++)
@@ -313,83 +309,4 @@ public class API_Request extends API {
         System.out.println("match_ids.size() = " + match_ids.size());
         return match_ids;
     }
-
-
-    //Consider: allowing custom dst
-    //public void getRequest(URL url) throws IOException {
-
-
-    //get_matchID
-    //get_match_info
-
-    //constructor(s)
-    //copy constructor
-    //destructor
-
-    //getters
-    //setters
 }
-//NOTES BUFFER:
-//
-// EX:
-//get player-focused list of matches
-//prettify that file
-//look through that file to get the list of match_ids and store them
-//for each stored match_id, request full match telemetry information
-//for each stored match_id, store the full match telemetry information
-//put full match telemetry information in a directory such that this program can use it...
-
-//public static void workingWithSampleFile2() throws IOException {
-//    File[] files = new File(FileManager.getAbsolutePathToActiveFolder()).listFiles();
-//}
-
-
-
-//custom request option? (For matches)
-//wait, acquiring vs using...
-//add "uses" diagram? Domain diagram?
-
-//Consider: incorporating request history here
-
-//public boolean isConnectedToAPI() { return this.isConnected; }
-
-
-
-//Incomplete
-    /*
-    public void getNumMatches()
-    {
-        System.out.println("List match_list files: " + Arrays.toString(this.match_list.listFiles()));
-        System.out.println(" match_list length: " + this.match_list.length());
-        //this.match_list.listFiles();
-        //requestsDir, name, timestamp, matches, how many matches
-        System.out.println("num matches = ?");
-    }
-     */
-// public void getMatches() {
-//     System.out.println("GET MATCHES");
-//     System.out.println(match_list.list());
-//     match_list.listFiles();
-// }
-//getSummary? //getMatches?
-
-//FileManager HAS makePretty(File)
-
-
-
-//System.out.println("MATCH TELEMETRY URLS: ");
-//numMatches = 0;
-//for(URL match_telemetry_url : telemetry_urls) {
-//    if (numMatches >= 5) {
-//        break;
-//    }
-//    System.out.println(match_telemetry_url.toString());
-//    connectToAPI(match_telemetry_url);
-//}
-
-//Would need a way to tell the file history how many (/which) matches
-//-->could adjust summary_Path
-
-//Note: could check how many requests  there already are about the player...
-
-/////

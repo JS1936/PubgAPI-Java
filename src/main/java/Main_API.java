@@ -16,7 +16,8 @@ public class Main_API {
         System.out.println("Hello, world----()");
         //API api = new API_Request();
         
-        API request = new API_Request("CoorsLatte", 15);
+        //API request = new API_Request("CoorsLatte", 15);
+        API request = new API_Request("matt112", 5);
         //API request = new API_Request("not-a-real-player", 5);
         //API request = new API_Request("JS1936");
         //Main.main();

@@ -5,8 +5,8 @@ import java.util.Scanner;
 import java.util.Vector;
 
 /*
- * The BotCounts class counts the number of non-player-characters in a match ("bots")
- * and the number of player characters ("players").
+ * The BotCounts class counts how many non-player-characters ("bots") and player characters ("players") are in a match.
+ * Results are printed both to console and to requestHistory.txt.
  */
 public class BotCounts {
 

@@ -47929,3 +47929,414 @@ Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timesta
 ----------------
 File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
 Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+request=0_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=4_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+-player:Shrimzy, rank: 29, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+-player:Shrimzy, rank: 7, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+-player:Shrimzy, rank: 1, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.23.9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+-player:Shrimzy, rank: 2, match: match.bro.official.pc-2018-36.steam.squad-fpp.na.2025.06.14.22.8d385883-2a04-4035-85cd-49a4f8372159
+
+request=0_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=1_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+
+request=0_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=0_
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=0_
+
+----------------
+File name: 	telemetry-for-match_id_debbf73f-5603-4212-a025-f578a9a79916
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_debbf73f-5603-4212-a025-f578a9a79916
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_debbf73f-5603-4212-a025-f578a9a79916]
+
+
+----------------
+File name: 	telemetry-for-match_id_b31f27d8-97da-43c8-9608-c1929040ba34
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_b31f27d8-97da-43c8-9608-c1929040ba34
+#bots:       4 / 100 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_b31f27d8-97da-43c8-9608-c1929040ba34]
+
+
+----------------
+File name: 	telemetry-for-match_id_c5b2c9f4-64aa-4605-9400-a2f772d49dfa
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_c5b2c9f4-64aa-4605-9400-a2f772d49dfa
+#bots:       3 / 99 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_c5b2c9f4-64aa-4605-9400-a2f772d49dfa]
+
+
+----------------
+File name: 	telemetry-for-match_id_141c365e-665a-4e32-97ec-65ef340b6200
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_141c365e-665a-4e32-97ec-65ef340b6200
+#bots:       0 / 52 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_141c365e-665a-4e32-97ec-65ef340b6200]
+
+
+----------------
+File name: 	telemetry-for-match_id_1d0df406-9be5-421f-9b76-ab5b49cc49a4
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_1d0df406-9be5-421f-9b76-ab5b49cc49a4
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_1d0df406-9be5-421f-9b76-ab5b49cc49a4]
+
+
+----------------
+File name: 	telemetry-for-match_id_d52c79a8-b49f-463d-b40a-751ae3a0011e
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_d52c79a8-b49f-463d-b40a-751ae3a0011e
+#bots:       0 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_d52c79a8-b49f-463d-b40a-751ae3a0011e]
+
+
+----------------
+File name: 	telemetry-for-match_id_07f86a2b-05c1-4f16-a5a2-b4db9fd03c6c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_07f86a2b-05c1-4f16-a5a2-b4db9fd03c6c
+#bots:       4 / 100 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_07f86a2b-05c1-4f16-a5a2-b4db9fd03c6c]
+
+
+----------------
+File name: 	telemetry-for-match_id_66aea400-ddf3-4295-b113-e95c32f5dec8
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_66aea400-ddf3-4295-b113-e95c32f5dec8
+#bots:       4 / 93 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_66aea400-ddf3-4295-b113-e95c32f5dec8]
+
+
+----------------
+File name: 	telemetry-for-match_id_9358f487-02c2-498d-af1e-2ba4e3603fc1
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_9358f487-02c2-498d-af1e-2ba4e3603fc1
+#bots:       6 / 100 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_9358f487-02c2-498d-af1e-2ba4e3603fc1]
+
+
+----------------
+File name: 	telemetry-for-match_id_5ad0f279-dcd6-4683-b6a2-50b0acb1156e
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_5ad0f279-dcd6-4683-b6a2-50b0acb1156e
+#bots:       7 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_5ad0f279-dcd6-4683-b6a2-50b0acb1156e]
+
+
+----------------
+File name: 	telemetry-for-match_id_4003a061-386f-47a2-b5a6-0ed2b7c85451
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_4003a061-386f-47a2-b5a6-0ed2b7c85451
+#bots:       3 / 98 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_4003a061-386f-47a2-b5a6-0ed2b7c85451]
+
+
+----------------
+File name: 	telemetry-for-match_id_2661b1a7-07d5-4509-bf92-7858fec90418
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_2661b1a7-07d5-4509-bf92-7858fec90418
+#bots:       1 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_2661b1a7-07d5-4509-bf92-7858fec90418]
+
+
+----------------
+File name: 	telemetry-for-match_id_9864fce2-5b86-4740-8c4a-7902c3f54c63
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_9864fce2-5b86-4740-8c4a-7902c3f54c63
+#bots:       7 / 58 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_9864fce2-5b86-4740-8c4a-7902c3f54c63]
+
+
+----------------
+File name: 	telemetry-for-match_id_9987a57a-35cb-497a-9c65-085509cd3a99
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_9987a57a-35cb-497a-9c65-085509cd3a99
+#bots:       1 / 100 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_9987a57a-35cb-497a-9c65-085509cd3a99]
+
+
+----------------
+File name: 	telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81
+#bots:       4 / 100 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/CoorsLatte/timestamp_1752287620354/matches/telemetry-for-match_id_42a3fcc9-0cbd-4a28-8b20-732238fd6f81]
