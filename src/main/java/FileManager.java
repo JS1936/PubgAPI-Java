@@ -17,6 +17,7 @@ import java.nio.charset.Charset;
  *          - storeFileAsString
  *          - createNewFileAndParentFilesIfTheyDoNotExist
  *          - writeToFileAndConsole (2 versions)
+ *          - printFileNames
  */
 public class FileManager {
 
@@ -104,4 +105,28 @@ public class FileManager {
             FileUtils.writeStringToFile(Main.requestHistory, "\n", (Charset) null, true);
         }
     }
+
+    /*
+     * Prints the file names in a directory. Note: assumes real and non-empty directory.
+     */
+    public static void printFileNames(File[] directory)
+    {
+        for(File file : directory) {
+            System.out.println("\t" + file.getName());
+            //file.deleteOnExit();
+        }
+    }
+
+    /*
+    //Unused. Previously located in Main.java.
+    private static void setupFolderGivenPathname(String pathname) {
+        File newFolder = new File(pathname);
+        if (!newFolder.exists())
+        {
+            newFolder.mkdirs();
+            newFolder.getParentFile().mkdirs();
+            System.out.println(pathname + " does not yet exist. Creating it now.");
+        }
+    }
+     */
 }
