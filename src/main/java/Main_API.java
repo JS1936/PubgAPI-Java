@@ -1,45 +1,39 @@
 import java.io.IOException;
-import org.json.JSONObject;
-import org.json.JSONArray;
 
-
-//Associated classes: API, API_Request
-//Associated test classes: APITest, API_RequestTest
-//Note: Main_API seems to function when cloned from GitHub onto a new device.
-//However, Main still relies on local files.
+/*
+ * The Main_API class allows users to request and store match telemetry data from the pubg API about specific players. 
+ * When making a request, users have the option to specify a maximum number of matches to gather data on (EX: 15).
+ * If a match limit is unspecified, data on 5 matches will be collected (or fewer, if fewer than 5 games have been played recently).
+ * 
+ * Associated classes: API, API_Request
+ * Associated test classes: APITest, API_RequestTest
+ * 
+ * Example requests:
+ *      - 1. API request = new API_Request("CoorsLatte", 15)
+ *      - 2. API request = new API_Request("CoorsLatte") [default 5]
+ * 
+ * Example players:
+ *      - Professional, high-activity player: "shrimzy", "CoorsLatte"
+ *      - Low-activity player: "matt112"
+ *      - Inactive player: "JS1936"
+ *      - Nonexistent player: "not-a-real-player"
+ * 
+ * Future considerations:
+ *      - Impose rules on match_limit values (EX: 15, rather than 0, -1, 200+)
+ *      - Add the ability to enter matches manually OR choose request (timestamp)
+ *      - Enable preset creation and use
+ *      - Allow collection of data on a whole team at a time
+ *      
+ * 
+ * Current errors/issues:
+ *      - Not all real players register properly. Here are some pro player examples:
+ *              ==> Team Falcons (hwinn, Kickstart, shrimzy, TGLTN)
+ *              ==> Team DN Freecs (DIEL, Gyumin, Heaven, Salute)
+ */
 public class Main_API {
 
-
-    //Consider: adding/allowing limit for #files to include (EX: 10, rather than 200+)
     public static void main(String[] args) throws IOException {
-	// write your code here
-        System.out.println("Hello, world----()");
-        //API api = new API_Request();
-        
-        //API request = new API_Request("CoorsLatte", 15);
-        API request = new API_Request("matt112", 5);
-        //API request = new API_Request("not-a-real-player", 5);
-        //API request = new API_Request("JS1936");
-        //Main.main();
-        //API request2 = new API_Request("WackyJacky101");
-
-        //getRecentActivityTeamFalcons();
-
-
-        
-
+        API request = new API_Request("CoorsLatte", 15);
+        //API request = new API_Request("CoorsLatte");
     }
-    public static void getRecentActivityTeamFalcons() throws IOException {
-        API request1 = new API_Request("GUNNER", 5);
-        //API request2 = new API_Request("hwinn", 5);
-        //API request3 = new API_Request("Kickstart", 5);
-        //API request4 = new API_Request("Shrimzy", 5);
-        //API request5 = new API_Request("TGLTN", 5);
-
-    }
-
-    //DN Freecs team: DIEL, Gyumin, Heaven, Salute
 }
-
-//Enter matches manually OR choose request (timestamp)
-//Enable preset creation and use

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="APITest" tests="1" skipped="1" failures="0" errors="0" timestamp="2025-07-12T20:16:15" hostname="Jennifers-MacBook-Pro-37.local" time="0.835">
+<testsuite name="APITest" tests="1" skipped="1" failures="0" errors="0" timestamp="2025-07-12T20:51:08" hostname="Jennifers-MacBook-Pro-37.local" time="0.787">
   <properties/>
-  <testcase name="getAPIkey()" classname="APITest" time="0.835">
+  <testcase name="getAPIkey()" classname="APITest" time="0.787">
     <skipped/>
   </testcase>
   <system-out><![CDATA[getAPIkey
