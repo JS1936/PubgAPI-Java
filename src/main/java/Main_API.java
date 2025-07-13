@@ -33,7 +33,7 @@ import java.io.IOException;
 public class Main_API {
 
     public static void main(String[] args) throws IOException {
-        API request = new API_Request("WackyJacky101", 15); 
+        API request = new API_Request("TGLTN", 15); 
         //API request = new API_Request("CoorsLatte");
     }
 }
