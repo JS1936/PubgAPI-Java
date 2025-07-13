@@ -11,6 +11,8 @@ import java.util.Vector;
 // TODO: Refactor addPlayers()
 // TODO: Remove extra "i" printout
 // TODO: Add getPlayersByTeam or calculatePlayersByTeam that calculates independently and print can just call it
+// TODO: Make helper methods private
+// TODO: Print to both requestHistory and console
 public class MatchPlayers {
 
     /*
@@ -23,12 +25,26 @@ public class MatchPlayers {
      * -Team size not always 4 (or even <=4!) Example of size>4: team deathmatches.
      *
      * TEAM IDs:
-     *  official game:      <100 = real people, 2xx (like 201) = bots, 5xx = guards
+     *  official game:      team id <= 100 = real people, 2xx (like 201) = bots, 5xx = guards
      *  arcade/deathmatch:  only two teams. IDs are 1 and 2.
      */
     public static Vector<JSONObject> printPlayersByTeam(File prettyFile)
     {
+        Vector<JSONObject> peopleByTeam = populatePlayersByTeam(prettyFile);
+        String match_id = MatchManager.getMatchID(prettyFile);
+        int team_capacity = MatchManager.getMaximumTeamSizeForOfficialMatch(match_id);
+        printPlayersByTeam(team_capacity, peopleByTeam);
+        return peopleByTeam;
+    }
+
+    /*
+     * Creates, populates, and returns peopleByTeam. Holds every participant, from lowest to highest team_ids
+     * Public in case of use by other functionalties. 
+     */
+    public static Vector<JSONObject> populatePlayersByTeam(File prettyFile)
+    {
         exitIfGameIsCustom(prettyFile);
+        
         String match_id = MatchManager.getMatchID(prettyFile);
         int team_capacity = MatchManager.getMaximumTeamSizeForOfficialMatch(match_id);
 
@@ -40,9 +56,6 @@ public class MatchPlayers {
         Vector<JSONObject> peopleByTeam = new Vector<JSONObject>();
         peopleByTeam.setSize(maxIndices);
         peopleByTeam = addPlayers(prettyFile, peopleByTeam, team_capacity);
-       
-        //Print peopleByTeam
-        printPlayersByTeam(team_capacity, peopleByTeam);
         
         return peopleByTeam;
     }
@@ -58,10 +71,11 @@ public class MatchPlayers {
             System.exit(0);
         }
     }
+    
     /*
      * Returns playersList (JSONArray of "characters" from "LogMatchEnd")
      */
-    public static JSONArray getPlayersList(File prettyFile)
+    private static JSONArray getPlayersList(File prettyFile)
     {
         return (JSONManager.returnObject(prettyFile, "LogMatchEnd")).getJSONArray("characters"); //playersList
     }
@@ -69,12 +83,11 @@ public class MatchPlayers {
     /*
      * The maximum number of teams is decided by the maximum possible teamId.
      * Returns 600 if team_capacity is 1, 2, or 4. 
-     * Returns 2 if team_capacity > 4, such as with a deathmatch.
+     * Returns 2 if team_capacity > 4, such as with a deathmatch (up to 8 per team). Not a normal battle royale.
      */
-    public static int getMaxTeams(String match_id, int team_capacity)
+    private static int getMaxTeams(String match_id, int team_capacity)
     {
-        if (team_capacity > 4) { return 2; } // Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
-        return 600;
+        return (team_capacity > 4) ? 2 : 600;
     }
     
     /*
@@ -89,8 +102,7 @@ public class MatchPlayers {
                 if(i % team_capacity == 0) {
                     System.out.println("-----"); //For display clarity. Separates teams.
                 }
-                System.out.printf("%d %s %s %s%n",
-                    i,
+                System.out.printf("%s %s %s%n",
                     player.get("name"),
                     player.get("teamId"),
                     player.get("ranking"));
@@ -100,8 +112,9 @@ public class MatchPlayers {
 
     /*
      * Returns a Vector<JSONObject> holding "character" information on each player in the match, sorted by team.
+     * Helper for populatePlayersByTeam(File prettyFile)
      */
-    public static Vector<JSONObject> addPlayers(File prettyFile, Vector<JSONObject> peopleByTeam, int team_capacity)
+    private static Vector<JSONObject> addPlayers(File prettyFile, Vector<JSONObject> peopleByTeam, int team_capacity)
     {
         JSONArray playersList = getPlayersList(prettyFile);
        
