@@ -1,55 +1,18 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.File;
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.Vector;
 
+/*
+ * The MatchPlayers class prints the names of all players in a match, sorted by team.
+ */
 public class MatchPlayers {
 
 
-    // printPlayersByTeam should just be getPlayersByTeam + printing them
-    // public static Vector<JSONObject> printPlayersByTeam(File prettyFile)
-    // {
-    //     Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
-    //     peopleByTeam = getPlayersByTeam(prettyFile);
-    //     actuallyPrintTheTeam()
-    // }
-
-
-
-    // public static Vector<JSONObject> getPlayersByTeam(File prettyFile)
-    // {
-    //     exitIfGameIsCustom(prettyFile);
-
-    //     Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
-    //     JSONArray playersList = new JSONArray();
-
-    //     String match_id = MatchManager.getMatchID(prettyFile);
-    //     int team_capacity = MatchManager.getMaximumTeamSizeForOfficialMatch(match_id);
-
-    //     //Establish maximum number of teams
-    //     int max_num_teams = 600; //>100 (+ buffer), otherwise arbitrary. Caution: 2xx bot teams
-    //     if(team_capacity > 4) //Only deathmatch is then an option currently, since custom games are not handled
-    //     {
-    //         System.out.println("Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
-    //         max_num_teams = 2;
-    //     }
-    //     System.out.println("Maximum team capacity: " + team_capacity);
-
-    //     //Determine size of peopleByTeam
-    //     int maxIndices = max_num_teams * team_capacity; //maybe adjust this depending on what the type of game is (singles, duos, squads, flexible squads)
-    //     peopleByTeam.setSize(maxIndices);
-
-    //     //Store data from LogMatchEnd in jsonObject
-    //     JSONObject jsonObject = JSONManager.returnObject(prettyFile, "LogMatchEnd");
-    //     playersList = jsonObject.getJSONArray("characters"); //attempt to fix
-
-    //     peopleByTeam = addPlayers(prettyFile, peopleByTeam, playersList, team_capacity);
-    //     return peopleByTeam;
-    // }
-
-    public static Vector<JSONObject> addPlayers(File prettyFile, Vector<JSONObject> peopleByTeam, JSONArray playersList, int team_capacity)
+    public static Vector<JSONObject> addPlayers(File prettyFile, Vector<JSONObject> peopleByTeam, int team_capacity)
     {
+        JSONArray playersList = getPlayersList(prettyFile);
         //Set up allTeams by storing each player in an index that makes sense for their team_id
         for (int j = 0; j < playersList.length(); j++) {
 
@@ -119,41 +82,64 @@ public class MatchPlayers {
     //TO-DO: Adjust printouts so println and history align better.
     public static Vector<JSONObject> printPlayersByTeam(File prettyFile)
     {
-        Vector<JSONObject> peopleByTeam = new Vector<JSONObject>(); //Holds every participant, from lowest to highest team_ids
-        JSONArray playersList = new JSONArray();
-
         exitIfGameIsCustom(prettyFile);
-
         String match_id = MatchManager.getMatchID(prettyFile);
         int team_capacity = MatchManager.getMaximumTeamSizeForOfficialMatch(match_id);
 
+        //Determine size of peopleByTeam
+        int max_num_teams = getMaxNumTeams(match_id, team_capacity);
+        int maxIndices = max_num_teams * team_capacity;
+
+        //Create and populate peopleByTeam. Holds every participant, from lowest to highest team_ids
+        Vector<JSONObject> peopleByTeam = new Vector<JSONObject>();
+        peopleByTeam.setSize(maxIndices);
+        peopleByTeam = addPlayers(prettyFile, peopleByTeam, team_capacity);
+       
+        //Print peopleByTeam
+        printPlayersByTeam(team_capacity, peopleByTeam);
+        
+        return peopleByTeam;
+    }
+
+    //Store data from LogMatchEnd in jsonObject
+    public static JSONArray getPlayersList(File prettyFile)
+    {
+        JSONObject jsonObject = JSONManager.returnObject(prettyFile, "LogMatchEnd");
+        JSONArray playersList = new JSONArray();
+        playersList = jsonObject.getJSONArray("characters");
+        //System.out.println("playersList = " + playersList.toString());
+        return playersList;
+    }
+
+    /*
+     * The maximum number of teams is decided by the maximum possible teamId.
+     * Returns 600 if team_capacity is 1, 2, or 4.
+     * Returns 2 if team_capacity > 4, such as with a deathmatch.
+     */
+    public static int getMaxNumTeams(String match_id, int team_capacity)
+    {
         //Establish maximum number of teams
-        int max_num_teams = 600; //>100 (+ buffer), otherwise arbitrary. Caution: 2xx bot teams
+        int max_num_teams = 600; //Real player teams get stored 1xx indiced. Bot teams are 2xx.
         if(team_capacity > 4) //Only deathmatch is then an option currently, since custom games are not handled
         {
             System.out.println("Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
             max_num_teams = 2;
         }
         System.out.println("Maximum team capacity: " + team_capacity);
-
-
-        //Determine size of peopleByTeam
-        int maxIndices = max_num_teams * team_capacity; //maybe adjust this depending on what the type of game is (singles, duos, squads, flexible squads)
-        peopleByTeam.setSize(maxIndices);
-
-        //Store data from LogMatchEnd in jsonObject
-        JSONObject jsonObject = JSONManager.returnObject(prettyFile, "LogMatchEnd");
-        playersList = jsonObject.getJSONArray("characters"); //attempt to fix
-
-        peopleByTeam = addPlayers(prettyFile, peopleByTeam, playersList, team_capacity);
-       
-        actuallyPrintTheTeam(team_capacity, peopleByTeam);
-        return peopleByTeam; //adding this so that ranking method can be more "independent"
+        return max_num_teams;
     }
 
+    // public static int getMaxTeams(String match_id, int team_capacity)
+    // {
+    //     if (team_capacity > 4) { return 2; } // Not a normal battle royale (EX: could be deathmatch with teams up of up to 8");
+    //     return 600;
+    // }
     
-    //Print name, teamId, and ranking of all players (from lowest to highest team id).
-    public static void actuallyPrintTheTeam(int team_capacity, Vector<JSONObject> peopleByTeam)
+    /*
+     * Prints a match's players (real and bots) by name, teamId, and ranking of all players (from lowest to highest team id).
+     * EX: "<name> <teamId> <ranking>" could look like "WE__mao_ 200 19". A teamId of 2xx means they are a bot.
+     */
+    private static void printPlayersByTeam(int team_capacity, Vector<JSONObject> peopleByTeam)
     {
         //Print name, teamId, and ranking of all players (from lowest to highest team id).
         for (int in = 0; in < peopleByTeam.size(); in++) {
@@ -168,21 +154,4 @@ public class MatchPlayers {
             }
         }
     }
-    //public static Vector<JSONObject> addPlayerToTeam(Vector<Object> peopleByTeam)
-    //{
-    //    return peopleByTeam;
-    //}
 }
-
-
-
-// //Store data from LogMatchStart in match_start JSONObject
-// JSONObject match_start = JSONManager.returnObject(prettyFile, "LogMatchStart");
-        
-// //Check if the game is custom
-// boolean is_custom_game = match_start.getBoolean("isCustomGame");
-// if(is_custom_game)
-// {
-//     System.out.println("Sorry, we don't compute data for custom games");
-//     System.exit(0);
-// }

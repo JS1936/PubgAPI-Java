@@ -40,7 +40,7 @@ public class Main_API {
         
         
         API request = new API_Request("chocoTaco", 5); // Succeeds. High activity.
-        API request2 = new API_Request("WackyJacky101", 5); // United States
+        //API request2 = new API_Request("WackyJacky101", 5); // United States
         //API request = new API_Request("CoorsLatte"); // United States
     }
 }
