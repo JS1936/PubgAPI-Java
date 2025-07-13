@@ -39,7 +39,7 @@ public class API_Request extends API {
     private void initializeSpecificRequest()
     {
         this.timestamp = System.currentTimeMillis();
-        this.specificRequest = new File("requestsDir/" + this.player + "/timestamp_x_" + this.timestamp);
+        this.specificRequest = new File("requestsDir/" + this.player + "/timestamp_" + this.timestamp);
         if(!specificRequest.exists())
         {
             System.out.println("specific request Does not yet exist");

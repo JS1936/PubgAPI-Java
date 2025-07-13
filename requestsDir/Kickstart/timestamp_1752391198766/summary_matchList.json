@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "type": "player",
+      "id": "account.2a84fb4e59b146368c28c0a1baced2f0",
+      "attributes": {
+        "clanId": "",
+        "name": "Kickstart",
+        "titleId": "pubg",
+        "shardId": "steam",
+        "patchVersion": "",
+        "banType": "Innocent"
+      },
+      "relationships": {
+        "assets": {
+          "data": []
+        },
+        "matches": {
+          "data": []
+        }
+      },
+      "links": {
+        "self": "https://api.pubg.com/shards/steam/players/account.2a84fb4e59b146368c28c0a1baced2f0",
+        "schema": ""
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]\u003dKickstart"
+  },
+  "meta": {}
+}
