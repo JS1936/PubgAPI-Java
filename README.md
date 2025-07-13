@@ -113,3 +113,6 @@ To analyze match data collected, run Main.java as follows:
 * Comprehensiveness and speed of testcases
 * Inclusion of more example files (with explanations for how to install/run the program, step-by-step)
 * Inclusion of sample description of end-user personas
+
+## After Bob ##
+Note: Bob, you were very persistent. Resistance was futile. I'm sorry. [235e88c](https://github.com/JS1936/PubgAPI-Java/tree/235e88c253b8e268b0f769325ce70b4b1b9d7750)
