@@ -1,12 +1,12 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.File;
+import java.io.IOException;
 import java.util.Vector;
 
 /*
  * The MatchPlayers class prints the names of all players in a match, sorted by team.
  */
-// TODO: For printPlayersByTeam(), adjust printouts so println and history align better.
 // TODO: Refactor addPlayers()
 public class MatchPlayers {
 
@@ -23,7 +23,7 @@ public class MatchPlayers {
      *  official game:      team id <= 100 = real people, 2xx (like 201) = bots, 5xx = guards
      *  arcade/deathmatch:  only two teams. IDs are 1 and 2.
      */
-    public static Vector<JSONObject> printPlayersByTeam(File prettyFile)
+    public static Vector<JSONObject> printPlayersByTeam(File prettyFile) throws IOException
     {
         Vector<JSONObject> peopleByTeam = populatePlayersByTeam(prettyFile);
         String match_id = MatchManager.getMatchID(prettyFile);
@@ -36,7 +36,7 @@ public class MatchPlayers {
      * Creates, populates, and returns peopleByTeam. Holds every participant, from lowest to highest team_ids
      * Public in case of use by other functionalties. 
      */
-    public static Vector<JSONObject> populatePlayersByTeam(File prettyFile)
+    public static Vector<JSONObject> populatePlayersByTeam(File prettyFile) throws IOException
     {
         exitIfGameIsCustom(prettyFile);
         
@@ -58,11 +58,11 @@ public class MatchPlayers {
     /*
      * Exits program if the match is custom.
      */
-    private static void exitIfGameIsCustom(File prettyFile)
+    private static void exitIfGameIsCustom(File prettyFile) throws IOException
     {
         JSONObject match_start = JSONManager.returnObject(prettyFile, "LogMatchStart");
         if(match_start.getBoolean("isCustomGame")) {
-            System.out.println("Sorry, we don't compute data for custom games");
+            FileManager.writeToFileAndConsole("Sorry, we don't compute data for custom games");
             System.exit(0);
         }
     }
@@ -89,18 +89,19 @@ public class MatchPlayers {
      * Prints a match's players (real and bots) by name, teamId, and ranking of all players (from lowest to highest team id).
      * EX: "<name> <teamId> <ranking>" could look like "WE__mao_ 200 19". A teamId of 2xx means they are a bot.
      */
-    private static void printPlayersByTeam(int team_capacity, Vector<JSONObject> peopleByTeam)
+    private static void printPlayersByTeam(int team_capacity, Vector<JSONObject> peopleByTeam) throws IOException
     {
         for (int i = 0; i < peopleByTeam.size(); i++) {
             JSONObject player = peopleByTeam.get(i);
             if (player != null) {
                 if(i % team_capacity == 0) {
-                    System.out.println("-----"); //For display clarity. Separates teams.
+                    FileManager.writeToFileAndConsole("-----"); //For display clarity. Separates teams.
                 }
-                System.out.printf("%s %s %s%n",
+                String output = String.format("%s %s %s",
                     player.get("name"),
                     player.get("teamId"),
                     player.get("ranking"));
+                FileManager.writeToFileAndConsole(output);
             }
         }
     }
