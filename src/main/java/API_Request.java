@@ -263,7 +263,6 @@ public class API_Request extends API {
         return responseFile;
     }
 
-
     /*
      * Given a summary_matchList.json file, gathers the match ids it mentions.
      * Returns a Vector<String> where each String is a match id gathered,
