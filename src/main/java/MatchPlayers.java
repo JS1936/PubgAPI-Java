@@ -9,6 +9,8 @@ import java.util.Vector;
 // TODO: Determine case(s) where team_id > 100000
 // TODO: For printPlayersByTeam(), adjust printouts so println and history align better.
 // TODO: Refactor addPlayers()
+// TODO: Remove extra "i" printout
+// TODO: Add getPlayersByTeam or calculatePlayersByTeam that calculates independently and print can just call it
 public class MatchPlayers {
 
     /*
@@ -61,8 +63,7 @@ public class MatchPlayers {
      */
     public static JSONArray getPlayersList(File prettyFile)
     {
-        JSONObject jsonObject = JSONManager.returnObject(prettyFile, "LogMatchEnd");
-        return jsonObject.getJSONArray("characters"); //playersList
+        return (JSONManager.returnObject(prettyFile, "LogMatchEnd")).getJSONArray("characters"); //playersList
     }
 
     /*
@@ -103,7 +104,8 @@ public class MatchPlayers {
     public static Vector<JSONObject> addPlayers(File prettyFile, Vector<JSONObject> peopleByTeam, int team_capacity)
     {
         JSONArray playersList = getPlayersList(prettyFile);
-        //Set up allTeams by storing each player in an index that makes sense for their team_id
+       
+        //Set up all teams by storing each player in an index that makes sense for their team_id
         for (int j = 0; j < playersList.length(); j++) {
 
             //Get access to one player and their details (such as team_id)
@@ -120,24 +122,16 @@ public class MatchPlayers {
 
             //Put player in peopleByTeam according to their team_id
             for (int loc = 0; loc < team_capacity; loc++) {
-                if((insert + loc) >= peopleByTeam.size()) //Should not occur
-                {
-                    System.out.println("Can't add to index: " + (insert + loc) + "because peopleByTeam.size() is " + peopleByTeam.size());
-                    return null; //careful
-                }
                 if (peopleByTeam.get(insert + loc) != null) { //Some team member holds that spot.
-                    if(peopleByTeam.get(insert + loc).get("name") == character.get("name")) //Self holds that spot
-                    {
-                        System.out.println("Already listed " + character + " as part of the team. Don't want to list duplicately");
+                    if(peopleByTeam.get(insert + loc).get("name") == character.get("name")) { //Self holds that spot
                         loc = team_capacity;
                     }
                 } else {
                     peopleByTeam.set(insert + loc, character); //Adding player here
-                    loc = team_capacity; //Don't want to add the multiple times (leave room for other people!)
+                    loc = team_capacity; //Don't want to add the player multiple times (leave room for other people!)
                 }
             }
         }
         return peopleByTeam;
     }
-
 }
