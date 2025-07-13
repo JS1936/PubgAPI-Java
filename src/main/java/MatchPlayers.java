@@ -9,10 +9,6 @@ import java.util.Vector;
 // TODO: Determine case(s) where team_id > 100000
 // TODO: For printPlayersByTeam(), adjust printouts so println and history align better.
 // TODO: Refactor addPlayers()
-// TODO: Remove extra "i" printout
-// TODO: Add getPlayersByTeam or calculatePlayersByTeam that calculates independently and print can just call it
-// TODO: Make helper methods private
-// TODO: Print to both requestHistory and console
 public class MatchPlayers {
 
     /*
