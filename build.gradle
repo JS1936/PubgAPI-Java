@@ -26,14 +26,12 @@ dependencies {
 
 test {
     //enabled = true
-    //enabled = false // added 06/21/25
     useJUnitPlatform() //look! //removed 06/21/25
     testLogging {
         events "passed", "skipped", "failed"
     }
 }
 
-//Added 06/21/25:
 application {
     mainClass = 'Main_API'
     //mainClass = 'Main'
