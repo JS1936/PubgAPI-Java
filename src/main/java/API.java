@@ -4,11 +4,11 @@ public class API {
             "InRpdGxlIjoicHViZyIsImFwcCI6InB1YmdfYXBpX2xlYXJuIn0.aQZbXGdwOM8HwXLvulYN2nmUUCVgG6susMmAE6oKopY";
     protected final String platform = "steam";
 
-    protected String getAPIkey()
+    public String getAPIkey()
     {
         return this.key;
     }
-    protected String getAPIplatform()
+    public String getAPIplatform()
     {
         return this.platform;
     }

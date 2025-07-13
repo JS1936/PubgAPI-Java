@@ -58,7 +58,8 @@ public class API_Request extends API {
 
         this.player = player;
         this.matchLimit = matchLimit; //default is 5 unless specified
-        this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
+        this.recentMatches = new URL("https://api.pubg.com/shards/" + getAPIplatform() + 
+                                    "/players?filter[playerNames]=" + this.player);
 
         initializeSpecificRequest();
 
@@ -73,7 +74,7 @@ public class API_Request extends API {
      */
     private File getMatchOverviewContent(String match_id) throws IOException {
         //Match Overview
-        URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
+        URL oneMatch_ = new URL("https://api.pubg.com/shards/" + getAPIplatform() + "/matches/" + match_id);
         Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
 
         connectToAPI(oneMatch_);
