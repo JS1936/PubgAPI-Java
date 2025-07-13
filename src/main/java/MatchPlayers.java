@@ -6,7 +6,6 @@ import java.util.Vector;
 /*
  * The MatchPlayers class prints the names of all players in a match, sorted by team.
  */
-// TODO: Determine case(s) where team_id > 100000
 // TODO: For printPlayersByTeam(), adjust printouts so println and history align better.
 // TODO: Refactor addPlayers()
 public class MatchPlayers {
@@ -122,9 +121,6 @@ public class MatchPlayers {
             JSONObject character = player.getJSONObject("character");
             String team_id = character.get("teamId").toString();
             int team_id_index = Integer.parseInt(team_id);
-
-            //Special case
-            if(team_id_index >= 100000) { team_id_index = (team_id_index % 100000) + 1; }
 
             //Determine at what index to store this player in peopleByTeam
             int insert = team_id_index * team_capacity;
