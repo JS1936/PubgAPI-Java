@@ -1,0 +1,997 @@
+{
+  "data": [
+    {
+      "type": "player",
+      "id": "account.82bad0072f31455d8d9f8d834da2f2f3",
+      "attributes": {
+        "banType": "Innocent",
+        "clanId": "clan.7e41009b212341a5a62d46430b391533",
+        "name": "TGLTN",
+        "titleId": "pubg",
+        "shardId": "steam",
+        "patchVersion": ""
+      },
+      "relationships": {
+        "assets": {
+          "data": []
+        },
+        "matches": {
+          "data": [
+            {
+              "type": "match",
+              "id": "dd4a27ef-98f1-499a-8ebc-07fbe00f09fb"
+            },
+            {
+              "type": "match",
+              "id": "884832ed-ee78-4ce9-9c29-0a5d0989a78c"
+            },
+            {
+              "type": "match",
+              "id": "f4c1752d-9a5d-4cf6-a3a1-afb2dd38242d"
+            },
+            {
+              "type": "match",
+              "id": "0cc090b7-c0ab-4298-9c96-cad4fec290f9"
+            },
+            {
+              "type": "match",
+              "id": "e309fa6a-5dba-4fa0-a548-98d31917ec17"
+            },
+            {
+              "type": "match",
+              "id": "f540240e-bedb-4171-97e9-08f0e2ea7b38"
+            },
+            {
+              "type": "match",
+              "id": "116c9fa5-ad7f-4e0f-a11e-5ed9193a8829"
+            },
+            {
+              "type": "match",
+              "id": "b0e1a581-591d-44d7-a0fb-9ba663675d09"
+            },
+            {
+              "type": "match",
+              "id": "cedf84c8-f439-40d6-bea1-ecd592076181"
+            },
+            {
+              "type": "match",
+              "id": "24e1ea86-35af-4198-b2d4-5d183c6b5740"
+            },
+            {
+              "type": "match",
+              "id": "bebcc788-c551-43f7-bbe0-c10977316e54"
+            },
+            {
+              "type": "match",
+              "id": "b3f1e458-f165-4515-83e4-8a66b1370136"
+            },
+            {
+              "type": "match",
+              "id": "6e2b04ce-3fc4-4daa-9ebc-add93e2e0fa4"
+            },
+            {
+              "type": "match",
+              "id": "65f52cbc-ef77-46a1-b4b0-368356e8aecd"
+            },
+            {
+              "type": "match",
+              "id": "c2fb5093-866c-4d6d-96bf-7abf755094af"
+            },
+            {
+              "type": "match",
+              "id": "8530af9a-2fdd-4356-9a80-c3b4b909c454"
+            },
+            {
+              "type": "match",
+              "id": "3a1e680a-92a5-4f3b-bd6a-c8eb04ccb3c6"
+            },
+            {
+              "type": "match",
+              "id": "32919bab-28de-4425-bcad-dfdbab6e4cbe"
+            },
+            {
+              "type": "match",
+              "id": "70357441-a505-4795-b2b9-2bc41058d04f"
+            },
+            {
+              "type": "match",
+              "id": "e5b0fa09-3562-4a55-8996-da6dbe51bb52"
+            },
+            {
+              "type": "match",
+              "id": "2afba637-efe2-4b3d-b172-54b2db113be0"
+            },
+            {
+              "type": "match",
+              "id": "28a91230-4f29-46b6-a13d-097cb3a61ed8"
+            },
+            {
+              "type": "match",
+              "id": "9c07578f-04a4-4739-934b-949c33f4d333"
+            },
+            {
+              "type": "match",
+              "id": "df0d5ee7-7ffe-41ba-bdf2-9fac1313d74e"
+            },
+            {
+              "type": "match",
+              "id": "dc7b4ac0-6264-4636-98c2-47a6d3efe09d"
+            },
+            {
+              "type": "match",
+              "id": "23df0181-f029-4cf6-9077-0754d6874587"
+            },
+            {
+              "type": "match",
+              "id": "a7b3c643-1b54-4c1f-98c1-07de33884d1a"
+            },
+            {
+              "type": "match",
+              "id": "3f07697f-27fd-448b-84d5-2fa1ecadeef5"
+            },
+            {
+              "type": "match",
+              "id": "e07619ea-e748-484a-a8cc-e6bfd46b0901"
+            },
+            {
+              "type": "match",
+              "id": "40666850-43ac-4055-b059-dc08226d8253"
+            },
+            {
+              "type": "match",
+              "id": "1b275059-2226-4194-919e-563d83d67a17"
+            },
+            {
+              "type": "match",
+              "id": "6d0b662c-f444-47ad-8bd8-90ca4ef1313b"
+            },
+            {
+              "type": "match",
+              "id": "12e64310-b580-405e-85ac-cfdba3a6204e"
+            },
+            {
+              "type": "match",
+              "id": "fa5daa40-b5dd-4a6d-9ecf-9b8e903ebad7"
+            },
+            {
+              "type": "match",
+              "id": "767ecf76-ac46-464a-a7cd-e4726d50a08f"
+            },
+            {
+              "type": "match",
+              "id": "431ef2e4-bded-469f-929f-d4078fab9f9d"
+            },
+            {
+              "type": "match",
+              "id": "439880d0-aed2-440a-badf-a99e2d9d4825"
+            },
+            {
+              "type": "match",
+              "id": "492fcbbb-d231-41db-9e9a-f00b9f373909"
+            },
+            {
+              "type": "match",
+              "id": "255d4515-4ce7-4104-9b75-f9b4a5a9de64"
+            },
+            {
+              "type": "match",
+              "id": "851427a9-1c95-476e-a1d2-172e10d7c4bd"
+            },
+            {
+              "type": "match",
+              "id": "a0f3e4c2-282d-4ccb-ba9d-c4df6d272980"
+            },
+            {
+              "type": "match",
+              "id": "515a5dd2-8c19-4b30-b49f-e26a7eae2a51"
+            },
+            {
+              "type": "match",
+              "id": "5151b041-8e4a-487f-8db1-a5cbd1400dff"
+            },
+            {
+              "type": "match",
+              "id": "122c9f2f-ab73-4f04-915e-44d876345009"
+            },
+            {
+              "type": "match",
+              "id": "bab9ee9c-a10c-4cac-969f-cedb97bcfaa6"
+            },
+            {
+              "type": "match",
+              "id": "f13561d9-2a7f-462c-8fff-bf588251e65a"
+            },
+            {
+              "type": "match",
+              "id": "14bc1b2f-aaa2-44e0-8739-a5a98abb9e8c"
+            },
+            {
+              "type": "match",
+              "id": "b9f6cec2-b54d-4fef-8180-c85cc16fe73c"
+            },
+            {
+              "type": "match",
+              "id": "f7907661-dd12-4adf-9240-9e0e760a5bc4"
+            },
+            {
+              "type": "match",
+              "id": "e155a80a-127b-405d-8c11-d5533c0832b6"
+            },
+            {
+              "type": "match",
+              "id": "e34266b0-6a12-4138-a683-ea7bc8cb7097"
+            },
+            {
+              "type": "match",
+              "id": "8d4add4c-006c-44d7-aa75-c6ded2c71406"
+            },
+            {
+              "type": "match",
+              "id": "4f576974-7899-4f2b-bda1-07731ff2f837"
+            },
+            {
+              "type": "match",
+              "id": "3d1b625a-20f2-4186-b9e3-13a99e2f33b7"
+            },
+            {
+              "type": "match",
+              "id": "dbb18cd6-71e0-4c4b-b99a-df568f97f1ea"
+            },
+            {
+              "type": "match",
+              "id": "f97c3f3d-6dc5-4751-984d-0c192ab390a9"
+            },
+            {
+              "type": "match",
+              "id": "70ed10ea-46ff-4942-b76b-03656d8dea4e"
+            },
+            {
+              "type": "match",
+              "id": "161552e2-2296-49e2-8dbe-31e26a3bfe27"
+            },
+            {
+              "type": "match",
+              "id": "49b2ca2d-f504-4e3d-9101-1c6fa0e66470"
+            },
+            {
+              "type": "match",
+              "id": "63329008-bcf1-479c-b846-9ff35eff68b5"
+            },
+            {
+              "type": "match",
+              "id": "8ea5d863-d022-4fba-bdb8-b551487493f8"
+            },
+            {
+              "type": "match",
+              "id": "66d18a42-86dd-4d8f-aea0-42950acc6a2c"
+            },
+            {
+              "type": "match",
+              "id": "db63682f-ce58-449a-87e1-a758bd425a8f"
+            },
+            {
+              "type": "match",
+              "id": "6cab66ef-9c11-417b-84da-8e4201ad3065"
+            },
+            {
+              "type": "match",
+              "id": "1fdcb712-796a-4e8e-9b85-d409a0ea4f12"
+            },
+            {
+              "type": "match",
+              "id": "1caa8bd7-8cdd-46fa-aae5-be7d1d63f1bf"
+            },
+            {
+              "type": "match",
+              "id": "ab333007-a5cf-4f5a-90f9-6e35361d512e"
+            },
+            {
+              "type": "match",
+              "id": "d17c760b-2d1d-4f4c-8a68-39a1781f9b31"
+            },
+            {
+              "type": "match",
+              "id": "26d0bb3f-006a-4d64-a6a0-f5c17f005137"
+            },
+            {
+              "type": "match",
+              "id": "dc318082-824f-464d-8ae1-b7770ace4b82"
+            },
+            {
+              "type": "match",
+              "id": "10cb2030-3c07-4acc-b38e-e9c90f7d64c4"
+            },
+            {
+              "type": "match",
+              "id": "ea3ddc30-9173-41df-914f-9e4a4bc343b8"
+            },
+            {
+              "type": "match",
+              "id": "ea63a90b-314f-4fe0-ad0b-9d547ddabc65"
+            },
+            {
+              "type": "match",
+              "id": "b16dfe39-b03b-4a9c-9537-c61914811061"
+            },
+            {
+              "type": "match",
+              "id": "8aa410fc-5f22-43d4-8dc3-06bd7ae2310d"
+            },
+            {
+              "type": "match",
+              "id": "91f7dddf-0dae-450c-b552-dd2b26689835"
+            },
+            {
+              "type": "match",
+              "id": "2262491d-0d69-4701-a48b-f091cbced7fc"
+            },
+            {
+              "type": "match",
+              "id": "e47be8d8-1b66-4921-8a1d-0c4d5eb9a0f1"
+            },
+            {
+              "type": "match",
+              "id": "2c9555dc-4089-4478-8de5-336864d33491"
+            },
+            {
+              "type": "match",
+              "id": "667b1b14-ef7b-4288-929f-f0c51773dee9"
+            },
+            {
+              "type": "match",
+              "id": "551b1697-fdf0-4209-8226-5c4ed83aca41"
+            },
+            {
+              "type": "match",
+              "id": "7fd26223-7206-42da-9184-3a11a9424730"
+            },
+            {
+              "type": "match",
+              "id": "74572738-1467-458e-9907-5dfcdd168e45"
+            },
+            {
+              "type": "match",
+              "id": "3c78fbbe-b1a3-40cd-b576-3b25d500f785"
+            },
+            {
+              "type": "match",
+              "id": "acdc832c-4c79-49bf-bc8e-48a711367d5d"
+            },
+            {
+              "type": "match",
+              "id": "54b7476e-b7a2-42d5-bc75-7ea2e39804ba"
+            },
+            {
+              "type": "match",
+              "id": "fc948585-df40-4411-bbf4-3d9826745971"
+            },
+            {
+              "type": "match",
+              "id": "ec22515d-4eec-45d2-a0ee-db1d580299cc"
+            },
+            {
+              "type": "match",
+              "id": "8af40623-5e81-4b7d-a3f3-c578520268a7"
+            },
+            {
+              "type": "match",
+              "id": "747afd41-4d11-4611-8dad-5e3762675076"
+            },
+            {
+              "type": "match",
+              "id": "37ed17eb-56c3-4187-b6c6-d26615d3cb31"
+            },
+            {
+              "type": "match",
+              "id": "72755f0a-3468-44ec-989d-3d35f9367411"
+            },
+            {
+              "type": "match",
+              "id": "afee89b1-e2ab-477e-a325-3c5f3c5e86b3"
+            },
+            {
+              "type": "match",
+              "id": "bcafde37-b1ce-4c1f-a9d2-efc7301c6a45"
+            },
+            {
+              "type": "match",
+              "id": "ffd48d23-c014-4017-97cb-c6bc08a545d1"
+            },
+            {
+              "type": "match",
+              "id": "99f75efc-3952-47a8-b245-c720fef60a4f"
+            },
+            {
+              "type": "match",
+              "id": "9e3fe2ea-5789-4bde-8bc4-4b1f2c7a85ea"
+            },
+            {
+              "type": "match",
+              "id": "7de5bdf1-4a9e-4db3-9574-ffc70ffde2a6"
+            },
+            {
+              "type": "match",
+              "id": "9a10d624-61ec-4c9e-a499-fadb01451d73"
+            },
+            {
+              "type": "match",
+              "id": "614d94c1-a1fa-4ce3-80ff-7c8a2619d0d9"
+            },
+            {
+              "type": "match",
+              "id": "8eb6b061-dee8-4c43-b124-f91317ed2a0b"
+            },
+            {
+              "type": "match",
+              "id": "6326345c-eada-4698-b6d7-659c060139aa"
+            },
+            {
+              "type": "match",
+              "id": "8080320e-6e71-4413-b14a-55af866790e5"
+            },
+            {
+              "type": "match",
+              "id": "28b377da-d427-4108-88e2-87710412cff2"
+            },
+            {
+              "type": "match",
+              "id": "5b9498ce-baa0-4b23-8d4b-c799ee16be55"
+            },
+            {
+              "type": "match",
+              "id": "2f22c5cf-01cc-440b-8684-ecd02af061c7"
+            },
+            {
+              "type": "match",
+              "id": "e4296e05-91d2-4b79-a35f-5bcd5d3183c5"
+            },
+            {
+              "type": "match",
+              "id": "94a53ddc-463e-469d-a049-572a27f6a214"
+            },
+            {
+              "type": "match",
+              "id": "25ba75cb-b67c-46a3-acfe-7c60a57986c9"
+            },
+            {
+              "type": "match",
+              "id": "9427fe90-31f2-4928-9624-f15dcb4391d0"
+            },
+            {
+              "type": "match",
+              "id": "33c8edb4-40ba-4147-a421-67ff7c0303de"
+            },
+            {
+              "type": "match",
+              "id": "466eefb9-7f27-4411-9f64-48a31f5401bc"
+            },
+            {
+              "type": "match",
+              "id": "5d3e337a-66d3-48ea-ba60-0163c4a6ce2b"
+            },
+            {
+              "type": "match",
+              "id": "c051f8f6-0ce3-496f-ba58-73f44e344692"
+            },
+            {
+              "type": "match",
+              "id": "f4727d57-14ed-44d8-a2d8-97b27b4690b0"
+            },
+            {
+              "type": "match",
+              "id": "5f2d969e-9479-42a5-ae89-3e162847ad33"
+            },
+            {
+              "type": "match",
+              "id": "47035913-89be-4d4d-afe5-bb5798b69cd3"
+            },
+            {
+              "type": "match",
+              "id": "8ce9de97-f657-4f3b-95aa-dc2c610f85b5"
+            },
+            {
+              "type": "match",
+              "id": "f4d3f851-4869-491a-b25f-cb2176cb0f9c"
+            },
+            {
+              "type": "match",
+              "id": "6156a7cd-828b-466f-a97d-b424cd81f6fa"
+            },
+            {
+              "type": "match",
+              "id": "35ed7767-e036-4bd8-949c-26a11fe7ee62"
+            },
+            {
+              "type": "match",
+              "id": "876e8abd-26f6-4dbb-af8e-928718e967ca"
+            },
+            {
+              "type": "match",
+              "id": "6bb4d527-2905-4088-a890-18092b1ea5cd"
+            },
+            {
+              "type": "match",
+              "id": "41729fe2-f9aa-4097-b738-063bb73b49f1"
+            },
+            {
+              "type": "match",
+              "id": "32a06e52-7f07-4fd7-ab3b-4f54b64f7b63"
+            },
+            {
+              "type": "match",
+              "id": "c311a236-59b3-4f45-8e71-34e9583847d2"
+            },
+            {
+              "type": "match",
+              "id": "8e88658a-a280-46d1-be81-9c3bfdad777a"
+            },
+            {
+              "type": "match",
+              "id": "5e869e55-d500-4810-81f7-ecc8d5e023fa"
+            },
+            {
+              "type": "match",
+              "id": "3dfc6d3e-1c8f-4265-935e-a63620e8e1f6"
+            },
+            {
+              "type": "match",
+              "id": "028b0df2-0b9e-4a5f-93d4-f6d0165b8ab1"
+            },
+            {
+              "type": "match",
+              "id": "58434b11-2fa2-48f7-bbad-acb88930ac78"
+            },
+            {
+              "type": "match",
+              "id": "a2b516a7-7271-4859-a6f4-a578f63104b2"
+            },
+            {
+              "type": "match",
+              "id": "664b7d30-0042-40f9-8c4c-05e03e28a7c2"
+            },
+            {
+              "type": "match",
+              "id": "3c17191e-a2eb-41cd-908f-da86e4cfbd47"
+            },
+            {
+              "type": "match",
+              "id": "3774367a-3f22-487a-b76c-488a82b2c27b"
+            },
+            {
+              "type": "match",
+              "id": "d079fe95-b9d2-4e80-9891-3698cc97635d"
+            },
+            {
+              "type": "match",
+              "id": "8e35354a-256a-45ea-956f-58ddeb7a92c8"
+            },
+            {
+              "type": "match",
+              "id": "8ebf91c8-f4c7-435c-8292-181218c20390"
+            },
+            {
+              "type": "match",
+              "id": "769d9d3b-2088-4e34-b5af-2021389fbacb"
+            },
+            {
+              "type": "match",
+              "id": "342863ac-7a86-49f1-b8cc-2255bbebdc19"
+            },
+            {
+              "type": "match",
+              "id": "57472f6c-28ba-4b7b-a158-55684fbfbfad"
+            },
+            {
+              "type": "match",
+              "id": "c576a1ab-e18c-4006-ab64-e2a86e7ea26c"
+            },
+            {
+              "type": "match",
+              "id": "e7525ec8-6330-4d57-bcb2-97cb98bf2514"
+            },
+            {
+              "type": "match",
+              "id": "8142af9e-375f-4330-bfe0-fb459ec355e9"
+            },
+            {
+              "type": "match",
+              "id": "e11cd273-e64f-4d40-9f59-80272af43295"
+            },
+            {
+              "type": "match",
+              "id": "9b020a57-b3de-4dd9-9ffe-110382326d84"
+            },
+            {
+              "type": "match",
+              "id": "0e3040cd-785c-4015-84e7-133bd43e6b4c"
+            },
+            {
+              "type": "match",
+              "id": "5c11ded0-c16d-477d-aa08-b8bc1f55fd67"
+            },
+            {
+              "type": "match",
+              "id": "1df73760-5943-4134-9527-761b4ff67671"
+            },
+            {
+              "type": "match",
+              "id": "541bcc14-c770-4833-af2b-3da189edfed0"
+            },
+            {
+              "type": "match",
+              "id": "37041da8-5338-4ad3-9471-a3f5c86225cc"
+            },
+            {
+              "type": "match",
+              "id": "54394608-dc57-4b48-a984-d4834ad16545"
+            },
+            {
+              "type": "match",
+              "id": "57748f24-f536-4267-8924-63535dde3210"
+            },
+            {
+              "type": "match",
+              "id": "b7845d2e-f822-434a-aceb-d777837a4702"
+            },
+            {
+              "type": "match",
+              "id": "cfa080d8-0349-4d09-b0aa-7258f63abc62"
+            },
+            {
+              "type": "match",
+              "id": "5244fd39-7f0e-4a4d-8210-89c15d0b01f6"
+            },
+            {
+              "type": "match",
+              "id": "aff8f689-e9b4-4864-84a5-814e605ac3ea"
+            },
+            {
+              "type": "match",
+              "id": "7b007afc-cfaf-4ce2-97c0-2be667d999e7"
+            },
+            {
+              "type": "match",
+              "id": "425ea608-6a9c-464b-bfcf-61386641363c"
+            },
+            {
+              "type": "match",
+              "id": "9439ac20-30d5-48c6-bea3-6e6157282ea0"
+            },
+            {
+              "type": "match",
+              "id": "d843a072-5ba4-411c-90ea-4649b3f1b24b"
+            },
+            {
+              "type": "match",
+              "id": "a590e915-6738-42f0-92c8-d111e41fedc0"
+            },
+            {
+              "type": "match",
+              "id": "1c4be64f-cfe2-411b-8d75-164d66909cdc"
+            },
+            {
+              "type": "match",
+              "id": "ddcc72f3-79de-4146-8361-858c5ccde83c"
+            },
+            {
+              "type": "match",
+              "id": "73dc6648-5b00-46b1-9570-d47851f88409"
+            },
+            {
+              "type": "match",
+              "id": "6da78c83-e8e9-46b8-bc06-3bbfa59447f2"
+            },
+            {
+              "type": "match",
+              "id": "9b976620-6290-4519-abfe-268907181268"
+            },
+            {
+              "type": "match",
+              "id": "9ce02cdc-ec19-43b2-b862-1d72aaba6121"
+            },
+            {
+              "type": "match",
+              "id": "a6f1e863-561b-4fd2-814d-d042fcd8d4b1"
+            },
+            {
+              "type": "match",
+              "id": "f2459858-38ff-4795-8f93-a89d9a6d248b"
+            },
+            {
+              "type": "match",
+              "id": "1f79dc2c-3a72-43a9-9b7b-d87d72c2665b"
+            },
+            {
+              "type": "match",
+              "id": "15f92f0d-a72c-4c1e-a7a4-24e099e27295"
+            },
+            {
+              "type": "match",
+              "id": "54f047a9-c7bf-4a9d-9e16-9d8bd0efc4c5"
+            },
+            {
+              "type": "match",
+              "id": "3b6d77c0-348c-4efb-b42e-ffc3bdaf0770"
+            },
+            {
+              "type": "match",
+              "id": "9bbef039-8488-45d7-bf23-17798a774a8b"
+            },
+            {
+              "type": "match",
+              "id": "a111b387-babc-42d6-922c-0f736754278c"
+            },
+            {
+              "type": "match",
+              "id": "22a24d13-f783-4d1d-9cfd-37218e4badb1"
+            },
+            {
+              "type": "match",
+              "id": "8e200531-8240-4775-b8e3-446404dc006b"
+            },
+            {
+              "type": "match",
+              "id": "aad78bb9-d377-4d2c-aefe-57ac5a2e6092"
+            },
+            {
+              "type": "match",
+              "id": "45056684-b83e-48a9-8d46-7bf474df5bd9"
+            },
+            {
+              "type": "match",
+              "id": "cdbf8a5a-6c45-47dd-9c6d-010864ae06e1"
+            },
+            {
+              "type": "match",
+              "id": "5ca30d99-8b11-40e5-abdb-fdf2aa803b5c"
+            },
+            {
+              "type": "match",
+              "id": "ebc2ccf6-a907-4367-b2b4-a5874cf5b193"
+            },
+            {
+              "type": "match",
+              "id": "dc631921-ce08-492e-a336-daffc6c207dd"
+            },
+            {
+              "type": "match",
+              "id": "9c9ddf6a-c000-4cb4-b07e-f413dfecf11f"
+            },
+            {
+              "type": "match",
+              "id": "6abe5097-854e-4d06-8749-567ddfa82cf1"
+            },
+            {
+              "type": "match",
+              "id": "ddec3031-c359-40ca-97ce-b9a481e7b025"
+            },
+            {
+              "type": "match",
+              "id": "3f4e3d73-75ba-458e-b001-2448e0e26f04"
+            },
+            {
+              "type": "match",
+              "id": "0d808f1c-dbb7-476b-aba1-be43d8b0d70d"
+            },
+            {
+              "type": "match",
+              "id": "8950e5f5-2b3f-4530-9f87-38436207dfad"
+            },
+            {
+              "type": "match",
+              "id": "f14f2c66-0594-42a2-ba93-a829fba48fa8"
+            },
+            {
+              "type": "match",
+              "id": "ea645201-94c7-45ad-8965-321c18f7c81c"
+            },
+            {
+              "type": "match",
+              "id": "0b4207c7-6f96-44bd-add5-0ba9beff940e"
+            },
+            {
+              "type": "match",
+              "id": "ed65e583-8c4a-4bf7-bf76-33675bdb3151"
+            },
+            {
+              "type": "match",
+              "id": "7d52e28e-c8e0-4d87-9b38-3b3df6a9db66"
+            },
+            {
+              "type": "match",
+              "id": "b326a096-64c6-4d54-9ab8-51ecc21e5695"
+            },
+            {
+              "type": "match",
+              "id": "c5137f45-4472-43d2-8597-d27e1b5fdb9e"
+            },
+            {
+              "type": "match",
+              "id": "d14c611c-ee36-4096-bbb2-dc34b6168b0f"
+            },
+            {
+              "type": "match",
+              "id": "e8924a71-d36f-4405-8514-af02b92b2ca6"
+            },
+            {
+              "type": "match",
+              "id": "d43b1db4-d74a-43d6-9a41-ba90e7a2079f"
+            },
+            {
+              "type": "match",
+              "id": "c1d90433-c0a2-4eeb-be0c-784b8f896283"
+            },
+            {
+              "type": "match",
+              "id": "7db6b317-adcd-4e05-b285-72489fcba56f"
+            },
+            {
+              "type": "match",
+              "id": "7aab8270-cbac-47dc-a79c-8575dceff7b2"
+            },
+            {
+              "type": "match",
+              "id": "1cd29c0a-c110-42b9-8a0b-b43f2217f72a"
+            },
+            {
+              "type": "match",
+              "id": "99fe3f75-ee40-4aaf-9c60-ee9f19bf0960"
+            },
+            {
+              "type": "match",
+              "id": "eb9ca83c-da3f-42e6-8ef0-b318f7531345"
+            },
+            {
+              "type": "match",
+              "id": "01a515b4-e97e-4e55-8217-0637f18a9f35"
+            },
+            {
+              "type": "match",
+              "id": "93e2c725-7142-42d0-b9ed-c797ecad12c7"
+            },
+            {
+              "type": "match",
+              "id": "1f7dfdd2-5287-408b-b1e5-2ac2c218f2d0"
+            },
+            {
+              "type": "match",
+              "id": "a42f2063-77bc-4bf6-bfae-94969a52a2a3"
+            },
+            {
+              "type": "match",
+              "id": "93161c65-c467-4234-9a4f-ff388fb44bca"
+            },
+            {
+              "type": "match",
+              "id": "dd80b751-27b9-4d93-ad52-7ce0954e2fad"
+            },
+            {
+              "type": "match",
+              "id": "96848f2d-37ff-4905-a6b5-6cd0cf708d53"
+            },
+            {
+              "type": "match",
+              "id": "3181dba9-c41d-43b0-91e0-576f95669350"
+            },
+            {
+              "type": "match",
+              "id": "8dee74a4-89f1-4c10-875c-080ca2776002"
+            },
+            {
+              "type": "match",
+              "id": "50a7ad95-02c4-46a0-9b2b-a02bd18ff76f"
+            },
+            {
+              "type": "match",
+              "id": "f8d56475-cd84-4f76-96f1-91be0597a83c"
+            },
+            {
+              "type": "match",
+              "id": "ec94aacf-3a65-471a-9227-c435f9f28367"
+            },
+            {
+              "type": "match",
+              "id": "d4c04ddc-9fd8-4013-a21a-9acdab5fffe5"
+            },
+            {
+              "type": "match",
+              "id": "e39f4d96-f107-46ff-9501-bd1e323d3c71"
+            },
+            {
+              "type": "match",
+              "id": "7cc7ad1e-0909-4b92-83ed-e4dc09060355"
+            },
+            {
+              "type": "match",
+              "id": "989c951f-25f8-42ba-87d2-5c6efffee16b"
+            },
+            {
+              "type": "match",
+              "id": "9222aa03-094b-44f3-9222-2fdd1d6a0878"
+            },
+            {
+              "type": "match",
+              "id": "08b74f7c-606d-47f6-8263-4def39b04faa"
+            },
+            {
+              "type": "match",
+              "id": "fe588be0-7a89-4f9c-a6ea-50357a98fe99"
+            },
+            {
+              "type": "match",
+              "id": "3c2fde07-cf5c-4cd7-9e62-d734c05a34c7"
+            },
+            {
+              "type": "match",
+              "id": "86750fee-da09-470c-8c41-8e6804a6da56"
+            },
+            {
+              "type": "match",
+              "id": "9a2ba4df-de03-4e29-bba7-ca335a622a44"
+            },
+            {
+              "type": "match",
+              "id": "d17915ee-991b-4654-b217-a8ad53b3c549"
+            },
+            {
+              "type": "match",
+              "id": "fef0c97c-34d4-46a7-a965-114f82d68cd7"
+            },
+            {
+              "type": "match",
+              "id": "ec219611-f745-408d-bfd8-4c59ddea2e0b"
+            },
+            {
+              "type": "match",
+              "id": "292404da-3b75-4ae6-a1df-6093978b50a4"
+            },
+            {
+              "type": "match",
+              "id": "74a37cee-4742-45a6-8ae2-1b0cd25989fb"
+            },
+            {
+              "type": "match",
+              "id": "730de537-1c82-4624-a76c-0979a334f6cc"
+            },
+            {
+              "type": "match",
+              "id": "04f78aad-f960-4984-8f17-d1de43702ceb"
+            },
+            {
+              "type": "match",
+              "id": "f766e40f-4d80-4729-b526-5a1a0c38090f"
+            },
+            {
+              "type": "match",
+              "id": "cd2d7764-f64c-4382-995f-24c75b5c32d1"
+            },
+            {
+              "type": "match",
+              "id": "e92f2308-6fbf-42dc-ad48-bff193dd7f9d"
+            },
+            {
+              "type": "match",
+              "id": "2543b561-63d5-4b3f-b565-1fc8498a795e"
+            },
+            {
+              "type": "match",
+              "id": "902ee39e-6222-4e08-adf6-11667a596422"
+            },
+            {
+              "type": "match",
+              "id": "a077f7e0-50d0-4cd6-8f2c-752f96af724c"
+            }
+          ]
+        }
+      },
+      "links": {
+        "self": "https://api.pubg.com/shards/steam/players/account.82bad0072f31455d8d9f8d834da2f2f3",
+        "schema": ""
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]\u003dTGLTN"
+  },
+  "meta": {}
+}

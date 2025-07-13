@@ -10,7 +10,7 @@ import java.util.Vector;
 
 
 /*
- * ADD COMMENT
+ * The API_Request class lets users connect to the pubg API and collect data from it.
  */
 public class API_Request extends API {
 
@@ -28,10 +28,14 @@ public class API_Request extends API {
     public int getMatchLimit() { return this.matchLimit; };
 
 
-    //If no limit is specified on the number of matches to look at, then the default is 5.
+    /*
+     * If no limit is specified on the number of matches to look at, then the default is 5.
+     */
     public API_Request(String player) throws IOException {  this(player, 5);    }
 
-    //Create/save a specificRequest based on the established player and timestamp.
+    /*
+     * Create/save a specificRequest based on the established player and timestamp.
+     */
     private void initializeSpecificRequest()
     {
         this.timestamp = System.currentTimeMillis();
@@ -54,7 +58,8 @@ public class API_Request extends API {
 
         this.player = player;
         this.matchLimit = matchLimit; //default is 5 unless specified
-        this.recentMatches = new URL("https://api.pubg.com/shards/steam/players?filter[playerNames]=" + this.player);
+        this.recentMatches = new URL("https://api.pubg.com/shards/" + getAPIplatform() + 
+                                    "/players?filter[playerNames]=" + this.player);
 
         initializeSpecificRequest();
 
@@ -69,7 +74,7 @@ public class API_Request extends API {
      */
     private File getMatchOverviewContent(String match_id) throws IOException {
         //Match Overview
-        URL oneMatch_ = new URL("https://api.pubg.com/shards/steam/matches/" + match_id);
+        URL oneMatch_ = new URL("https://api.pubg.com/shards/" + getAPIplatform() + "/matches/" + match_id);
         Path match_Path = Path.of(specificRequest + "/matches/match_id_" + match_id);
 
         connectToAPI(oneMatch_);
@@ -90,8 +95,6 @@ public class API_Request extends API {
         //save/create summary file
         storeResponseToSpecifiedFileLocation(summary_Path.toString());
         File summary_File = new File(summary_Path.toString() + ".json");
-
-
 
         //use summary to get recent match_ids. They are then formatted to be more visually user-friendly.
         Vector<String> match_ids = getMatchIDsFromRequestPath(summary_File);
@@ -127,15 +130,11 @@ public class API_Request extends API {
      * Returns the telemetry url for a specific match.
      */
     private URL getTelemetryURL(File f) throws IOException {
-
         String fileAsString = FileUtils.readFileToString(f);
-
         int index = fileAsString.indexOf("https://telemetry-");
         String https = fileAsString.substring(index, index + 119);
         System.out.println("telemetry URL is " + https);
-
         URL telemetryURL = new URL(https);
-
         return telemetryURL;
     }
 
@@ -146,12 +145,9 @@ public class API_Request extends API {
      */
     private void printResponseCodeSuccessFail(URL url) throws IOException {
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
-        if(this.connection.getResponseCode() == 200) //response is valid/OK
-        {
+        if(this.connection.getResponseCode() == 200) { //response is valid/OK
             System.out.println("Connection made. URL: " + url.toString());
-        }
-        else
-        {
+        } else {
             System.out.println("Error: connection to api has invalid response");
             System.exit(0);
         }
@@ -160,10 +156,8 @@ public class API_Request extends API {
     /*
      * Ends the program if null connection.
      */
-    private void endProgramIfNullConnection()
-    {
-        if(connection == null) //!isConnected
-        {
+    private void endProgramIfNullConnection() {
+        if(connection == null) {
             System.out.println("Error: connection is null");
             System.exit(0);
         }
@@ -231,15 +225,12 @@ public class API_Request extends API {
             System.out.println("Connection made. URL: " + url.toString());
             transferInputUsingProcessBuilder(url, destFile); //Credit: https://www.baeldung.com/java-curl.
             FileManager.makePretty(destFile); //seems to work
-
         }
         else
         {
             System.out.println("Error: connection to api has invalid response");
         }
-
         return this.connection;
-
     }
 
     /*
@@ -273,7 +264,6 @@ public class API_Request extends API {
         return responseFile;
     }
 
-
     /*
      * Given a summary_matchList.json file, gathers the match ids it mentions.
      * Returns a Vector<String> where each String is a match id gathered,
@@ -302,8 +292,6 @@ public class API_Request extends API {
         {
             JSONObject id = jsonArrayOfMatches.getJSONObject(i);
             String match_id = id.get("id").toString();
-            //System.out.println("match_id = " + match_id);
-
             match_ids.add(match_id);
         }
         System.out.println("match_ids.size() = " + match_ids.size());
