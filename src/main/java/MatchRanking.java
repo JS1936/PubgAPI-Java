@@ -3,7 +3,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 
-//The Ranking class calculates and prints the ranking of a specific player in a specific match or matches.
+//The MatchRanking class calculates and prints the ranking of a specific player in a specific match or matches.
 public class MatchRanking {
 
     /*
