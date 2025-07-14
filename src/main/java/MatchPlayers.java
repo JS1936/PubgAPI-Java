@@ -11,17 +11,13 @@ import java.util.Vector;
 public class MatchPlayers {
 
     /*
-     * Given a file representing data on a specific match, prints all players, sorted by team.
+     * Given a file representing data on a specific official (non-custom) match, prints all players, sorted by team.
      * EX for one player: "zaeliax 18 15". Match team id is 18, match ranking is 15.
      * 
      * NOTES:
-     * -Does not printPlayersByTeam for custom games.
-     * -For deathmatches, does not account for people leaving and entering midgame
-     * -Team size not always 4 (or even <=4!) Example of size>4: team deathmatches.
-     *
-     * TEAM IDs:
-     *  official game:      team id <= 100 = real people, 2xx (like 201) = bots, 5xx = guards
-     *  arcade/deathmatch:  only two teams. IDs are 1 and 2.
+     * -Does not printPlayersByTeam for custom games (EX: deathmatches use IDs 1 and 2, teams of up to 8 players)
+     * -Team size not always 4 (or even <=4!)
+     * -Official game team ids: team id less than or equal to 100 = real people, 2xx (like 201) = bots, 5xx = guards
      */
     public static Vector<JSONObject> printPlayersByTeam(File prettyFile) throws IOException
     {
@@ -57,6 +53,7 @@ public class MatchPlayers {
 
     /*
      * Exits program if the match is custom.
+     * Note: Deathmatches are a form of custom match.
      */
     private static void exitIfGameIsCustom(File prettyFile) throws IOException
     {
