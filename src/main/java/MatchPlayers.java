@@ -6,8 +6,11 @@ import java.util.Vector;
 
 /*
  * The MatchPlayers class prints the names of all players in a match, sorted by team.
+ * 
+ * Future considerations:
+ *  - Refactor addPlayers()
+ *  - Consider using List instead of Vector
  */
-// TODO: Refactor addPlayers()
 public class MatchPlayers {
 
     /*

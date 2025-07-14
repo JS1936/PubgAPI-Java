@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Vector;
 
-// The MatchWeapons class gathers and reports weapons-related match statistics.
+/*
+ * The MatchWeapons class gathers and reports weapons-related match statistics.
+ */
 public class MatchWeapons {
     /*
      * Prints the weapons used by the match winners to terminal and requestHistory.txt
