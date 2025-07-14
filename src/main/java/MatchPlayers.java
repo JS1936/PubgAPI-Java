@@ -9,7 +9,7 @@ import java.util.Vector;
  * 
  * Future considerations:
  *  - Refactor addPlayers()
- *  - Consider using List instead of Vector
+ *  - Use List instead of Vector
  */
 public class MatchPlayers {
 
