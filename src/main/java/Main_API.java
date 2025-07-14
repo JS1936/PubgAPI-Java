@@ -27,13 +27,20 @@ import java.io.IOException;
  * 
  * Current errors/issues:
  *      - Not all real players register properly. Here are some pro player examples:
- *              ==> Team Falcons (hwinn, Kickstart, shrimzy, TGLTN) | OK, fails, OK, OK
+ *              ==> Team Falcons (hwinn, Kickstart, shrimzy, TGLTN) | OK, OK, OK, OK
  *              ==> Team DN Freecs (DIEL, Gyumin, Heaven, Salute)   | fails, fails, fails, fails
  */
 public class Main_API {
 
     public static void main(String[] args) throws IOException {
-        API request = new API_Request("Heaven", 15); 
-        //API request = new API_Request("CoorsLatte");
+        //API request = new API_Request("DIEL", 15);    // South Korea      | Fails
+        //API request = new API_Request("seoul", 15);   // South Korea      | Fails
+        //API request = new API_Request("Capitan", 5);  // Argentina        | Fails
+        //API request = new API_Request("Viss", 5)      // United States    | Inactive
+        
+        
+        //API request = new API_Request("chocoTaco", 3); // Succeeds. High activity.
+        //API request2 = new API_Request("WackyJacky101", 5); // United States
+        API request = new API_Request("CoorsLatte"); // United States
     }
 }

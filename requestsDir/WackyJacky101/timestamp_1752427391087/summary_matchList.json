@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "type": "player",
+      "id": "account.c0e530e9b7244b358def282782f893af",
+      "attributes": {
+        "clanId": "clan.ef22d7c2254a46dba33dbe34c9c4c6bb",
+        "name": "WackyJacky101",
+        "titleId": "pubg",
+        "shardId": "steam",
+        "patchVersion": "",
+        "banType": "Innocent"
+      },
+      "relationships": {
+        "assets": {
+          "data": []
+        },
+        "matches": {
+          "data": [
+            {
+              "type": "match",
+              "id": "bf6c464e-5c4c-422d-bf82-6ff763574434"
+            },
+            {
+              "type": "match",
+              "id": "b5430266-23e4-4242-8c4f-e40d664a8fa7"
+            },
+            {
+              "type": "match",
+              "id": "7ff5121e-4970-41f4-8a39-ae182eecbb1e"
+            },
+            {
+              "type": "match",
+              "id": "74df04fd-31ff-454f-9c3b-cca4e4a40688"
+            },
+            {
+              "type": "match",
+              "id": "335d3867-74f0-45a9-9d23-097dc7161dd7"
+            },
+            {
+              "type": "match",
+              "id": "b0be6d4d-f766-4af2-9115-92c0354e8422"
+            },
+            {
+              "type": "match",
+              "id": "58456d06-e915-439a-b312-c288ba6d3900"
+            },
+            {
+              "type": "match",
+              "id": "e06bac59-3957-4b57-8513-dc6eeb72c1e4"
+            }
+          ]
+        }
+      },
+      "links": {
+        "self": "https://api.pubg.com/shards/steam/players/account.c0e530e9b7244b358def282782f893af",
+        "schema": ""
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]\u003dWackyJacky101"
+  },
+  "meta": {}
+}

@@ -8,17 +8,21 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Vector;
 
-
 /*
  * The API_Request class lets users connect to the pubg API and collect data from it.
+ * 
+ * Future considerations:
+ *  - Refactor doRequest()
+ *  - Decide whether to keep doRequest() summmary file or deleteOnExit
+ *  - Update to no longer use deprecated resources
  */
 public class API_Request extends API {
 
     private String player = "<playerName>";         //  player-chosen name (EX: JS1936)
-    private HttpURLConnection connection = null;    //
+    private HttpURLConnection connection = null;    //  connection to pubg API
 
-    private File specificRequest;                   //
-    private URL recentMatches;                      //
+    private File specificRequest;                   //  EX: ../requestsDir/<playerName>/timestamp_<timestamp>
+    private URL recentMatches;                      //  EX: "https://api.pubg.com/shards/<platform>/players?filter[playerNames]=<player>"
     private long timestamp;                         // time of initial request
     private int matchLimit;                         // maximum number of matches analyzed per request
 
@@ -49,8 +53,9 @@ public class API_Request extends API {
     }
 
     /*
-     * Given a player name and a maximum number of matches to collect data on, ...
-     * ADD COMMENT
+     * Given a player name and a maximum number of matches to collect data on, gathers up to "matchLimit" number of 
+     * match telemetry files and stores them at "../requestsDir/<player>/<timestamp>/matches"
+     * Expect: player exists and has played recently (within the last 2 weeks)
      */
     public API_Request(String player, int matchLimit) throws IOException {
 
@@ -70,7 +75,7 @@ public class API_Request extends API {
     }
 
     /*
-     * ADD COMMENT
+     * Returns a file holding formatted / "pretty" telemetry corresponding to the match with the given match id.
      */
     private File getMatchOverviewContent(String match_id) throws IOException {
         //Match Overview
@@ -85,7 +90,10 @@ public class API_Request extends API {
     }
     
     /*
-     * ADD COMMENT
+     * Pre: "matches" subdirectory for the desired player exists
+     * Adds up to this.mathLimit number of match files into the "matches" directory for the desired player.
+     * - Uses summary file to get recent match ids. 
+     * - For each match id, gets, prettifies, and stores corresponding match data (match overview and match telemetry)
      */
     private void doRequest() throws IOException {
         //connect
@@ -98,7 +106,6 @@ public class API_Request extends API {
 
         //use summary to get recent match_ids. They are then formatted to be more visually user-friendly.
         Vector<String> match_ids = getMatchIDsFromRequestPath(summary_File);
-        Vector<URL> telemetry_urls = new Vector<URL>();
         int numMatches = 0;
         for(String match_id : match_ids) {
 
@@ -106,8 +113,7 @@ public class API_Request extends API {
 
             //Match Overview
             File pretty = getMatchOverviewContent(match_id);
-            pretty.deleteOnExit(); //revisit
-
+            pretty.deleteOnExit();
 
             //Match Telemetry
             URL telemetryURL = getTelemetryURL(pretty); //changed to ugly from pretty (back to pretty)
@@ -118,8 +124,6 @@ public class API_Request extends API {
             }
             File newFile2 = FileManager.makePretty(newFile);
             connectToAPI_wantZIP(telemetryURL, newFile2);
-
-            telemetry_urls.add(telemetryURL);
 
             numMatches++;
         }
@@ -216,15 +220,15 @@ public class API_Request extends API {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization","Bearer " + this.getAPIkey());
         connection.setRequestProperty("Accept", "application/vnd.api+json");
-        connection.setRequestProperty("Content-Type", "UTF-8" + "; charset=utf-8"); //added 12/15 (change to utf-8?)
-        connection.setRequestProperty("Accept", "gzip"); //added 11/29
+        connection.setRequestProperty("Content-Type", "UTF-8" + "; charset=utf-8");
+        connection.setRequestProperty("Accept", "gzip");
 
         System.out.println("Response code: " + this.connection.getResponseCode()); //expect: 200
         if(this.connection.getResponseCode() == 200) //response is valid/OK
         {
             System.out.println("Connection made. URL: " + url.toString());
             transferInputUsingProcessBuilder(url, destFile); //Credit: https://www.baeldung.com/java-curl.
-            FileManager.makePretty(destFile); //seems to work
+            FileManager.makePretty(destFile);
         }
         else
         {
@@ -249,8 +253,8 @@ public class API_Request extends API {
      * Given a String destination path, stores one match's telemetry data at that location in a file.
      * Creates a new file and new directories as needed.
      * Returns file holding one match's telemetry data.
+     * Note: Returning the file could be used to allow custom save.
      */
-    //Consider: returning file so that it can be custom-saved
     private File storeResponseToSpecifiedFileLocation(String dstPath) throws IOException {
         System.out.println("dstPath = " + dstPath);
 
@@ -286,8 +290,9 @@ public class API_Request extends API {
         JSONObject jsonObject = new JSONObject(fileAsString);
         JSONArray jsonArrayOfMatches = jsonObject.getJSONArray("data").getJSONObject(0).getJSONObject("relationships").getJSONObject("matches").getJSONArray("data");
         //System.out.println("jsonArray.length = " + jsonArrayOfMatches.length());
+        
+        //Store match ids in vector "match_ids"
         Vector<String> match_ids = new Vector<String>();
-
         for(int i = 0; i < jsonArrayOfMatches.length(); i++)
         {
             JSONObject id = jsonArrayOfMatches.getJSONObject(i);
