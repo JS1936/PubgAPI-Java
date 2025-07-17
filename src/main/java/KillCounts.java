@@ -1,5 +1,5 @@
 import java.io.File;
-import java.io.FileNotFoundException;
+//import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
@@ -23,13 +23,13 @@ public class KillCounts {
     private static void printKillCountsToHistoryAndConsole(Vector<String> counts) throws IOException {
 
         FileManager.writeToFileAndConsole("Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.");
-        int[] frequencies = new int[counts.size()]; //Assumed no single individual will get more than 30 kills in a single game //could change this to be start-size? EX: like 100
+        int[] frequencies = new int[counts.size()]; // Note: Previously assumed no single individual will get more than 30 kills in a single game
         int maxKills = 0;
         int killsByTopTen = 0;
         for (int i = 0; i < counts.size(); i++) {
             if (i % 10 == 0) //For display clarity
             {
-                FileManager.writeToFileAndConsole("", true); //new line after
+                FileManager.writeToFileAndConsole("", true); //New line after
             }
             int numKills = Integer.valueOf(counts.get(i));
             if (maxKills < numKills) {
@@ -39,7 +39,7 @@ public class KillCounts {
                 killsByTopTen += numKills;
             }
             frequencies[numKills]++;
-            FileManager.writeToFileAndConsole(counts.get(i) + " ", false); //no new line after
+            FileManager.writeToFileAndConsole(counts.get(i) + " ", false); //No new line after
         }
 
         //Print out how many people got X number of kills
@@ -105,17 +105,16 @@ public class KillCounts {
 
             //Examine each line in the file once
             Scanner scan = new Scanner(prettyFile);
-            int count = 0; //added 12/21/2022 //moved out of try 12/28/2022
-            boolean matchHasStarted = false; //temp
+            int count = 0;
+            boolean matchHasStarted = false;
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
-                //"LogMatchStart" occurs once per match
                 if(data.contains("LogMatchStart")) {
                     matchHasStarted = true;
                 }
                 //"killCount" occurs with each death per match
                 if (data.contains("killCount") && matchHasStarted) {
-                    String killNum = data.substring(data.length() - 2, data.length() - 1);
+                    String killNum = data.substring(data.length() - 2, data.length() - 1);  // error if #kills > 1 digit (EX: 17)
                     killCounts.add(killNum);
                     count++;
                 }
