@@ -114,7 +114,8 @@ public class KillCounts {
                 }
                 //"killCount" occurs with each death per match
                 if (data.contains("killCount") && matchHasStarted) {
-                    String killNum = data.substring(data.length() - 2, data.length() - 1);  // error if #kills > 1 digit (EX: 17)
+                    int indexColon = data.indexOf(":");
+                    String killNum = data.substring(indexColon + 2, data.length() - 1); //killNum starts at two indices beyond ":"
                     killCounts.add(killNum);
                     count++;
                 }
