@@ -76,6 +76,15 @@ public class BotCounts {
             String text = "#bots:       " + botNames.size() + " / " + (playerNames.size() + botNames.size())
                 + " [" + prettyFile.getAbsolutePath() + "]";
             FileManager.writeToFileAndConsole(text);
+
+            // Temporary
+            // FileManager.writeToFileAndConsole("Player names: \n");
+            // print(playerNames);
+            
+            // // Temporary 
+            // FileManager.writeToFileAndConsole("\n\nBot names: \n");
+            // print(botNames);
+
             scan.close();
 
         } catch (FileNotFoundException e) {
@@ -84,6 +93,14 @@ public class BotCounts {
         } catch (IOException e) {
             System.out.println("An error occurred: unable to write string to file");
             e.printStackTrace();
+        }
+    }
+
+    public static void print(Vector<String> vec) throws IOException
+    {
+        for (int i = 0; i < vec.size(); i++)
+        {
+            FileManager.writeToFileAndConsole((vec.get(i)).toString());
         }
     }
 }

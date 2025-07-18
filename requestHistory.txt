@@ -54637,3 +54637,5917 @@ WE__mao_ 200 19
 Mao_kuaishou2465 200 19
 XIAOKONGwang1901 200 19
 KuaishouJin1981 200 19
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+
+request=5:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+0 KILLS: 
+	LilBlueBalls
+	BroSlice41
+	HeLpMeMaNPLZ
+	OLH3llboy
+	Fonseca1
+	RhysLG
+	UpsetCrimsonCrow
+	Tinuck
+	patground
+	Jeffrony
+	xMeDic__-
+	Frotess
+	SuprRektumRanger
+	markmental
+	FatalXIntellect
+	GR33NEYES
+	Seryphym
+	Tempocontrol
+	Sbeard
+	Fool_Metul_Jakut
+	Sausage1
+	MrIce-TBags
+	AHoboHugger
+	Aiden8675309een
+	miaw365
+	bapjiji
+	idonutz
+	Hodgepodgers
+	WalrusDinner
+	PenguinBreakfast
+	Hikid
+	MustardTiger89
+	Skepptix
+	Buliwyf88
+	AFryBag
+	ineedamicrophone
+	Simon_Zephyrus
+	Cpt_Explode
+	Colt16
+	TheDeadBanana01
+	ISkyIProtoss
+	ShynnnDepTrai
+	FUGADO2
+	MonstherArtemisa
+	GUCCIxPRADA
+	checkeredzero59
+	EnemyStar0
+	LordCoolieoBeans
+	Trippinthrtime
+	JPhilS
+	littyfitz
+	Just_Tokin
+	Narko_XD
+	Mp__mao
+	Phoenixflame1917
+	Seaznace
+	Jhyn1412
+	DingusDoughboy
+	C0braChicken
+	Robbie22
+	JKevz
+	Yzuvomonacohvich
+	xViinom
+	blG_GuARDiaN
+	thenoob12344830
+	DREW-97
+	asdfghjsammy
+	A-Duba-Divin
+
+---------------
+
+1 KILLS: 
+	xHadesTRx
+	d0wb0y
+	Fuperschniples
+	tuglight
+	engliesh_Bill
+	thePapaPIG
+	UCE-PAVA
+	RAYDEL75
+	Br4_NA
+	HyperrealEel
+	YusmanyAroche19
+	GeNravenX
+
+---------------
+
+2 KILLS: 
+	NONAME_RD8413
+	BullyZPG
+	OSaaMa
+	EsChaos
+	Jon_1911
+	Purge117
+	Cast052
+	TaGaM
+
+---------------
+
+3 KILLS: 
+	SluttyMoose
+	TrinityCrush_TV
+	NFTxRANDALL2
+
+---------------
+
+4 KILLS: 
+	LilCountChocula
+	magnum4463
+
+---------------
+
+5 KILLS: 
+	BrucetheMoose_
+
+---------------
+
+14 KILLS: 
+	Shrimzy
+
+---------------
+
+22 KILLS: 
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+0 KILLS: 
+	CraigFromFriday
+	LeroySatan
+	RD_RedHorse901
+	Hieumadd2k9-_-
+	Seatoo
+	StinkyMike
+	StinkyHank
+	Psneudo
+	Andirtyson
+	sdellar2023
+	Popsfolly
+	StickyPicky16
+	LewisKiniski
+	Rubb3rchick3n
+	ju_jube_10
+	toxichild311
+	RayBchillin
+	ckg_Apolo
+	Blue_D_Walker
+	Quasihemisphere
+	epitYT
+	Robbie22
+	Slxerpuf
+	shizznit__
+	Emerald_69
+	CoastaTV
+	ZootedSBTTV
+	Xontros_
+	Giannelos
+	KirklandVodka
+	Luck4Str1k3
+	Titarneytor
+	Foederatus
+	EJBELLL
+	Evilapex
+	Bb3ll
+	A-G12
+	MiNG_xUe1958
+	2bfu
+	quickgentledeer
+	Aixright66
+	ratman27
+	XiaowanziQvQ-
+	GoAT_Icon
+	SnaggyDeer
+	GhOsTDaMoNsTeR
+	Count_Dale
+	Nedid
+	Tuzzles
+	BusterBlades
+	JohnnyDanger96
+	zaeliax
+	Ligth77
+	davidwalshgames
+
+---------------
+
+1 KILLS: 
+	DylanDeptrai
+	VIE_Doriiuanh
+	Rollin420-_-
+	TheSoldier-001
+	Twitch_Stick95
+	OLH3llboy
+	Teknic111
+	MUGZY211G
+	Shabooga
+	mullanator14
+	CharlyMacher
+	Chowenger
+	Carsonsz7
+	DevilVibez
+	Man2HandLove
+	TGLTN
+	Shrimzy
+
+---------------
+
+2 KILLS: 
+	JunkFoodJon
+	Scan_here
+	LlNT_LICKER
+	Hoobid
+	RagingDBag
+	Greek194
+	WhineyLilBitsch
+	Nobles44
+	ClutchDaddyy
+	Khako
+	Cup_Of_OJ
+
+---------------
+
+3 KILLS: 
+	Kukgi
+	TurtleHair
+	GreatLakester
+	RAIN9RRRRRRRRRRR
+	MonkeeMan
+
+---------------
+
+4 KILLS: 
+	killstreaks24
+
+---------------
+
+5 KILLS: 
+	LeonardoCapybara
+	GahhhDayummm
+	MachineElf
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+0 KILLS: 
+	AlphaOnixx
+	ekacnaP
+	Natural_Downs
+	ChiefBearToe
+	GenerikAsian
+	Gentlegreenleaf
+	NUme19622
+	HLong18
+	Wassssa
+	WomenInCages
+	SS-SgtoWyanS
+	Bobenjob
+	Josejch
+	Veta99
+	Simon_Zephyrus
+	soon2binsane
+	JayPey
+	Siriaz05
+	Abonnner
+	v1ademer
+	Captain_SaveAHoe
+	IamDaichi
+	heightss
+	Beefbruce
+	GUCCIxPRADA
+	MIGHTYPEAR9558
+	relentlliss
+	FU-Telos
+	kingelbhapo
+	Win100Percent
+	Connor12123
+	ElVaronsote
+	PalestinaLibre
+	Daniel-NM97
+	Robbie22
+	Sunlvg1962
+	ArtiArdi
+	xzotic999
+	Trippinthrtime
+	Skepptix
+	ElMeech
+	stikyroller828
+	markmywords
+	Baobao_lh_1992
+	ks__zhAng3727
+	Celis-21
+	cHengYiNYUe
+	Xin-Chao_VN
+	BrucetheMoose_
+	SCM_Democracy
+	Bl1tz3n
+	Hit-Drama
+	LeviathanZzz
+	LegLessIRL
+	Romario_Michell
+	Itz4rLife
+	Runflater
+	RaFIKI40
+
+---------------
+
+1 KILLS: 
+	NotOnMyScren
+	oilymcboil
+	Someone558
+	cozyPJ
+	bennybigben
+	Qoffu
+	GhostWr7
+	Shabooga
+	Andirtyson
+	Scan_here
+	gerrymx
+	By_Palm1T0
+	AttaGirlPenny
+	Zorrik-
+	JMERCY
+	LethalScrubby
+	Doshaw
+	PKSumaru
+	FOX626
+	GoshGeeWilikers
+
+---------------
+
+2 KILLS: 
+	SlouchGodRandy
+	BallinBalgruuf
+	DCG_Dan
+	Laugh_till_u_pe3
+	Spicy-_-Noodles
+	HawkEyes_Malware
+
+---------------
+
+3 KILLS: 
+	DaZFPS
+	NONAME_QAX09
+	Me_Gai_Nhat_Nha
+
+---------------
+
+4 KILLS: 
+	Barack_Oballer
+	ChiefCheek
+	Dirty_Harry12
+	LlNT_LICKER
+	MrGorkhali
+
+---------------
+
+6 KILLS: 
+	Cubinhne
+
+---------------
+
+10 KILLS: 
+	Shrimzy
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+0 KILLS: 
+	M1k3V
+	mikeracing
+	madn0
+	Lollipop_Jones
+	LuciferBTW
+	Keylan55
+	useendeez
+	fat_bass_turd_51
+	Nanderson
+	Im_Dead_Jim
+	ZwagLoL
+	Kachow19
+	EP_TiGuY303
+	EximusFr
+	IceCream4-
+	zombie420wolf
+	Shadovvolfy
+	SilvieFox-TTV
+	bonxai
+	sernuffalo
+	Guard
+	HateLoaf
+	Commander
+	Copperjohn
+	WilyCat
+	SpacM
+	ToxicDawn
+	BigC801
+	MavrickUDZ
+	JimmyDean-1
+	shredlife
+	Ku4ish0uBa1
+	Mazzziiii
+	K1ngH3nry
+	Nixic
+	TTvSholoop
+	LeguIsai
+	Gst-Tsukune
+	Doppelganker
+	TaoyunXue
+	MERHY10452
+	SIN_DIENTES
+	Jarred781
+	mighty_finch
+	XQF__storm_
+	CgWang8006
+	crackedbutterog
+	Sairen
+	ToRynn
+	Beartrapz
+	xdlolxd123
+	Fool_Metul_Jakut
+	SUB_RHINO4
+	BeanBagBoys
+	chase825
+	the_Bosston_
+	PRIZSY
+	fartsammich
+	FlameNM
+	ch0dey
+	OSaaMa
+	Weifighter
+
+---------------
+
+1 KILLS: 
+	OPH-NeverDream
+	AmericanSpartan
+	BarryHalzak
+	J-e-r-s-e-y
+	Kirshyy
+	GRIMMARCUS31
+	herzilein
+	Starstream-
+	Average_Eboy
+	Risbo_
+	Alexandert111
+	AnnerFPS
+	Satvrn1
+	C4TB
+	BeanBagBoyss
+	djkewpa
+
+---------------
+
+2 KILLS: 
+	PinoyBoldstar
+	Mator
+	Peepers7
+	RottenAmoeba
+	tio_luis
+
+---------------
+
+3 KILLS: 
+	NaksFriday
+	FritzFragGER
+	OutbackTimmy
+	Capiibarra
+	QuadrIgatI-
+
+---------------
+
+4 KILLS: 
+	JayPey
+	Wildeboare
+	Vientoz
+
+---------------
+
+5 KILLS: 
+	spam_b0t333333
+
+---------------
+
+6 KILLS: 
+	TGLTN
+	JabariStewart
+	UrwaldUrsula
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+0 KILLS: 
+	FrittObanditO
+	xMeDic__-
+	Drykz
+	Prykz
+	Burninghatred
+	lawlskin
+	Paperairbags
+	The_HMI_Guy
+	heightss
+	YoNeckYoAnkle
+	NycMiro
+	RomanticExpert
+	JohnnyDanger96
+	threeloko21ttv
+	InfecktedxFa
+	stikyroller828
+	mau0990
+	BusterBlades
+	evoldeeds
+	Briian-_23
+	PureRasta
+	icecreammman4
+	zaeliax
+	TittyWrangler69
+	Ligth77
+	SlackSlegan
+	Bionic_Polecat
+	MarsDaaa
+	oGhost159o
+	Klonny
+	TheFrostyPuma
+	Riccardoox
+	coocchoo
+	v1ademer
+	TheSpaceRabbit
+	SluttyMoose
+	LilCountChocula
+	UCE-PAVA
+	ice32o
+	Vezdetta
+	Dilettante_me
+	ACT_ACCORDlNGLY_
+	2four1
+	Volcanizz
+	Kekistan999
+	TrouserMouse-m16
+	jcoozie
+	WE__mao_
+	ReddRobb
+	GtoXed
+	VinxxGaming
+	Johnson1004
+	Wrar
+	LtDanIsMyCat
+	Osapanda
+	Lumasria
+	tropicz500fps
+	Pureawesomness3
+	I-CANT-REED
+	Cayxanh
+	ItsKow
+	LeHAK_356
+	XIAOKONGwang1901
+	Koalafide
+	M1k3V
+	Mao_kuaishou2465
+
+---------------
+
+1 KILLS: 
+	bunny-nOngluv
+	radicalross
+	Captain_SaveAHoe
+	Nedid
+	jranukss
+	Memillopeloz
+	Jeggred
+	Steelygee
+	LilBlueBalls
+	KuaishouJin1981
+	Albertgonz
+	ZxMyseryxZ
+	wolf-m16
+	DubbleTapp
+	oGrimy
+
+---------------
+
+2 KILLS: 
+	TidHee-nOngluv
+	Swisp
+	Tuzzles
+	Fufu_Lame
+	LtKernel
+	l89tlmn1
+
+---------------
+
+3 KILLS: 
+	PsychoFluffy
+
+---------------
+
+7 KILLS: 
+	tayStu-nOngluv
+
+---------------
+
+11 KILLS: 
+	JekLuu-nOngluv
+
+---------------
+
+12 KILLS: 
+	TGLTN
+
+---------------
+
+17 KILLS: 
+	Shrimzy
+
+---------------
+
+request=2:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+-----
+HeLpMeMaNPLZ 1 3
+engliesh_Bill 1 3
+thePapaPIG 1 3
+xHadesTRx 1 3
+-----
+NFTxRANDALL2 2 19
+TheDeadBanana01 2 19
+Colt16 2 19
+Cpt_Explode 2 19
+-----
+Seryphym 3 12
+Sbeard 3 12
+Tempocontrol 3 12
+-----
+NONAME_RD8413 4 5
+OLH3llboy 4 10
+OSaaMa 4 5
+BullyZPG 4 5
+-----
+SluttyMoose 5 2
+LilBlueBalls 5 2
+LilCountChocula 5 2
+-----
+Buliwyf88 6 18
+AFryBag 6 18
+ineedamicrophone 6 18
+-----
+patground 7 7
+Tinuck 7 7
+Jeffrony 7 7
+-----
+MonstherArtemisa 8 22
+YusmanyAroche19 8 22
+FUGADO2 8 22
+Narko_XD 8 22
+-----
+Just_Tokin 9 25
+Cast052 9 25
+littyfitz 9 25
+-----
+DingusDoughboy 10 27
+C0braChicken 10 27
+DREW-97 10 27
+thenoob12344830 10 27
+-----
+FatalXIntellect 11 11
+Fool_Metul_Jakut 11 11
+GR33NEYES 11 11
+Hikid 11 16
+-----
+TGLTN 12 1
+Shrimzy 12 1
+-----
+GUCCIxPRADA 13 23
+-----
+markmental 14 10
+-----
+Jon_1911 15 13
+Br4_NA 15 13
+MrIce-TBags 15 13
+Sausage1 15 13
+-----
+Simon_Zephyrus 16 18
+xMeDic__- 16 8
+TrinityCrush_TV 16 8
+Frotess 16 8
+-----
+UpsetCrimsonCrow 17 6
+Fonseca1 17 6
+EsChaos 17 6
+RhysLG 17 6
+-----
+TaGaM 18 24
+GeNravenX 18 24
+JPhilS 18 24
+-----
+xViinom 19 29
+JKevz 19 29
+asdfghjsammy 19 29
+Yzuvomonacohvich 19 29
+-----
+EnemyStar0 20 21
+HyperrealEel 20 21
+LordCoolieoBeans 20 21
+checkeredzero59 20 21
+-----
+MustardTiger89 21 16
+WalrusDinner 21 16
+Hodgepodgers 21 16
+PenguinBreakfast 21 16
+-----
+magnum4463 22 9
+SuprRektumRanger 22 9
+RAYDEL75 22 9
+UCE-PAVA 22 9
+-----
+tuglight 23 4
+Fuperschniples 23 4
+BroSlice41 23 4
+d0wb0y 23 4
+-----
+Aiden8675309een 24 14
+AHoboHugger 24 14
+-----
+Robbie22 25 28
+-----
+A-Duba-Divin 26 30
+-----
+Skepptix 27 17
+Purge117 27 17
+Trippinthrtime 27 17
+BrucetheMoose_ 27 17
+-----
+ShynnnDepTrai 29 20
+Jhyn1412 29 20
+ISkyIProtoss 29 20
+-----
+bapjiji 30 15
+miaw365 30 15
+idonutz 30 15
+-----
+Mp__mao 200 26
+blG_GuARDiaN 200 26
+Seaznace 200 26
+Phoenixflame1917 200 26
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+-----
+WhineyLilBitsch 1 16
+Hoobid 1 16
+Count_Dale 1 16
+GreatLakester 1 16
+-----
+BigChorizoXXL 2 1
+Bertoxxulous69 2 1
+TallenZek 2 1
+-----
+MachineElf 3 7
+JunkFoodJon 3 8
+Teknic111 3 7
+OLH3llboy 3 7
+-----
+GoAT_Icon 4 26
+Aixright66 4 26
+XiaowanziQvQ- 4 26
+2bfu 4 26
+-----
+zaeliax 5 29
+Ligth77 5 30
+BusterBlades 5 29
+A-G12 5 24
+-----
+StinkyHank 6 8
+StinkyMike 6 8
+Seatoo 6 8
+-----
+davidwalshgames 7 30
+MonkeeMan 7 25
+Khako 7 25
+-----
+Bb3ll 8 22
+Evilapex 8 22
+EJBELLL 8 22
+Foederatus 8 22
+-----
+DevilVibez 9 24
+RAIN9RRRRRRRRRRR 9 23
+-----
+GhOsTDaMoNsTeR 10 30
+-----
+SnaggyDeer 11 27
+-----
+TGLTN 12 29
+Shrimzy 12 29
+-----
+LeroySatan 13 4
+CraigFromFriday 13 4
+GahhhDayummm 13 4
+Kukgi 13 4
+-----
+Popsfolly 14 11
+TurtleHair 14 17
+RagingDBag 14 16
+StickyPicky16 14 11
+-----
+Robbie22 15 18
+-----
+KirklandVodka 16 21
+Xontros_ 16 21
+Luck4Str1k3 16 21
+Giannelos 16 21
+-----
+CoastaTV 17 20
+Nobles44 17 20
+ZootedSBTTV 17 20
+-----
+CharlyMacher 18 14
+Blue_D_Walker 18 14
+ckg_Apolo 18 14
+-----
+LeonardoCapybara 19 2
+VIE_Doriiuanh 19 2
+DylanDeptrai 19 2
+Hieumadd2k9-_- 19 2
+-----
+LlNT_LICKER 20 9
+Shabooga 20 9
+Andirtyson 20 9
+Scan_here 20 9
+-----
+mullanator14 21 13
+toxichild311 21 13
+ju_jube_10 21 13
+Rubb3rchick3n 21 13
+-----
+Titarneytor 22 17
+shizznit__ 22 17
+killstreaks24 22 3
+Rollin420-_- 22 3
+-----
+epitYT 23 17
+Greek194 23 17
+Emerald_69 23 17
+-----
+LewisKiniski 24 12
+-----
+Quasihemisphere 26 15
+Cup_Of_OJ 26 26
+ratman27 26 25
+Man2HandLove 26 26
+-----
+Carsonsz7 27 19
+ClutchDaddyy 27 19
+Slxerpuf 27 19
+Chowenger 27 19
+-----
+TheSoldier-001 28 5
+Psneudo 28 5
+MUGZY211G 28 5
+Twitch_Stick95 28 5
+-----
+RD_RedHorse901 29 6
+RayBchillin 29 30
+-----
+Tuzzles 30 30
+Nedid 30 30
+JohnnyDanger96 30 30
+-----
+sdellar2023 200 10
+MiNG_xUe1958 200 10
+quickgentledeer 200 10
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+-----
+ParksNRec 1 1
+SlouchGodRandy 1 1
+iLostCausei 1 1
+Wassssa 1 1
+-----
+LegLessIRL 2 29
+Runflater 2 29
+xzotic999 2 29
+Bl1tz3n 2 29
+-----
+NotOnMyScren 3 2
+LethalScrubby 3 11
+DaZFPS 3 2
+AlphaOnixx 3 2
+-----
+Captain_SaveAHoe 4 27
+HawkEyes_Malware 4 23
+heightss 4 21
+relentlliss 4 21
+-----
+Spicy-_-Noodles 5 19
+Hit-Drama 5 19
+LeviathanZzz 5 19
+-----
+Veta99 6 12
+gerrymx 6 12
+Laugh_till_u_pe3 6 14
+Josejch 6 12
+-----
+GhostWr7 7 9
+Qoffu 7 9
+SS-SgtoWyanS 7 9
+-----
+soon2binsane 8 16
+-----
+GoshGeeWilikers 9 29
+Simon_Zephyrus 9 15
+MrGorkhali 9 17
+Celis-21 9 32
+-----
+Barack_Oballer 10 3
+BallinBalgruuf 10 3
+ekacnaP 10 3
+oilymcboil 10 3
+-----
+FOX626 11 31
+IamDaichi 11 22
+RaFIKI40 11 31
+ElMeech 11 22
+-----
+bennybigben 12 5
+cozyPJ 12 5
+HLong18 12 5
+ChiefCheek 12 5
+-----
+Doshaw 14 31
+stikyroller828 14 31
+markmywords 14 31
+SCM_Democracy 14 31
+-----
+FU-Telos 15 25
+Connor12123 15 25
+kingelbhapo 15 25
+-----
+AttaGirlPenny 16 14
+-----
+Romario_Michell 17 32
+Win100Percent 17 26
+-----
+Zorrik- 18 18
+Siriaz05 18 18
+Itz4rLife 18 18
+Cubinhne 18 18
+-----
+NONAME_QAX09 19 8
+WomenInCages 19 8
+Dirty_Harry12 19 8
+-----
+ElVaronsote 20 27
+PalestinaLibre 20 27
+Daniel-NM97 20 27
+-----
+Bobenjob 21 10
+Beefbruce 21 23
+JMERCY 21 27
+v1ademer 21 17
+-----
+TGLTN 22 7
+Shrimzy 22 7
+-----
+Natural_Downs 23 4
+ChiefBearToe 23 4
+GenerikAsian 23 4
+Someone558 23 4
+-----
+GUCCIxPRADA 24 23
+-----
+DCG_Dan 25 13
+By_Palm1T0 25 13
+PKSumaru 25 13
+-----
+Robbie22 26 28
+-----
+Abonnner 27 20
+Me_Gai_Nhat_Nha 27 20
+-----
+Shabooga 28 11
+Scan_here 28 11
+Andirtyson 28 11
+LlNT_LICKER 28 11
+-----
+Skepptix 29 30
+Trippinthrtime 29 30
+BrucetheMoose_ 29 30
+-----
+ArtiArdi 30 28
+JayPey 30 17
+-----
+Xin-Chao_VN 31 32
+-----
+ks__zhAng3727 200 24
+cHengYiNYUe 200 24
+MIGHTYPEAR9558 200 24
+Baobao_lh_1992 200 24
+-----
+Sunlvg1962 201 6
+NUme19622 201 6
+Gentlegreenleaf 201 6
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+-----
+ToRynn 1 27
+crackedbutterog 1 28
+BeanBagBoyss 1 27
+BeanBagBoys 1 27
+-----
+the_Bosston_ 2 28
+djkewpa 2 28
+SUB_RHINO4 2 28
+Fool_Metul_Jakut 2 28
+-----
+EP_TiGuY303 3 12
+IceCream4- 3 12
+EximusFr 3 12
+-----
+madn0 5 6
+Lollipop_Jones 5 6
+AmericanSpartan 5 6
+LuciferBTW 5 6
+-----
+AnnerFPS 6 17
+Alexandert111 6 17
+tio_luis 6 17
+-----
+Capiibarra 7 19
+Sairen 7 26
+JimmyDean-1 7 19
+chase825 7 26
+-----
+Kirshyy 8 8
+Mator 8 8
+Kachow19 8 8
+Keylan55 8 8
+-----
+M1k3V 9 3
+mikeracing 9 3
+spam_b0t333333 9 3
+-----
+OSaaMa 10 29
+xdlolxd123 10 27
+JayPey 10 4
+SIN_DIENTES 10 25
+-----
+ToxicDawn 11 18
+WilyCat 11 18
+SpacM 11 18
+-----
+Vientoz 12 26
+-----
+Gst-Tsukune 13 23
+LeguIsai 13 23
+TTvSholoop 13 23
+-----
+FlameNM 14 29
+PRIZSY 14 29
+ch0dey 14 29
+fartsammich 14 29
+-----
+QuadrIgatI- 15 22
+Mazzziiii 15 22
+Nixic 15 22
+K1ngH3nry 15 22
+-----
+Starstream- 16 13
+UrwaldUrsula 16 13
+herzilein 16 13
+FritzFragGER 16 13
+-----
+sernuffalo 17 5
+bonxai 17 5
+Wildeboare 17 5
+-----
+GRIMMARCUS31 18 11
+MERHY10452 18 24
+Peepers7 18 9
+-----
+Shadovvolfy 19 14
+zombie420wolf 19 14
+SilvieFox-TTV 19 14
+-----
+Satvrn1 20 25
+C4TB 20 25
+Jarred781 20 25
+-----
+Copperjohn 21 16
+BigC801 21 16
+Risbo_ 21 16
+MavrickUDZ 21 16
+-----
+ZwagLoL 22 11
+OutbackTimmy 22 11
+JabariStewart 22 11
+Nanderson 22 11
+-----
+RottenAmoeba 23 15
+HateLoaf 23 15
+Average_Eboy 23 15
+-----
+BarryHalzak 25 7
+PinoyBoldstar 25 7
+NaksFriday 25 7
+J-e-r-s-e-y 25 9
+-----
+OPH-NeverDream 26 2
+-----
+Im_Dead_Jim 27 10
+fat_bass_turd_51 27 10
+useendeez 27 10
+-----
+TGLTN 28 1
+Shrimzy 28 1
+-----
+shredlife 29 20
+Beartrapz 29 20
+Doppelganker 29 20
+-----
+Weifighter 200 24
+XQF__storm_ 200 24
+TaoyunXue 200 24
+mighty_finch 200 24
+-----
+CgWang8006 201 21
+Ku4ish0uBa1 201 21
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+-----
+stikyroller828 1 13
+Bionic_Polecat 1 15
+TittyWrangler69 1 15
+SlackSlegan 1 15
+-----
+ice32o 2 20
+-----
+l89tlmn1 3 23
+Wrar 3 23
+ACT_ACCORDlNGLY_ 3 23
+VinxxGaming 3 25
+-----
+oGrimy 4 28
+tropicz500fps 4 28
+I-CANT-REED 4 28
+Pureawesomness3 4 28
+-----
+Lumasria 5 27
+Koalafide 5 27
+LtDanIsMyCat 5 27
+Osapanda 5 27
+-----
+Swisp 6 6
+Drykz 6 6
+Prykz 6 6
+-----
+Captain_SaveAHoe 7 9
+heightss 7 9
+PsychoFluffy 7 9
+RomanticExpert 7 9
+-----
+jranukss 8 14
+Memillopeloz 8 14
+mau0990 8 14
+-----
+Dilettante_me 9 22
+Albertgonz 9 22
+-----
+threeloko21ttv 10 12
+Fufu_Lame 10 12
+LtKernel 10 12
+-----
+M1k3V 11 26
+DubbleTapp 11 26
+GtoXed 11 26
+ReddRobb 11 26
+-----
+Briian-_23 12 10
+NycMiro 12 10
+YoNeckYoAnkle 12 10
+MarsDaaa 12 10
+-----
+wolf-m16 13 25
+TrouserMouse-m16 13 25
+jcoozie 13 25
+-----
+ZxMyseryxZ 14 24
+Volcanizz 14 24
+2four1 14 24
+Kekistan999 14 24
+-----
+tayStu-nOngluv 15 3
+bunny-nOngluv 15 3
+JekLuu-nOngluv 15 3
+TidHee-nOngluv 15 3
+-----
+v1ademer 16 17
+Klonny 16 17
+coocchoo 16 17
+UCE-PAVA 16 17
+-----
+lawlskin 17 7
+Burninghatred 17 7
+Paperairbags 17 7
+radicalross 17 7
+-----
+zaeliax 18 15
+Ligth77 18 15
+BusterBlades 18 15
+evoldeeds 18 15
+-----
+LilBlueBalls 19 18
+LilCountChocula 19 18
+SluttyMoose 19 18
+-----
+Vezdetta 20 21
+-----
+FrittObanditO 21 4
+-----
+TheFrostyPuma 22 16
+Riccardoox 22 16
+oGhost159o 22 16
+Steelygee 22 16
+-----
+TGLTN 23 2
+Shrimzy 23 2
+-----
+TheSpaceRabbit 24 17
+icecreammman4 24 15
+xMeDic__- 24 5
+PureRasta 24 29
+-----
+JohnnyDanger96 25 11
+Nedid 25 11
+Tuzzles 25 11
+InfecktedxFa 25 11
+-----
+Jeggred 26 1
+Johnson1004 26 1
+pH-Matranse 26 1
+vV1RuZz 26 1
+-----
+LeHAK_356 27 29
+ItsKow 27 29
+Cayxanh 27 29
+-----
+The_HMI_Guy 28 8
+-----
+WE__mao_ 200 19
+Mao_kuaishou2465 200 19
+XIAOKONGwang1901 200 19
+KuaishouJin1981 200 19
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+
+request=5:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+0 KILLS: 
+	LilBlueBalls
+	BroSlice41
+	HeLpMeMaNPLZ
+	OLH3llboy
+	Fonseca1
+	RhysLG
+	UpsetCrimsonCrow
+	Tinuck
+	patground
+	Jeffrony
+	xMeDic__-
+	Frotess
+	SuprRektumRanger
+	markmental
+	FatalXIntellect
+	GR33NEYES
+	Seryphym
+	Tempocontrol
+	Sbeard
+	Fool_Metul_Jakut
+	Sausage1
+	MrIce-TBags
+	AHoboHugger
+	Aiden8675309een
+	miaw365
+	bapjiji
+	idonutz
+	Hodgepodgers
+	WalrusDinner
+	PenguinBreakfast
+	Hikid
+	MustardTiger89
+	Skepptix
+	Buliwyf88
+	AFryBag
+	ineedamicrophone
+	Simon_Zephyrus
+	Cpt_Explode
+	Colt16
+	TheDeadBanana01
+	ISkyIProtoss
+	ShynnnDepTrai
+	FUGADO2
+	MonstherArtemisa
+	GUCCIxPRADA
+	checkeredzero59
+	EnemyStar0
+	LordCoolieoBeans
+	Trippinthrtime
+	JPhilS
+	littyfitz
+	Just_Tokin
+	Narko_XD
+	Mp__mao
+	Phoenixflame1917
+	Seaznace
+	Jhyn1412
+	DingusDoughboy
+	C0braChicken
+	Robbie22
+	JKevz
+	Yzuvomonacohvich
+	xViinom
+	blG_GuARDiaN
+	thenoob12344830
+	DREW-97
+	asdfghjsammy
+	A-Duba-Divin
+
+---------------
+
+1 KILLS: 
+	xHadesTRx
+	d0wb0y
+	Fuperschniples
+	tuglight
+	engliesh_Bill
+	thePapaPIG
+	UCE-PAVA
+	RAYDEL75
+	Br4_NA
+	HyperrealEel
+	YusmanyAroche19
+	GeNravenX
+
+---------------
+
+2 KILLS: 
+	NONAME_RD8413
+	BullyZPG
+	OSaaMa
+	EsChaos
+	Jon_1911
+	Purge117
+	Cast052
+	TaGaM
+
+---------------
+
+3 KILLS: 
+	SluttyMoose
+	TrinityCrush_TV
+	NFTxRANDALL2
+
+---------------
+
+4 KILLS: 
+	LilCountChocula
+	magnum4463
+
+---------------
+
+5 KILLS: 
+	BrucetheMoose_
+
+---------------
+
+14 KILLS: 
+	Shrimzy
+
+---------------
+
+22 KILLS: 
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+0 KILLS: 
+	CraigFromFriday
+	LeroySatan
+	RD_RedHorse901
+	Hieumadd2k9-_-
+	Seatoo
+	StinkyMike
+	StinkyHank
+	Psneudo
+	Andirtyson
+	sdellar2023
+	Popsfolly
+	StickyPicky16
+	LewisKiniski
+	Rubb3rchick3n
+	ju_jube_10
+	toxichild311
+	RayBchillin
+	ckg_Apolo
+	Blue_D_Walker
+	Quasihemisphere
+	epitYT
+	Robbie22
+	Slxerpuf
+	shizznit__
+	Emerald_69
+	CoastaTV
+	ZootedSBTTV
+	Xontros_
+	Giannelos
+	KirklandVodka
+	Luck4Str1k3
+	Titarneytor
+	Foederatus
+	EJBELLL
+	Evilapex
+	Bb3ll
+	A-G12
+	MiNG_xUe1958
+	2bfu
+	quickgentledeer
+	Aixright66
+	ratman27
+	XiaowanziQvQ-
+	GoAT_Icon
+	SnaggyDeer
+	GhOsTDaMoNsTeR
+	Count_Dale
+	Nedid
+	Tuzzles
+	BusterBlades
+	JohnnyDanger96
+	zaeliax
+	Ligth77
+	davidwalshgames
+
+---------------
+
+1 KILLS: 
+	DylanDeptrai
+	VIE_Doriiuanh
+	Rollin420-_-
+	TheSoldier-001
+	Twitch_Stick95
+	OLH3llboy
+	Teknic111
+	MUGZY211G
+	Shabooga
+	mullanator14
+	CharlyMacher
+	Chowenger
+	Carsonsz7
+	DevilVibez
+	Man2HandLove
+	TGLTN
+	Shrimzy
+
+---------------
+
+2 KILLS: 
+	JunkFoodJon
+	Scan_here
+	LlNT_LICKER
+	Hoobid
+	RagingDBag
+	Greek194
+	WhineyLilBitsch
+	Nobles44
+	ClutchDaddyy
+	Khako
+	Cup_Of_OJ
+
+---------------
+
+3 KILLS: 
+	Kukgi
+	TurtleHair
+	GreatLakester
+	RAIN9RRRRRRRRRRR
+	MonkeeMan
+
+---------------
+
+4 KILLS: 
+	killstreaks24
+
+---------------
+
+5 KILLS: 
+	LeonardoCapybara
+	GahhhDayummm
+	MachineElf
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+0 KILLS: 
+	AlphaOnixx
+	ekacnaP
+	Natural_Downs
+	ChiefBearToe
+	GenerikAsian
+	Gentlegreenleaf
+	NUme19622
+	HLong18
+	Wassssa
+	WomenInCages
+	SS-SgtoWyanS
+	Bobenjob
+	Josejch
+	Veta99
+	Simon_Zephyrus
+	soon2binsane
+	JayPey
+	Siriaz05
+	Abonnner
+	v1ademer
+	Captain_SaveAHoe
+	IamDaichi
+	heightss
+	Beefbruce
+	GUCCIxPRADA
+	MIGHTYPEAR9558
+	relentlliss
+	FU-Telos
+	kingelbhapo
+	Win100Percent
+	Connor12123
+	ElVaronsote
+	PalestinaLibre
+	Daniel-NM97
+	Robbie22
+	Sunlvg1962
+	ArtiArdi
+	xzotic999
+	Trippinthrtime
+	Skepptix
+	ElMeech
+	stikyroller828
+	markmywords
+	Baobao_lh_1992
+	ks__zhAng3727
+	Celis-21
+	cHengYiNYUe
+	Xin-Chao_VN
+	BrucetheMoose_
+	SCM_Democracy
+	Bl1tz3n
+	Hit-Drama
+	LeviathanZzz
+	LegLessIRL
+	Romario_Michell
+	Itz4rLife
+	Runflater
+	RaFIKI40
+
+---------------
+
+1 KILLS: 
+	NotOnMyScren
+	oilymcboil
+	Someone558
+	cozyPJ
+	bennybigben
+	Qoffu
+	GhostWr7
+	Shabooga
+	Andirtyson
+	Scan_here
+	gerrymx
+	By_Palm1T0
+	AttaGirlPenny
+	Zorrik-
+	JMERCY
+	LethalScrubby
+	Doshaw
+	PKSumaru
+	FOX626
+	GoshGeeWilikers
+
+---------------
+
+2 KILLS: 
+	SlouchGodRandy
+	BallinBalgruuf
+	DCG_Dan
+	Laugh_till_u_pe3
+	Spicy-_-Noodles
+	HawkEyes_Malware
+
+---------------
+
+3 KILLS: 
+	DaZFPS
+	NONAME_QAX09
+	Me_Gai_Nhat_Nha
+
+---------------
+
+4 KILLS: 
+	Barack_Oballer
+	ChiefCheek
+	Dirty_Harry12
+	LlNT_LICKER
+	MrGorkhali
+
+---------------
+
+6 KILLS: 
+	Cubinhne
+
+---------------
+
+10 KILLS: 
+	Shrimzy
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+0 KILLS: 
+	M1k3V
+	mikeracing
+	madn0
+	Lollipop_Jones
+	LuciferBTW
+	Keylan55
+	useendeez
+	fat_bass_turd_51
+	Nanderson
+	Im_Dead_Jim
+	ZwagLoL
+	Kachow19
+	EP_TiGuY303
+	EximusFr
+	IceCream4-
+	zombie420wolf
+	Shadovvolfy
+	SilvieFox-TTV
+	bonxai
+	sernuffalo
+	Guard
+	HateLoaf
+	Commander
+	Copperjohn
+	WilyCat
+	SpacM
+	ToxicDawn
+	BigC801
+	MavrickUDZ
+	JimmyDean-1
+	shredlife
+	Ku4ish0uBa1
+	Mazzziiii
+	K1ngH3nry
+	Nixic
+	TTvSholoop
+	LeguIsai
+	Gst-Tsukune
+	Doppelganker
+	TaoyunXue
+	MERHY10452
+	SIN_DIENTES
+	Jarred781
+	mighty_finch
+	XQF__storm_
+	CgWang8006
+	crackedbutterog
+	Sairen
+	ToRynn
+	Beartrapz
+	xdlolxd123
+	Fool_Metul_Jakut
+	SUB_RHINO4
+	BeanBagBoys
+	chase825
+	the_Bosston_
+	PRIZSY
+	fartsammich
+	FlameNM
+	ch0dey
+	OSaaMa
+	Weifighter
+
+---------------
+
+1 KILLS: 
+	OPH-NeverDream
+	AmericanSpartan
+	BarryHalzak
+	J-e-r-s-e-y
+	Kirshyy
+	GRIMMARCUS31
+	herzilein
+	Starstream-
+	Average_Eboy
+	Risbo_
+	Alexandert111
+	AnnerFPS
+	Satvrn1
+	C4TB
+	BeanBagBoyss
+	djkewpa
+
+---------------
+
+2 KILLS: 
+	PinoyBoldstar
+	Mator
+	Peepers7
+	RottenAmoeba
+	tio_luis
+
+---------------
+
+3 KILLS: 
+	NaksFriday
+	FritzFragGER
+	OutbackTimmy
+	Capiibarra
+	QuadrIgatI-
+
+---------------
+
+4 KILLS: 
+	JayPey
+	Wildeboare
+	Vientoz
+
+---------------
+
+5 KILLS: 
+	spam_b0t333333
+
+---------------
+
+6 KILLS: 
+	TGLTN
+	JabariStewart
+	UrwaldUrsula
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+0 KILLS: 
+	FrittObanditO
+	xMeDic__-
+	Drykz
+	Prykz
+	Burninghatred
+	lawlskin
+	Paperairbags
+	The_HMI_Guy
+	heightss
+	YoNeckYoAnkle
+	NycMiro
+	RomanticExpert
+	JohnnyDanger96
+	threeloko21ttv
+	InfecktedxFa
+	stikyroller828
+	mau0990
+	BusterBlades
+	evoldeeds
+	Briian-_23
+	PureRasta
+	icecreammman4
+	zaeliax
+	TittyWrangler69
+	Ligth77
+	SlackSlegan
+	Bionic_Polecat
+	MarsDaaa
+	oGhost159o
+	Klonny
+	TheFrostyPuma
+	Riccardoox
+	coocchoo
+	v1ademer
+	TheSpaceRabbit
+	SluttyMoose
+	LilCountChocula
+	UCE-PAVA
+	ice32o
+	Vezdetta
+	Dilettante_me
+	ACT_ACCORDlNGLY_
+	2four1
+	Volcanizz
+	Kekistan999
+	TrouserMouse-m16
+	jcoozie
+	WE__mao_
+	ReddRobb
+	GtoXed
+	VinxxGaming
+	Johnson1004
+	Wrar
+	LtDanIsMyCat
+	Osapanda
+	Lumasria
+	tropicz500fps
+	Pureawesomness3
+	I-CANT-REED
+	Cayxanh
+	ItsKow
+	LeHAK_356
+	XIAOKONGwang1901
+	Koalafide
+	M1k3V
+	Mao_kuaishou2465
+
+---------------
+
+1 KILLS: 
+	bunny-nOngluv
+	radicalross
+	Captain_SaveAHoe
+	Nedid
+	jranukss
+	Memillopeloz
+	Jeggred
+	Steelygee
+	LilBlueBalls
+	KuaishouJin1981
+	Albertgonz
+	ZxMyseryxZ
+	wolf-m16
+	DubbleTapp
+	oGrimy
+
+---------------
+
+2 KILLS: 
+	TidHee-nOngluv
+	Swisp
+	Tuzzles
+	Fufu_Lame
+	LtKernel
+	l89tlmn1
+
+---------------
+
+3 KILLS: 
+	PsychoFluffy
+
+---------------
+
+7 KILLS: 
+	tayStu-nOngluv
+
+---------------
+
+11 KILLS: 
+	JekLuu-nOngluv
+
+---------------
+
+12 KILLS: 
+	TGLTN
+
+---------------
+
+17 KILLS: 
+	Shrimzy
+
+---------------
+
+request=3:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	WeapP90_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapFNFal_C x1
+	WeapP90_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+BigChorizoXXL Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Bertoxxulous69 Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+TallenZek Summary (Winner): 
+	Primary Weapon #1: 	WeapMini14_C
+	Primary Weapon #2: 	WeapUMP_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	N/A x1
+	WeapMP5K_C x1
+	WeapM24_C x1
+	WeapMini14_C x1
+	WeapUMP_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM79_C x1
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+ParksNRec Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+SlouchGodRandy Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iLostCausei Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Wassssa Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMP5K_C x2
+	WeapKar98k_C x1
+	N/A x4
+	WeapM24_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x4
+
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapMk12_C
+	Primary Weapon #2: 	WeapMG3_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapMk12_C x1
+	WeapMG3_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Jeggred Summary (Winner): 
+	Primary Weapon #1: 	WeapL6_C
+	Primary Weapon #2: 	WeapAUG_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Johnson1004 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapIntegratedRepair_C
+-------------------------------------------------
+pH-Matranse Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapFNFal_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+vV1RuZz Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapL6_C x1
+	WeapAUG_C x2
+	WeapMk12_C x1
+	WeapHK416_C x1
+	WeapFNFal_C x1
+	WeapMP5K_C x1
+	WeapSKS_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	WeapIntegratedRepair_C x1
+	WeapM79_C x1
+
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+
+request=5:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+0 KILLS: 
+	LilBlueBalls
+	BroSlice41
+	HeLpMeMaNPLZ
+	OLH3llboy
+	Fonseca1
+	RhysLG
+	UpsetCrimsonCrow
+	Tinuck
+	patground
+	Jeffrony
+	xMeDic__-
+	Frotess
+	SuprRektumRanger
+	markmental
+	FatalXIntellect
+	GR33NEYES
+	Seryphym
+	Tempocontrol
+	Sbeard
+	Fool_Metul_Jakut
+	Sausage1
+	MrIce-TBags
+	AHoboHugger
+	Aiden8675309een
+	miaw365
+	bapjiji
+	idonutz
+	Hodgepodgers
+	WalrusDinner
+	PenguinBreakfast
+	Hikid
+	MustardTiger89
+	Skepptix
+	Buliwyf88
+	AFryBag
+	ineedamicrophone
+	Simon_Zephyrus
+	Cpt_Explode
+	Colt16
+	TheDeadBanana01
+	ISkyIProtoss
+	ShynnnDepTrai
+	FUGADO2
+	MonstherArtemisa
+	GUCCIxPRADA
+	checkeredzero59
+	EnemyStar0
+	LordCoolieoBeans
+	Trippinthrtime
+	JPhilS
+	littyfitz
+	Just_Tokin
+	Narko_XD
+	Mp__mao
+	Phoenixflame1917
+	Seaznace
+	Jhyn1412
+	DingusDoughboy
+	C0braChicken
+	Robbie22
+	JKevz
+	Yzuvomonacohvich
+	xViinom
+	blG_GuARDiaN
+	thenoob12344830
+	DREW-97
+	asdfghjsammy
+	A-Duba-Divin
+
+---------------
+
+1 KILLS: 
+	xHadesTRx
+	d0wb0y
+	Fuperschniples
+	tuglight
+	engliesh_Bill
+	thePapaPIG
+	UCE-PAVA
+	RAYDEL75
+	Br4_NA
+	HyperrealEel
+	YusmanyAroche19
+	GeNravenX
+
+---------------
+
+2 KILLS: 
+	NONAME_RD8413
+	BullyZPG
+	OSaaMa
+	EsChaos
+	Jon_1911
+	Purge117
+	Cast052
+	TaGaM
+
+---------------
+
+3 KILLS: 
+	SluttyMoose
+	TrinityCrush_TV
+	NFTxRANDALL2
+
+---------------
+
+4 KILLS: 
+	LilCountChocula
+	magnum4463
+
+---------------
+
+5 KILLS: 
+	BrucetheMoose_
+
+---------------
+
+14 KILLS: 
+	Shrimzy
+
+---------------
+
+22 KILLS: 
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+0 KILLS: 
+	CraigFromFriday
+	LeroySatan
+	RD_RedHorse901
+	Hieumadd2k9-_-
+	Seatoo
+	StinkyMike
+	StinkyHank
+	Psneudo
+	Andirtyson
+	sdellar2023
+	Popsfolly
+	StickyPicky16
+	LewisKiniski
+	Rubb3rchick3n
+	ju_jube_10
+	toxichild311
+	RayBchillin
+	ckg_Apolo
+	Blue_D_Walker
+	Quasihemisphere
+	epitYT
+	Robbie22
+	Slxerpuf
+	shizznit__
+	Emerald_69
+	CoastaTV
+	ZootedSBTTV
+	Xontros_
+	Giannelos
+	KirklandVodka
+	Luck4Str1k3
+	Titarneytor
+	Foederatus
+	EJBELLL
+	Evilapex
+	Bb3ll
+	A-G12
+	MiNG_xUe1958
+	2bfu
+	quickgentledeer
+	Aixright66
+	ratman27
+	XiaowanziQvQ-
+	GoAT_Icon
+	SnaggyDeer
+	GhOsTDaMoNsTeR
+	Count_Dale
+	Nedid
+	Tuzzles
+	BusterBlades
+	JohnnyDanger96
+	zaeliax
+	Ligth77
+	davidwalshgames
+
+---------------
+
+1 KILLS: 
+	DylanDeptrai
+	VIE_Doriiuanh
+	Rollin420-_-
+	TheSoldier-001
+	Twitch_Stick95
+	OLH3llboy
+	Teknic111
+	MUGZY211G
+	Shabooga
+	mullanator14
+	CharlyMacher
+	Chowenger
+	Carsonsz7
+	DevilVibez
+	Man2HandLove
+	TGLTN
+	Shrimzy
+
+---------------
+
+2 KILLS: 
+	JunkFoodJon
+	Scan_here
+	LlNT_LICKER
+	Hoobid
+	RagingDBag
+	Greek194
+	WhineyLilBitsch
+	Nobles44
+	ClutchDaddyy
+	Khako
+	Cup_Of_OJ
+
+---------------
+
+3 KILLS: 
+	Kukgi
+	TurtleHair
+	GreatLakester
+	RAIN9RRRRRRRRRRR
+	MonkeeMan
+
+---------------
+
+4 KILLS: 
+	killstreaks24
+
+---------------
+
+5 KILLS: 
+	LeonardoCapybara
+	GahhhDayummm
+	MachineElf
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+0 KILLS: 
+	AlphaOnixx
+	ekacnaP
+	Natural_Downs
+	ChiefBearToe
+	GenerikAsian
+	Gentlegreenleaf
+	NUme19622
+	HLong18
+	Wassssa
+	WomenInCages
+	SS-SgtoWyanS
+	Bobenjob
+	Josejch
+	Veta99
+	Simon_Zephyrus
+	soon2binsane
+	JayPey
+	Siriaz05
+	Abonnner
+	v1ademer
+	Captain_SaveAHoe
+	IamDaichi
+	heightss
+	Beefbruce
+	GUCCIxPRADA
+	MIGHTYPEAR9558
+	relentlliss
+	FU-Telos
+	kingelbhapo
+	Win100Percent
+	Connor12123
+	ElVaronsote
+	PalestinaLibre
+	Daniel-NM97
+	Robbie22
+	Sunlvg1962
+	ArtiArdi
+	xzotic999
+	Trippinthrtime
+	Skepptix
+	ElMeech
+	stikyroller828
+	markmywords
+	Baobao_lh_1992
+	ks__zhAng3727
+	Celis-21
+	cHengYiNYUe
+	Xin-Chao_VN
+	BrucetheMoose_
+	SCM_Democracy
+	Bl1tz3n
+	Hit-Drama
+	LeviathanZzz
+	LegLessIRL
+	Romario_Michell
+	Itz4rLife
+	Runflater
+	RaFIKI40
+
+---------------
+
+1 KILLS: 
+	NotOnMyScren
+	oilymcboil
+	Someone558
+	cozyPJ
+	bennybigben
+	Qoffu
+	GhostWr7
+	Shabooga
+	Andirtyson
+	Scan_here
+	gerrymx
+	By_Palm1T0
+	AttaGirlPenny
+	Zorrik-
+	JMERCY
+	LethalScrubby
+	Doshaw
+	PKSumaru
+	FOX626
+	GoshGeeWilikers
+
+---------------
+
+2 KILLS: 
+	SlouchGodRandy
+	BallinBalgruuf
+	DCG_Dan
+	Laugh_till_u_pe3
+	Spicy-_-Noodles
+	HawkEyes_Malware
+
+---------------
+
+3 KILLS: 
+	DaZFPS
+	NONAME_QAX09
+	Me_Gai_Nhat_Nha
+
+---------------
+
+4 KILLS: 
+	Barack_Oballer
+	ChiefCheek
+	Dirty_Harry12
+	LlNT_LICKER
+	MrGorkhali
+
+---------------
+
+6 KILLS: 
+	Cubinhne
+
+---------------
+
+10 KILLS: 
+	Shrimzy
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+0 KILLS: 
+	M1k3V
+	mikeracing
+	madn0
+	Lollipop_Jones
+	LuciferBTW
+	Keylan55
+	useendeez
+	fat_bass_turd_51
+	Nanderson
+	Im_Dead_Jim
+	ZwagLoL
+	Kachow19
+	EP_TiGuY303
+	EximusFr
+	IceCream4-
+	zombie420wolf
+	Shadovvolfy
+	SilvieFox-TTV
+	bonxai
+	sernuffalo
+	Guard
+	HateLoaf
+	Commander
+	Copperjohn
+	WilyCat
+	SpacM
+	ToxicDawn
+	BigC801
+	MavrickUDZ
+	JimmyDean-1
+	shredlife
+	Ku4ish0uBa1
+	Mazzziiii
+	K1ngH3nry
+	Nixic
+	TTvSholoop
+	LeguIsai
+	Gst-Tsukune
+	Doppelganker
+	TaoyunXue
+	MERHY10452
+	SIN_DIENTES
+	Jarred781
+	mighty_finch
+	XQF__storm_
+	CgWang8006
+	crackedbutterog
+	Sairen
+	ToRynn
+	Beartrapz
+	xdlolxd123
+	Fool_Metul_Jakut
+	SUB_RHINO4
+	BeanBagBoys
+	chase825
+	the_Bosston_
+	PRIZSY
+	fartsammich
+	FlameNM
+	ch0dey
+	OSaaMa
+	Weifighter
+
+---------------
+
+1 KILLS: 
+	OPH-NeverDream
+	AmericanSpartan
+	BarryHalzak
+	J-e-r-s-e-y
+	Kirshyy
+	GRIMMARCUS31
+	herzilein
+	Starstream-
+	Average_Eboy
+	Risbo_
+	Alexandert111
+	AnnerFPS
+	Satvrn1
+	C4TB
+	BeanBagBoyss
+	djkewpa
+
+---------------
+
+2 KILLS: 
+	PinoyBoldstar
+	Mator
+	Peepers7
+	RottenAmoeba
+	tio_luis
+
+---------------
+
+3 KILLS: 
+	NaksFriday
+	FritzFragGER
+	OutbackTimmy
+	Capiibarra
+	QuadrIgatI-
+
+---------------
+
+4 KILLS: 
+	JayPey
+	Wildeboare
+	Vientoz
+
+---------------
+
+5 KILLS: 
+	spam_b0t333333
+
+---------------
+
+6 KILLS: 
+	TGLTN
+	JabariStewart
+	UrwaldUrsula
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+0 KILLS: 
+	FrittObanditO
+	xMeDic__-
+	Drykz
+	Prykz
+	Burninghatred
+	lawlskin
+	Paperairbags
+	The_HMI_Guy
+	heightss
+	YoNeckYoAnkle
+	NycMiro
+	RomanticExpert
+	JohnnyDanger96
+	threeloko21ttv
+	InfecktedxFa
+	stikyroller828
+	mau0990
+	BusterBlades
+	evoldeeds
+	Briian-_23
+	PureRasta
+	icecreammman4
+	zaeliax
+	TittyWrangler69
+	Ligth77
+	SlackSlegan
+	Bionic_Polecat
+	MarsDaaa
+	oGhost159o
+	Klonny
+	TheFrostyPuma
+	Riccardoox
+	coocchoo
+	v1ademer
+	TheSpaceRabbit
+	SluttyMoose
+	LilCountChocula
+	UCE-PAVA
+	ice32o
+	Vezdetta
+	Dilettante_me
+	ACT_ACCORDlNGLY_
+	2four1
+	Volcanizz
+	Kekistan999
+	TrouserMouse-m16
+	jcoozie
+	WE__mao_
+	ReddRobb
+	GtoXed
+	VinxxGaming
+	Johnson1004
+	Wrar
+	LtDanIsMyCat
+	Osapanda
+	Lumasria
+	tropicz500fps
+	Pureawesomness3
+	I-CANT-REED
+	Cayxanh
+	ItsKow
+	LeHAK_356
+	XIAOKONGwang1901
+	Koalafide
+	M1k3V
+	Mao_kuaishou2465
+
+---------------
+
+1 KILLS: 
+	bunny-nOngluv
+	radicalross
+	Captain_SaveAHoe
+	Nedid
+	jranukss
+	Memillopeloz
+	Jeggred
+	Steelygee
+	LilBlueBalls
+	KuaishouJin1981
+	Albertgonz
+	ZxMyseryxZ
+	wolf-m16
+	DubbleTapp
+	oGrimy
+
+---------------
+
+2 KILLS: 
+	TidHee-nOngluv
+	Swisp
+	Tuzzles
+	Fufu_Lame
+	LtKernel
+	l89tlmn1
+
+---------------
+
+3 KILLS: 
+	PsychoFluffy
+
+---------------
+
+7 KILLS: 
+	tayStu-nOngluv
+
+---------------
+
+11 KILLS: 
+	JekLuu-nOngluv
+
+---------------
+
+12 KILLS: 
+	TGLTN
+
+---------------
+
+17 KILLS: 
+	Shrimzy
+
+---------------
+
+request=6:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+REQUEST = 6
+mapsPlayed.size() : 5
+Frequencies of each map played: 
+Tiger_Main x2
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+
+request=5:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+0 KILLS: 
+	LilBlueBalls
+	BroSlice41
+	HeLpMeMaNPLZ
+	OLH3llboy
+	Fonseca1
+	RhysLG
+	UpsetCrimsonCrow
+	Tinuck
+	patground
+	Jeffrony
+	xMeDic__-
+	Frotess
+	SuprRektumRanger
+	markmental
+	FatalXIntellect
+	GR33NEYES
+	Seryphym
+	Tempocontrol
+	Sbeard
+	Fool_Metul_Jakut
+	Sausage1
+	MrIce-TBags
+	AHoboHugger
+	Aiden8675309een
+	miaw365
+	bapjiji
+	idonutz
+	Hodgepodgers
+	WalrusDinner
+	PenguinBreakfast
+	Hikid
+	MustardTiger89
+	Skepptix
+	Buliwyf88
+	AFryBag
+	ineedamicrophone
+	Simon_Zephyrus
+	Cpt_Explode
+	Colt16
+	TheDeadBanana01
+	ISkyIProtoss
+	ShynnnDepTrai
+	FUGADO2
+	MonstherArtemisa
+	GUCCIxPRADA
+	checkeredzero59
+	EnemyStar0
+	LordCoolieoBeans
+	Trippinthrtime
+	JPhilS
+	littyfitz
+	Just_Tokin
+	Narko_XD
+	Mp__mao
+	Phoenixflame1917
+	Seaznace
+	Jhyn1412
+	DingusDoughboy
+	C0braChicken
+	Robbie22
+	JKevz
+	Yzuvomonacohvich
+	xViinom
+	blG_GuARDiaN
+	thenoob12344830
+	DREW-97
+	asdfghjsammy
+	A-Duba-Divin
+
+---------------
+
+1 KILLS: 
+	xHadesTRx
+	d0wb0y
+	Fuperschniples
+	tuglight
+	engliesh_Bill
+	thePapaPIG
+	UCE-PAVA
+	RAYDEL75
+	Br4_NA
+	HyperrealEel
+	YusmanyAroche19
+	GeNravenX
+
+---------------
+
+2 KILLS: 
+	NONAME_RD8413
+	BullyZPG
+	OSaaMa
+	EsChaos
+	Jon_1911
+	Purge117
+	Cast052
+	TaGaM
+
+---------------
+
+3 KILLS: 
+	SluttyMoose
+	TrinityCrush_TV
+	NFTxRANDALL2
+
+---------------
+
+4 KILLS: 
+	LilCountChocula
+	magnum4463
+
+---------------
+
+5 KILLS: 
+	BrucetheMoose_
+
+---------------
+
+14 KILLS: 
+	Shrimzy
+
+---------------
+
+22 KILLS: 
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+0 KILLS: 
+	CraigFromFriday
+	LeroySatan
+	RD_RedHorse901
+	Hieumadd2k9-_-
+	Seatoo
+	StinkyMike
+	StinkyHank
+	Psneudo
+	Andirtyson
+	sdellar2023
+	Popsfolly
+	StickyPicky16
+	LewisKiniski
+	Rubb3rchick3n
+	ju_jube_10
+	toxichild311
+	RayBchillin
+	ckg_Apolo
+	Blue_D_Walker
+	Quasihemisphere
+	epitYT
+	Robbie22
+	Slxerpuf
+	shizznit__
+	Emerald_69
+	CoastaTV
+	ZootedSBTTV
+	Xontros_
+	Giannelos
+	KirklandVodka
+	Luck4Str1k3
+	Titarneytor
+	Foederatus
+	EJBELLL
+	Evilapex
+	Bb3ll
+	A-G12
+	MiNG_xUe1958
+	2bfu
+	quickgentledeer
+	Aixright66
+	ratman27
+	XiaowanziQvQ-
+	GoAT_Icon
+	SnaggyDeer
+	GhOsTDaMoNsTeR
+	Count_Dale
+	Nedid
+	Tuzzles
+	BusterBlades
+	JohnnyDanger96
+	zaeliax
+	Ligth77
+	davidwalshgames
+
+---------------
+
+1 KILLS: 
+	DylanDeptrai
+	VIE_Doriiuanh
+	Rollin420-_-
+	TheSoldier-001
+	Twitch_Stick95
+	OLH3llboy
+	Teknic111
+	MUGZY211G
+	Shabooga
+	mullanator14
+	CharlyMacher
+	Chowenger
+	Carsonsz7
+	DevilVibez
+	Man2HandLove
+	TGLTN
+	Shrimzy
+
+---------------
+
+2 KILLS: 
+	JunkFoodJon
+	Scan_here
+	LlNT_LICKER
+	Hoobid
+	RagingDBag
+	Greek194
+	WhineyLilBitsch
+	Nobles44
+	ClutchDaddyy
+	Khako
+	Cup_Of_OJ
+
+---------------
+
+3 KILLS: 
+	Kukgi
+	TurtleHair
+	GreatLakester
+	RAIN9RRRRRRRRRRR
+	MonkeeMan
+
+---------------
+
+4 KILLS: 
+	killstreaks24
+
+---------------
+
+5 KILLS: 
+	LeonardoCapybara
+	GahhhDayummm
+	MachineElf
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+0 KILLS: 
+	AlphaOnixx
+	ekacnaP
+	Natural_Downs
+	ChiefBearToe
+	GenerikAsian
+	Gentlegreenleaf
+	NUme19622
+	HLong18
+	Wassssa
+	WomenInCages
+	SS-SgtoWyanS
+	Bobenjob
+	Josejch
+	Veta99
+	Simon_Zephyrus
+	soon2binsane
+	JayPey
+	Siriaz05
+	Abonnner
+	v1ademer
+	Captain_SaveAHoe
+	IamDaichi
+	heightss
+	Beefbruce
+	GUCCIxPRADA
+	MIGHTYPEAR9558
+	relentlliss
+	FU-Telos
+	kingelbhapo
+	Win100Percent
+	Connor12123
+	ElVaronsote
+	PalestinaLibre
+	Daniel-NM97
+	Robbie22
+	Sunlvg1962
+	ArtiArdi
+	xzotic999
+	Trippinthrtime
+	Skepptix
+	ElMeech
+	stikyroller828
+	markmywords
+	Baobao_lh_1992
+	ks__zhAng3727
+	Celis-21
+	cHengYiNYUe
+	Xin-Chao_VN
+	BrucetheMoose_
+	SCM_Democracy
+	Bl1tz3n
+	Hit-Drama
+	LeviathanZzz
+	LegLessIRL
+	Romario_Michell
+	Itz4rLife
+	Runflater
+	RaFIKI40
+
+---------------
+
+1 KILLS: 
+	NotOnMyScren
+	oilymcboil
+	Someone558
+	cozyPJ
+	bennybigben
+	Qoffu
+	GhostWr7
+	Shabooga
+	Andirtyson
+	Scan_here
+	gerrymx
+	By_Palm1T0
+	AttaGirlPenny
+	Zorrik-
+	JMERCY
+	LethalScrubby
+	Doshaw
+	PKSumaru
+	FOX626
+	GoshGeeWilikers
+
+---------------
+
+2 KILLS: 
+	SlouchGodRandy
+	BallinBalgruuf
+	DCG_Dan
+	Laugh_till_u_pe3
+	Spicy-_-Noodles
+	HawkEyes_Malware
+
+---------------
+
+3 KILLS: 
+	DaZFPS
+	NONAME_QAX09
+	Me_Gai_Nhat_Nha
+
+---------------
+
+4 KILLS: 
+	Barack_Oballer
+	ChiefCheek
+	Dirty_Harry12
+	LlNT_LICKER
+	MrGorkhali
+
+---------------
+
+6 KILLS: 
+	Cubinhne
+
+---------------
+
+10 KILLS: 
+	Shrimzy
+	TGLTN
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+0 KILLS: 
+	M1k3V
+	mikeracing
+	madn0
+	Lollipop_Jones
+	LuciferBTW
+	Keylan55
+	useendeez
+	fat_bass_turd_51
+	Nanderson
+	Im_Dead_Jim
+	ZwagLoL
+	Kachow19
+	EP_TiGuY303
+	EximusFr
+	IceCream4-
+	zombie420wolf
+	Shadovvolfy
+	SilvieFox-TTV
+	bonxai
+	sernuffalo
+	Guard
+	HateLoaf
+	Commander
+	Copperjohn
+	WilyCat
+	SpacM
+	ToxicDawn
+	BigC801
+	MavrickUDZ
+	JimmyDean-1
+	shredlife
+	Ku4ish0uBa1
+	Mazzziiii
+	K1ngH3nry
+	Nixic
+	TTvSholoop
+	LeguIsai
+	Gst-Tsukune
+	Doppelganker
+	TaoyunXue
+	MERHY10452
+	SIN_DIENTES
+	Jarred781
+	mighty_finch
+	XQF__storm_
+	CgWang8006
+	crackedbutterog
+	Sairen
+	ToRynn
+	Beartrapz
+	xdlolxd123
+	Fool_Metul_Jakut
+	SUB_RHINO4
+	BeanBagBoys
+	chase825
+	the_Bosston_
+	PRIZSY
+	fartsammich
+	FlameNM
+	ch0dey
+	OSaaMa
+	Weifighter
+
+---------------
+
+1 KILLS: 
+	OPH-NeverDream
+	AmericanSpartan
+	BarryHalzak
+	J-e-r-s-e-y
+	Kirshyy
+	GRIMMARCUS31
+	herzilein
+	Starstream-
+	Average_Eboy
+	Risbo_
+	Alexandert111
+	AnnerFPS
+	Satvrn1
+	C4TB
+	BeanBagBoyss
+	djkewpa
+
+---------------
+
+2 KILLS: 
+	PinoyBoldstar
+	Mator
+	Peepers7
+	RottenAmoeba
+	tio_luis
+
+---------------
+
+3 KILLS: 
+	NaksFriday
+	FritzFragGER
+	OutbackTimmy
+	Capiibarra
+	QuadrIgatI-
+
+---------------
+
+4 KILLS: 
+	JayPey
+	Wildeboare
+	Vientoz
+
+---------------
+
+5 KILLS: 
+	spam_b0t333333
+
+---------------
+
+6 KILLS: 
+	TGLTN
+	JabariStewart
+	UrwaldUrsula
+
+---------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+
+0 KILLS: 
+	FrittObanditO
+	xMeDic__-
+	Drykz
+	Prykz
+	Burninghatred
+	lawlskin
+	Paperairbags
+	The_HMI_Guy
+	heightss
+	YoNeckYoAnkle
+	NycMiro
+	RomanticExpert
+	JohnnyDanger96
+	threeloko21ttv
+	InfecktedxFa
+	stikyroller828
+	mau0990
+	BusterBlades
+	evoldeeds
+	Briian-_23
+	PureRasta
+	icecreammman4
+	zaeliax
+	TittyWrangler69
+	Ligth77
+	SlackSlegan
+	Bionic_Polecat
+	MarsDaaa
+	oGhost159o
+	Klonny
+	TheFrostyPuma
+	Riccardoox
+	coocchoo
+	v1ademer
+	TheSpaceRabbit
+	SluttyMoose
+	LilCountChocula
+	UCE-PAVA
+	ice32o
+	Vezdetta
+	Dilettante_me
+	ACT_ACCORDlNGLY_
+	2four1
+	Volcanizz
+	Kekistan999
+	TrouserMouse-m16
+	jcoozie
+	WE__mao_
+	ReddRobb
+	GtoXed
+	VinxxGaming
+	Johnson1004
+	Wrar
+	LtDanIsMyCat
+	Osapanda
+	Lumasria
+	tropicz500fps
+	Pureawesomness3
+	I-CANT-REED
+	Cayxanh
+	ItsKow
+	LeHAK_356
+	XIAOKONGwang1901
+	Koalafide
+	M1k3V
+	Mao_kuaishou2465
+
+---------------
+
+1 KILLS: 
+	bunny-nOngluv
+	radicalross
+	Captain_SaveAHoe
+	Nedid
+	jranukss
+	Memillopeloz
+	Jeggred
+	Steelygee
+	LilBlueBalls
+	KuaishouJin1981
+	Albertgonz
+	ZxMyseryxZ
+	wolf-m16
+	DubbleTapp
+	oGrimy
+
+---------------
+
+2 KILLS: 
+	TidHee-nOngluv
+	Swisp
+	Tuzzles
+	Fufu_Lame
+	LtKernel
+	l89tlmn1
+
+---------------
+
+3 KILLS: 
+	PsychoFluffy
+
+---------------
+
+7 KILLS: 
+	tayStu-nOngluv
+
+---------------
+
+11 KILLS: 
+	JekLuu-nOngluv
+
+---------------
+
+12 KILLS: 
+	TGLTN
+
+---------------
+
+17 KILLS: 
+	Shrimzy
+
+---------------
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+Player names: 
+[account.51b42c2a7b914a678da21bdcadd218de", account.d9ccc43ffc8c4f85a798b57a9a69a4f8", account.a2ffc08701b9475ca44e4ba75c6eda97", account.218c62fda8e642dcbfe031e208b7b8df", account.0e8218a15cfc4c35a6cda076802341dd", account.c62068f7a7124edf99ae3af750d5845b", account.3a1857eff99543af90acb6282b3eed88", account.99443610c2ab4ee7b90d2b16bcb5d416", account.c9b1cae856274acd87196988633dcf07", account.ca3f6b22d95e47128b7c2247f846d3d4", account.ca72f94f1d12482f86ab4aeecc3fbf62", account.3dbc153ca9e84f8cb52fde2b6768c74b", account.b7f51e94b9c84349a2d6b8ab709b494d", account.830e23fee15044e68f4e0701b9a0a1ed", account.1fc108191e1a4d469ed5cb412aa2af46", account.9d64912a68b34022b1d47e74e6271c6f", account.d7488a18755e491bb8d34a9244192aa3", account.f57054f06f8e4924921318c6bddc5f00", account.b1c9af00f9df425e84c055ec8f705f81", account.8db0db0d2f6c4786b4f74079349951b5", account.fd2144d65f544c0b960312654f4ac12d", account.47586f2fbf564d4a832653000c45959a", account.bc948d84bf8944f7a5cb0af98099595c", account.e80a1672c25b407d896194f4061b082e", account.04d08e0f5f5e47ed82222983465682cc", account.21c44fb0c36348158c0d4e869ed519ca", account.6a298024ee1449fdb4b90f6583ae79b0", account.a7a677b62d124be1b041f2b0b7da2e77", account.0a1763d057544b8094ffb9f04674e6cb", account.7004ab40a6074b41892e4bea5180909c", account.a0e78148c503457ba5802a5533632be2", account.0f014271d41f4c448b563f6daa18465a", account.b317b229605840bfa321b7bbce81d94b", account.39714ce092c04d1daa1209a8641e299e", account.bcbdf09662384dac8bd9292eec549abd", account.e8ab0f0f6d1444dba21f55d4eb326519", account.513a171ec8fd4c68a2366d77e851d0ce", account.7c946523bf294e7dac881a6f6e6435be", account.020d6d91ff9f4f1e8f91a696d60f6440", account.5c16fdb0be8a492e8e6a84e7d8f67a33", account.45a2fbd620d845d79c8deb37c4d8d07c", account.57edddd1634e402086fab325a4f18c22", account.4558000b8e12455d8f545d6e76b7c098", account.9568aac66d584cb9ae3b3b1b1d56468a", account.0001410fa27c42c29320f1a6c9db7d13", account.05d7ddabe0874596ab304d8ee51c6931", account.9d6c870868e14564a0f949bf2fcb0e21", account.18935b52fe674ea39f47dcb29209a898", account.d3d1a51d285a40ef98819db7d51b8d59", account.3715cfd0568b44eb88f5892f99c07ac1", account.6744cd4c1cd4433fa35894a7200f30e9", account.7e3556cbce34490891d6d96cc1039ae3", account.5f0722848e124028a30b0f76aec3753f", account.9561194cac244f89915f6ffb23d4f9b9", account.f99fb233bd2541e7b0ec3b054b5f0bba", account.f52595702fb148f9af996685c15a394d", account.809d51fa7b5d4acf81e7ea6c77741441", account.e94a5fb685b7478ba95b89631e4b61f8", account.9209ad767b3d4f2d985f87a722bc836f", account.b10003e43dcc4326a0f4d584c48d6816", account.408edbaeba4e40e6ae4f8527d67a805c", account.3549f38872d14a749ade52b092a5b588", account.5b4419a5f48c40cc9550be4aea2c1d62", account.8ebaa137b6ec400e9cd4053413a4b260", account.652e199d30784a2181e4d4be90837d5d", account.972dfe3f47ce482080dc216a406b6ca6", account.0b379918488d46b488d3772a5d75a817", account.09b56c547dc8405db64cc26ac3e21170", account.bf6edb7f01f24db7a85b00c6e13579a8", account.aa69ed030f2b40a099f294f0541a9aab", account.073f35f3e384478a8553068d72612b7e", account.3acbf8298f384639bbe0f9a532b4308e", account.900910fe64c449088a85e6e5648f0d3f", account.589f2b0beef84ddf931bca4048bf67c7", account.12ffc3857254405ca6a399db68185ddf", account.82bad0072f31455d8d9f8d834da2f2f3", account.5bf6cf33fb4e456ea747e3d43fb2ca01", account.04f06f0b7fcb4a98adb8160b55fc9c8f", account.2c710e8591194d5fb848a3ac5451809c", account.70ccb738fbd9442a8e5761e28d2e3640", account.3b6df1fdce4e4f67987747a83e19b278", account.e9af2fd9039a47af862f10a19ba63920", account.5f9383e994884735b22afc34f826219c", account.53d5c98b8f9e4f139282569c37fe20b0", account.6900c7507c7244f5a9cc7598f6a1a476", account.6fd29a6ca3374603a3a14b2e8d1ea293", account.59bc6fcef13148e0b71066b60bc2a889", account.6f02ad9ecffb460f97acdcf56778dc7a", account.ad948dc2ce024684a49900c221311a74", account.66043bcbc90b4693b714720d13932f95", account.88988026e90b40f2ba38f315917db3e1", account.e66568a213e3445cbf6a6c1641ad5427"]
+Bot names: 
+[ai.346, ai.345, ai.344, ai.343]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+Player names: 
+[account.0792d20c147d474cab6b1b625fd98fba", account.8c985266042748bdb22e3a9c1a7c5095", account.5ecc91dc7c73450495b7dc59b4643c5e", account.2470d8b22954423580b9c305e6badf11", account.ea21a6991c0f4c66adcfcc19089b88ad", account.b06d9d9321324923945bccd05747897d", account.f3b0afe788654eb39e9f523a094aa647", account.2089959278f549acb269a6f96caec9b4", account.bb2e5117dbe647fd9cd62d85e8e5ae48", account.5b6db98922874b80942030a613eb1ea6", account.01d3c30e3512403e84507b07360fc4e2", account.46fd56872d224732bf9570b1b619ed80", account.d8ca0f521da4481fab6ca01dc7b8d104", account.118c17d5fd684e018240cef895f2ee00", account.aac98b0e9fdc4184918b78bf947060d5", account.585495ef359f4d448b5201453e3f0fb4", account.177b3dd2f3de4f8bbb1ab9c1d325beab", account.132bd2b9cd4547c389ea89a13564626d", account.790e5b9e7b004f1c903ab3d51923631c", account.8c2752bea7d74b49a1dc8ffadcb5142a", account.f3c4825726db48b2b6589c44c2f74b16", account.23d52ac519154f0aa7a7abbdca0732eb", account.c018650bcbef42df889d0b1fb3016071", account.f0be3ca4f4bd4a66b6e4a022b122865b", account.d7955ecfbb2449f1a26fcd3b8d859599", account.82bad0072f31455d8d9f8d834da2f2f3", account.5bf6cf33fb4e456ea747e3d43fb2ca01", account.37632c3e0e52437c925a8a04e0feb121", account.163a3347ae4140478d808105402988f5", account.dfb196bf2ee4452eaabc7a7f7ef15b0a", account.cccf6032c17d44d29f5a915f101c231a", account.4f51fc2e0cf749c1bdcd7692464e0f5e", account.002a91a91b7941e39d8d032d96f6197e", account.7004ab40a6074b41892e4bea5180909c", account.c3f685ea14604619b630f652eebbe7ed", account.33733efc285c4420868306ef6fd28c41", account.1371c20ecef049f49634b276c5bab0fb", account.b9b865fe07fd4af1a0fe6cc78770ad16", account.a623d87230f448cf92b4ec6d78dab4c5", account.251ee64317814f1f8641315dcd0249af", account.0633f07007b742589ff67939c9211677", account.1b8fdf884dcb41e781a03977f9587c36", account.407433df69a440e899be965193110d00", account.e91f1686abf5445b8b0310477d4acab3", account.8283ac1906b94db49b7c25a878e38658", account.a52894b2dfa64764bb466c8eab54fc8f", account.47271463c9e94aad8d5d61a169ecc78a", account.752de5e0fd22411f95418fca08593682", account.216bb4b9cb1c41a1bb2c97d6465a9762", account.2ac4d21003b14a3a96cc78008e9bfd6c", account.3acbf8298f384639bbe0f9a532b4308e", account.1946cff6e14342a1b772e2056e4da7c0", account.b4f9481aaab642119dd32ddc6ea8df9c", account.ab492f0946ea4f4cb9d894b0061ced7e", account.32d439984549437e807b23a63e9f47ac", account.a0709c2e088b404796b08294e764b9e7", account.84e2d31881ba44e5a1dc3a1c371f3d56", account.7a93da542eab4c7d9fa7f798469b2b18", account.961a40a3715d42608ba440414e068790", account.549b9886944148beaaca080e267115a5", account.64e8870ddfde4434b2460ed82c6cd66f", account.48b1e40acb86485fa47136c8c201953e", account.2bf5e462071e4779b4b6a1503b2d5e80", account.87ad667f9a454b43b0a0f89894469ca6", account.4b7e180476f1454c91f40c0c7a547262", account.bb9410586ea94de38a4e5f8d1abc6168", account.947a01cd3dd04e0b95545334c29f0d41", account.8980cfdd35c449b2be78a7160cdce417", account.9f6233f9a81f41c988b1b5e17747ce7e", account.4db4235af8384643a3144e4fd8d0a9b7", account.426b92e2e04445d481829b99b3febe58", account.8ce203b54b3148b1a2f053952d112593", account.c814d1b10ee14bad95508b6d08214496", account.3001a03ed2694e458a5bf1f106cb669c", account.624c5e284ae1406ba7af8675a01bfc07", account.f2c6839648224ebc9edc819f8627c244", account.b04679c4a081470d977818d9eeb89004", account.3136c8a079004881a62fea499b2fe3c2", account.5607a012626c4806ab5e6684d3ffeea8", account.e57571e2ded044b78358a679990c949c", account.3d1cd06fb7764d4d9aac869214294bd4", account.bf922d4d36104ff5a7e189ca06e4f081", account.f7b553f6589b41ad9cf1c4fa7193f908", account.e246ef5db6d4459bb8a41e27ac50ef5a", account.f265aa5f12f9418d9a0f91e4e8b83bbd", account.9bbbe0d67442415b965a332007ce5cfe", account.3a2503c9a33d412193596baf05526cc7", account.924b621994904d7780235acc31ee53d0", account.3cd83105236a44f4ab8a85afec5456d1", account.4e9a0583594b4369920e39c4224ad9d8", account.b3753cbb201944cab39b689c2c25bb5f"]
+Bot names: 
+[ai.351, ai.350, ai.349]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+Player names: 
+[account.0e20463b9dec41bda1782b3322ad5b53", account.a89e8265cc174a06abe653b55c1be13c", account.5c95d8fb40f642b9879bcba8e922d4ea", account.20d0705bc9464752a4908492931da56e", account.77d0b6cc19e94e0597f55b75114b3704", account.ffa3de5cd06c4854882f82999a951fa5", account.bc2477d13efa438e9367386a74a4bbe7", account.513028341fcd41b9ba0824576f78f240", account.0aae9f641e7b406fbf703bfb2d297b63", account.859973b19b054a29a60f83884553e71f", account.e134936cf26740e18fac1fab1ac494f4", account.29043d2795f3464a8a34a8c8d61be1fd", account.3886d697d1a54e95b77d947419975327", account.ec5c22bfb2954a0bb33940bbc5303455", account.dd5c9a52365041aea6c16d7449825d55", account.d2924c047ef24ca3816320ae7dadc70e", account.1785c6470a2b4807a089a889e9a4f0bc", account.d88304ec07fb459494cd36b128090e14", account.1c7dc7ef1c2a46ffaef35a10a23ec5a5", account.2e36e5a88edb4d4092f501da0371c12c", account.91da792ae419431fb43ee8b30558d7e4", account.791869efd9f541878aa98332fd76944f", account.abe3e64fcf3a46e1ad2f05b6ece7d596", account.4fbb39ec59754df1aee4bbcb502f7928", account.858be1b2674a472f9cd7d67e00060269", account.fba998a0e0674a0dadbd14984c699a59", account.76ffc0ee684643ffb95eb9484d49e706", account.97da7e251bdd46ba850e9112a8981ade", account.b10003e43dcc4326a0f4d584c48d6816", account.23d6d70f37094b11b0e847fb0864320b", account.b91edb718f01404d8e2c3daa7e8251ef", account.c1b574a298064c33879acea9877bf5a6", account.6559c2d77af14047b70b6fda4a47ffd5", account.2776922259de4d8c9088836555028376", account.9891b1bc349a447eba22c66ac3a32cd7", account.abc93a9189a94c87bbb56618b1229247", account.7beb5101bd9c467399f288ad4474d3d4", account.1dc7e56b9bf84a629854c9508cbe5d1b", account.b26249b8df274e4499d329014974f205", account.8daf3092a4794d319878f8aa703b4458", account.3c89486da72844fb95c52a6a0fdd413d", account.9fcdbec555da461c8c8a25484240918b", account.34acf9e34b2740bebfabab6377c079e0", account.9bc94234472a4b88b44a25e80866462a", account.c566fd4624984f9a9a299ec5596e0b00", account.7200ae5401f14c1fa1d29535a36ca0ce", account.8abf9a9d6f5e4ca08bae267eab459f63", account.0ad2390bda494a9a817e312ce7de86ca", account.ec138bc8adba49a4960d63b3687ed28d", account.baa114fc8d2545248f9ed3c2017bec38", account.82bad0072f31455d8d9f8d834da2f2f3", account.5bf6cf33fb4e456ea747e3d43fb2ca01", account.3dbc153ca9e84f8cb52fde2b6768c74b", account.ea21a6991c0f4c66adcfcc19089b88ad", account.b06d9d9321324923945bccd05747897d", account.2089959278f549acb269a6f96caec9b4", account.f3b0afe788654eb39e9f523a094aa647", account.5b4419a5f48c40cc9550be4aea2c1d62", account.8ebaa137b6ec400e9cd4053413a4b260", account.972dfe3f47ce482080dc216a406b6ca6", account.fe40f5e938784a09b02a2beaf6276846", account.107ed8b906aa442bacbf98ec77b011fa", account.de66baf61be54bb580b99d32f5b2e2af", account.b61bf346c5d14d41be07c456f5c2cba4", account.10b935c2c17b4f3192fcc36425dd8c11", account.074a956180db41479f00d2c23d7c7514", account.2d86413aea2f4f32935e8b021ab9990b", account.43344a3585234e40b17b6cdc9741c527", account.0051bb7771b0470987ba45646bcf2798", account.9798cf6e8f424f94a30e3086d559851c", account.d8e362a0c8a1435e865eba06185d94d4", account.52250db6866b40e3801e882f0955ef14", account.a0e6e76bc5484fc4b4045d78d1aebeb5", account.f6a99f898c7b4de79a43709c9a084510", account.8230c7b3dbb24babafded4447ca1bde8", account.45fa029526d24890b2b04768a6e60928", account.476c03df778544f0b4a3e97cdb37892d", account.09370685b5f946389aff6980910cde4c", account.8adf561a00294ea588fd14006286561f", account.88494cb088bb4f04936143d588bd8ed7", account.97a4c99c48cf4368b5796f3624620295", account.8c4632d44e1546ef951877af98ec5219", account.8155650a3d16433887744e2929b38c25", account.62fc431060bb450fa64a7f145630f05c", account.cdbb4f9f63fa422a84a20cad7db05505", account.4e8fb00962554ac58f9a6271dd39fd84", account.3acbf8298f384639bbe0f9a532b4308e", account.6a013be11fee46fdbc080e0c52111b23", account.1f6ebcca5f11463a86058593a0d06735", account.b77cdb96234b4f41b1c1aea2b354978a"]
+Bot names: 
+[ai.379, ai.380, ai.378, ai.377, ai.375, ai.376, ai.374]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+Player names: 
+[account.6a298024ee1449fdb4b90f6583ae79b0", account.b6dbc66c4cb24696b9a7c7fbafbbfa69", account.fe40f5e938784a09b02a2beaf6276846", account.1becd64ad99b429cb19de6f1f41fe361", account.7af366e43fb442218ce440275eb161a4", account.5dbd69b356764b4d9b843d809b9e73b5", account.bdc9e591d63442b2b49485ad2f51a23c", account.3918a91f09e94c7c9d97da3ab722bb87", account.313e4bdf526b48feb90367a0afef9ccc", account.b0e25dcaaf594f4ca3a34a86beec3fe1", account.4558000b8e12455d8f545d6e76b7c098", account.e475e63c79554ca58dc49de6c37c1312", account.9f36388d872648e6bbfc71c08ab0b32a", account.b8c15b6607664d5489a7f13f6c95dafa", account.0149c8f5cda04fab8ca82213b0fabee6", account.2e4b8339a93341e9b60b9f409c19ca28", account.285677ce8739405985bf8f2be848c17d", account.cb9f1c8818fc439584cb169f37c61a2e", account.392fbd76a8814adfbd3fc3717b066dbe", account.a5b906e1f5ca46c8bb3cc0bdd92d1baf", account.0ba2bebbf4644410b1774c3f8fcef168", account.cddabdbe6be346bcb12fc30a5ab1f333", account.5ec86607a3f64a9a98f59963edaae79f", account.f62dc3bbe222467e8a7dc304a6f0ae1b", account.1e91371df1714b33b3541b6c29f3aab9", account.e248bd02dc4e429596cc956dbc6ba931", account.58596c249be240d6877411d94e1d7fa1", account.6a0f109e6c7b4dd7b98ef47eea79e196", account.d7adcd5995ac4641a8515bbb4e75982b", account.4eddf789770348e887dba85d5588bf34", account.36a05b5fd869414dace058c4291f9cc4", account.efb7e89ffcc044939c67173481b6fcd5", account.2673d13ffae64a8085910ac8027b6f1c", account.9bf8c58d3b204d5fb3eec1f3c43c093c", account.01068782a3414236acb074e26d521555", account.a0c6f0b378b54298ab7348bfb153de50", account.021b7eb55b324474908192e21e9bfb51", account.7c610326fc7546149acc9d50c81d4039", account.050ec794ecd04284baff507f4901b6b2", account.93849523fb2140b6824fe30149525b06", account.c70bd890202544998820cd875f7608bf", account.9cff18f63d01492c9f53489464362eb7", account.93c11ce35dd04e36b2d0383cbb94aaa0", account.c807d2a308a74337b32fa70d08723345", account.83aba02960ed476bb29555331b68219f", account.7bd4dd36c1b543689c638660a9879c64", account.d4e56f88b5874efeade7cacef40fd2ee", account.a7aa0388f921410fb1d4cf7ef7769b8e", account.16bab1fcb15f4013b3a938f1ebdc0c1f", account.fa922ccc98c343b59531c6a08b195855", account.304ca19e671a4096a8455386978164c6", account.d00acf0607fc4da7a5237d5bf3be80bb", account.70701e4bd1b54dee9bf97e7e06195abd", account.7b2f0f9e17bc484bb02c5eaf45e4d366", account.f83a6e61f01244df9b425a4b13cdc173", account.46c7480809224e288ff1b003ac9b9be9", account.646214a655e249d796f55c2c87a00af3", account.3e1526c4b4944f809cffdc214932dae6", account.c7d41758cac84d29b95e937861559a7e", account.5d8e7b0ff430443c92d9a7158c676f4c", account.057d6a13807b4901a9ce4edf283bac69", account.90c9daf2e4ca478e85244257095c5e6a", account.c046f248e5e840f2b94ef8a984448bd7", account.cd741c43224f43e3ada2bee4e19c3ac7", account.ac015b7c68704b0383f3456b3e69161c", account.df71d7a26ae5486db4dc3c42eb0b3618", account.4021aba19a2c41bb8e3d8cc6b5a6ff6a", account.1e23de5ba4774634a4d64d7404a215d8", account.a412e9fedae940f483a554deebb41ad6", account.d1d4fffa0b4b4ac386e7efe4a86949b1", account.76c91219d478403abd5c6edf69d81473", account.6e6190c1a084497bbbdfa46ceee59d99", account.511d553356204716884c8c0cecd3d7e7", account.64fa615c1060499292512bb00ce6a697", account.f1ae533613444b6b82bf87f0030531eb", account.8829d7de954d4d7eadc04120a012aa21", account.d90530dff5514a74979e8e2ea787afbb", account.6d5946be25fc4851a3e26ba7a93ebb50", account.036f25bcfec2479c9f53151b57fd2161", account.f13e04bace4f45a6b76fb3deecf88fc8", account.33584726569d40629ae576123057f6b8", account.f5d5892ac7444396803c05f9046eaf11", account.6d928dc440814205bf46f1f3df641c45", account.59d5a29570704fd6b7c2b59fad9450a7", account.9a49ac309b074285a102d519f988ad96", account.8632e16dc09c46d584d0226d92f981a9", account.82bad0072f31455d8d9f8d834da2f2f3", account.5bf6cf33fb4e456ea747e3d43fb2ca01"]
+Bot names: 
+[ai.376, ai.378, ai.377, ai.375, ai.373, ai.374]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+Player names: 
+[account.f91f63f0f4bc4d638043d5bc515e43a5", account.b5bd1c355a144d788647e6e6d60761c2", account.650c8921d01f46e5838c803c1d8283e1", account.f40327d45d1a4959a6c51f85d46f0344", account.034c59fc0fbe4a90a7a38c6a02cef3f6", account.efb7e89ffcc044939c67173481b6fcd5", account.3649fc0bc4044db8a19e2d4fef843f2b", account.75e178170da64175974a15c869e20e25", account.46a590f75a78494f9e4da501685ab09d", account.482acb0cad864610889f6b72c33e8491", account.1dc2576da0fa44e7ba34f0c779ad2d46", account.7b77ace8693740fa8c5c0cd577df62fd", account.e7b1bf5bf59f44139975a1fc1c6b5199", account.7069817d5b464709aeb910f3dee82d62", account.cd63fccaef2c42bbbb8f7a716caf2ea2", account.d073da7d250b433487bc6f77a09b0e78", account.6b3a2b175e5e43df81f8457f4f74b019", account.c3f685ea14604619b630f652eebbe7ed", account.33733efc285c4420868306ef6fd28c41", account.1371c20ecef049f49634b276c5bab0fb", account.b34cca7a7fb949f0a485330e96f61ac3", account.1c4e35411c254ff8a7e7e03b530eee71", account.a3cceb56103f496e8d2db7776a9c18d2", account.7a3e99fe446143f5bcf542f822e6b14b", account.c79da667300c4dffbaf1f2db75a3f7af", account.6e31ef382d38410a935ee0614663889e", account.17d2045f41de49be9f58b017c2b7a28a", account.e4abb17d505b486cad061f0445be0635", account.1a6fb1e6d834470ca2d76241caf5fbcb", account.9955bebe277344b48caf9dc6e7358158", account.72dc5a6d9fe947ffa862f7cc6796c030", account.dc4bb627e76049d89c6fa2f550b7bfe8", account.8abf9a9d6f5e4ca08bae267eab459f63", account.96ed6c874bde4aa796f451e7bb319e03", account.7ab4246a89514effb4df85bf9294d765", account.073f35f3e384478a8553068d72612b7e", account.13c9c16f552844aa8b761957af2cfedc", account.4f969c5def6646f19c9041015dcf4b3b", account.23c477983af8477a9034be8fb7344255", account.513028341fcd41b9ba0824576f78f240", account.17b614831edc4dd998d5e2c5e3385e06", account.c17a9e5feb3843aaa4c03c2a81e1ce4b", account.e5f713da297a4bea8440a3d126ad0c07", account.5c26a601da1645a088903474512031c0", account.e2b92b94bae64717b7048ebbec7f0f7c", account.8505fedfefd944e4b64c4eb6c935b0b3", account.d749f6d027f1471b98f4e82029365644", account.94e5aca069f34a208e05391778b90f30", account.2bf47aaed1494ec189e7237da50eb9ca", account.0bbc0a50b5224ed6a1feb793dd1008a1", account.cbe8ae19277c40a9875f445f79652b95", account.efdbb005a3f54a7a9c2613c13a60b0dd", account.1e219394e0a240c2af7deb8a9a56ca0c", account.cba6604f3d7c4784bf3def8cd689b535", account.8efaffa0dc9a41e1a4a397fc223726e2", account.d9ccc43ffc8c4f85a798b57a9a69a4f8", account.a2ffc08701b9475ca44e4ba75c6eda97", account.51b42c2a7b914a678da21bdcadd218de", account.318790e4985e4e11bf19c368ba460986", account.82bad0072f31455d8d9f8d834da2f2f3", account.5bf6cf33fb4e456ea747e3d43fb2ca01", account.f76475b9675f43449b313cf6d2d95b0e", account.25577a8f377643bdaaecc0a64dee8b59", account.75942b6c47b047b199a2581ee38bef3f", account.a17d4d2645d641078f40828d7b59c3ae", account.2599d1adfbbd423f875e152dc1a6201b", account.c91d1c9ea91b4891be418a989d3ab284", account.408edbaeba4e40e6ae4f8527d67a805c", account.2811e8c0f3874db8bb7104451e3ad5ff", account.3001a03ed2694e458a5bf1f106cb669c", account.c814d1b10ee14bad95508b6d08214496", account.624c5e284ae1406ba7af8675a01bfc07", account.b0b5b7b8c1b043db90fe29b1345b3570", account.70a54936f3c6490f9ad11f38c521a5ee", account.458fe97959174a08b1e3da4b89b09c08", account.8ee0f1adc56a41c3ad3efcb7d5e63f6d", account.09b388a364464c30b73b3e0fc4404b9a", account.862d1ee7de3d4f64ae235d245bc7c9a4", account.de66baf61be54bb580b99d32f5b2e2af", account.b61bf346c5d14d41be07c456f5c2cba4", account.cf503e3fc23e4e6eb3e568d48d96e7c6", account.bb9a6f415e464bbc9f18be699b7d1863", account.7f239b8cbecb499caa865659c94c4e4d", account.0f8829fd594c48c2a545d3d0c81513e5", account.add58964a9184161b629228527a91ed5", account.ee645aa2d1e646dabc6a68e9a67ba2b1", account.57aa60d7e8bf4c21bbb438510f0a1163", account.10ecf7110d7d4399905afc3e3e2a1c1a", account.f1e5fd2c32fd45d38ebd94d28339b561", account.bdffcdf182ee4afe9d1e4f59274c509d"]
+Bot names: 
+[ai.337, ai.336, ai.335, ai.334]
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+Player names: 
+
+account.51b42c2a7b914a678da21bdcadd218de"
+account.d9ccc43ffc8c4f85a798b57a9a69a4f8"
+account.a2ffc08701b9475ca44e4ba75c6eda97"
+account.218c62fda8e642dcbfe031e208b7b8df"
+account.0e8218a15cfc4c35a6cda076802341dd"
+account.c62068f7a7124edf99ae3af750d5845b"
+account.3a1857eff99543af90acb6282b3eed88"
+account.99443610c2ab4ee7b90d2b16bcb5d416"
+account.c9b1cae856274acd87196988633dcf07"
+account.ca3f6b22d95e47128b7c2247f846d3d4"
+account.ca72f94f1d12482f86ab4aeecc3fbf62"
+account.3dbc153ca9e84f8cb52fde2b6768c74b"
+account.b7f51e94b9c84349a2d6b8ab709b494d"
+account.830e23fee15044e68f4e0701b9a0a1ed"
+account.1fc108191e1a4d469ed5cb412aa2af46"
+account.9d64912a68b34022b1d47e74e6271c6f"
+account.d7488a18755e491bb8d34a9244192aa3"
+account.f57054f06f8e4924921318c6bddc5f00"
+account.b1c9af00f9df425e84c055ec8f705f81"
+account.8db0db0d2f6c4786b4f74079349951b5"
+account.fd2144d65f544c0b960312654f4ac12d"
+account.47586f2fbf564d4a832653000c45959a"
+account.bc948d84bf8944f7a5cb0af98099595c"
+account.e80a1672c25b407d896194f4061b082e"
+account.04d08e0f5f5e47ed82222983465682cc"
+account.21c44fb0c36348158c0d4e869ed519ca"
+account.6a298024ee1449fdb4b90f6583ae79b0"
+account.a7a677b62d124be1b041f2b0b7da2e77"
+account.0a1763d057544b8094ffb9f04674e6cb"
+account.7004ab40a6074b41892e4bea5180909c"
+account.a0e78148c503457ba5802a5533632be2"
+account.0f014271d41f4c448b563f6daa18465a"
+account.b317b229605840bfa321b7bbce81d94b"
+account.39714ce092c04d1daa1209a8641e299e"
+account.bcbdf09662384dac8bd9292eec549abd"
+account.e8ab0f0f6d1444dba21f55d4eb326519"
+account.513a171ec8fd4c68a2366d77e851d0ce"
+account.7c946523bf294e7dac881a6f6e6435be"
+account.020d6d91ff9f4f1e8f91a696d60f6440"
+account.5c16fdb0be8a492e8e6a84e7d8f67a33"
+account.45a2fbd620d845d79c8deb37c4d8d07c"
+account.57edddd1634e402086fab325a4f18c22"
+account.4558000b8e12455d8f545d6e76b7c098"
+account.9568aac66d584cb9ae3b3b1b1d56468a"
+account.0001410fa27c42c29320f1a6c9db7d13"
+account.05d7ddabe0874596ab304d8ee51c6931"
+account.9d6c870868e14564a0f949bf2fcb0e21"
+account.18935b52fe674ea39f47dcb29209a898"
+account.d3d1a51d285a40ef98819db7d51b8d59"
+account.3715cfd0568b44eb88f5892f99c07ac1"
+account.6744cd4c1cd4433fa35894a7200f30e9"
+account.7e3556cbce34490891d6d96cc1039ae3"
+account.5f0722848e124028a30b0f76aec3753f"
+account.9561194cac244f89915f6ffb23d4f9b9"
+account.f99fb233bd2541e7b0ec3b054b5f0bba"
+account.f52595702fb148f9af996685c15a394d"
+account.809d51fa7b5d4acf81e7ea6c77741441"
+account.e94a5fb685b7478ba95b89631e4b61f8"
+account.9209ad767b3d4f2d985f87a722bc836f"
+account.b10003e43dcc4326a0f4d584c48d6816"
+account.408edbaeba4e40e6ae4f8527d67a805c"
+account.3549f38872d14a749ade52b092a5b588"
+account.5b4419a5f48c40cc9550be4aea2c1d62"
+account.8ebaa137b6ec400e9cd4053413a4b260"
+account.652e199d30784a2181e4d4be90837d5d"
+account.972dfe3f47ce482080dc216a406b6ca6"
+account.0b379918488d46b488d3772a5d75a817"
+account.09b56c547dc8405db64cc26ac3e21170"
+account.bf6edb7f01f24db7a85b00c6e13579a8"
+account.aa69ed030f2b40a099f294f0541a9aab"
+account.073f35f3e384478a8553068d72612b7e"
+account.3acbf8298f384639bbe0f9a532b4308e"
+account.900910fe64c449088a85e6e5648f0d3f"
+account.589f2b0beef84ddf931bca4048bf67c7"
+account.12ffc3857254405ca6a399db68185ddf"
+account.82bad0072f31455d8d9f8d834da2f2f3"
+account.5bf6cf33fb4e456ea747e3d43fb2ca01"
+account.04f06f0b7fcb4a98adb8160b55fc9c8f"
+account.2c710e8591194d5fb848a3ac5451809c"
+account.70ccb738fbd9442a8e5761e28d2e3640"
+account.3b6df1fdce4e4f67987747a83e19b278"
+account.e9af2fd9039a47af862f10a19ba63920"
+account.5f9383e994884735b22afc34f826219c"
+account.53d5c98b8f9e4f139282569c37fe20b0"
+account.6900c7507c7244f5a9cc7598f6a1a476"
+account.6fd29a6ca3374603a3a14b2e8d1ea293"
+account.59bc6fcef13148e0b71066b60bc2a889"
+account.6f02ad9ecffb460f97acdcf56778dc7a"
+account.ad948dc2ce024684a49900c221311a74"
+account.66043bcbc90b4693b714720d13932f95"
+account.88988026e90b40f2ba38f315917db3e1"
+account.e66568a213e3445cbf6a6c1641ad5427"
+Bot names: 
+
+ai.346
+ai.345
+ai.344
+ai.343
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+Player names: 
+
+account.0792d20c147d474cab6b1b625fd98fba"
+account.8c985266042748bdb22e3a9c1a7c5095"
+account.5ecc91dc7c73450495b7dc59b4643c5e"
+account.2470d8b22954423580b9c305e6badf11"
+account.ea21a6991c0f4c66adcfcc19089b88ad"
+account.b06d9d9321324923945bccd05747897d"
+account.f3b0afe788654eb39e9f523a094aa647"
+account.2089959278f549acb269a6f96caec9b4"
+account.bb2e5117dbe647fd9cd62d85e8e5ae48"
+account.5b6db98922874b80942030a613eb1ea6"
+account.01d3c30e3512403e84507b07360fc4e2"
+account.46fd56872d224732bf9570b1b619ed80"
+account.d8ca0f521da4481fab6ca01dc7b8d104"
+account.118c17d5fd684e018240cef895f2ee00"
+account.aac98b0e9fdc4184918b78bf947060d5"
+account.585495ef359f4d448b5201453e3f0fb4"
+account.177b3dd2f3de4f8bbb1ab9c1d325beab"
+account.132bd2b9cd4547c389ea89a13564626d"
+account.790e5b9e7b004f1c903ab3d51923631c"
+account.8c2752bea7d74b49a1dc8ffadcb5142a"
+account.f3c4825726db48b2b6589c44c2f74b16"
+account.23d52ac519154f0aa7a7abbdca0732eb"
+account.c018650bcbef42df889d0b1fb3016071"
+account.f0be3ca4f4bd4a66b6e4a022b122865b"
+account.d7955ecfbb2449f1a26fcd3b8d859599"
+account.82bad0072f31455d8d9f8d834da2f2f3"
+account.5bf6cf33fb4e456ea747e3d43fb2ca01"
+account.37632c3e0e52437c925a8a04e0feb121"
+account.163a3347ae4140478d808105402988f5"
+account.dfb196bf2ee4452eaabc7a7f7ef15b0a"
+account.cccf6032c17d44d29f5a915f101c231a"
+account.4f51fc2e0cf749c1bdcd7692464e0f5e"
+account.002a91a91b7941e39d8d032d96f6197e"
+account.7004ab40a6074b41892e4bea5180909c"
+account.c3f685ea14604619b630f652eebbe7ed"
+account.33733efc285c4420868306ef6fd28c41"
+account.1371c20ecef049f49634b276c5bab0fb"
+account.b9b865fe07fd4af1a0fe6cc78770ad16"
+account.a623d87230f448cf92b4ec6d78dab4c5"
+account.251ee64317814f1f8641315dcd0249af"
+account.0633f07007b742589ff67939c9211677"
+account.1b8fdf884dcb41e781a03977f9587c36"
+account.407433df69a440e899be965193110d00"
+account.e91f1686abf5445b8b0310477d4acab3"
+account.8283ac1906b94db49b7c25a878e38658"
+account.a52894b2dfa64764bb466c8eab54fc8f"
+account.47271463c9e94aad8d5d61a169ecc78a"
+account.752de5e0fd22411f95418fca08593682"
+account.216bb4b9cb1c41a1bb2c97d6465a9762"
+account.2ac4d21003b14a3a96cc78008e9bfd6c"
+account.3acbf8298f384639bbe0f9a532b4308e"
+account.1946cff6e14342a1b772e2056e4da7c0"
+account.b4f9481aaab642119dd32ddc6ea8df9c"
+account.ab492f0946ea4f4cb9d894b0061ced7e"
+account.32d439984549437e807b23a63e9f47ac"
+account.a0709c2e088b404796b08294e764b9e7"
+account.84e2d31881ba44e5a1dc3a1c371f3d56"
+account.7a93da542eab4c7d9fa7f798469b2b18"
+account.961a40a3715d42608ba440414e068790"
+account.549b9886944148beaaca080e267115a5"
+account.64e8870ddfde4434b2460ed82c6cd66f"
+account.48b1e40acb86485fa47136c8c201953e"
+account.2bf5e462071e4779b4b6a1503b2d5e80"
+account.87ad667f9a454b43b0a0f89894469ca6"
+account.4b7e180476f1454c91f40c0c7a547262"
+account.bb9410586ea94de38a4e5f8d1abc6168"
+account.947a01cd3dd04e0b95545334c29f0d41"
+account.8980cfdd35c449b2be78a7160cdce417"
+account.9f6233f9a81f41c988b1b5e17747ce7e"
+account.4db4235af8384643a3144e4fd8d0a9b7"
+account.426b92e2e04445d481829b99b3febe58"
+account.8ce203b54b3148b1a2f053952d112593"
+account.c814d1b10ee14bad95508b6d08214496"
+account.3001a03ed2694e458a5bf1f106cb669c"
+account.624c5e284ae1406ba7af8675a01bfc07"
+account.f2c6839648224ebc9edc819f8627c244"
+account.b04679c4a081470d977818d9eeb89004"
+account.3136c8a079004881a62fea499b2fe3c2"
+account.5607a012626c4806ab5e6684d3ffeea8"
+account.e57571e2ded044b78358a679990c949c"
+account.3d1cd06fb7764d4d9aac869214294bd4"
+account.bf922d4d36104ff5a7e189ca06e4f081"
+account.f7b553f6589b41ad9cf1c4fa7193f908"
+account.e246ef5db6d4459bb8a41e27ac50ef5a"
+account.f265aa5f12f9418d9a0f91e4e8b83bbd"
+account.9bbbe0d67442415b965a332007ce5cfe"
+account.3a2503c9a33d412193596baf05526cc7"
+account.924b621994904d7780235acc31ee53d0"
+account.3cd83105236a44f4ab8a85afec5456d1"
+account.4e9a0583594b4369920e39c4224ad9d8"
+account.b3753cbb201944cab39b689c2c25bb5f"
+Bot names: 
+
+ai.351
+ai.350
+ai.349
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+Player names: 
+
+account.0e20463b9dec41bda1782b3322ad5b53"
+account.a89e8265cc174a06abe653b55c1be13c"
+account.5c95d8fb40f642b9879bcba8e922d4ea"
+account.20d0705bc9464752a4908492931da56e"
+account.77d0b6cc19e94e0597f55b75114b3704"
+account.ffa3de5cd06c4854882f82999a951fa5"
+account.bc2477d13efa438e9367386a74a4bbe7"
+account.513028341fcd41b9ba0824576f78f240"
+account.0aae9f641e7b406fbf703bfb2d297b63"
+account.859973b19b054a29a60f83884553e71f"
+account.e134936cf26740e18fac1fab1ac494f4"
+account.29043d2795f3464a8a34a8c8d61be1fd"
+account.3886d697d1a54e95b77d947419975327"
+account.ec5c22bfb2954a0bb33940bbc5303455"
+account.dd5c9a52365041aea6c16d7449825d55"
+account.d2924c047ef24ca3816320ae7dadc70e"
+account.1785c6470a2b4807a089a889e9a4f0bc"
+account.d88304ec07fb459494cd36b128090e14"
+account.1c7dc7ef1c2a46ffaef35a10a23ec5a5"
+account.2e36e5a88edb4d4092f501da0371c12c"
+account.91da792ae419431fb43ee8b30558d7e4"
+account.791869efd9f541878aa98332fd76944f"
+account.abe3e64fcf3a46e1ad2f05b6ece7d596"
+account.4fbb39ec59754df1aee4bbcb502f7928"
+account.858be1b2674a472f9cd7d67e00060269"
+account.fba998a0e0674a0dadbd14984c699a59"
+account.76ffc0ee684643ffb95eb9484d49e706"
+account.97da7e251bdd46ba850e9112a8981ade"
+account.b10003e43dcc4326a0f4d584c48d6816"
+account.23d6d70f37094b11b0e847fb0864320b"
+account.b91edb718f01404d8e2c3daa7e8251ef"
+account.c1b574a298064c33879acea9877bf5a6"
+account.6559c2d77af14047b70b6fda4a47ffd5"
+account.2776922259de4d8c9088836555028376"
+account.9891b1bc349a447eba22c66ac3a32cd7"
+account.abc93a9189a94c87bbb56618b1229247"
+account.7beb5101bd9c467399f288ad4474d3d4"
+account.1dc7e56b9bf84a629854c9508cbe5d1b"
+account.b26249b8df274e4499d329014974f205"
+account.8daf3092a4794d319878f8aa703b4458"
+account.3c89486da72844fb95c52a6a0fdd413d"
+account.9fcdbec555da461c8c8a25484240918b"
+account.34acf9e34b2740bebfabab6377c079e0"
+account.9bc94234472a4b88b44a25e80866462a"
+account.c566fd4624984f9a9a299ec5596e0b00"
+account.7200ae5401f14c1fa1d29535a36ca0ce"
+account.8abf9a9d6f5e4ca08bae267eab459f63"
+account.0ad2390bda494a9a817e312ce7de86ca"
+account.ec138bc8adba49a4960d63b3687ed28d"
+account.baa114fc8d2545248f9ed3c2017bec38"
+account.82bad0072f31455d8d9f8d834da2f2f3"
+account.5bf6cf33fb4e456ea747e3d43fb2ca01"
+account.3dbc153ca9e84f8cb52fde2b6768c74b"
+account.ea21a6991c0f4c66adcfcc19089b88ad"
+account.b06d9d9321324923945bccd05747897d"
+account.2089959278f549acb269a6f96caec9b4"
+account.f3b0afe788654eb39e9f523a094aa647"
+account.5b4419a5f48c40cc9550be4aea2c1d62"
+account.8ebaa137b6ec400e9cd4053413a4b260"
+account.972dfe3f47ce482080dc216a406b6ca6"
+account.fe40f5e938784a09b02a2beaf6276846"
+account.107ed8b906aa442bacbf98ec77b011fa"
+account.de66baf61be54bb580b99d32f5b2e2af"
+account.b61bf346c5d14d41be07c456f5c2cba4"
+account.10b935c2c17b4f3192fcc36425dd8c11"
+account.074a956180db41479f00d2c23d7c7514"
+account.2d86413aea2f4f32935e8b021ab9990b"
+account.43344a3585234e40b17b6cdc9741c527"
+account.0051bb7771b0470987ba45646bcf2798"
+account.9798cf6e8f424f94a30e3086d559851c"
+account.d8e362a0c8a1435e865eba06185d94d4"
+account.52250db6866b40e3801e882f0955ef14"
+account.a0e6e76bc5484fc4b4045d78d1aebeb5"
+account.f6a99f898c7b4de79a43709c9a084510"
+account.8230c7b3dbb24babafded4447ca1bde8"
+account.45fa029526d24890b2b04768a6e60928"
+account.476c03df778544f0b4a3e97cdb37892d"
+account.09370685b5f946389aff6980910cde4c"
+account.8adf561a00294ea588fd14006286561f"
+account.88494cb088bb4f04936143d588bd8ed7"
+account.97a4c99c48cf4368b5796f3624620295"
+account.8c4632d44e1546ef951877af98ec5219"
+account.8155650a3d16433887744e2929b38c25"
+account.62fc431060bb450fa64a7f145630f05c"
+account.cdbb4f9f63fa422a84a20cad7db05505"
+account.4e8fb00962554ac58f9a6271dd39fd84"
+account.3acbf8298f384639bbe0f9a532b4308e"
+account.6a013be11fee46fdbc080e0c52111b23"
+account.1f6ebcca5f11463a86058593a0d06735"
+account.b77cdb96234b4f41b1c1aea2b354978a"
+Bot names: 
+
+ai.379
+ai.380
+ai.378
+ai.377
+ai.375
+ai.376
+ai.374
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+Player names: 
+
+account.6a298024ee1449fdb4b90f6583ae79b0"
+account.b6dbc66c4cb24696b9a7c7fbafbbfa69"
+account.fe40f5e938784a09b02a2beaf6276846"
+account.1becd64ad99b429cb19de6f1f41fe361"
+account.7af366e43fb442218ce440275eb161a4"
+account.5dbd69b356764b4d9b843d809b9e73b5"
+account.bdc9e591d63442b2b49485ad2f51a23c"
+account.3918a91f09e94c7c9d97da3ab722bb87"
+account.313e4bdf526b48feb90367a0afef9ccc"
+account.b0e25dcaaf594f4ca3a34a86beec3fe1"
+account.4558000b8e12455d8f545d6e76b7c098"
+account.e475e63c79554ca58dc49de6c37c1312"
+account.9f36388d872648e6bbfc71c08ab0b32a"
+account.b8c15b6607664d5489a7f13f6c95dafa"
+account.0149c8f5cda04fab8ca82213b0fabee6"
+account.2e4b8339a93341e9b60b9f409c19ca28"
+account.285677ce8739405985bf8f2be848c17d"
+account.cb9f1c8818fc439584cb169f37c61a2e"
+account.392fbd76a8814adfbd3fc3717b066dbe"
+account.a5b906e1f5ca46c8bb3cc0bdd92d1baf"
+account.0ba2bebbf4644410b1774c3f8fcef168"
+account.cddabdbe6be346bcb12fc30a5ab1f333"
+account.5ec86607a3f64a9a98f59963edaae79f"
+account.f62dc3bbe222467e8a7dc304a6f0ae1b"
+account.1e91371df1714b33b3541b6c29f3aab9"
+account.e248bd02dc4e429596cc956dbc6ba931"
+account.58596c249be240d6877411d94e1d7fa1"
+account.6a0f109e6c7b4dd7b98ef47eea79e196"
+account.d7adcd5995ac4641a8515bbb4e75982b"
+account.4eddf789770348e887dba85d5588bf34"
+account.36a05b5fd869414dace058c4291f9cc4"
+account.efb7e89ffcc044939c67173481b6fcd5"
+account.2673d13ffae64a8085910ac8027b6f1c"
+account.9bf8c58d3b204d5fb3eec1f3c43c093c"
+account.01068782a3414236acb074e26d521555"
+account.a0c6f0b378b54298ab7348bfb153de50"
+account.021b7eb55b324474908192e21e9bfb51"
+account.7c610326fc7546149acc9d50c81d4039"
+account.050ec794ecd04284baff507f4901b6b2"
+account.93849523fb2140b6824fe30149525b06"
+account.c70bd890202544998820cd875f7608bf"
+account.9cff18f63d01492c9f53489464362eb7"
+account.93c11ce35dd04e36b2d0383cbb94aaa0"
+account.c807d2a308a74337b32fa70d08723345"
+account.83aba02960ed476bb29555331b68219f"
+account.7bd4dd36c1b543689c638660a9879c64"
+account.d4e56f88b5874efeade7cacef40fd2ee"
+account.a7aa0388f921410fb1d4cf7ef7769b8e"
+account.16bab1fcb15f4013b3a938f1ebdc0c1f"
+account.fa922ccc98c343b59531c6a08b195855"
+account.304ca19e671a4096a8455386978164c6"
+account.d00acf0607fc4da7a5237d5bf3be80bb"
+account.70701e4bd1b54dee9bf97e7e06195abd"
+account.7b2f0f9e17bc484bb02c5eaf45e4d366"
+account.f83a6e61f01244df9b425a4b13cdc173"
+account.46c7480809224e288ff1b003ac9b9be9"
+account.646214a655e249d796f55c2c87a00af3"
+account.3e1526c4b4944f809cffdc214932dae6"
+account.c7d41758cac84d29b95e937861559a7e"
+account.5d8e7b0ff430443c92d9a7158c676f4c"
+account.057d6a13807b4901a9ce4edf283bac69"
+account.90c9daf2e4ca478e85244257095c5e6a"
+account.c046f248e5e840f2b94ef8a984448bd7"
+account.cd741c43224f43e3ada2bee4e19c3ac7"
+account.ac015b7c68704b0383f3456b3e69161c"
+account.df71d7a26ae5486db4dc3c42eb0b3618"
+account.4021aba19a2c41bb8e3d8cc6b5a6ff6a"
+account.1e23de5ba4774634a4d64d7404a215d8"
+account.a412e9fedae940f483a554deebb41ad6"
+account.d1d4fffa0b4b4ac386e7efe4a86949b1"
+account.76c91219d478403abd5c6edf69d81473"
+account.6e6190c1a084497bbbdfa46ceee59d99"
+account.511d553356204716884c8c0cecd3d7e7"
+account.64fa615c1060499292512bb00ce6a697"
+account.f1ae533613444b6b82bf87f0030531eb"
+account.8829d7de954d4d7eadc04120a012aa21"
+account.d90530dff5514a74979e8e2ea787afbb"
+account.6d5946be25fc4851a3e26ba7a93ebb50"
+account.036f25bcfec2479c9f53151b57fd2161"
+account.f13e04bace4f45a6b76fb3deecf88fc8"
+account.33584726569d40629ae576123057f6b8"
+account.f5d5892ac7444396803c05f9046eaf11"
+account.6d928dc440814205bf46f1f3df641c45"
+account.59d5a29570704fd6b7c2b59fad9450a7"
+account.9a49ac309b074285a102d519f988ad96"
+account.8632e16dc09c46d584d0226d92f981a9"
+account.82bad0072f31455d8d9f8d834da2f2f3"
+account.5bf6cf33fb4e456ea747e3d43fb2ca01"
+Bot names: 
+
+ai.376
+ai.378
+ai.377
+ai.375
+ai.373
+ai.374
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+Player names: 
+
+account.f91f63f0f4bc4d638043d5bc515e43a5"
+account.b5bd1c355a144d788647e6e6d60761c2"
+account.650c8921d01f46e5838c803c1d8283e1"
+account.f40327d45d1a4959a6c51f85d46f0344"
+account.034c59fc0fbe4a90a7a38c6a02cef3f6"
+account.efb7e89ffcc044939c67173481b6fcd5"
+account.3649fc0bc4044db8a19e2d4fef843f2b"
+account.75e178170da64175974a15c869e20e25"
+account.46a590f75a78494f9e4da501685ab09d"
+account.482acb0cad864610889f6b72c33e8491"
+account.1dc2576da0fa44e7ba34f0c779ad2d46"
+account.7b77ace8693740fa8c5c0cd577df62fd"
+account.e7b1bf5bf59f44139975a1fc1c6b5199"
+account.7069817d5b464709aeb910f3dee82d62"
+account.cd63fccaef2c42bbbb8f7a716caf2ea2"
+account.d073da7d250b433487bc6f77a09b0e78"
+account.6b3a2b175e5e43df81f8457f4f74b019"
+account.c3f685ea14604619b630f652eebbe7ed"
+account.33733efc285c4420868306ef6fd28c41"
+account.1371c20ecef049f49634b276c5bab0fb"
+account.b34cca7a7fb949f0a485330e96f61ac3"
+account.1c4e35411c254ff8a7e7e03b530eee71"
+account.a3cceb56103f496e8d2db7776a9c18d2"
+account.7a3e99fe446143f5bcf542f822e6b14b"
+account.c79da667300c4dffbaf1f2db75a3f7af"
+account.6e31ef382d38410a935ee0614663889e"
+account.17d2045f41de49be9f58b017c2b7a28a"
+account.e4abb17d505b486cad061f0445be0635"
+account.1a6fb1e6d834470ca2d76241caf5fbcb"
+account.9955bebe277344b48caf9dc6e7358158"
+account.72dc5a6d9fe947ffa862f7cc6796c030"
+account.dc4bb627e76049d89c6fa2f550b7bfe8"
+account.8abf9a9d6f5e4ca08bae267eab459f63"
+account.96ed6c874bde4aa796f451e7bb319e03"
+account.7ab4246a89514effb4df85bf9294d765"
+account.073f35f3e384478a8553068d72612b7e"
+account.13c9c16f552844aa8b761957af2cfedc"
+account.4f969c5def6646f19c9041015dcf4b3b"
+account.23c477983af8477a9034be8fb7344255"
+account.513028341fcd41b9ba0824576f78f240"
+account.17b614831edc4dd998d5e2c5e3385e06"
+account.c17a9e5feb3843aaa4c03c2a81e1ce4b"
+account.e5f713da297a4bea8440a3d126ad0c07"
+account.5c26a601da1645a088903474512031c0"
+account.e2b92b94bae64717b7048ebbec7f0f7c"
+account.8505fedfefd944e4b64c4eb6c935b0b3"
+account.d749f6d027f1471b98f4e82029365644"
+account.94e5aca069f34a208e05391778b90f30"
+account.2bf47aaed1494ec189e7237da50eb9ca"
+account.0bbc0a50b5224ed6a1feb793dd1008a1"
+account.cbe8ae19277c40a9875f445f79652b95"
+account.efdbb005a3f54a7a9c2613c13a60b0dd"
+account.1e219394e0a240c2af7deb8a9a56ca0c"
+account.cba6604f3d7c4784bf3def8cd689b535"
+account.8efaffa0dc9a41e1a4a397fc223726e2"
+account.d9ccc43ffc8c4f85a798b57a9a69a4f8"
+account.a2ffc08701b9475ca44e4ba75c6eda97"
+account.51b42c2a7b914a678da21bdcadd218de"
+account.318790e4985e4e11bf19c368ba460986"
+account.82bad0072f31455d8d9f8d834da2f2f3"
+account.5bf6cf33fb4e456ea747e3d43fb2ca01"
+account.f76475b9675f43449b313cf6d2d95b0e"
+account.25577a8f377643bdaaecc0a64dee8b59"
+account.75942b6c47b047b199a2581ee38bef3f"
+account.a17d4d2645d641078f40828d7b59c3ae"
+account.2599d1adfbbd423f875e152dc1a6201b"
+account.c91d1c9ea91b4891be418a989d3ab284"
+account.408edbaeba4e40e6ae4f8527d67a805c"
+account.2811e8c0f3874db8bb7104451e3ad5ff"
+account.3001a03ed2694e458a5bf1f106cb669c"
+account.c814d1b10ee14bad95508b6d08214496"
+account.624c5e284ae1406ba7af8675a01bfc07"
+account.b0b5b7b8c1b043db90fe29b1345b3570"
+account.70a54936f3c6490f9ad11f38c521a5ee"
+account.458fe97959174a08b1e3da4b89b09c08"
+account.8ee0f1adc56a41c3ad3efcb7d5e63f6d"
+account.09b388a364464c30b73b3e0fc4404b9a"
+account.862d1ee7de3d4f64ae235d245bc7c9a4"
+account.de66baf61be54bb580b99d32f5b2e2af"
+account.b61bf346c5d14d41be07c456f5c2cba4"
+account.cf503e3fc23e4e6eb3e568d48d96e7c6"
+account.bb9a6f415e464bbc9f18be699b7d1863"
+account.7f239b8cbecb499caa865659c94c4e4d"
+account.0f8829fd594c48c2a545d3d0c81513e5"
+account.add58964a9184161b629228527a91ed5"
+account.ee645aa2d1e646dabc6a68e9a67ba2b1"
+account.57aa60d7e8bf4c21bbb438510f0a1163"
+account.10ecf7110d7d4399905afc3e3e2a1c1a"
+account.f1e5fd2c32fd45d38ebd94d28339b561"
+account.bdffcdf182ee4afe9d1e4f59274c509d"
+Bot names: 
+
+ai.337
+ai.336
+ai.335
+ai.334
+
+request=3:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	WeapP90_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapFNFal_C x1
+	WeapP90_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+BigChorizoXXL Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Bertoxxulous69 Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+TallenZek Summary (Winner): 
+	Primary Weapon #1: 	WeapMini14_C
+	Primary Weapon #2: 	WeapUMP_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	N/A x1
+	WeapMP5K_C x1
+	WeapM24_C x1
+	WeapMini14_C x1
+	WeapUMP_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM79_C x1
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+ParksNRec Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+SlouchGodRandy Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iLostCausei Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Wassssa Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMP5K_C x2
+	WeapKar98k_C x1
+	N/A x4
+	WeapM24_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x4
+
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapMk12_C
+	Primary Weapon #2: 	WeapMG3_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapMk12_C x1
+	WeapMG3_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Jeggred Summary (Winner): 
+	Primary Weapon #1: 	WeapL6_C
+	Primary Weapon #2: 	WeapAUG_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Johnson1004 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapIntegratedRepair_C
+-------------------------------------------------
+pH-Matranse Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapFNFal_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+vV1RuZz Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapL6_C x1
+	WeapAUG_C x2
+	WeapMk12_C x1
+	WeapHK416_C x1
+	WeapFNFal_C x1
+	WeapMP5K_C x1
+	WeapSKS_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	WeapIntegratedRepair_C x1
+	WeapM79_C x1
+
+
+request=3:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapFNFal_C
+	Primary Weapon #2: 	WeapP90_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapFNFal_C x1
+	WeapP90_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+BigChorizoXXL Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+Bertoxxulous69 Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+TallenZek Summary (Winner): 
+	Primary Weapon #1: 	WeapMini14_C
+	Primary Weapon #2: 	WeapUMP_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapAUG_C x1
+	N/A x1
+	WeapMP5K_C x1
+	WeapM24_C x1
+	WeapMini14_C x1
+	WeapUMP_C x1
+
+SECONDARY WEAPON: (winners only)
+	WeapM79_C x1
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+ParksNRec Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapKar98k_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+SlouchGodRandy Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+iLostCausei Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapM24_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Wassssa Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapMP5K_C x2
+	WeapKar98k_C x1
+	N/A x4
+	WeapM24_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x4
+
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+TGLTN Summary (Winner): 
+	Primary Weapon #1: 	N/A
+	Primary Weapon #2: 	N/A
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Shrimzy Summary (Winner): 
+	Primary Weapon #1: 	WeapMk12_C
+	Primary Weapon #2: 	WeapMG3_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	N/A x2
+	WeapMk12_C x1
+	WeapMG3_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Jeggred Summary (Winner): 
+	Primary Weapon #1: 	WeapL6_C
+	Primary Weapon #2: 	WeapAUG_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+Johnson1004 Summary (Winner): 
+	Primary Weapon #1: 	WeapAUG_C
+	Primary Weapon #2: 	WeapMk12_C
+	Secondary Weapon: 	WeapIntegratedRepair_C
+-------------------------------------------------
+pH-Matranse Summary (Winner): 
+	Primary Weapon #1: 	WeapHK416_C
+	Primary Weapon #2: 	WeapFNFal_C
+	Secondary Weapon: 	WeapM79_C
+-------------------------------------------------
+vV1RuZz Summary (Winner): 
+	Primary Weapon #1: 	WeapMP5K_C
+	Primary Weapon #2: 	WeapSKS_C
+	Secondary Weapon: 	N/A
+-------------------------------------------------
+PRINTING WEAPON FREQUENCIES: 
+
+PRIMARY WEAPONS: (winners only)
+	WeapL6_C x1
+	WeapAUG_C x2
+	WeapMk12_C x1
+	WeapHK416_C x1
+	WeapFNFal_C x1
+	WeapMP5K_C x1
+	WeapSKS_C x1
+
+SECONDARY WEAPON: (winners only)
+	N/A x2
+	WeapIntegratedRepair_C x1
+	WeapM79_C x1
+
+
+request=6:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+REQUEST = 6
+mapsPlayed.size() : 5
+Frequencies of each map played: 
+Tiger_Main x2
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 4 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 2 3 0 4 3 0 
+
+Kill Frequencies:
+71 got 0 kills.
+12 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+MAX #kills by a single person: 5 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 16 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+0 0 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+64 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+MAX #kills by a single person: 8 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 5 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+2 got 5 kills.
+4 got 6 kills.
+MAX #kills by a single person: 6 (#people who achieved this: 4)
+#people killed by 'TOP TEN' : 26 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 1 0 2 
+0 1 7 2 7 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+18 got 1 kills.
+8 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+2 got 7 kills.
+MAX #kills by a single person: 7 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 30 of 99
+--------------------------------------------------------------------------
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+
+request=0:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+#bots:       4 / 96 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad]
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+#bots:       3 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd]
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+#bots:       7 / 97 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe]
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+#bots:       6 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c]
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+#bots:       4 / 94 [/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159]
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 14 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 22 3 0 4 23 20 
+
+Kill Frequencies:
+70 got 0 kills.
+12 got 1 kills.
+8 got 2 kills.
+3 got 3 kills.
+2 got 4 kills.
+1 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+0 got 9 kills.
+0 got 10 kills.
+0 got 11 kills.
+0 got 12 kills.
+0 got 13 kills.
+1 got 14 kills.
+0 got 15 kills.
+0 got 16 kills.
+0 got 17 kills.
+0 got 18 kills.
+0 got 19 kills.
+1 got 20 kills.
+0 got 21 kills.
+1 got 22 kills.
+1 got 23 kills.
+MAX #kills by a single person: 23 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 76 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+10 10 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+62 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+0 got 9 kills.
+2 got 10 kills.
+MAX #kills by a single person: 10 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 15 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+4 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+0 got 9 kills.
+0 got 10 kills.
+0 got 11 kills.
+0 got 12 kills.
+0 got 13 kills.
+0 got 14 kills.
+1 got 15 kills.
+MAX #kills by a single person: 15 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 36 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 11 0 2 
+0 1 7 12 17 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+17 got 1 kills.
+7 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+1 got 7 kills.
+0 got 8 kills.
+0 got 9 kills.
+0 got 10 kills.
+1 got 11 kills.
+1 got 12 kills.
+0 got 13 kills.
+0 got 14 kills.
+0 got 15 kills.
+0 got 16 kills.
+1 got 17 kills.
+MAX #kills by a single person: 17 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 50 of 99
+--------------------------------------------------------------------------
+
+request=1:
+
+----------------
+File name: 	telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_6d3a19db-fb2c-4d29-b64c-47cc67073bad
+Noted 100 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 2 0 0 0 
+0 2 0 1 0 0 1 0 0 0 
+0 0 1 0 0 0 0 0 3 0 
+0 0 0 0 2 5 0 0 0 0 
+0 0 0 0 0 0 2 1 0 0 
+0 0 0 0 0 0 1 14 0 1 
+0 4 0 0 3 0 0 0 0 0 
+2 0 0 0 1 0 2 2 2 1 
+1 1 1 1 22 3 0 4 23 20 
+
+Kill Frequencies:
+70 got 0 kills.
+12 got 1 kills.
+8 got 2 kills.
+3 got 3 kills.
+2 got 4 kills.
+1 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+0 got 9 kills.
+0 got 10 kills.
+0 got 11 kills.
+0 got 12 kills.
+0 got 13 kills.
+1 got 14 kills.
+0 got 15 kills.
+0 got 16 kills.
+0 got 17 kills.
+0 got 18 kills.
+0 got 19 kills.
+1 got 20 kills.
+0 got 21 kills.
+1 got 22 kills.
+1 got 23 kills.
+MAX #kills by a single person: 23 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 76 of 100
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_fc5e5e57-a256-4f47-b268-9f28e0da22dd
+Noted 98 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 1 1 
+0 2 0 1 0 0 0 0 0 0 
+0 2 3 1 1 2 0 0 3 0 
+0 0 0 0 0 0 0 0 0 1 
+0 2 0 0 1 0 3 0 2 2 
+2 3 0 0 2 0 0 0 1 0 
+0 0 0 0 1 0 0 0 0 0 
+2 1 2 2 0 1 0 0 0 1 
+1 5 1 0 0 1 0 5 3 0 
+4 1 1 5 1 9 2 4 
+
+Kill Frequencies:
+57 got 0 kills.
+18 got 1 kills.
+12 got 2 kills.
+5 got 3 kills.
+2 got 4 kills.
+3 got 5 kills.
+0 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+1 got 9 kills.
+MAX #kills by a single person: 9 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 30 of 98
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_4cf12543-1522-4d48-8074-be49d0605afe
+Noted 104 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 1 0 1 0 1 
+0 0 0 0 0 0 1 0 0 0 
+0 1 0 0 0 0 0 0 0 2 
+0 0 1 0 0 0 0 4 0 0 
+0 3 2 6 0 2 0 0 0 1 
+2 1 0 0 1 1 2 0 1 4 
+1 3 0 1 1 0 0 4 3 0 
+10 10 1 0 1 0 0 2 4 0 
+0 1 0 4 1 0 0 2 1 3 
+2 2 8 0 
+
+Kill Frequencies:
+62 got 0 kills.
+20 got 1 kills.
+9 got 2 kills.
+4 got 3 kills.
+5 got 4 kills.
+0 got 5 kills.
+1 got 6 kills.
+0 got 7 kills.
+1 got 8 kills.
+0 got 9 kills.
+2 got 10 kills.
+MAX #kills by a single person: 10 (#people who achieved this: 2)
+#people killed by 'TOP TEN' : 19 of 104
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_9e1122ff-11ce-4dac-90ad-1b041200539c
+Noted 126 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 0 0 0 0 0 0 0 0 
+0 0 1 0 0 0 1 0 0 0 
+4 0 0 1 0 1 0 0 0 0 
+0 0 0 3 0 0 0 0 0 0 
+3 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 1 2 0 0 
+0 0 1 0 0 0 0 0 0 1 
+2 0 0 0 0 0 3 0 0 0 
+0 1 1 3 6 0 0 1 0 1 
+6 0 0 0 0 0 1 2 0 2 
+2 0 6 1 0 3 0 1 0 4 
+4 0 5 1 6 15 
+
+Kill Frequencies:
+91 got 0 kills.
+16 got 1 kills.
+5 got 2 kills.
+5 got 3 kills.
+3 got 4 kills.
+1 got 5 kills.
+4 got 6 kills.
+0 got 7 kills.
+0 got 8 kills.
+0 got 9 kills.
+0 got 10 kills.
+0 got 11 kills.
+0 got 12 kills.
+0 got 13 kills.
+0 got 14 kills.
+1 got 15 kills.
+MAX #kills by a single person: 15 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 36 of 126
+--------------------------------------------------------------------------
+
+
+----------------
+File name: 	telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Absolute path: 	/Users/jenniferstibbins/PubgAPI-Java/requestsDir/Shrimzy/timestamp_1750557892980/matches/telemetry-for-match_id_8d385883-2a04-4035-85cd-49a4f8372159
+Noted 99 instances of 'killCount'
+Printing #kills per person. EX: Die first? Your #kills is printed first. Die last? Your #kills is printed last.
+
+0 0 1 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 1 0 0 0 0 0 0 
+2 1 0 0 0 1 0 0 0 1 
+0 0 0 0 1 0 0 0 0 1 
+0 1 0 4 0 0 0 0 0 0 
+0 0 1 0 1 0 0 0 2 2 
+1 0 2 0 0 0 1 3 0 0 
+0 0 0 1 2 0 0 11 0 2 
+0 1 7 12 17 1 4 4 2 
+
+Kill Frequencies:
+67 got 0 kills.
+17 got 1 kills.
+7 got 2 kills.
+1 got 3 kills.
+3 got 4 kills.
+0 got 5 kills.
+0 got 6 kills.
+1 got 7 kills.
+0 got 8 kills.
+0 got 9 kills.
+0 got 10 kills.
+1 got 11 kills.
+1 got 12 kills.
+0 got 13 kills.
+0 got 14 kills.
+0 got 15 kills.
+0 got 16 kills.
+1 got 17 kills.
+MAX #kills by a single person: 17 (#people who achieved this: 1)
+#people killed by 'TOP TEN' : 50 of 99
+--------------------------------------------------------------------------
