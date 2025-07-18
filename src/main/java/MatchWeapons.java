@@ -47,6 +47,8 @@ public class MatchWeapons {
 
     /*
      * Determines (and prints) what weapons were used by the players who won the match described in the given file.
+     * Note: Dead winners have N/A on all weapons. Although technically possible for a living player to have N/A on all
+     *       weapons, it is very unlikely.
      */
     public static void winnerWeapons(File prettyFile) throws IOException {
         Vector<String> winnerSecondary = new Vector<String>(); //stores names of winners' match-end secondary weapons
