@@ -38,9 +38,11 @@ public class KillCountsJSON {
      * is separate from that for kills made by players not on the winning team. Winning team kills are only written
      * to console, not to history.
      */
-    public static void calculateKillCountsJSON(File prettyFile) {
+    public static void calculateKillCountsJSON(File prettyFile) throws IOException {
 
         Vector<JSONObject> kill_events = JSONManager.returnMultipleObjects(prettyFile, "LogPlayerKillV2");
+        //FileManager.writeToFileAndConsole(kill_events.toString());
+        //System.exit(0);
         Vector<Vector<String>> namesByNumKills = new Vector<Vector<String>>();
         Vector<String> namesList = new Vector<>(); //temp
         //temporary:
