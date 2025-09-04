@@ -32,7 +32,21 @@ As of July 2025, the PubgAPI-Java project has the following primary functionalit
 1. Clone PubgAPI-Java/work2 to local device.
 2. Open project in Visual Studio Code (VSC).
 
+### Prepare API Key ###
+1. Go to the [Pubg Developer Portal](https://developer.pubg.com/).
+2. Make an account.
+3. Request a free API key.
+4. Open project in VSC.
+5. In terminal, navigate to PubgAPI-Java.
+6. Create a local .env file.
+7. In the .env file, type "API_KEY = ", then paste the API key.
+8. Create a local .gitignore file.
+9. In the .gitignore file, type ".env".
+9. In terminal, type "./gradlew build" to build the build.gradle file.
+10. Close and reopen the project.
+
 ### Acquire Data ###
+Prerequisite: Complete the "Prepare API Key" section.
 To acquire new match data, run Main_API.java as follows:
 
 1. Open Main_API.java.
