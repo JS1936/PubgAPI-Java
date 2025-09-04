@@ -46,7 +46,10 @@ public class KillCounts {
         FileManager.writeToFileAndConsole("\n\nKill Frequencies:");
 
         for (int index = 0; index <= maxKills; index++) {
-            FileManager.writeToFileAndConsole(frequencies[index] + " got " + index + " kills.");
+            if (frequencies[index] > 0) {
+                FileManager.writeToFileAndConsole(frequencies[index] + " got " + index + " kills.");
+            }
+            
         }
         FileManager.writeToFileAndConsole("MAX #kills by a single person: " + maxKills + " (#people who achieved this: " + frequencies[maxKills] + ")");
         FileManager.writeToFileAndConsole("#people killed by 'TOP TEN' : " + killsByTopTen + " of " + counts.size());

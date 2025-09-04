@@ -68,7 +68,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\pubg_how_many_bots-1.0-SNAPSHOT.jar;%APP_HOME%\lib\gson-2.9.0.jar;%APP_HOME%\lib\commons-io-2.11.0.jar;%APP_HOME%\lib\json-20231013.jar
+set CLASSPATH=%APP_HOME%\lib\pubg_how_many_bots-1.0-SNAPSHOT.jar;%APP_HOME%\lib\gson-2.9.0.jar;%APP_HOME%\lib\commons-io-2.11.0.jar;%APP_HOME%\lib\json-20231013.jar;%APP_HOME%\lib\dotenv-java-3.0.0.jar
 
 
 @rem Execute pubg_how_many_bots
