@@ -1,8 +1,6 @@
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class API {
-    private static final Dotenv dotenv = Dotenv.load();
-
     protected final String key = Dotenv.load().get("API_KEY");
     protected final String platform = "steam";
 
