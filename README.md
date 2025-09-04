@@ -46,7 +46,7 @@ As of July 2025, the PubgAPI-Java project has the following primary functionalit
 10. Close and reopen the project.
 
 ### Acquire Data ###
-Prerequisite: Complete the "Prepare API Key" section.
+Prerequisite: Complete the "Prepare API Key" section. <br>
 To acquire new match data, run Main_API.java as follows:
 
 1. Open Main_API.java.
